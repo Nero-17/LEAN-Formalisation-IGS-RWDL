@@ -1,0 +1,9 @@
+'IGS.Sec31.QuadraticEnergySpace.smallStepSolution_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.smallStepResolvent_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.smallStepResolvent_operator_norm' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.smallStepResolvent_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.smallStepResolvent_domain_error' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

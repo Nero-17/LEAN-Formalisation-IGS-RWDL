@@ -1,0 +1,2 @@
+'IGS.Sec31.integral_abs_le_small_add_bad_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeSupTransition_short_time_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

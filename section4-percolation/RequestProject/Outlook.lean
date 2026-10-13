@@ -2,6 +2,7 @@ import RequestProject.Outlook.Matrices
 import RequestProject.Outlook.EigenM
 import RequestProject.Outlook.EigenN
 import RequestProject.Outlook.Dimensions
+import RequestProject.Outlook.RuleCompatibility
 
 /-!
 # Subsection 4.2 of *Iterated Graph Systems (I)* — the mean matrices and their Perron roots
@@ -18,4 +19,9 @@ Aggregator for the formalisation of the computational content of Subsection 4.2 
 
 The remaining content of Subsection 4.2 is conjectural (the dimension identities themselves, the
 walk dimension, and the spectral-dimension conjecture) and is not formalized.
+
+`Outlook.RuleCompatibility` proves that the displayed green/red entries of these two matrices
+cannot simultaneously be expectations of the edge counts in the paper's rule definitions.
+The matrix computations above are computations of the displayed formulas, and do not establish
+the incompatible expectation interpretation.
 -/

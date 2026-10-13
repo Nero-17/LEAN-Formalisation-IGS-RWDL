@@ -1,0 +1,23 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\DependentCoherentPrefixPathLaw.lean:22:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DependentPrefix.splitPrefix_measurable`:
+  [∀ (index : ℕ), StandardBorelSpace (Space index)]
+  [∀ (index : ℕ), Nonempty (Space index)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [∀ (index : ℕ), StandardBorelSpace (Space index)] [∀ (index : ℕ), Nonempty (Space index)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\DependentCoherentPrefixPathLaw.lean:33:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DependentPrefix.appendPrefix_measurable`:
+  [∀ (index : ℕ), StandardBorelSpace (Space index)]
+  [∀ (index : ℕ), Nonempty (Space index)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [∀ (index : ℕ), StandardBorelSpace (Space index)] [∀ (index : ℕ), Nonempty (Space index)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\DependentCoherentPrefixPathLaw.lean:46:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DependentPrefix.appendPrefix_splitPrefix`:
+  [∀ (index : ℕ), StandardBorelSpace (Space index)]
+  [∀ (index : ℕ), Nonempty (Space index)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [∀ (index : ℕ), StandardBorelSpace (Space index)] [∀ (index : ℕ), Nonempty (Space index)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'IGS.Sec31.DependentPrefix.appendPrefix_splitPrefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DependentPrefix.coherentPathLaw_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]

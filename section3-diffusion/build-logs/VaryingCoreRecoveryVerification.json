@@ -1,0 +1,20 @@
+[
+  {
+    "source": "RequestProject/Section31/VaryingCoreRecovery.lean",
+    "sha256": "11CF1C5AA651B1F4206A2B50F19F0B9D425737F02CC46E7EBBEBDB6F584394B6",
+    "started_utc": "2026-10-12T17:29:07.6837695Z",
+    "finished_utc": "2026-10-12T17:29:55.9669233Z",
+    "exit_code": 0,
+    "compiler": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\elan\\toolchains\\leanprover--lean4---v4.28.0\\bin\\lean.exe",
+    "log": "build-logs/VaryingCoreRecovery.log"
+  },
+  {
+    "source": "RequestProject/Section31/VaryingCoreRecoveryAxioms.lean",
+    "sha256": "45C2E08BFF3F23BB90E60332C3BF4C83C533AA01B8CB8D74C277F92F56B4222D",
+    "started_utc": "2026-10-12T17:29:56.0925230Z",
+    "finished_utc": "2026-10-12T17:30:57.0965258Z",
+    "exit_code": 0,
+    "compiler": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\elan\\toolchains\\leanprover--lean4---v4.28.0\\bin\\lean.exe",
+    "log": "build-logs/VaryingCoreRecoveryAxioms.log"
+  }
+]

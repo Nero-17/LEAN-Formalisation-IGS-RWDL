@@ -1,4 +1,5 @@
-import Mathlib
+import Mathlib.Analysis.SpecialFunctions.Sqrt
+import Mathlib.Tactic
 
 /-!
 # Elementary real identities and inequalities

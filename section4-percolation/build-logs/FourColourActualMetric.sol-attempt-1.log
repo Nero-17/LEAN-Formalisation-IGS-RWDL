@@ -1,0 +1,23 @@
+source=C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualMetric.lean
+started=2026-10-13T10:53:39.039721+00:00
+source_sha256=645618C9FE3704DC43519B99CC3E21F0B5ABBEC6969BB2479401335BB635058F
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualMetric.lean:34:43: error(lean.unknownIdentifier): Unknown identifier `middle`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualMetric.lean:106:44: warning: `mul_le_mul_left'` has been deprecated: Use `mul_le_mul_right` instead
+'Outlook.FourColourActualMetric.actual_walk_compression' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualMetric.actual_twice_edist_le' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualMetric.actual_old_edist_eq_twice' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualMetric.actual_source_dist_eq_twice' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+exit=1
+finished=2026-10-13T10:54:41.471667+00:00

@@ -1,0 +1,3 @@
+'EIGS.xiNetwork_one_add_substIter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.ruleFamily_iterated_connected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.ruleFamily_iterated_degree_positive' depends on axioms: [propext, Classical.choice, Quot.sound]

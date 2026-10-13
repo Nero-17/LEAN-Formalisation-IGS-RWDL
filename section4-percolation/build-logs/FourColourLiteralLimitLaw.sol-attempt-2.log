@@ -1,0 +1,29 @@
+source=C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourLiteralLimitLaw.lean
+started=2026-10-13T12:52:14.362276+00:00
+source_sha256=112358813B1AEA49026331BDE3E8CCBBF48E5E1812F1D6D0CE4607FFF8A7F635
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourLiteralLimitLaw.lean:51:19: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  if ∃ limit, Tendsto path atTop (𝓝 limit) then ?m.17 else ?m.18
+in the target expression
+  (if path ∈ convergentGHPaths then limUnder atTop path else defaultGHClass) = defaultGHClass
+
+path : ℕ → GromovHausdorff.GHSpace
+divergent : ¬∃ limit, Tendsto path atTop (𝓝 limit)
+⊢ (if path ∈ convergentGHPaths then limUnder atTop path else defaultGHClass) = defaultGHClass
+'Outlook.FourColourLiteralLimitLaw.measurableSet_convergentGHPaths' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourLiteralLimitLaw.measurable_ghPathLimit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourLiteralLimitLaw.ghPathLimit_eq_of_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourLiteralLimitLaw.actual_ghPathLimit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourLiteralLimitLaw.measurable_literalCompactGH' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourLiteralLimitLaw.literal_gh_ae_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourLiteralLimitLaw.actual_encoded_literal_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourLiteralLimitLaw.actual_literal_compact_source_law' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+exit=1
+finished=2026-10-13T12:54:02.895744+00:00

@@ -1,0 +1,2 @@
+'EIGS.xiNativeL2_strong_of_uniform_subsequence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiNativeContinuousResolvent_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

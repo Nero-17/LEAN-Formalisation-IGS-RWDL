@@ -1,4 +1,3 @@
-import Mathlib
 import RequestProject.Section2
 
 /-!

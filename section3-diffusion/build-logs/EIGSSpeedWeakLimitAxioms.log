@@ -1,0 +1,10 @@
+2026-10-13T00:46:46.1487023Z
+'EIGS.xiAddressError_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiAddressError_add_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiTailMeasure_integral_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiHeadTail_integral_sub_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiHeadMeasure_integral_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSpeedMeasure_integral_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSpeedProbabilityMeasure_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT_CODE=0
+2026-10-13T00:48:03.3320026Z

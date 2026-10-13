@@ -1,0 +1,9 @@
+import RequestProject.Section31.EIGSEdgeDescendants
+
+#print axioms EIGS.xiEdgeAncestor_address
+#print axioms EIGS.xiDescendant_weight_sum
+#print axioms EIGS.xiDescendant_cardinality
+#print axioms EIGS.XiMassParameters.uniformEdgeMeasure_probability
+#print axioms EIGS.XiMassParameters.uniformEdgeMeasure_ancestor_singleton
+#print axioms EIGS.XiMassParameters.actual_descendant_fraction_cylinder
+#print axioms EIGS.XiMassParameters.uniformEdgeMeasure_ancestor_mass_limit

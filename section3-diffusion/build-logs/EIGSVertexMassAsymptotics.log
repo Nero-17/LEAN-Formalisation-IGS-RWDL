@@ -1,0 +1,4 @@
+2026-10-13T01:06:40.1764875Z
+'EIGS.normalized_partial_sum_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT_CODE=0
+2026-10-13T01:07:32.4407138Z

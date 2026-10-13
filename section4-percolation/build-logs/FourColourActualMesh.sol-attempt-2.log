@@ -1,0 +1,10 @@
+source=C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualMesh.lean
+started=2026-10-13T11:11:19.542310+00:00
+source_sha256=123A194403B727D3D495DB43D29DA59F6E72A7893FAAFBE2BF32CEFF8D3E2B65
+'Outlook.FourColourActualMesh.actual_mesh_neighbor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourActualMesh.actual_mesh_distance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourActualMesh.sourceMetricSpace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourActualMesh.actual_normalized_isometry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourActualMesh.actual_normalized_mesh' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit=0
+finished=2026-10-13T11:12:33.780918+00:00

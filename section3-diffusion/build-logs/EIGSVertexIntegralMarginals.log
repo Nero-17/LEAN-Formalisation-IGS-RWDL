@@ -1,0 +1,5 @@
+2026-10-13T01:35:13.5977649Z
+'EIGS.xiVertexCountingMeasure_ancestor_integral_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiVertexCountingMeasure_ancestor_test_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT_CODE=0
+2026-10-13T01:36:38.9146950Z

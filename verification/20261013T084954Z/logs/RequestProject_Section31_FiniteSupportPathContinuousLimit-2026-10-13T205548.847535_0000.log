@@ -1,0 +1,12 @@
+'IGS.Sec31.DiscreteMarkov.finiteSupportModulusGoodHistory_weakLimit_tailClosure_compl_measure_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.finiteSupportModulusGoodHistory_weakLimit_tailIntersection_compl_measure_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.finiteSupportPath_weakLimit_ae_continuous_of_asymptotic_modulus' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.finiteSupportPath_weakLimit_ae_continuous_of_asymptotic_modulus_toReal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,12 @@
+--- a/paper-corrections/AIM.corrected.tex
++++ b/paper-corrections/AIM.corrected.tex
+@@ -401,6 +401,9 @@
+ 
+ \item \textbf{Rule graphs.}
+       $\mathcal{R} = \{ R_i \}_{i=1}^{K}$ is a family of finite directed graphs.
++      Each rule graph is an orientation of a finite simple undirected graph:
++      it has no loops, and for each unordered pair of distinct vertices
++      there is at most one directed edge joining that pair.
+       Each $R_i$ contains two \emph{planting vertices}
+       \[
+          \beta_i^{+},\beta_i^{-} \in  V(R_i)

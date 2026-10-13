@@ -1,0 +1,5 @@
+'IGS.Sec31.hilbert_image_closedBall_isClosed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.hilbert_exists_bounded_lift_of_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.hilbert_exists_lift_of_eventual_approximate_norm_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,40 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\FirstExitMarkovDecomposition.lean:28:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DiscreteMarkov.firstExitAt_measurable`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\FirstExitMarkovDecomposition.lean:32:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DiscreteMarkov.mem_firstExitAt`:
+  [Fintype X]
+  [DecidableEq X]
+  [MeasurableSpace X]
+  [MeasurableSingletonClass X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] [DecidableEq X] [MeasurableSpace X] [MeasurableSingletonClass X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\FirstExitMarkovDecomposition.lean:67:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DiscreteMarkov.firstExitAt_integral_future`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\FirstExitMarkovDecomposition.lean:143:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DiscreteMarkov.path_coordinate_integrable`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'IGS.Sec31.DiscreteMarkov.mem_firstExitAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.firstExitAt_disjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.exits_by_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.firstExitAt_integral_future' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.firstExitAt_integral_final' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.exitBy_integral_final' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.exit_probability_le_endpoint_expectation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiNativeDiscrete_firstExit_integral_future' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeDiscrete_exit_probability_le_endpoint_expectation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

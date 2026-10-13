@@ -1,0 +1,23 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\FiniteSupportPathRestriction.lean:26:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DiscreteMarkov.finitePathSupport_restriction_mapsTo`:
+  [MetricSpace State]
+  [CompactSpace State]
+  [∀ (level : ℕ), Finite (LongHistory level)]
+  [∀ (level : ℕ), Finite (ShortHistory level)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MetricSpace
+  State] [CompactSpace
+  State] [∀ (level : ℕ), Finite (LongHistory level)] [∀ (level : ℕ), Finite (ShortHistory level)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'IGS.Sec31.DiscreteMarkov.finitePathSupport_restriction_mapsTo' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.finiteSupportPathRestriction_continuous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.finiteSupportPathRestriction_finitePathEmbedding' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.finiteSupportPathRestriction_weak_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

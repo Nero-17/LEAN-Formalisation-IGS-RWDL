@@ -1,0 +1,5 @@
+'EIGS.xiNativeSupTransition_power_norm_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeSupTransition_floor_error_after_smoothing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeSupTransition_absolute_floor_error_after_smoothing' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,13 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\VaryingL2Multiplication.lean:171:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\VaryingL2Multiplication.lean:185:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+'IGS.Sec31.VaryingHilbertCore.strong_compatible_bounded_operators' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.BoundedL2Multiplication.operator_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.BoundedL2Multiplication.operator_ae' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.embeddedProbabilityL2Core_restrict_ae' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.embeddedProbabilityL2Core_strong_multiplication' depends on axioms: [propext, Classical.choice, Quot.sound]

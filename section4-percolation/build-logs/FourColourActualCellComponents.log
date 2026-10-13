@@ -1,0 +1,10 @@
+'Outlook.FourColourActualCellComponents.connected_flags' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourActualCellComponents.actual_child_boundary_formula' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualCellComponents.actual_child_source_formula' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualCellComponents.actual_child_active_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

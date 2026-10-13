@@ -1,0 +1,10 @@
+source=C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualMetric.lean
+started=2026-10-13T10:55:16.281987+00:00
+source_sha256=4E9802871B86C2094CEC4AE5BC4136CE4A1638309201CDE1BB0CD450F8426CB2
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualMetric.lean:106:44: warning: `mul_le_mul_left'` has been deprecated: Use `mul_le_mul_right` instead
+'Outlook.FourColourActualMetric.actual_walk_compression' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourActualMetric.actual_twice_edist_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourActualMetric.actual_old_edist_eq_twice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourActualMetric.actual_source_dist_eq_twice' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit=0
+finished=2026-10-13T10:56:27.917827+00:00

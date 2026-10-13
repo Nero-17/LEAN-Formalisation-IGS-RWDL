@@ -1,0 +1,8 @@
+'Outlook.FourColourLiteralRealization.literalRealizationIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourLiteralRealization.literalRedClusterIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourLiteralRealization.literalSourceClusterShape_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourLiteralRealization.actual_literal_red_sourceClusterLaw' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

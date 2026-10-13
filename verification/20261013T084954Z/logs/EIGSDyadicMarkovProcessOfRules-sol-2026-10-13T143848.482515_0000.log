@@ -1,0 +1,4 @@
+'EIGS.xiDyadicMarkovProcessProperties_of_dense_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiDyadicMarkovProcess_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.dyadicPathLaw_coordinate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.dyadicProcessProperties_of_family' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,13 @@
+source=C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCompletion.lean
+started=2026-10-13T11:33:10.347881+00:00
+source_sha256=D428DEAB7634BAB567A8EF2F19E4F5BC79AB7786B62C3CD35D5C155767C51D1B
+'Outlook.FourColourActualCompletion.nextStage_isometry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourActualCompletion.toCompletion_isometry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourActualCompletion.toCompletion_commute' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourActualCompletion.stages_dense_in_completion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualCompletion.completion_one_step_mesh' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourActualCompletion.completion_finite_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit=0
+finished=2026-10-13T11:34:58.366094+00:00

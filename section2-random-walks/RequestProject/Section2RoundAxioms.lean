@@ -1,0 +1,65 @@
+import RequestProject.Section2DegreeGrowth
+import RequestProject.Section2MassGrowth
+import RequestProject.Section2Dimension
+import RequestProject.Section2Simplicity
+import RequestProject.Section2ConcreteRandomWalk
+import RequestProject.Section2VertexGrowth
+import RequestProject.Section2AntiparallelAudit
+import RequestProject.Section2MassCylinder
+import RequestProject.Section2WeightedSubstitution
+import RequestProject.Section2WeightedPathIdentity
+
+#print axioms EIGS.xiNetwork_succ
+#print axioms EIGS.xiNetwork_succ_unitFlow_iff
+#print axioms EIGS.xiNetwork_terminal_flow
+#print axioms EIGS.xiNetwork_terminal_effRes
+#print axioms EIGS.xiNetwork_terminal_resistance_growth
+#print axioms EIGS.xiNetwork_terminal_resistance_normalized_limit
+#print axioms EIGS.massMatrixR_positive
+#print axioms EIGS.massMatrix_positive_eigenpair
+#print axioms EIGS.eigs_mass_growth_from_rules
+#print axioms EIGS.positive_matrix_eigenpair
+#print axioms EIGS.primitive_matrix_eigenpair
+#print axioms EIGS.primitive_matrix_eigenpair_finite
+#print axioms EIGS.degVec_weighted_positive
+#print axioms EIGS.degree_growth_from_primitive_rules
+#print axioms EIGS.resistance_dimension_limit_of_pos_rates
+#print axioms EIGS.resistance_dimension_eq_of_pos_rates
+#print axioms EIGS.Network.simpleEdgeEquiv
+#print axioms EIGS.Network.substIter_card_edges_eq_simpleGraph
+#print axioms EIGS.Network.simpleDartEquiv
+#print axioms EIGS.Network.div_restrict_eq_simpleGraph
+#print axioms EIGS.Network.energy_restrict_eq_simpleGraph
+#print axioms EIGS.Network.div_pairCurrent
+#print axioms EIGS.Network.energy_pairCurrent
+#print axioms EIGS.Network.effRes_eq_simpleGraph_resistance
+#print axioms EIGS.Network.effRes_eq_simpleGraph_green_diagonal
+#print axioms EIGS.Network.unitPotential_laplacian
+#print axioms EIGS.Network.commute_eq_mass_mul_effRes
+#print axioms EIGS.xiNetwork_effRes_eq_simpleGraph_resistance
+#print axioms EIGS.xiSimpleGraph_resistance_normalized_limit
+#print axioms EIGS.xiSimpleGraph_commute_eq_mass_mul_resistance
+#print axioms EIGS.xiSimpleGraph_terminal_commute_growth
+#print axioms EIGS.xiNetwork_vertex_growth_from_rules
+#print axioms EIGS.RenormMap.positive_iterate_normalized_limit
+#print axioms EIGS.chiVec_normalized_limit_of_positive_matrix
+#print axioms EIGS.descendant_colour_count_normalized_limits
+#print axioms EIGS.descendant_edge_count_normalized_limits
+#print axioms EIGS.chiVec_replanted_eq_mass_power
+#print axioms EIGS.mass_amplitude_eigenpair_of_descendant_limits
+#print axioms EIGS.descendant_fraction_limit_of_normalized_counts
+#print axioms EIGS.eigs_descendant_fraction_limits
+#print axioms EIGS.Network.EdgeWalk.toGraphWalk_ofGraphWalk
+#print axioms EIGS.Network.cost_liftEdgeWalk
+#print axioms EIGS.Network.weightedDistance_triangle
+#print axioms EIGS.Network.potential_difference_le_weightedDistance
+#print axioms EIGS.Network.weightedDistance_unit_eq_graphDistance
+#print axioms EIGS.Network.substMetricPotential_on_copy
+#print axioms EIGS.Network.substMetricPotential_lipschitz
+#print axioms EIGS.Network.weightedDistance_subst_ge
+#print axioms EIGS.Network.weightedDistance_subst_le
+#print axioms EIGS.Network.weightedDistance_subst
+#print axioms EIGS.Network.path_energy_eq_edge_sum
+#print axioms EIGS.Network.path_energy_eq_ofGraphWalk_cost
+#print axioms EIGS.Network.path_energy_toPath_le_walk_cost
+#print axioms EIGS.Network.path_eval_eq_weightedDistance

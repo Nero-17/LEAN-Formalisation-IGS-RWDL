@@ -1,0 +1,6 @@
+import RequestProject.Section31.GraphDistanceResistance
+
+#print axioms EIGS.Network.graphDistance_potential_edge_bound
+#print axioms EIGS.Network.graphDistance_potential_energy_le_mass
+#print axioms EIGS.Network.graphDistance_sq_le_mass_mul_flow_energy
+#print axioms EIGS.Network.graphDistance_sq_le_mass_mul_effRes

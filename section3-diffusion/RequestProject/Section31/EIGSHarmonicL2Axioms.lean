@@ -1,0 +1,12 @@
+import RequestProject.Section31.EIGSHarmonicL2Core
+
+#print axioms EIGS.xiFiniteSpeedL2
+#print axioms EIGS.xiFiniteSpeedL2_ae
+#print axioms EIGS.xiSpeedL2Core_restrict_eq_finiteSpeedL2
+#print axioms EIGS.xiHarmonicNativeL2
+#print axioms EIGS.xiHarmonicNativeL2_at_offset
+#print axioms EIGS.xiHarmonicNativeL2_strong
+#print axioms EIGS.xiContinuousHarmonic_extended_energy
+#print axioms EIGS.exists_xiContinuousHarmonic_L2_dense_core_of_rules
+#print axioms EIGS.exists_xiContinuousHarmonic_L2_recovery_of_rules
+#print axioms EIGS.xiHarmonicNativeL2_inner_tendsto

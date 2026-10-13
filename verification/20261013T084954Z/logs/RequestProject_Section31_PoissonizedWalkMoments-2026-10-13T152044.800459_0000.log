@@ -1,0 +1,16 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\PoissonizedWalkMoments.lean:121:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.PoissonizedWalk.contraction_power_apply_le`:
+  [CompleteSpace Space]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CompleteSpace Space] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'IGS.Sec31.PoissonizedWalk.weight_succ_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonizedWalk.first_moment_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonizedWalk.factorial_second_moment_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonizedWalk.second_moment_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonizedWalk.centered_second_moment_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonizedWalk.absolute_deviation_partial_sum_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonizedWalk.absolute_deviation_summable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonizedWalk.absolute_deviation_tsum_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonizedWalk.contraction_power_difference_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonizedWalk.discrete_power_poisson_comparison' depends on axioms: [propext, Classical.choice, Quot.sound]

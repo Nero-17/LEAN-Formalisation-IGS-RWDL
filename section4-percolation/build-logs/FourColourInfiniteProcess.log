@@ -1,0 +1,21 @@
+'Outlook.FourColourInfiniteProcess.ruleTreePathMeasure_bonded' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourInfiniteProcess.ruleTreePathMeasure_prefix' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourInfiniteProcess.nestedEncodedSequence_prefix_law' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourInfiniteProcess.nested_encoded_full_process_law' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourInfiniteProcess.nested_encoded_finite_joint_law' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourInfiniteProcess.nested_encoded_compatible_process_law' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourInfiniteProcess.infinite_cluster_encoded_full_process_law' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

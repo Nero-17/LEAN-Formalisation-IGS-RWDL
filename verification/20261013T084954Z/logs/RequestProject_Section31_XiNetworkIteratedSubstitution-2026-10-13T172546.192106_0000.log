@@ -1,0 +1,2 @@
+'EIGS.xiNetwork_add_substIter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNetwork_eq_singleEdge_substIter' depends on axioms: [propext, Classical.choice, Quot.sound]

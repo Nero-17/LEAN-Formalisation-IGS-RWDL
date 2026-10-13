@@ -1,0 +1,5 @@
+'EIGS.xiOriginalDiameter_birth_spectral_growth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSimpleGraph_fixed_radius_local_mass_dimension_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSimpleGraph_fixed_radius_local_resistance_dimension_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

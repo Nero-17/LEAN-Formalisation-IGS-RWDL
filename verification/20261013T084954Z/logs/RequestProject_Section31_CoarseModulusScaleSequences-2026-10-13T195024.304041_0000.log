@@ -1,0 +1,25 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\CoarseModulusScaleSequences.lean:65:40: warning: This simp argument is unused:
+  div_pow
+
+Hint: Omit it from the simp argument list.
+  simp only [div_p̵o̵w̵,̵ ̵d̵i̵v̵_̵eq_mul_inv, inv_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\CoarseModulusScaleSequences.lean:65:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\CoarseModulusScaleSequences.lean:65:74: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\CoarseModulusScaleSequences.lean:90:27: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\CoarseModulusScaleSequences.lean:95:14: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'IGS.Sec31.coarseModulusCrossings_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.coarseModulusWindow_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.coarseModulusWindow_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.geometric_mul_exp_neg_geometric_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.coarseModulusGridTail_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.exists_coarseModulusWindows' depends on axioms: [propext, Classical.choice, Quot.sound]

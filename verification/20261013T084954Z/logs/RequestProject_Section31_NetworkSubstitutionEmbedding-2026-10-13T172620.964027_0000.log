@@ -1,0 +1,11 @@
+'EIGS.Network.substEmbed_eq_old_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.ColourEmbedding.sum_edges_of_incidentClosedAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.ColourEmbedding.neighbor_iff_of_incidentClosedAt' depends on axioms: [propext, Quot.sound]
+'EIGS.Network.ColourEmbedding.transProb_of_incidentClosedAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.ColourEmbedding.transProb_zero_outside_of_incidentClosedAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.Network.ColourEmbedding.subst_incidentClosedAt_old' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.ColourEmbedding.subst_incidentClosedAt_private' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.firstCopyEmbedding_incidentClosedAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.iteratedCellEmbedding_incidentClosedAt' depends on axioms: [propext, Classical.choice, Quot.sound]

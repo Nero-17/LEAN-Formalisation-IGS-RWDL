@@ -1,0 +1,2 @@
+'IGS.Sec31.geometric_backward_iteration_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.geometric_backward_iteration_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

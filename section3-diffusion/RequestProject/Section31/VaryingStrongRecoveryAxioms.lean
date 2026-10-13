@@ -1,0 +1,5 @@
+import RequestProject.Section31.VaryingStrongRecovery
+
+#print axioms IGS.Sec31.VaryingHilbertCore.exists_strong_core_recovery
+#print axioms IGS.Sec31.VaryingHilbertCore.exists_strong_recovery
+#print axioms IGS.Sec31.VaryingHilbertCore.exists_strong_and_weak_recovery

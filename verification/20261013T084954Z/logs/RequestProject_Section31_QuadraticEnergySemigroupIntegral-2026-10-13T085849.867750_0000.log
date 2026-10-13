@@ -1,0 +1,15 @@
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroupApproximation_generator_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.yosidaSemigroup_generator_norm_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroup_orbit_continuous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroup_sub_eq_integral' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroup_hasDerivWithinAt_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

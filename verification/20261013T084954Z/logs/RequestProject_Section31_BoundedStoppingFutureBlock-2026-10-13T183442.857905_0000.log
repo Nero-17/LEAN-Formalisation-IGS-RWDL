@@ -1,0 +1,39 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\BoundedStoppingFutureBlock.lean:21:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DiscreteMarkov.futurePrefix_measurable`:
+  [Fintype X]
+  [MeasurableSingletonClass X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] [MeasurableSingletonClass X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\BoundedStoppingFutureBlock.lean:218:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DiscreteMarkov.finite_observable_integrable`:
+  [Fintype X]
+  [MeasurableSingletonClass X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] [MeasurableSingletonClass X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\BoundedStoppingFutureBlock.lean:245:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DiscreteMarkov.BoundedHistoryStop.indicator_sum`:
+  [Fintype X]
+  [MeasurableSpace X]
+  [MeasurableSingletonClass X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] [MeasurableSpace X] [MeasurableSingletonClass X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'IGS.Sec31.DiscreteMarkov.pathLaw_history_future_block_joint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.pathLaw_history_future_block_integral' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.BoundedHistoryStop.level_measurable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.BoundedHistoryStop.indicator_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.boundedStopping_future_block_integral' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.futureBlockKernel_eq_dirac_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.boundedStopping_dirac_future_block_integral' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.boundedStopping_weighted_future_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.boundedStopping_weighted_future_ge' depends on axioms: [propext, Classical.choice, Quot.sound]

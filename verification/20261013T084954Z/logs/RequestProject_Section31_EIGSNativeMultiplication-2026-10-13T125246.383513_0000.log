@@ -1,0 +1,3 @@
+'EIGS.xiSpeedL2Core_strong_multiplication' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.FiniteObservations.backwardProduct_strong' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.FiniteObservations.backwardProduct_pairing_limit' depends on axioms: [propext, Classical.choice, Quot.sound]

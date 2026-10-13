@@ -1,0 +1,22 @@
+source=C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean
+started=2026-10-13T09:53:03.351746+00:00
+source_sha256=C38114C89BD1E0EB889F47EEA00288161F055A1715D69F77D765F3A36ECD2CC5
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:184:11: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:184:11: warning: '(exact TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ()))' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'Outlook.FourColourActualCoarseRetraction.diamondRetraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourActualCoarseRetraction.actualRetraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourActualCoarseRetraction.actual_old_edgePath_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualCoarseRetraction.actual_source_membership_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualCoarseRetraction.actual_old_reachable_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+exit=0
+finished=2026-10-13T10:00:58.540211+00:00

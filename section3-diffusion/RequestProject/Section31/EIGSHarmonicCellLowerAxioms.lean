@@ -1,0 +1,15 @@
+import RequestProject.Section31.EIGSHarmonicPointL2Lower
+
+#print axioms EIGS.xiDescendant_fraction_uniform_lower
+#print axioms EIGS.xiNativeCellSquareMass_ge_descendant_fraction
+#print axioms EIGS.xiNativeCellSquareMass_uniform_lower
+#print axioms EIGS.exists_xiDescendant_incident_edge
+#print axioms EIGS.xiHarmonicFamily_boundary
+#print axioms EIGS.xiHarmonicFamily_descendant_range
+#print axioms EIGS.xiHarmonicFamily_local_edge_decay
+#print axioms EIGS.exists_xiHarmonicFamily_native_lower
+#print axioms EIGS.xiHarmonicUnionRestriction_step
+#print axioms EIGS.exists_xiHarmonic_native_reverse_bound
+#print axioms EIGS.exists_xiContinuousHarmonic_reverse_L2_bound
+#print axioms EIGS.xiIncidence_square_le_endpoint_sum
+#print axioms EIGS.exists_xiContinuousHarmonic_point_L2_bound

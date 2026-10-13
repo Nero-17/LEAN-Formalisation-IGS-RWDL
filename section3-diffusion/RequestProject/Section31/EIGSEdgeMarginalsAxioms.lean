@@ -1,0 +1,6 @@
+import RequestProject.Section31.EIGSEdgeMarginals
+
+#print axioms EIGS.XiMassParameters.edgeLaw_singleton
+#print axioms EIGS.XiMassParameters.addressMeasure_coordinate_singleton
+#print axioms EIGS.XiMassParameters.uniformEdgeMeasure_ancestor_integral_limit
+#print axioms EIGS.XiMassParameters.uniformEdgeMeasure_ancestor_test_limit

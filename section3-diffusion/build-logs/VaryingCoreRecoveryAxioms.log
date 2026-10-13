@@ -1,0 +1,15 @@
+source=RequestProject/Section31/VaryingCoreRecoveryAxioms.lean
+started=2026-10-12T17:29:56.0925230Z
+'IGS.Sec31.VaryingHilbertCore.strong_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.VaryingHilbertCore.strong_norm_sub_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.VaryingHilbertCore.exists_diagonal_state_energy_recovery' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.VaryingHilbertCore.exists_state_energy_recovery_of_core' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.VaryingHilbertCore.exists_state_energy_recovery_of_joint_core_density' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+exit=0
+finished=2026-10-12T17:30:57.0965258Z

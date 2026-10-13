@@ -1,0 +1,10 @@
+{
+  "source": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\section4-percolation\\RequestProject\\Outlook\\FourColourActualCoarseRetraction.lean",
+  "source_sha256": "0C1DE4080CB18D9E44624135E8A796EEA22F26E9E4D36E85C35D233A9E4D89DA",
+  "current_source_sha256": "0C1DE4080CB18D9E44624135E8A796EEA22F26E9E4D36E85C35D233A9E4D89DA",
+  "logged_start_utc": "2026-10-13T09:51:21.111973+00:00",
+  "end_utc": "2026-10-13T09:52:43.551619+00:00",
+  "exit_code": 1,
+  "compiler": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\elan\\toolchains\\leanprover--lean4---v4.28.0\\bin\\lean.exe",
+  "log": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\section4-percolation\\build-logs\\FourColourActualCoarseRetraction.sol-attempt-1.log"
+}

@@ -1,0 +1,9 @@
+source=RequestProject/Section31/VaryingStrongRecoveryAxioms.lean
+started=2026-10-12T17:22:41.1640379Z
+'IGS.Sec31.VaryingHilbertCore.exists_strong_core_recovery' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.VaryingHilbertCore.exists_strong_recovery' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.VaryingHilbertCore.exists_strong_and_weak_recovery' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+exit=0
+finished=2026-10-12T17:23:05.3747458Z

@@ -1,0 +1,11 @@
+source=C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualMesh.lean
+started=2026-10-13T11:07:19.933847+00:00
+source_sha256=862BB5959F6A26CB3564E28F001D2BBDF56897FC3C228C494B7510A27341E957
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualMesh.lean:70:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instInv', which is 'noncomputable'
+'Outlook.FourColourActualMesh.actual_mesh_neighbor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourActualMesh.actual_mesh_distance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourActualMesh.sourceMetricSpace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourActualMesh.actual_normalized_isometry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourActualMesh.actual_normalized_mesh' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit=1
+finished=2026-10-13T11:10:45.292206+00:00

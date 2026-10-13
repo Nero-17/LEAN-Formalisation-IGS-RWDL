@@ -1,0 +1,37 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\DiscreteMarkovDeterministicShift.lean:27:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DiscreteMarkov.initialPointPathKernel_apply`:
+  [Fintype X]
+  [DecidableEq X]
+  [MeasurableSingletonClass X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] [DecidableEq X] [MeasurableSingletonClass X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\DiscreteMarkovDeterministicShift.lean:31:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DiscreteMarkov.pathLaw_eq_initialPointPathKernel_comp`:
+  [Fintype X]
+  [DecidableEq X]
+  [MeasurableSingletonClass X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] [DecidableEq X] [MeasurableSingletonClass X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\DiscreteMarkovDeterministicShift.lean:82:6: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\DiscreteMarkovDeterministicShift.lean:89:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DiscreteMarkov.shiftPath_measurable`:
+  [Fintype X]
+  [DecidableEq X]
+  [MeasurableSingletonClass X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] [DecidableEq X] [MeasurableSingletonClass X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'IGS.Sec31.DiscreteMarkov.initialPointPathKernel_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.pathLaw_eq_initialPointPathKernel_comp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.futureBlockKernel_eq_initialPoint_prefix_comap' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.pathLaw_futurePrefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.pathLaw_shiftPath' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.pathLaw_shiftPath_event' depends on axioms: [propext, Classical.choice, Quot.sound]

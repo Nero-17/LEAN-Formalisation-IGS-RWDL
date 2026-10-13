@@ -1,4 +1,5 @@
-import Mathlib
+import Mathlib.Analysis.SpecialFunctions.Sqrt
+import Mathlib.Tactic
 
 /-!
 # Parameters of the reduced two-terminal resistance process

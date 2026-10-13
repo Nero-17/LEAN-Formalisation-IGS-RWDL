@@ -1,0 +1,6 @@
+'IGS.Sec31.QuadraticEnergySpace.yosidaGenerator_commute' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.yosidaSemigroup_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.yosidaSemigroup_apply_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.yosidaSemigroup_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.yosidaSemigroup_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.yosidaSemigroup_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]

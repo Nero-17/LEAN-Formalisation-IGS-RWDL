@@ -1,0 +1,16 @@
+{
+  "adopted": true,
+  "applied_utc": "2026-10-13T07:46:47.369033+00:00",
+  "user_authorization": "采用简单图一次定向的修正（推荐）",
+  "manuscript": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\paper-corrections\\AIM.corrected.tex",
+  "manuscript_before_sha256": "7756d478229543efcfd21cf619fe64be7a739c8ce0cdf06717776ee35a60aec1",
+  "manuscript_after_sha256": "06783166c1b05e8340edd98956319445b5a55056b47c2c9c60b65ce782746792",
+  "patch": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\paper-corrections\\simple-orientation-candidate.patch",
+  "patch_sha256": "b5f6d1f365395354f99c57cf8bd1f782865ee0b2f7270aa28a53b244bca75ecd",
+  "scope": "Each rule graph is an orientation of a finite simple undirected graph; no loops and at most one directed edge per unordered pair. Previously adopted eight-arrow correction remains.",
+  "evidence": [
+    "Section2AntiparallelSecondIterate",
+    "Section2AntiparallelStandingAudit"
+  ],
+  "original_manuscript_unchanged": true
+}

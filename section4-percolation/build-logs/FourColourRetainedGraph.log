@@ -1,0 +1,5 @@
+'Cluster.TTN.activeComponent_edge' depends on axioms: [propext, Quot.sound]
+'Cluster.TTN.retainedEdge_endpoints' depends on axioms: [propext, Quot.sound]
+'Cluster.TTN.activeComponent_reflection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.TTN.retainedEdge_reflection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.TTN.red_active_iff_source' depends on axioms: [propext, Quot.sound]

@@ -1,0 +1,43 @@
+source=Section4Axioms.lean
+started=2026-10-12T17:06:26.8275370Z
+'ProbabilityTheory.InverseSystem.pathMeasure_map_eval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProbabilityTheory.InverseSystem.compatibleMeasure_probability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ProbabilityTheory.InverseSystem.compatibleMeasure_map_eval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nestedConfiguration_bonded' does not depend on any axioms
+'Cluster.nestedConfiguration_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nested_critical_cluster_full_exponent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nestedCluster_mean_resistance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nested_critical_cluster_original_observables' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reduced.E1_monotone_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reduced.uniform_product_all_parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reduced.quenched_exponent_all_parameters_of_marginal_laws' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.treeNetwork_toReal_effRes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nestedTree_bonded' does not depend on any axioms
+'Cluster.nestedTree_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nested_tree_quenched_exponent_p' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nested_network_quenched_exponent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nestedClusterTree_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nested_reduction_resistance_sequence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nested_cluster_resistance_process' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nested_network_resistance_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.Rres_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.Rres_refinement_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nested_network_refinement_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nested_network_uniform_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nested_network_mean_submultiplicative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nested_network_original_observables' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nested_network_original_observables_p' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nested_network_no_deterministic_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nested_critical_cluster_no_deterministic_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nested_cluster_network_process' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nested_reduced_full_process_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nested_cluster_full_network_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.boundaryColourEdges_card_le' depends on axioms: [propext, Quot.sound]
+'Outlook.expected_boundary_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.critical_green_red_incompatible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.critical_green_red_difference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.no_random_rule_realizes_displayed_green_red' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit=0
+finished=2026-10-12T17:11:45.8960484Z

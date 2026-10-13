@@ -1,0 +1,10 @@
+{
+  "source": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\section4-percolation\\RequestProject\\Outlook\\FourColourActualCompactGH.lean",
+  "source_sha256": "B3F7255B145C79781230AAEF600495C35D8D3F19590888172EF9EBE2436CC494",
+  "current_source_sha256": "B3F7255B145C79781230AAEF600495C35D8D3F19590888172EF9EBE2436CC494",
+  "logged_start_utc": "2026-10-13T11:43:38.664167+00:00",
+  "end_utc": "2026-10-13T11:44:51.904993+00:00",
+  "exit_code": 0,
+  "compiler": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\elan\\toolchains\\leanprover--lean4---v4.28.0\\bin\\lean.exe",
+  "log": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\section4-percolation\\build-logs\\FourColourActualCompactGH.sol-attempt-1.log"
+}

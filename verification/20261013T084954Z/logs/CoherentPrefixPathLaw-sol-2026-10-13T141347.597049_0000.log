@@ -1,0 +1,28 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\CoherentPrefixPathLaw.lean:23:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DiscreteMarkov.splitPrefix_measurable`:
+  [StandardBorelSpace X]
+  [Nonempty X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [StandardBorelSpace X] [Nonempty X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\CoherentPrefixPathLaw.lean:26:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DiscreteMarkov.appendHistory_splitPrefix`:
+  [MeasurableSpace X]
+  [StandardBorelSpace X]
+  [Nonempty X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace X] [StandardBorelSpace X] [Nonempty X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\CoherentPrefixPathLaw.lean:69:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DiscreteMarkov.prefixJoint_fst`:
+  [StandardBorelSpace X]
+  [Nonempty X]
+  [∀ (count : ℕ), IsProbabilityMeasure (prefixLaws count)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [StandardBorelSpace X] [Nonempty X] [∀ (count : ℕ), IsProbabilityMeasure (prefixLaws count)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'IGS.Sec31.DiscreteMarkov.prefixConditional_disintegrates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.coherentPrefixPathLaw_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.exists_probability_pathLaw_of_coherent_prefixes' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

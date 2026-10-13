@@ -1,0 +1,1 @@
+'EIGS.xiContinuousLpEnergyQuadraticForm_closable' depends on axioms: [propext, Classical.choice, Quot.sound]

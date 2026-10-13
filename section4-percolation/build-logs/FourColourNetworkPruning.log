@@ -1,0 +1,5 @@
+'Cluster.TTN.IncidenceIso.series' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.TTN.IncidenceIso.parallel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.TTN.IncidenceIso.edgePath_iff' depends on axioms: [propext, Quot.sound]
+'Cluster.TTN.retainedNetworkReflection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.TTN.retainedNetwork_path_iff' depends on axioms: [propext, Classical.choice, Quot.sound]

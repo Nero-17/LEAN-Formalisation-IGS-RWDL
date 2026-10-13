@@ -1,0 +1,3 @@
+'Outlook.FourColourActiveCellTable.all_actual_component_states' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

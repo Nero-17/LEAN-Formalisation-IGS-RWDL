@@ -1,0 +1,5 @@
+2026-10-13T01:24:04.6728935Z
+'EIGS.ruleVertex_has_incident_edge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiPrivateVertex_to_ancestorTail' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT_CODE=0
+2026-10-13T01:25:07.0439847Z

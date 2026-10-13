@@ -1,0 +1,1 @@
+'EIGS.local_logarithmic_dimension_limit' depends on axioms: [propext, Classical.choice, Quot.sound]

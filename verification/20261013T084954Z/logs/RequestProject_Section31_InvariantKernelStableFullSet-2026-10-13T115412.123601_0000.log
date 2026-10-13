@@ -1,0 +1,3 @@
+'IGS.Sec31.CountableMarkov.stableRefinement_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.CountableMarkov.stableRefinement_full' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.CountableMarkov.exists_invariant_stable_full_set' depends on axioms: [propext, Classical.choice, Quot.sound]

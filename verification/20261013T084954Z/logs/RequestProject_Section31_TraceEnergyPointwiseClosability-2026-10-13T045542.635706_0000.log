@@ -1,0 +1,7 @@
+'IGS.Sec31.FiniteNetwork.energy_tendsto_zero_of_pointwise' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.finite_trace_energy_difference_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.traceEnergyValue_difference_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.traceEnergyValue_bounded_of_energy_cauchy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.traceEnergyValue_tendsto_zero_of_energy_cauchy_pointwise' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

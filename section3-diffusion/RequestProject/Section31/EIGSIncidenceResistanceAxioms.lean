@@ -1,0 +1,3 @@
+import RequestProject.Section31.EIGSIncidenceResistanceDecay
+
+#print axioms EIGS.xiIncidence_resistance_inverse_tendsto_zero

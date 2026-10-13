@@ -1,0 +1,7 @@
+'EIGS.xiContinuousSemigroupYosidaProperties_of_resolvents_and_semigroup' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_xiContinuousSemigroupYosida_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.BanachResolventYosidaGeneration.operators_tendsto_of_injective_embedding' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

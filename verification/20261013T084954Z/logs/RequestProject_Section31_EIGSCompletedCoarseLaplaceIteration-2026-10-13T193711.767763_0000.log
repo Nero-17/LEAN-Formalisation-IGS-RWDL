@@ -1,0 +1,10 @@
+'IGS.Sec31.DiscreteMarkov.completedCoarseHitLaplace_integral_le_pow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.completedCoarseHitEvent_probability_le_pow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.floor_native_clock_ratio_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.completedCoarseHitEvent_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiCoarseNativeLaplaceScale_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiNativeCoarseLaplaceIteration_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

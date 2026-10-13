@@ -1,0 +1,12 @@
+'Outlook.FourColourOrientationCandidate.orientedBoundary_det_char_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourOrientationCandidate.orientedBoundary_spectrum_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourOrientationCandidate.orientedBoundary_spectralRadius' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourOrientationCandidate.actual_orientedMeanBoundary_spectralRadius' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

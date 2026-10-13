@@ -1,0 +1,17 @@
+'Outlook.FourColourRuleAudit.childOutcomeKernel_markov' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourRuleAudit.twoStepSampleMeasure_probability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourRuleAudit.literalBoundaryLaw_source_integral' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourRuleAudit.literalBoundaryLaw_sink_integral' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourRuleAudit.actualBoundaryLaw_source_integral' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourRuleAudit.actualBoundaryLaw_sink_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourRuleAudit.literal_two_step_boundary_law_ne_actual' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,13 @@
+'Outlook.FourColourProjectiveConsistency.coarse_reverseConfiguration' depends on axioms: [propext]
+'Outlook.FourColourProjectiveConsistency.truncateRuleTree_encode' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourProjectiveConsistency.parentMeasure_map_coarse' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourProjectiveConsistency.encodedLaw_map_truncate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourProjectiveConsistency.ruleTreeLaw_map_truncate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

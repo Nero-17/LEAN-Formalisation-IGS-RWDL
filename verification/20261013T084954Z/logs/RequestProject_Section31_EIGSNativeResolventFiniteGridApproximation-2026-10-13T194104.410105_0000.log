@@ -1,0 +1,4 @@
+'EIGS.xiUnitTraceExtension_eq_unitPotentialAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeFiniteResolvent_finite_continuous_approximation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

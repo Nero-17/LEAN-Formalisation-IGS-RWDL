@@ -1,0 +1,28 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourConditionalRules.lean:79:2: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourConditionalRules.lean:99:6: warning: This simp argument is unused:
+  Fintype.sum_bool
+
+Hint: Omit it from the simp argument list.
+  simp [conditioningMass, conditioningEvent, configurationWeight, conn,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵F̵i̵n̵t̵y̵p̵e̵.̵s̵u̵m̵_̵b̵o̵o̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourConditionalRules.lean:118:6: warning: This simp argument is unused:
+  Fintype.sum_bool
+
+Hint: Omit it from the simp argument list.
+  simp [conditioningMass, conditioningEvent, configurationWeight, conditionedOutcome,
+        connectedOutcome, disconnectedOutcome, activeSourceOutcome, conn, figureWeights,
+        F̵i̵n̵t̵y̵p̵e̵.̵s̵u̵m̵_̵b̵o̵o̵l̵,̵ ̵div_eq_mul_inv]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Outlook.FourColourRuleAudit.configurationWeight_eq_actual' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourRuleAudit.conditioningMass_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourRuleAudit.conditional_figure_probabilities' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourRuleAudit.critical_conditional_figure_probabilities' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

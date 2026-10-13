@@ -1,0 +1,8 @@
+'EIGS.xiRationalMarkovPathLawProperties_of_dense_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiRationalMarkovPathLaw_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.dyadic_refinement_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.rationalSkeletonLaw_subsample' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.rationalSkeletonLaw_dyadic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.rationalSkeletonProperties_of_family' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

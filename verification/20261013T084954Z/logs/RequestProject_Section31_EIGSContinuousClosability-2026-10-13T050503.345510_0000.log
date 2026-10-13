@@ -1,0 +1,1 @@
+'EIGS.xiContinuous_energy_closable' depends on axioms: [propext, Classical.choice, Quot.sound]

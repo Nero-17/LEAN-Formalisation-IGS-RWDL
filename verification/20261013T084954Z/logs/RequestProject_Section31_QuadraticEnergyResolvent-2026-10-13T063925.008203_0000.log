@@ -1,0 +1,4 @@
+'IGS.Sec31.QuadraticEnergySpace.resolvent_variational' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.resolvent_energy_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.resolvent_state_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.resolvent_unique' depends on axioms: [propext, Classical.choice, Quot.sound]

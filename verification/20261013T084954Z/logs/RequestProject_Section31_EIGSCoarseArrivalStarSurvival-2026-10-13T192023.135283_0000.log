@@ -1,0 +1,6 @@
+'IGS.Sec31.DiscreteMarkov.boundedCoarseArrival_history_last_mem' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiCoarseStarStayTest_dirac_integral_ge_surv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiCoarseArrival_weighted_stay_of_survival' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiCoarseArrival_weighted_star_survival_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,7 @@
+'IGS.Sec31.partialHit_antitone_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.graphWalk_partialHit_cast' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.skeleton_partialHit_le_replantedMaximum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNetwork_succ_substIter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNetwork_succ_substIter_forward' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNetwork_succ_substIter_skeleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiReplanted_first_skeleton_partialHit_le_exitMaximum' depends on axioms: [propext, Classical.choice, Quot.sound]

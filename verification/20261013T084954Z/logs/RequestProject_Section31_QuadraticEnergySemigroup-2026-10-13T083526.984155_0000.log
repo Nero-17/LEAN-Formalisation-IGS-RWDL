@@ -1,0 +1,9 @@
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroup_approximation_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroup_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroup_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroup_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroup_joint_continuous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

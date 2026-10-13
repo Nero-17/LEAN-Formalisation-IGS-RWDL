@@ -1,0 +1,16 @@
+{
+  "adopted": true,
+  "original_unchanged": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\paper\\AIM.tex",
+  "previous_matrix_only_manuscript": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\paper-corrections\\AIM.matrix-only.tex",
+  "current_manuscript": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\paper-corrections\\AIM.corrected.tex",
+  "figure_source": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\paper-corrections\\figure\\random_DHL.oriented.tex",
+  "source_of_truth": "Verified FourColourOrientationCandidate.lean SHA 076FF9FC7C4C7F40DB053E9BCB1922F71AA35D1C83007B0360DF563191176B04",
+  "hashes": {
+    "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\paper\\AIM.tex": "7ad18ca0c24b1e9ac0747816c54aa8286b255900360c2def007a662a6b99bbd8",
+    "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\paper-corrections\\AIM.matrix-only.tex": "365455de0d99316eab851d3d4eb10091459231d14c8539962aa0cd352a7d5874",
+    "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\paper-corrections\\AIM.corrected.tex": "7756d478229543efcfd21cf619fe64be7a739c8ce0cdf06717776ee35a60aec1",
+    "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\paper-corrections\\figure\\random_DHL.oriented.tex": "a9d99539644606634cef8b9569b0ecb4e5d84d15fa66b49b10cc579174a118eb",
+    "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\paper-corrections\\endpoint-orientation.patch": "a8002520727d79398b8f017520e4e0709a7a3a482d56d3688aa63d6ef704651a"
+  },
+  "scope": "Eight green arrows, four boundary-matrix entries, explicit active-to-inactive green convention. No all-generation proof asserted by this edit."
+}

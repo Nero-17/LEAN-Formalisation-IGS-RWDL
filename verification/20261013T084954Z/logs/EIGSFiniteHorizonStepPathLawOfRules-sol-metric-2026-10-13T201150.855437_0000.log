@@ -1,0 +1,3 @@
+'EIGS.xiNativeFiniteJumpRateNNReal_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiFiniteHorizonNativeStepLawProperties_construct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiFiniteHorizonNativeStepLaw_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

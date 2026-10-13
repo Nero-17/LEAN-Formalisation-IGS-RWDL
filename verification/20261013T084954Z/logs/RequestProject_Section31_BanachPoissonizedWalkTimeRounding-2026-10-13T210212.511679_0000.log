@@ -1,0 +1,11 @@
+'IGS.Sec31.PoissonizedWalk.Banach.exponential_apply_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonizedWalk.Banach.exponential_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonizedWalk.Banach.exponential_scalar_difference_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.PoissonizedWalk.Banach.discrete_power_floor_poisson_comparison' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.PoissonizedWalk.Banach.discrete_power_absolute_floor_increment_poisson_comparison' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

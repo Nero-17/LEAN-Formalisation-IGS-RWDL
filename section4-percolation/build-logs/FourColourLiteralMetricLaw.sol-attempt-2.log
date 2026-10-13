@@ -1,0 +1,23 @@
+source=C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourLiteralMetricLaw.lean
+started=2026-10-13T12:23:37.944182+00:00
+source_sha256=3167C80D2E5446519A6A6FC02D0F64C60FEC1A15BEC969EBB7A98A14CFEB4E0F
+'Outlook.FourColourLiteralMetricLaw.sourceInducedWalk_length' depends on axioms: [propext, Quot.sound]
+'Outlook.FourColourLiteralMetricLaw.source_induced_dist_eq_ambient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourLiteralMetricLaw.graphIso_dist_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourLiteralMetricLaw.sourceClusterMetricIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourLiteralMetricLaw.actual_literal_source_gh_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourLiteralMetricLaw.nested_actual_literal_finite_gh_law' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourLiteralMetricLaw.nested_actual_literal_full_gh_law' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourLiteralMetricLaw.nested_actual_literal_joint_gh_law' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+exit=0
+finished=2026-10-13T12:25:04.459279+00:00

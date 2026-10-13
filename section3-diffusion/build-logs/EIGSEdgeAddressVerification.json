@@ -1,0 +1,65 @@
+{
+  "continuous_round_start_utc": "2026-10-12T14:56:40Z",
+  "current_continuation_start_utc": "2026-10-12T23:41:25Z",
+  "checkpoint_utc": "2026-10-13T00:20:08.3096119Z",
+  "compiler": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\elan\\toolchains\\leanprover--lean4---v4.28.0\\bin\\lean.exe",
+  "dependency_library": "..\\.lake\\full-paper-verification\\lib\\lean",
+  "entries": [
+    {
+      "source": "RequestProject\\Section31\\EIGSEdgeAddressMeasure.lean",
+      "source_sha256": "2759F108D8E64ED1B8D2886DE732EA2EF369CD609B952431DB95F8D208391E98",
+      "log": "build-logs\\EIGSEdgeAddressMeasure.log",
+      "logged_start_utc": "2026-10-13T00:05:18.1763129Z",
+      "log_last_write_utc": "2026-10-13T00:06:04.0560068Z",
+      "exit_code": 0,
+      "status": "verified"
+    },
+    {
+      "source": "RequestProject\\Section31\\EIGSEdgeAddressMeasureAxioms.lean",
+      "source_sha256": "1CA4AF9923EB68C8F716BB007C8246FF9BA6D769B609DB9A64D422DEF9862BD0",
+      "log": "build-logs\\EIGSEdgeAddressMeasureAxioms.log",
+      "logged_start_utc": "2026-10-13T00:07:56.2577815Z",
+      "log_last_write_utc": "2026-10-13T00:09:00.5921643Z",
+      "exit_code": 0,
+      "status": "verified"
+    },
+    {
+      "source": "RequestProject\\Section31\\EIGSEdgeDescendants.lean",
+      "source_sha256": "E6652E53D12139C2D75CF5C53855C62D026C504137C254C3E047C5D0BE73A929",
+      "log": "build-logs\\EIGSEdgeDescendants.log",
+      "logged_start_utc": "2026-10-13T00:10:54.8203747Z",
+      "log_last_write_utc": "2026-10-13T00:11:47.9580010Z",
+      "exit_code": 0,
+      "status": "verified"
+    },
+    {
+      "source": "RequestProject\\Section31\\EIGSEdgeDescendantsAxioms.lean",
+      "source_sha256": "4BB65C87A406A0B17D37D9B8F09EFD3E556614175832999728A60497F0BB9C0A",
+      "log": "build-logs\\EIGSEdgeDescendantsAxioms.log",
+      "logged_start_utc": "2026-10-13T00:13:46.6983043Z",
+      "log_last_write_utc": "2026-10-13T00:14:19.1261651Z",
+      "exit_code": 0,
+      "status": "verified"
+    },
+    {
+      "source": "RequestProject\\Section31\\EIGSEdgeMarginals.lean",
+      "source_sha256": "196A3F12A0BE50155534CE8C8161B4064C2DA3FFC2EA2095785C15AF3F572A16",
+      "log": "build-logs\\EIGSEdgeMarginals.log",
+      "logged_start_utc": "2026-10-13T00:14:40.9094493Z",
+      "log_last_write_utc": "2026-10-13T00:15:12.1915203Z",
+      "exit_code": 0,
+      "status": "verified"
+    },
+    {
+      "source": "RequestProject\\Section31\\EIGSEdgeMarginalsAxioms.lean",
+      "source_sha256": "7DED3ADA711A4F62EDF2E4A3DDEE87B71C9458BB92B8C628BC97521A0200EEC7",
+      "log": "build-logs\\EIGSEdgeMarginalsAxioms.log",
+      "logged_start_utc": "2026-10-13T00:15:56.7266066Z",
+      "log_last_write_utc": "2026-10-13T00:16:49.0684245Z",
+      "exit_code": 0,
+      "status": "verified"
+    }
+  ],
+  "axiom_audit_declarations": 30,
+  "mathematical_scope": "Actual XiEdge genealogy probability, exact ancestor fibres, and finite ancestor integral limits; no completed metric-space projection or weak speed-measure limit is asserted here."
+}

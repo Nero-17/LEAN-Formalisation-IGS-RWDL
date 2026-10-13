@@ -1,0 +1,44 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\CountableMarkovPointMeasure.lean:23:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.CountableMarkov.measurableSet_goodPoint`:
+  [T2Space X]
+  [BorelSpace X]
+  [IsFiniteMeasure measure]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [T2Space X] [BorelSpace X] [IsFiniteMeasure measure] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\CountableMarkovPointMeasure.lean:105:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.CountableMarkov.extendedPointFunctional_bound`:
+  [T2Space X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [T2Space X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\CountableMarkovPointMeasure.lean:115:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.CountableMarkov.extendedPointFunctional_one`:
+  [T2Space X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [T2Space X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\CountableMarkovPointMeasure.lean:124:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.CountableMarkov.extendedPointFunctional_positive`:
+  [T2Space X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [T2Space X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\CountableMarkovPointMeasure.lean:166:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.CountableMarkov.extendedPointFunctional_ae_eq`:
+  [T2Space X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [T2Space X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'IGS.Sec31.CountableMarkov.pointMeasure_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.CountableMarkov.pointMeasure_isProbability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.CountableMarkov.pointMeasure_integral_test' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.CountableMarkov.ae_pointMeasure_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.CountableMarkov.measurableSet_goodPoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.CountableMarkov.extendedPointFunctional_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.CountableMarkov.extendedPointFunctional_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.CountableMarkov.extendedPointFunctional_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.CountableMarkov.extendedPointFunctional_measurable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.CountableMarkov.extendedPointFunctional_ae_eq' depends on axioms: [propext, Classical.choice, Quot.sound]

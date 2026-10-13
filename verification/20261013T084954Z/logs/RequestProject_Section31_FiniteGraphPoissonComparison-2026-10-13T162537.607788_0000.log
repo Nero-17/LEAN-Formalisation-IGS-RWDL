@@ -1,0 +1,3 @@
+'EIGS.poisson_le_boundary_add_exit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.poisson_abs_le_exit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.harmonic_interpolation_error_le_exit' depends on axioms: [propext, Classical.choice, Quot.sound]

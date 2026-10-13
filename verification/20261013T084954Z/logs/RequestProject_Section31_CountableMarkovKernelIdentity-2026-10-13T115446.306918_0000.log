@@ -1,0 +1,4 @@
+'IGS.Sec31.CountableMarkov.ae_kernel_eq_id_of_identity_representation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.exists_measurable_full_set_of_countable_ae' depends on axioms: [propext, Classical.choice, Quot.sound]

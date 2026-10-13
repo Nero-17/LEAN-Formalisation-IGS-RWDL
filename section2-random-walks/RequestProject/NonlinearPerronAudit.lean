@@ -1,0 +1,9 @@
+import RequestProject.Section2PerronConvergence
+
+#print axioms EIGS.RenormMap.positive_eigenpair_of_strongly_positive
+#print axioms EIGS.RenormMap.positive_eigenvector_unique_of_strongly_positive
+#print axioms EIGS.RenormMap.existsUnique_positive_normalized_eigenpair
+#print axioms EIGS.RenormMap.normalized_sequence_converges
+#print axioms EIGS.RenormMap.iterate_normalized_limit_of_strongly_positive
+#print axioms EIGS.RuleSystem.distance_positive_normalized_eigenpair_exists_unique
+#print axioms EIGS.RuleSystem.distance_positive_normalized_iterate_limit

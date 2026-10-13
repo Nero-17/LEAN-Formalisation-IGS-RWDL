@@ -1,0 +1,6 @@
+import RequestProject.Section31.EIGSSpeedWeakConvergence
+
+#print axioms EIGS.xiVertexSpeedMeasure_probability
+#print axioms EIGS.uniformEdgeMeasure_endpoint_singleton
+#print axioms EIGS.xiVertexSpeedMeasure_singleton
+#print axioms EIGS.xiVertexSpeedMeasure_map

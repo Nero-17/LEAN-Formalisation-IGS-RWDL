@@ -1,0 +1,7 @@
+source=RequestProject/Cluster/InfiniteConsequences.lean
+started=2026-10-12T17:01:49.5701328Z
+RequestProject/Cluster/InfiniteConsequences.lean:23:5: warning: unused variable `series_nonnegative`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+exit=0
+finished=2026-10-12T17:02:34.8759744Z

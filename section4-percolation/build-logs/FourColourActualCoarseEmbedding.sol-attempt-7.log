@@ -1,0 +1,39 @@
+source=C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseEmbedding.lean
+started=2026-10-13T09:41:46.402389+00:00
+source_sha256=AEF56A78E60DFCCC934737461796D2F85B24964A7B7DC0AC156AEBF2202564E6
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseEmbedding.lean:51:26: warning: This simp argument is unused:
+  dif_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only [seriesEmb, d̵i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵,̵ ̵secondEmbedding.source]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseEmbedding.lean:83:23: warning: This simp argument is unused:
+  dif_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only [parEmb, d̵i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵,̵ ̵secondEmbedding.source]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseEmbedding.lean:88:41: warning: This simp argument is unused:
+  dif_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only [parEmb, dif_neg source, d̵i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵,̵ ̵secondEmbedding.target, dif_neg (Ne.symm secondImage.hab)]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Outlook.FourColourActualCoarseEmbedding.open_diamond_two_edges' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualCoarseEmbedding.actualOldEmbedding' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourActualCoarseEmbedding.actual_old_vertices_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualCoarseEmbedding.actual_coarse_open_edge_two_steps' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualCoarseEmbedding.actual_source_membership_forward' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+exit=0
+finished=2026-10-13T09:42:50.417407+00:00

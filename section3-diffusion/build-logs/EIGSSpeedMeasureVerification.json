@@ -1,0 +1,54 @@
+{
+  "original_round_start_utc": "2026-10-12T14:56:40Z",
+  "active_continuation_start_utc": "2026-10-12T23:41:25Z",
+  "compiler": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\elan\\toolchains\\leanprover--lean4---v4.28.0\\bin\\lean.exe",
+  "entries": [
+    {
+      "source": "RequestProject\\Section31\\EIGSSpeedWeakConvergence.lean",
+      "source_sha256": "E059390D6B01EAE0BC7E1666D2A74601BCE003B976221D9A37CFA95BE73FC9F8",
+      "log": "build-logs\\EIGSSpeedWeakConvergence.log",
+      "logged_start_utc": "2026-10-13T00:28:31.9526083Z",
+      "log_last_write_utc": "2026-10-13T00:29:23.1685409Z",
+      "exit_code": 0,
+      "status": "verified"
+    },
+    {
+      "source": "RequestProject\\Section31\\EIGSSpeedWeakConvergenceAxioms.lean",
+      "source_sha256": "7E9C22FD6F6F758696B3C5CA7BD7F3098D598EE195DC8D2824ABD06D9A1D026C",
+      "log": "build-logs\\EIGSSpeedWeakConvergenceAxioms.log",
+      "logged_start_utc": "2026-10-13T00:35:11.5619326Z",
+      "log_last_write_utc": "2026-10-13T00:35:58.6916385Z",
+      "exit_code": 0,
+      "status": "verified"
+    },
+    {
+      "source": "RequestProject\\Section31\\EIGSSpeedWeakLimit.lean",
+      "source_sha256": "F87DC97E9A71850C2CE345FCA728E9934B5213C94BF73A2F07F38E7F914F6648",
+      "log": "build-logs\\EIGSSpeedWeakLimit.log",
+      "logged_start_utc": "2026-10-13T00:44:05.0032548Z",
+      "log_last_write_utc": "2026-10-13T00:45:14.7945589Z",
+      "exit_code": 0,
+      "status": "verified"
+    },
+    {
+      "source": "RequestProject\\Section31\\EIGSSpeedWeakLimitAxioms.lean",
+      "source_sha256": "49E846D7F8596E86CCD937A37EA1B206DDC2A26AB5021738AF97C6427A2D2F9A",
+      "log": "build-logs\\EIGSSpeedWeakLimitAxioms.log",
+      "logged_start_utc": "2026-10-13T00:46:46.1487023Z",
+      "log_last_write_utc": "2026-10-13T00:48:03.3530138Z",
+      "exit_code": 0,
+      "status": "verified"
+    },
+    {
+      "source": "RequestProject\\Section31\\EIGSSpeedDegree.lean",
+      "source_sha256": "D4FB3B86DE825CC53CFD972D775552778A4363B271666EAF3EDEE3CC39F59FBA",
+      "log": "build-logs\\EIGSSpeedDegree.log",
+      "logged_start_utc": "2026-10-13T00:58:29.6375884Z",
+      "log_last_write_utc": "2026-10-13T00:59:50.6644424Z",
+      "exit_code": 0,
+      "status": "verified_with_two_inline_axiom_audits"
+    }
+  ],
+  "axiom_audit_declarations": 13,
+  "mathematical_scope": "Actual native XiVtx speed probability, exact actual simple-graph degree singleton law under original simplicity assumptions, completion pushforward identity, and actual speed probability weak convergence to the address pushforward. Normalized vertex-counting identification remains under construction."
+}

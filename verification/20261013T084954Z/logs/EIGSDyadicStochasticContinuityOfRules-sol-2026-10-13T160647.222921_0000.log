@@ -1,0 +1,9 @@
+'EIGS.xiDyadicStochasticContinuityProperties_of_dense_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiDyadicStochasticContinuity_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.dyadicPathLaw_displacement_event' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.dyadicPathLaw_stochasticallyContinuous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroup_rational_tendsto_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,10 @@
+2026-10-13T00:15:56.7266066Z
+'EIGS.XiMassParameters.edgeLaw_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.XiMassParameters.addressMeasure_coordinate_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.XiMassParameters.uniformEdgeMeasure_ancestor_integral_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.XiMassParameters.uniformEdgeMeasure_ancestor_test_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+EXIT_CODE=0

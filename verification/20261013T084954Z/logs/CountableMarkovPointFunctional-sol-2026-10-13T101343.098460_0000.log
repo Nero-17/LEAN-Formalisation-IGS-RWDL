@@ -1,0 +1,36 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\CountableMarkovPointFunctional.lean:34:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.CountableMarkov.one_mem_rationalTests`:
+  [MeasurableSpace X]
+  [BorelSpace X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace X] [BorelSpace X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\CountableMarkovPointFunctional.lean:37:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.CountableMarkov.rationalTests_dense`:
+  [MeasurableSpace X]
+  [BorelSpace X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace X] [BorelSpace X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\CountableMarkovPointFunctional.lean:64:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.CountableMarkov.ae_goodPoint`:
+  [BorelSpace X]
+  [IsFiniteMeasure measure]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [BorelSpace X] [IsFiniteMeasure measure] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\CountableMarkovPointFunctional.lean:106:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.CountableMarkov.pointRationalFunctional_bound`:
+  [BorelSpace X]
+  [IsFiniteMeasure measure]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [BorelSpace X] [IsFiniteMeasure measure] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'IGS.Sec31.CountableMarkov.rationalTests_dense' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.CountableMarkov.ae_goodPoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.CountableMarkov.pointRealFunctional_agrees' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.CountableMarkov.pointRealFunctional_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.CountableMarkov.pointRealFunctional_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.CountableMarkov.pointRealFunctional_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.CountableMarkov.ae_pointRealFunctional_agrees' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.CountableMarkov.ae_goodPoint_of_semigroup' depends on axioms: [propext, Classical.choice, Quot.sound]

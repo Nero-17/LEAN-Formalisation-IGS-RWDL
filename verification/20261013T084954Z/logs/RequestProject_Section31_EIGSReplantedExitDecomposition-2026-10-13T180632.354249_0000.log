@@ -1,0 +1,3 @@
+'EIGS.xiForward_preserves_terminals' depends on axioms: [propext, Quot.sound]
+'EIGS.xiForward_terminals_image' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiReplanted_exit_le_first_skeleton_add_spectral_cost' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,29 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSNativeYosidaConvergence.lean:90:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.VaryingHilbertCore.strong_const_smul`:
+  [CompleteSpace Hilbert]
+  [∀ (level : ℕ), CompleteSpace (LevelHilbert level)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CompleteSpace Hilbert] [∀ (level : ℕ), CompleteSpace (LevelHilbert level)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSNativeYosidaConvergence.lean:106:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.VaryingHilbertCore.strong_operator_powers`:
+  [CompleteSpace Hilbert]
+  [∀ (level : ℕ), CompleteSpace (LevelHilbert level)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CompleteSpace Hilbert] [∀ (level : ℕ), CompleteSpace (LevelHilbert level)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'IGS.Sec31.VaryingBoundedExponential.scalarTail_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.VaryingBoundedExponential.norm_exp_sub_polynomial_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.VaryingBoundedExponential.yosida_generator_norm_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.VaryingHilbertCore.strong_const_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.VaryingHilbertCore.strong_operator_powers' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.VaryingHilbertCore.strong_operator_polynomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.VaryingHilbertCore.strong_exp_apply_of_uniform_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiNativeYosidaSemigroup_strong_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiNativeYosidaStrong_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

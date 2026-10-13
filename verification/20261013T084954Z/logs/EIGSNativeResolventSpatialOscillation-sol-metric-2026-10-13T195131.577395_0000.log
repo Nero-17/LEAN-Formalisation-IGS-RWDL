@@ -1,0 +1,3 @@
+'EIGS.finite_continuous_basis_compact_coefficients' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.finite_continuous_basis_weighted_modulus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeFiniteResolvent_eventual_spatial_oscillation' depends on axioms: [propext, Classical.choice, Quot.sound]

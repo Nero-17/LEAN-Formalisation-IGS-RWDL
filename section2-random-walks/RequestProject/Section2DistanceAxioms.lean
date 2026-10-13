@@ -1,0 +1,18 @@
+import RequestProject.Section2DistanceScale
+
+#print axioms EIGS.RenormMap.subvalue_le_supervalue
+#print axioms EIGS.RenormMap.eigenvalue_le_of_positive_supervector
+#print axioms EIGS.Network.reachable_withoutColour_iff_path_avoids_colour
+#print axioms EIGS.Network.not_reachable_withoutColour_iff_every_path_uses_colour
+#print axioms EIGS.RuleSystem.resistance_normalized_iterate_limit_of_path_distance_positive
+#print axioms EIGS.Network.one_le_pathColourCount_of_usesColour
+#print axioms EIGS.RuleSystem.pathRenormMap_normalized_eigenpair_exists_unique
+#print axioms EIGS.RuleSystem.pathRenormMap_normalized_iterate_limit
+#print axioms EIGS.RuleSystem.pathRenormMap_coordinate_minimum
+#print axioms EIGS.RuleSystem.path_eigenvalue_realized_and_minimal
+#print axioms EIGS.Network.colourConsistent_of_edgesUnique
+#print axioms EIGS.Network.sum_pathColourCount_eq_length
+#print axioms EIGS.Network.path_eval_unit_eq_graphDistance
+#print axioms EIGS.RuleSystem.pathRenormMap_unit_eq_graphDistances
+#print axioms EIGS.RuleSystem.path_eigenvalue_ge_colours
+#print axioms EIGS.RuleSystem.path_eigenvalue_ge_rule_distance_bound

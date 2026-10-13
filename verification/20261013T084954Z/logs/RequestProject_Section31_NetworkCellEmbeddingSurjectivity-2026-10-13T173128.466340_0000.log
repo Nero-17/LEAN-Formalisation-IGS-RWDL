@@ -1,0 +1,6 @@
+'EIGS.Network.ColourEmbedding.subst_vertex_surjective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.ColourEmbedding.subst_edge_surjective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.ColourEmbedding.substIter_surjective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.firstCopy_singleEdge_vertex_surjective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.firstCopy_singleEdge_edge_surjective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.iteratedCell_singleEdge_surjective' depends on axioms: [propext, Classical.choice, Quot.sound]

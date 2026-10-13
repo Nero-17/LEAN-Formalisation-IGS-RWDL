@@ -1,0 +1,9 @@
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroup_orbit_norm_antitone' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroup_rightDerivative_nonpositive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroup_generator_graph' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

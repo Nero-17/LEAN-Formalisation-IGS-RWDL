@@ -1,0 +1,3 @@
+'EIGS.xiNativeFiniteResolvent_exists_uniform_subsequence_along' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

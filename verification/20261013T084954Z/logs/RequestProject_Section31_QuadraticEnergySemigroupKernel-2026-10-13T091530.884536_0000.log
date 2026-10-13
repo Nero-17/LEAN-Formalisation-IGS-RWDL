@@ -1,0 +1,9 @@
+'IGS.Sec31.QuadraticEnergySpace.resolventState_fixed_of_original_energy_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroup_fixed_of_generator_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroup_fixed_of_original_energy_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

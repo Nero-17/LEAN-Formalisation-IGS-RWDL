@@ -1,0 +1,9 @@
+'IGS.Sec31.CountableMarkov.extendedPointMeasure_isProbability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.CountableMarkov.extendedPointMeasure_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.CountableMarkov.fixedTimeKernel_isMarkov' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.CountableMarkov.ae_fixedTimeKernel_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.CountableMarkov.ae_fixedTimeKernel_integral_of_semigroup' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,4 @@
+'Outlook.FourColourActualGraphLaw.actual_retainedNetworkLaw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourActualGraphLaw.actual_red_sourceClusterLaw' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

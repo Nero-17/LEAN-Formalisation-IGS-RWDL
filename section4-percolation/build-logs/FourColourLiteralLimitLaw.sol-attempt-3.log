@@ -1,0 +1,21 @@
+source=C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourLiteralLimitLaw.lean
+started=2026-10-13T12:54:22.834243+00:00
+source_sha256=B1EAE6CF419F1B59A13A18BD770A95E5324FB82371468C00A50245A41CA92F93
+'Outlook.FourColourLiteralLimitLaw.measurableSet_convergentGHPaths' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourLiteralLimitLaw.measurable_ghPathLimit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourLiteralLimitLaw.ghPathLimit_eq_of_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourLiteralLimitLaw.actual_ghPathLimit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourLiteralLimitLaw.measurable_literalCompactGH' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourLiteralLimitLaw.literal_gh_ae_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourLiteralLimitLaw.actual_encoded_literal_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourLiteralLimitLaw.actual_literal_compact_source_law' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+exit=0
+finished=2026-10-13T12:55:56.138926+00:00

@@ -1,0 +1,7 @@
+import RequestProject.Section31.VaryingCoreRecovery
+
+#print axioms IGS.Sec31.VaryingHilbertCore.strong_sub
+#print axioms IGS.Sec31.VaryingHilbertCore.strong_norm_sub_tendsto
+#print axioms IGS.Sec31.VaryingHilbertCore.exists_diagonal_state_energy_recovery
+#print axioms IGS.Sec31.VaryingHilbertCore.exists_state_energy_recovery_of_core
+#print axioms IGS.Sec31.VaryingHilbertCore.exists_state_energy_recovery_of_joint_core_density

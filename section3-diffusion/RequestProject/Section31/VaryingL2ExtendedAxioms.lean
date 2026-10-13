@@ -1,0 +1,13 @@
+import RequestProject.Section31.VaryingL2Approximation
+import RequestProject.Section31.VaryingWeakLimits
+import RequestProject.Section31.VaryingEmbeddedL2Core
+
+#print axioms IGS.Sec31.VaryingHilbertCore.strong_of_norm_sub_tendsto_zero
+#print axioms IGS.Sec31.boundedContinuous_L2_norm_le_sup
+#print axioms IGS.Sec31.uniformly_convergent_functions_L2_strong
+#print axioms IGS.Sec31.VaryingHilbertCore.weak_limit_unique
+#print axioms IGS.Sec31.VaryingHilbertCore.strong_limit_unique
+#print axioms IGS.Sec31.VaryingHilbertCore.weak_norm_le_of_frequently_norm_le
+#print axioms IGS.Sec31.embeddedProbabilityMeasures
+#print axioms IGS.Sec31.embeddingMeasurePreserving
+#print axioms IGS.Sec31.embeddedProbabilityL2Core

@@ -1,0 +1,7 @@
+2026-10-13T01:19:49.0949674Z
+'EIGS.xiVertexCountingMeasure_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiVertexCountingMeasure_ancestor_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiVertexCountingMeasure_ancestor_none' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiVertexEmpiricalMeasure_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT_CODE=0
+2026-10-13T01:22:14.1407771Z

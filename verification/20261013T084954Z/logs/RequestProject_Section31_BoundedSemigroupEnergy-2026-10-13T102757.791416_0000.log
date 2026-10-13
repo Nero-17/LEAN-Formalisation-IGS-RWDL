@@ -1,0 +1,12 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\BoundedSemigroupEnergy.lean:37:29: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\BoundedSemigroupEnergy.lean:58:29: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'IGS.Sec31.BoundedSemigroupEnergy.exp_apply_hasDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.BoundedSemigroupEnergy.norm_sq_hasDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.BoundedSemigroupEnergy.energy_hasDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.BoundedSemigroupEnergy.energy_antitone' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.BoundedSemigroupEnergy.norm_sq_dissipation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.BoundedSemigroupEnergy.energy_time_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

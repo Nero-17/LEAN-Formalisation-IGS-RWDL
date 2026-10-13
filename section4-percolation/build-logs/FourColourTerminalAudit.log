@@ -1,0 +1,17 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourTerminalAudit.lean:144:57: warning: unused variable `nonnegative`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourTerminalAudit.lean:144:79: warning: unused variable `atMostOne`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'Outlook.correctedCriticalEN_square_terminal_difference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.correctedCriticalEN_square_terminal_asymmetric' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.reverseConfiguration_involutive' depends on axioms: [propext]
+'Cluster.conn_reverseConfiguration' depends on axioms: [propext]
+'Cluster.leftOpenIncidences_reverse' depends on axioms: [propext]
+'Cluster.confMeasure_reverse_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.connectedMeasure_reverse_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.connected_terminal_incidence_expectations_equal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.leftOpenIncidences_eq_net' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.rightOpenIncidences_eq_net' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.connected_actual_terminal_expectations_equal' depends on axioms: [propext, Classical.choice, Quot.sound]

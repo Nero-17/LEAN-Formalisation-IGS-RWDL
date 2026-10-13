@@ -1,0 +1,3 @@
+'EIGS.expExit_le_time_add_upper_mul_survival' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.survival_lower_of_exit_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.survival_uniform_positive_of_exit_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]

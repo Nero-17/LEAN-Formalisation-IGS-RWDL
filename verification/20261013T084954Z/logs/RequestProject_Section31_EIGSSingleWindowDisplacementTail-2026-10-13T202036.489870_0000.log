@@ -1,0 +1,4 @@
+'EIGS.xiCoarseDisplacementEvent_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiGraphWalkPathLaw_displacement_anchor_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSingleWindowDisplacementTail_of_native_iteration' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiSingleWindowDisplacementTail_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

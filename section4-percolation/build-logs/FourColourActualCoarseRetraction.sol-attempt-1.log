@@ -1,0 +1,532 @@
+source=C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean
+started=2026-10-13T09:51:21.111973+00:00
+source_sha256=0C1DE4080CB18D9E44624135E8A796EEA22F26E9E4D36E85C35D233A9E4D89DA
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:39:12: error: unsolved goals
+firstNetwork secondNetwork firstImage secondImage : TTN
+firstMap : firstNetwork.TerminalPathMap firstImage
+secondMap : secondNetwork.TerminalPathMap secondImage
+⊢ firstImage.seriesEmb secondImage secondImage.b = (firstImage.seriesTTN secondImage).b
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:140:2: error: Type mismatch: After simplification, term
+  projected
+ has type
+  firstNetwork.EdgePath (retraction.mapping (embedding.vertices first)) (retraction.mapping (embedding.vertices last))
+but is expected to have type
+  firstNetwork.EdgePath first last
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:153:32: error: Application type mismatch: The argument
+  vertex
+has type
+  TTN.edgeTTN.V
+but is expected to have type
+  Prop
+in the application
+  @ite ?m.9 vertex
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:154:48: error: Application type mismatch: The argument
+  endpoint
+has type
+  TTN.edgeTTN.V
+but is expected to have type
+  Prop
+in the application
+  @ite ?m.24 endpoint
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:166:19: error: Tactic `rfl` failed: The left-hand side
+  collapse (net (0 + 1) (false, false, false, false)).a
+is not definitionally equal to the right-hand side
+  (net 0 (coarse 0 (false, false, false, false))).a
+
+collapse : ((TTN.edgeTTN.seriesTTN TTN.edgeTTN).parTTN (TTN.edgeTTN.seriesTTN TTN.edgeTTN)).V → Bool :=
+  diamondCollapse false false
+⊢ collapse (net (0 + 1) (false, false, false, false)).a = (net 0 (coarse 0 (false, false, false, false))).a
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:166:19: error: Tactic `rfl` failed: The left-hand side
+  collapse (net (0 + 1) (false, false, false, true)).a
+is not definitionally equal to the right-hand side
+  (net 0 (coarse 0 (false, false, false, true))).a
+
+collapse : ((TTN.edgeTTN.seriesTTN TTN.edgeTTN).parTTN (TTN.edgeTTN.seriesTTN TTN.edgeTTN)).V → Bool :=
+  diamondCollapse false false
+⊢ collapse (net (0 + 1) (false, false, false, true)).a = (net 0 (coarse 0 (false, false, false, true))).a
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:166:19: error: Tactic `rfl` failed: The left-hand side
+  collapse (net (0 + 1) (false, false, true, false)).a
+is not definitionally equal to the right-hand side
+  (net 0 (coarse 0 (false, false, true, false))).a
+
+collapse : ((TTN.edgeTTN.seriesTTN TTN.edgeTTN).parTTN (TTN.edgeTTN.seriesTTN TTN.edgeTTN)).V → Bool :=
+  diamondCollapse false true
+⊢ collapse (net (0 + 1) (false, false, true, false)).a = (net 0 (coarse 0 (false, false, true, false))).a
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:166:19: error: Tactic `rfl` failed: The left-hand side
+  collapse (net (0 + 1) (false, false, true, true)).a
+is not definitionally equal to the right-hand side
+  (net 0 (coarse 0 (false, false, true, true))).a
+
+collapse : ((TTN.edgeTTN.seriesTTN TTN.edgeTTN).parTTN (TTN.edgeTTN.seriesTTN TTN.edgeTTN)).V → Bool :=
+  diamondCollapse false true
+⊢ collapse (net (0 + 1) (false, false, true, true)).a = (net 0 (coarse 0 (false, false, true, true))).a
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:166:19: error: Tactic `rfl` failed: The left-hand side
+  collapse (net (0 + 1) (false, true, false, false)).a
+is not definitionally equal to the right-hand side
+  (net 0 (coarse 0 (false, true, false, false))).a
+
+collapse : ((TTN.edgeTTN.seriesTTN TTN.edgeTTN).parTTN (TTN.edgeTTN.seriesTTN TTN.edgeTTN)).V → Bool :=
+  diamondCollapse false false
+⊢ collapse (net (0 + 1) (false, true, false, false)).a = (net 0 (coarse 0 (false, true, false, false))).a
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:166:19: error: Tactic `rfl` failed: The left-hand side
+  collapse (net (0 + 1) (false, true, false, true)).a
+is not definitionally equal to the right-hand side
+  (net 0 (coarse 0 (false, true, false, true))).a
+
+collapse : ((TTN.edgeTTN.seriesTTN TTN.edgeTTN).parTTN (TTN.edgeTTN.seriesTTN TTN.edgeTTN)).V → Bool :=
+  diamondCollapse false false
+⊢ collapse (net (0 + 1) (false, true, false, true)).a = (net 0 (coarse 0 (false, true, false, true))).a
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:166:19: error: Tactic `rfl` failed: The left-hand side
+  collapse (net (0 + 1) (false, true, true, false)).a
+is not definitionally equal to the right-hand side
+  (net 0 (coarse 0 (false, true, true, false))).a
+
+collapse : ((TTN.edgeTTN.seriesTTN TTN.edgeTTN).parTTN (TTN.edgeTTN.seriesTTN TTN.edgeTTN)).V → Bool :=
+  diamondCollapse false true
+⊢ collapse (net (0 + 1) (false, true, true, false)).a = (net 0 (coarse 0 (false, true, true, false))).a
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:166:19: error: Tactic `rfl` failed: The left-hand side
+  collapse (net (0 + 1) (false, true, true, true)).a
+is not definitionally equal to the right-hand side
+  (net 0 (coarse 0 (false, true, true, true))).a
+
+collapse : ((TTN.edgeTTN.seriesTTN TTN.edgeTTN).parTTN (TTN.edgeTTN.seriesTTN TTN.edgeTTN)).V → Bool :=
+  diamondCollapse false true
+⊢ collapse (net (0 + 1) (false, true, true, true)).a = (net 0 (coarse 0 (false, true, true, true))).a
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:166:19: error: Tactic `rfl` failed: The left-hand side
+  collapse (net (0 + 1) (true, false, false, false)).a
+is not definitionally equal to the right-hand side
+  (net 0 (coarse 0 (true, false, false, false))).a
+
+collapse : ((TTN.edgeTTN.seriesTTN TTN.edgeTTN).parTTN (TTN.edgeTTN.seriesTTN TTN.edgeTTN)).V → Bool :=
+  diamondCollapse true false
+⊢ collapse (net (0 + 1) (true, false, false, false)).a = (net 0 (coarse 0 (true, false, false, false))).a
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:166:19: error: Tactic `rfl` failed: The left-hand side
+  collapse (net (0 + 1) (true, false, false, true)).a
+is not definitionally equal to the right-hand side
+  (net 0 (coarse 0 (true, false, false, true))).a
+
+collapse : ((TTN.edgeTTN.seriesTTN TTN.edgeTTN).parTTN (TTN.edgeTTN.seriesTTN TTN.edgeTTN)).V → Bool :=
+  diamondCollapse true false
+⊢ collapse (net (0 + 1) (true, false, false, true)).a = (net 0 (coarse 0 (true, false, false, true))).a
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:166:19: error: Tactic `rfl` failed: The left-hand side
+  collapse (net (0 + 1) (true, false, true, false)).a
+is not definitionally equal to the right-hand side
+  (net 0 (coarse 0 (true, false, true, false))).a
+
+collapse : ((TTN.edgeTTN.seriesTTN TTN.edgeTTN).parTTN (TTN.edgeTTN.seriesTTN TTN.edgeTTN)).V → Bool :=
+  diamondCollapse true true
+⊢ collapse (net (0 + 1) (true, false, true, false)).a = (net 0 (coarse 0 (true, false, true, false))).a
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:166:19: error: Tactic `rfl` failed: The left-hand side
+  collapse (net (0 + 1) (true, false, true, true)).a
+is not definitionally equal to the right-hand side
+  (net 0 (coarse 0 (true, false, true, true))).a
+
+collapse : ((TTN.edgeTTN.seriesTTN TTN.edgeTTN).parTTN (TTN.edgeTTN.seriesTTN TTN.edgeTTN)).V → Bool :=
+  diamondCollapse true true
+⊢ collapse (net (0 + 1) (true, false, true, true)).a = (net 0 (coarse 0 (true, false, true, true))).a
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:166:19: error: Tactic `rfl` failed: The left-hand side
+  collapse (net (0 + 1) (true, true, false, false)).a
+is not definitionally equal to the right-hand side
+  (net 0 (coarse 0 (true, true, false, false))).a
+
+collapse : ((TTN.edgeTTN.seriesTTN TTN.edgeTTN).parTTN (TTN.edgeTTN.seriesTTN TTN.edgeTTN)).V → Bool :=
+  diamondCollapse true false
+⊢ collapse (net (0 + 1) (true, true, false, false)).a = (net 0 (coarse 0 (true, true, false, false))).a
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:166:19: error: Tactic `rfl` failed: The left-hand side
+  collapse (net (0 + 1) (true, true, false, true)).a
+is not definitionally equal to the right-hand side
+  (net 0 (coarse 0 (true, true, false, true))).a
+
+collapse : ((TTN.edgeTTN.seriesTTN TTN.edgeTTN).parTTN (TTN.edgeTTN.seriesTTN TTN.edgeTTN)).V → Bool :=
+  diamondCollapse true false
+⊢ collapse (net (0 + 1) (true, true, false, true)).a = (net 0 (coarse 0 (true, true, false, true))).a
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:166:19: error: Tactic `rfl` failed: The left-hand side
+  collapse (net (0 + 1) (true, true, true, false)).a
+is not definitionally equal to the right-hand side
+  (net 0 (coarse 0 (true, true, true, false))).a
+
+collapse : ((TTN.edgeTTN.seriesTTN TTN.edgeTTN).parTTN (TTN.edgeTTN.seriesTTN TTN.edgeTTN)).V → Bool :=
+  diamondCollapse true true
+⊢ collapse (net (0 + 1) (true, true, true, false)).a = (net 0 (coarse 0 (true, true, true, false))).a
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:166:19: error: Tactic `rfl` failed: The left-hand side
+  collapse (net (0 + 1) (true, true, true, true)).a
+is not definitionally equal to the right-hand side
+  (net 0 (coarse 0 (true, true, true, true))).a
+
+collapse : ((TTN.edgeTTN.seriesTTN TTN.edgeTTN).parTTN (TTN.edgeTTN.seriesTTN TTN.edgeTTN)).V → Bool :=
+  diamondCollapse true true
+⊢ collapse (net (0 + 1) (true, true, true, true)).a = (net 0 (coarse 0 (true, true, true, true))).a
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (false, false, false, false)).vertices false) = false
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (false, false, false, false)).vertices true) = true
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:36: error: Application type mismatch: The argument
+  TTN.edgePath_edge TTN.edgeTTN ()
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.tail ()) (TTN.edgeTTN.head ())
+but is expected to have type
+  (net 0 (coarse 0 (false, false, false, true))).EdgePath
+    (collapse ((net (0 + 1) (false, false, false, true)).head (Sum.inr (Sum.inr edge))))
+    (collapse ((net (0 + 1) (false, false, false, true)).tail (Sum.inr (Sum.inr edge))))
+in the application
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (false, false, false, true)).vertices false) = false
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (false, false, false, true)).vertices true) = true
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (false, false, true, false)).vertices false) = false
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (false, false, true, false)).vertices true) = true
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:36: error: Application type mismatch: The argument
+  TTN.edgePath_edge TTN.edgeTTN ()
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.tail ()) (TTN.edgeTTN.head ())
+but is expected to have type
+  (net 0 (coarse 0 (false, false, true, true))).EdgePath
+    (collapse ((net (0 + 1) (false, false, true, true)).head (Sum.inr (Sum.inr edge))))
+    (collapse ((net (0 + 1) (false, false, true, true)).tail (Sum.inr (Sum.inr edge))))
+in the application
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (false, false, true, true)).vertices false) = false
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (false, false, true, true)).vertices true) = true
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:36: error: Application type mismatch: The argument
+  TTN.edgePath_edge TTN.edgeTTN ()
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.tail ()) (TTN.edgeTTN.head ())
+but is expected to have type
+  (net 0 (coarse 0 (false, true, false, false))).EdgePath
+    (collapse ((net (0 + 1) (false, true, false, false)).head (Sum.inl (Sum.inr edge))))
+    (collapse ((net (0 + 1) (false, true, false, false)).tail (Sum.inl (Sum.inr edge))))
+in the application
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (false, true, false, false)).vertices false) = false
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (false, true, false, false)).vertices true) = true
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:36: error: Application type mismatch: The argument
+  TTN.edgePath_edge TTN.edgeTTN ()
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.tail ()) (TTN.edgeTTN.head ())
+but is expected to have type
+  (net 0 (coarse 0 (false, true, false, true))).EdgePath
+    (collapse ((net (0 + 1) (false, true, false, true)).head (Sum.inl (Sum.inr edge))))
+    (collapse ((net (0 + 1) (false, true, false, true)).tail (Sum.inl (Sum.inr edge))))
+in the application
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:36: error: Application type mismatch: The argument
+  TTN.edgePath_edge TTN.edgeTTN ()
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.tail ()) (TTN.edgeTTN.head ())
+but is expected to have type
+  (net 0 (coarse 0 (false, true, false, true))).EdgePath
+    (collapse ((net (0 + 1) (false, true, false, true)).head (Sum.inr (Sum.inr edge))))
+    (collapse ((net (0 + 1) (false, true, false, true)).tail (Sum.inr (Sum.inr edge))))
+in the application
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (false, true, false, true)).vertices false) = false
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (false, true, false, true)).vertices true) = true
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:36: error: Application type mismatch: The argument
+  TTN.edgePath_edge TTN.edgeTTN ()
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.tail ()) (TTN.edgeTTN.head ())
+but is expected to have type
+  (net 0 (coarse 0 (false, true, true, false))).EdgePath
+    (collapse ((net (0 + 1) (false, true, true, false)).head (Sum.inl (Sum.inr edge))))
+    (collapse ((net (0 + 1) (false, true, true, false)).tail (Sum.inl (Sum.inr edge))))
+in the application
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (false, true, true, false)).vertices false) = false
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (false, true, true, false)).vertices true) = true
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:36: error: Application type mismatch: The argument
+  TTN.edgePath_edge TTN.edgeTTN ()
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.tail ()) (TTN.edgeTTN.head ())
+but is expected to have type
+  (net 0 (coarse 0 (false, true, true, true))).EdgePath
+    (collapse ((net (0 + 1) (false, true, true, true)).head (Sum.inl (Sum.inr edge))))
+    (collapse ((net (0 + 1) (false, true, true, true)).tail (Sum.inl (Sum.inr edge))))
+in the application
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:36: error: Application type mismatch: The argument
+  TTN.edgePath_edge TTN.edgeTTN ()
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.tail ()) (TTN.edgeTTN.head ())
+but is expected to have type
+  (net 0 (coarse 0 (false, true, true, true))).EdgePath
+    (collapse ((net (0 + 1) (false, true, true, true)).head (Sum.inr (Sum.inr edge))))
+    (collapse ((net (0 + 1) (false, true, true, true)).tail (Sum.inr (Sum.inr edge))))
+in the application
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (false, true, true, true)).vertices false) = false
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (false, true, true, true)).vertices true) = true
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (true, false, false, false)).vertices false) = false
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (true, false, false, false)).vertices true) = true
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:36: error: Application type mismatch: The argument
+  TTN.edgePath_edge TTN.edgeTTN ()
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.tail ()) (TTN.edgeTTN.head ())
+but is expected to have type
+  (net 0 (coarse 0 (true, false, false, true))).EdgePath
+    (collapse ((net (0 + 1) (true, false, false, true)).head (Sum.inr (Sum.inr edge))))
+    (collapse ((net (0 + 1) (true, false, false, true)).tail (Sum.inr (Sum.inr edge))))
+in the application
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (true, false, false, true)).vertices false) = false
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (true, false, false, true)).vertices true) = true
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (true, false, true, false)).vertices false) = false
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (true, false, true, false)).vertices true) = true
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:36: error: Application type mismatch: The argument
+  TTN.edgePath_edge TTN.edgeTTN ()
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.tail ()) (TTN.edgeTTN.head ())
+but is expected to have type
+  (net 0 (coarse 0 (true, false, true, true))).EdgePath
+    (collapse ((net (0 + 1) (true, false, true, true)).head (Sum.inr (Sum.inr edge))))
+    (collapse ((net (0 + 1) (true, false, true, true)).tail (Sum.inr (Sum.inr edge))))
+in the application
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (true, false, true, true)).vertices false) = false
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (true, false, true, true)).vertices true) = true
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:36: error: Application type mismatch: The argument
+  TTN.edgePath_edge TTN.edgeTTN ()
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.tail ()) (TTN.edgeTTN.head ())
+but is expected to have type
+  (net 0 (coarse 0 (true, true, false, false))).EdgePath
+    (collapse ((net (0 + 1) (true, true, false, false)).head (Sum.inl (Sum.inr edge))))
+    (collapse ((net (0 + 1) (true, true, false, false)).tail (Sum.inl (Sum.inr edge))))
+in the application
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (true, true, false, false)).vertices false) = false
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (true, true, false, false)).vertices true) = true
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:36: error: Application type mismatch: The argument
+  TTN.edgePath_edge TTN.edgeTTN ()
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.tail ()) (TTN.edgeTTN.head ())
+but is expected to have type
+  (net 0 (coarse 0 (true, true, false, true))).EdgePath
+    (collapse ((net (0 + 1) (true, true, false, true)).head (Sum.inl (Sum.inr edge))))
+    (collapse ((net (0 + 1) (true, true, false, true)).tail (Sum.inl (Sum.inr edge))))
+in the application
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:36: error: Application type mismatch: The argument
+  TTN.edgePath_edge TTN.edgeTTN ()
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.tail ()) (TTN.edgeTTN.head ())
+but is expected to have type
+  (net 0 (coarse 0 (true, true, false, true))).EdgePath
+    (collapse ((net (0 + 1) (true, true, false, true)).head (Sum.inr (Sum.inr edge))))
+    (collapse ((net (0 + 1) (true, true, false, true)).tail (Sum.inr (Sum.inr edge))))
+in the application
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (true, true, false, true)).vertices false) = false
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (true, true, false, true)).vertices true) = true
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:36: error: Application type mismatch: The argument
+  TTN.edgePath_edge TTN.edgeTTN ()
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.tail ()) (TTN.edgeTTN.head ())
+but is expected to have type
+  (net 0 (coarse 0 (true, true, true, false))).EdgePath
+    (collapse ((net (0 + 1) (true, true, true, false)).head (Sum.inl (Sum.inr edge))))
+    (collapse ((net (0 + 1) (true, true, true, false)).tail (Sum.inl (Sum.inr edge))))
+in the application
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (true, true, true, false)).vertices false) = false
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (true, true, true, false)).vertices true) = true
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:36: error: Application type mismatch: The argument
+  TTN.edgePath_edge TTN.edgeTTN ()
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.tail ()) (TTN.edgeTTN.head ())
+but is expected to have type
+  (net 0 (coarse 0 (true, true, true, true))).EdgePath
+    (collapse ((net (0 + 1) (true, true, true, true)).head (Sum.inl (Sum.inr edge))))
+    (collapse ((net (0 + 1) (true, true, true, true)).tail (Sum.inl (Sum.inr edge))))
+in the application
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:36: error: Application type mismatch: The argument
+  TTN.edgePath_edge TTN.edgeTTN ()
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.tail ()) (TTN.edgeTTN.head ())
+but is expected to have type
+  (net 0 (coarse 0 (true, true, true, true))).EdgePath
+    (collapse ((net (0 + 1) (true, true, true, true)).head (Sum.inr (Sum.inr edge))))
+    (collapse ((net (0 + 1) (true, true, true, true)).tail (Sum.inr (Sum.inr edge))))
+in the application
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (true, true, true, true)).vertices false) = false
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseRetraction.lean:180:12: error: Type mismatch
+  TTN.edgePath_symm (TTN.edgePath_edge TTN.edgeTTN ())
+has type
+  TTN.edgeTTN.EdgePath (TTN.edgeTTN.head ()) (TTN.edgeTTN.tail ())
+but is expected to have type
+  collapse ((actualOldEmbedding 0 (true, true, true, true)).vertices true) = true
+'Outlook.FourColourActualCoarseRetraction.diamondRetraction' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualCoarseRetraction.actualRetraction' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualCoarseRetraction.actual_old_edgePath_iff' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualCoarseRetraction.actual_source_membership_iff' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualCoarseRetraction.actual_old_reachable_iff' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+exit=1
+finished=2026-10-13T09:52:43.551619+00:00

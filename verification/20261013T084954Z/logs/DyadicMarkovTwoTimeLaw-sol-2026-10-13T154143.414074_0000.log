@@ -1,0 +1,5 @@
+'IGS.Sec31.DiscreteMarkov.pathLaw_coordinate_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.rationalSkeletonLaw_stationary_pair' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.dyadicPathLaw_ordered_pair' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,11 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\BoundedSemigroupIntegral.lean:22:32: warning: This simp argument is unused:
+  id_eq
+
+Hint: Omit it from the simp argument list.
+  simp only [Function.comp_def, i̵d̵_̵e̵q̵,̵ ̵neg_one_smul] at operatorDerivative
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'IGS.Sec31.BoundedSemigroupIntegral.exp_apply_hasDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.BoundedSemigroupIntegral.exp_apply_sub_eq_integral' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

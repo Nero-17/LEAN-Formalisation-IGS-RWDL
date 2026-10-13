@@ -1,0 +1,8 @@
+2026-10-13T01:12:25.0064538Z
+'EIGS.rule_edge_card_ge_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.XiMassParameters.rate_ge_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiEdge_colour_weight_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiInteriorBirthCount_normalized_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiVertex_count_normalized_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT_CODE=0
+2026-10-13T01:12:54.3999103Z

@@ -1,0 +1,131 @@
+import RequestProject.Section2ConcreteSpectralRadius
+import RequestProject.Section2SpectralGrowth
+import RequestProject.Section2UnitMetricLimit
+import RequestProject.Section2MetricComparison
+import RequestProject.Section2ConcreteBallBarrier
+import RequestProject.Section2ExitComparison
+import RequestProject.Section2StarSpectralVolume
+import RequestProject.Section2MesoscopicVolumeUpper
+import RequestProject.Section2BallLower
+import RequestProject.Section2MesoscopicVolume
+import RequestProject.Section2GroundedTrace
+import RequestProject.Section2ResistanceSpectralRadius
+import RequestProject.Section2GroundedResistanceBounds
+import RequestProject.Section2SupportedTrace
+import RequestProject.Section2StarGeometry
+import RequestProject.Section2StarResistance
+import RequestProject.Section2MesoscopicResistance
+
+#print axioms EIGS.complex_eigenvalue_norm_le_positive_eigenvalue
+#print axioms EIGS.complex_spectrum_norm_le_positive_eigenvalue
+#print axioms EIGS.positive_eigenvalue_mem_complex_spectrum
+#print axioms EIGS.spectralRadius_eq_positive_eigenvalue
+#print axioms EIGS.realMatrixSpectralRadius_eq_positive_eigenvalue
+#print axioms EIGS.positive_matrix_spectralRadius_eigenpair
+#print axioms EIGS.RuleSystem.pathSelectionMatrix_positive
+#print axioms EIGS.RuleSystem.pathMinimumSpectralRadius_le
+#print axioms EIGS.RuleSystem.path_spectral_minimum_eigenpair_and_attainment
+#print axioms EIGS.RuleSystem.path_spectral_minimum_normalized_iterate_limit
+#print axioms EIGS.RuleSystem.path_spectral_minimum_ge_rule_distance_bound
+#print axioms EIGS.EIGSData.rule_paths_use_every_colour
+#print axioms EIGS.EIGSData.two_le_distanceSpectralRadius
+#print axioms EIGS.EIGSData.metricLengths_spectral_eigenpair
+#print axioms EIGS.xiSimpleGraph_terminal_distance_spectral_limit
+#print axioms EIGS.finiteGraphBall_eq_insert_neighbors
+#print axioms EIGS.finiteGraphBall_card_eq_degree_add_one
+#print axioms EIGS.Network.degree_eq_incident_edge_sum
+#print axioms EIGS.xiSimpleGraph_degree_eq_degree_state_sum
+#print axioms EIGS.xiSimpleGraph_small_ball_growth_from_primitive_rules
+#print axioms EIGS.finite_spectralRadius_eq_positive_eigenvalue
+#print axioms EIGS.finiteRealMatrixSpectralRadius_eq_positive_eigenvalue
+#print axioms EIGS.primitive_matrix_spectralRadius_eigenpair_finite
+#print axioms EIGS.eigs_mass_spectral_growth
+#print axioms EIGS.degree_spectral_growth_from_primitive_rules
+#print axioms EIGS.xiSimpleGraph_small_ball_spectral_growth
+#print axioms EIGS.Network.weightedDistance_continuousOn_positive
+#print axioms EIGS.Network.weightedDistance_continuousAt_positive
+#print axioms EIGS.xiNetwork_forward_weightedDistance
+#print axioms EIGS.EIGSData.metricLengths_iterate_eq_pathRenormMap
+#print axioms EIGS.xiSimpleGraph_all_coarse_pairs_metric_limit
+#print axioms EIGS.Network.EdgeWalk.cost_mono
+#print axioms EIGS.Network.weightedDistance_mono
+#print axioms EIGS.Network.weightedDistance_length_bounds
+#print axioms EIGS.xiScaled_unit_distance_comparable
+#print axioms EIGS.Network.weightedDistance_subst_ge_radius_outside_incident_copies
+#print axioms EIGS.Network.weighted_ball_subset_incident_copies
+#print axioms EIGS.Network.weighted_ball_card_le_incident_copies
+#print axioms EIGS.xiWeightedBall_subset_incident_copies
+#print axioms EIGS.surv_mono_domain
+#print axioms EIGS.expExit_mono_domain
+#print axioms EIGS.Network.expExit_le_mass_mul_effRes
+#print axioms EIGS.Network.weighted_ball_expExit_le_incident_copies
+#print axioms EIGS.xiRefinedMetricPotential_lipschitz
+#print axioms EIGS.xiRefinedMetricPotential_on_old
+#print axioms EIGS.xiRefinedMetricPotential_ge_outside_star
+#print axioms EIGS.xiWeightedDistance_ge_radius_outside_multistep_star
+#print axioms EIGS.xiWeightedBall_subset_multistep_star
+#print axioms EIGS.EIGSData.metricLengths_iterate_eigenpair
+#print axioms EIGS.xiSimpleGraph_ball_subset_multistep_star_of_eigenpair
+#print axioms EIGS.xiSimpleGraph_ball_subset_multistep_star_at_distanceSpectralRadius
+#print axioms EIGS.xiIncidentStar_embedRuleVtx_imp
+#print axioms EIGS.xiIncidentStar_endpoint_has_incident_ancestor
+#print axioms EIGS.xiIncidentStar_card_succ
+#print axioms EIGS.xiIncidentStar_card_succ_le_descendants
+#print axioms EIGS.xiInteriorBirthCount_succ
+#print axioms EIGS.xiVtx_card_eq_two_add_interior_births
+#print axioms EIGS.xiIncidentStar_card_le_interior_births
+#print axioms EIGS.xiIncidentStar_card_le_replanted_vertices
+#print axioms EIGS.xiReplanted_vertex_card_spectral_upper
+#print axioms EIGS.xiIncidentStar_card_le_degree_mul_mass_spectral_scale
+#print axioms EIGS.xiSimpleGraph_mesoscopic_ball_spectral_upper
+#print axioms EIGS.xiSimpleGraph_mesoscopic_ball_birth_spectral_upper
+#print axioms EIGS.xiWeightedDistance_rule_vertex_from_forward_le
+#print axioms EIGS.xiDescendant_endpoint_distance_bound
+#print axioms EIGS.xiDescendant_private_vertex_distance_bound
+#print axioms EIGS.xiDescendant_private_vertex_distance_from_incident_center_le
+#print axioms EIGS.xiSimpleGraph_private_descendants_in_ball_of_eigenpair
+#print axioms EIGS.xiIncidentDescendant_cardinality
+#print axioms EIGS.Network.incident_edge_count_eq_degree
+#print axioms EIGS.xiReplanted_edge_card_spectral_lower
+#print axioms EIGS.xiSimpleGraph_large_ball_spectral_lower
+#print axioms EIGS.xiForward_sigma_trans
+#print axioms EIGS.xiForward_ball_card_trans
+#print axioms EIGS.degree_le_finiteGraphBall_card
+#print axioms EIGS.xiSimpleGraph_mesoscopic_ball_birth_spectral_volume
+#print axioms EIGS.effResToBoundary_pos
+#print axioms EIGS.effResToBoundary_mono_domain
+#print axioms EIGS.dirichletEnergy_smul
+#print axioms EIGS.boundaryVoltageProfile_source
+#print axioms EIGS.boundaryVoltageProfile_zero
+#print axioms EIGS.boundaryVoltageProfile_energy
+#print axioms EIGS.boundaryVoltageProfile_minimum
+#print axioms EIGS.effResToBoundary_eq_inverse_minimum_energy
+#print axioms EIGS.xiForward_injective
+#print axioms EIGS.xiCoarseGroundedDomain_center_mem
+#print axioms EIGS.xiCoarseGroundedDomain_other_not_mem
+#print axioms EIGS.xiCoarseGroundedDomain_complement_nonempty
+#print axioms EIGS.Network.unit_potential_energy_eq_dirichletEnergy
+#print axioms EIGS.Network.delta_potential_energy
+#print axioms EIGS.xiCoarseGroundedDomain_resistance_eq
+#print axioms EIGS.EIGSData.resistanceSpectralRadius_positive_eigenpair
+#print axioms EIGS.EIGSData.resistanceSpectralRadius_eq_of_positive_eigenpair
+#print axioms EIGS.EIGSData.resistanceSpectralRadius_iterate_bounds
+#print axioms EIGS.Network.parallel_resistance_bounds
+#print axioms EIGS.xiSimpleGraph_degree_positive
+#print axioms EIGS.xiCoarseGroundedDomain_resistance_spectral_bounds
+#print axioms EIGS.xiIncidentStar_forward_iff
+#print axioms EIGS.xiIncidentStar_subset_coarseGroundedDomain
+#print axioms EIGS.xiSimpleGraph_ball_resistance_spectral_upper
+#print axioms EIGS.Network.exists_supported_localization
+#print axioms EIGS.exists_xiPotential_iterated_trace_supported
+#print axioms EIGS.xiIncidentStar_weightedDistance_bound
+#print axioms EIGS.xiIncidentStar_subset_large_ball_of_eigenpair
+#print axioms EIGS.xiIncidentStarDomain_center_mem
+#print axioms EIGS.xiIncidentStarDomain_complement_nonempty
+#print axioms EIGS.xiIncidentStarDomain_resistance_eq
+#print axioms EIGS.xiIncidentStarDomain_resistance_spectral_bounds
+#print axioms EIGS.xiSimpleGraph_large_ball_resistance_spectral_lower
+#print axioms EIGS.xiForward_ball_resistance_trans
+#print axioms EIGS.xiForward_ball_complement_trans
+#print axioms EIGS.xiSimpleGraph_ball_complement_nonempty_at_spectral_scale
+#print axioms EIGS.xiSimpleGraph_mesoscopic_ball_birth_spectral_resistance

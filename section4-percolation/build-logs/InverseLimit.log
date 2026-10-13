@@ -1,0 +1,11 @@
+source=RequestProject/Cluster/InverseLimit.lean
+started=2026-10-12T16:19:26.1357382Z
+RequestProject/Cluster/InverseLimit.lean:157:0: warning: automatically included section variable(s) unused in theorem `ProbabilityTheory.InverseSystem.measurableSet_compatiblePaths`:
+  [∀ (n : ℕ), StandardBorelSpace (X n)]
+  [∀ (n : ℕ), Nonempty (X n)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [∀ (n : ℕ), StandardBorelSpace (X n)] [∀ (n : ℕ), Nonempty (X n)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+exit=0
+finished=2026-10-12T16:20:47.7763527Z

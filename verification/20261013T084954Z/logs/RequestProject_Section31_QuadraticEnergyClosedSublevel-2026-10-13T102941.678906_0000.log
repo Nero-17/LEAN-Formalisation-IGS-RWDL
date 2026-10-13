@@ -1,0 +1,1 @@
+'IGS.Sec31.QuadraticEnergySpace.closedForm_sublevel_limit' depends on axioms: [propext, Classical.choice, Quot.sound]

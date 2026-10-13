@@ -1,0 +1,11 @@
+2026-10-13T00:13:46.6983043Z
+'EIGS.xiEdgeAncestor_address' depends on axioms: [propext, Quot.sound]
+'EIGS.xiDescendant_weight_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiDescendant_cardinality' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.XiMassParameters.uniformEdgeMeasure_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.XiMassParameters.uniformEdgeMeasure_ancestor_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.XiMassParameters.actual_descendant_fraction_cylinder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.XiMassParameters.uniformEdgeMeasure_ancestor_mass_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+EXIT_CODE=0

@@ -1,0 +1,5 @@
+'EIGS.Network.substEmbed_adj_of_adj' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.subst_interior_neighbor_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.subst_interior_adj_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.subst_interior_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.subst_interior_transProb' depends on axioms: [propext, Classical.choice, Quot.sound]

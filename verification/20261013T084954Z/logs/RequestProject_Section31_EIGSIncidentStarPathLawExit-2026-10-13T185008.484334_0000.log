@@ -1,0 +1,15 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSIncidentStarPathLawExit.lean:18:0: warning: automatically included section variable(s) unused in theorem `EIGS.finitePrefixPredicate_measurable`:
+  [DecidableEq Vertex]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Vertex] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'EIGS.finiteGraphTransitionKernel_ae_adjacent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiTrajectoryFirstStarExit_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiTrajectoryFirstDistinctCoarseHit_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.finiteGraphPathLaw_ae_start' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.finiteGraphPathLaw_ae_adjacent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiGraphWalkPathLaw_ae_star_exit_iff_distinct_hit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiGraphWalkPathLaw_star_exit_probability_eq_distinct_hit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

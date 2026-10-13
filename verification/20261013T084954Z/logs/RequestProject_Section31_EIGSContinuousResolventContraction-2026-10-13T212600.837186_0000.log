@@ -1,0 +1,6 @@
+'IGS.Sec31.exists_continuousLinearMap_of_continuous_representatives' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiContinuous_uniform_limit_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiContinuousResolventContractionProperties_of_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiContinuousResolventContraction_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,3 @@
+'EIGS.xiIncidentStarDomain_trajectory_mem_of_avoids' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiIncidentStarDomain_first_exit_iff_first_distinct_hit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiGraphWalk_first_star_exit_iff_first_distinct_hit' depends on axioms: [propext, Classical.choice, Quot.sound]

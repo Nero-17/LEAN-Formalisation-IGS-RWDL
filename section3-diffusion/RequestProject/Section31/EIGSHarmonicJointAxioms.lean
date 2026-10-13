@@ -1,0 +1,9 @@
+import RequestProject.Section31.EIGSHarmonicJointDensity
+
+#print axioms EIGS.exists_xiContinuousHarmonic_of_step_contraction
+#print axioms EIGS.xiContinuousHarmonicProjection_uniform_tendsto
+#print axioms EIGS.xiContinuousHarmonicProjection_energy
+#print axioms EIGS.xiContinuousHarmonicProjection_boundary
+#print axioms EIGS.xiContinuousHarmonicProjection_energy_tendsto
+#print axioms EIGS.xiContinuousHarmonicProjection_residual_energy_tendsto
+#print axioms EIGS.exists_xiContinuousHarmonic_joint_recovery

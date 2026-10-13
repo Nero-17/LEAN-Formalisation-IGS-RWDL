@@ -1,0 +1,14 @@
+import RequestProject.Section31.EIGSHarmonicDensity
+
+#print axioms EIGS.xiHarmonicStep_parent_error
+#print axioms EIGS.xiHarmonicUnion_parent_error
+#print axioms EIGS.xiHarmonicFiniteLevel_joint_approximation
+#print axioms EIGS.xiHarmonicUnion_joint_approximation
+#print axioms EIGS.exists_positive_colour_length_lower_bound
+#print axioms EIGS.exists_xiHarmonic_lipschitz_approximation
+#print axioms EIGS.xiHarmonicUnionExtension_uniformContinuous_of_edge_decay
+#print axioms EIGS.exists_xiHarmonic_completion_extension_of_edge_decay
+#print axioms EIGS.exists_xiContinuousHarmonics_of_rules
+#print axioms EIGS.xiCompletionEmbedding_edge_distance_le
+#print axioms EIGS.exists_xiHarmonic_uniform_approximation_of_step_contraction
+#print axioms EIGS.exists_xiContinuousHarmonic_dense_core_of_rules

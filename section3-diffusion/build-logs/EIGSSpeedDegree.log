@@ -1,0 +1,5 @@
+2026-10-13T00:58:29.6375884Z
+'EIGS.xiVertexIncidenceCount_eq_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiVertexSpeedMeasure_singleton_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT_CODE=0
+2026-10-13T00:59:50.6444162Z

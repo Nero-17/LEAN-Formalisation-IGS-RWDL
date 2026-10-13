@@ -1,0 +1,5 @@
+'EIGS.xiCompletionEmbedding_forward' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiCompletionEmbedding_dist_eq_scaled_weighted' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiIncidentStar_completion_distance_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiIncidentStar_adjacent_completion_distance_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiCanonicalIncidentStar_completion_mesh_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

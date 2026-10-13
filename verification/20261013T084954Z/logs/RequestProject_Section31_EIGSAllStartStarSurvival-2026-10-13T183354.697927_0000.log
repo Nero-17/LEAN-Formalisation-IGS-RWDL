@@ -1,0 +1,3 @@
+'EIGS.xiIncidentStarDomain_erased_subset_skeleton_complement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiIncidentStarDomain_all_start_expExit_spectral_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiIncidentStarDomain_uniform_positive_survival' depends on axioms: [propext, Classical.choice, Quot.sound]

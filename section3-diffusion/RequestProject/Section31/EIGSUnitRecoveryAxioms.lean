@@ -1,0 +1,21 @@
+import RequestProject.Section31.EIGSUnitStateEnergyRecovery
+import RequestProject.Section31.EIGSUnitUniformCompletion
+import RequestProject.Section31.EIGSUnitL2Gram
+
+#print axioms EIGS.abs_sub_le_of_near_endpoint_intervals
+#print axioms EIGS.xiUnitPotentialAt_descendant_endpoint_range
+#print axioms EIGS.xiUnitPotentialAt_uniform_error_le
+#print axioms EIGS.xiUnitPotentialUniformError
+#print axioms EIGS.xiUnitPotentialUniformError_tendsto_of_edge_decay
+#print axioms EIGS.exists_xiUnitPotential_uniform_harmonic_convergence
+#print axioms EIGS.exists_xiUnitPotential_continuous_uniform_limit_of_rules
+#print axioms EIGS.xiFiniteSpeedL2_sub_norm_le
+#print axioms EIGS.xiUnitNativeL2
+#print axioms EIGS.xiUnitNativeL2_at_level
+#print axioms EIGS.xiUnitNativeL2_strong_of_uniform
+#print axioms EIGS.xiUnitNativeL2_inner_tendsto_of_uniform
+#print axioms EIGS.xiUnitPotentialAt_eq_potentialValues
+#print axioms EIGS.xiUnitPotentialAt_scaled_energy
+#print axioms EIGS.xiUnitPotentialScaledEnergy
+#print axioms EIGS.xiUnitPotentialScaledEnergy_tendsto
+#print axioms EIGS.exists_xiUnitPotential_state_energy_recovery_of_rules

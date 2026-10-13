@@ -1,0 +1,10 @@
+'EIGS.Network.colourConductance_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.colourConductanceChain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.ColourEmbedding.colourConductance_edge_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.ColourEmbedding.colourConductance_map' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.ColourEmbedding.colourConductance_zero_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.ColourEmbedding.colourConductance_rowMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.ColourEmbedding.colourConductanceChain_map' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.ColourEmbedding.colourConductanceChain_zero_outside' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,5 @@
+'EIGS.Network.ColourEmbedding.substVertex_embed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.ColourEmbedding.substIter_old' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.iteratedCellEmbedding' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.iteratedCellEmbedding_plus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.iteratedCellEmbedding_minus' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,11 @@
+'IGS.Sec31.VaryingBanachOperatorApproximation.varying_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.VaryingBanachOperatorApproximation.powers_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.VaryingBanachOperatorApproximation.polynomial_apply' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.VaryingBanachOperatorApproximation.exponential_apply' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.VaryingBanachOperatorApproximation.yosida_exponential_apply' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

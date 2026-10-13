@@ -1,0 +1,12 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\QuadraticEnergySmallStepResolvent.lean:75:31: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'IGS.Sec31.QuadraticEnergySpace.smallStep_resolvent_surjective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.positiveStep_resolvent_norm_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.positiveStep_resolvent_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

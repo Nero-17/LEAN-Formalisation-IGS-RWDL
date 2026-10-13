@@ -1,0 +1,13 @@
+'IGS.Sec31.BoundedSemigroupEnergy.exp_apply_norm_le_of_nonnegative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.BoundedSemigroupEnergy.exp_operator_norm_le_of_nonnegative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiNativeRandomWalk_selfAdjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeFiniteGenerator_selfAdjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeFiniteSemigroup_apply_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeFiniteSemigroup_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeFiniteSemigroup_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeFiniteSemigroup_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeFiniteSemigroup_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]

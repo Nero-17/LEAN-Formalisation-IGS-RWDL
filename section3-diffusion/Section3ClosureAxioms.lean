@@ -1,0 +1,133 @@
+import RequestProject.Section31.TraceQuadraticForm
+import RequestProject.Section31.GramCoercivity
+import RequestProject.Section31.EIGSTraceEnergy
+import RequestProject.Section31.SubstitutionTrace
+import RequestProject.Section31.EIGSHarmonicCore
+import RequestProject.Section31.EIGSRuleOscillation
+import RequestProject.Section31.EnergyOrthogonality
+import RequestProject.Section31.EIGSCoreRecovery
+import RequestProject.Section31.EIGSHarmonicDecay
+import RequestProject.Section31.EIGSCellConvexity
+import RequestProject.Section31.EIGSGeometricCellOscillation
+import RequestProject.Section31.EIGSEnergyRecovery
+import RequestProject.Section31.EIGSHarmonicLinear
+import RequestProject.Section31.HarmonicProfileContinuity
+
+#print axioms IGS.Sec31.FiniteNetwork.mapVertices
+#print axioms IGS.Sec31.FiniteNetwork.energy_mapVertices
+#print axioms IGS.Sec31.FiniteNetwork.energy_continuous_pointwise
+#print axioms IGS.Sec31.traceEnergyDomain
+#print axioms IGS.Sec31.traceEnergyFinite_iff_extendedTraceEnergy_ne_top
+#print axioms IGS.Sec31.extendedTraceEnergy_eq_top_iff
+#print axioms IGS.Sec31.extendedTraceEnergy_comp_le
+#print axioms IGS.Sec31.traceEnergyDomain_comp
+#print axioms IGS.Sec31.extendedTraceEnergy_lowerSemicontinuous
+#print axioms IGS.Sec31.extendedTraceEnergy_isClosed_sublevel
+#print axioms IGS.Sec31.extendedTraceEnergy_le_liminf
+#print axioms IGS.Sec31.extendedTraceEnergy_le_liminf_of_increasing
+#print axioms IGS.Sec31.traceEnergyDomain_mem_of_finite_liminf
+#print axioms IGS.Sec31.FiniteNetwork.energyQuadraticForm
+#print axioms IGS.Sec31.finite_energy_tendsto_traceEnergyValue
+#print axioms IGS.Sec31.limitTraceQuadraticForm
+#print axioms IGS.Sec31.limitTraceQuadraticForm_nonneg
+#print axioms IGS.Sec31.gramQuadratic_inner_eq_norm_sq
+#print axioms IGS.Sec31.exists_gramQuadratic_coercive_of_linearIndependent
+#print axioms IGS.Sec31.gramQuadratic_error_le
+#print axioms IGS.Sec31.gramQuadratic_coercive_of_entry_bound
+#print axioms IGS.Sec31.coefficient_square_sum_le_of_gram_bound
+#print axioms IGS.Sec31.eventually_gramQuadratic_coercive
+#print axioms EIGS.xiVertexEmbedding_injective
+#print axioms EIGS.xiLevelVertices_succ_subset
+#print axioms EIGS.xiVertexUnion_exhausted
+#print axioms EIGS.xiUnionWeightedNetwork_energy_eq
+#print axioms EIGS.xiExtendedWeightedEnergy_comp_le
+#print axioms EIGS.Network.sum_potential_mul_div
+#print axioms EIGS.Network.sum_current_mul_potential_difference_of_unitFlow
+#print axioms EIGS.Network.potential_difference_sq_le_flow_energy_mul_potential_energy
+#print axioms EIGS.Network.div_potentialGradientCurrent_eq_grad
+#print axioms EIGS.Network.potential_energy_eq_sum_potential_mul_gradient_div
+#print axioms EIGS.Network.potential_energy_pos_of_boundary_unit
+#print axioms EIGS.Network.gradient_div_source_eq_energy_of_min
+#print axioms EIGS.Network.normalizedPotentialCurrent_isUnitFlow
+#print axioms EIGS.Network.normalizedPotentialCurrent_energy
+#print axioms EIGS.Network.effRes_eq_inverse_minimum_potential_energy
+#print axioms EIGS.Network.exists_potential_poincare_constant
+#print axioms EIGS.Network.exists_minimum_potential_energy_eq_inverse_effRes
+#print axioms EIGS.Network.exists_minimum_potential_energy_terminal_values
+#print axioms EIGS.Network.substituted_potential_energy_eq_sum
+#print axioms EIGS.Network.exists_substituted_potential_trace
+#print axioms EIGS.Network.exists_substituted_potential_minimum
+#print axioms EIGS.Network.exists_substituted_eigenvector_trace
+#print axioms EIGS.xiWeightedFiniteNetwork_energy_eq_potential
+#print axioms EIGS.xiPotentialEnergy_succ_eq_substituted
+#print axioms EIGS.exists_xiWeighted_trace_of_eigenpair
+#print axioms EIGS.xiUnionWeightedNetwork_energy_increasing_of_eigenpair
+#print axioms EIGS.exists_xiWeighted_trace
+#print axioms EIGS.xiWeightedEnergyDomain_iff
+#print axioms EIGS.xiExtendedWeightedEnergy_lowerSemicontinuous
+#print axioms EIGS.exists_xiLimitEnergy
+#print axioms IGS.Sec31.exists_nested_value_extension
+#print axioms IGS.Sec31.FiniteNetwork.energyInner
+#print axioms IGS.Sec31.FiniteNetwork.energy_line
+#print axioms IGS.Sec31.FiniteNetwork.energyInner_eq_zero_of_min
+#print axioms IGS.Sec31.FiniteNetwork.energy_add_of_min
+#print axioms IGS.Sec31.FiniteNetwork.energy_sub_of_min
+#print axioms IGS.Sec31.FiniteNetwork.energyInner_linear_first
+#print axioms IGS.Sec31.FiniteNetwork.minimum_of_energyInner_vanishes
+#print axioms EIGS.xiLevelVertices_monotone
+#print axioms EIGS.xiRangeValues_eq
+#print axioms EIGS.xiHarmonicStep_old
+#print axioms EIGS.xiHarmonicStep_energy
+#print axioms EIGS.xiHarmonicValues_old
+#print axioms EIGS.xiHarmonicValues_energy
+#print axioms EIGS.exists_xiHarmonic_union_extension
+#print axioms EIGS.rule_terminals_nonadjacent_standing
+#print axioms EIGS.exists_rule_harmonic_profiles_strict_oscillation
+#print axioms EIGS.exists_xiHarmonic_core_extensions
+#print axioms EIGS.Network.potential_minimum_unique
+#print axioms EIGS.Network.substAffineProfiles_restrict
+#print axioms EIGS.Network.substAffineProfiles_minimal
+#print axioms EIGS.Network.substAffineProfiles_edge_difference
+#print axioms EIGS.xiHarmonicStep_potential_minimal
+#print axioms EIGS.xiHarmonicStep_eq_affine_profiles
+#print axioms EIGS.xiHarmonicStep_child_edge_contraction
+#print axioms EIGS.exists_xiHarmonic_strict_contraction
+#print axioms EIGS.exists_xiHarmonic_core_recovery
+#print axioms EIGS.xiHarmonicValues_edge_decay_of_step_contraction
+#print axioms EIGS.exists_xiHarmonic_geometric_edge_decay
+#print axioms EIGS.Network.unit_potential_minimum_range
+#print axioms EIGS.xiHarmonicStep_rule_vertex_range
+#print axioms EIGS.xiHarmonicValues_descendant_endpoint_range
+#print axioms EIGS.xiHarmonic_union_cell_range
+#print axioms EIGS.xiHarmonic_union_cell_oscillation
+#print axioms EIGS.xiUnion_values_eq_harmonicValues_of_steps
+#print axioms EIGS.xiHarmonic_union_steps
+#print axioms EIGS.xiUnion_cell_oscillation_of_steps
+#print axioms EIGS.exists_xiHarmonic_geometric_cell_oscillation
+#print axioms IGS.Sec31.finite_energy_le_traceEnergyValue
+#print axioms IGS.Sec31.traceEnergyValue_pythagoras_of_attained_trace
+#print axioms EIGS.xiHarmonicCoreAt_energy_pythagoras
+#print axioms EIGS.exists_xiHarmonic_energy_recovery_of_eigenpair
+#print axioms EIGS.exists_xiHarmonic_energy_recovery
+#print axioms EIGS.Network.substAffineProfilesLinearMap
+#print axioms EIGS.exists_xiHarmonicStep_linear
+#print axioms EIGS.xiHarmonicStepLinearMap
+#print axioms EIGS.xiHarmonicStepLinearMap_apply
+#print axioms EIGS.xiHarmonicValuesLinearMap
+#print axioms EIGS.xiHarmonicValuesLinearMap_apply
+#print axioms EIGS.xiHarmonicUnionExtension
+#print axioms EIGS.xiHarmonicUnionExtension_values
+#print axioms EIGS.xiHarmonicUnionExtension_energy
+#print axioms EIGS.xiVertexUnion_exhausted_after
+#print axioms EIGS.xiHarmonicUnionLinearMap
+#print axioms EIGS.xiHarmonicUnionLinearMap_injective
+#print axioms EIGS.Network.potential_energy_change_le_conductance_difference
+#print axioms EIGS.Network.unit_potential_profiles_residual_energy_bound
+#print axioms EIGS.Network.exists_unit_potential_profile_stability_bound
+#print axioms EIGS.Network.unitPotentialProfile
+#print axioms EIGS.Network.unitPotentialProfile_source
+#print axioms EIGS.Network.unitPotentialProfile_sink
+#print axioms EIGS.Network.unitPotentialProfile_minimal
+#print axioms EIGS.Network.unitPotentialProfile_tendsto
+#print axioms EIGS.Network.unitPotentialProfile_tendsto_function
+#print axioms EIGS.Network.unitPotentialProfile_norm_sub_tendsto_zero

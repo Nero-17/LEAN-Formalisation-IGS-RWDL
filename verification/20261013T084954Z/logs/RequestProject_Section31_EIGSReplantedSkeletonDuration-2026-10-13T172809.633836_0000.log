@@ -1,0 +1,2 @@
+'EIGS.resistanceSpectralRadius_replanted' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiReplantedSkeletonDistinctDuration_spectral_upper' depends on axioms: [propext, Classical.choice, Quot.sound]

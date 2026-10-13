@@ -1,0 +1,1 @@
+'EIGS.xiClosedLpEnergy_regular_core' depends on axioms: [propext, Classical.choice, Quot.sound]

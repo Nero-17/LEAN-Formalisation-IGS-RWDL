@@ -1,0 +1,30 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\ContinuousMarkovKernel.lean:22:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.ContinuousMarkov.measurable_toMeasure_of_continuous`:
+  [CompactSpace Space]
+  [SecondCountableTopology Space]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CompactSpace Space] [SecondCountableTopology Space] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\ContinuousMarkovKernel.lean:76:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.ContinuousMarkov.semigroupPointProbability_integral`:
+  [SecondCountableTopology Space]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [SecondCountableTopology Space] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\ContinuousMarkovKernel.lean:82:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.ContinuousMarkov.semigroupPointProbability_continuous`:
+  [SecondCountableTopology Space]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [SecondCountableTopology Space] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'IGS.Sec31.ContinuousMarkov.measurable_toMeasure_of_continuous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.ContinuousMarkov.semigroupPointProbability_joint_continuous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.ContinuousMarkov.semigroupKernel_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.ContinuousMarkov.semigroupKernel_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.ContinuousMarkov.semigroupPointProbability_add_bind' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

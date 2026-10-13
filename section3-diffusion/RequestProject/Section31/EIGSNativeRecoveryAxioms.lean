@@ -1,0 +1,16 @@
+import RequestProject.Section31.EIGSNativeJointRecoveryOfRules
+
+#print axioms EIGS.xiVertexIncidenceCount_positive
+#print axioms EIGS.xiVertexSpeedMeasure_singleton_positive
+#print axioms EIGS.xiVertexSpeedMeasure_ae_iff
+#print axioms EIGS.xiFiniteSpeedL2_apply
+#print axioms EIGS.xiFiniteSpeedL2_injective
+#print axioms EIGS.xiFiniteSpeedL2_representative
+#print axioms EIGS.xiFiniteSpeedL2_unique_representative
+#print axioms EIGS.xiNativeScaledUnitEnergy
+#print axioms EIGS.xiNativeScaledUnitEnergy_finiteSpeedL2
+#print axioms EIGS.xiNativeScaledUnitEnergy_nonnegative
+#print axioms EIGS.xiNativeScaledUnitEnergy_zero
+#print axioms EIGS.xiNativeScaledUnitEnergy_unitNativeL2
+#print axioms EIGS.exists_xiNative_joint_recovery
+#print axioms EIGS.exists_xiNative_joint_recovery_of_rules

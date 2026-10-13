@@ -1,0 +1,6 @@
+'IGS.Sec31.QuadraticEnergySpace.yosidaSemigroup_domain_time_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.yosidaSemigroup_strong_cauchy' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

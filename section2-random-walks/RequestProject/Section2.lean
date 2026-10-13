@@ -1,4 +1,6 @@
-import Mathlib
+import Mathlib.Analysis.Convex.Continuous
+import Mathlib.Analysis.SpecialFunctions.Pow.Real
+import Mathlib.Tactic
 
 /-!
 # Formalisation of Section 2 of arXiv:2603.13798

@@ -1,0 +1,6 @@
+'EIGS.xiIncidentStar_exists_center' depends on axioms: [propext, Quot.sound]
+'EIGS.xiIncidentStarDomain_exists_center' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiIncidentStarDomain_trajectory_mem_of_start_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiInitialStar_trajectory_mem_before_coarse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiInitialStar_trajectory_mem_or_adjacent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiCanonicalInitialSegment_completion_mesh_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

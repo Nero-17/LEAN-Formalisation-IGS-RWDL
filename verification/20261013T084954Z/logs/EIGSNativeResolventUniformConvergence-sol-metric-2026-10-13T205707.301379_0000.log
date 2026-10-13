@@ -1,0 +1,2 @@
+'EIGS.xiNativeUniformResolventProperties_of_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiNativeUniformResolvent_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

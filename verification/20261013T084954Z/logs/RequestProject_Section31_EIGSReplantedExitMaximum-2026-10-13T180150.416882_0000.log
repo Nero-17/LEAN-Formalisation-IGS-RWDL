@@ -1,0 +1,4 @@
+'EIGS.xiReplantedTerminalExit_le_maximum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiReplantedTerminalExitMaximum_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiReplantedTerminalExitMaximum_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiReplantedTerminalExitMaximum_zero' depends on axioms: [propext, Classical.choice, Quot.sound]

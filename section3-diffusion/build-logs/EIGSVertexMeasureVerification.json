@@ -1,0 +1,99 @@
+{
+  "original_round_start_utc": "2026-10-12T14:56:40Z",
+  "active_continuation_start_utc": "2026-10-12T23:41:25Z",
+  "compiler": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\elan\\toolchains\\leanprover--lean4---v4.28.0\\bin\\lean.exe",
+  "entries": [
+    {
+      "source": "RequestProject\\Section31\\EIGSVertexMassAsymptotics.lean",
+      "source_sha256": "695F8D4F77289E2B2734AC3DE6731DBB7916A789C277D7A47CF3F69106D80945",
+      "log": "build-logs\\EIGSVertexMassAsymptotics.log",
+      "logged_start_utc": "2026-10-13T01:06:40.1764875Z",
+      "log_last_write_utc": "2026-10-13T01:07:32.452553Z",
+      "exit_code": 0,
+      "status": "verified_with_inline_axiom_audit"
+    },
+    {
+      "source": "RequestProject\\Section31\\EIGSVertexMassLimits.lean",
+      "source_sha256": "A7A9AB02EA81295B3F312D126289DD5118B6FCEE2F4BD87A0C953443FA51FF92",
+      "log": "build-logs\\EIGSVertexMassLimits.log",
+      "logged_start_utc": "2026-10-13T01:12:25.0064538Z",
+      "log_last_write_utc": "2026-10-13T01:12:54.4133401Z",
+      "exit_code": 0,
+      "status": "verified_with_inline_axiom_audits"
+    },
+    {
+      "source": "RequestProject\\Section31\\EIGSVertexMassFromRules.lean",
+      "source_sha256": "93842DD03B319CD4F8803051192F4B768395F9D4ABC45D20AA5876022E74BFA3",
+      "log": "build-logs\\EIGSVertexMassFromRules.log",
+      "logged_start_utc": "2026-10-13T01:14:17.3410775Z",
+      "log_last_write_utc": "2026-10-13T01:15:42.7309775Z",
+      "exit_code": 0,
+      "status": "verified_with_inline_axiom_audits"
+    },
+    {
+      "source": "RequestProject\\Section31\\EIGSVertexDescendants.lean",
+      "source_sha256": "2C77711891B76B25D06FC81580F8603AC8210A1E059A591C0F9EA99BC9EC2D93",
+      "log": "build-logs\\EIGSVertexDescendants.log",
+      "logged_start_utc": "2026-10-13T01:14:17.4165912Z",
+      "log_last_write_utc": "2026-10-13T01:15:42.7650471Z",
+      "exit_code": 0,
+      "status": "verified_with_inline_axiom_audits"
+    },
+    {
+      "source": "RequestProject\\Section31\\EIGSVertexEmpiricalMeasure.lean",
+      "source_sha256": "836C03B695448B8F13A8C2E6CF58FCB193DCE033D9C42C8306FC3DB2B2C1A82F",
+      "log": "build-logs\\EIGSVertexEmpiricalMeasure.log",
+      "logged_start_utc": "2026-10-13T01:19:49.0949674Z",
+      "log_last_write_utc": "2026-10-13T01:22:14.2827769Z",
+      "exit_code": 0,
+      "status": "verified_with_inline_axiom_audits"
+    },
+    {
+      "source": "RequestProject\\Section31\\EIGSVertexCellGeometry.lean",
+      "source_sha256": "4A28015D68A9165F38E31FEF0459431F412B40D96CB6F86D2D772B1CA8241403",
+      "log": "build-logs\\EIGSVertexCellGeometry.log",
+      "logged_start_utc": "2026-10-13T01:24:04.6728935Z",
+      "log_last_write_utc": "2026-10-13T01:25:07.0670633Z",
+      "exit_code": 0,
+      "status": "verified_with_inline_axiom_audits"
+    },
+    {
+      "source": "RequestProject\\Section31\\EIGSVertexMarginals.lean",
+      "source_sha256": "E53B16DE77A4B3D4F11221997229DADB853B76A5DBF71DF60927ED3EC6D6B197",
+      "log": "build-logs\\EIGSVertexMarginals.log",
+      "logged_start_utc": "2026-10-13T01:30:47.8503237Z",
+      "log_last_write_utc": "2026-10-13T01:32:22.8423944Z",
+      "exit_code": 0,
+      "status": "verified_with_four_inline_axiom_audits"
+    },
+    {
+      "source": "RequestProject\\Section31\\EIGSVertexIntegralMarginals.lean",
+      "source_sha256": "1CE1F535963591F51EFECC513F71AB5EA99AFE198540762E880EC8F93BDBB5C9",
+      "log": "build-logs\\EIGSVertexIntegralMarginals.log",
+      "logged_start_utc": "2026-10-13T01:35:13.5977649Z",
+      "log_last_write_utc": "2026-10-13T01:36:38.9436916Z",
+      "exit_code": 0,
+      "status": "verified_with_two_inline_axiom_audits"
+    },
+    {
+      "source": "RequestProject\\Section31\\EIGSVertexWeakLimit.lean",
+      "source_sha256": "087CA922F6B20C59971BF7A12AA205C7DB7218AFDEB6113C28A61ECD401B54C1",
+      "log": "build-logs\\EIGSVertexWeakLimit.log",
+      "logged_start_utc": "2026-10-13T01:42:57.481901Z",
+      "log_last_write_utc": "2026-10-13T01:44:11.2590411Z",
+      "exit_code": 0,
+      "status": "verified_with_three_inline_axiom_audits"
+    },
+    {
+      "source": "RequestProject\\Section31\\EIGSCanonicalMeasureLimit.lean",
+      "source_sha256": "0FAA550BAFFEE89E94054CE531358570262B57230E0BEA63F1CCC8FDE2E0C651",
+      "log": "build-logs\\EIGSCanonicalMeasureLimit.log",
+      "logged_start_utc": "2026-10-13T02:01:14.2515656Z",
+      "log_last_write_utc": "2026-10-13T02:06:08.3735152Z",
+      "exit_code": 0,
+      "status": "verified_with_five_inline_axiom_audits"
+    }
+  ],
+  "axiom_audit_declarations": 29,
+  "mathematical_scope": "Rule-only canonical actual uniform vertex μ and degree-speed π weak convergence to the same independently constructed actual address-limit probability, with canonical full support and exact native degree singleton identity. All metric Perron data and all compatible address probability mass data are constructed internally from original finite/simple/connected, nonadjacent planting and distance-positive rules; every original level n is preserved."
+}

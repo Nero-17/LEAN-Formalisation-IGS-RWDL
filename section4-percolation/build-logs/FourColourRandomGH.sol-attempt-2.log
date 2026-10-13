@@ -1,0 +1,11 @@
+source=C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourRandomGH.lean
+started=2026-10-13T12:08:19.615022+00:00
+source_sha256=C1D78D4E53B3E76F538061EF00D51C4492AEA79245D5FA4FF216C8C05682D308
+'Outlook.FourColourRandomGH.measurable_actualFiniteGH' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourRandomGH.actualFiniteGH_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourRandomGH.measurable_actualCompactGH' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourRandomGH.measurable_actualGHPath' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourRandomGH.actual_finite_gh_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourRandomGH.compactSourceLaw_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit=0
+finished=2026-10-13T12:09:43.886189+00:00

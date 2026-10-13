@@ -1,0 +1,1 @@
+'IGS.Sec31.geometric_resolvent_floor_clock_tail' depends on axioms: [propext, Classical.choice, Quot.sound]

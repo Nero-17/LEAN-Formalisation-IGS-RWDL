@@ -1,0 +1,5 @@
+'IGS.Sec31.QuadraticEnergySpace.closed_energy_norm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.closed_energy_distance_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.closedForm_complete_of_energy_cauchy' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

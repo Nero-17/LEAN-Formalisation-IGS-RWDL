@@ -1,0 +1,12 @@
+'Outlook.FourColourInfiniteGraphLaw.actual_literal_cluster_sequence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourInfiniteGraphLaw.nested_cluster_full_literal_graph_law' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourInfiniteGraphLaw.nested_cluster_finite_joint_graph_law' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourInfiniteGraphLaw.infinite_cluster_full_literal_graph_law' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

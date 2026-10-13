@@ -1,0 +1,5 @@
+'IGS.Sec31.DiscreteMarkov.floor_clock_modulus_probability_real_le_grid_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiFullHorizonModulusEvent_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiFullHorizonModulusBound_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

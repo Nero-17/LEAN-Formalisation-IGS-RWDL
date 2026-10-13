@@ -1,0 +1,41 @@
+--- a/AIM.matrix-only.tex
++++ b/AIM.corrected.tex
+@@ -3906,7 +3906,7 @@
+ 
+ \begin{figure}[tb]
+     \centering
+-    \includegraphics[width=0.9\linewidth]{figure/random_DHL.png}
++    \resizebox{0.98\linewidth}{!}{\input{figure/random_DHL.oriented.tex}}
+     \caption{The random EIGS associated with percolation}
+     \label{fig:random EIGS DHL}
+ \end{figure}
+@@ -3928,7 +3928,7 @@
+ The colour records the two-terminal state of the corresponding cell.
+ Red means that the two terminals are connected inside the cell.
+ Blue means that they are disconnected, but both terminals remain active.
+-Green means that they are disconnected, but exactly one terminal remains active.
++Green means that they are disconnected, but exactly one terminal remains active; its arrow points from the active terminal to the inactive terminal.
+ Black is a cemetery state: the terminals are disconnected and neither remains active.
+ Here a terminal is called active if it remains attached to the cluster outside the current cell.
+ 
+@@ -4755,7 +4755,7 @@
+ At each substitution step, the colour records the two-terminal state of the corresponding cell.
+ Red means that the two terminals are connected inside the cell.
+ Blue means that they are disconnected, but both terminals remain active.
+-Green means that they are disconnected, but exactly one terminal remains active.
++Green means that they are disconnected, but exactly one terminal remains active; its arrow points from the active terminal to the inactive terminal.
+ Black is a cemetery bookkeeping state.
+ It is retained only in order to keep the coloured substitution rule closed.
+ Once a cell turns black, it no longer contributes to the growth of the critical cluster, and we therefore assign zero offspring and zero boundary growth to this type in the mean matrices below.
+@@ -4815,9 +4815,9 @@
+ =
+ \begin{pmatrix}
+ 4p^2&0&2p^4&0&2p^5&0&0&0\\
+-0&4p^2&0&2p^4&0&2p^5&0&0\\
++0&4p^2&0&2p^4&2p^5&0&0&0\\
+ 2p^2&0&2p^2&0&2p^3&0&0&0\\
+-0&2p^2&0&2p^2&0&2p^3&0&0\\
++0&2p^2&0&2p^2&2p^3&0&0&0\\
+ 2p^2&0&0&0&2p&0&0&0\\
+ 0&0&0&0&0&2p^2&0&0\\
+ 0&0&0&0&0&0&0&0\\

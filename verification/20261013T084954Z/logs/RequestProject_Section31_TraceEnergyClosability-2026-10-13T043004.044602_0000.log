@@ -1,0 +1,1 @@
+'IGS.Sec31.energy_tendsto_zero_of_cauchy_and_finite_traces' depends on axioms: [propext, Classical.choice, Quot.sound]

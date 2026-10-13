@@ -1,0 +1,22 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSDiscreteTimeEquicontinuity.lean:43:70: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSDiscreteTimeEquicontinuity.lean:43:70: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSDiscreteTimeEquicontinuity.lean:134:40: warning: unused variable `timeLimit`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSDiscreteTimeEquicontinuity.lean:280:29: warning: unused variable `normalizationPositive`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSDiscreteTimeEquicontinuity.lean:302:42: warning: unused variable `timeLimit`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'IGS.Sec31.PoissonizedWalk.floor_clock_difference_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonizedWalk.contraction_floor_time_difference_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiNativeRandomWalk_floor_time_resolvent_comparison' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeDiscreteWalk_varying_time_strong_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiNativeDiscreteVaryingTimeStrong_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

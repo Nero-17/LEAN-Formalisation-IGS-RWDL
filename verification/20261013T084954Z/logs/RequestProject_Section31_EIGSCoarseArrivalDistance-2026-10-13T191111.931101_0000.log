@@ -1,0 +1,10 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSCoarseArrivalDistance.lean:272:24: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'EIGS.xiPathMetricData_star_or_adjacent_distance_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiCoarseArrivalState_center_invariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiCoarseArrivalState_distance_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiCoarseArrivalState_prefix_distance_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiCoarseArrivalState_count_gt_of_displacement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiBoundedCoarseArrival_le_of_displacement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiCanonicalCoarseArrival_prefix_mesh_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

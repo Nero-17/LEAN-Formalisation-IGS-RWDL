@@ -1,0 +1,2 @@
+'EIGS.xiFiniteLevelDiameter_unit_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiOriginalDiameter_spectral_growth' depends on axioms: [propext, Classical.choice, Quot.sound]

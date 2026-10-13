@@ -1,0 +1,10 @@
+'EIGS.xiUnitPotential_uniform_energy_convergence_fixed_normalization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_xiNative_joint_recovery_fixed_normalization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiClosed_native_joint_recovery_fixed_normalization_without_primitive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_xiClosed_native_joint_recovery_with_normalized_limit_without_primitive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

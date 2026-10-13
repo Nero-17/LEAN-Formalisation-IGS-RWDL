@@ -1,0 +1,3 @@
+'Cluster.TTN.IncidenceIso.sourceClusterIso' depends on axioms: [propext, Quot.sound]
+'Cluster.TTN.retainedSourceClusterIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourClusterIsomorphism.actualRedClusterIso' depends on axioms: [propext, Classical.choice, Quot.sound]

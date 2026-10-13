@@ -1,0 +1,6 @@
+'IGS.Sec31.QuadraticEnergySpace.exists_closed_limit_of_energy_majorant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.closedForm_continuous_core_contraction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

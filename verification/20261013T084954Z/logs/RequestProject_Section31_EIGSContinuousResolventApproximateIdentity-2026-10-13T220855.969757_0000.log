@@ -1,0 +1,8 @@
+'EIGS.xiContinuous_uniform_limit_norm_le_eventually' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeResolvent_uniform_limits_approximate_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiContinuousResolventApproximateIdentityProperties_of_contraction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_xiContinuousResolventApproximateIdentity_of_rules' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,6 @@
+'IGS.Sec31.DiscreteMarkov.ordered_times_in_grid_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.large_modulus_has_grid_displacement' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.modulus_probability_le_grid_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.modulus_probability_le_grid_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,7 @@
+'EIGS.xiCanonicalVertexProbabilityMeasure_tendsto_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiCanonicalSpeedProbabilityMeasure_tendsto_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiCanonicalVertex_and_speed_same_limit_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiCanonicalNativeSpeed_singleton_degree_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiCanonicalLimitProbabilityMeasure_isOpenPosMeasure_of_rules' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

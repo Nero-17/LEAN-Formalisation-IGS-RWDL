@@ -1,0 +1,7 @@
+'EIGS.Network.ColourEmbedding.substVertex_private_surjective_over_image' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.Network.iteratedCellEmbedding_edge_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.iteratedCellEmbedding_vertex_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.iteratedCellEmbedding_cover_outside_skeleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.iteratedCellEmbedding_boundary_subset_skeleton' depends on axioms: [propext, Classical.choice, Quot.sound]

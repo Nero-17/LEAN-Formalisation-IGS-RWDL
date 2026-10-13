@@ -1,0 +1,10 @@
+import RequestProject.Section31.SplineWeakIdentification
+import RequestProject.Section31.VaryingWeakResidual
+
+#print axioms IGS.Sec31.varying_linearCombination_pairing_tendsto
+#print axioms IGS.Sec31.varying_linearCombination_norm_sq_tendsto
+#print axioms IGS.Sec31.finiteSplineProjection_eq_of_basis_pairings
+#print axioms IGS.Sec31.varying_projection_limit_identified
+#print axioms IGS.Sec31.varying_weak_residual_norm_bound
+#print axioms IGS.Sec31.tendsto_of_vanishing_norm_error
+#print axioms IGS.Sec31.varying_harmonic_limits_identified

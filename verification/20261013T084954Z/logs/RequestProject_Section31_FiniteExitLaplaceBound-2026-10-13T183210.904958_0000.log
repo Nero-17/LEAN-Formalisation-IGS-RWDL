@@ -1,0 +1,9 @@
+'IGS.Sec31.DiscreteMarkov.finite_subprobability_two_region_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.finite_exit_laplace_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.finite_exit_probability_le_laplace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.exit_laplace_contraction_lt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.exit_laplace_contraction_nonnegative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

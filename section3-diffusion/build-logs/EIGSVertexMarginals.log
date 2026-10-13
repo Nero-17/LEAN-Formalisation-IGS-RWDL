@@ -1,0 +1,7 @@
+2026-10-13T01:30:47.8503237Z
+'EIGS.xiPrivateVertex_fraction_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiOldVertex_fraction_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiVertexCountingMeasure_ancestor_mass_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiVertexCountingMeasure_ancestor_none_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT_CODE=0
+2026-10-13T01:32:22.8060613Z

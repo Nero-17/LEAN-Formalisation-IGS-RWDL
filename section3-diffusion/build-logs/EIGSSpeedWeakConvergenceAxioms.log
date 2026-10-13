@@ -1,0 +1,6 @@
+2026-10-13T00:35:11.5619326Z
+'EIGS.xiVertexSpeedMeasure_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uniformEdgeMeasure_endpoint_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiVertexSpeedMeasure_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiVertexSpeedMeasure_map' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT_CODE=0

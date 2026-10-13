@@ -1,0 +1,2 @@
+'EIGS.xiRationalMarkovKernelProperties_of_dense_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiRationalMarkovKernel_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

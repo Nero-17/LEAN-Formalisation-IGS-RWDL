@@ -1,0 +1,2 @@
+'IGS.Sec31.exp_neg_duration_div_le_of_floor_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.exp_neg_duration_div_le_survival_discount' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,6 @@
+'IGS.Sec31.uniform_subsequence_of_reindexed_finite_basis_approximations' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.tendsto_of_every_strict_subsequence_has_further_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

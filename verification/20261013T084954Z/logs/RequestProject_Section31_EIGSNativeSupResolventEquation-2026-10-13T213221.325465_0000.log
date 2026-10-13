@@ -1,0 +1,2 @@
+'EIGS.xiNativeFiniteResolvent_sup_affine_equation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeFiniteResolvent_sup_finite_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]

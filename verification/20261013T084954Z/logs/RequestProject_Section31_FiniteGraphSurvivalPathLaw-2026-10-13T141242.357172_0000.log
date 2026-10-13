@@ -1,0 +1,20 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\FiniteGraphSurvivalPathLaw.lean:46:0: warning: automatically included section variable(s) unused in theorem `EIGS.graphSurvivalEvent_measurable`:
+  [Fintype Vertex]
+  [DecidableEq Vertex]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Vertex] [DecidableEq Vertex] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\FiniteGraphSurvivalPathLaw.lean:56:0: warning: automatically included section variable(s) unused in theorem `EIGS.graphSurvival_indicator_product`:
+  [Fintype Vertex]
+  [MeasurableSpace Vertex]
+  [MeasurableSingletonClass Vertex]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Vertex] [MeasurableSpace Vertex] [MeasurableSingletonClass Vertex] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'EIGS.finiteGraphTransitionKernel_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.graphSurvival_indicator_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.finiteGraph_backward_survival' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.graphSurvivalEvent_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.graphSurvivalEvent_probability_lower' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,12 @@
+'IGS.Sec31.QuadraticEnergySpace.lp_yosidaSemigroup_preserves_nonnegative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.lp_yosidaSemigroup_preserves_unit_interval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.lp_closedSemigroup_preserves_nonnegative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.lp_closedSemigroup_preserves_unit_interval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

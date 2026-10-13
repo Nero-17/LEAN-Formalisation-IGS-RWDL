@@ -1,0 +1,10 @@
+{
+  "source": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\section4-percolation\\RequestProject\\Outlook\\FourColourActualCoarseEmbedding.lean",
+  "source_sha256": "C726F3C0B6BF75882911213857278DBFB37AB03C282C8CB6746FE01231FF0089",
+  "current_source_sha256": "C726F3C0B6BF75882911213857278DBFB37AB03C282C8CB6746FE01231FF0089",
+  "logged_start_utc": "2026-10-13T09:36:41.777259+00:00",
+  "end_utc": "2026-10-13T09:38:20.333054+00:00",
+  "exit_code": 1,
+  "compiler": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\elan\\toolchains\\leanprover--lean4---v4.28.0\\bin\\lean.exe",
+  "log": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\section4-percolation\\build-logs\\FourColourActualCoarseEmbedding.sol-attempt-4.log"
+}

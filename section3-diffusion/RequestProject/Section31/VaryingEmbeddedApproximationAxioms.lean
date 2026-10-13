@@ -1,0 +1,3 @@
+import RequestProject.Section31.VaryingEmbeddedApproximation
+
+#print axioms IGS.Sec31.embedded_uniformly_convergent_functions_L2_strong

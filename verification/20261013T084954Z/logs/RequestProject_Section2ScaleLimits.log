@@ -1,0 +1,3 @@
+'EIGS.geometric_depth_tendsto_of_radius_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.logarithmic_geometric_scale_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.logarithmic_ratio_limit_of_geometric_scale' depends on axioms: [propext, Classical.choice, Quot.sound]

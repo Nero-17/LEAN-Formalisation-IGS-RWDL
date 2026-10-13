@@ -1,0 +1,5 @@
+'IGS.Sec31.finiteBasisCombination_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.uniform_subsequence_of_finite_basis_approximations' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiNativeFiniteResolvent_exists_uniform_subsequence' depends on axioms: [propext, Classical.choice, Quot.sound]

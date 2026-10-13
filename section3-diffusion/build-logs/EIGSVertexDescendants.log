@@ -1,0 +1,5 @@
+2026-10-13T01:14:17.4165912Z
+'EIGS.xiVertexAncestorEdge_fibre_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiVertexAncestorEdge_none_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT_CODE=0
+2026-10-13T01:15:42.7315010Z

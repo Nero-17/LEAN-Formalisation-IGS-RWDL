@@ -1,0 +1,7 @@
+'IGS.Sec31.exists_cross_difference_zero_near_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.traceEnergyValue_add_of_eventually_energyInner_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiContinuous_eventually_edge_cross_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiContinuous_eventually_energyInner_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiContinuousLpEnergy_associated_eq_zero_on_core' depends on axioms: [propext, Classical.choice, Quot.sound]

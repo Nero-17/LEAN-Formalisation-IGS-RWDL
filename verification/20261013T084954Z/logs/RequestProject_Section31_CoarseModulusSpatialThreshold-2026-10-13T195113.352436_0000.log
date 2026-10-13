@@ -1,0 +1,8 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\CoarseModulusSpatialThreshold.lean:83:24: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'IGS.Sec31.coarseModulusSpatialThreshold_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.coarseModulusSpatialThreshold_eventually_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiCoarseModulusSpatialThreshold_eventually_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiCoarseModulusLargeDisplacement_forces_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiCanonicalCoarseModulusLargeDisplacement_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

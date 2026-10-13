@@ -1,0 +1,4 @@
+import RequestProject.Section31.EIGSUnitPerronRecovery
+
+#print axioms EIGS.exists_normalized_resistance_limit_of_positive_eigenpair
+#print axioms EIGS.exists_xiUnitPotential_uniform_energy_convergence_for_eigenpair

@@ -1,0 +1,2 @@
+'EIGS.xiDiameterFiniteGHPoint_eq_original' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSimpleGraph_original_diameter_gromovHausdorff_limit' depends on axioms: [propext, Classical.choice, Quot.sound]

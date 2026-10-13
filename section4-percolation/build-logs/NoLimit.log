@@ -1,0 +1,46 @@
+source=RequestProject/Reduced/NoLimit.lean
+started=2026-10-12T16:57:24.9410152Z
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+RequestProject/Reduced/NoLimit.lean:341:23: warning: This simp argument is unused:
+  this.measure_univ
+
+Hint: Omit it from the simp argument list.
+  simp +decide ̵[̵ ̵t̵h̵i̵s̵.̵m̵e̵a̵s̵u̵r̵e̵_̵u̵n̵i̵v̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RequestProject/Reduced/NoLimit.lean:350:23: warning: This simp argument is unused:
+  MeasureTheory.Measure.prod_apply
+
+Hint: Omit it from the simp argument list.
+  simp +decide [̵ ̵M̵e̵a̵s̵u̵r̵e̵T̵h̵e̵o̵r̵y̵.̵M̵e̵a̵s̵u̵r̵e̵.̵p̵r̵o̵d̵_̵a̵p̵p̵l̵y̵,̵ ̵t̵h̵i̵s̵.̵m̵e̵a̵s̵u̵r̵e̵_̵u̵n̵i̵v̵ ̵]̵[̲t̲h̲i̲s̲.̲m̲e̲a̲s̲u̲r̲e̲_̲u̲n̲i̲v̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RequestProject/Reduced/NoLimit.lean:350:57: warning: This simp argument is unused:
+  this.measure_univ
+
+Hint: Omit it from the simp argument list.
+  simp +decide [̵ ̵M̵e̵a̵s̵u̵r̵e̵T̵h̵e̵o̵r̵y̵.̵M̵e̵a̵s̵u̵r̵e̵.̵p̵r̵o̵d̵_̵a̵p̵p̵l̵y̵,̵ ̵t̵h̵i̵s̵.̵m̵e̵a̵s̵u̵r̵e̵_̵u̵n̵i̵v̵ ̵]̵[̲M̲e̲a̲s̲u̲r̲e̲T̲h̲e̲o̲r̲y̲.̲M̲e̲a̲s̲u̲r̲e̲.̲p̲r̲o̲d̲_̲a̲p̲p̲l̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RequestProject/Reduced/NoLimit.lean:429:15: warning: unused variable `hlam`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+exit=0
+finished=2026-10-12T16:59:04.0098046Z

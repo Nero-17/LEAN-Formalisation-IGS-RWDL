@@ -1,0 +1,46 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\FiniteSupportPathCompactness.lean:21:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DiscreteMarkov.finiteSupportPath_totallyBounded_of_modulus_outside_finite`:
+  [∀ (level : ℕ), Finite (History level)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [∀ (level : ℕ), Finite (History level)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\FiniteSupportPathCompactness.lean:201:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DiscreteMarkov.finiteSupportGoodPathTail_subset_union`:
+  [PseudoMetricSpace Time]
+  [CompactSpace Time]
+  [CompactSpace State]
+  [∀ (level : ℕ), Finite (History level)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [PseudoMetricSpace
+  Time] [CompactSpace Time] [CompactSpace State] [∀ (level : ℕ), Finite (History level)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\FiniteSupportPathCompactness.lean:217:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DiscreteMarkov.finiteSupportModulusGoodHistory_tailClosure_subset_modulus`:
+  [CompactSpace Time]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CompactSpace Time] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'IGS.Sec31.DiscreteMarkov.finiteSupportPath_totallyBounded_of_modulus_outside_finite' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.finiteSupportGoodPathUnion_totallyBounded' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.finiteSupportGoodPathUnion_isCompact_closure' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.finiteSupportModulusGoodHistory_union_totallyBounded' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.finiteSupportModulusGoodHistory_union_isCompact_closure' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.finiteSupportModulusGoodHistory_tail_isCompact_closure' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.finiteSupportModulusGoodHistory_tailClosure_subset_modulus' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.finiteSupportModulusGoodHistory_tailIntersection_continuous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

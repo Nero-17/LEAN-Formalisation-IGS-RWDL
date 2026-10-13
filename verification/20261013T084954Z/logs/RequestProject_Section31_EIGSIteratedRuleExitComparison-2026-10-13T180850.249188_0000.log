@@ -1,0 +1,7 @@
+'EIGS.Network.expExit_cast' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNetwork_one_add_substIter_plus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNetwork_one_add_substIter_minus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.replantedRuleVertex_plus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.replantedRuleVertex_minus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.replantedRuleVertex_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.ruleFamily_iterated_expExit_eq_replanted' depends on axioms: [propext, Classical.choice, Quot.sound]

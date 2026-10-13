@@ -1,0 +1,111 @@
+source=C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseEmbedding.lean
+started=2026-10-13T09:36:41.777259+00:00
+source_sha256=C726F3C0B6BF75882911213857278DBFB37AB03C282C8CB6746FE01231FF0089
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseEmbedding.lean:29:55: error: Function expected at
+  distinct
+but this term has type
+  firstNetwork.V
+
+Note: Expected a function because this term is being applied to the argument
+  ((embedding.vertex_eq_source_iff _).mp equal)
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseEmbedding.lean:35:4: error: Invalid `⟨...⟩` notation: The expected type
+  distinct ≠ firstNetwork.a ∧ distinct ≠ firstNetwork.b →
+    embedding.vertices distinct ≠ secondNetwork.a ∧ embedding.vertices distinct ≠ secondNetwork.b
+is not an inductive type
+
+Note: This notation can only be used when the expected type is an inductive type with a single constructor
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseEmbedding.lean:50:2: error: unsolved goals
+case pos
+firstNetwork secondNetwork firstImage secondImage : TTN
+firstEmbedding : firstNetwork.TerminalEmbedding firstImage
+secondEmbedding : secondNetwork.TerminalEmbedding secondImage
+⊢ (firstEmbedding.vertices.sumMap secondEmbedding.exceptSource) (Sum.inl firstNetwork.b) = Sum.inl firstImage.b
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseEmbedding.lean:52:2: error: unsolved goals
+case neg
+firstNetwork secondNetwork firstImage secondImage : TTN
+firstEmbedding : firstNetwork.TerminalEmbedding firstImage
+secondEmbedding : secondNetwork.TerminalEmbedding secondImage
+vertex : secondNetwork.V
+source : ¬vertex = secondNetwork.a
+imageNotSource : secondEmbedding.vertices vertex ≠ secondImage.a
+⊢ (firstEmbedding.vertices.sumMap (secondEmbedding.vertices.subtypeMap ⋯)) (Sum.inr ⟨vertex, ⋯⟩) =
+    Sum.inr ⟨secondEmbedding.vertices vertex, ⋯⟩
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseEmbedding.lean:51:61: warning: This simp argument is unused:
+  firstEmbedding.target
+
+Hint: Omit it from the simp argument list.
+  simp [seriesVertices, seriesEmb, secondEmbedding.source,̵ ̵f̵i̵r̵s̵t̵E̵m̵b̵e̵d̵d̵i̵n̵g̵.̵t̵a̵r̵g̵e̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseEmbedding.lean:79:2: error: unsolved goals
+case pos
+firstNetwork secondNetwork firstImage secondImage : TTN
+firstEmbedding : firstNetwork.TerminalEmbedding firstImage
+secondEmbedding : secondNetwork.TerminalEmbedding secondImage
+⊢ (firstEmbedding.vertices.sumMap secondEmbedding.interior) (Sum.inl firstNetwork.a) = Sum.inl firstImage.a
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseEmbedding.lean:82:4: error: unsolved goals
+case pos
+firstNetwork secondNetwork firstImage secondImage : TTN
+firstEmbedding : firstNetwork.TerminalEmbedding firstImage
+secondEmbedding : secondNetwork.TerminalEmbedding secondImage
+source : ¬secondNetwork.b = secondNetwork.a
+⊢ (firstEmbedding.vertices.sumMap secondEmbedding.interior) (Sum.inl firstNetwork.b) = Sum.inl firstImage.b
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseEmbedding.lean:85:4: error: unsolved goals
+case neg
+firstNetwork secondNetwork firstImage secondImage : TTN
+firstEmbedding : firstNetwork.TerminalEmbedding firstImage
+secondEmbedding : secondNetwork.TerminalEmbedding secondImage
+vertex : secondNetwork.V
+source : ¬vertex = secondNetwork.a
+target : ¬vertex = secondNetwork.b
+imageNotSource : secondEmbedding.vertices vertex ≠ secondImage.a
+imageNotTarget : secondEmbedding.vertices vertex ≠ secondImage.b
+⊢ (firstEmbedding.vertices.sumMap (secondEmbedding.vertices.subtypeMap ⋯)) (Sum.inr ⟨vertex, ⋯⟩) =
+    Sum.inr ⟨secondEmbedding.vertices vertex, ⋯⟩
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseEmbedding.lean:80:60: warning: This simp argument is unused:
+  firstEmbedding.source
+
+Hint: Omit it from the simp argument list.
+  simp [parallelVertices, parEmb, secondEmbedding.source,̵ ̵f̵i̵r̵s̵t̵E̵m̵b̵e̵d̵d̵i̵n̵g̵.̵s̵o̵u̵r̵c̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseEmbedding.lean:84:8: warning: This simp argument is unused:
+  firstEmbedding.target
+
+Hint: Omit it from the simp argument list.
+  simp [parallelVertices, parEmb, source, secondEmbedding.target, f̵i̵r̵s̵t̵E̵m̵b̵e̵d̵d̵i̵n̵g̵.̵t̵a̵r̵g̵e̵t̵,̵ ̵Ne.symm secondImage.hab]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseEmbedding.lean:196:9: error(lean.unknownIdentifier): Unknown constant `Bool.or_eq_true.mp`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseEmbedding.lean:196:43: error: Tactic `rcases` failed: `x✝ : ?m.46` is not an inductive datatype
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseEmbedding.lean:197:52: error: unexpected identifier; expected command
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseEmbedding.lean:211:38: error: Application type mismatch: The argument
+  coarse 0 configuration
+has type
+  Conf 0
+but is expected to have type
+  Prop
+in the application
+  @ite ?m.76 (coarse 0 configuration)
+'Outlook.FourColourActualCoarseEmbedding.open_diamond_two_edges' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualCoarseEmbedding.actualOldEmbedding' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualCoarseEmbedding.actual_old_vertices_injective' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualCoarseEmbedding.actual_coarse_open_edge_two_steps' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualCoarseEmbedding.actual_source_membership_forward' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+exit=1
+finished=2026-10-13T09:38:20.333054+00:00

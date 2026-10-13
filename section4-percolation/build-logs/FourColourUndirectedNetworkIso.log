@@ -1,0 +1,3 @@
+'Cluster.TTN.UndirectedIso.series' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.TTN.UndirectedIso.parallel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.TTN.UndirectedIso.sourceClusterIso' depends on axioms: [propext, Quot.sound]

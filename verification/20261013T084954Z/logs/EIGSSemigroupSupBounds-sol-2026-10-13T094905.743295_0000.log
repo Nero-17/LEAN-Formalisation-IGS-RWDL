@@ -1,0 +1,7 @@
+'IGS.Sec31.LpMarkovBounds.preserves_constant_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.LpMarkovBounds.continuous_input_sup_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.LpMarkovBounds.continuous_input_difference_sup_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiSemigroupSupBoundsProperties_of_dense_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiSemigroupSupBounds_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

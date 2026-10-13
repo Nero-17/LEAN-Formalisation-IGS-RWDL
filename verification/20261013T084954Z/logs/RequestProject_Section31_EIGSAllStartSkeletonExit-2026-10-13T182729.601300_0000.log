@@ -1,0 +1,3 @@
+'EIGS.xiSkeleton_partialHit_le_replantedMaximum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSkeleton_expExit_le_replantedMaximum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSkeleton_expExit_spectral_upper' depends on axioms: [propext, Classical.choice, Quot.sound]

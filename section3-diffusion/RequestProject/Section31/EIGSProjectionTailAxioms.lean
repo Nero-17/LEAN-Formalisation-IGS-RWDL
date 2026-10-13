@@ -1,0 +1,46 @@
+import RequestProject.Section31.EIGSOneStepCellEnergy
+import RequestProject.Section31.EIGSUnitProjectionAlgebra
+import RequestProject.Section31.EIGSUnitProjectionIncrement
+import RequestProject.Section31.EIGSUnitProjectionScale
+import RequestProject.Section31.EIGSNativeProjectionTail
+import RequestProject.Section31.EIGSNativeProjectionTailOfRules
+
+#print axioms EIGS.xiVertexSpeedMeasure_integral_endpoints
+#print axioms EIGS.xiUniformEdgeMeasure_integral_sum
+#print axioms EIGS.xiFiniteSpeedL2_norm_sq_integral
+#print axioms EIGS.xiFiniteSpeedL2_norm_sq_endpoints
+#print axioms EIGS.xiNativeCellSquareMass_nonnegative
+#print axioms EIGS.xiFiniteSpeedL2_norm_sq_sum_cells
+#print axioms EIGS.xiNativeCellSquareMass_le_descendant_fraction
+#print axioms EIGS.xiDescendant_fraction_uniform_bound
+#print axioms EIGS.xiNativeCellSquareMass_uniform_bound
+#print axioms EIGS.Network.unit_potential_energy_le
+#print axioms EIGS.Network.exists_uniform_zero_boundary_energy_bound
+#print axioms EIGS.exists_rules_uniform_zero_boundary_energy_bound
+#print axioms EIGS.exists_xiResistance_iterate_upper_bound
+#print axioms EIGS.exists_xiStep_zero_boundary_energy_bound
+#print axioms EIGS.xiEdgeAncestor_eq_xiAncestorEdge
+#print axioms EIGS.exists_xiPotentialValues_native_norm_bound
+#print axioms EIGS.xiUnitEnergyProjection_boundary
+#print axioms EIGS.xiUnitEnergyProjection_minimal
+#print axioms EIGS.xiUnitEnergyProjection_eq_potentialAt
+#print axioms EIGS.xiUnitEnergyProjection_linear
+#print axioms EIGS.xiUnitEnergyProjection_energy_identity
+#print axioms EIGS.xiUnitEnergyProjection_refl
+#print axioms EIGS.xiUnitEnergyProjection_nested
+#print axioms EIGS.xiUnitEnergyProjection_increment_zero
+#print axioms EIGS.xiUnitEnergyProjection_finer_fixed
+#print axioms EIGS.xiUnitEnergyProjection_increment_energy_le
+#print axioms EIGS.exists_xiStep_endpoint_energy_bound
+#print axioms EIGS.exists_xiStep_harmonic_native_energy_bound
+#print axioms EIGS.xiUnitEnergyProjection_eq_potentialValues
+#print axioms EIGS.xiUnitProjectionIncrement_fixed
+#print axioms EIGS.xiUnitProjectionIncrement_harmonic
+#print axioms EIGS.xiUnitProjectionIncrement_old_zero
+#print axioms EIGS.xiUnitProjectionIncrement_energy_le
+#print axioms EIGS.exists_xiUnitProjectionIncrement_native_bound
+#print axioms EIGS.exists_xiUnitProjectionIncrement_scaled_bound
+#print axioms EIGS.xiFiniteSpeedL2_sub
+#print axioms EIGS.exists_xiUnitProjection_native_tail
+#print axioms EIGS.exists_xiUnitProjection_native_tail_for_eigenpair
+#print axioms EIGS.exists_xiUnitProjection_native_tail_of_rules

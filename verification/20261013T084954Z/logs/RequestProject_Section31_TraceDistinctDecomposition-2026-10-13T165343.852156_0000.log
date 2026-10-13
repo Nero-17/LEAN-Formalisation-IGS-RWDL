@@ -1,0 +1,2 @@
+'IGS.Sec31.exit_time_le_skeleton_add_accumulated_cost' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.exit_time_le_distinct_skeleton_add_cost' depends on axioms: [propext, Classical.choice, Quot.sound]

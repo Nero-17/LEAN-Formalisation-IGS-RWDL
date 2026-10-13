@@ -1,0 +1,2 @@
+'EIGS.xiNativeFiniteResolvent_strong_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiNativeFiniteResolventStrong_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

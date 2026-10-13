@@ -1,0 +1,8 @@
+'IGS.Sec31.QuadraticEnergySpace.resolvent_firm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.resolvent_inner_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.identity_sub_resolvent_norm_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.identity_sub_resolvent_operator_norm_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

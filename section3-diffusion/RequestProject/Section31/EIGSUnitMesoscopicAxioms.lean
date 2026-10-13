@@ -1,0 +1,27 @@
+import RequestProject.Section31.EIGSUnitMesoscopicConvergence
+
+#print axioms EIGS.xiVertexInclusion
+#print axioms EIGS.xiVertexEmbedding_inclusion
+#print axioms EIGS.xiVertexInclusion_refl
+#print axioms EIGS.xiVertexInclusion_comp
+#print axioms EIGS.xiVertexEmbedding_forward
+#print axioms EIGS.xiVertexInclusion_eq_forward
+#print axioms EIGS.exists_xiPotential_atLevel_trace
+#print axioms EIGS.xiPotential_atLevel_restriction_le
+#print axioms EIGS.exists_xiUnit_atLevel_minimum
+#print axioms EIGS.xiUnitPotentialAt
+#print axioms EIGS.xiUnitPotentialAt_boundary
+#print axioms EIGS.xiUnitPotentialAt_minimal
+#print axioms EIGS.xiUnitPotentialAt_mesoscopic_minimal
+#print axioms EIGS.xiUnitPotentialAt_eq_mesoscopic_potentialValues
+#print axioms EIGS.xiMesoscopicBoundary
+#print axioms EIGS.xiMesoscopicBoundary_nonempty
+#print axioms EIGS.xiUnitPotentialAt_eq_mesoscopic_boundaryProfile
+#print axioms EIGS.xiUnitPotentialAt_mesoscopic_restriction_tendsto
+#print axioms EIGS.xiWeightedFiniteNetwork_iterated_restriction_le
+#print axioms EIGS.xiHarmonicValues_initial_boundary
+#print axioms EIGS.xiHarmonicValues_weighted_minimal
+#print axioms EIGS.xiHarmonicValues_potential_minimal
+#print axioms EIGS.xiHarmonicValues_eq_mesoscopic_boundaryProfile
+#print axioms EIGS.xiUnitPotentialAt_mesoscopic_harmonic_tendsto
+#print axioms EIGS.exists_xiUnitPotentialAt_mesoscopic_harmonic_convergence

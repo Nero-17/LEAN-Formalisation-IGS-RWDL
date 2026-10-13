@@ -1,0 +1,9 @@
+import RequestProject.Section31.EIGSUnitUniformCompletion
+
+#print axioms EIGS.abs_sub_le_of_near_endpoint_intervals
+#print axioms EIGS.xiUnitPotentialAt_descendant_endpoint_range
+#print axioms EIGS.xiUnitPotentialAt_uniform_error_le
+#print axioms EIGS.xiUnitPotentialUniformError
+#print axioms EIGS.xiUnitPotentialUniformError_tendsto_of_edge_decay
+#print axioms EIGS.exists_xiUnitPotential_uniform_harmonic_convergence
+#print axioms EIGS.exists_xiUnitPotential_continuous_uniform_limit_of_rules

@@ -1,0 +1,18 @@
+source=C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualNestedGH.lean
+started=2026-10-13T11:48:23.562166+00:00
+source_sha256=C83687A54E2CBD78C168D1BCA2FE243D6663DAFA7BA2580488F095DD186F5ACD
+'Outlook.FourColourActualNestedGH.actualNestedFamily' does not depend on any axioms
+'Outlook.FourColourActualNestedGH.actual_nested_critical_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourActualNestedGH.actual_nested_isometry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourActualNestedGH.actual_nested_completion_commute' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualNestedGH.actual_nested_gh_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourActualNestedGH.actual_nested_gh_convergence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualNestedGH.actual_nested_critical_connected_gh' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+exit=0
+finished=2026-10-13T11:49:48.029257+00:00

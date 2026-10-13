@@ -1,0 +1,26 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\DyadicMarkovPathLaw.lean:63:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DiscreteMarkov.dyadicPrefix_measurable`:
+  [StandardBorelSpace X]
+  [Nonempty X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [StandardBorelSpace X] [Nonempty X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\DyadicMarkovPathLaw.lean:69:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DiscreteMarkov.dyadicPrefix_restrict_succ`:
+  [MeasurableSpace X]
+  [StandardBorelSpace X]
+  [Nonempty X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace X] [StandardBorelSpace X] [Nonempty X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\DyadicMarkovPathLaw.lean:152:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DiscreteMarkov.reindexDyadicPath_measurable`:
+  [StandardBorelSpace X]
+  [Nonempty X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [StandardBorelSpace X] [Nonempty X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'IGS.Sec31.DiscreteMarkov.dyadicPrefixLaws_coherent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.enumeratedDyadicPathLaw_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.dyadicPathLaw_enumerated_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.exists_dyadic_probability_pathLaw' depends on axioms: [propext, Classical.choice, Quot.sound]

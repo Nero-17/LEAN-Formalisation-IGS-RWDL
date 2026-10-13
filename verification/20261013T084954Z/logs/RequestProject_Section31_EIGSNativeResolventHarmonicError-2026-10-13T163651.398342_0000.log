@@ -1,0 +1,5 @@
+'EIGS.finiteMarkov_resolvent_abs_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.graph_resolvent_laplacian_abs_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeFiniteResolvent_pointwise_equation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeFiniteResolvent_sup_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeFiniteResolvent_skeleton_error_le_exit' depends on axioms: [propext, Classical.choice, Quot.sound]

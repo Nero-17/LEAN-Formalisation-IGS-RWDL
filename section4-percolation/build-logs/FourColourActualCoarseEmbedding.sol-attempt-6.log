@@ -1,0 +1,92 @@
+source=C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseEmbedding.lean
+started=2026-10-13T09:40:32.503183+00:00
+source_sha256=26C43B16D6F2EEB20ED89FEA92B1CDEB78CB6933B2D1118E29052D2E3578CC2D
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseEmbedding.lean:50:2: error: unsolved goals
+case pos
+firstNetwork secondNetwork firstImage secondImage : TTN
+firstEmbedding : firstNetwork.TerminalEmbedding firstImage
+secondEmbedding : secondNetwork.TerminalEmbedding secondImage
+⊢ { toFun := Sum.map ⇑firstEmbedding.vertices ⇑secondEmbedding.exceptSource, inj' := ⋯ } (Sum.inl firstNetwork.b) =
+    Sum.inl firstImage.b
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseEmbedding.lean:52:2: error: unsolved goals
+case neg
+firstNetwork secondNetwork firstImage secondImage : TTN
+firstEmbedding : firstNetwork.TerminalEmbedding firstImage
+secondEmbedding : secondNetwork.TerminalEmbedding secondImage
+vertex : secondNetwork.V
+source : ¬vertex = secondNetwork.a
+imageNotSource : secondEmbedding.vertices vertex ≠ secondImage.a
+⊢ { toFun := Sum.map ⇑firstEmbedding.vertices ⇑(secondEmbedding.vertices.subtypeMap ⋯), inj' := ⋯ }
+      (Sum.inr ⟨vertex, ⋯⟩) =
+    Sum.inr ⟨secondEmbedding.vertices vertex, ⋯⟩
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseEmbedding.lean:51:88: warning: This simp argument is unused:
+  firstEmbedding.target
+
+Hint: Omit it from the simp argument list.
+  simp [seriesVertices, Function.Embedding.sumMap, seriesEmb, secondEmbedding.source,̵ ̵f̵i̵r̵s̵t̵E̵m̵b̵e̵d̵d̵i̵n̵g̵.̵t̵a̵r̵g̵e̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseEmbedding.lean:79:2: error: unsolved goals
+case pos
+firstNetwork secondNetwork firstImage secondImage : TTN
+firstEmbedding : firstNetwork.TerminalEmbedding firstImage
+secondEmbedding : secondNetwork.TerminalEmbedding secondImage
+⊢ { toFun := Sum.map ⇑firstEmbedding.vertices ⇑secondEmbedding.interior, inj' := ⋯ } (Sum.inl firstNetwork.a) =
+    Sum.inl firstImage.a
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseEmbedding.lean:82:4: error: unsolved goals
+case pos
+firstNetwork secondNetwork firstImage secondImage : TTN
+firstEmbedding : firstNetwork.TerminalEmbedding firstImage
+secondEmbedding : secondNetwork.TerminalEmbedding secondImage
+source : ¬secondNetwork.b = secondNetwork.a
+⊢ { toFun := Sum.map ⇑firstEmbedding.vertices ⇑secondEmbedding.interior, inj' := ⋯ } (Sum.inl firstNetwork.b) =
+    Sum.inl firstImage.b
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseEmbedding.lean:85:4: error: unsolved goals
+case neg
+firstNetwork secondNetwork firstImage secondImage : TTN
+firstEmbedding : firstNetwork.TerminalEmbedding firstImage
+secondEmbedding : secondNetwork.TerminalEmbedding secondImage
+vertex : secondNetwork.V
+source : ¬vertex = secondNetwork.a
+target : ¬vertex = secondNetwork.b
+imageNotSource : secondEmbedding.vertices vertex ≠ secondImage.a
+imageNotTarget : secondEmbedding.vertices vertex ≠ secondImage.b
+⊢ { toFun := Sum.map ⇑firstEmbedding.vertices ⇑(secondEmbedding.vertices.subtypeMap ⋯), inj' := ⋯ }
+      (Sum.inr ⟨vertex, ⋯⟩) =
+    Sum.inr ⟨secondEmbedding.vertices vertex, ⋯⟩
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseEmbedding.lean:80:87: warning: This simp argument is unused:
+  firstEmbedding.source
+
+Hint: Omit it from the simp argument list.
+  simp [parallelVertices, Function.Embedding.sumMap, parEmb, secondEmbedding.source,̵ ̵f̵i̵r̵s̵t̵E̵m̵b̵e̵d̵d̵i̵n̵g̵.̵s̵o̵u̵r̵c̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualCoarseEmbedding.lean:84:8: warning: This simp argument is unused:
+  firstEmbedding.target
+
+Hint: Omit it from the simp argument list.
+  simp [parallelVertices, Function.Embedding.sumMap, parEmb, source, secondEmbedding.target,
+          f̵i̵r̵s̵t̵E̵m̵b̵e̵d̵d̵i̵n̵g̵.̵t̵a̵r̵g̵e̵t̵,̵ ̵Ne.symm secondImage.hab]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'Outlook.FourColourActualCoarseEmbedding.open_diamond_two_edges' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualCoarseEmbedding.actualOldEmbedding' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualCoarseEmbedding.actual_old_vertices_injective' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualCoarseEmbedding.actual_coarse_open_edge_two_steps' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualCoarseEmbedding.actual_source_membership_forward' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+exit=1
+finished=2026-10-13T09:41:32.300870+00:00

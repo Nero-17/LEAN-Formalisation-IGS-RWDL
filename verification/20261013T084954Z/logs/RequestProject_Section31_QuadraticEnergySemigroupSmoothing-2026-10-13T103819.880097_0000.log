@@ -1,0 +1,6 @@
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroup_exists_energy_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroup_mem_closedDomain' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

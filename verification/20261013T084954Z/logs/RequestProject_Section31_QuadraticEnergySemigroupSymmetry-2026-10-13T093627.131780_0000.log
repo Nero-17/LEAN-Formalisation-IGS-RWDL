@@ -1,0 +1,5 @@
+'IGS.Sec31.QuadraticEnergySpace.smallStepResolvent_selfAdjoint' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.yosidaSemigroup_selfAdjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroup_selfAdjoint' depends on axioms: [propext, Classical.choice, Quot.sound]

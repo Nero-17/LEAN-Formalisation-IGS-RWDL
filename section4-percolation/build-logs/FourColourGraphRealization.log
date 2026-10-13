@@ -1,0 +1,10 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourGraphRealization.lean:166:8: warning: Try `simp at condition` instead of `simpa using condition`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+'Outlook.FourColourGraphRealization.diamondIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourGraphRealization.actual_child_retainedEdge_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourGraphRealization.retainedDiamondIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourGraphRealization.leafRealizationIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourGraphRealization.actualRealizationIso' depends on axioms: [propext, Classical.choice, Quot.sound]

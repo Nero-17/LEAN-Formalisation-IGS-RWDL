@@ -1,0 +1,128 @@
+[
+  {
+    "source": "RequestProject/Cluster/InverseLimit.lean",
+    "sha256": "791A51ECA558BF181D84B60A597D28A6EDE824348044AF254F3CFF3E2DE84353",
+    "started_utc": "2026-10-12T16:19:26.1357382Z",
+    "finished_utc": "2026-10-12T16:20:47.7763527Z",
+    "exit_code": 0,
+    "compiler": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\elan\\toolchains\\leanprover--lean4---v4.28.0\\bin\\lean.exe",
+    "log": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\section4-percolation\\build-logs\\InverseLimit.log"
+  },
+  {
+    "source": "RequestProject/Reduced/AllParameters.lean",
+    "sha256": "4B245F8B46F1446185DFF5CA2B7ECB480265D101D5F5F1CFCC584FF347764E72",
+    "started_utc": "2026-10-12T16:20:47.8978951Z",
+    "finished_utc": "2026-10-12T16:21:40.6993031Z",
+    "exit_code": 0,
+    "compiler": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\elan\\toolchains\\leanprover--lean4---v4.28.0\\bin\\lean.exe",
+    "log": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\section4-percolation\\build-logs\\AllParameters.log"
+  },
+  {
+    "source": "RequestProject/Cluster/TreeNetwork.lean",
+    "sha256": "C90D12182607192BB3E957BF6F15575DF5C8DE07C7102448898C5F6BB942D5DE",
+    "started_utc": "2026-10-12T16:21:40.7345224Z",
+    "finished_utc": "2026-10-12T16:22:36.0424554Z",
+    "exit_code": 0,
+    "compiler": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\elan\\toolchains\\leanprover--lean4---v4.28.0\\bin\\lean.exe",
+    "log": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\section4-percolation\\build-logs\\TreeNetwork.log"
+  },
+  {
+    "source": "RequestProject/Cluster/InfiniteTree.lean",
+    "sha256": "F2B41CA06E6E371FFC1CE41FB25776EC30D898847DCAB06E5697C94E62A0FBA7",
+    "started_utc": "2026-10-12T16:22:36.0714251Z",
+    "finished_utc": "2026-10-12T16:23:34.6958133Z",
+    "exit_code": 0,
+    "compiler": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\elan\\toolchains\\leanprover--lean4---v4.28.0\\bin\\lean.exe",
+    "log": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\section4-percolation\\build-logs\\InfiniteTree.log"
+  },
+  {
+    "source": "RequestProject/Cluster/InfiniteProcess.lean",
+    "sha256": "0FC0313FE3FA4AAF7B9B21605C8D346CA0D1FCE0EE847F4B384755F3737281D8",
+    "started_utc": "2026-10-12T16:25:08.2989573Z",
+    "finished_utc": "2026-10-12T16:26:07.948397Z",
+    "exit_code": 0,
+    "compiler": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\elan\\toolchains\\leanprover--lean4---v4.28.0\\bin\\lean.exe",
+    "log": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\section4-percolation\\build-logs\\InfiniteProcess.log"
+  },
+  {
+    "source": "RequestProject/Cluster/NestedReduction.lean",
+    "sha256": "5CB4D4A9F4882B21022765A30CD138859DF77E5E48A25AB62ACE0254464897D0",
+    "started_utc": "2026-10-12T16:26:08.1622361Z",
+    "finished_utc": "2026-10-12T16:27:23.5261357Z",
+    "exit_code": 0,
+    "compiler": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\elan\\toolchains\\leanprover--lean4---v4.28.0\\bin\\lean.exe",
+    "log": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\section4-percolation\\build-logs\\NestedReduction.log"
+  },
+  {
+    "source": "RequestProject/Reduced/NoLimit.lean",
+    "sha256": "F684A3D262DE39DEE22EF13E20D51D0A74C24E3D78BB30A88542EB89923986DE",
+    "started_utc": "2026-10-12T16:57:24.9410152Z",
+    "finished_utc": "2026-10-12T16:59:04.0098046Z",
+    "exit_code": 0,
+    "compiler": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\elan\\toolchains\\leanprover--lean4---v4.28.0\\bin\\lean.exe",
+    "log": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\section4-percolation\\build-logs\\NoLimit.log"
+  },
+  {
+    "source": "RequestProject/Cluster/TreeBounds.lean",
+    "sha256": "EBFE8F2765A87D249E5D255DB434CA8CC7CE619435B93A0326386AD2DE133655",
+    "started_utc": "2026-10-12T16:59:04.1805601Z",
+    "finished_utc": "2026-10-12T17:00:27.2167700Z",
+    "exit_code": 0,
+    "compiler": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\elan\\toolchains\\leanprover--lean4---v4.28.0\\bin\\lean.exe",
+    "log": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\section4-percolation\\build-logs\\TreeBounds.log"
+  },
+  {
+    "source": "RequestProject/Reduced/OriginalParameters.lean",
+    "sha256": "3B893DAA3FE160018FAE03678E63517E2A0B90662A522F0239FB9B11E80E45C6",
+    "started_utc": "2026-10-12T17:00:27.2948091Z",
+    "finished_utc": "2026-10-12T17:01:49.5287153Z",
+    "exit_code": 0,
+    "compiler": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\elan\\toolchains\\leanprover--lean4---v4.28.0\\bin\\lean.exe",
+    "log": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\section4-percolation\\build-logs\\OriginalParameters.log"
+  },
+  {
+    "source": "RequestProject/Cluster/InfiniteConsequences.lean",
+    "sha256": "E26CBA49EEF1EAADD831538D2412630CB18808C13A60D8A34F8F826BD71A890A",
+    "started_utc": "2026-10-12T17:01:49.5701328Z",
+    "finished_utc": "2026-10-12T17:02:34.8759744Z",
+    "exit_code": 0,
+    "compiler": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\elan\\toolchains\\leanprover--lean4---v4.28.0\\bin\\lean.exe",
+    "log": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\section4-percolation\\build-logs\\InfiniteConsequences.log"
+  },
+  {
+    "source": "RequestProject/Cluster/FullProcessLaw.lean",
+    "sha256": "F0B38F27E2B05D6BF992259523E5818FCF67109592A15415192C1E941B087D8C",
+    "started_utc": "2026-10-12T17:02:34.9038393Z",
+    "finished_utc": "2026-10-12T17:03:45.1889670Z",
+    "exit_code": 0,
+    "compiler": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\elan\\toolchains\\leanprover--lean4---v4.28.0\\bin\\lean.exe",
+    "log": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\section4-percolation\\build-logs\\FullProcessLaw.log"
+  },
+  {
+    "source": "RequestProject/Outlook/RuleCompatibility.lean",
+    "sha256": "A20843C0D1B7EEF56B55627AC7E7C1879B917A8E2F53341DED6FC6A47CC5E0EC",
+    "started_utc": "2026-10-12T17:03:45.2131993Z",
+    "finished_utc": "2026-10-12T17:05:43.5339688Z",
+    "exit_code": 0,
+    "compiler": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\elan\\toolchains\\leanprover--lean4---v4.28.0\\bin\\lean.exe",
+    "log": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\section4-percolation\\build-logs\\RuleCompatibility.log"
+  },
+  {
+    "source": "RequestProject/Cluster.lean",
+    "sha256": "286516BA5F50F95B83CA642AFAE0D6231550C3B468483FECF01401F25ECA7AD2",
+    "started_utc": "2026-10-12T17:05:43.5999977Z",
+    "finished_utc": "2026-10-12T17:06:26.7866717Z",
+    "exit_code": 0,
+    "compiler": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\elan\\toolchains\\leanprover--lean4---v4.28.0\\bin\\lean.exe",
+    "log": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\section4-percolation\\build-logs\\Cluster.log"
+  },
+  {
+    "source": "Section4Axioms.lean",
+    "sha256": "28A126D44F39284306419ED4585E57F447DD8382E34676364180312D75F7314A",
+    "started_utc": "2026-10-12T17:06:26.8275370Z",
+    "finished_utc": "2026-10-12T17:11:45.8960484Z",
+    "exit_code": 0,
+    "compiler": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\elan\\toolchains\\leanprover--lean4---v4.28.0\\bin\\lean.exe",
+    "log": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\section4-percolation\\build-logs\\Section4Axioms.log"
+  }
+]

@@ -1,0 +1,11 @@
+'IGS.Sec31.QuadraticEnergySpace.yosidaGenerator_eq_closedGenerator' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.yosidaGenerator_on_domain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.smallStepSolution_generator_commute' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.smallStepResolvent_commute' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.yosidaGenerator_on_domain_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

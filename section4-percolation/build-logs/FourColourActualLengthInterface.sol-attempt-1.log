@@ -1,0 +1,36 @@
+source=C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualLengthInterface.lean
+started=2026-10-13T10:39:23.414411+00:00
+source_sha256=82D50F4A5767163594E6FB63DAEB8FF86340E63CFCAC8C974D272E263D45BF17
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualLengthInterface.lean:363:5: warning: unused variable `secondPartition`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualLengthInterface.lean:390:5: warning: unused variable `firstPartition`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualLengthInterface.lean:421:5: warning: unused variable `secondPartition`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Outlook\FourColourActualLengthInterface.lean:448:5: warning: unused variable `firstPartition`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'Outlook.FourColourActualLengthInterface.diamond_common_neighbor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualLengthInterface.actual_two_step_reflection' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualLengthInterface.actualPartition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Outlook.FourColourActualLengthInterface.actual_old_image_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualLengthInterface.actual_fine_edge_alternates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualLengthInterface.actual_walk_lift_exact_length' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourActualLengthInterface.actual_edist_le_twice' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+exit=0
+finished=2026-10-13T10:40:47.375148+00:00

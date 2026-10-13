@@ -1,0 +1,5 @@
+'IGS.Sec31.QuadraticEnergySpace.lp_integrable_of_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.lp_inner_one_eq_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroup_integral_preservation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

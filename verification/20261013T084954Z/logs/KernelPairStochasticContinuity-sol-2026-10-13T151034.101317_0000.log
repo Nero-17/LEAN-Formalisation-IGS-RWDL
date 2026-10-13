@@ -1,0 +1,5 @@
+'IGS.Sec31.StationaryPair.kernel_pair_tendsto_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.StationaryPair.diagonal_distance_frontier_null' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.StationaryPair.kernel_pair_distance_probability_tendsto_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

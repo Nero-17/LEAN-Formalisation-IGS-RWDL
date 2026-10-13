@@ -1,0 +1,3 @@
+*.lean -text
+*.tex -text
+verification/** -text

@@ -1,0 +1,7 @@
+'IGS.Sec31.QuadraticEnergySpace.yosidaGenerator_selfAdjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.smallStepLift_energy_le_yosida_pairing' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.yosidaSmoothed_energy_time_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,10 @@
+'EIGS.finiteGraphSupTransitionLinear_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.finiteGraphSupTransition_norm_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeSupTransition_norm_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeSupTransition_kernel_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeSupTransition_kernel_power_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeSupTransition_pathLaw_endpoint_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeSupTransition_floor_poisson_comparison' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeSupTransition_absolute_floor_increment_poisson_comparison' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

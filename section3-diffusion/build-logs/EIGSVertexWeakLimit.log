@@ -1,0 +1,10 @@
+RequestProject\Section31\EIGSVertexWeakLimit.lean:117:54: warning: This simp argument is unused:
+  ancestryEquality
+
+Hint: Omit it from the simp argument list.
+  simp only [ancestorTest, Option.elim'_none, a̵n̵c̵e̵s̵t̵r̵y̵E̵q̵u̵a̵l̵i̵t̵y̵,̵ ̵↓reduceIte, sub_zero, mul_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'EIGS.xiVertexEmpiricalMeasure_integral_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiVertexProbabilityMeasure_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiVertex_and_speed_same_limit' depends on axioms: [propext, Classical.choice, Quot.sound]

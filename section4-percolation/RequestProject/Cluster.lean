@@ -5,6 +5,14 @@ import RequestProject.Cluster.Prop42
 import RequestProject.Cluster.Coarse
 import RequestProject.Cluster.Tree
 import RequestProject.Cluster.Coupling
+import RequestProject.Cluster.Exponent
+import RequestProject.Cluster.InverseLimit
+import RequestProject.Cluster.InfiniteProcess
+import RequestProject.Cluster.TreeNetwork
+import RequestProject.Cluster.InfiniteTree
+import RequestProject.Cluster.NestedReduction
+import RequestProject.Cluster.InfiniteConsequences
+import RequestProject.Cluster.FullProcessLaw
 
 /-!
 # Proposition 4.2 of *Iterated Graph Systems (I): random walks and diffusion limits*

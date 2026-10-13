@@ -1,0 +1,2 @@
+'IGS.Sec31.tendsto_zero_of_two_scale_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.tendsto_zero_of_two_scale_energy_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,20 @@
+[
+  {
+    "source": "RequestProject/Section31/VaryingStrongRecovery.lean",
+    "sha256": "F66099646E606C4A5A68B0C43BA033A28AE666EC04A45B918B5DCEBC79B5363A",
+    "started_utc": "2026-10-12T17:22:11.6619455Z",
+    "finished_utc": "2026-10-12T17:22:41.0441673Z",
+    "exit_code": 0,
+    "compiler": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\elan\\toolchains\\leanprover--lean4---v4.28.0\\bin\\lean.exe",
+    "log": "build-logs/VaryingStrongRecovery.log"
+  },
+  {
+    "source": "RequestProject/Section31/VaryingStrongRecoveryAxioms.lean",
+    "sha256": "277E000A619FB5EE7F242A1C382AD3F4327FE1CBA3004CCE9A990DC28E5CB42E",
+    "started_utc": "2026-10-12T17:22:41.1640379Z",
+    "finished_utc": "2026-10-12T17:23:05.3747458Z",
+    "exit_code": 0,
+    "compiler": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\elan\\toolchains\\leanprover--lean4---v4.28.0\\bin\\lean.exe",
+    "log": "build-logs/VaryingStrongRecoveryAxioms.log"
+  }
+]

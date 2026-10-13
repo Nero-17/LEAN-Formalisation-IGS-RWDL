@@ -1,0 +1,6 @@
+'IGS.Sec31.PoissonizedWalk.rounding_coefficient_additive_tendsto_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.PoissonizedWalk.absolute_clock_coefficient_tendsto_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

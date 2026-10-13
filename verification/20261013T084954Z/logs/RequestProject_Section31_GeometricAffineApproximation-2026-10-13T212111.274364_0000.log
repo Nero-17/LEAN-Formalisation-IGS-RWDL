@@ -1,0 +1,4 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\GeometricAffineApproximation.lean:19:23: warning: unused variable `boundNonnegative`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'IGS.Sec31.geometric_affine_fixedPoint_error' depends on axioms: [propext, Classical.choice, Quot.sound]
