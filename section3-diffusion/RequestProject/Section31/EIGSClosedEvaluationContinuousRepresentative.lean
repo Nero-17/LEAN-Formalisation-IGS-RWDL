@@ -1,12 +1,11 @@
 import RequestProject.Section31.EIGSClosedFiniteBornPointEvaluation
-import RequestProject.Section31.EIGSAddressStarAnchorEnergy
-import RequestProject.Section31.AddressStarPointIdentification
-import RequestProject.Section31.QuadraticEnergyFunctionalRecovery
+import RequestProject.Section31.EIGSClosedContinuousDomain
 
 /-! Every actual graph-bounded core evaluation agrees with any continuous
-representative of a value in the same closed domain. Strong original recovery,
-actual weighted-star anchors, star mass and mesh, and the already proved
-incidence-resistance decay fill the two-limit argument internally.
+representative of a value in the same closed domain. The already proved
+continuous closed-domain characterization puts this representative in the
+original finite-energy core; its actual embedding and the core agreement
+identify the evaluation without a second recovery argument.
 Candidate source, awaiting compilation. -/
 namespace EIGS
 open IGS.Sec31 MeasureTheory Filter Topology
@@ -77,148 +76,34 @@ theorem xiClosedFiniteBorn_evaluation_eq_continuous (system : EIGSData K)
     distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive renormalizationEigenpair
   let nonnegative := xiContinuousLpEnergyQuadraticForm_nonnegative system rulesConnected lengths lengthsPositive distanceRate
     distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive renormalizationEigenpair
-  let closable : QuadraticEnergySpace.SequentiallyClosable originalDomain originalForm := by
-    intro sequence energyCauchy ambientZero
-    exact xiContinuousLpEnergyQuadraticForm_closable_without_primitive system rulesConnected rulesLoopless rulesUnique plantingNonadjacent
-      distancePositive oneColourDistance lengths lengthsPositive distanceRate distanceRateGreaterThanOne metricEigenpair
-      mass resistanceRate ratePositive resistanceVector vectorPositive renormalizationEigenpair sequence energyCauchy
-      (by simpa using ambientZero.norm)
-  let core := xiSpeedL2Core system rulesConnected lengths lengthsPositive distanceRate
-    distanceRateGreaterThanOne metricEigenpair mass
   dsimp only
   intro birth vertex evaluation normConstant energyConstant normNonnegative energyNonnegative
     evaluationBound agreement target representative representativeImage
-  obtain ⟨sequence, ambientConvergence, energyConvergence, evaluationConvergence⟩ :=
-    QuadraticEnergySpace.exists_original_functional_approximation originalDomain originalForm nonnegative closable
-      evaluation normConstant energyConstant normNonnegative energyNonnegative evaluationBound target
+  have representativeFinite : representative ∈ xiContinuousFiniteEnergyDomain system rulesConnected lengths lengthsPositive
+      distanceRate distanceRateGreaterThanOne metricEigenpair resistanceRate ratePositive resistanceVector vectorPositive := by
+    apply (xiContinuous_mem_closedDomain_iff system rulesConnected rulesLoopless rulesUnique plantingNonadjacent
+      distancePositive oneColourDistance lengths lengthsPositive distanceRate distanceRateGreaterThanOne metricEigenpair
+      mass resistanceRate ratePositive resistanceVector vectorPositive renormalizationEigenpair representative).mp
+    rw [representativeImage]
+    exact target.property
   let energyEquiv := xiContinuousEnergyLpEquiv system rulesConnected lengths lengthsPositive distanceRate
     distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive
-  let continuousSequence := fun index => (energyEquiv.symm (sequence index)).val
-  have sequenceImage (index : ℕ) : core.embed (BoundedContinuousFunction.mkOfCompact (continuousSequence index)) =
-      (sequence index).val := congrArg Subtype.val (energyEquiv.apply_symm_apply (sequence index))
-  have sequenceFinite (index : ℕ) : xiExtendedWeightedEnergy system resistanceRate ratePositive
-      resistanceVector vectorPositive (continuousSequence index ∘ xiCompletionUnionEmbedding system rulesConnected
-        lengths lengthsPositive distanceRate (zero_lt_one.trans distanceRateGreaterThanOne) metricEigenpair) ≠ ⊤ :=
-    (xiWeightedEnergyDomain_iff system resistanceRate ratePositive resistanceVector vectorPositive _).1
-      (energyEquiv.symm (sequence index)).property
-  have sequenceEnergy (index : ℕ) :
-      (xiExtendedWeightedEnergy system resistanceRate ratePositive resistanceVector vectorPositive
-        (continuousSequence index ∘ xiCompletionUnionEmbedding system rulesConnected lengths lengthsPositive distanceRate
-          (zero_lt_one.trans distanceRateGreaterThanOne) metricEigenpair)).toReal = originalForm (sequence index) := by
-    symm
-    simpa only [continuousSequence, energyEquiv, originalForm, LinearEquiv.apply_symm_apply] using
-      xiContinuousLpEnergyQuadraticForm_of_continuous system rulesConnected lengths lengthsPositive distanceRate
-        distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive
-        renormalizationEigenpair (energyEquiv.symm (sequence index))
-  have representativeCore : core.embed (BoundedContinuousFunction.mkOfCompact representative) = target.val :=
-    representativeImage
-  have ambientError : Tendsto (fun index =>
-      ∫ address, (continuousSequence index (xiAddressLimit system rulesConnected lengths lengthsPositive distanceRate
-          distanceRateGreaterThanOne metricEigenpair address) -
-        representative (xiAddressLimit system rulesConnected lengths lengthsPositive distanceRate
-          distanceRateGreaterThanOne metricEigenpair address)) ^ 2 ∂mass.addressMeasure) atTop (𝓝 0) := by
-    have identities (index : ℕ) := xiContinuous_L2_norm_sq_address_integral system rulesConnected lengths lengthsPositive
-      distanceRate distanceRateGreaterThanOne metricEigenpair mass (continuousSequence index - representative)
-    have errorConvergence := ((ambientConvergence.sub_const target.val).norm.pow 2)
-    simp only [sub_self, norm_zero, zero_pow (by decide : 2 ≠ 0)] at errorConvergence
-    have equality (index : ℕ) :
-        (∫ address, (continuousSequence index (xiAddressLimit system rulesConnected lengths lengthsPositive distanceRate
-            distanceRateGreaterThanOne metricEigenpair address) -
-          representative (xiAddressLimit system rulesConnected lengths lengthsPositive distanceRate
-            distanceRateGreaterThanOne metricEigenpair address)) ^ 2 ∂mass.addressMeasure) =
-          ‖(sequence index).val - target.val‖ ^ 2 := by
-      rw [← identities]
-      change ‖core.embed (BoundedContinuousFunction.mkOfCompact (continuousSequence index) -
-        BoundedContinuousFunction.mkOfCompact representative)‖ ^ 2 = _
-      rw [map_sub, sequenceImage, representativeCore]
-    simpa only [equality] using errorConvergence
-  have pointConvergence : Tendsto (fun index => continuousSequence index
-      (xiCompletionEmbedding system rulesConnected lengths lengthsPositive distanceRate
-        (zero_lt_one.trans distanceRateGreaterThanOne) metricEigenpair birth vertex)) atTop (𝓝 (evaluation target)) := by
-    simpa only [agreement, continuousSequence, energyEquiv] using evaluationConvergence
-  obtain ⟨anchorConstant, anchorPositive, anchorBound⟩ := exists_xiAddressStar_anchor_energy_bound system
-    rulesConnected rulesLoopless rulesUnique plantingNonadjacent distancePositive oneColourDistance
-    lengths lengthsPositive distanceRate distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive
-    resistanceVector vectorPositive renormalizationEigenpair
-  obtain ⟨massLower, massUpper, massLowerPositive, massUpperPositive, massBounds⟩ :=
-    exists_xiAddressStarWeight_mass_comparison system mass
-  let weights := fun age => xiAddressStarWeight system (birth + age) (xiForward system birth age vertex)
-  have starMassPositive (age : ℕ) : 0 < ∫ address, weights age address ∂mass.addressMeasure := by
-    have incidencePositive : 0 < (xiVertexIncidenceCount system (birth + age) (xiForward system birth age vertex) : ℝ) := by
-      exact_mod_cast xiVertexIncidenceCount_positive system rulesConnected _ _
-    exact (mul_pos (div_pos massLowerPositive (pow_pos mass.rate_positive _)) incidencePositive).trans_le
-      (massBounds (birth + age) (xiForward system birth age vertex)).1
-  let decay := fun age => 1 / ((mass.rate * resistanceRate) ^ (birth + age) *
-    (∫ address, weights age address ∂mass.addressMeasure))
-  have decayBound (age : ℕ) : decay age ≤ (1 / massLower) *
-      (1 / ((xiVertexIncidenceCount system (birth + age) (xiForward system birth age vertex) : ℝ) *
-        resistanceRate ^ (birth + age))) := by
-    have denominatorBound := mul_le_mul_of_nonneg_left
-      (massBounds (birth + age) (xiForward system birth age vertex)).1
-      (pow_pos (mul_pos mass.rate_positive ratePositive) (birth + age)).le
-    have denominatorIdentity : (mass.rate * resistanceRate) ^ (birth + age) *
-        (massLower / mass.rate ^ (birth + age) *
-          (xiVertexIncidenceCount system (birth + age) (xiForward system birth age vertex) : ℝ)) =
-        massLower * ((xiVertexIncidenceCount system (birth + age) (xiForward system birth age vertex) : ℝ) *
-          resistanceRate ^ (birth + age)) := by
-      rw [mul_pow]
-      field_simp [(pow_pos mass.rate_positive (birth + age)).ne']
-      <;> ring
-    rw [denominatorIdentity] at denominatorBound
-    have incidencePositive : 0 < (xiVertexIncidenceCount system (birth + age) (xiForward system birth age vertex) : ℝ) := by
-      exact_mod_cast xiVertexIncidenceCount_positive system rulesConnected _ _
-    have bound := one_div_le_one_div_of_le
-      (mul_pos massLowerPositive (mul_pos incidencePositive (pow_pos ratePositive (birth + age)))) denominatorBound
-    simpa only [decay, one_div, mul_inv_rev, mul_comm, mul_left_comm, mul_assoc] using bound
-  have decayLimit : Tendsto decay atTop (𝓝 0) := by
-    have inverseLimit := (xiIncidence_resistance_inverse_tendsto_zero_without_primitive system rulesConnected
-      plantingNonadjacent resistanceRate ratePositive resistanceVector vectorPositive renormalizationEigenpair
-      birth vertex).const_mul (1 / massLower)
-    apply squeeze_zero (fun age => (one_div_pos.mpr
-      (mul_pos (pow_pos (mul_pos mass.rate_positive ratePositive) (birth + age))
-        (starMassPositive age))).le) decayBound
-    simpa only [mul_zero] using inverseLimit
-  let mesh := fun age => (xiMaximumColourLength system lengths +
-    (xiRuleRadius system lengths * distanceRate⁻¹) / (1 - distanceRate⁻¹)) * distanceRate⁻¹ ^ (birth + age)
-  have meshLimit : Tendsto mesh atTop (𝓝 0) := by
-    have geometric := tendsto_pow_atTop_nhds_zero_of_lt_one
-      (inv_pos.mpr (zero_lt_one.trans distanceRateGreaterThanOne)).le
-      ((inv_lt_one₀ (zero_lt_one.trans distanceRateGreaterThanOne)).mpr distanceRateGreaterThanOne)
-    have convergence := (geometric.const_mul (distanceRate⁻¹ ^ birth)).const_mul
-      (xiMaximumColourLength system lengths + (xiRuleRadius system lengths * distanceRate⁻¹) / (1 - distanceRate⁻¹))
-    simpa only [mesh, pow_add, mul_zero] using convergence
-  apply continuous_point_limit_eq_of_weighted_stars mass.addressMeasure
-    (xiAddressLimit system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne metricEigenpair)
-    (measurable_xiAddressLimit system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne metricEigenpair)
-    (xiCompletionEmbedding system rulesConnected lengths lengthsPositive distanceRate
-      (zero_lt_one.trans distanceRateGreaterThanOne) metricEigenpair birth vertex)
-    weights
-    (fun age => (measurable_of_countable (xiEdgeStarMultiplicity system (birth + age)
-      (xiForward system birth age vertex))).comp (measurable_xiAddressEdge system (birth + age)))
-    (fun age address => (xiEdgeStarMultiplicity_bounds system (birth + age) (xiForward system birth age vertex) _).1)
-    (fun age address => (xiEdgeStarMultiplicity_bounds system (birth + age) (xiForward system birth age vertex) _).2)
-    starMassPositive mesh meshLimit
-    (fun age address supported => by
-      have bound := xiAddressStarWeight_support_mesh system rulesConnected lengths lengthsPositive distanceRate
-        distanceRateGreaterThanOne metricEigenpair (birth + age) (xiForward system birth age vertex) address supported
-      simpa only [xiCompletionEmbedding_forward] using bound)
-    decay decayLimit anchorConstant continuousSequence representative
-    (fun index => originalForm (sequence index))
-    (QuadraticEnergySpace.closedForm originalDomain originalForm nonnegative closable target)
-    energyConvergence (evaluation target) pointConvergence ambientError
-  intro index age anchor
-  have bound := anchorBound (continuousSequence index) (sequenceFinite index) (birth + age)
-    (xiForward system birth age vertex) anchor
-  rw [xiCompletionEmbedding_forward, sequenceEnergy] at bound
-  have coefficientIdentity : anchorConstant * decay age *
-      (∫ address, weights age address ∂mass.addressMeasure) =
-        anchorConstant / (mass.rate * resistanceRate) ^ (birth + age) := by
-    dsimp only [decay]
-    field_simp [(starMassPositive age).ne',
-      (pow_pos (mul_pos mass.rate_positive ratePositive) (birth + age)).ne']
-    <;> ring
-  rw [coefficientIdentity]
-  exact bound
+  let original : originalDomain := energyEquiv ⟨representative, representativeFinite⟩
+  have originalImage : original.val = target.val := by
+    change xiContinuousL2Map system rulesConnected lengths lengthsPositive distanceRate
+      distanceRateGreaterThanOne metricEigenpair mass representative = target.val
+    exact representativeImage
+  have closedOriginal : (⟨original.val,
+      QuadraticEnergySpace.original_mem_closedDomain originalDomain originalForm nonnegative original⟩ :
+        QuadraticEnergySpace.closedDomain originalDomain originalForm nonnegative) = target :=
+    Subtype.ext originalImage
+  calc
+    evaluation target = evaluation ⟨original.val,
+        QuadraticEnergySpace.original_mem_closedDomain originalDomain originalForm nonnegative original⟩ :=
+      congrArg evaluation closedOriginal.symm
+    _ = (energyEquiv.symm original).val (xiCompletionEmbedding system rulesConnected lengths lengthsPositive distanceRate
+        (zero_lt_one.trans distanceRateGreaterThanOne) metricEigenpair birth vertex) := agreement original
+    _ = _ := by simp only [original, LinearEquiv.symm_apply_apply]
 
 theorem exists_xiClosedFiniteBorn_point_evaluation_with_continuous_agreement (system : EIGSData K)
     (rulesConnected : ∀ colour, (ruleSG system colour).Connected)

@@ -1,0 +1,10 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSClosedEvaluationContinuousRepresentative.lean:37:9: warning: unused variable `xiClosedBornStatementCompactSpace`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSClosedEvaluationContinuousRepresentative.lean:128:9: warning: unused variable `xiClosedBornStatementCompactSpace`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'EIGS.xiClosedFiniteBorn_evaluation_eq_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiClosedFiniteBorn_point_evaluation_with_continuous_agreement' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

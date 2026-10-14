@@ -10,7 +10,7 @@ This result does not yet assert a heat-kernel lower bound. Candidate source. -/
 
 namespace EIGS
 open MeasureTheory Filter
-open scoped Topology
+open scoped Topology ENNReal
 noncomputable section
 set_option maxHeartbeats 3000000
 variable {K : ℕ}

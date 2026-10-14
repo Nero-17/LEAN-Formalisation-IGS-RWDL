@@ -128,7 +128,6 @@ theorem exists_xiHarmonic_nodal_cutoffs
         (zero_lt_one.trans distanceGreaterThanOne) metricEigenpair) :=
     xiCompletion_compactSpace system rulesConnected lengths lengthsPositive distanceRate
       distanceGreaterThanOne metricEigenpair
-  dsimp only
   obtain ⟨profiles, contractionFactor, factorPositive, factorStrict, profilesPlus, profilesMinus,
     profilesMinimal, profilesOscillation⟩ := exists_rule_harmonic_profiles_strict_oscillation system rulesConnected
       distancePositive oneColourDistance resistanceVector vectorPositive

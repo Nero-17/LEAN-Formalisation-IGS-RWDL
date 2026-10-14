@@ -12,7 +12,7 @@ Lean 4 development for *Iterated Graph Systems (I): random walks and diffusion l
 - Full-sequence finite-horizon path weak convergence for arbitrary convergent moving starts, with continuous limiting paths; a global continuous-path probability family measurable in its starting point, identified with the same closed L² semigroup.
 - The actual natural-filtration stopping-time identity and conditional expectation for everywhere finite stopping times and continuous terminal tests. This does not yet establish all usual-filtration, bounded-Borel, future-path or Hunt conclusions.
 - Actual closed-domain Nash bounds, L¹ contraction, L¹–L² and L²–continuous smoothing, and compact smoothing. The same actual five-rule closed semigroup has a symmetric strictly positive mass-one heat kernel, jointly continuous in positive time and both spatial variables, with the global small-time bound and a valid clipped all-time bound. Strict positivity and time continuity are supplied internally.
-- Finite-born original-core point energy estimates, extension of point evaluations to the closed energy domain, and recovery sequences that also recover bounded energy functionals. Identifying these functionals with arbitrary continuous closed-domain representatives still requires the local address-star bridge.
+- Actual finite-born point evaluations agree with all continuous closed-domain representatives. Actual harmonic cutoffs, closed-form energy bounds, and half-time Riesz identities give the finite-born two-sided small-time heat estimates and local spectral dimension. These consumers supply both diagonal bounds internally from the same actual compact smoothing construction.
 - The actual primitive integer degree matrix has spectral radius greater than one, and the actual degree-to-mass comparison gives a strict spectral-radius gap. The primitive condition is a standing model condition retained from the paper.
 - Corrected critical percolation rule coding and literal infinite source-cluster laws, resistance exponents, and the stated failure of deterministic normalization.
 
@@ -20,7 +20,7 @@ Generic criteria count as actual-model results only when their inputs are suppli
 
 ## Remaining work
 
-The paper's finite-born two-sided and typical-point logarithmic heat estimates and local spectral dimensions; full usual-filtration/Borel/future-path strong Markov and Hunt statements; final GHPS transport and clock identification; and the resistance-form/Brownian-regime identification remain incomplete. Random-cluster GHP and diffusion statements retain their original conjectural status.
+Typical-point logarithmic heat estimates and almost-everywhere local spectral dimensions; full usual-filtration/Borel/future-path strong Markov and Hunt statements; final GHPS transport and clock identification; and the resistance-form/Brownian-regime identification remain incomplete. Random-cluster GHP and diffusion statements retain their original conjectural status.
 
 ## Manuscript and layout
 

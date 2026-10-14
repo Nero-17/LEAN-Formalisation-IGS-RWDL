@@ -1,0 +1,9 @@
+'IGS.Sec31.DiscreteMarkov.continuousPath_tendsto_at_finite_extended_time' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.continuousPath_quasiLeftContinuous_at_finite_supremum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.continuousPath_law_quasiLeftContinuous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

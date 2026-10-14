@@ -104,7 +104,9 @@ theorem eventually_logarithmic_ceiling_le_index (width : ℝ) :
   have quotientTendsto : Tendsto (fun index : ℕ => Real.log (index + 2 : ℝ) / index) atTop (𝓝 0) := by
     simpa only [Function.comp_def, pow_one, one_mul, add_neg_cancel_right] using
       (Real.tendsto_pow_log_div_mul_add_atTop 1 (-2) 1 one_ne_zero).comp shiftedTendsto
-  have multiplied := quotientTendsto.const_mul width
+  have multiplied : Tendsto (fun index : ℕ => width * (Real.log (index + 2 : ℝ) / index))
+      atTop (𝓝 (0 : ℝ)) := by
+    simpa only [mul_zero] using quotientTendsto.const_mul width
   filter_upwards [multiplied.eventually (gt_mem_nhds (by norm_num : (0 : ℝ) < 1)),
     eventually_gt_atTop (0 : ℕ)] with index small indexPositive
   apply Nat.ceil_le.mpr

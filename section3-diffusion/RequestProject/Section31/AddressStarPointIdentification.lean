@@ -78,15 +78,15 @@ theorem continuous_point_limit_eq_of_weighted_stars
       have compared := integral_mono (localIntegrable level (sequence index) (limit point))
         ((differenceIntegrable.const_mul 4).add ((localIntegrable level limit (limit point)).const_mul 2))
         (fun address => by
-          change weights level address * (sequence index (addressPoint address) - limit point) ^ 2 ≤
-            4 * (sequence index (addressPoint address) - limit (addressPoint address)) ^ 2 +
-              2 * (weights level address * (limit (addressPoint address) - limit point) ^ 2)
+          simp only [Pi.add_apply, ContinuousMap.sub_apply, sub_zero]
           exact weighted_square_triangle_le (sequence index (addressPoint address))
             (limit (addressPoint address)) (limit point) (weights level address)
             (weightsNonnegative level address) (weightsBounded level address))
-      simpa only [ContinuousMap.sub_apply, sub_zero, integral_add
-        (differenceIntegrable.const_mul 4) ((localIntegrable level limit (limit point)).const_mul 2),
-        integral_const_mul] using compared
+      have additionIdentity := integral_add
+        (differenceIntegrable.const_mul 4) ((localIntegrable level limit (limit point)).const_mul 2)
+      simp only [Pi.add_apply, ContinuousMap.sub_apply, sub_zero] at additionIdentity compared
+      rw [additionIdentity] at compared
+      simpa only [integral_const_mul] using compared
     have inequalities (index : ℕ) := (anchorBound index level (limit point)).trans
       (add_le_add_right (mul_le_mul_of_nonneg_left (comparison index) (by norm_num : (0 : ℝ) ≤ 3)) _)
     have leftLimit := ((pointConvergence.sub_const (limit point)).pow 2).const_mul
