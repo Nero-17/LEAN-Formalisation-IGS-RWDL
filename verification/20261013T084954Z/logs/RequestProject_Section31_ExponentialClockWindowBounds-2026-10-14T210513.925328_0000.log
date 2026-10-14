@@ -1,0 +1,9 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\ExponentialClockWindowBounds.lean:48:36: warning: unused variable `ordered`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'IGS.Sec31.PoissonClock.holdingJumpIndex_monotone' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonClock.scaled_jump_window_count_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonClock.holdingTimePath_modulus_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonClock.exponential_clock_ae_window_count_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

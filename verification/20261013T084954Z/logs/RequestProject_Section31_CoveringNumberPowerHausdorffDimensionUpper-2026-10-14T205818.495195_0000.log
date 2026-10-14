@@ -1,0 +1,3 @@
+'IGS.Sec31.hausdorff_dimension_upper_of_coveringNumber_power_upper' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

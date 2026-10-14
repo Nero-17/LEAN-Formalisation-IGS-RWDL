@@ -1,4 +1,5 @@
 import RequestProject.Section31.J1IntervalFiniteKnotsAlignment
+import RequestProject.Section31.J1UnitTimeInstances
 
 /-! Finite step functions, with the terminal value retained separately,
 are aligned by the actual interval OrderIso. The resulting bound uses the
@@ -58,7 +59,7 @@ theorem finiteEndpointJumpFunction_time_change {State : Type*} {count : ℕ}
       have equality : time = (⟨1, by norm_num⟩ : UnitJ1Time) := Subtype.ext terminal
       rw [equality, intervalOrderIso_one_fixed change]
   unfold finiteEndpointJumpFunction
-  rw [terminalEquivalent]
+  simp only [terminalEquivalent]
   split_ifs
   · rfl
   · exact finiteJumpFunction_time_change first second states change knotIdentity time

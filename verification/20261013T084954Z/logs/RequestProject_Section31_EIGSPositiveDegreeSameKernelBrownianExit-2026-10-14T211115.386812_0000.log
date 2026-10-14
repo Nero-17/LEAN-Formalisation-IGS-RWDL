@@ -1,0 +1,3 @@
+'EIGS.exists_xiResistanceBrownian_same_kernel_full_heat_exit_recurrence_of_rules_of_positive_degree_data' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

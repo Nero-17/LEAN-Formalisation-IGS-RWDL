@@ -22,7 +22,10 @@ def unitHoldingCadlagPath {State : Type*} [MetricSpace State]
     (horizon : ℝ) (horizonPositive : 0 < horizon) : UnitCadlagJ1Path State := by
   let clock : UnitJ1Time → ℝ≥0 := fun time => ⟨horizon * time.val, mul_nonneg horizonPositive.le time.property.1⟩
   have clockContinuous : Continuous clock := (continuous_const.mul continuous_subtype_val).subtype_mk _
-  have clockStrict : StrictMono clock := fun _ _ ordered => mul_lt_mul_of_pos_left ordered horizonPositive
+  have clockStrict : StrictMono clock := by
+    intro first second ordered
+    change horizon * first.val < horizon * second.val
+    exact mul_lt_mul_of_pos_left ordered horizonPositive
   refine ⟨⟨fun time => holdingTimePath trajectory holdingTimes (horizon * time.val)⟩, ?_⟩
   exact (holdingTimePathNNReal_isCadlag trajectory holdingTimes positive nonexplosion).comp_continuous_strictMono
     clock clockContinuous clockStrict
@@ -43,6 +46,9 @@ variable {Vertex : Type} [Fintype Vertex] [DecidableEq Vertex]
 variable [MeasurableSpace Vertex] [MeasurableSingletonClass Vertex]
 variable {State : Type*} [MetricSpace State] [CompactSpace State]
 variable [MeasurableSpace State] [BorelSpace State]
+
+local instance exponentialJ1StateBoundedSpace : BoundedSpace State :=
+  ⟨Metric.isBounded_of_compactSpace⟩
 
 theorem finiteGraphExponentialSampleLaw_clock_regular
     (graph : SimpleGraph Vertex) [DecidableRel graph.Adj]
@@ -67,15 +73,16 @@ theorem exponentialHoldingJ1Sample_aemeasurable
     (finiteGraphExponentialSampleLaw graph degreePositive initial)
     (exponentialHoldingJ1Sample embedding horizon horizonPositive)
   · intro time
-    have equality : ∀ᵐ sample ∂finiteGraphExponentialSampleLaw graph degreePositive initial,
-        (exponentialHoldingJ1Sample embedding horizon horizonPositive sample).val.toFun time =
-          embedding (holdingTimePath sample.1 sample.2 (horizon * time.val)) := by
+    have equality :
+        (fun sample => (exponentialHoldingJ1Sample embedding horizon horizonPositive sample).val.toFun time) =ᵐ[
+          finiteGraphExponentialSampleLaw graph degreePositive initial]
+            (fun sample => embedding (holdingTimePath sample.1 sample.2 (horizon * time.val))) := by
       filter_upwards [regular] with sample clock
       simp only [exponentialHoldingJ1Sample, dif_pos clock, unitHoldingCadlagPath, holdingTimePath]
     have measurableEvaluation : Measurable (fun sample : (ℕ → Vertex) × (ℕ → ℝ) =>
         embedding (holdingTimePath sample.1 sample.2 (horizon * time.val))) :=
       (measurable_of_countable embedding).comp (holdingTimePath_measurable (horizon * time.val))
-    exact measurableEvaluation.aemeasurable.congr equality.symm
+    exact measurableEvaluation.aemeasurable.congr (Filter.EventuallyEq.symm equality)
   · filter_upwards [regular] with sample clock
     obtain ⟨count, knots, increasing, interior, states, endpoint, representation⟩ :=
       holdingTimePath_finite_endpoint_jump_representation (fun index => embedding (sample.1 index))
@@ -88,8 +95,8 @@ def finiteGraphExponentialJ1Law
     (degreePositive : ∀ vertex, 0 < graph.degree vertex) (initial : ProbabilityMeasure Vertex)
     (embedding : Vertex → State) (horizon : ℝ) (horizonPositive : 0 < horizon) :
     ProbabilityMeasure (UnitCadlagJ1Path State) :=
-  (⟨finiteGraphExponentialSampleLaw graph degreePositive initial, inferInstance⟩ :
-    ProbabilityMeasure ((ℕ → Vertex) × (ℕ → ℝ))).map
+  ProbabilityMeasure.map (⟨finiteGraphExponentialSampleLaw graph degreePositive initial, inferInstance⟩ :
+    ProbabilityMeasure ((ℕ → Vertex) × (ℕ → ℝ)))
       (exponentialHoldingJ1Sample_aemeasurable graph degreePositive initial embedding horizon horizonPositive)
 
 end

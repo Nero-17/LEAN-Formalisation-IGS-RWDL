@@ -31,7 +31,12 @@ theorem rational_logistic_of_cleared (relativeSecondMoment product nextProduct c
         coefficient * (product - 1) ^ 2 ≤
           coefficient * product * (relativeSecondMoment * product - 1) := by nlinarith [bound]
     have divided := (div_le_iff₀ positive).mpr multiplied
-    convert divided using 1 <;> field_simp [positive.ne'] <;> ring
+    calc
+      nextProduct + coefficient * (product - 1) ^ 2 / (relativeSecondMoment * product - 1) =
+          (nextProduct * (relativeSecondMoment * product - 1) + coefficient * (product - 1) ^ 2) /
+            (relativeSecondMoment * product - 1) := by
+        rw [add_div, mul_div_cancel_right₀ _ zero]
+      _ ≤ coefficient * product := divided
 
 theorem logistic_product_exact_rational {pd ps : ℝ}
     (diamondNonnegative : 0 ≤ pd) (seriesNonnegative : 0 ≤ ps) (sumOne : ps + pd = 1)

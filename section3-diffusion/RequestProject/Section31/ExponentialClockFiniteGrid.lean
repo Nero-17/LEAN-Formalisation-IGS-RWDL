@@ -75,11 +75,10 @@ theorem exponential_clock_finite_grid_bad_probability
     (fun depth => (measurable_const.indicator (badMeasurable depth)).aestronglyMeasurable)
     (integrable_const (1 : ℝ))
     (fun depth => Eventually.of_forall (fun holdingTimes => by
+      change ‖(bad depth).indicator (fun _ : ℕ → ℝ => (1 : ℝ)) holdingTimes‖ ≤ (1 : ℝ)
       by_cases belongs : holdingTimes ∈ bad depth
-      · rw [Set.indicator_of_mem belongs]
-        norm_num
-      · rw [Set.indicator_of_notMem belongs]
-        norm_num))
+      · simp [belongs]
+      · simp [belongs]))
     sampleConverges
   simpa only [integral_indicator_const (1 : ℝ) (badMeasurable _),
     smul_eq_mul, mul_one, integral_zero, bad] using dominated

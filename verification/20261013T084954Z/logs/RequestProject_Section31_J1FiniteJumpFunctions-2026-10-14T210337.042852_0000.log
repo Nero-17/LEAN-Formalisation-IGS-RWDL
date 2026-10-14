@@ -1,0 +1,7 @@
+'IGS.Sec31.DiscreteMarkov.finiteJumpFunction_time_change' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.finiteEndpointJumpFunction_time_change' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.finiteEndpointJumpFunction_J1_le_clock_error' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,13 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\J1UnitGridReconstruction.lean:50:15: warning: This simp argument is unused:
+  trajectory
+
+Hint: Omit it from the simp argument list.
+  simp only [t̵r̵a̵j̵e̵c̵t̵o̵r̵y̵,̵ ̵unitGridIndex, NNReal.coe_add, NNReal.coe_natCast, NNReal.coe_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'IGS.Sec31.DiscreteMarkov.unitCadlagJ1MetricSpace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.unitGridJ1Reconstruction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.unitGridJ1Reconstruction_lipschitz' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.unitGridJ1Reconstruction_measurable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

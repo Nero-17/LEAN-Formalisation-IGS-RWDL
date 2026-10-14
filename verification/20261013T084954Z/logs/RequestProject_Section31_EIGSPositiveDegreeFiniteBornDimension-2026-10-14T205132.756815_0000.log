@@ -1,0 +1,9 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSPositiveDegreeFiniteBornDimension.lean:85:29: warning: unused variable `normalizationPositive`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'EIGS.xiFiniteBornHeatSpectralDimensionProperties_of_compactSmoothing_of_positive_degree_data' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_xiFiniteBornHeatSpectralDimension_of_rules_of_positive_degree_data' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

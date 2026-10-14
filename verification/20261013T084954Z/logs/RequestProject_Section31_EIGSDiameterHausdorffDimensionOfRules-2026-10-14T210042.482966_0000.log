@@ -1,0 +1,1 @@
+'EIGS.xiDiameterCompletion_hausdorff_dimension_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

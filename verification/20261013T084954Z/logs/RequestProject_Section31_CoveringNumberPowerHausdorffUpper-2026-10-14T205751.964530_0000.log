@@ -1,0 +1,6 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\CoveringNumberPowerHausdorffUpper.lean:17:5: warning: unused variable `constantPositive`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'IGS.Sec31.hausdorffMeasure_zero_of_coveringNumber_power_upper' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

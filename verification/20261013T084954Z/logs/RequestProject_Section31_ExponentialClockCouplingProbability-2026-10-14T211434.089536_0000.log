@@ -1,0 +1,4 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\ExponentialClockCouplingProbability.lean:73:38: warning: `MeasureTheory.measureReal_univ_eq_one` has been deprecated: Use `MeasureTheory.probReal_univ` instead
+'IGS.Sec31.PoissonClock.continuousClock_uniform_coupling_probability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,18 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\GammaExponentialConvolutionIntegral.lean:58:62: warning: This simp argument is unused:
+  Nat.cast_add
+
+Hint: Omit it from the simp argument list.
+  simp only [zero_pow (Nat.succ_ne_zero count), sub_zero, Nat.cast_a̵d̵d̵,̵ ̵N̵a̵t̵.̵c̵a̵s̵t̵_̵one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\GammaExponentialConvolutionIntegral.lean:58:76: warning: This simp argument is unused:
+  Nat.cast_one
+
+Hint: Omit it from the simp argument list.
+  simp only [zero_pow (Nat.succ_ne_zero count), sub_zero, Nat.cast_add,̵ ̵N̵a̵t̵.̵c̵a̵s̵t̵_̵o̵n̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'IGS.Sec31.gamma_exponential_product_zero_off_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.gamma_exponential_convolution_integral_nonnegative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,6 @@
+'IGS.Sec31.PoissonClock.holdingTimePath_finite_interior_jump_representation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.PoissonClock.holdingTimePath_finite_endpoint_jump_representation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

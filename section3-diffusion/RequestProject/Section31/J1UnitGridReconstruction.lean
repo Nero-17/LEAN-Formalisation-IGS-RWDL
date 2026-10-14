@@ -1,4 +1,4 @@
-import RequestProject.Section31.J1IntervalOneKnotAlignment
+import RequestProject.Section31.J1UnitTimeInstances
 import RequestProject.Section31.FiniteFloorPathCadlag
 import Mathlib.Topology.MetricSpace.Pseudo.Pi
 import Mathlib.MeasureTheory.Constructions.BorelSpace.Metric
@@ -27,7 +27,9 @@ theorem unitGridFloor_le (grid : ℕ) (time : UnitJ1Time) :
     ⌊(grid + 1 : ℝ) * time.val⌋₊ ≤ grid + 1 := by
   have bound := Nat.floor_mono
     (mul_le_mul_of_nonneg_left time.property.2 (by positivity : 0 ≤ (grid + 1 : ℝ)))
-  simpa only [mul_one, Nat.floor_natCast] using bound
+  have top : ⌊(grid + 1 : ℝ)⌋₊ = grid + 1 := by
+    rw [show (grid + 1 : ℝ) = ((grid + 1 : ℕ) : ℝ) by simp, Nat.floor_natCast]
+  simpa only [mul_one, top] using bound
 
 def unitGridIndex (grid : ℕ) (time : UnitJ1Time) : Fin (grid + 2) :=
   ⟨⌊(grid + 1 : ℝ) * time.val⌋₊, Nat.lt_succ_of_le (unitGridFloor_le grid time)⟩
@@ -37,6 +39,8 @@ def unitGridJ1Reconstruction {State : Type*} [MetricSpace State]
   refine ⟨⟨fun time => values (unitGridIndex grid time)⟩, ?_⟩
   let trajectory : ℕ → State := fun index => values ⟨min index (grid + 1), by omega⟩
   have regular := intervalFloorClockPath_isCadlag (1 : ℝ≥0) (grid + 1 : ℝ≥0) trajectory
+  change IsCadlagPath
+    (fun time : UnitJ1Time => trajectory ⌊time.val * ((grid + 1 : ℝ≥0) : ℝ)⌋₊) at regular
   have equality :
       (fun time : UnitJ1Time => trajectory ⌊time.val * ((grid + 1 : ℝ≥0) : ℝ)⌋₊) =
       (fun time : UnitJ1Time => values (unitGridIndex grid time)) := by

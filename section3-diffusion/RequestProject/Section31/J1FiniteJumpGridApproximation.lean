@@ -5,7 +5,7 @@ import RequestProject.Section31.J1UnitGridReconstruction
 the genuine time-change J1 distance. Endpoint jumps are retained exactly. -/
 
 namespace IGS.Sec31.DiscreteMarkov
-open Filter Set Topology
+open Filter Set Topology MeasureTheory
 open scoped NNReal
 noncomputable section
 set_option maxHeartbeats 5000000

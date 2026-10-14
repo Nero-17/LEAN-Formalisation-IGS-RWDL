@@ -8,7 +8,7 @@ retained verbatim. Candidate source; no compilation is claimed. -/
 
 namespace EIGS
 open IGS.Sec31 MeasureTheory Filter Topology
-open scoped BigOperators Classical BoundedContinuousFunction ENNReal
+open scoped BigOperators Classical BoundedContinuousFunction ENNReal NNReal
 noncomputable section
 set_option maxHeartbeats 5000000
 variable {K : ℕ}
