@@ -1,6 +1,6 @@
 # Current formalization audit
 
-Snapshot UTC: 2026-10-14T17:10:31.340767+00:00
+Snapshot UTC: 2026-10-14T17:45:14.976371+00:00
 
 Full-paper completion is **not** claimed. A clean printed axiom audit verifies the stated theorem; it does not remove mathematical assumptions from that statement. Actual-model consumers and generic conditional lemmas must be read separately.
 
@@ -8,7 +8,7 @@ Full-paper completion is **not** claimed. A clean printed axiom audit verifies t
 
 The latest completed common-dependency batch has 690 modules and unchanged checked sources. Report SHA256: `607fc8176247666e16f71894428d88124717974a7f34be9c1eb6954538e68064`.
 
-The independent manifest contains 449 accepted whole-file receipts and 1416 printed audits. These overlap the common batch and are not a completion percentage. Every published Lean source has an exact hash and explicit status; unverified and failed drafts remain visible.
+The independent manifest contains 459 accepted whole-file receipts and 1433 printed audits. These overlap the common batch and are not a completion percentage. Every published Lean source has an exact hash and explicit status; unverified and failed drafts remain visible.
 
 ## Accepted milestones
 
@@ -74,6 +74,13 @@ The independent manifest contains 449 accepted whole-file receipts and 1416 prin
 | [ContinuousPathUsualExtendedFutureLaw](section3-diffusion/RequestProject/Section31/ContinuousPathUsualExtendedFutureLaw.lean) | `a4a33edc301d3ea875fd719287fe78469121fda68b3395ad3c7789d60d498118` | `73fc4c217d0552e175337c74801630e5f6054f5d0aa9df31d416ee5c20023231` | 1 |
 | [EIGSExtendedFullFutureStoppingClosedIdentification](section3-diffusion/RequestProject/Section31/EIGSExtendedFullFutureStoppingClosedIdentification.lean) | `a407cf3689f429a12c837840dc7a6c294b00e3fa7fb18ea68b2b3f53968ffa56` | `1e800e0a9f5ba8895a144a604d5b33ba2c9606e8504a932f34aa55c48b16d20c` | 3 |
 | [ContinuousPathConservativeHuntCriteria](section3-diffusion/RequestProject/Section31/ContinuousPathConservativeHuntCriteria.lean) | `74b08d184d5bde2ec1e8a6e24e14390b8cac32850c16182cb973a53397ef2160` | `2353892180c40c72d41417bd40685a88cc000da217a02d7fb619a9d3f05a81d8` | 1 |
+| [EIGSContinuousKernelGeneralLowerOfRules](section3-diffusion/RequestProject/Section31/EIGSContinuousKernelGeneralLowerOfRules.lean) | `ba90d90af010db6bdb63cfd5818bbbe6d8e8b871c3815f848cfd4581ffc529ec` | `c41b3ee12236eef24a166245398820c7f2e38276dec1e2b1d1e00c257373a33f` | 2 |
+| [EIGSAllPointGeometricBallMassLower](section3-diffusion/RequestProject/Section31/EIGSAllPointGeometricBallMassLower.lean) | `5a29c20fb88e57b576bb056386ca5478284bd528a195a680a803b31d0f17c910` | `e46018971a668ecf5d4c949105472c4d79153bd89252e3371184b84f432fad7c` | 1 |
+| [GeometricBallMassLower](section3-diffusion/RequestProject/Section31/GeometricBallMassLower.lean) | `439d6c2eee3a391a93a50cbe5d5e3f0b5f08acafd3354b7b6958de5c868e52e1` | `60b8e5ba772245962ef71c8994c94eabafc67a75217fde53f5ccf9d641db1741` | 1 |
+| [EIGSAllPointBallMassLowerOfRules](section3-diffusion/RequestProject/Section31/EIGSAllPointBallMassLowerOfRules.lean) | `3dc5dd5dd69fbd7471f2cf43da2af523a82fd45aa162dbe1a17c8366841af628` | `36f46e2790c48426bf6edbb203a6d074c12f86980cc80e1e2dafd8d6873a8789` | 1 |
+| [MetricBallMassMeasurable](section3-diffusion/RequestProject/Section31/MetricBallMassMeasurable.lean) | `7c1d5966bea06c3d2a853ab345856e0104d78f69ec06a4ba3d1171e9dfd2ee84` | `1cf3ed3dd9849db29ccee05e27919a334af9b3bb3a3ec92ab1eb6a577d083099` | 2 |
+| [EIGSFiniteEnergyCompactExtension](section3-diffusion/RequestProject/Section31/EIGSFiniteEnergyCompactExtension.lean) | `d08e6061b5ea56c8b3141511886d08a4b7896c3c1ed9c89895a406c566f801f4` | `b760ddb4d503fc54b160b61e5b8ee32be5424b0e8661ba0370ffe1dd63ac17d5` | 3 |
+| [ContinuousPathBallExit](section3-diffusion/RequestProject/Section31/ContinuousPathBallExit.lean) | `ad9331e5b8f6678a6957d88323a9d2777713d164cab8b2dd4a0a19fc373bb9dd` | `572b0147a514294a229c668782916c776faae0061c03aa23e55fc5db26c8309f` | 4 |
 
 ## Proven scope and exact gaps
 
@@ -87,9 +94,9 @@ The precise typical-point logarithmic heat lower bound is now verified from actu
 
 Continuous-path laws also satisfy quasi-left continuity at all finite supremum times, pathwise. This supplies a regularity component and does not by itself assert a full Hunt process.
 
-Actual endpoint-collar mass bounds, summable logarithmic schedules and almost-everywhere avoidance are verified. Actual recent-vertex degree bounds and harmonic two-endpoint cutoffs, completion-ball incidence mass and logarithmic ball mass are verified. Actual native-floor displacement estimates pass to the same semigroup's cutoff expectation; compact half lifts and Riesz/Cauchy give the inverse-ball diagonal lower bound. The fixed geometric buffer and logarithmic time optimization prove the exact typical estimate. This alternate proof of the final heat theorem does not automatically discharge every separate manuscript lemma: all-radius physical ball-volume statements, continuous-path expected exit bounds, and true exit-survival events still require explicit actual consumers. The primitive standing assumption excludes nu=1; the manuscript's nu=1 extension requires separate scope verification. The flower example currently has scalar algebra but still needs the actual rule-graph spectral bridge.
+Actual endpoint-collar mass bounds, summable logarithmic schedules and almost-everywhere avoidance are verified. Actual recent-vertex degree bounds and harmonic two-endpoint cutoffs, completion-ball incidence mass and logarithmic ball mass are verified. Actual native-floor displacement estimates pass to the same semigroup's cutoff expectation; compact half lifts and Riesz/Cauchy give the inverse-ball diagonal lower bound. Its all-small-time open-ball form in the paper's diameter-normalized metric is now verified. The fixed geometric buffer and logarithmic time optimization prove the exact typical estimate. Actual every-center lower ball masses now hold at all small radii in the native metric, without address surjectivity; diameter scaling remains to be attached. Ball mass is Borel measurable in its center. The continuous-path ball exit definition and its prefix-survival characterization are verified as generic leaves. This alternate proof of the final heat theorem does not automatically discharge every separate manuscript lemma: finite-born two-sided and typical all-radius volume statements, actual continuous-path expected exit bounds, and actual exit-survival consumers still need verification. The primitive standing assumption excludes nu=1; the manuscript's nu=1 extension requires separate scope verification. The flower example currently has scalar algebra but still needs the actual rule-graph spectral bridge.
 
-The actual finite-trace energy domain on the vertex union has anchored Cauchy limits. Each point evaluation coefficient is obtained internally from a connected finite network containing the point and anchor. This is a verified completeness step, not a completed resistance-form/Brownian construction: the Hilbert instances, continuous extension of arbitrary finite-energy skeleton functions, resistance metric and final identification remain pending.
+The actual finite-trace energy domain has anchored Hilbert completeness. Each point evaluation coefficient is obtained internally from a connected finite network containing the point and anchor. Arbitrary finite-energy skeleton functions extend continuously, and the extension is a compact linear operator. The actual skeleton resistance satisfies the triangle inequality and equals normalized finite-network resistance. The completed resistance metric, complete resistance-form axioms, and identification with the same original closed form and Hunt process remain pending.
 
 Original measured GHP, uniform actual projection distortion convergence, and a single complete compact common ambient for the original graphs under their own diameter normalization are verified. Identity homeomorphisms explicitly preserve the topology under metric scaling. The final measured GHPS endpoint combines vertex/speed weak and Prokhorov convergence, Hausdorff convergence and actual finite-horizon cadlag J1 path convergence for moving starts, retaining the same common ambient and canonical global-law restriction. The native walk rate and every floor index equal the manuscript clock for the same normalization witness. This does not claim a separate complete Polish-space development for all cadlag paths.
 

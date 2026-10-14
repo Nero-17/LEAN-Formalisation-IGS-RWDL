@@ -50,6 +50,7 @@ def xiCompletedResistance (first second : XiMetricCompletion system rulesConnect
 variable (agreement : ∀ values vertex, extension values (xiCompletionUnionEmbedding system rulesConnected lengths lengthsPositive
   distanceRate (zero_lt_one.trans distanceRateGreaterThanOne) metricEigenpair vertex) = values.value.val vertex)
 
+include agreement in
 theorem xiCompletedResistanceRow_sub_on_skeleton (first second : XiVertexUnion system) :
     xiCompletedResistanceRow system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
       metricEigenpair resistanceRate ratePositive resistanceVector vectorPositive eigenpair anchor extension
@@ -61,13 +62,17 @@ theorem xiCompletedResistanceRow_sub_on_skeleton (first second : XiVertexUnion s
         (zero_lt_one.trans distanceRateGreaterThanOne) metricEigenpair second) =
     xiSkeletonResistanceRiesz system rulesConnected resistanceRate ratePositive resistanceVector vectorPositive
       eigenpair anchor first second := by
+  letI := xiCompletion_compactSpace system rulesConnected lengths lengthsPositive distanceRate
+    distanceRateGreaterThanOne metricEigenpair
   apply ext_inner_right ℝ
   intro values
   rw [inner_sub_left, xiSkeletonResistanceRiesz_represents]
+  unfold xiCompletedResistanceRow
   rw [← continuousOperatorKernelRow_represents, ← continuousOperatorKernelRow_represents]
   change extension values.val _ - extension values.val _ = _
   rw [agreement, agreement]
 
+include agreement in
 theorem xiCompletedResistance_on_skeleton (first second : XiVertexUnion system) :
     xiCompletedResistance system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
       metricEigenpair resistanceRate ratePositive resistanceVector vectorPositive eigenpair anchor extension
@@ -85,13 +90,17 @@ theorem xiCompletedResistance_on_skeleton (first second : XiVertexUnion system) 
 
 variable (extensionCompact : IsCompactOperator extension)
 
+include extensionCompact in
 theorem xiCompletedResistanceRow_continuous :
     Continuous (xiCompletedResistanceRow system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
-      metricEigenpair resistanceRate ratePositive resistanceVector vectorPositive eigenpair anchor extension) :=
-  continuousOperatorKernelRow_continuous _
+      metricEigenpair resistanceRate ratePositive resistanceVector vectorPositive eigenpair anchor extension) := by
+  letI := xiCompletion_compactSpace system rulesConnected lengths lengthsPositive distanceRate
+    distanceRateGreaterThanOne metricEigenpair
+  exact continuousOperatorKernelRow_continuous _
     (extensionCompact.comp_clm (xiZeroAnchoredEnergyDomain system rulesConnected resistanceRate ratePositive
       resistanceVector vectorPositive eigenpair anchor).subtypeL)
 
+include extensionCompact in
 theorem xiCompletedResistance_continuous :
     Continuous (fun points :
       XiMetricCompletion system rulesConnected lengths lengthsPositive distanceRate
@@ -105,6 +114,7 @@ theorem xiCompletedResistance_continuous :
     anchor extension extensionCompact
   exact ((rowContinuous.comp continuous_fst).sub (rowContinuous.comp continuous_snd)).norm.pow 2
 
+include agreement extensionCompact in
 theorem xiCompletedResistance_triangle
     (first middle last : XiMetricCompletion system rulesConnected lengths lengthsPositive distanceRate
       (zero_lt_one.trans distanceRateGreaterThanOne) metricEigenpair) :
@@ -125,16 +135,15 @@ theorem xiCompletedResistance_triangle
     fun _ => (continuous_const.sub rowContinuous).norm.pow 2
   have dense := xiCompletionUnionEmbedding_denseRange system rulesConnected lengths lengthsPositive distanceRate
     (zero_lt_one.trans distanceRateGreaterThanOne) metricEigenpair
-  apply dense.induction_on first
-    (isClosed_le (firstContinuous last) ((firstContinuous middle).add continuous_const))
+  refine dense.induction_on first
+    (isClosed_le (firstContinuous last) ((firstContinuous middle).add continuous_const)) ?_
   intro firstVertex
-  apply dense.induction_on middle
-    (isClosed_le continuous_const ((secondContinuous _).add (firstContinuous last)))
+  refine dense.induction_on middle
+    (isClosed_le continuous_const ((secondContinuous _).add (firstContinuous last))) ?_
   intro middleVertex
-  apply dense.induction_on last
-    (isClosed_le (secondContinuous _) (continuous_const.add (secondContinuous _)))
+  refine dense.induction_on last
+    (isClosed_le (secondContinuous _) (continuous_const.add (secondContinuous _))) ?_
   intro lastVertex
-  dsimp only [resistance]
   rw [xiCompletedResistance_on_skeleton system rulesConnected lengths lengthsPositive distanceRate
       distanceRateGreaterThanOne metricEigenpair resistanceRate ratePositive resistanceVector vectorPositive eigenpair
       anchor extension agreement,

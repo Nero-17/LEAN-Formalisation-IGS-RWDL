@@ -1,0 +1,7 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSContinuousKernelGeneralLowerOfRules.lean:254:29: warning: unused variable `normalizationPositive`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'EIGS.xiContinuousKernelGeneralLowerProperties_of_geometric_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_xiContinuousKernelGeneralLower_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

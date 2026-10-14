@@ -154,7 +154,10 @@ theorem xiAnchoredEnergy_continuous_extension_isCompact
       (tendsto_pow_atTop_nhds_zero_of_lt_one (Real.sqrt_nonneg _) factorStrict').const_mul tailConstant
   have normZero : Tendsto (fun level => ‖approximation level - extension‖) atTop (𝓝 0) :=
     squeeze_zero (fun level => (approximation level - extension).opNorm_nonneg) operatorBound boundZero
-  exact isCompactOperator_of_tendsto (tendsto_iff_norm_sub_tendsto_zero.2 normZero)
+  have operatorConvergence : Tendsto approximation atTop (𝓝 extension) := by
+    with_reducible_and_instances
+      exact (tendsto_iff_norm_sub_tendsto_zero (f := approximation) (b := extension)).2 normZero
+  exact isCompactOperator_of_tendsto operatorConvergence
     (Filter.Eventually.of_forall approximationCompact)
 
 theorem exists_xiAnchoredEnergy_compact_continuous_extension_of_rules

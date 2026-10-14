@@ -1,13 +1,13 @@
 {
-  "snapshot_utc": "2026-10-14T17:10:31.340767+00:00",
+  "snapshot_utc": "2026-10-14T17:45:14.976371+00:00",
   "round": "20261013T084954Z",
   "compiler": "Lean 4.28.0",
   "mathlib": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
   "shared_dependency_modules": 690,
   "shared_report": "integration-690.json",
   "shared_report_sha256": "607fc8176247666e16f71894428d88124717974a7f34be9c1eb6954538e68064",
-  "independent_whole_file_count": 449,
-  "independent_audit_count": 1416,
+  "independent_whole_file_count": 459,
+  "independent_audit_count": 1433,
   "records": [
     {
       "module": "RequestProject.Section31.EIGSL2EnergyConstants",
@@ -13806,6 +13806,242 @@
         },
         {
           "declaration": "EIGS.exists_xiSameNativeJointFullHeatEstimatesRecurrence_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSFiniteEnergyCompactExtension",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSFiniteEnergyCompactExtension.lean",
+      "source_sha256": "d08e6061b5ea56c8b3141511886d08a4b7896c3c1ed9c89895a406c566f801f4",
+      "log": "logs/RequestProject_Section31_EIGSFiniteEnergyCompactExtension-2026-10-14T173052.318619_0000.log",
+      "log_sha256": "b760ddb4d503fc54b160b61e5b8ee32be5424b0e8661ba0370ffe1dd63ac17d5",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiHarmonicAnchoredEnergyMap",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiAnchoredEnergy_continuous_extension_isCompact",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiAnchoredEnergy_compact_continuous_extension_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSAllPointGeometricBallMassLower",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSAllPointGeometricBallMassLower.lean",
+      "source_sha256": "5a29c20fb88e57b576bb056386ca5478284bd528a195a680a803b31d0f17c910",
+      "log": "logs/RequestProject_Section31_EIGSAllPointGeometricBallMassLower-2026-10-14T172446.706457_0000.log",
+      "log_sha256": "e46018971a668ecf5d4c949105472c4d79153bd89252e3371184b84f432fad7c",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiAllPointGeometricBallMassLower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.GeometricInverseBallLowerOptimization",
+      "source": "section3-diffusion/RequestProject/Section31/GeometricInverseBallLowerOptimization.lean",
+      "source_sha256": "b0fad27f2445452287e618d2ac41f7e4db9319674588be2e0741164262538ac4",
+      "log": "logs/RequestProject_Section31_GeometricInverseBallLowerOptimization-2026-10-14T172221.130712_0000.log",
+      "log_sha256": "05661e86bbc451b5bca9bfb522da8b224c222bb1260c7c7d123319e5298d2f38",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.inverse_open_ball_lower_of_geometric_closed_balls",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSContinuousKernelGeneralLowerOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSContinuousKernelGeneralLowerOfRules.lean",
+      "source_sha256": "ba90d90af010db6bdb63cfd5818bbbe6d8e8b871c3815f848cfd4581ffc529ec",
+      "log": "logs/RequestProject_Section31_EIGSContinuousKernelGeneralLowerOfRules-2026-10-14T172741.829374_0000.log",
+      "log_sha256": "c41b3ee12236eef24a166245398820c7f2e38276dec1e2b1d1e00c257373a33f",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiContinuousKernelGeneralLowerProperties_of_geometric_lower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiContinuousKernelGeneralLower_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.GeometricBallMassLower",
+      "source": "section3-diffusion/RequestProject/Section31/GeometricBallMassLower.lean",
+      "source_sha256": "439d6c2eee3a391a93a50cbe5d5e3f0b5f08acafd3354b7b6958de5c868e52e1",
+      "log": "logs/RequestProject_Section31_GeometricBallMassLower-2026-10-14T172537.545683_0000.log",
+      "log_sha256": "60b8e5ba772245962ef71c8994c94eabafc67a75217fde53f5ccf9d641db1741",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.geometric_ball_mass_lower_all_radii",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSAllPointBallMassLowerOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSAllPointBallMassLowerOfRules.lean",
+      "source_sha256": "3dc5dd5dd69fbd7471f2cf43da2af523a82fd45aa162dbe1a17c8366841af628",
+      "log": "logs/RequestProject_Section31_EIGSAllPointBallMassLowerOfRules-2026-10-14T173902.917532_0000.log",
+      "log_sha256": "36f46e2790c48426bf6edbb203a6d074c12f86980cc80e1e2dafd8d6873a8789",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiAllPointBallMassLower_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ContinuousPathBallExit",
+      "source": "section3-diffusion/RequestProject/Section31/ContinuousPathBallExit.lean",
+      "source_sha256": "ad9331e5b8f6678a6957d88323a9d2777713d164cab8b2dd4a0a19fc373bb9dd",
+      "log": "logs/RequestProject_Section31_ContinuousPathBallExit-2026-10-14T173946.773416_0000.log",
+      "log_sha256": "572b0147a514294a229c668782916c776faae0061c03aa23e55fc5db26c8309f",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.time_lt_continuousPathBallExit_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.time_lt_continuousPathBallExit_iff_prefixMaxDistance",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.continuousPathBallExit_survival_isOpen",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.continuousPathBallExit_measurable",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.MetricBallMassMeasurable",
+      "source": "section3-diffusion/RequestProject/Section31/MetricBallMassMeasurable.lean",
+      "source_sha256": "7c1d5966bea06c3d2a853ab345856e0104d78f69ec06a4ba3d1171e9dfd2ee84",
+      "log": "logs/RequestProject_Section31_MetricBallMassMeasurable-2026-10-14T174102.899527_0000.log",
+      "log_sha256": "1cf3ed3dd9849db29ccee05e27919a334af9b3bb3a3ec92ab1eb6a577d083099",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.measurable_real_ball_mass",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.measurableSet_eventual_geometric_ball_mass_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.GeometricLogarithmicBallMassUpper",
+      "source": "section3-diffusion/RequestProject/Section31/GeometricLogarithmicBallMassUpper.lean",
+      "source_sha256": "3cab2f225f190dcf09dbd17fc901645f941a5c47aa61ea8052715259545c6a39",
+      "log": "logs/RequestProject_Section31_GeometricLogarithmicBallMassUpper-2026-10-14T174324.056615_0000.log",
+      "log_sha256": "21ea71b0905ffd8ecdde9ad25b996013fa091015f49e318fa94fed9c308e5ee4",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.geometric_logarithmic_ball_mass_upper_all_radii",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSTypicalBallMassUpperAllRadiiOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSTypicalBallMassUpperAllRadiiOfRules.lean",
+      "source_sha256": "e360a7fd7666dbd8aeb20f19a923f999ae743d756b1df734432de148a943a4ac",
+      "log": "logs/RequestProject_Section31_EIGSTypicalBallMassUpperAllRadiiOfRules-2026-10-14T174350.080604_0000.log",
+      "log_sha256": "8d4ef775fbccf56e4dc1c9c21503641fcb329579e66d3fe293ba7fdb928885a1",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiTypicalBallMassUpperAllRadii_of_rules",
           "axioms": [
             "propext",
             "Classical.choice",
