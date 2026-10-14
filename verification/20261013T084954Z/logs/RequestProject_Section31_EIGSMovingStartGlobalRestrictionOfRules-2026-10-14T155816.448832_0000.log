@@ -1,0 +1,19 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSMovingStartGlobalRestrictionOfRules.lean:67:42: warning: This simp argument is unused:
+  Nat.mul_mod
+
+Hint: Omit it from the simp argument list.
+  simp [mixedStarts, Nat.add_mod,̵ ̵N̵a̵t̵.̵m̵u̵l̵_̵m̵o̵d̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'IGS.Sec31.DiscreteMarkov.movingStart_limit_eq_of_all_sequences' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.compatibleFiniteHorizonLaw_eq_globalRestriction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiIdentifiedAllMovingStartGlobalRestrictionProperties_of_discrete' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_xiIdentifiedAllMovingStartGlobalRestriction_of_rules' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -67,7 +67,9 @@ theorem xiNativeFloorStayLimit_of_uniform_convergence (system : EIGSData K)
     have distanceConverges : Tendsto
         (fun steps : ℕ => dist (parameters.vertexEmbedding (coarse + steps)
           (starts (coarse + steps))) center) atTop (𝓝 (0 : ℝ)) := by
-      simpa only [dist_self] using (startsConverge.comp shifted).dist tendsto_const_nhds
+      simpa only [Function.comp_apply, dist_self] using
+        (startsConverge.comp shifted).dist
+          (tendsto_const_nhds : Tendsto (fun _ : ℕ => center) atTop (𝓝 center))
     exact (distanceConverges.eventually (gt_mem_nhds radiusPositive)).mono (fun _ near => near.le)
   have limit := (BanachBackwardObservations.moving_start_evaluation_limit parameters.vertexEmbedding
     (fun level => (xiNativeSupTransition system rulesConnected level ^
@@ -77,7 +79,7 @@ theorem xiNativeFloorStayLimit_of_uniform_convergence (system : EIGSData K)
     (semigroup time (continuousMetricBallCutoff center (2 * radius)))
     (floorLimit time (continuousMetricBallCutoff center (2 * radius)))
     starts center startsConverge).comp shifted
-  apply le_of_tendsto limit
+  apply ge_of_tendsto limit
   filter_upwards [sourceNear] with steps near
   exact finiteExpectation coarse steps (time : ℝ) time.coe_nonneg timeBound
     center (starts (coarse + steps)) near

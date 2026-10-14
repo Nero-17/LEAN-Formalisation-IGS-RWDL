@@ -34,7 +34,9 @@ theorem exists_xiStep_zero_boundary_sup_energy_bound
       ∑ other : XiEdge system.toRuleData (level + 1),
         ((values (XiTail system (level + 1) other)) ^ 2 +
           (values (XiHead system (level + 1) other)) ^ 2) :=
-    Finset.single_le_sum (fun other _ => add_nonneg (sq_nonneg _) (sq_nonneg _))
+    Finset.single_le_sum (fun other _ => add_nonneg
+      (sq_nonneg (values (XiTail system (level + 1) other)))
+      (sq_nonneg (values (XiHead system (level + 1) other))))
       (Finset.mem_univ edge)
   have pointBound : (values vertex) ^ 2 ≤
       (values (XiTail system (level + 1) edge)) ^ 2 +

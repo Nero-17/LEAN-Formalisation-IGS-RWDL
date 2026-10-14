@@ -152,7 +152,7 @@ theorem compatibleFiniteHorizonLaw_eq_globalRestriction
     rw [Measure.map_map restrictionMeasurable globalEvaluationMeasurable,
       Measure.map_map restrictionMeasurable localEvaluationMeasurable, ← compatibleMeasures,
       Measure.map_map
-        (measurable_pi_lambda _ fun index => (finiteSupportPathSpace_continuous_eval _ index.val).measurable)
+        (restrictionMeasurable.comp localEvaluationMeasurable)
         (finiteHorizonPathRestriction_continuous horizon (integerHorizonAbove horizon : ℝ≥0)
           horizonOrdered rates embedding).measurable]
     convert projected using 1 <;> congr 1 <;> funext path index <;>

@@ -1,0 +1,5 @@
+'IGS.Sec31.DiscreteMarkov.intervalTimeChange_fixes_terminal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.skorokhodJ1Distance_eq_zero_of_rightContinuous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.cadlagIntervalJ1MetricSpace' depends on axioms: [propext, Classical.choice, Quot.sound]

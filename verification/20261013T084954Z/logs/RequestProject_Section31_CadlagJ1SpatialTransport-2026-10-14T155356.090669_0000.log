@@ -1,0 +1,12 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\CadlagJ1SpatialTransport.lean:27:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DiscreteMarkov.IsCadlagPath.map_continuous`:
+  [BoundedSpace Time]
+  [CompactSpace State]
+  [CompactSpace OtherState]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [BoundedSpace Time] [CompactSpace State] [CompactSpace OtherState] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'IGS.Sec31.DiscreteMarkov.j1FunctionSpatialMap_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.cadlagJ1SpatialLaw_weak_convergence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

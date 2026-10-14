@@ -1,6 +1,6 @@
 # Current formalization audit
 
-Snapshot UTC: 2026-10-14T15:14:46.526249+00:00
+Snapshot UTC: 2026-10-14T16:10:45.119287+00:00
 
 Full-paper completion is **not** claimed. A clean printed axiom audit verifies the stated theorem; it does not remove mathematical assumptions from that statement. Actual-model consumers and generic conditional lemmas must be read separately.
 
@@ -8,7 +8,7 @@ Full-paper completion is **not** claimed. A clean printed axiom audit verifies t
 
 The latest completed common-dependency batch has 690 modules and unchanged checked sources. Report SHA256: `607fc8176247666e16f71894428d88124717974a7f34be9c1eb6954538e68064`.
 
-The independent manifest contains 384 accepted whole-file receipts and 1268 printed audits. These overlap the common batch and are not a completion percentage. Every published Lean source has an exact hash and explicit status; unverified and failed drafts remain visible.
+The independent manifest contains 396 accepted whole-file receipts and 1303 printed audits. These overlap the common batch and are not a completion percentage. Every published Lean source has an exact hash and explicit status; unverified and failed drafts remain visible.
 
 ## Accepted milestones
 
@@ -77,7 +77,7 @@ The independent manifest contains 384 accepted whole-file receipts and 1268 prin
 
 ## Proven scope and exact gaps
 
-The same actual closed L² semigroup is identified with the global continuous-path family and the original discrete semigroup limit. Actual usual completed-filtration full future-path stopping identities and bounded Borel future conditional expectations are now supplied internally, including potentially infinite stopping times on their finite event. Actual finite and extended consumers retain the original closed-semigroup and global-family fields. The final conservative Hunt packaging is being verified separately; single-time tests are not substituted for full future-path identities.
+The same actual closed L² semigroup is identified with the global continuous-path family and the original discrete semigroup limit. Actual usual completed-filtration full future-path stopping identities and bounded Borel future conditional expectations are supplied internally, including potentially infinite stopping times on their finite event. Actual conservative Hunt consumers retain the prior closed-semigroup and global-family fields. The joint final GHPS/heat/Hunt witness remains a candidate; full future-path identities are included in the verified Hunt result.
 
 For all positive times and spatial points, the same actual five-rule closed semigroup has a symmetric strictly positive probability density jointly continuous in time and both spatial variables, with the global small-time heat upper bound. The strict-positivity consumer supplies all analytic inputs internally. No resistance-growth-greater-than-one restriction is added. All-time bounds use a truncated time scale, not an incorrect all-time power decay on a compact conservative space.
 

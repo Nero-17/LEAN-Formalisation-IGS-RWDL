@@ -21,8 +21,11 @@ theorem realFloorClockPath_isCadlag (rate : ℝ≥0) (trajectory : ℕ → State
     IsCadlagPath (realFloorClockPath rate trajectory) := by
   by_cases rateZero : rate = 0
   · have constantContinuous : Continuous (fun _ : ℝ => trajectory 0) := continuous_const
-    simpa only [realFloorClockPath, rateZero, NNReal.coe_zero, mul_zero, Nat.floor_zero] using
-      constantContinuous.isCadlagPath
+    have pathEquality : realFloorClockPath rate trajectory = fun _ : ℝ => trajectory 0 := by
+      funext time
+      simp only [realFloorClockPath, rateZero, NNReal.coe_zero, mul_zero, Nat.floor_zero]
+    rw [pathEquality]
+    exact IGS.Sec31.DiscreteMarkov.Continuous.isCadlagPath constantContinuous
   · have ratePositive : (0 : ℝ) < rate := by exact_mod_cast (pos_iff_ne_zero.mpr rateZero)
     have clockContinuous : Continuous (fun time : ℝ => time * (rate : ℝ)) :=
       continuous_id.mul continuous_const
@@ -33,7 +36,7 @@ theorem realFloorClockPath_isCadlag (rate : ℝ≥0) (trajectory : ℕ → State
         clockContinuous.continuousWithinAt.tendsto_nhdsWithin
           (fun _ membership => mul_le_mul_of_nonneg_right membership rate.property)
       have floorApproach :=
-        (Int.tendsto_floor_right_pure_floor (time * (rate : ℝ))).comp clockApproach
+        (_root_.tendsto_floor_right_pure_floor (time * (rate : ℝ))).comp clockApproach
       have trajectoryApproach :=
         (tendsto_pure_pure (fun index : ℤ => trajectory index.toNat)
           ⌊time * (rate : ℝ)⌋).comp floorApproach
@@ -45,7 +48,7 @@ theorem realFloorClockPath_isCadlag (rate : ℝ≥0) (trajectory : ℕ → State
         clockContinuous.continuousWithinAt.tendsto_nhdsWithin
           (fun _ membership => mul_lt_mul_of_pos_right membership ratePositive)
       have floorApproach :=
-        (Int.tendsto_floor_left_pure_ceil_sub_one (time * (rate : ℝ))).comp clockApproach
+        (_root_.tendsto_floor_left_pure_ceil_sub_one (time * (rate : ℝ))).comp clockApproach
       refine ⟨trajectory (⌈time * (rate : ℝ)⌉ - 1).toNat, ?_⟩
       have trajectoryApproach :=
         (tendsto_pure_pure (fun index : ℤ => trajectory index.toNat)

@@ -120,11 +120,11 @@ def XiOriginalCommonPathTransportSemigroupProperties (system : EIGSData K)
                 Tendsto (fun level => sources level (starts level)) atTop (𝓝 (target start)) →
                 ∀ horizon : ℝ≥0,
                   Tendsto (fun level =>
-                    (⟨finiteHorizonPrefixLaw horizon rates
+                    ProbabilityMeasure.map (⟨finiteHorizonPrefixLaw horizon rates
                       (fun level => xiNativeDiscreteKernel system rulesConnected rulesLoopless rulesUnique plantingNonadjacent level)
                       (fun level => (⟨Measure.dirac (starts level), inferInstance⟩ : ProbabilityMeasure (XiVtx system level))) level,
                       inferInstance⟩ : ProbabilityMeasure
-                        (Finset.Iic ⌊(horizon : ℝ) * (rates level : ℝ)⌋₊ → XiVtx system level)).map
+                        (Finset.Iic ⌊(horizon : ℝ) * (rates level : ℝ)⌋₊ → XiVtx system level))
                           (finiteHorizonHistoryCadlagJ1Map_measurable horizon rates sources level).aemeasurable)
                     atTop (𝓝 (cadlagJ1SpatialLaw target targetContinuous ((laws horizon).map
                       (finiteHorizonPathToCadlagJ1_continuous horizon rates parameters.vertexEmbedding).measurable.aemeasurable)))) ∧

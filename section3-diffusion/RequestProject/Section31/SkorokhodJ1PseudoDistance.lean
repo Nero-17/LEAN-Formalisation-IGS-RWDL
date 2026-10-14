@@ -117,7 +117,10 @@ theorem skorokhodJ1Distance_le_uniform (first second : Time → State) :
     skorokhodJ1Distance first second ≤
       dist (UniformFun.ofFun first) (UniformFun.ofFun second) := by
   have identityBound := skorokhodJ1Distance_le_cost first second (OrderIso.refl Time)
-  simpa [skorokhodJ1Cost, max_eq_right (dist_nonneg :
+  change skorokhodJ1Distance first second ≤
+    max (dist (UniformFun.ofFun (id : Time → Time)) (UniformFun.ofFun id))
+      (dist (UniformFun.ofFun first) (UniformFun.ofFun second)) at identityBound
+  simpa only [dist_self, max_eq_right (dist_nonneg :
     0 ≤ dist (UniformFun.ofFun first) (UniformFun.ofFun second))] using identityBound
 
 theorem skorokhodJ1Distance_self (path : Time → State) : skorokhodJ1Distance path path = 0 :=

@@ -49,8 +49,8 @@ theorem finiteHorizonStepLaw_cadlag_eq_prefix_map (horizon : ℝ≥0) (rates : �
     (initial : ∀ n, ProbabilityMeasure (Vertex n)) (n : ℕ) :
     (finiteHorizonStepLaw horizon rates embedding kernels initial n).map
         (finiteHorizonPathToCadlagJ1_continuous horizon rates embedding).measurable.aemeasurable =
-      (⟨finiteHorizonPrefixLaw horizon rates kernels initial n, inferInstance⟩ :
-        ProbabilityMeasure (Finset.Iic ⌊(horizon : ℝ) * (rates n : ℝ)⌋₊ → Vertex n)).map
+      ProbabilityMeasure.map (⟨finiteHorizonPrefixLaw horizon rates kernels initial n, inferInstance⟩ :
+        ProbabilityMeasure (Finset.Iic ⌊(horizon : ℝ) * (rates n : ℝ)⌋₊ → Vertex n))
           (finiteHorizonHistoryCadlagJ1Map_measurable horizon rates embedding n).aemeasurable := by
   apply ProbabilityMeasure.toMeasure_injective
   simp only [ProbabilityMeasure.toMeasure_map]
@@ -72,8 +72,8 @@ theorem finiteHorizon_common_ambient_weak_convergence
     (limit : ProbabilityMeasure (FiniteSupportPathSpace (finiteHorizonStepPaths horizon rates projection)))
     (nativeConvergence : Tendsto (finiteHorizonStepLaw horizon rates projection kernels initial) atTop (𝓝 limit)) :
     Tendsto (fun n =>
-      (⟨finiteHorizonPrefixLaw horizon rates kernels initial n, inferInstance⟩ :
-        ProbabilityMeasure (Finset.Iic ⌊(horizon : ℝ) * (rates n : ℝ)⌋₊ → Vertex n)).map
+      ProbabilityMeasure.map (⟨finiteHorizonPrefixLaw horizon rates kernels initial n, inferInstance⟩ :
+        ProbabilityMeasure (Finset.Iic ⌊(horizon : ℝ) * (rates n : ℝ)⌋₊ → Vertex n))
           (finiteHorizonHistoryCadlagJ1Map_measurable horizon rates sources n).aemeasurable) atTop
       (𝓝 (cadlagJ1SpatialLaw target targetContinuous (limit.map
         (finiteHorizonPathToCadlagJ1_continuous horizon rates projection).measurable.aemeasurable))) := by

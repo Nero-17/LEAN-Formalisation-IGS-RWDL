@@ -62,6 +62,8 @@ theorem exists_limit_of_uniform_limit_approximations [CompleteSpace State]
   · change path ⁻¹' (path '' {time | dist (approximation time) value < tolerance / 4}) ∈ approach
     exact Filter.mem_of_superset nearValue (fun time bound => ⟨time, bound, rfl⟩)
   · rintro _ ⟨first, firstNear, rfl⟩ _ ⟨second, secondNear, rfl⟩
+    change dist (approximation first) value < tolerance / 4 at firstNear
+    change dist (approximation second) value < tolerance / 4 at secondNear
     have firstApproximation := uniformBound first
     have secondApproximation := uniformBound second
     have triangle := dist_triangle (path first) (approximation first) (path second)

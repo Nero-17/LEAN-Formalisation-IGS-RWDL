@@ -34,6 +34,8 @@ theorem xiWeightedDistance_cell_to_outside_two_stars (system : EIGSData K)
   have baseLipschitz : (XiNetwork system coarse).EdgeLipschitz
       ((system.ruleFamily rulesConnected).metricLengths^[steps] lengths) potential := by
     intro edge
+    change |potential (XiTail system coarse edge) - potential (XiHead system coarse edge)| ≤
+      ((system.ruleFamily rulesConnected).metricLengths^[steps] lengths) (XiCol system.toRuleData coarse edge)
     apply abs_le.mpr
     have tailBounds := potentialBounds (XiTail system coarse edge)
     have headBounds := potentialBounds (XiHead system coarse edge)

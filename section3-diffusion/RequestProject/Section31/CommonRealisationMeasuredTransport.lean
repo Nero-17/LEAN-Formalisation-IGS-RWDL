@@ -53,7 +53,7 @@ open MeasureTheory Filter Topology Metric Set
  theorem commonRealisation_levyProkhorov_images_tendsto_zero
     {State Ambient : Type*}
     [MetricSpace State] [MeasurableSpace State] [BorelSpace State]
-    [MetricSpace Ambient] [SeparableSpace Ambient]
+    [MetricSpace Ambient] [TopologicalSpace.SeparableSpace Ambient]
     [MeasurableSpace Ambient] [BorelSpace Ambient]
     {Vertex : ℕ → Type*} [∀ level, MeasurableSpace (Vertex level)]
     (laws : ∀ level, ProbabilityMeasure (Vertex level))
