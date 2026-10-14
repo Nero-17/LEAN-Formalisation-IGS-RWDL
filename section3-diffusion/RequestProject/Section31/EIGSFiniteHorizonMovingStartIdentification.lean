@@ -48,13 +48,14 @@ theorem xiFiniteHorizonMovingStartLimit_ordered_product_integrals (system : EIGS
     (times : ℕ → ℝ≥0) (timesMonotone : Monotone times) (startsAtZero : times 0 = 0)
     (tests : ℕ → C(parameters.LimitSpace, ℝ)) (count : ℕ)
     (terminal : C(parameters.LimitSpace, ℝ)) (timesInHorizon : times count ≤ horizon) :
-    (∫ path,
+    (∫ path : FiniteSupportPathSpace (finiteHorizonStepPaths horizon rates parameters.vertexEmbedding),
       (∏ index : Fin count, tests index.val (UniformFun.toFun path.val
         ⟨(times index.val : ℝ), (times index.val).property,
           by exact_mod_cast (timesMonotone (Nat.le_of_lt index.isLt)).trans timesInHorizon⟩)) *
       terminal (UniformFun.toFun path.val
         ⟨(times count : ℝ), (times count).property, by exact_mod_cast timesInHorizon⟩)
-        ∂(limit : Measure _)) =
+        ∂(limit : Measure (FiniteSupportPathSpace
+          (finiteHorizonStepPaths horizon rates parameters.vertexEmbedding)))) =
       BanachBackwardObservations.backwardProduct
         (fun index : ℕ => semigroup (times (index + 1) - times index))
         (fun index : ℕ => ContinuousLinearMap.mul ℝ C(parameters.LimitSpace, ℝ) (tests index))
@@ -82,6 +83,7 @@ theorem xiFiniteHorizonMovingStartLimit_ordered_product_integrals (system : EIGS
     simp only [productFunction, BoundedContinuousFunction.mul_apply, BoundedContinuousFunction.prod_apply,
       observedTests, terminalTest, BoundedContinuousFunction.compContinuous_apply,
       BoundedContinuousFunction.mkOfCompact_apply]
+    rfl
   have weakProducts := ProbabilityMeasure.tendsto_iff_forall_integral_tendsto.mp weakConvergence productFunction
   have nativeProducts := xiNativeSup_moving_start_product_limit system rulesConnected rulesLoopless
     rulesUnique plantingNonadjacent parameters resistanceRate normalization rateNonnegative normalizationNonnegative
@@ -103,8 +105,15 @@ theorem xiFiniteHorizonMovingStartLimit_ordered_product_integrals (system : EIGS
       productFunction.continuous.measurable.aestronglyMeasurable]
     apply integral_congr_ae
     refine Eventually.of_forall fun path => ?_
+    dsimp only
     rw [productValue]
     simp only [finiteHorizonStepMap_apply, observedTimes, terminalTime, rateIdentity]
+  change Tendsto (fun level => ∫ path, productFunction path
+    ∂(finiteHorizonStepLaw horizon rates parameters.vertexEmbedding
+      (fun level => xiNativeDiscreteKernel system rulesConnected rulesLoopless rulesUnique plantingNonadjacent level)
+      (fun level => (⟨Measure.dirac (starts level), inferInstance⟩ : ProbabilityMeasure (XiVtx system level))) level :
+        Measure (FiniteSupportPathSpace paths))) atTop
+      (𝓝 (∫ path, productFunction path ∂(limit : Measure (FiniteSupportPathSpace paths)))) at weakProducts
   simp_rw [integralIdentity] at weakProducts
   have identification := tendsto_nhds_unique weakProducts nativeProducts
   simpa only [productValue, observedTimes, terminalTime] using identification

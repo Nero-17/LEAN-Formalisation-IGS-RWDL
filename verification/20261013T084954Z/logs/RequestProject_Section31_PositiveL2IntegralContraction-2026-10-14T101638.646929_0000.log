@@ -1,0 +1,6 @@
+'IGS.Sec31.positive_integral_preserving_L2_abs_integral_contraction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroup_abs_integral_contraction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

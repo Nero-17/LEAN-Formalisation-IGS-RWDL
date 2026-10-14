@@ -116,7 +116,10 @@ theorem xiClosedSemigroupNashHalfTimeProperties_of_dense_core (system : EIGSData
     originalDomain originalForm nonnegative closable originalDense energyConstant
     (fun tolerance => l1Constant * ((mass.rate * resistanceRate) * energyConstant / tolerance) ^
       (Real.log mass.rate / Real.log (mass.rate * resistanceRate)))
-    (fun tolerance tolerancePositive => by positivity)
+    (fun tolerance tolerancePositive => mul_nonneg l1Positive.le
+      (Real.rpow_nonneg (div_nonneg
+        (mul_nonneg (mul_nonneg mass.rate_positive.le ratePositive.le) energyPositive.le)
+        tolerancePositive.le) _))
     epsilonNash l1Contraction time timePositive theta thetaPositive toleranceAtMost forcing
 
 

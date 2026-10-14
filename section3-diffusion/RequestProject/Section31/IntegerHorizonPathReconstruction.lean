@@ -18,7 +18,7 @@ variable [MeasurableSpace State] [BorelSpace State]
 variable {Vertex : ℕ → Type*} [∀ level, Fintype (Vertex level)]
 variable (rates : ℕ → ℝ≥0) (embedding : (level : ℕ) → Vertex level → State)
 
-def IntegerHorizonPathFamily :=
+abbrev IntegerHorizonPathFamily :=
   (horizon : ℕ) → FiniteSupportPathSpace (finiteHorizonStepPaths (horizon : ℝ≥0) rates embedding)
 
 def IntegerHorizonPathFamily.Good (family : IntegerHorizonPathFamily rates embedding) : Prop :=
@@ -29,6 +29,7 @@ def IntegerHorizonPathFamily.Good (family : IntegerHorizonPathFamily rates embed
 
 theorem integerHorizonPathFamily_good_isClosed :
     IsClosed {family : IntegerHorizonPathFamily rates embedding | IntegerHorizonPathFamily.Good rates embedding family} := by
+  letI : ∀ level, MeasurableSpace (Vertex level) := fun _ => ⊤
   have continuousClosed (horizon : ℕ) :
       IsClosed {family : IntegerHorizonPathFamily rates embedding |
         Continuous (UniformFun.toFun (family horizon).val)} :=
@@ -100,7 +101,7 @@ theorem integerHorizonGlobalPath_measurable :
       (measurable_pi_apply (integerHorizonAbove time))
 
 /-- Continuous paths with the sigma algebra induced by coordinate evaluation. -/
-def ContinuousTimePath (State : Type*) [TopologicalSpace State] :=
+abbrev ContinuousTimePath (State : Type*) [TopologicalSpace State] :=
   {path : ℝ≥0 → State // Continuous path}
 
 variable [Nonempty State]

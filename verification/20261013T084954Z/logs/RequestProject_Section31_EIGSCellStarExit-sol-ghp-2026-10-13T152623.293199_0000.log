@@ -1,0 +1,24 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSCellStarExit.lean:81:37: warning: This simp argument is unused:
+  equal
+
+Hint: Omit it from the simp argument list.
+  simp [e̵q̵u̵a̵l̵,̵ ̵origin]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'IGS.Sec31.distinctJumpChain_eq_first_hitting' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.cost_le_of_supersolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.costLim_first_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.costLim_until_distinct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.distinctJumpChain_supersolution_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.costLim_distinctJumpChain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.twoEdgePath_return_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.graphWalkChain_notHit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.graphWalkChain_hitTime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.graphWalkChain_first_hitting_harmonic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.graphWalkChain_first_hitting_eq_profile' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.unit_energyInner_laplacian' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.unit_minimum_harmonic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiGraphWalkChain_first_hitting_eq_trace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.expExit_le_inner_add_boundary_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.expExit_le_erased_center_add_center' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiIncidentStarDomain_expExit_le_erased_add_center' depends on axioms: [propext, Classical.choice, Quot.sound]

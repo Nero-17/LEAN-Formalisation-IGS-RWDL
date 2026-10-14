@@ -63,6 +63,7 @@ theorem closedSemigroup_nash_half_time_bound
   have integralSquared := mul_self_le_mul_self integralNonnegative (l1Contraction time values)
   have massBound := mul_le_mul_of_nonneg_left integralSquared
     (coefficientNonnegative (theta * (time : ℝ)) tolerancePositive)
+  simp only [← pow_two] at massBound
   simpa only [← pow_two] using bound.trans (add_le_add normEnergy massBound)
 
 end

@@ -1,0 +1,24 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSOriginalMeasuredGHP.lean:105:26: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSOriginalMeasuredGHP.lean:420:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'EIGS.MeasuredGHP.normalizedMetric_scale_invariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.MeasuredGHP.diameterMeasuredGHPDist_le_matching' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.MeasuredGHP.xiNormalizedUnitMetric_eq_original' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.MeasuredGHP.xiDiameterTargetLP_tendsto_zero_of_actual_weak' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.MeasuredGHP.xiOriginalDiameterGHP_tendsto_zero_of_actual_weak' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.MeasuredGHP.xiOriginalDiameterVertex_GHP_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.MeasuredGHP.xiOriginalDiameterSpeed_GHP_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.MeasuredGHP.xiOriginalDiameter_dist_eq_graph' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.MeasuredGHP.xiCanonicalOriginalVertex_GHP_tendsto_zero_of_rules' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.MeasuredGHP.xiCanonicalOriginalSpeed_GHP_tendsto_zero_of_rules' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

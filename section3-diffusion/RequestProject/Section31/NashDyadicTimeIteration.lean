@@ -34,7 +34,7 @@ theorem dyadic_half_time_nash_bound
     have scaledTimeAtMost : theta * ((time / 2 ^ index : ℝ≥0) : ℝ) ≤ energyConstant := by
       apply le_trans (mul_le_mul_of_nonneg_left ?_ thetaPositive.le) toleranceAtMost
       simp only [NNReal.coe_div, NNReal.coe_pow, NNReal.coe_ofNat]
-      exact div_le_self time.coe_nonneg (one_le_pow₀ (by norm_num : (1 : ℝ) ≤ 2) index)
+      exact div_le_self time.coe_nonneg (one_le_pow₀ (by norm_num : (1 : ℝ) ≤ 2))
     have estimate := recurrence (time / 2 ^ index) scaledTimePositive scaledTimeAtMost
     have halfIdentity : (time / 2 ^ index) / 2 = time / 2 ^ (index + 1) := by
       rw [div_div, pow_succ]

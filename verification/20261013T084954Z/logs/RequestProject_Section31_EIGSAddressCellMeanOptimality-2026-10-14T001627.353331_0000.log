@@ -1,0 +1,7 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSAddressCellMeanOptimality.lean:49:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'IGS.Sec31.integral_square_sub_mean_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.integral_eq_sum_coordinate_fibres' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.integrable_square_sub_finite_coordinate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiAddressCellAverage_minimizes_square_error' depends on axioms: [propext, Classical.choice, Quot.sound]

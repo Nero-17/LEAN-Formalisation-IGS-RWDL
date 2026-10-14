@@ -1,0 +1,9 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSNativeSupDiscreteConvergence.lean:21:25: warning: unused variable `index`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'IGS.Sec31.restriction_limit_of_resolvent_smoothing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeSupTransition_absolute_floor_uniform_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeSupDiscreteConvergenceProperties_of_supSemigroup' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_xiNativeSupDiscreteConvergence_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

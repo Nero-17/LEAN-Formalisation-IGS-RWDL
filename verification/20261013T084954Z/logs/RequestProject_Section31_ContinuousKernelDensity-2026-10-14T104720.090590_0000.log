@@ -1,0 +1,28 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\ContinuousKernelDensity.lean:19:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.continuous_nonnegative_of_ae_nonnegative`:
+  [CompactSpace Space]
+  [BorelSpace Space]
+  [IsFiniteMeasure law]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CompactSpace Space] [BorelSpace Space] [IsFiniteMeasure law] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\ContinuousKernelDensity.lean:69:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.continuousOperatorKernelRow_norm_le`:
+  [MeasurableSpace Space]
+  [BorelSpace Space]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace Space] [BorelSpace Space] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\ContinuousKernelDensity.lean:87:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.continuousOperatorComposedKernel_abs_le`:
+  [IsFiniteMeasure law]
+  [law.IsOpenPosMeasure]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsFiniteMeasure law] [law.IsOpenPosMeasure] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'IGS.Sec31.continuous_nonnegative_of_ae_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.continuousKernel_nonnegative_of_positive_L2_representation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.continuousOperatorKernelRow_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.continuousOperatorComposedKernel_abs_le' depends on axioms: [propext, Classical.choice, Quot.sound]

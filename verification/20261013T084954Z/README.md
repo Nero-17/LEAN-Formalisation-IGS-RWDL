@@ -1,7 +1,5 @@
-# Evidence for this snapshot
+# Portable evidence
 
-`integration-545.json` is the last completed common-dependency batch. Only its `verified_source_files` are asserted to match its snapshot; other historical snapshot entries need not be current.
+`integration-545.json` is the latest completed common-dependency batch. Only its `verified_source_files` are asserted to match that historical snapshot. Later whole-file results are separate.
 
-`accepted-receipts.json` contains independently accepted whole-file results and relative paths to their unchanged logs. `source-status.json` records every current project Lean source and explicitly identifies sources not covered by these receipts. `verified-targets.txt` is the union of selected shared targets and accepted later targets.
-
-Logs are original compiler evidence; paths in their diagnostics are historical machine paths. No dependency caches, credentials, or compiled binaries are required to inspect the manifests.
+`accepted-receipts.json` contains accepted whole-file source/log hashes and actual printed audits. `source-status.json` labels every current Lean source, including unverified candidates. `verified-targets.txt` lists targets with evidence. Counts overlap; no full-source green build or full-paper completion is claimed.

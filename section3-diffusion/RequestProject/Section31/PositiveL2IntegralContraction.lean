@@ -9,7 +9,7 @@ normal contractions and integral preservation from an actual zero-energy one. -/
 namespace IGS.Sec31
 
 open MeasureTheory Filter Topology
-open scoped NNReal
+open scoped NNReal ENNReal
 noncomputable section
 
 variable {Space : Type*} [MeasurableSpace Space] (law : Measure Space)
@@ -32,18 +32,20 @@ theorem positive_integral_preserving_L2_abs_integral_contraction
     rw [map_sub] at difference
     exact sub_nonneg.mp difference
   have absoluteBound : |operator values| ≤ operator |values| := by
-    apply abs_le.mpr
+    apply abs_le'.mpr
     constructor
-    · have bound := operatorMonotone (neg_abs_le values)
-      simpa only [map_neg] using bound
     · exact operatorMonotone (le_abs_self values)
+    · have bound := operatorMonotone (neg_le_abs values)
+      simpa only [map_neg] using bound
   have absoluteBoundAE : ∀ᵐ point ∂law, |operator values point| ≤ operator |values| point := by
     filter_upwards [(Lp.coeFn_le _ _).mpr absoluteBound, Lp.coeFn_abs (operator values)] with point bound identity
     simpa only [identity] using bound
-  have imageIntegrable : Integrable (operator values) law := MemLp.integrable (by norm_num) (operator values).memLp
-  have absoluteImageIntegrable : Integrable (operator |values|) law := MemLp.integrable (by norm_num) (operator |values|).memLp
+  have imageIntegrable : Integrable (operator values) law :=
+    MemLp.integrable (by norm_num : (1 : ℝ≥0∞) ≤ 2) (Lp.memLp (operator values))
+  have absoluteImageIntegrable : Integrable (operator |values|) law :=
+    MemLp.integrable (by norm_num : (1 : ℝ≥0∞) ≤ 2) (Lp.memLp (operator |values|))
   calc
-    _ ≤ ∫ point, operator |values| point ∂law := integral_mono_ae imageIntegrable.norm absoluteImageIntegrable absoluteBoundAE
+    _ ≤ ∫ point, operator |values| point ∂law := integral_mono_ae imageIntegrable.abs absoluteImageIntegrable absoluteBoundAE
     _ = ∫ point, |values| point ∂law := integralPreserving |values|
     _ = ∫ point, |values point| ∂law := integral_congr_ae (Lp.coeFn_abs values)
 

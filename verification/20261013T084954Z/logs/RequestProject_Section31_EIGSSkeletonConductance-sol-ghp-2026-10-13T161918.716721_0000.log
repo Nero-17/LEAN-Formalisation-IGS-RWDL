@@ -1,0 +1,29 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSSkeletonConductance.lean:132:17: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSSkeletonConductance.lean:132:17: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSSkeletonConductance.lean:252:11: warning: unused variable `source`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSSkeletonConductance.lean:252:18: warning: unused variable `target`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSSkeletonConductance.lean:252:50: warning: unused variable `neighbour`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSSkeletonConductance.lean:404:52: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSSkeletonConductance.lean:404:52: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'EIGS.xiUnitTraceExtension_skeleton_flux' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSkeletonConductance_eq_negative_pairing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSkeletonReturnProbability_mul_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSkeletonReturnProbability_row_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSkeletonConductance_row_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSkeletonConductance_row_eq_degree_mul_escape' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSkeletonReturnChain_departure_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSkeleton_distinctJumpChain_eq_conductance' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,29 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\ContinuousTimePathFamilyMeasurability.lean:32:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DiscreteMarkov.measurable_measureFamily_of_finite_coordinates`:
+  [MetricSpace State]
+  [CompactSpace State]
+  [BorelSpace State]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MetricSpace State] [CompactSpace State] [BorelSpace State] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'IGS.Sec31.DiscreteMarkov.measurable_measureFamily_of_finite_coordinates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.continuousPathFamily_measure_measurable_of_finite_evaluations' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.probabilityMeasureFamily_measure_measurable_of_continuous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.continuousPathFamily_finite_product_expectation_continuous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.continuousPathFamily_finite_evaluation_continuous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.continuousPathFamily_measure_measurable_of_ordered_observations' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.continuousPathFamilyKernel_isMarkov' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

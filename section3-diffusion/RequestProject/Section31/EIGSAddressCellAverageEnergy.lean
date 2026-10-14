@@ -54,6 +54,7 @@ theorem xiContinuous_L2_norm_sq_address_integral
         ℝ (BoundedContinuousFunction.mkOfCompact target)] with point equality
       rw [equality]
       simp only [real_inner_self_eq_norm_sq, Real.norm_eq_abs, sq_abs]
+      rfl
     _ = _ := integral_map
       (measurable_xiAddressLimit system rulesConnected lengths lengthsPositive distanceRate distanceGreaterThanOne metricEigenpair).aemeasurable
       (target.continuous.measurable.pow_const 2).aestronglyMeasurable
@@ -173,9 +174,13 @@ theorem exists_xiAddressCellAverage_energy_error_bound (system : EIGSData K)
   have triangleBound := integral_mono targetAnchorIntegrable
     ((differenceSquareIntegrable.const_mul 2).add (harmonicAnchorIntegrable.const_mul 2))
     (fun address => by
+      change (pulledTarget address - anchors (xiAddressEdge system level address)) ^ 2 ≤
+        2 * (pulledTarget address - pulledHarmonic address) ^ 2 +
+          2 * (pulledHarmonic address - anchors (xiAddressEdge system level address)) ^ 2
       nlinarith [sq_nonneg (pulledTarget address - 2 * pulledHarmonic address + anchors (xiAddressEdge system level address))])
-  rw [integral_add (differenceSquareIntegrable.const_mul 2) (harmonicAnchorIntegrable.const_mul 2),
-    integral_const_mul, integral_const_mul] at triangleBound
+  have triangleIntegral := integral_add (differenceSquareIntegrable.const_mul 2) (harmonicAnchorIntegrable.const_mul 2)
+  rw [integral_const_mul, integral_const_mul] at triangleIntegral
+  replace triangleBound := triangleBound.trans_eq triangleIntegral
   have meanMinimal := xiAddressCellAverage_minimizes_square_error system mass level pulledTarget
     targetIntegrable targetSquareIntegrable anchors
   calc

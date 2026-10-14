@@ -1,0 +1,4 @@
+'IGS.Sec31.QuadraticEnergySpace.closedForm_projection_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.closedForm_projection_eq_zero_of_energy_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

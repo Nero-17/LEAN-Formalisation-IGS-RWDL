@@ -20,6 +20,14 @@ def main():
     evidence = repository / 'verification/20261013T084954Z'
     manifest = json.loads((evidence / 'accepted-receipts.json').read_text(encoding='utf-8'))
     statuses = json.loads((evidence / 'source-status.json').read_text(encoding='utf-8'))
+    listed_sources = {record['source'] for record in statuses}
+    actual_sources = {
+        source.relative_to(repository).as_posix()
+        for project in ['section2-random-walks', 'section3-diffusion', 'section4-percolation']
+        for source in (repository / project / 'RequestProject').rglob('*.lean')
+    }
+    if listed_sources != actual_sources or len(listed_sources) != len(statuses):
+        raise ValueError('The source-status inventory is incomplete or contains duplicates')
     allowed = {'propext', 'Classical.choice', 'Quot.sound'}
 
     def check_hash(path, expected):

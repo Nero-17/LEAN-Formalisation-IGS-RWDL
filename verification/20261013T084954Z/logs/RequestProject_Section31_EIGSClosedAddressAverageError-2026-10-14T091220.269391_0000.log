@@ -1,0 +1,3 @@
+'EIGS.xiAddressL2Embedding' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiAddressL2Average_compact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiClosedAddressAverage_error_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

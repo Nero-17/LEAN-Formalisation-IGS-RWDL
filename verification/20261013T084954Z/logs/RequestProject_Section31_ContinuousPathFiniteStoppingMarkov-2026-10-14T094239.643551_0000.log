@@ -1,0 +1,6 @@
+'IGS.Sec31.DiscreteMarkov.canonical_finite_stopping_future_continuousTest_integrable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.continuousPath_finite_stopping_setIntegral_markov' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

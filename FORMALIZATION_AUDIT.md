@@ -1,52 +1,43 @@
 # Current formalization audit
 
-Snapshot UTC: 2026-10-13T23:27:39.497737+00:00
+Snapshot UTC: 2026-10-14T11:17:07.877976+00:00
 
-Full-paper completion is **not** claimed. A clean axiom list establishes the stated theorem, not the realization of unproved hypotheses. Generic criteria and draft consumers are not substitutes for an actual-model proof.
+Full-paper completion is **not** claimed. A clean printed axiom audit verifies the stated theorem; it does not remove mathematical assumptions from that statement. Actual-model consumers and generic conditional lemmas must be read separately.
 
 ## Verification scope
 
-The last completed shared-dependency batch passed 545 modules, with no source changes. Its immutable report SHA256 is `c75281dbb70120997bf6d5a5de2e1f03d14d6f9bb7a62390de27d240c20c0210`. The published copies of all 545 checked source files match that report. Later independent receipts are separate; no full-source green build is claimed.
+The latest completed common-dependency batch has 545 modules and unchanged checked sources. Report SHA256: `c75281dbb70120997bf6d5a5de2e1f03d14d6f9bb7a62390de27d240c20c0210`. The 634-module integration is still running and is not represented as a passed batch.
 
-The portable independent manifest contains 220 whole-file receipts and 804 printed audits. Counts are evidence inventory, not a completion percentage.
+The independent manifest contains 307 accepted whole-file receipts and 1089 printed audits. These overlap the common batch and are not a completion percentage. Every published Lean source has an exact hash and explicit status; unverified and failed drafts remain visible.
 
-## Accepted later milestones
+## Accepted milestones
 
-| File | Source SHA256 | Log SHA256 | Audits |
+| Source | Source SHA256 | Log SHA256 | Audits |
 | --- | --- | --- | --- |
-| [EIGSFiniteHorizonPathTightnessOfRules](section3-diffusion/RequestProject/Section31/EIGSFiniteHorizonPathTightnessOfRules.lean) | `87b8f489cf02c0ef5ef0e9a85585773cebe74d5b7d714257fefe86200f775f13` | `ac2842002ae15055e2256b6da180c5b65762896169143a4729e37dba07a1c014` | 1 |
-| [EIGSFiniteHorizonContinuousSubsequenceOfRules](section3-diffusion/RequestProject/Section31/EIGSFiniteHorizonContinuousSubsequenceOfRules.lean) | `39edbe2cc340f1ba01120e76c602769c83f907e0ed165f38660ba4843574c34d` | `ce16570ae154a5d50b7fd643a5a2f8c600df9dce13a942a43f708c83ce2b8793` | 1 |
-| [EIGSContinuousSemigroupOfRules](section3-diffusion/RequestProject/Section31/EIGSContinuousSemigroupOfRules.lean) | `39c10a3a04116311063de6f474bac9ab91f0d63a7a9c95628c02ff73c8947829` | `e6b4aee6c8011e267f2d29ee4ea58d63bf6c9be520bacbb1091bdb76b8dd6de6` | 3 |
-| [EIGSContinuousSemigroupMarkovOfRules](section3-diffusion/RequestProject/Section31/EIGSContinuousSemigroupMarkovOfRules.lean) | `38f3132ad590663a44fd2403dd60df35ecb98d59f83b25e386c41e73f9ab5c62` | `33bca4fa8bd2edf9376efa3c442f1706146d3f1799145ebc46e232ed1ffedebd` | 2 |
-| [EIGSContinuousMarkovKernelOfRules](section3-diffusion/RequestProject/Section31/EIGSContinuousMarkovKernelOfRules.lean) | `b527451c55c17f9aba459d513373763b8f6af9c0feb20faec99c888c2c582ca5` | `b48ffbe47a4c75849de24a04abc268b631f88c9f556827af1ca52c0db4968dd3` | 2 |
-| [EIGSNativeSupSemigroupConvergence](section3-diffusion/RequestProject/Section31/EIGSNativeSupSemigroupConvergence.lean) | `3a2424485a99c80447ccfc06c776b50da3d5c6972f5eb8429e6afea6e5eaa733` | `59bae059a9b81296488227a973d84ff81eb7032b1f81e5e6e7d637e7dccd1cfd` | 3 |
-| [EIGSNativeSupDePoissonization](section3-diffusion/RequestProject/Section31/EIGSNativeSupDePoissonization.lean) | `7fbbf519bc85e879f51ff120d0c38a601278d05c7ac6f4c5ce5874f99889ce4e` | `fc8018c0b9d6da2af80bdf4dec37f81c7da53d26f626c902d1aedca9f43754c0` | 3 |
-| [FiniteSupportPathFullConvergence](section3-diffusion/RequestProject/Section31/FiniteSupportPathFullConvergence.lean) | `201c6b72c1f37e522ec8a22f107412ebfe2ac99cc3b569d101dd4b6d2f0297a6` | `ca246c3b106ab45f24cb5244ea6355ef79004733ef3dba2eed829246960d3c9e` | 2 |
-| [FiniteHorizonPathRestriction](section3-diffusion/RequestProject/Section31/FiniteHorizonPathRestriction.lean) | `047b22bada006c52cbaf7352db83dd5cdb69734b12c6fa4d0a854c13adbb9a6c` | `fed7e21c7904faf84d82fa2bac7d871931b7e7c19f99a68c53df6757dd580c6e` | 4 |
-| [EIGSMovingStartApproximation](section3-diffusion/RequestProject/Section31/EIGSMovingStartApproximation.lean) | `0c0cc60ae1ce53351df5a6d0a6bd073ac1faa05cd40bec375d4ea4b35ca4276a` | `955e0f02fa232455014d9b2322a1a36ca88f4a0ade5a6aeafc4c28debb62fe52` | 2 |
-| [GeometricBackwardIteration](section3-diffusion/RequestProject/Section31/GeometricBackwardIteration.lean) | `5fe04a7e51537d41122b421bd4f4698230d6102404e6db1d1f52d14b58acc3a4` | `1d5616de9dd76d8b9eb9f326753232385e5227a22dfeca723e517a3c8f332da6` | 2 |
-| [DependentCoherentPrefixPathLaw](section3-diffusion/RequestProject/Section31/DependentCoherentPrefixPathLaw.lean) | `6f5ab45df2a814135e2b2fdaa62ad8933f422053009eab78424befdbb9a505f3` | `21f98543b9a79e90a154e08f296300e586536c71e7081a532db3b049d63a8fae` | 2 |
+| [EIGSOriginalMeasuredGHP](section3-diffusion/RequestProject/Section31/EIGSOriginalMeasuredGHP.lean) | `db3cbd82db11c43f000102d6a698de9221099458932152cd793c9018834b49ac` | `f75d931f1ef326bf9ee0f9da911085d6d4504d603654bd54c887949b83870fe4` | 10 |
+| [EIGSNativeSupDiscreteConvergence](section3-diffusion/RequestProject/Section31/EIGSNativeSupDiscreteConvergence.lean) | `a87d8154328a78432c3c8d6dddbe032897e5a5c1d63f160c855744876af4b87d` | `e260306c9c1cd6613fd96600dc0977c7f128a49fa847ff5f6c2d42add58b1a6a` | 4 |
+| [EIGSContinuousPathFamilyClosedIdentification](section3-diffusion/RequestProject/Section31/EIGSContinuousPathFamilyClosedIdentification.lean) | `4082ec73cb7949d0186870c273ebb454a78c1d56ea1562871205005c3a4a231f` | `13e9cf9f5c97a5a48170e3d44292bc011aab725394fa7fab2b12876d5537ecb1` | 2 |
+| [EIGSFiniteStoppingClosedIdentification](section3-diffusion/RequestProject/Section31/EIGSFiniteStoppingClosedIdentification.lean) | `7ad7c76a832b11045af09d5885cd1ca4ad7c87d6105e5b6c5743a9bbdf2b3244` | `be4b3c2492ca874b3b4b9fd688c5cc89913bfb5dcbd7844ff2e61a89782ba53b` | 2 |
+| [EIGSFiniteStoppingContinuousPathOfRules](section3-diffusion/RequestProject/Section31/EIGSFiniteStoppingContinuousPathOfRules.lean) | `4070353437750a73c72fa4872646adc4398d0439b86f65dd74df382627175129` | `faa250776e4fd61b3ba02df6262bda23e4400ca15ed68e16c449b0449758ebda` | 2 |
+| [EIGSClosedSemigroupL1L2](section3-diffusion/RequestProject/Section31/EIGSClosedSemigroupL1L2.lean) | `fcbdf979751b6f3ba37f500029e2ab586fb5e161d298baa3c3580013c85103d9` | `9f7080838005d7d6da65dab6dc7a5b4f15e83ff0bf201d9bc7ad3093a062e386` | 2 |
+| [EIGSContinuousAllTimeHeatKernelDensityOfRules](section3-diffusion/RequestProject/Section31/EIGSContinuousAllTimeHeatKernelDensityOfRules.lean) | `51f927d137199dbe983816ddef54df21088269f6167f5035c1fb5d82ffb27f8a` | `45df1e5590064805951d18596a9c462546ddfcd80d042f8818e948ece9f6699d` | 2 |
+| [EIGSClosedFiniteBornPointEvaluation](section3-diffusion/RequestProject/Section31/EIGSClosedFiniteBornPointEvaluation.lean) | `7b896b4d033d9b2aa5a630ddd3d445cb2f8c0504789f22a26b4ad9228d669378` | `fa05e6e47a5d9a7a60158a00dd3602a57d5b3f658a94a03a10867812af0e8830` | 1 |
+| [QuadraticEnergyFunctionalRecovery](section3-diffusion/RequestProject/Section31/QuadraticEnergyFunctionalRecovery.lean) | `d61adcee3275cbf9c97b1c7bbc5ea20f5883c5ba4684ae81f78d96be78e278ad` | `09b3ddedd0eed63e0920eb4e898fec0b806ec5a14ae6499c6918ca4459bf3c04` | 2 |
+| [Section2PrimitiveIntegerGrowth](section2-random-walks/RequestProject/Section2PrimitiveIntegerGrowth.lean) | `8fd4bb6aea589da3f0d53a2cb48c66fcc56c9e440b790c3c3de71f2ef19b7aa2` | `5175a3e066e29681d95a4c0872a3bccda87c916285962e371e14830a27afc972` | 2 |
+| [Section2DegreeMassGap](section2-random-walks/RequestProject/Section2DegreeMassGap.lean) | `5c463d9c1f8c716864944ed06b9815e9990e8361caa3290e09122f242937fb78` | `a11e58f848959bd5adc1045a3c23ec5f0dcf610323fd3f02423132962245aed7` | 5 |
 
-The actual continuous-time sup semigroup convergence and de-Poissonization bounds are proved for the actual model; the final original discrete sup limit revision is still pending. The actual Markov kernels are probability measures; they do not constitute a heat-kernel density, joint density continuity or strict positivity.
+## Proven scope and exact gaps
 
-## Exact remaining gaps
+The same actual closed L² semigroup is identified with the global continuous-path family and the original discrete semigroup limit. Everywhere finite natural-filtration stopping times with continuous terminal tests are supplied internally. Usual/completed filtration, bounded Borel tests, potentially infinite stopping times on their finite event, and future-path strong Markov/Hunt consumers remain pending.
 
-- `EIGSNativeSupDiscreteConvergence`: first attempt failed; the corrected source has not yet been recompiled.
-- `EIGSNativeSupFiniteObservations`: the first attempt failed on the Dirac/path-law measure conversion.
-- Moving-start products, actual full finite-horizon path convergence, kernel identification, and compatible-law consumers: saved candidates awaiting their dependency chain and whole-file checks.
-- `IntegerHorizonPathReconstruction`: first whole-file attempt failed on topology/measurability instances. Dependent coherent-prefix extension passed separately. A global continuous probability law, measurable starting-point family, strong Markov and Hunt properties remain unfinished.
-- Actual address averages, their energy error, closed-domain Nash, L¹ estimates and ultracontraction: development chain pending whole-file acceptance. The accepted scalar backward-iteration lemma alone does not prove the heat-kernel claims.
-- Existence, joint continuity and strict positivity of the actual heat-kernel density, its small-time global bound and stated pointwise estimates remain unfinished.
+For each positive time the same actual semigroup has a spatially jointly continuous symmetric nonnegative probability density and the global small-time heat upper bound. This snapshot does not yet certify joint continuity in time or strict positivity. All-time bounds use a truncated time scale, not an incorrect all-time power decay on a compact conservative space.
 
-The random-cluster GHP and random diffusion extensions are expressly conjectures/outlook in the adopted paper and remain so.
+Finite-born point evaluations extend to the same closed energy domain and are recovered along the same core sequences. Identifying them with an arbitrary continuous closed-domain representative needs the local address-star bridge. Finite-born two-sided pointwise heat bounds, typical-point logarithmic lower bounds and spectral dimensions remain open in the actual-model development. The actual primitive degree matrix growth and strict degree-to-mass spectral gap are independently verified.
 
-## Model corrections
+Original measured GHP is verified. Final GHPS still requires normalized-metric and probability transport, the paper/native clock identification with the same normalization witnesses, canonical global-law restriction identification, and the actual càdlàg/J1 transport. New J1 candidates do not constitute a proved complete Skorokhod-space theory. Resistance-form/Brownian-regime construction and identification remain incomplete. Section 4 random GHP/diffusion outlook statements remain conjectures.
 
-The adopted manuscript SHA256 is `06783166c1b05e8340edd98956319445b5a55056b47c2c9c60b65ce782746792`. The user accepted the three green means, eight green-arrow reversals with four boundary matrix changes, and one orientation of each undirected simple rule graph. Antiparallel counterexamples and correction certificates are retained; they are not claims about a distinct multigraph model.
+## Adopted corrections and archive
 
-## Handoff and archive
+Adopted manuscript SHA256: `06783166c1b05e8340edd98956319445b5a55056b47c2c9c60b65ce782746792`. The approved changes are three green means, eight green-arrow reversals and four boundary matrix entries, and one orientation of an undirected simple rule graph. Antiparallel counterexamples are retained as correction evidence.
 
-Round `20261013T084954Z` began at 2026-10-13 08:49:54 UTC and continues across automatic turns. Its single authoritative full archive is updated in place:
-[complete round record](https://drive.google.com/file/d/1lRD_dypj77gjEx4nNGlUBZqrml7krj6d/view).
-
-The portable evidence directory supplies current source status and accepted logs. Older local development logs may describe superseded states; the current manifest and this audit govern the upload's claims.
+The active round is `20261013T084954Z`, beginning at 2026-10-13 08:49:54 UTC. Its authoritative [complete round record](https://drive.google.com/file/d/1lRD_dypj77gjEx4nNGlUBZqrml7krj6d/view) is updated in place. The same [latest progress file](https://drive.google.com/file/d/1sIIrFB6J5MijuZ3ndbsNAeNaYhA3R7dH/view) records major changes. Historical local paths in logs are diagnostic provenance; portable manifests use relative paths.

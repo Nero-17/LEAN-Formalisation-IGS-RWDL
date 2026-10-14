@@ -1,0 +1,13 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSAddressCellAverage.lean:147:8: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSAddressCellAverage.lean:147:8: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'IGS.Sec31.finite_partition_integral_abs_sum_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.weighted_cell_mean_square_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiAddressCellAverage_square_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiAddressCellAverage_L1_L2_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiAddressCellAverage_L1_L2_bound_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiLimitAddressCellAverage_L1_L2_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiLimitAddressCellAverage_L1_L2_bound_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

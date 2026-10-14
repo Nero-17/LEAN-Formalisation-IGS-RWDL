@@ -150,13 +150,15 @@ theorem exists_xiCylinder_endpoint_square_energy_bound
     exact (le_div_iff₀ (vectorPositive _)).mpr colourBound
   have multiplied := mul_le_mul_of_nonneg_right coefficientBound
     (sq_nonneg (values (XiHead system level edge) - values (XiTail system level edge)))
-  simpa only [← mul_assoc, sq_sub_comm] using multiplied
+  have squareIdentity : (values (XiTail system level edge) - values (XiHead system level edge)) ^ 2 =
+      (values (XiHead system level edge) - values (XiTail system level edge)) ^ 2 := by ring
+  simpa only [← mul_assoc, squareIdentity] using multiplied
 
 theorem xiAddress_coordinate_integral (system : EIGSData K) (mass : XiMassParameters system)
     (level : ℕ) (values : XiEdge system.toRuleData level → ℝ) :
     (∫ address, values (xiAddressEdge system level address) ∂mass.addressMeasure) =
       ∑ edge : XiEdge system.toRuleData level, mass.edgeWeight level edge * values edge := by
-  have mapped := integral_map (measurable_xiAddressEdge system level).aemeasurable
+  have mapped := integral_map (μ := mass.addressMeasure) (measurable_xiAddressEdge system level).aemeasurable
     (measurable_of_countable values).aestronglyMeasurable
   rw [mass.addressMeasure_coordinate] at mapped
   rw [← mapped, integral_fintype _ Integrable.of_finite]
@@ -235,8 +237,8 @@ theorem xiContinuousHarmonic_address_tail_square_bound
       (xiContinuousHarmonic_address_endpoint_range system rulesConnected lengths lengthsPositive distanceRate
         distanceGreaterThanOne metricEigenpair resistanceRate ratePositive resistanceVector vectorPositive
         renormalizationEigenpair level values extension extensionAgreement address).2)
-  rw [xiAddress_coordinate_integral] at integralBound
-  exact integralBound
+  exact integralBound.trans_eq (xiAddress_coordinate_integral system mass level
+    (fun edge => (values (XiHead system level edge) - values (XiTail system level edge)) ^ 2))
 
 end
 end EIGS

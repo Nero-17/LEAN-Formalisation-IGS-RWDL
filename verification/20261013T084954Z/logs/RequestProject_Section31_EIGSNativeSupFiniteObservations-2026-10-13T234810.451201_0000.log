@@ -1,0 +1,6 @@
+'IGS.Sec31.BanachBackwardObservations.backwardProduct_append' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeSup_scheduledBackward_eq_backwardProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeSup_scheduled_pathLaw_integral_backwardProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeSup_absolute_floor_pathLaw_integral_backwardProduct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

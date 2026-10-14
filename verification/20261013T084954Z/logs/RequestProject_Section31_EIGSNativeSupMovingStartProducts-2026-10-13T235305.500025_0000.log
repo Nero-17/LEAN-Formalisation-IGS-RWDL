@@ -1,0 +1,8 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSNativeSupMovingStartProducts.lean:31:45: warning: unused variable `firstNonnegative`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'EIGS.xiNativeSup_moving_start_product_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeSupMovingStartProductProperties_of_discreteConvergence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_xiNativeSupMovingStartProducts_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

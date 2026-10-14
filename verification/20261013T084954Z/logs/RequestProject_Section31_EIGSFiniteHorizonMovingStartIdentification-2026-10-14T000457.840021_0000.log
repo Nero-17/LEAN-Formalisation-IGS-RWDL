@@ -1,0 +1,18 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSFiniteHorizonMovingStartIdentification.lean:268:28: warning: unused variable `ratePositive`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSFiniteHorizonMovingStartIdentification.lean:269:40: warning: unused variable `vectorPositive`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSFiniteHorizonMovingStartIdentification.lean:270:8: warning: unused variable `renormalizationEigenpair`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'EIGS.xiFiniteHorizonMovingStartLimit_ordered_product_integrals' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiFiniteHorizonMovingStartKernelIdentificationProperties_of_movingProducts' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_xiFiniteHorizonMovingStartKernelIdentification_of_rules' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

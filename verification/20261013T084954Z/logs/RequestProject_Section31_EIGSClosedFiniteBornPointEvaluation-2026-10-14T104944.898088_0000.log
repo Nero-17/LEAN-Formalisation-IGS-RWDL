@@ -1,0 +1,4 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSClosedFiniteBornPointEvaluation.lean:37:9: warning: unused variable `xiClosedBornStatementCompactSpace`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'EIGS.exists_xiClosedFiniteBorn_point_evaluation' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,13 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSAddressHarmonicCellEnergy.lean:148:10: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSAddressHarmonicCellEnergy.lean:148:10: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'EIGS.xiAddressEdge_ancestor' depends on axioms: [propext, Quot.sound]
+'EIGS.xiContinuousHarmonic_address_endpoint_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.square_distance_to_endpoint_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiCylinder_endpoint_square_energy_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiAddress_coordinate_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiContinuous_address_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiContinuousHarmonic_address_tail_square_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

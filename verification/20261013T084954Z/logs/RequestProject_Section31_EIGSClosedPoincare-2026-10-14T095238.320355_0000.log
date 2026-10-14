@@ -1,0 +1,2 @@
+'EIGS.xiClosedPoincareProperties' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiClosedPoincare_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

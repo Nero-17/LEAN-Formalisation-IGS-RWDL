@@ -1,0 +1,6 @@
+'IGS.Sec31.inverse_sqrt_power_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiContinuous_L2_norm_sq_address_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiAddressCellAverage_energy_error_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiAddressCellAverage_energy_error_bound_of_rules' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

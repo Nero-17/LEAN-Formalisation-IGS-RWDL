@@ -98,6 +98,7 @@ theorem xiNativeSup_scheduled_pathLaw_integral_backwardProduct (system : EIGSDat
     (fun _ => norm_nonneg _) (norm_nonneg _)
     (fun index point => norm_le_pi_norm (tests index) point)
     (fun point => norm_le_pi_norm terminal point)
+  simp only [ProbabilityMeasure.coe_mk] at actualIntegral
   rw [actualIntegral, integral_dirac]
   exact congrFun (xiNativeSup_scheduledBackward_eq_backwardProduct system rulesConnected rulesLoopless
     rulesUnique plantingNonadjacent level schedule tests count terminal) source

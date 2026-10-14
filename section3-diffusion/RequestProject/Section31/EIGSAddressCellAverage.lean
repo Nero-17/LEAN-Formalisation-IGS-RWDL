@@ -54,7 +54,6 @@ open scoped BigOperators
       apply Finset.sum_congr rfl
       intro index _
       field_simp [(weightsPositive index).ne']
-      <;> ring
     _ ≤ ∑ index : Index, amounts index ^ 2 / lower :=
       Finset.sum_le_sum (fun index _ =>
         div_le_div_of_nonneg_left (sq_nonneg _) lowerPositive (weightsLower index))
@@ -90,7 +89,8 @@ theorem xiAddressCellAverage_square_integral
     (∫ address, xiAddressCellAverage system mass level values address ^ 2 ∂mass.addressMeasure) =
       ∑ edge : XiEdge system.toRuleData level,
         mass.edgeWeight level edge * xiAddressCellMean system mass level values edge ^ 2 := by
-  have mapped := integral_map (measurable_xiAddressEdge system level).aemeasurable
+  have mapped := integral_map (μ := mass.addressMeasure)
+    (measurable_xiAddressEdge system level).aemeasurable
     (measurable_of_countable (fun edge : XiEdge system.toRuleData level =>
       xiAddressCellMean system mass level values edge ^ 2)).aestronglyMeasurable
   rw [mass.addressMeasure_coordinate] at mapped
@@ -110,17 +110,15 @@ theorem exists_xiAddressCellAverage_L1_L2_bound
       Integrable values mass.addressMeasure →
       (∫ address, xiAddressCellAverage system mass level values address ^ 2 ∂mass.addressMeasure) ≤
         constant * mass.rate ^ level * (∫ address, |values address| ∂mass.addressMeasure) ^ 2 := by
-  have amplitudePositive := mass.amplitude_positive
-  have ratePositive := mass.rate_positive
   obtain ⟨minimumColour, _, minimumCondition⟩ := Finset.exists_min_image
     Finset.univ mass.amplitude ⟨system.initCol, Finset.mem_univ _⟩
-  refine ⟨mass.amplitude system.initCol / mass.amplitude minimumColour, by positivity, ?_⟩
+  refine ⟨mass.amplitude system.initCol / mass.amplitude minimumColour,
+    div_pos (mass.amplitude_positive _) (mass.amplitude_positive _), ?_⟩
   intro level values valuesIntegrable
   have lowerPositive : 0 < mass.amplitude minimumColour /
       (mass.rate ^ level * mass.amplitude system.initCol) := by
-    have ratePositive := mass.rate_positive
-    have amplitudePositive := mass.amplitude_positive
-    positivity
+    exact div_pos (mass.amplitude_positive _)
+      (mul_pos (pow_pos mass.rate_positive level) (mass.amplitude_positive _))
   have weightsLower (edge : XiEdge system.toRuleData level) :
       mass.amplitude minimumColour / (mass.rate ^ level * mass.amplitude system.initCol) ≤
         mass.edgeWeight level edge := by

@@ -1,0 +1,6 @@
+'EIGS.xiNativeSupArbitraryProductProperties_of_movingStartProducts' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_xiNativeSupArbitraryMovingStartProducts_of_rules' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

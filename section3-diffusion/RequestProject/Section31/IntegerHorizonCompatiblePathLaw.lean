@@ -17,6 +17,8 @@ set_option maxHeartbeats 5000000
 variable {State : Type*} [MetricSpace State] [CompactSpace State] [Nonempty State]
 variable [MeasurableSpace State] [BorelSpace State]
 variable {Vertex : ℕ → Type*} [∀ level, Fintype (Vertex level)]
+local instance : ∀ level, MeasurableSpace (Vertex level) := fun _ => ⊤
+
 variable (rates : ℕ → ℝ≥0) (embedding : (level : ℕ) → Vertex level → State)
 
 def integerHorizonPrefix (horizon : ℕ)
@@ -57,7 +59,7 @@ variable (laws : (horizon : ℕ) →
 def integerHorizonPrefixLaws (horizon : ℕ) :
     Measure ((index : Finset.Iic horizon) →
       FiniteSupportPathSpace (finiteHorizonStepPaths (index.val : ℝ≥0) rates embedding)) :=
-  (laws horizon : Measure _).map (integerHorizonPrefix rates embedding horizon)
+  (laws horizon : Measure (FiniteSupportPathSpace (finiteHorizonStepPaths (horizon : ℝ≥0) rates embedding))).map (integerHorizonPrefix rates embedding horizon)
 
 instance integerHorizonPrefixLaws_isProbability (horizon : ℕ) :
     IsProbabilityMeasure (integerHorizonPrefixLaws rates embedding laws horizon) :=
@@ -68,6 +70,7 @@ variable (compatible : ∀ (shortHorizon longHorizon : ℕ) (ordered : shortHori
     (finiteHorizonPathRestriction_continuous (shortHorizon : ℝ≥0) (longHorizon : ℝ≥0)
       (by exact_mod_cast ordered) rates embedding).measurable.aemeasurable = laws shortHorizon)
 
+include compatible in
 theorem integerHorizonPrefixLaws_coherent (horizon : ℕ) :
     (integerHorizonPrefixLaws rates embedding laws (horizon + 1)).map
       (frestrictLe₂ (π := fun index : ℕ =>
@@ -75,7 +78,13 @@ theorem integerHorizonPrefixLaws_coherent (horizon : ℕ) :
       integerHorizonPrefixLaws rates embedding laws horizon := by
   have compatibleMeasures := congrArg (fun law : ProbabilityMeasure
     (FiniteSupportPathSpace (finiteHorizonStepPaths (horizon : ℝ≥0) rates embedding)) =>
-      (law : Measure _)) (compatible horizon (horizon + 1) (Nat.le_succ horizon))
+      (law : Measure (FiniteSupportPathSpace (finiteHorizonStepPaths (horizon : ℝ≥0) rates embedding)))) (compatible horizon (horizon + 1) (Nat.le_succ horizon))
+  change (laws (horizon + 1) : Measure
+    (FiniteSupportPathSpace (finiteHorizonStepPaths ((horizon + 1 : ℕ) : ℝ≥0) rates embedding))).map
+      (finiteHorizonPathRestriction (horizon : ℝ≥0) ((horizon + 1 : ℕ) : ℝ≥0)
+        (by exact_mod_cast Nat.le_succ horizon) rates embedding) =
+    (laws horizon : Measure (FiniteSupportPathSpace
+      (finiteHorizonStepPaths (horizon : ℝ≥0) rates embedding))) at compatibleMeasures
   unfold integerHorizonPrefixLaws
   rw [Measure.map_map (measurable_frestrictLe₂ (X := fun index : ℕ =>
     FiniteSupportPathSpace (finiteHorizonStepPaths (index : ℝ≥0) rates embedding)) (Nat.le_succ horizon))
@@ -94,32 +103,40 @@ theorem integerHorizonPrefixLaws_coherent (horizon : ℕ) :
     (finiteHorizonPathRestriction_continuous (horizon : ℝ≥0) ((horizon + 1 : ℕ) : ℝ≥0)
       (by exact_mod_cast Nat.le_succ horizon) rates embedding).measurable, compatibleMeasures]
 
+include compatible in
 theorem exists_integerHorizon_familyLaw :
     ∃ familyLaw : ProbabilityMeasure (IntegerHorizonPathFamily rates embedding),
-      (∀ horizon, (familyLaw : Measure _).map (frestrictLe horizon) =
+      (∀ (horizon : ℕ), (familyLaw : Measure (IntegerHorizonPathFamily rates embedding)).map (frestrictLe horizon) =
         integerHorizonPrefixLaws rates embedding laws horizon) ∧
-      (∀ horizon, (familyLaw : Measure _).map (fun family => family horizon) = (laws horizon : Measure _)) := by
-  letI : ∀ horizon, Nonempty
+      (∀ (horizon : ℕ), (familyLaw : Measure (IntegerHorizonPathFamily rates embedding)).map (fun family => family horizon) = (laws horizon : Measure (FiniteSupportPathSpace (finiteHorizonStepPaths (horizon : ℝ≥0) rates embedding)))) := by
+  letI : ∀ (horizon : ℕ), Nonempty
       (FiniteSupportPathSpace (finiteHorizonStepPaths (horizon : ℝ≥0) rates embedding)) :=
-    fun horizon => nonempty_of_isProbabilityMeasure (laws horizon : Measure _)
-  let familyMeasure := DependentPrefix.coherentPathLaw (integerHorizonPrefixLaws rates embedding laws)
+    fun horizon => nonempty_of_isProbabilityMeasure (laws horizon : Measure (FiniteSupportPathSpace (finiteHorizonStepPaths (horizon : ℝ≥0) rates embedding)))
+  let familyMeasure := DependentPrefix.coherentPathLaw (Space := fun horizon : ℕ => FiniteSupportPathSpace (finiteHorizonStepPaths (horizon : ℝ≥0) rates embedding)) (integerHorizonPrefixLaws rates embedding laws)
   have familyPrefixes (horizon : ℕ) : familyMeasure.map (frestrictLe horizon) =
       integerHorizonPrefixLaws rates embedding laws horizon :=
-    DependentPrefix.coherentPathLaw_prefix (integerHorizonPrefixLaws rates embedding laws)
+    DependentPrefix.coherentPathLaw_prefix (Space := fun horizon : ℕ => FiniteSupportPathSpace (finiteHorizonStepPaths (horizon : ℝ≥0) rates embedding)) (integerHorizonPrefixLaws rates embedding laws)
       (integerHorizonPrefixLaws_coherent rates embedding laws compatible) horizon
   refine ⟨⟨familyMeasure, inferInstance⟩, familyPrefixes, ?_⟩
   intro horizon
+  have lastMeasurable : Measurable (fun history : (index : Finset.Iic horizon) →
+      FiniteSupportPathSpace (finiteHorizonStepPaths (index.val : ℝ≥0) rates embedding) =>
+        history ⟨horizon, Finset.mem_Iic.mpr le_rfl⟩) := measurable_pi_apply _
+  have prefixMeasurable : Measurable (frestrictLe horizon : IntegerHorizonPathFamily rates embedding →
+      (index : Finset.Iic horizon) →
+        FiniteSupportPathSpace (finiteHorizonStepPaths (index.val : ℝ≥0) rates embedding)) :=
+    measurable_frestrictLe horizon
   calc
     familyMeasure.map (fun family => family horizon) =
         (familyMeasure.map (frestrictLe horizon)).map
           (fun history => history ⟨horizon, Finset.mem_Iic.mpr le_rfl⟩) := by
-      rw [Measure.map_map (measurable_pi_apply _) (measurable_frestrictLe horizon)]
+      rw [Measure.map_map lastMeasurable prefixMeasurable]
       rfl
     _ = (integerHorizonPrefixLaws rates embedding laws horizon).map
         (fun history => history ⟨horizon, Finset.mem_Iic.mpr le_rfl⟩) := by rw [familyPrefixes]
-    _ = (laws horizon : Measure _) := by
+    _ = (laws horizon : Measure (FiniteSupportPathSpace (finiteHorizonStepPaths (horizon : ℝ≥0) rates embedding))) := by
       unfold integerHorizonPrefixLaws
-      rw [Measure.map_map (measurable_pi_apply _) (integerHorizonPrefix_measurable rates embedding horizon)]
+      rw [Measure.map_map lastMeasurable (integerHorizonPrefix_measurable rates embedding horizon)]
       have lastIdentity :
           (fun history => history ⟨horizon, Finset.mem_Iic.mpr le_rfl⟩) ∘
             integerHorizonPrefix rates embedding horizon = id := by
@@ -129,20 +146,26 @@ theorem exists_integerHorizon_familyLaw :
 
 theorem integerHorizon_familyLaw_ae_good
     (familyLaw : ProbabilityMeasure (IntegerHorizonPathFamily rates embedding))
-    (prefixIdentity : ∀ horizon, (familyLaw : Measure _).map (frestrictLe horizon) =
+    (prefixIdentity : ∀ (horizon : ℕ), (familyLaw : Measure (IntegerHorizonPathFamily rates embedding)).map (frestrictLe horizon) =
       integerHorizonPrefixLaws rates embedding laws horizon)
-    (coordinateIdentity : ∀ horizon, (familyLaw : Measure _).map (fun family => family horizon) =
-      (laws horizon : Measure _))
-    (continuousLaws : ∀ horizon, ∀ᵐ path ∂(laws horizon : Measure _), Continuous (UniformFun.toFun path.val)) :
-    ∀ᵐ family ∂(familyLaw : Measure _), IntegerHorizonPathFamily.Good rates embedding family := by
-  have continuousAE : ∀ᵐ family ∂(familyLaw : Measure _),
-      ∀ horizon, Continuous (UniformFun.toFun (family horizon).val) := by
+    (coordinateIdentity : ∀ (horizon : ℕ), (familyLaw : Measure (IntegerHorizonPathFamily rates embedding)).map (fun family => family horizon) =
+      (laws horizon : Measure (FiniteSupportPathSpace (finiteHorizonStepPaths (horizon : ℝ≥0) rates embedding))))
+    (continuousLaws : ∀ (horizon : ℕ), ∀ᵐ path ∂(laws horizon : Measure (FiniteSupportPathSpace (finiteHorizonStepPaths (horizon : ℝ≥0) rates embedding))), Continuous (UniformFun.toFun path.val)) :
+    ∀ᵐ family ∂(familyLaw : Measure (IntegerHorizonPathFamily rates embedding)), IntegerHorizonPathFamily.Good rates embedding family := by
+  have continuousAE : ∀ᵐ family ∂(familyLaw : Measure (IntegerHorizonPathFamily rates embedding)),
+      ∀ (horizon : ℕ), Continuous (UniformFun.toFun (family horizon).val) := by
     apply ae_all_iff.mpr
     intro horizon
-    apply ae_of_ae_map (measurable_pi_apply horizon).aemeasurable
-    rw [coordinateIdentity]
-    exact continuousLaws horizon
-  have compatibleAE : ∀ᵐ family ∂(familyLaw : Measure _),
+    have projectedAE : ∀ᵐ path ∂(familyLaw : Measure (IntegerHorizonPathFamily rates embedding)).map
+        (fun family => family horizon), Continuous (UniformFun.toFun path.val) := by
+      rw [coordinateIdentity]
+      exact continuousLaws horizon
+    exact ae_of_ae_map (μ := (familyLaw : Measure (IntegerHorizonPathFamily rates embedding)))
+      (p := fun path : FiniteSupportPathSpace (finiteHorizonStepPaths (horizon : ℝ≥0) rates embedding) =>
+        Continuous (UniformFun.toFun path.val))
+      (show Measurable (fun family : IntegerHorizonPathFamily rates embedding => family horizon)
+        from measurable_pi_apply horizon).aemeasurable projectedAE
+  have compatibleAE : ∀ᵐ family ∂(familyLaw : Measure (IntegerHorizonPathFamily rates embedding)),
       ∀ (shortHorizon longHorizon : ℕ) (ordered : shortHorizon ≤ longHorizon),
         finiteHorizonPathRestriction (shortHorizon : ℝ≥0) (longHorizon : ℝ≥0)
           (by exact_mod_cast ordered) rates embedding (family longHorizon) = family shortHorizon := by
@@ -161,8 +184,8 @@ theorem integerHorizon_familyLaw_ae_good
     have predicateMeasurable : MeasurableSet {history | predicate history} :=
       (isClosed_eq
         ((finiteHorizonPathRestriction_continuous (shortHorizon : ℝ≥0) (longHorizon : ℝ≥0)
-          (by exact_mod_cast ordered) rates embedding).comp (continuous_apply _))
-        (continuous_apply _)).measurableSet
+          (by exact_mod_cast ordered) rates embedding).comp (continuous_apply (⟨longHorizon, Finset.mem_Iic.mpr le_rfl⟩ : Finset.Iic longHorizon)))
+        (continuous_apply (⟨shortHorizon, Finset.mem_Iic.mpr ordered⟩ : Finset.Iic longHorizon))).measurableSet
     have prefixAE : ∀ᵐ history ∂integerHorizonPrefixLaws rates embedding laws longHorizon, predicate history := by
       unfold integerHorizonPrefixLaws
       apply (ae_map_iff (integerHorizonPrefix_measurable rates embedding longHorizon).aemeasurable
@@ -171,20 +194,21 @@ theorem integerHorizon_familyLaw_ae_good
       dsimp only [predicate]
       rw [integerHorizonPrefix_last]
       rfl
-    have projectedAE : ∀ᵐ history ∂(familyLaw : Measure _).map (frestrictLe longHorizon), predicate history := by
+    have projectedAE : ∀ᵐ history ∂(familyLaw : Measure (IntegerHorizonPathFamily rates embedding)).map (frestrictLe longHorizon), predicate history := by
       rw [prefixIdentity]
       exact prefixAE
     exact ae_of_ae_map (measurable_frestrictLe longHorizon).aemeasurable projectedAE
   filter_upwards [continuousAE, compatibleAE] with family familyContinuous familyCompatible
   exact ⟨familyContinuous, familyCompatible⟩
 
+include compatible in
 theorem exists_continuousTimePathLaw_of_compatible_integer_horizons
-    (continuousLaws : ∀ horizon, ∀ᵐ path ∂(laws horizon : Measure _), Continuous (UniformFun.toFun path.val)) :
+    (continuousLaws : ∀ (horizon : ℕ), ∀ᵐ path ∂(laws horizon : Measure (FiniteSupportPathSpace (finiteHorizonStepPaths (horizon : ℝ≥0) rates embedding))), Continuous (UniformFun.toFun path.val)) :
     ∃ pathLaw : ProbabilityMeasure (ContinuousTimePath State),
       ∀ (horizon dimension : ℕ) (times : Fin dimension → ℝ≥0)
         (timesInHorizon : ∀ index, (times index : ℝ) ≤ horizon),
-        (pathLaw : Measure _).map (fun path => fun index => path.val (times index)) =
-          (laws horizon : Measure _).map (fun path => fun index => UniformFun.toFun path.val
+        (pathLaw : Measure (ContinuousTimePath State)).map (fun path => fun index => path.val (times index)) =
+          (laws horizon : Measure (FiniteSupportPathSpace (finiteHorizonStepPaths (horizon : ℝ≥0) rates embedding))).map (fun path => fun index => UniformFun.toFun path.val
             ⟨(times index : ℝ), (times index).property, timesInHorizon index⟩) := by
   obtain ⟨familyLaw, prefixIdentity, coordinateIdentity⟩ :=
     exists_integerHorizon_familyLaw rates embedding laws compatible
@@ -194,24 +218,24 @@ theorem exists_continuousTimePathLaw_of_compatible_integer_horizons
     familyLaw.map (integerHorizonReconstructedPath_measurable rates embedding).aemeasurable
   refine ⟨fullLaw, ?_⟩
   intro horizon dimension times timesInHorizon
-  change ((familyLaw : Measure _).map (integerHorizonReconstructedPath rates embedding)).map
+  change ((familyLaw : Measure (IntegerHorizonPathFamily rates embedding)).map (integerHorizonReconstructedPath rates embedding)).map
     (fun path => fun index => path.val (times index)) = _
   have evaluationMeasurable : Measurable (fun path : ContinuousTimePath State =>
       fun index : Fin dimension => path.val (times index)) :=
     measurable_pi_lambda _ (fun index => (measurable_pi_apply (times index)).comp measurable_subtype_coe)
   rw [Measure.map_map evaluationMeasurable (integerHorizonReconstructedPath_measurable rates embedding)]
   calc
-    (familyLaw : Measure _).map
+    (familyLaw : Measure (IntegerHorizonPathFamily rates embedding)).map
         ((fun path : ContinuousTimePath State => fun index => path.val (times index)) ∘
           integerHorizonReconstructedPath rates embedding) =
-        (familyLaw : Measure _).map (fun family => fun index => UniformFun.toFun (family horizon).val
+        (familyLaw : Measure (IntegerHorizonPathFamily rates embedding)).map (fun family => fun index => UniformFun.toFun (family horizon).val
           ⟨(times index : ℝ), (times index).property, timesInHorizon index⟩) := by
       apply Measure.map_congr
       filter_upwards [goodAE] with family good
       funext index
       exact integerHorizonReconstructedPath_eq_local rates embedding family good horizon
         (times index) (timesInHorizon index)
-    _ = ((familyLaw : Measure _).map (fun family => family horizon)).map
+    _ = ((familyLaw : Measure (IntegerHorizonPathFamily rates embedding)).map (fun family => family horizon)).map
         (fun path => fun index => UniformFun.toFun path.val
           ⟨(times index : ℝ), (times index).property, timesInHorizon index⟩) := by
       rw [Measure.map_map
@@ -228,3 +252,5 @@ end IGS.Sec31.DiscreteMarkov
 #print axioms IGS.Sec31.DiscreteMarkov.exists_integerHorizon_familyLaw
 #print axioms IGS.Sec31.DiscreteMarkov.integerHorizon_familyLaw_ae_good
 #print axioms IGS.Sec31.DiscreteMarkov.exists_continuousTimePathLaw_of_compatible_integer_horizons
+
+

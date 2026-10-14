@@ -1,0 +1,4 @@
+'IGS.Sec31.probability_L2_integral_abs_le_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.probability_L2_integral_abs_lipschitz' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.probability_L2_integral_abs_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.closedForm_two_scale_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

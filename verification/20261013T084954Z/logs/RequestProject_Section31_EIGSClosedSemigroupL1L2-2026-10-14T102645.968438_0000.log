@@ -1,0 +1,5 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSClosedSemigroupL1L2.lean:149:28: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'EIGS.xiClosedSemigroupL1L2Properties_of_dense_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiClosedSemigroupL1L2_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

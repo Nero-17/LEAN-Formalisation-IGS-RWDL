@@ -24,11 +24,19 @@ open scoped BigOperators
         (fun sample => values sample ^ 2 - (2 * offset) * values sample + offset ^ 2) := by
       funext sample
       ring
-    rw [polynomial, integral_add (squareIntegrable.sub (valuesIntegrable.const_mul (2 * offset)))
-      (integrable_const _), integral_sub squareIntegrable (valuesIntegrable.const_mul (2 * offset)),
-      integral_const_mul, integral_const]
-    simp only [smul_eq_mul]
-    ring
+    rw [polynomial]
+    calc
+      _ = (∫ sample, values sample ^ 2 - (2 * offset) * values sample ∂law) +
+          (∫ _ : Sample, offset ^ 2 ∂law) :=
+        integral_add (squareIntegrable.sub (valuesIntegrable.const_mul (2 * offset))) (integrable_const _)
+      _ = ((∫ sample, values sample ^ 2 ∂law) - (∫ sample, (2 * offset) * values sample ∂law)) +
+          (∫ _ : Sample, offset ^ 2 ∂law) :=
+        congrArg (fun amount => amount + (∫ _ : Sample, offset ^ 2 ∂law))
+          (integral_sub squareIntegrable (valuesIntegrable.const_mul (2 * offset)))
+      _ = _ := by
+        rw [integral_const_mul, integral_const]
+        simp only [smul_eq_mul]
+        ring
   rw [shiftedIntegral, shiftedIntegral]
   have differenceIdentity :
       ((∫ sample, values sample ^ 2 ∂law) - 2 * constant * (∫ sample, values sample ∂law) +
@@ -86,6 +94,8 @@ open scoped BigOperators
     ((valuesIntegrable.aestronglyMeasurable.sub constantsMeasurable.aestronglyMeasurable).pow 2)
   exact Filter.Eventually.of_forall fun sample => by
     rw [Real.norm_eq_abs, abs_of_nonneg (sq_nonneg _)]
+    change (values sample - constants (coordinate sample)) ^ 2 ≤
+      2 * values sample ^ 2 + 2 * constants (coordinate sample) ^ 2
     nlinarith [sq_nonneg (values sample + constants (coordinate sample))]
 
 end IGS.Sec31
@@ -116,8 +126,9 @@ theorem xiAddressCellAverage_minimizes_square_error
         (values address - coefficients edge) ^ 2 ∂mass.addressMeasure) := by
     apply integral_congr_ae
     filter_upwards [ae_restrict_mem (cellMeasurable edge)] with address membership
-    simp only [Set.mem_setOf_eq] at membership
+    change xiAddressEdge system level address = edge at membership
     rw [membership]
+  dsimp only [xiAddressCellAverage]
   rw [integral_eq_sum_coordinate_fibres mass.addressMeasure (xiAddressEdge system level) coordinateMeasurable _
     (integrable_square_sub_finite_coordinate mass.addressMeasure (xiAddressEdge system level) coordinateMeasurable
       values valuesIntegrable squareIntegrable (xiAddressCellMean system mass level values)),

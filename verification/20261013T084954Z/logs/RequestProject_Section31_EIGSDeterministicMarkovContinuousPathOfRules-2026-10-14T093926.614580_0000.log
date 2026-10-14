@@ -1,0 +1,13 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSDeterministicMarkovContinuousPathOfRules.lean:153:28: warning: unused variable `ratePositive`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSDeterministicMarkovContinuousPathOfRules.lean:154:40: warning: unused variable `vectorPositive`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSDeterministicMarkovContinuousPathOfRules.lean:155:8: warning: unused variable `renormalizationEigenpair`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'EIGS.xiDeterministicMarkovContinuousPathProperties_of_measurableFamily' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_xiDeterministicMarkovContinuousPath_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

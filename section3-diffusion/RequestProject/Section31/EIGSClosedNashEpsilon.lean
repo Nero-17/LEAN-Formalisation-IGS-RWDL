@@ -1,5 +1,6 @@
 import RequestProject.Section31.EIGSClosedNashTwoScale
 import RequestProject.Section31.NashTwoScaleOptimization
+import RequestProject.Section31.EIGSVertexMassLimits
 
 /-! Exact logarithmic epsilon optimization of the actual closed-domain Nash
 inequality. The model supplies mass growth and q = mass.rate * resistanceRate > 1.

@@ -1,0 +1,13 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\ProbabilityL2SemigroupMixing.lean:55:8: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\ProbabilityL2SemigroupMixing.lean:55:8: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroup_mean_zero_projection_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroup_mean_zero_projection_tendsto' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroup_tendsto_mean' depends on axioms: [propext, Classical.choice, Quot.sound]

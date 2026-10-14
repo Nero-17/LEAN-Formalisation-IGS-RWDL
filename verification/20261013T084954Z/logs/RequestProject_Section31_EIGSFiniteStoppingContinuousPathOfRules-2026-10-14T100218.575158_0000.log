@@ -1,0 +1,13 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSFiniteStoppingContinuousPathOfRules.lean:174:28: warning: unused variable `ratePositive`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSFiniteStoppingContinuousPathOfRules.lean:175:40: warning: unused variable `vectorPositive`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSFiniteStoppingContinuousPathOfRules.lean:176:8: warning: unused variable `renormalizationEigenpair`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'EIGS.xiFiniteStoppingContinuousPathProperties_of_deterministicFamily' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_xiFiniteStoppingContinuousPath_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

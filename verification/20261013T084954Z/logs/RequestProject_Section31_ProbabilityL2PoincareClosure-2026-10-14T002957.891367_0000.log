@@ -1,0 +1,7 @@
+'IGS.Sec31.L2_inner_one_eq_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.probabilityL2MeanZeroProjection_ae' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.probabilityL2MeanZeroProjection_norm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.closedForm_variance_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.closedForm_ae_eq_mean_of_variance_bound_and_energy_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

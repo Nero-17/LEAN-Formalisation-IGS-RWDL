@@ -1,0 +1,3 @@
+'IGS.Sec31.QuadraticEnergySpace.exists_closed_energy_functional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

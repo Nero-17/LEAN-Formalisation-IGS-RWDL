@@ -83,12 +83,16 @@ theorem exists_xiNash_two_scale_bound (system : EIGSData K)
     simpa only [zero_sub, neg_sq] using shifted
   have triangle := integral_mono targetSquareIntegrable
     ((errorIntegrable.const_mul 2).add (meanSquareIntegrable.const_mul 2)) (fun address => by
+      change pulledTarget address ^ 2 ≤
+        2 * (pulledTarget address - xiAddressCellAverage system mass level pulledTarget address) ^ 2 +
+          2 * xiAddressCellAverage system mass level pulledTarget address ^ 2
       nlinarith [sq_nonneg (pulledTarget address - 2 * xiAddressCellAverage system mass level pulledTarget address)])
-  rw [integral_add (errorIntegrable.const_mul 2) (meanSquareIntegrable.const_mul 2),
-    integral_const_mul, integral_const_mul] at triangle
+  have triangleIntegral := integral_add (errorIntegrable.const_mul 2) (meanSquareIntegrable.const_mul 2)
+  rw [integral_const_mul, integral_const_mul] at triangleIntegral
+  replace triangle := triangle.trans_eq triangleIntegral
   have actualError := errorBound target targetFinite level
   have actualMean := meanBound level pulledTarget targetIntegrable
-  have mapped := integral_map
+  have mapped := integral_map (μ := mass.addressMeasure)
     (measurable_xiAddressLimit system rulesConnected lengths lengthsPositive distanceRate
       distanceRateGreaterThanOne metricEigenpair).aemeasurable target.continuous.abs.measurable.aestronglyMeasurable
   change (∫ point, |target point| ∂xiLimitMeasure system rulesConnected lengths lengthsPositive distanceRate

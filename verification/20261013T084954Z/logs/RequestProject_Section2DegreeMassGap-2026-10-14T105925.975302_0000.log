@@ -1,0 +1,5 @@
+'EIGS.primitive_spectralRadius_lt_strict_superinvariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.incident_weight_sum_lt_total' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.rule_terminal_weight_sum_lt_total' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.massMatrixR_mulVec_eq_rule_edge_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.degree_spectralRadius_lt_mass_of_primitive' depends on axioms: [propext, Classical.choice, Quot.sound]

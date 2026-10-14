@@ -1,0 +1,13 @@
+'EIGS.MeasuredGHP.measuredGHPDist_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.MeasuredGHP.measuredGHPDist_le_commonCost' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.MeasuredGHP.levyProkhorovDist_tendsto_zero_of_weak' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.MeasuredGHP.levyProkhorovEDist_map_isometry_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.MeasuredGHP.levyProkhorovDist_same_source_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.MeasuredGHP.measuredGHPDist_le_approximate_matching' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.MeasuredGHP.xiWeightedGHPDistance_le_common' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.MeasuredGHP.xiWeightedSpeed_GHP_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.MeasuredGHP.xiWeightedVertex_GHP_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.MeasuredGHP.xiCanonicalVertex_GHP_tendsto_zero_of_rules' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.MeasuredGHP.xiCanonicalSpeed_GHP_tendsto_zero_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -127,6 +127,7 @@ theorem xiClosedNashTwoScaleProperties (system : EIGSData K)
       rw [← representativeImage]
       exact BoundedContinuousFunction.coeFn_toLp 2 _ ℝ (BoundedContinuousFunction.mkOfCompact representative.val)
     have integralIdentity := integral_congr_ae (representativeAE.fun_comp abs)
+    simp only [Function.comp_apply] at integralIdentity
     have bound := continuousBound representative.val representativeFinite level
     rw [representativeImage, representativeEnergy, ← integralIdentity] at bound
     exact bound

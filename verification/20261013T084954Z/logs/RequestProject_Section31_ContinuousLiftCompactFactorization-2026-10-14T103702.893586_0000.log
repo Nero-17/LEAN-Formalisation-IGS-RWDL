@@ -1,0 +1,1 @@
+'IGS.Sec31.continuousLift_compact_of_half_time' depends on axioms: [propext, Classical.choice, Quot.sound]
