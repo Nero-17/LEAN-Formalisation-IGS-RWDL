@@ -1,0 +1,7 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\QuadraticEnergyRieszCutoffLower.lean:68:5: warning: unused variable `cutoffTimePositive`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'IGS.Sec31.geometric_cutoff_lower_scale_choice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroup_rieszRow_norm_sq_lower_at_cutoff_scale' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

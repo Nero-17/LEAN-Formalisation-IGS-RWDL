@@ -1,0 +1,7 @@
+'IGS.Sec31.selfAdjoint_semigroup_norm_sq_pairing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.selfAdjoint_semigroup_zero_of_double' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.selfAdjoint_continuous_semigroup_eq_zero_of_image_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.selfAdjoint_continuous_semigroup_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.selfAdjoint_continuous_semigroup_pairing_pos' depends on axioms: [propext, Classical.choice, Quot.sound]

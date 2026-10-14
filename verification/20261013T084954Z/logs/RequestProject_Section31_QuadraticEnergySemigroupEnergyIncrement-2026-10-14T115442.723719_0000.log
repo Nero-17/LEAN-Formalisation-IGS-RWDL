@@ -1,0 +1,3 @@
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroup_energy_increment_sq_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

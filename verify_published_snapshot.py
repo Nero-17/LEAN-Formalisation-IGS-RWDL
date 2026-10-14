@@ -38,7 +38,8 @@ def main():
     integration_path = evidence / manifest['shared_report']
     check_hash(integration_path, manifest['shared_report_sha256'])
     integration = json.loads(integration_path.read_text(encoding='utf-8'))
-    if integration['changed_during_verification'] or len(integration['verified_modules']) != 545:
+    if (integration['changed_during_verification'] or
+            len(integration['verified_modules']) != manifest['shared_dependency_modules']):
         raise ValueError('The published shared-dependency report is not the recorded passing batch')
     for name in integration['verified_source_files']:
         check_hash(repository / name, integration['snapshot_source_sha256'][name])
@@ -61,7 +62,7 @@ def main():
         if any(not set(audit['axioms']) <= allowed for audit in normalized):
             raise ValueError('An audit uses an unapproved axiom')
     targets = (evidence / 'verified-targets.txt').read_text(encoding='utf-8').splitlines()
-    print(json.dumps({'hash_checks': 'passed', 'shared_modules': 545,
+    print(json.dumps({'hash_checks': 'passed', 'shared_modules': manifest['shared_dependency_modules'],
         'independent_whole_files': len(manifest['records']), 'source_files': len(statuses),
         'note': 'Receipt verification only; full-paper completion is not claimed.'}))
     if arguments.rebuild:

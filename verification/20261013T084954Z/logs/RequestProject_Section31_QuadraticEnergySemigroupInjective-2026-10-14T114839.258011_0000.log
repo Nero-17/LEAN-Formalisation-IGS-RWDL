@@ -1,0 +1,2 @@
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroup_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroup_pairing_pos' depends on axioms: [propext, Classical.choice, Quot.sound]

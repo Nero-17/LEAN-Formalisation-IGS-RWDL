@@ -1,14 +1,14 @@
 # Current formalization audit
 
-Snapshot UTC: 2026-10-14T11:17:07.877976+00:00
+Snapshot UTC: 2026-10-14T12:43:29.928953+00:00
 
 Full-paper completion is **not** claimed. A clean printed axiom audit verifies the stated theorem; it does not remove mathematical assumptions from that statement. Actual-model consumers and generic conditional lemmas must be read separately.
 
 ## Verification scope
 
-The latest completed common-dependency batch has 545 modules and unchanged checked sources. Report SHA256: `c75281dbb70120997bf6d5a5de2e1f03d14d6f9bb7a62390de27d240c20c0210`. The 634-module integration is still running and is not represented as a passed batch.
+The latest completed common-dependency batch has 545 modules and unchanged checked sources. Report SHA256: `c75281dbb70120997bf6d5a5de2e1f03d14d6f9bb7a62390de27d240c20c0210`.
 
-The independent manifest contains 307 accepted whole-file receipts and 1089 printed audits. These overlap the common batch and are not a completion percentage. Every published Lean source has an exact hash and explicit status; unverified and failed drafts remain visible.
+The independent manifest contains 337 accepted whole-file receipts and 1161 printed audits. These overlap the common batch and are not a completion percentage. Every published Lean source has an exact hash and explicit status; unverified and failed drafts remain visible.
 
 ## Accepted milestones
 
@@ -25,12 +25,17 @@ The independent manifest contains 307 accepted whole-file receipts and 1089 prin
 | [QuadraticEnergyFunctionalRecovery](section3-diffusion/RequestProject/Section31/QuadraticEnergyFunctionalRecovery.lean) | `d61adcee3275cbf9c97b1c7bbc5ea20f5883c5ba4684ae81f78d96be78e278ad` | `09b3ddedd0eed63e0920eb4e898fec0b806ec5a14ae6499c6918ca4459bf3c04` | 2 |
 | [Section2PrimitiveIntegerGrowth](section2-random-walks/RequestProject/Section2PrimitiveIntegerGrowth.lean) | `8fd4bb6aea589da3f0d53a2cb48c66fcc56c9e440b790c3c3de71f2ef19b7aa2` | `5175a3e066e29681d95a4c0872a3bccda87c916285962e371e14830a27afc972` | 2 |
 | [Section2DegreeMassGap](section2-random-walks/RequestProject/Section2DegreeMassGap.lean) | `5c463d9c1f8c716864944ed06b9815e9990e8361caa3290e09122f242937fb78` | `a11e58f848959bd5adc1045a3c23ec5f0dcf610323fd3f02423132962245aed7` | 5 |
+| [EIGSStrictPositiveJointContinuousHeatKernelDensityOfRules](section3-diffusion/RequestProject/Section31/EIGSStrictPositiveJointContinuousHeatKernelDensityOfRules.lean) | `858a6074373fbe7e061e9b792bb16f091ef70bd588771b87e5edf799bbbe7003` | `5d2a83bd08495adb353d56980da396f50daba01f957204d5b78f1aa1f3593a5f` | 2 |
+| [QuadraticEnergySemigroupFormContraction](section3-diffusion/RequestProject/Section31/QuadraticEnergySemigroupFormContraction.lean) | `4f0b60bade7fcfa471dc745b14dc91daeb38341a3a0253be8a848af71a83bd54` | `4dc891ada658b188ed271a7ebf350ff581ef3f06f15d2ef66db37d01dfa376fb` | 1 |
+| [QuadraticEnergySemigroupEnergyIncrement](section3-diffusion/RequestProject/Section31/QuadraticEnergySemigroupEnergyIncrement.lean) | `6bcb18c407c5a52f7be10f8c3ad13d098cf2012daec77d0e1391e904ac657ee5` | `203075416e800b26a29139e3cfec2887c2243e195b8f775d115e9e92b97b874f` | 1 |
+| [QuadraticEnergySemigroupPointIncrement](section3-diffusion/RequestProject/Section31/QuadraticEnergySemigroupPointIncrement.lean) | `7da83b6f239c9f99b68e58e3e59869b25cf8d21e530a35e5f9fcaa3ca13ba795` | `2d318616b9321968bd834e26442d94d50010b4aa7afa760bb7ff3c2285dc6344` | 2 |
+| [EIGSAddressStarAnchorEnergy](section3-diffusion/RequestProject/Section31/EIGSAddressStarAnchorEnergy.lean) | `a170da94057814ca1b7409cfc1167961dd8e7366a6489f1d20155b5fecc2d4fd` | `fe769b628056416d4356349d2a5426a470858d61a615ce510d876cc37d70c878` | 2 |
 
 ## Proven scope and exact gaps
 
 The same actual closed L² semigroup is identified with the global continuous-path family and the original discrete semigroup limit. Everywhere finite natural-filtration stopping times with continuous terminal tests are supplied internally. Usual/completed filtration, bounded Borel tests, potentially infinite stopping times on their finite event, and future-path strong Markov/Hunt consumers remain pending.
 
-For each positive time the same actual semigroup has a spatially jointly continuous symmetric nonnegative probability density and the global small-time heat upper bound. This snapshot does not yet certify joint continuity in time or strict positivity. All-time bounds use a truncated time scale, not an incorrect all-time power decay on a compact conservative space.
+For all positive times and spatial points, the same actual five-rule closed semigroup has a symmetric strictly positive probability density jointly continuous in time and both spatial variables, with the global small-time heat upper bound. The strict-positivity consumer supplies all analytic inputs internally. No resistance-growth-greater-than-one restriction is added. All-time bounds use a truncated time scale, not an incorrect all-time power decay on a compact conservative space.
 
 Finite-born point evaluations extend to the same closed energy domain and are recovered along the same core sequences. Identifying them with an arbitrary continuous closed-domain representative needs the local address-star bridge. Finite-born two-sided pointwise heat bounds, typical-point logarithmic lower bounds and spectral dimensions remain open in the actual-model development. The actual primitive degree matrix growth and strict degree-to-mass spectral gap are independently verified.
 
@@ -41,3 +46,5 @@ Original measured GHP is verified. Final GHPS still requires normalized-metric a
 Adopted manuscript SHA256: `06783166c1b05e8340edd98956319445b5a55056b47c2c9c60b65ce782746792`. The approved changes are three green means, eight green-arrow reversals and four boundary matrix entries, and one orientation of an undirected simple rule graph. Antiparallel counterexamples are retained as correction evidence.
 
 The active round is `20261013T084954Z`, beginning at 2026-10-13 08:49:54 UTC. Its authoritative [complete round record](https://drive.google.com/file/d/1lRD_dypj77gjEx4nNGlUBZqrml7krj6d/view) is updated in place. The same [latest progress file](https://drive.google.com/file/d/1sIIrFB6J5MijuZ3ndbsNAeNaYhA3R7dH/view) records major changes. Historical local paths in logs are diagnostic provenance; portable manifests use relative paths.
+
+The 690-module shared integration is running. The 634-module historical snapshot passed, but its derivative source predates instance naming changes. Neither is claimed as a current passed shared batch.

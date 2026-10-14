@@ -81,13 +81,16 @@ theorem closedSemigroup_positive_correlation
       (closedSemigroup_add domain form nonnegative closable domainDense) positivity
       (closedSemigroup_pairing_pos domain form nonnegative closable domainDense)
       first second firstNonnegative secondNonnegative parameter.toNNReal time parameterAtMost correlationZero
-  have zeroEverywhere := (closedSemigroup_scalar_analyticOnNhd domain form nonnegative closable domainDense first second).
-    eqOn_zero_of_preconnected_of_eventuallyEq_zero isPreconnected_Ioi
-      (show (time : ℝ) / 2 ∈ Set.Ioi (0 : ℝ) by dsimp; linarith) zeroNeighborhood
+  have zeroEverywhere := AnalyticOnNhd.eqOn_zero_of_preconnected_of_eventuallyEq_zero
+    (closedSemigroup_scalar_analyticOnNhd domain form nonnegative closable domainDense first second)
+    isPreconnected_Ioi
+      (show (time : ℝ) / 2 ∈ Set.Ioi (0 : ℝ) from div_pos timeRealPositive (by norm_num)) zeroNeighborhood
   have zeroSequence (index : ℕ) : inner ℝ first
       (closedSemigroup domain form nonnegative closable domainDense (index + 1) second) = 0 := by
     have identity := zeroEverywhere
-      (show (((index : ℝ≥0) + 1 : ℝ≥0) : ℝ) ∈ Set.Ioi (0 : ℝ) by dsimp; positivity)
+      (show (((index : ℝ≥0) + 1 : ℝ≥0) : ℝ) ∈ Set.Ioi (0 : ℝ) by
+        change (0 : ℝ) < (index : ℝ) + 1
+        positivity)
     simpa only [Real.toNNReal_coe, Pi.zero_apply] using identity
   have scalarLimit := (innerSL ℝ first).continuous.continuousAt.tendsto.comp
     (closedSemigroup_tendsto_mean law domain form nonnegative closable domainDense constant
@@ -99,7 +102,7 @@ theorem closedSemigroup_positive_correlation
       (closedSemigroup domain form nonnegative closable domainDense (index + 1) second)) atTop (𝓝 0) := by
     simpa only [zeroSequence] using (tendsto_const_nhds : Tendsto (fun _ : ℕ => (0 : ℝ)) atTop (𝓝 0))
   have meanPairingPositive : 0 < inner ℝ first ((∫ point, second point ∂law) • Lp.const 2 law (1 : ℝ)) := by
-    rw [inner_smul_right, real_inner_comm first (Lp.const 2 law (1 : ℝ)), L2_inner_one_eq_integral]
+    rw [inner_smul_right, ← real_inner_comm first (Lp.const 2 law (1 : ℝ)), L2_inner_one_eq_integral law first]
     exact mul_pos
       (probability_L2_integral_pos_of_nonnegative_nonzero law second secondNonnegative secondNonzero)
       (probability_L2_integral_pos_of_nonnegative_nonzero law first firstNonnegative firstNonzero)

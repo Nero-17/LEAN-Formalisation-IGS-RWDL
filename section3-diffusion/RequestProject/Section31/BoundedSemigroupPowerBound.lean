@@ -11,7 +11,7 @@ namespace IGS.Sec31.BoundedSemigroupEnergy
 
 variable {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℝ H] [CompleteSpace H]
 
-noncomputable local instance : NormedAlgebra ℚ (H →L[ℝ] H) :=
+noncomputable local instance powerBoundNormedAlgebraRat : NormedAlgebra ℚ (H →L[ℝ] H) :=
   NormedAlgebra.restrictScalars ℚ ℝ (H →L[ℝ] H)
 
 theorem positive_exp_norm_le_one

@@ -1,0 +1,1 @@
+'IGS.Sec31.continuous_kernel_joint_of_compact_windows' depends on axioms: [propext, Classical.choice, Quot.sound]

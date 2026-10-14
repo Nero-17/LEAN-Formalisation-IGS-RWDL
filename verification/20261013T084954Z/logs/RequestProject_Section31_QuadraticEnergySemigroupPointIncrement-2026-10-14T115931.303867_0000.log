@@ -1,0 +1,9 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\QuadraticEnergySemigroupPointIncrement.lean:41:42: warning: unused variable `exponentStrict`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'IGS.Sec31.QuadraticEnergySpace.nonnegative_quadraticForm_sub_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroup_exists_point_energy_increment' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

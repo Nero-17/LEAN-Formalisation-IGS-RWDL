@@ -1,0 +1,10 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\GeometricDiagonalHeatUpper.lean:116:10: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\GeometricDiagonalHeatUpper.lean:116:10: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+'IGS.Sec31.diagonal_le_of_square_le_multiple' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.geometric_diagonal_heat_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.geometric_diagonal_heat_upper_power_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.degree_corrected_diagonal_heat_upper' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,9 @@
+'IGS.Sec31.QuadraticEnergySpace.smallStep_energy_correction_eq_yosida_pairing' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.yosida_pairing_le_closed_energy' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.yosidaSmoothed_energy_le_closed_energy' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

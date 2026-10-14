@@ -11,7 +11,7 @@ open MeasureTheory
 
 variable {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℝ H] [CompleteSpace H]
 
-noncomputable local instance : NormedAlgebra ℚ (H →L[ℝ] H) :=
+noncomputable local instance derivativeBoundNormedAlgebraRat : NormedAlgebra ℚ (H →L[ℝ] H) :=
   NormedAlgebra.restrictScalars ℚ ℝ (H →L[ℝ] H)
 
 theorem generator_exp_apply_eq (generator : H →L[ℝ] H) (values : H) (time : ℝ) :

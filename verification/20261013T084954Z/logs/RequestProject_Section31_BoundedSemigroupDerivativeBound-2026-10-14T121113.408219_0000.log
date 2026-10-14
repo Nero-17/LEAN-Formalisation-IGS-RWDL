@@ -1,0 +1,15 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\BoundedSemigroupDerivativeBound.lean:17:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.BoundedSemigroupEnergy.generator_exp_apply_eq`:
+  [CompleteSpace H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CompleteSpace H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'IGS.Sec31.BoundedSemigroupEnergy.generator_exp_apply_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.BoundedSemigroupEnergy.generator_orbit_norm_sq_antitone' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.BoundedSemigroupEnergy.energy_dissipation_between' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.BoundedSemigroupEnergy.generator_exp_apply_norm_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.BoundedSemigroupEnergy.generator_exp_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]

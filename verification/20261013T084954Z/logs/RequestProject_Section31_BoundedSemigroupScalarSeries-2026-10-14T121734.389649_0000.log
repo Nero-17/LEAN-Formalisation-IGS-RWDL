@@ -1,0 +1,3 @@
+'IGS.Sec31.BoundedSemigroupEnergy.bounded_generator_scalar_centered_series' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

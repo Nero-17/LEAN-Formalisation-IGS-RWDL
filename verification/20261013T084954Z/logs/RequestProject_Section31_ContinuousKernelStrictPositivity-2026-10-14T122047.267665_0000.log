@@ -1,0 +1,16 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\ContinuousKernelStrictPositivity.lean:21:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.continuousOperatorKernelRow_eq_embedded_density`:
+  [BorelSpace Space]
+  [IsFiniteMeasure law]
+  [law.IsOpenPosMeasure]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [BorelSpace Space] [IsFiniteMeasure law] [law.IsOpenPosMeasure] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\ContinuousKernelStrictPositivity.lean:66:4: warning: 'change 0 ≤ continuousOperatorKernelRow lifted point other' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'IGS.Sec31.continuousOperatorKernelRow_eq_embedded_density' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.continuousOperatorKernelRow_density_properties' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.continuous_kernel_strict_positive_of_same_closed_semigroup' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

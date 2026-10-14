@@ -1,0 +1,3 @@
+'IGS.Sec31.L2_inner_nonnegative_of_ae_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.L2_inner_eq_zero_iff_product_ae_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.positive_L2_operator_zero_set_inclusion' depends on axioms: [propext, Classical.choice, Quot.sound]

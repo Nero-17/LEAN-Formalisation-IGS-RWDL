@@ -79,8 +79,8 @@ theorem positive_L2_operator_zero_set_inclusion
     rw [identity]
     by_cases member : point ∈ zeroSet
     · have imageZero : operator values point = 0 := member
-      simp only [Set.indicator_of_mem member, imageZero, inner_zero_right]
-    · simp only [Set.indicator_of_notMem member, inner_zero_left]
+      simp only [Set.indicator_of_mem member, imageZero, inner_zero_right, Pi.zero_apply]
+    · simp only [Set.indicator_of_notMem member, inner_zero_left, Pi.zero_apply]
   have pairingNonnegative := L2_inner_nonnegative_of_ae_nonnegative law restricted
     (operator values - operator restricted) restrictedNonnegative
     ((Lp.coeFn_nonneg _).mpr (sub_nonneg.mpr (operatorMonotone restrictedLe)))

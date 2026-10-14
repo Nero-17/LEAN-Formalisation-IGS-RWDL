@@ -1,0 +1,5 @@
+'IGS.Sec31.UsualAugmentation.completion_trim_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.UsualAugmentation.setIntegral_completion_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.continuousPath_nullAugmentation_setIntegral_markov' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

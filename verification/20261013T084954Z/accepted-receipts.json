@@ -1,13 +1,13 @@
 {
-  "snapshot_utc": "2026-10-14T11:17:07.877976+00:00",
+  "snapshot_utc": "2026-10-14T12:43:29.928953+00:00",
   "round": "20261013T084954Z",
   "compiler": "Lean 4.28.0",
   "mathlib": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
   "shared_dependency_modules": 545,
   "shared_report": "integration-545.json",
   "shared_report_sha256": "c75281dbb70120997bf6d5a5de2e1f03d14d6f9bb7a62390de27d240c20c0210",
-  "independent_whole_file_count": 307,
-  "independent_audit_count": 1089,
+  "independent_whole_file_count": 337,
+  "independent_audit_count": 1161,
   "records": [
     {
       "module": "RequestProject.Section31.EIGSL2EnergyConstants",
@@ -8963,8 +8963,8 @@
     {
       "module": "RequestProject.Section31.BoundedSemigroupDerivativeBound",
       "source": "section3-diffusion/RequestProject/Section31/BoundedSemigroupDerivativeBound.lean",
-      "source_sha256": "0d24b647041b5dedd1c983499d1cda2b24ff856468d874c1a14dc747df45a9fd",
-      "log": "logs/RequestProject_Section31_BoundedSemigroupDerivativeBound-2026-10-14T100938.156841_0000.log",
+      "source_sha256": "2e6fcce1c787273b3767a222d7bd3dda56c58540ef7fa804047c525c8a8b2ac7",
+      "log": "logs/RequestProject_Section31_BoundedSemigroupDerivativeBound-2026-10-14T121113.408219_0000.log",
       "log_sha256": "08577fc75e34bcbdc138e6d69e122ca87607b48759b9a10ac60dc768829295fc",
       "exit_code": 0,
       "audits": [
@@ -9748,7 +9748,7 @@
       "module": "RequestProject.Section31.QuadraticEnergyYosidaDerivativeBound",
       "source": "section3-diffusion/RequestProject/Section31/QuadraticEnergyYosidaDerivativeBound.lean",
       "source_sha256": "2b90478b738e018ab2f46f8f91ca49a4cc8708d6b993e0ac20e77e327aeb38a4",
-      "log": "logs/RequestProject_Section31_QuadraticEnergyYosidaDerivativeBound-2026-10-14T110318.381331_0000.log",
+      "log": "logs/RequestProject_Section31_QuadraticEnergyYosidaDerivativeBound-2026-10-14T121448.723955_0000.log",
       "log_sha256": "8889ef86e1f3257cb4565cb36f2e04a73c16b21c1fa27a4d228162c9b4615c65",
       "exit_code": 0,
       "audits": [
@@ -9770,6 +9770,882 @@
         },
         {
           "declaration": "IGS.Sec31.QuadraticEnergySpace.yosidaGenerator_semigroup_norm_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.BoundedSemigroupPowerBound",
+      "source": "section3-diffusion/RequestProject/Section31/BoundedSemigroupPowerBound.lean",
+      "source_sha256": "494d367d683713f49a9f18b5afc124e5411e251f2a2abe192f408984395f52d2",
+      "log": "logs/RequestProject_Section31_BoundedSemigroupPowerBound-2026-10-14T121624.881358_0000.log",
+      "log_sha256": "ea49e2ebdbdd9e0cd962a39a7c07de39b567aaaa7f1fcfb7ad070625db04112f",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.BoundedSemigroupEnergy.positive_exp_norm_le_one",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.BoundedSemigroupEnergy.generator_power_exp_factorization",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.BoundedSemigroupEnergy.generator_power_exp_norm_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.BoundedSemigroupEnergy.generator_power_exp_factorial_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.BoundedSemigroupEnergy.generator_scalar_coefficient_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ScalarCoefficientSubsequence",
+      "source": "section3-diffusion/RequestProject/Section31/ScalarCoefficientSubsequence.lean",
+      "source_sha256": "bd1f29cf14d108760a21c560a95e7346740fc64a824b41323bbb359e1b2954c7",
+      "log": "logs/RequestProject_Section31_ScalarCoefficientSubsequence-2026-10-14T111921.278954_0000.log",
+      "log_sha256": "2f18e0231ed5e983dd9abf4663792cf69e9456e529bca152db714612e0b15e49",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.exists_scalar_coefficient_subsequence",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.BoundedSemigroupScalarSeries",
+      "source": "section3-diffusion/RequestProject/Section31/BoundedSemigroupScalarSeries.lean",
+      "source_sha256": "c933ad29a86e124d99d5fc840a46bb9ad477433b3cfa7a790a0b4ce2f7fb6eb7",
+      "log": "logs/RequestProject_Section31_BoundedSemigroupScalarSeries-2026-10-14T121734.389649_0000.log",
+      "log_sha256": "2e9f861d6e60c15dc83f79cb02cf929ed9846b5b4ba3169d082e74bed6fcf50b",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.BoundedSemigroupEnergy.bounded_generator_scalar_centered_series",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.GeometricDiagonalHeatUpper",
+      "source": "section3-diffusion/RequestProject/Section31/GeometricDiagonalHeatUpper.lean",
+      "source_sha256": "d1fff0b1a382da0da38737de02780d3b55d9bcc6a484751d8bf193c92fb48da9",
+      "log": "logs/RequestProject_Section31_GeometricDiagonalHeatUpper-2026-10-14T113624.514156_0000.log",
+      "log_sha256": "f27b9a37169e7d722a49f960e0a5f6bca439d90c2f85777cbdcadf56641a3d10",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.diagonal_le_of_square_le_multiple",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.geometric_diagonal_heat_upper",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.geometric_diagonal_heat_upper_power_law",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.degree_corrected_diagonal_heat_upper",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.QuadraticEnergySemigroupEvaluationBound",
+      "source": "section3-diffusion/RequestProject/Section31/QuadraticEnergySemigroupEvaluationBound.lean",
+      "source_sha256": "f723aa16d2b3115974541987ff0b54cc508c343e355a553f71216d9a5f89bbe5",
+      "log": "logs/RequestProject_Section31_QuadraticEnergySemigroupEvaluationBound-2026-10-14T113757.046727_0000.log",
+      "log_sha256": "9240dac5061f8dda35ce5cf11251c9fc772aadbaa6de04cfa08b9e3468939bdf",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.QuadraticEnergySpace.closedSemigroup_exists_evaluation_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.QuadraticEnergySpace.closedSemigroup_exists_evaluation_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ContinuousKernelJointContinuity",
+      "source": "section3-diffusion/RequestProject/Section31/ContinuousKernelJointContinuity.lean",
+      "source_sha256": "dbac63f33c71428405769aa4963015d322fca0222703534c7004338a3e460f85",
+      "log": "logs/RequestProject_Section31_ContinuousKernelJointContinuity-2026-10-14T114053.599687_0000.log",
+      "log_sha256": "d3ac7a7f0578b32a258472150930a290f13e44cdf815b6ed6c99cc59c90dbcbd",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.continuous_kernel_joint_of_compact_windows",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.QuadraticEnergyRieszDiagonal",
+      "source": "section3-diffusion/RequestProject/Section31/QuadraticEnergyRieszDiagonal.lean",
+      "source_sha256": "f8cea31d1591905172ecbf0526949dfcfed274f266323f868d43e4cf571b3917",
+      "log": "logs/RequestProject_Section31_QuadraticEnergyRieszDiagonal-2026-10-14T113927.803355_0000.log",
+      "log_sha256": "ba01ddeebc9d1de969bfad21af28d95180d3c8d4e61a3df4ff7a703c20175703",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.QuadraticEnergySpace.closedSemigroup_riesz_diagonal_recurrence",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ScalarPowerSeriesLimit",
+      "source": "section3-diffusion/RequestProject/Section31/ScalarPowerSeriesLimit.lean",
+      "source_sha256": "922393497d562755ea3737634af5985e2a5c0eb0bd14df17dcec7fdb16dee563",
+      "log": "logs/RequestProject_Section31_ScalarPowerSeriesLimit-2026-10-14T113838.151794_0000.log",
+      "log_sha256": "04ce8e41092d66068900b1f52bf3ff26f4acd5ce97132ebb5c3bfd3b3a11fde2",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.scalar_series_limit_hasFPowerSeriesAt",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.scalar_series_pointwise_limit_analyticAt",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.QuadraticEnergySemigroupScalarAnalytic",
+      "source": "section3-diffusion/RequestProject/Section31/QuadraticEnergySemigroupScalarAnalytic.lean",
+      "source_sha256": "d8697c520dd62ac89a00189c819b6f11256f19a032006f3f21e51e91299d260e",
+      "log": "logs/RequestProject_Section31_QuadraticEnergySemigroupScalarAnalytic-2026-10-14T121823.646705_0000.log",
+      "log_sha256": "c1858fd4276e09671d36b3a3399a93b4294d303ad0ca070adaf4057f6a1ad6e5",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.QuadraticEnergySpace.closedSemigroup_scalar_analyticAt",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.QuadraticEnergySpace.closedSemigroup_scalar_analyticOnNhd",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.SelfAdjointSemigroupInjective",
+      "source": "section3-diffusion/RequestProject/Section31/SelfAdjointSemigroupInjective.lean",
+      "source_sha256": "671dc68fdf82109a814d3b7abaff5859fda61a6bc1bc434b714b31a4b0e9ff19",
+      "log": "logs/RequestProject_Section31_SelfAdjointSemigroupInjective-2026-10-14T113921.626108_0000.log",
+      "log_sha256": "f5f0d06034fee52c49fdfe49d7e14838a3b18c47d2425022221b92c0bfc92b0e",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.selfAdjoint_semigroup_norm_sq_pairing",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.selfAdjoint_semigroup_zero_of_double",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.selfAdjoint_continuous_semigroup_eq_zero_of_image_zero",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.selfAdjoint_continuous_semigroup_injective",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.selfAdjoint_continuous_semigroup_pairing_pos",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSJointContinuousHeatKernelDensityOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSJointContinuousHeatKernelDensityOfRules.lean",
+      "source_sha256": "f18ad212f61fc4cfecc0975b5b8fb66b0f71a7d3cfa40b92587eec516965e5c3",
+      "log": "logs/RequestProject_Section31_EIGSJointContinuousHeatKernelDensityOfRules-2026-10-14T114114.026344_0000.log",
+      "log_sha256": "d01a4588b1e31ad5317d9ad0c47937f514d0ea5c78c17c878a75b53d2aecabd8",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiJointContinuousHeatKernelDensityProperties_of_compactSmoothing",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiJointContinuousHeatKernelDensity_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.QuadraticEnergySemigroupInjective",
+      "source": "section3-diffusion/RequestProject/Section31/QuadraticEnergySemigroupInjective.lean",
+      "source_sha256": "e677c77843b8b879a4613032145144740b84a2cde3b478ebad6f14b56903e3fb",
+      "log": "logs/RequestProject_Section31_QuadraticEnergySemigroupInjective-2026-10-14T114839.258011_0000.log",
+      "log_sha256": "524acd9912c22608e466ed5aad305bc8983c6a46add472e0ded34c7133ba3aff",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.QuadraticEnergySpace.closedSemigroup_injective",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.QuadraticEnergySpace.closedSemigroup_pairing_pos",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ContinuousKernelHalfTimeDiagonal",
+      "source": "section3-diffusion/RequestProject/Section31/ContinuousKernelHalfTimeDiagonal.lean",
+      "source_sha256": "2e11c1bd512d6f083cfe98d7ffd2a84dd6a0ea85dfe185521078fb0257d45ce3",
+      "log": "logs/RequestProject_Section31_ContinuousKernelHalfTimeDiagonal-2026-10-14T114556.997191_0000.log",
+      "log_sha256": "f1f50b91fb92ee74bff2504ed672a1d262371927c1dde07d3bf01e8003eff25f",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.continuousKernel_diagonal_eq_half_time_row",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ContinuousPathNullAugmentationMarkov",
+      "source": "section3-diffusion/RequestProject/Section31/ContinuousPathNullAugmentationMarkov.lean",
+      "source_sha256": "83291d6c059c3368547918d437575ed0f73555e5fddc618effa81bd94ec85362",
+      "log": "logs/RequestProject_Section31_ContinuousPathNullAugmentationMarkov-2026-10-14T115537.600262_0000.log",
+      "log_sha256": "b06bf30bad2a1ba6f609bc1360bce71f4ae2d50e690d27369c7e7eaeaa2f6cc8",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.UsualAugmentation.completion_trim_eq",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.UsualAugmentation.setIntegral_completion_eq",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.continuousPath_nullAugmentation_setIntegral_markov",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSAddressIncidentStar",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSAddressIncidentStar.lean",
+      "source_sha256": "d366b9acfc707525aae6cbf1b680c2b040cf326f6f9128e1a1b6ab9f2f68ca82",
+      "log": "logs/RequestProject_Section31_EIGSAddressIncidentStar-2026-10-14T114709.280940_0000.log",
+      "log_sha256": "a2718513b4c56cccebaf810efdb5c5dfeb0a05a8238a442403c160097c8abcde",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiEdgeStarMultiplicity_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiEdgeStarMultiplicity_sum",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiAddressStarWeight_integral",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiAddressStarWeight_mass_comparison",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiAddressStarWeight_support_mesh",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.PositiveL2OperatorSupport",
+      "source": "section3-diffusion/RequestProject/Section31/PositiveL2OperatorSupport.lean",
+      "source_sha256": "e3f556863de197bdab9ea1cf2ce52589d7574db1599396f18d39d118b276f577",
+      "log": "logs/RequestProject_Section31_PositiveL2OperatorSupport-2026-10-14T115001.028094_0000.log",
+      "log_sha256": "d7864f33efb9d523be61f00cbae93cf2e5cbafd4c1b0163e37fcd0aa879e9503",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.L2_inner_nonnegative_of_ae_nonnegative",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.L2_inner_eq_zero_iff_product_ae_zero",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.positive_L2_operator_zero_set_inclusion",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.QuadraticEnergyYosidaFormBound",
+      "source": "section3-diffusion/RequestProject/Section31/QuadraticEnergyYosidaFormBound.lean",
+      "source_sha256": "ba28b997435ed5d81142a7e229f37d9c18df36a79b4258b2cb2a65ae60ed6bb9",
+      "log": "logs/RequestProject_Section31_QuadraticEnergyYosidaFormBound-2026-10-14T115003.461384_0000.log",
+      "log_sha256": "7888b0f51d7dcbe1981cf33a2278294f454469eed3ae3b44acf0b74e185018d7",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.QuadraticEnergySpace.smallStep_energy_correction_eq_yosida_pairing",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.QuadraticEnergySpace.yosida_pairing_le_closed_energy",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.QuadraticEnergySpace.yosidaSmoothed_energy_le_closed_energy",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.PositiveL2SemigroupZeroInterval",
+      "source": "section3-diffusion/RequestProject/Section31/PositiveL2SemigroupZeroInterval.lean",
+      "source_sha256": "ffb9b878da62b34dc7dfadfff423aa69eb037dcbb207a663147c65930c5ff8e5",
+      "log": "logs/RequestProject_Section31_PositiveL2SemigroupZeroInterval-2026-10-14T115026.458938_0000.log",
+      "log_sha256": "d5620929663ebf22a595367a99dc663c300c6fd6b6f3274025a0018d80c5c85e",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.positive_L2_semigroup_zero_correlation_of_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.BoundedSemigroupEnergyIncrement",
+      "source": "section3-diffusion/RequestProject/Section31/BoundedSemigroupEnergyIncrement.lean",
+      "source_sha256": "9c3b058391a3ab47df697fb3606340a866766688902810e03b84206026ad725e",
+      "log": "logs/RequestProject_Section31_BoundedSemigroupEnergyIncrement-2026-10-14T115151.753911_0000.log",
+      "log_sha256": "8501d42f62baedf20e8a0bec46c04774d433ee510c4b26202385c975a61f6a64",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.BoundedSemigroupEnergyIncrement.generator_exp_pairing_half_energy",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.BoundedSemigroupEnergyIncrement.exp_pairing_sub_eq_integral",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.BoundedSemigroupEnergyIncrement.positive_exp_apply_sub_self_sq_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.QuadraticEnergySemigroupPositiveCorrelation",
+      "source": "section3-diffusion/RequestProject/Section31/QuadraticEnergySemigroupPositiveCorrelation.lean",
+      "source_sha256": "fceed9cff98149c44e2ad76d6270615cb7c24ff753e99f1f858a6dfb00fedb87",
+      "log": "logs/RequestProject_Section31_QuadraticEnergySemigroupPositiveCorrelation-2026-10-14T121855.469835_0000.log",
+      "log_sha256": "e1210a116588820e37a425c33dfd13cc07c8a9dc4b9738f134dc93bfa57aaceb",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.probability_L2_integral_pos_of_nonnegative_nonzero",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.QuadraticEnergySpace.closedSemigroup_positive_correlation",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.QuadraticEnergySemigroupFormContraction",
+      "source": "section3-diffusion/RequestProject/Section31/QuadraticEnergySemigroupFormContraction.lean",
+      "source_sha256": "4f0b60bade7fcfa471dc745b14dc91daeb38341a3a0253be8a848af71a83bd54",
+      "log": "logs/RequestProject_Section31_QuadraticEnergySemigroupFormContraction-2026-10-14T115226.918004_0000.log",
+      "log_sha256": "4dc891ada658b188ed271a7ebf350ff581ef3f06f15d2ef66db37d01dfa376fb",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.QuadraticEnergySpace.closedSemigroup_exists_energy_contraction",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.QuadraticEnergySemigroupEnergyIncrement",
+      "source": "section3-diffusion/RequestProject/Section31/QuadraticEnergySemigroupEnergyIncrement.lean",
+      "source_sha256": "6bcb18c407c5a52f7be10f8c3ad13d098cf2012daec77d0e1391e904ac657ee5",
+      "log": "logs/RequestProject_Section31_QuadraticEnergySemigroupEnergyIncrement-2026-10-14T115442.723719_0000.log",
+      "log_sha256": "203075416e800b26a29139e3cfec2887c2243e195b8f775d115e9e92b97b874f",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.QuadraticEnergySpace.closedSemigroup_energy_increment_sq_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSDegreeHeatExponent",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSDegreeHeatExponent.lean",
+      "source_sha256": "492b5eb7358784d834bc0ae03f981f79230662e7a528635ef96d572734739daf",
+      "log": "logs/RequestProject_Section31_EIGSDegreeHeatExponent-2026-10-14T115505.209770_0000.log",
+      "log_sha256": "5f3569c29f83c86d2934947e4424759c3dac1b89cf14af74fc6451565b4c0565",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.degree_heat_exponent_between_zero_one",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiFiniteBorn_heat_exponent_between_zero_one",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ContinuousPathUsualStoppingMarkov",
+      "source": "section3-diffusion/RequestProject/Section31/ContinuousPathUsualStoppingMarkov.lean",
+      "source_sha256": "186e95df8d38cc04add932a317ed728da47d2faa2b12fd50e71fabc5865a0c74",
+      "log": "logs/RequestProject_Section31_ContinuousPathUsualStoppingMarkov-2026-10-14T120533.534888_0000.log",
+      "log_sha256": "652841d175c1dea8e47662f22dc8af256ab8e8b8a4bb77408e88bdca9ea4bcbc",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.canonicalNatural_le_usualPathFiltration",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.canonicalUsualPast_measurable_augmented_later",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.canonical_completion_eval_continuousTest_integrable",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.continuousPath_usual_setIntegral_markov",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.continuousPath_usual_finite_stoppingTime_setIntegral_markov",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.continuousPath_usual_finite_stoppingTime_condExp_markov",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSClosedSemigroupPositiveCorrelation",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSClosedSemigroupPositiveCorrelation.lean",
+      "source_sha256": "a531638f43911935a3eabbd8deaf83c8055c3d6177dc1b2c27c4c2cce1be5354",
+      "log": "logs/RequestProject_Section31_EIGSClosedSemigroupPositiveCorrelation-2026-10-14T121921.967524_0000.log",
+      "log_sha256": "4b731090813d58b6e93c351d9b8afc650530e765dbea406433e5ee3e5afdd71a",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiClosedSemigroupPositiveCorrelationProperties_of_dense_core",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiClosedSemigroupPositiveCorrelation_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.QuadraticEnergySemigroupPointIncrement",
+      "source": "section3-diffusion/RequestProject/Section31/QuadraticEnergySemigroupPointIncrement.lean",
+      "source_sha256": "7da83b6f239c9f99b68e58e3e59869b25cf8d21e530a35e5f9fcaa3ca13ba795",
+      "log": "logs/RequestProject_Section31_QuadraticEnergySemigroupPointIncrement-2026-10-14T115931.303867_0000.log",
+      "log_sha256": "2d318616b9321968bd834e26442d94d50010b4aa7afa760bb7ff3c2285dc6344",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.QuadraticEnergySpace.nonnegative_quadraticForm_sub_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.QuadraticEnergySpace.closedSemigroup_exists_point_energy_increment",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ContinuousKernelStrictPositivity",
+      "source": "section3-diffusion/RequestProject/Section31/ContinuousKernelStrictPositivity.lean",
+      "source_sha256": "d8ac53c310f5aa3486a39710043ae1acda49a83a9e6b81a15ccc687b12fae948",
+      "log": "logs/RequestProject_Section31_ContinuousKernelStrictPositivity-2026-10-14T122047.267665_0000.log",
+      "log_sha256": "ddca3b5301b81f0328c62b9d9782494be24eefa71aa34fd0dd12106b052883cc",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.continuousOperatorKernelRow_eq_embedded_density",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.continuousOperatorKernelRow_density_properties",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.continuous_kernel_strict_positive_of_same_closed_semigroup",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSStrictPositiveJointContinuousHeatKernelDensityOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSStrictPositiveJointContinuousHeatKernelDensityOfRules.lean",
+      "source_sha256": "858a6074373fbe7e061e9b792bb16f091ef70bd588771b87e5edf799bbbe7003",
+      "log": "logs/RequestProject_Section31_EIGSStrictPositiveJointContinuousHeatKernelDensityOfRules-2026-10-14T122110.667906_0000.log",
+      "log_sha256": "5d2a83bd08495adb353d56980da396f50daba01f957204d5b78f1aa1f3593a5f",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiStrictPositiveJointContinuousHeatKernelDensityProperties_of_density",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiStrictPositiveJointContinuousHeatKernelDensity_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSAddressStarAnchorEnergy",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSAddressStarAnchorEnergy.lean",
+      "source_sha256": "a170da94057814ca1b7409cfc1167961dd8e7366a6489f1d20155b5fecc2d4fd",
+      "log": "logs/RequestProject_Section31_EIGSAddressStarAnchorEnergy-2026-10-14T122523.980654_0000.log",
+      "log_sha256": "fe769b628056416d4356349d2a5426a470858d61a615ce510d876cc37d70c878",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiAddressStarWeight_integrable_mul",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiAddressStar_anchor_energy_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.QuadraticEnergyRieszCutoffLower",
+      "source": "section3-diffusion/RequestProject/Section31/QuadraticEnergyRieszCutoffLower.lean",
+      "source_sha256": "808bc11e84d3f0eeed347e02daa68b5968618fe8539e6f5b90d3d23fd2f46772",
+      "log": "logs/RequestProject_Section31_QuadraticEnergyRieszCutoffLower-2026-10-14T123952.521840_0000.log",
+      "log_sha256": "f939247b0913f736223c63e890ad69a7cd7eaa15f313483a015c3631b08eda27",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.geometric_cutoff_lower_scale_choice",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.QuadraticEnergySpace.closedSemigroup_rieszRow_norm_sq_lower_at_cutoff_scale",
           "axioms": [
             "propext",
             "Classical.choice",

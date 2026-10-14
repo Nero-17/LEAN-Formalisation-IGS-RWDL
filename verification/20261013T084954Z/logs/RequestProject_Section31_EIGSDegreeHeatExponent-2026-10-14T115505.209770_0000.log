@@ -1,0 +1,2 @@
+'EIGS.degree_heat_exponent_between_zero_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiFiniteBorn_heat_exponent_between_zero_one' depends on axioms: [propext, Classical.choice, Quot.sound]

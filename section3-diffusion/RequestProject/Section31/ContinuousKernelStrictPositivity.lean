@@ -60,12 +60,18 @@ theorem continuousOperatorKernelRow_density_properties
   have rowAE : (fun other => continuousOperatorKernelRow lifted point other) =ᵐ[law] kernel point := by
     rw [rowEquality]
     exact embeddingAE (continuousRows point)
-  refine ⟨rowAE.mono (fun other identity => identity.symm ▸ kernelNonnegative point other), ?_⟩
-  have mass : (∫ other, continuousOperatorKernelRow lifted point other ∂law) = 1 :=
-    (integral_congr_ae rowAE).trans (kernelMass point)
-  intro zero
-  rw [zero, integral_congr_ae (Lp.coeFn_zero ℝ 2 law), integral_zero] at mass
-  norm_num at mass
+  refine ⟨?_, ?_⟩
+  · filter_upwards [rowAE] with other identity
+    change continuousOperatorKernelRow lifted point other = kernel point other at identity
+    change 0 ≤ continuousOperatorKernelRow lifted point other
+    rw [identity]
+    exact kernelNonnegative point other
+  · have mass : (∫ other, continuousOperatorKernelRow lifted point other ∂law) = 1 :=
+      (integral_congr_ae rowAE).trans (kernelMass point)
+    intro zero
+    rw [zero, integral_congr_ae (Lp.coeFn_zero ℝ 2 law)] at mass
+    simp only [Pi.zero_apply, integral_zero] at mass
+    norm_num at mass
 
 theorem continuous_kernel_strict_positive_of_same_closed_semigroup
     (embedding : C(Space, ℝ) →L[ℝ] Lp ℝ 2 law) (embeddingInjective : Function.Injective embedding)

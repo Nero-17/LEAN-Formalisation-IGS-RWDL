@@ -1,0 +1,10 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSAddressStarAnchorEnergy.lean:145:37: warning: This simp argument is unused:
+  xiAddressStarWeight
+
+Hint: Omit it from the simp argument list.
+  simp only [̵x̵i̵A̵d̵d̵r̵e̵s̵s̵S̵t̵a̵r̵W̵e̵i̵g̵h̵t̵,̵ ̵x̵i̵E̵d̵g̵e̵S̵t̵a̵r̵M̵u̵l̵t̵i̵p̵l̵i̵c̵i̵t̵y̵,̵[̲x̲i̲E̲d̲g̲e̲S̲t̲a̲r̲M̲u̲l̲t̲i̲p̲l̲i̲c̲i̲t̲y̲,̲ if_neg tail, if_neg different,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'EIGS.xiAddressStarWeight_integrable_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiAddressStar_anchor_energy_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

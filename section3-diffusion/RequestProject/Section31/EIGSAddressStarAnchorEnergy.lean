@@ -17,7 +17,7 @@ private theorem weighted_anchor_square_le (anchor harmonic target constant weigh
     (weightNonnegative : 0 ≤ weight) (weightBound : weight ≤ 2)
     (harmonicBound : weight ≠ 0 → (harmonic - anchor) ^ 2 ≤ oscillation ^ 2) :
     weight * (anchor - constant) ^ 2 ≤ 6 * oscillation ^ 2 +
-      6 * (target - harmonic) ^ 2 + 3 * weight * (target - constant) ^ 2 := by
+      6 * (target - harmonic) ^ 2 + 3 * (weight * (target - constant) ^ 2) := by
   by_cases zero : weight = 0
   · simp only [zero, zero_mul, mul_zero, add_zero]
     positivity
@@ -41,6 +41,7 @@ theorem xiAddressStarWeight_integrable_mul (system : EIGSData K) (mass : XiMassP
   · exact ((measurable_of_countable (xiEdgeStarMultiplicity system level vertex)).comp
       (measurable_xiAddressEdge system level)).aestronglyMeasurable
   · exact Eventually.of_forall fun address => by
+      change ‖xiEdgeStarMultiplicity system level vertex (xiAddressEdge system level address)‖ ≤ (2 : ℝ)
       rw [Real.norm_eq_abs, abs_of_nonneg (xiEdgeStarMultiplicity_bounds system level vertex _).1]
       exact (xiEdgeStarMultiplicity_bounds system level vertex _).2
 
@@ -117,7 +118,9 @@ theorem exists_xiAddressStar_anchor_energy_bound (system : EIGSData K)
       distanceRateGreaterThanOne metricEigenpair mass (target - approximation level)).2
   have targetIntegrable := xiContinuous_address_integrable system rulesConnected lengths lengthsPositive distanceRate
     distanceRateGreaterThanOne metricEigenpair mass (target - ContinuousMap.const _ anchor)
-  have localIntegrable := xiAddressStarWeight_integrable_mul system mass level vertex _ targetIntegrable.2
+  have localIntegrable : Integrable (fun address => xiAddressStarWeight system level vertex address *
+      (pulledTarget address - anchor) ^ 2) mass.addressMeasure :=
+    xiAddressStarWeight_integrable_mul system mass level vertex _ targetIntegrable.2
   have weightIntegrable : Integrable (xiAddressStarWeight system level vertex) mass.addressMeasure :=
     (show Integrable (xiEdgeStarMultiplicity system level vertex)
       (mass.addressMeasure.map (xiAddressEdge system level)) from Integrable.of_finite).comp_measurable
@@ -149,14 +152,18 @@ theorem exists_xiAddressStar_anchor_energy_bound (system : EIGSData K)
           values (XiHead system level (xiAddressEdge system level address))) ^ 2 =
         (values (XiHead system level (xiAddressEdge system level address)) -
           values (XiTail system level (xiAddressEdge system level address))) ^ 2 := by ring
-    simpa only [head, squareIdentity] using reversed
+    simpa only [head] using reversed.trans_eq squareIdentity
   have integralBound := integral_mono (weightIntegrable.mul_const ((values vertex - anchor) ^ 2))
     (((oscillationIntegrable.const_mul 6).add (tailIntegrable.const_mul 6)).add (localIntegrable.const_mul 3)) pointwiseBound
-  rw [integral_mul_const, integral_add
-    ((oscillationIntegrable.const_mul 6).add (tailIntegrable.const_mul 6)) (localIntegrable.const_mul 3),
-    integral_add (oscillationIntegrable.const_mul 6) (tailIntegrable.const_mul 6),
+  simp only [Pi.add_apply] at integralBound
+  have outerIntegralAdd := integral_add
+    ((oscillationIntegrable.const_mul 6).add (tailIntegrable.const_mul 6)) (localIntegrable.const_mul 3)
+  have innerIntegralAdd := integral_add (oscillationIntegrable.const_mul 6) (tailIntegrable.const_mul 6)
+  simp only [Pi.add_apply] at outerIntegralAdd innerIntegralAdd
+  rw [integral_mul_const, outerIntegralAdd, innerIntegralAdd,
     integral_const_mul, integral_const_mul, integral_const_mul,
-    xiAddress_coordinate_integral] at integralBound
+    xiAddress_coordinate_integral system mass level
+      (fun edge => (values (XiHead system level edge) - values (XiTail system level edge)) ^ 2)] at integralBound
   let targetDomain : xiWeightedEnergyDomain system resistanceRate ratePositive resistanceVector vectorPositive :=
     ⟨target ∘ xiCompletionUnionEmbedding system rulesConnected lengths lengthsPositive distanceRate
       (zero_lt_one.trans distanceRateGreaterThanOne) metricEigenpair,
@@ -168,7 +175,8 @@ theorem exists_xiAddressStar_anchor_energy_bound (system : EIGSData K)
       (target ∘ xiCompletionUnionEmbedding system rulesConnected lengths lengthsPositive distanceRate
         (zero_lt_one.trans distanceRateGreaterThanOne) metricEigenpair)).toReal at finiteEnergyBound
   have endpointBound := (cellBound level values).trans
-    (mul_le_mul_of_nonneg_left finiteEnergyBound (by positivity))
+    (mul_le_mul_of_nonneg_left finiteEnergyBound
+      (div_nonneg cellPositive.le (pow_pos (mul_pos mass.rate_positive ratePositive) level).le))
   have tailEstimate := tailBound target targetFinite level (approximation level) (approximationAgreement level)
   have tailSquared := pow_le_pow_left₀ (norm_nonneg
     (core.embed (BoundedContinuousFunction.mkOfCompact target) -
@@ -193,7 +201,9 @@ theorem exists_xiAddressStar_anchor_energy_bound (system : EIGSData K)
       (mul_le_mul_of_nonneg_left tailIntegralBound (by norm_num : (0 : ℝ) ≤ 6)))
     (le_refl (3 * ∫ address, xiAddressStarWeight system level vertex address *
       (pulledTarget address - anchor) ^ 2 ∂mass.addressMeasure))
-  exact integralBound.trans (upperBound.trans_eq (by ring))
+  exact integralBound.trans (upperBound.trans_eq (by
+    dsimp only [pulledTarget, Function.comp_def]
+    ring))
 
 end
 end EIGS

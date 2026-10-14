@@ -1,5 +1,5 @@
 import RequestProject.Section31.EIGSContinuousAllTimeHeatKernelDensityOfRules
-import RequestProject.Section31.ContinuousKernelFixedWindow
+import RequestProject.Section31.ContinuousKernelJointContinuity
 
 /-! The same actual heat kernel is jointly continuous in positive time and
 both spatial variables. A fixed local smoothing window identifies it with
@@ -180,75 +180,20 @@ theorem xiJointContinuousHeatKernelDensityProperties_of_compactSmoothing (system
   have closedJointContinuous : Continuous (fun point : Lp ℝ 2 measure × ℝ≥0 =>
       closedSemigroup point.2 point.1) :=
     QuadraticEnergySpace.closedSemigroup_joint_continuous originalDomain originalForm nonnegative closable originalDense
-  have jointContinuous : Continuous (fun point : {time : ℝ≥0 // 0 < time} × parameters.LimitSpace × parameters.LimitSpace =>
-      kernel point.1 point.2.1 point.2.2) := by
-    rw [continuous_iff_continuousAt]
-    intro reference
-    let window : ℝ≥0 := reference.1.val / 4
-    have windowPositive : 0 < window := div_pos reference.1.prop (by norm_num)
+  have compactWindows : ∀ window : ℝ≥0, 0 < window →
+      ∃ windowLifted : Lp ℝ 2 measure →L[ℝ] C(parameters.LimitSpace, ℝ),
+        IsCompactOperator windowLifted ∧ ∀ forcing,
+          embedding (windowLifted forcing) = closedSemigroup window forcing := by
+    intro window windowPositive
     obtain ⟨windowLifted, _, windowCompact, _, windowCompatibility⟩ := allSmoothing window windowPositive
-    have rowContinuous : Continuous (continuousOperatorKernelRow windowLifted) :=
-      continuousOperatorKernelRow_continuous windowLifted windowCompact
-    let alternateKernel := fun point : {time : ℝ≥0 // 0 < time} × parameters.LimitSpace × parameters.LimitSpace =>
-      inner ℝ (continuousOperatorKernelRow windowLifted point.2.1)
-        (closedSemigroup (point.1.val - (window + window)) (continuousOperatorKernelRow windowLifted point.2.2))
-    have alternateContinuous : Continuous alternateKernel := by
-      apply (rowContinuous.comp (continuous_fst.comp continuous_snd)).inner
-      exact closedJointContinuous.comp
-        ((rowContinuous.comp (continuous_snd.comp continuous_snd)).prodMk
-          ((continuous_subtype_val.comp continuous_fst).sub continuous_const))
-    have kernelEquality (time : {time : ℝ≥0 // 0 < time}) (timeLarge : window + window ≤ time.val)
-        (first second : parameters.LimitSpace) :
-        kernel time first second = alternateKernel (time, first, second) := by
-      let residual := time.val - (window + window)
-      have timeDecomposition : window + (residual + window) = time.val := by
-        calc
-          _ = (window + window) + residual := by ring
-          _ = time.val := add_tsub_cancel_of_le timeLarge
-      have factorization : (closedSemigroup window).comp
-          ((closedSemigroup residual).comp (closedSemigroup window)) = closedSemigroup time.val := by
-        calc
-          _ = (closedSemigroup window).comp (closedSemigroup (residual + window)) :=
-            congrArg (fun operator => (closedSemigroup window).comp operator)
-              (QuadraticEnergySpace.closedSemigroup_add originalDomain originalForm nonnegative closable originalDense residual window).symm
-          _ = closedSemigroup (window + (residual + window)) :=
-            (QuadraticEnergySpace.closedSemigroup_add originalDomain originalForm nonnegative closable originalDense
-              window (residual + window)).symm
-          _ = _ := congrArg closedSemigroup timeDecomposition
-      have windowOutputEquality (forcing : Lp ℝ 2 measure) :
-          lifted time forcing = windowLifted (closedSemigroup residual (closedSemigroup window forcing)) := by
-        apply embeddingInjective
-        rw [liftedCompatibility, windowCompatibility]
-        exact (congrArg (fun operator : Lp ℝ 2 measure →L[ℝ] Lp ℝ 2 measure => operator forcing) factorization).symm
-      let firstRow : C(parameters.LimitSpace, ℝ) := ⟨kernel time first,
-        (kernelContinuous time).comp (continuous_const.prodMk continuous_id)⟩
-      let secondRow : C(parameters.LimitSpace, ℝ) :=
-        ⟨fun other => inner ℝ (continuousOperatorKernelRow windowLifted first)
-          (closedSemigroup residual (continuousOperatorKernelRow windowLifted other)),
-          continuous_const.inner ((closedSemigroup residual).continuous.comp rowContinuous)⟩
-      have rowEquality : firstRow = secondRow := by
-        apply continuous_L2_kernel_row_unique measure
-        intro forcing
-        calc
-          _ = lifted time forcing first := (liftedRepresentation time forcing first).symm
-          _ = windowLifted (closedSemigroup residual (closedSemigroup window forcing)) first :=
-            congrArg (fun function : C(parameters.LimitSpace, ℝ) => function first) (windowOutputEquality forcing)
-          _ = _ := continuousOperator_fixed_window_integral measure embedding embeddingAE windowLifted
-            (closedSemigroup window) (closedSemigroup residual)
-            (QuadraticEnergySpace.closedSemigroup_selfAdjoint originalDomain originalForm nonnegative closable originalDense window)
-            (QuadraticEnergySpace.closedSemigroup_selfAdjoint originalDomain originalForm nonnegative closable originalDense residual)
-            windowCompatibility first forcing
-      exact congrArg (fun function : C(parameters.LimitSpace, ℝ) => function second) rowEquality
-    have referenceLarge : window + window < reference.1.val := by
-      change (window : ℝ) + (window : ℝ) < (reference.1.val : ℝ)
-      simp only [window, NNReal.coe_div, NNReal.coe_ofNat]
-      have referencePositive : 0 < (reference.1.val : ℝ) := reference.1.prop
-      linarith
-    have eventuallyLarge : ∀ᶠ nearby in 𝓝 reference, window + window < nearby.1.val :=
-      (continuous_subtype_val.comp continuous_fst).continuousAt.tendsto.eventually (gt_mem_nhds referenceLarge)
-    apply alternateContinuous.continuousAt.congr_of_eventuallyEq
-    filter_upwards [eventuallyLarge] with nearby nearbyLarge
-    exact kernelEquality nearby.1 nearbyLarge.le nearby.2.1 nearby.2.2
+    exact ⟨windowLifted, windowCompact, windowCompatibility⟩
+  have jointContinuous : Continuous (fun point :
+      {time : ℝ≥0 // 0 < time} × parameters.LimitSpace × parameters.LimitSpace =>
+      kernel point.1 point.2.1 point.2.2) :=
+    continuous_kernel_joint_of_compact_windows measure embedding embeddingInjective embeddingAE closedSemigroup
+      (QuadraticEnergySpace.closedSemigroup_add originalDomain originalForm nonnegative closable originalDense)
+      (QuadraticEnergySpace.closedSemigroup_selfAdjoint originalDomain originalForm nonnegative closable originalDense)
+      closedJointContinuous kernel kernelContinuous lifted liftedRepresentation liftedCompatibility compactWindows
   refine ⟨originalDense, semigroup, semigroupNorm, semigroupZero, semigroupAdd, semigroupContinuous,
     intertwining, timeThreshold, timeThresholdPositive, upperConstant, upperConstantPositive,
     kernel, jointContinuous, ?_⟩

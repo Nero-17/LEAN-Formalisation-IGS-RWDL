@@ -1,0 +1,1 @@
+'IGS.Sec31.exists_scalar_coefficient_subsequence' depends on axioms: [propext, Classical.choice, Quot.sound]

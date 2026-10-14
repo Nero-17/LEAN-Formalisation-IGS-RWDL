@@ -1,0 +1,6 @@
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroup_scalar_analyticAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.closedSemigroup_scalar_analyticOnNhd' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

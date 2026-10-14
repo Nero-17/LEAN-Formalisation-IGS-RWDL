@@ -1,0 +1,25 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\ContinuousPathUsualStoppingMarkov.lean:46:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DiscreteMarkov.canonical_completion_eval_continuousTest_integrable`:
+  [MeasurableSpace State]
+  [BorelSpace State]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace State] [BorelSpace State] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'IGS.Sec31.DiscreteMarkov.canonicalNatural_le_usualPathFiltration' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.canonicalUsualPast_measurable_augmented_later' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.canonical_completion_eval_continuousTest_integrable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.continuousPath_usual_setIntegral_markov' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.continuousPath_usual_finite_stoppingTime_setIntegral_markov' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.continuousPath_usual_finite_stoppingTime_condExp_markov' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

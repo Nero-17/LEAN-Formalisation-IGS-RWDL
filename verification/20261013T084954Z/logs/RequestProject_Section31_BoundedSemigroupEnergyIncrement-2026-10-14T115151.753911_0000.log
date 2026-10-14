@@ -1,0 +1,9 @@
+'IGS.Sec31.BoundedSemigroupEnergyIncrement.generator_exp_pairing_half_energy' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.BoundedSemigroupEnergyIncrement.exp_pairing_sub_eq_integral' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.BoundedSemigroupEnergyIncrement.positive_exp_apply_sub_self_sq_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

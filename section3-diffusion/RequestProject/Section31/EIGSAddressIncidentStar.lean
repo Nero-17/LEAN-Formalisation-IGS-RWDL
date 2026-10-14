@@ -65,14 +65,15 @@ theorem exists_xiAddressStarWeight_mass_comparison (system : EIGSData K)
       (mass.amplitude minimumColour / mass.amplitude system.initCol) / mass.rate ^ level ≤
         mass.edgeWeight level edge := by
     rw [XiMassParameters.edgeWeight, div_div, mul_comm (mass.amplitude system.initCol)]
-    exact div_le_div_of_nonneg_right (minimumBound _ (Finset.mem_univ _)) (by positivity)
+    exact div_le_div_of_nonneg_right (minimumBound _ (Finset.mem_univ _))
+      (mul_pos (pow_pos mass.rate_positive level) (mass.amplitude_positive system.initCol)).le
   have upperBound (edge : XiEdge system.toRuleData level) :
       mass.edgeWeight level edge ≤
         ((∑ colour, mass.amplitude colour) / mass.amplitude system.initCol) / mass.rate ^ level := by
     rw [XiMassParameters.edgeWeight, div_div, mul_comm (mass.amplitude system.initCol)]
     exact div_le_div_of_nonneg_right
       (Finset.single_le_sum (fun colour _ => (mass.amplitude_positive colour).le) (Finset.mem_univ _))
-      (by positivity)
+      (mul_pos (pow_pos mass.rate_positive level) (mass.amplitude_positive system.initCol)).le
   rw [xiAddressStarWeight_integral, ← xiEdgeStarMultiplicity_sum]
   constructor
   · rw [Finset.mul_sum]

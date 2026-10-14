@@ -1,0 +1,5 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\ScalarPowerSeriesLimit.lean:20:5: warning: unused variable `constantNonnegative`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'IGS.Sec31.scalar_series_limit_hasFPowerSeriesAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.scalar_series_pointwise_limit_analyticAt' depends on axioms: [propext, Classical.choice, Quot.sound]

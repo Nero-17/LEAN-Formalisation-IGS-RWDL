@@ -9,7 +9,7 @@ namespace IGS.Sec31.BoundedSemigroupEnergy
 
 variable {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℝ H] [CompleteSpace H]
 
-noncomputable local instance : NormedAlgebra ℚ (H →L[ℝ] H) :=
+noncomputable local instance scalarSeriesNormedAlgebraRat : NormedAlgebra ℚ (H →L[ℝ] H) :=
   NormedAlgebra.restrictScalars ℚ ℝ (H →L[ℝ] H)
 
 theorem bounded_generator_scalar_centered_series
@@ -45,8 +45,13 @@ theorem bounded_generator_scalar_centered_series
       NormedSpace.exp ((-center) • generator) =
       NormedSpace.exp ((-(center + increment)) • generator) := by
     rw [← NormedSpace.exp_add_of_commute commuting, exponentEquality]
-  simpa only [Function.comp_apply, ContinuousLinearMap.apply_apply, innerSL_apply_apply,
-    termEquality, ← ContinuousLinearMap.mul_apply, productEquality] using scalarSum
+  change HasSum (fun power : ℕ =>
+    inner ℝ first (((power.factorial : ℝ)⁻¹ • ((-increment) • generator) ^ power)
+      (NormedSpace.exp ((-center) • generator) second)))
+    (inner ℝ first (NormedSpace.exp ((-increment) • generator)
+      (NormedSpace.exp ((-center) • generator) second))) at scalarSum
+  have coefficientSum := scalarSum.congr_fun (fun power => (termEquality power).symm)
+  simpa only [← ContinuousLinearMap.mul_apply, productEquality] using coefficientSum
 
 end IGS.Sec31.BoundedSemigroupEnergy
 

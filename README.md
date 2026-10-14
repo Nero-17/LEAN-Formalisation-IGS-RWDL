@@ -11,7 +11,7 @@ Lean 4 development for *Iterated Graph Systems (I): random walks and diffusion l
 - All-vertex sup convergence of the original continuous-time and discrete floor-clock semigroups, with de-Poissonization supplied internally.
 - Full-sequence finite-horizon path weak convergence for arbitrary convergent moving starts, with continuous limiting paths; a global continuous-path probability family measurable in its starting point, identified with the same closed L² semigroup.
 - The actual natural-filtration stopping-time identity and conditional expectation for everywhere finite stopping times and continuous terminal tests. This does not yet establish all usual-filtration, bounded-Borel, future-path or Hunt conclusions.
-- Actual closed-domain Nash bounds, L¹ contraction, L¹–L² and L²–continuous smoothing, and compact smoothing. For every positive time the actual semigroup has a symmetric nonnegative mass-one heat-kernel density, jointly continuous in its two spatial variables, with the small-time global bound and a valid all-time bound. Time-and-space joint continuity and strict positivity remain pending.
+- Actual closed-domain Nash bounds, L¹ contraction, L¹–L² and L²–continuous smoothing, and compact smoothing. The same actual five-rule closed semigroup has a symmetric strictly positive mass-one heat kernel, jointly continuous in positive time and both spatial variables, with the global small-time bound and a valid clipped all-time bound. Strict positivity and time continuity are supplied internally.
 - Finite-born original-core point energy estimates, extension of point evaluations to the closed energy domain, and recovery sequences that also recover bounded energy functionals. Identifying these functionals with arbitrary continuous closed-domain representatives still requires the local address-star bridge.
 - The actual primitive integer degree matrix has spectral radius greater than one, and the actual degree-to-mass comparison gives a strict spectral-radius gap. The primitive condition is a standing model condition retained from the paper.
 - Corrected critical percolation rule coding and literal infinite source-cluster laws, resistance exponents, and the stated failure of deterministic normalization.
@@ -20,7 +20,7 @@ Generic criteria count as actual-model results only when their inputs are suppli
 
 ## Remaining work
 
-Time-joint heat-kernel continuity and strict positivity; the paper's finite-born two-sided and typical-point logarithmic heat estimates and local spectral dimensions; full usual-filtration/Borel/future-path strong Markov and Hunt statements; final GHPS transport and clock identification; and the resistance-form/Brownian-regime identification remain incomplete. Random-cluster GHP and diffusion statements retain their original conjectural status.
+The paper's finite-born two-sided and typical-point logarithmic heat estimates and local spectral dimensions; full usual-filtration/Borel/future-path strong Markov and Hunt statements; final GHPS transport and clock identification; and the resistance-form/Brownian-regime identification remain incomplete. Random-cluster GHP and diffusion statements retain their original conjectural status.
 
 ## Manuscript and layout
 
@@ -35,7 +35,7 @@ The adopted manuscript is [paper-corrections/AIM.corrected.tex](paper-correction
 
 Pinned Lean **4.28.0**, mathlib **8f9d9cff6bd728b17a24e163c9402775d9e6a365**.
 
-The last completed shared-dependency batch contains **545 modules**, with unchanged checked sources. A later 634-module integration is running and is not counted as passed. Subsequent independently accepted whole-file receipts are listed separately; inventories overlap and are not a completion percentage.
+The completed shared-dependency batch contains **545 modules**, with unchanged checked sources. Subsequent independently accepted whole-file receipts are listed separately; inventories overlap and are not a completion percentage.
 
 ```sh
 python verify_published_snapshot.py
@@ -48,3 +48,5 @@ python verify_published_snapshot.py --rebuild --lean /absolute/path/to/lean
 ```
 
 An unfiltered full-source build includes drafts and is not claimed to pass. Toolchains, dependency caches and compiled binaries are omitted. The earlier corpus used [Aristotle](https://aristotle.harmonic.fun); subsequent development uses Codex, with current parallel agents GPT-6.1 Sol / high.
+
+The later 690-module shared integration is still running and is not counted as passed. The 634-module historical report predates local-instance naming changes and is not asserted to match current sources.
