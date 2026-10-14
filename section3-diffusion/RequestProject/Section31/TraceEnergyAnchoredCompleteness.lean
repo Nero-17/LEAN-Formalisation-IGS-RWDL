@@ -111,8 +111,11 @@ theorem exists_traceEnergy_anchored_cauchy_limit
       (tendsto_pi_nhds.2 (fun vertex => tendsto_const_nhds.sub (convergence vertex)))).add
       ((tendsto_const_nhds.sub (convergence anchor)).pow 2))
     filter_upwards [eventually_ge_atTop threshold] with second secondAfter
+    change (networks level).energy ((sequence index - sequence second).val) +
+      ((sequence index).val anchor - (sequence second).val anchor) ^ 2 ≤ tolerance
     have finiteBound := finite_energy_le_traceEnergyValue networks (sequence index - sequence second) level
-    exact (add_le_add_right finiteBound _).trans (small index after second secondAfter).le
+    have combined := small index after second secondAfter
+    linarith
   have energyBound : traceEnergyValue networks (sequence index - ⟨limit, finite⟩) ≤
       tolerance - ((sequence index).val anchor - limit anchor) ^ 2 := by
     rw [traceEnergyValue_eq_iSup]

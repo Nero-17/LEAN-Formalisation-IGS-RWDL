@@ -1,6 +1,7 @@
 import RequestProject.Section31.TraceEnergyAnchoredCompleteness
 import RequestProject.Section31.EIGSMetricCompletion
 import RequestProject.Section31.EIGSWeightedTrace
+import RequestProject.Section31.EIGSLimitEnergy
 import RequestProject.Section31.DirichletThomson
 
 /-! Point evaluation and anchored energy completeness on the actual vertex
@@ -47,7 +48,7 @@ theorem exists_xiWeightedEnergy_anchored_evaluation
     congr 1
     ring
   have oscillation := control (fun point => restriction point - values.val anchor)
-    (by rw [anchorValue]; simp) finiteVertex
+    (by change restriction finiteAnchor - values.val anchor = 0; rw [anchorValue, sub_self]) finiteVertex
   rw [energyShift, vertexValue] at oscillation
   have finiteBound := finite_energy_le_traceEnergyValue
     (xiUnionWeightedNetwork system resistanceRate ratePositive resistanceVector vectorPositive) values level

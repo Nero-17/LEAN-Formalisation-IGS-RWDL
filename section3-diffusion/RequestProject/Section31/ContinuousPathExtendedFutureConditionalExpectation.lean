@@ -51,6 +51,9 @@ theorem continuousPath_extended_stoppingTime_boundedBorel_future_condExp_markov
         ∂(globalLaws (path (stoppingTime path).untopA) : @Measure C(ℝ≥0, State) (borel C(ℝ≥0, State)))) := by
   have timeMeasurable : Measurable (fun path => (stoppingTime path).untopA) := stopping.measurable'.untopA
   have shiftMeasurable := continuousPathRandomShift_measurable _ timeMeasurable
+  have terminalStronglyMeasurable : StronglyMeasurable[borel C(ℝ≥0, State)] terminal := by
+    letI extendedFutureTerminalStronglyMeasurableSpace : MeasurableSpace C(ℝ≥0, State) := borel _
+    exact terminalMeasurable.stronglyMeasurable
   have futureIntegrable : Integrable (fun path =>
       terminal (continuousPathRandomShift (fun path => (stoppingTime path).untopA) path)) measure :=
     Integrable.of_bound (terminalMeasurable.comp shiftMeasurable).aestronglyMeasurable bound
@@ -109,7 +112,11 @@ theorem continuousPath_extended_stoppingTime_boundedBorel_future_condExp_markov
         ∂@Measure.map C(ℝ≥0, State) C(ℝ≥0, State) ambient (borel C(ℝ≥0, State))
           (continuousPathRandomShift (fun path => (stoppingTime path).untopA))
           (measure.restrict (event ∩ {path | stoppingTime path ≠ ⊤})) :=
-      (integral_map shiftMeasurable.aemeasurable terminalMeasurable.aestronglyMeasurable).symm
+      (@integral_map_of_stronglyMeasurable C(ℝ≥0, State) ℝ inferInstance inferInstance ambient
+        (measure.restrict (event ∩ {path | stoppingTime path ≠ ⊤}))
+        C(ℝ≥0, State) (borel C(ℝ≥0, State))
+        (continuousPathRandomShift (fun path => (stoppingTime path).untopA))
+        shiftMeasurable terminal terminalStronglyMeasurable).symm
     _ = ∫ future, terminal future ∂(stoppedKernel ∘ₖ eventKernel) () := by
       rw [measureIdentity]
     _ = _ := by

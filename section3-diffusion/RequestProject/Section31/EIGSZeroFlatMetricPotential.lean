@@ -88,10 +88,14 @@ theorem xiZeroFlatMetricPotential_zero_descendant_endpoints (system : EIGSData K
   | succ steps induction =>
     have parentZero := induction ((system.ruleFamily rulesConnected).metricLengths lengths) edge.1 descendant
     constructor
-    · rw [XiTail_succ]
+    · change xiZeroFlatMetricPotential system rulesConnected coarse potential (steps + 1) lengths
+        (XiTail system ((coarse + steps) + 1) edge) = 0
+      rw [XiTail_succ]
       exact xiZeroFlatMetricPotential_succ_zero_copy system rulesConnected coarse steps potential lengths
         edge.1 parentZero.1 parentZero.2 _
-    · rw [XiHead_succ]
+    · change xiZeroFlatMetricPotential system rulesConnected coarse potential (steps + 1) lengths
+        (XiHead system ((coarse + steps) + 1) edge) = 0
+      rw [XiHead_succ]
       exact xiZeroFlatMetricPotential_succ_zero_copy system rulesConnected coarse steps potential lengths
         edge.1 parentZero.1 parentZero.2 _
 
@@ -126,7 +130,7 @@ theorem xiZeroFlatMetricPotential_lower_outside_two_stars (system : EIGSData K)
           ((system.ruleFamily rulesConnected).metricLengths lengths) (XiHead system (coarse + steps) edge) = 0) := by
         intro zeroEndpoints
         linarith [zeroEndpoints.1]
-      change radius ≤ if _ then _ else min (_ + _) (_ + _)
+      dsimp only [xiZeroFlatMetricPotential, Network.substSelectedFlatMetricPotential, Network.substMetricPotential]
       rw [if_neg notFlat]
       exact le_min
         (tailLower.trans (le_add_of_nonneg_right

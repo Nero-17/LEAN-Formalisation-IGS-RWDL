@@ -101,7 +101,8 @@ theorem continuousPath_extended_stoppingTime_futureLaw_markov
         simp only [continuousPathRandomShift_apply, timesAgree path membership]
       _ = (truncatedKernel ∘ₖ Kernel.const Unit (measure.restrict (localizedEvents cutoff))) () := finiteIdentity
       _ = _ := by
-        ext target targetMeasurable
+        apply @Measure.ext C(ℝ≥0, State) (borel C(ℝ≥0, State))
+        intro target targetMeasurable
         rw [Kernel.comp_apply' _ _ _ targetMeasurable, Kernel.comp_apply' _ _ _ targetMeasurable,
           Kernel.const_apply]
         apply lintegral_congr_ae
@@ -111,7 +112,8 @@ theorem continuousPath_extended_stoppingTime_futureLaw_markov
       (continuousPathRandomShift (fun path => (stoppingTime path).untopA))
       (measure.restrict (event ∩ {path | stoppingTime path ≠ ⊤})) =
     (stoppedKernel ∘ₖ Kernel.const Unit (measure.restrict (event ∩ {path | stoppingTime path ≠ ⊤}))) ()
-  ext target targetMeasurable
+  apply @Measure.ext C(ℝ≥0, State) (borel C(ℝ≥0, State))
+  intro target targetMeasurable
   have preimageMeasurable := shiftMeasurable targetMeasurable
   rw [Measure.map_apply shiftMeasurable targetMeasurable, Measure.restrict_apply preimageMeasurable,
     Kernel.comp_apply' _ _ _ targetMeasurable, Kernel.const_apply, ← unionEquality, Set.inter_iUnion]
@@ -124,6 +126,7 @@ theorem continuousPath_extended_stoppingTime_futureLaw_markov
   intro cutoff
   have evaluated := congrArg (fun finiteMeasure : @Measure C(ℝ≥0, State) (borel C(ℝ≥0, State)) => finiteMeasure target)
     (localizedEquality cutoff)
+  dsimp only at evaluated
   rw [Measure.map_apply shiftMeasurable targetMeasurable, Measure.restrict_apply preimageMeasurable,
     Kernel.comp_apply' _ _ _ targetMeasurable, Kernel.const_apply] at evaluated
   exact evaluated

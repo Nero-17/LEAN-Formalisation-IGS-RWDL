@@ -1,0 +1,9 @@
+'EIGS.xiExtendedFullFutureContinuousPathSemigroupProperties_of_finiteStopping' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiIdentifiedExtendedFullFutureContinuousPathProperties_of_identifiedFiniteStopping' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_xiIdentifiedExtendedFullFutureContinuousPath_of_rules' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

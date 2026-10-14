@@ -78,8 +78,10 @@ theorem continuousPath_usualExtendedFutureLawProperties_of_ordered_observations
       inferInstance (fun path => (stoppingTime path).untopA) := stopping.measurable'.untopA
   have stateMeasurable : @Measurable C(ℝ≥0, State) State
       (eventuallyMeasurableSpace (borel C(ℝ≥0, State)) (ae (globalLaws start : Measure C(ℝ≥0, State))))
-      inferInstance (fun path => ContinuousMap.toFun path (stoppingTime path).untopA) :=
-    continuous_eval.measurable.comp (measurable_id.prodMk timeMeasurable)
+      inferInstance (fun path => ContinuousMap.toFun path (stoppingTime path).untopA) := by
+    letI usualExtendedFutureStateSourceMeasurableSpace : MeasurableSpace C(ℝ≥0, State) :=
+      eventuallyMeasurableSpace (borel C(ℝ≥0, State)) (ae (globalLaws start : Measure C(ℝ≥0, State)))
+    exact continuous_eval.measurable.comp (measurable_id.prodMk timeMeasurable)
   let stoppedKernel : @Kernel C(ℝ≥0, State) C(ℝ≥0, State)
       (eventuallyMeasurableSpace (borel C(ℝ≥0, State)) (ae (globalLaws start : Measure C(ℝ≥0, State))))
       (borel C(ℝ≥0, State)) :=

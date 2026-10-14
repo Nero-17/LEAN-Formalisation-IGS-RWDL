@@ -1,0 +1,3 @@
+'IGS.Sec31.traceEnergyDomain_mem_of_pointwise_bounded_energy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.traceEnergy_anchored_cauchy_pointwise' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.exists_traceEnergy_anchored_cauchy_limit' depends on axioms: [propext, Classical.choice, Quot.sound]

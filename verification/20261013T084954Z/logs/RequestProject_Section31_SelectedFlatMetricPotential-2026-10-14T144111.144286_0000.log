@@ -1,0 +1,5 @@
+'EIGS.Network.substSelectedFlatMetricPotential_on_copy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.substSelectedFlatMetricPotential_lipschitz' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.substSelectedFlatMetricPotential_constant_on_selected_copy' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

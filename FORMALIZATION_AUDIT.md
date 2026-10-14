@@ -1,6 +1,6 @@
 # Current formalization audit
 
-Snapshot UTC: 2026-10-14T14:37:32.539134+00:00
+Snapshot UTC: 2026-10-14T15:14:46.526249+00:00
 
 Full-paper completion is **not** claimed. A clean printed axiom audit verifies the stated theorem; it does not remove mathematical assumptions from that statement. Actual-model consumers and generic conditional lemmas must be read separately.
 
@@ -8,7 +8,7 @@ Full-paper completion is **not** claimed. A clean printed axiom audit verifies t
 
 The latest completed common-dependency batch has 690 modules and unchanged checked sources. Report SHA256: `607fc8176247666e16f71894428d88124717974a7f34be9c1eb6954538e68064`.
 
-The independent manifest contains 371 accepted whole-file receipts and 1241 printed audits. These overlap the common batch and are not a completion percentage. Every published Lean source has an exact hash and explicit status; unverified and failed drafts remain visible.
+The independent manifest contains 384 accepted whole-file receipts and 1268 printed audits. These overlap the common batch and are not a completion percentage. Every published Lean source has an exact hash and explicit status; unverified and failed drafts remain visible.
 
 ## Accepted milestones
 
@@ -62,10 +62,22 @@ The independent manifest contains 371 accepted whole-file receipts and 1241 prin
 | [ContinuousPathFutureBlockReindexing](section3-diffusion/RequestProject/Section31/ContinuousPathFutureBlockReindexing.lean) | `25b728d8e8d974d9951fadbda595f0801f8ead5f8918d78ece6b35682fda259e` | `c284a7db6db197d21a1e922eb4892626647849f3f8f2e15cca3b53e43b16d521` | 1 |
 | [ContinuousPathStoppingFutureLaw](section3-diffusion/RequestProject/Section31/ContinuousPathStoppingFutureLaw.lean) | `2f9005cd908acea291d73ee7745a9f738acbacb02e3418ea0b78ffa049f69a98` | `40ca582256f5c87f3bda7354108b4cf02af6f008cce3178a51a43ac3302cfec2` | 1 |
 | [EIGSTypicalLogarithmicCellCutoff](section3-diffusion/RequestProject/Section31/EIGSTypicalLogarithmicCellCutoff.lean) | `4ff05686cc90a5cd570ac2c86bcbd5b7ce0a311e4bf003372bd54745de66782d` | `3b75baafd0274afeadc4313455cbbcef63d07ee3753bb3bbba0e980b561ce1bc` | 1 |
+| [ContinuousKernelStayLowerBound](section3-diffusion/RequestProject/Section31/ContinuousKernelStayLowerBound.lean) | `7f375ba3f2df20b60d4b369979de4c4b0032a44cf02c8017d0da93ca6380f70f` | `d1640235c8b9f275091113d28bbca5242eca95b97f4a74b25e766d9ea2a56097` | 3 |
+| [SelectedFlatMetricPotential](section3-diffusion/RequestProject/Section31/SelectedFlatMetricPotential.lean) | `3bc8caf44b61f4ae2aa95fa974f53a7501ddcb21425b2fff8be18ba2f0910e70` | `5c5511d9562ba8bb35bee17c9b62721f769e4d4acdd92b85ba1dbb1c58dd9cfb` | 3 |
+| [TraceEnergyAnchoredCompleteness](section3-diffusion/RequestProject/Section31/TraceEnergyAnchoredCompleteness.lean) | `1e8056d9ab0a95cbd323f0211b98a9c9ce4a4079ae2c075b37cf2a1282b779db` | `c6de482aae1e48a1b2450cc4dd27767744cb076476b8d8f21d86799dfc0d5d9f` | 3 |
+| [EIGSSkeletonAnchoredCompleteness](section3-diffusion/RequestProject/Section31/EIGSSkeletonAnchoredCompleteness.lean) | `2c7e8896ef8ae702ede50221ee5dd7ddf0e74355ea4da0e6c699088cf8a53263` | `039fe235ef5a13b1152354727bd46fa620ab1c5dafd4a0b7f4ca79bd55cd7209` | 2 |
+| [EIGSNativeFloorCutoffExpectation](section3-diffusion/RequestProject/Section31/EIGSNativeFloorCutoffExpectation.lean) | `fe55a369d348111fb4b8cef6eaccf2b76d37755f9b535b8a6bf4ab5d5da37f24` | `bb51a934da3fb9b33a8646aa8094701c679832786749db9121e56a6be251761d` | 1 |
+| [ContinuousPathUsualFutureLaw](section3-diffusion/RequestProject/Section31/ContinuousPathUsualFutureLaw.lean) | `d1529c172d0f4839277b889c53ba887e59ccab45dcbf649d47b45dfaf5355a02` | `cb50f990a6f93ff06b479de22dead403feb5133ebef637f4bd6baecf4a69ee38` | 1 |
+| [EIGSFullFutureStoppingClosedIdentification](section3-diffusion/RequestProject/Section31/EIGSFullFutureStoppingClosedIdentification.lean) | `c6650e7661c63cc7b769193be3c837e4892fcdafca58fbe920b39334b6886a75` | `11b67d6f4cacb202b0562665597f1b4b41bc7eef53fe9a0c663916d66b7f8ac8` | 3 |
+| [ContinuousPathExtendedFutureLaw](section3-diffusion/RequestProject/Section31/ContinuousPathExtendedFutureLaw.lean) | `77f2752f518ea097da0476f3a8a1d1f4df0082cd86304bb1b03cc6691f4e67ee` | `bddcec19c1fbd93834f3b0eabd81eedf15320b38846170632095eb9ac310e326` | 1 |
+| [ContinuousPathExtendedFutureConditionalExpectation](section3-diffusion/RequestProject/Section31/ContinuousPathExtendedFutureConditionalExpectation.lean) | `7b206fe65dd5b9136f05434487442f33f0e4449ff38c039b406ca50e40e53455` | `0e0ca6f68d36585fbb07157f86f43c7518f7d29b7a6f0f7c62ddfb5d1f98c205` | 2 |
+| [ContinuousPathUsualExtendedFutureLaw](section3-diffusion/RequestProject/Section31/ContinuousPathUsualExtendedFutureLaw.lean) | `a4a33edc301d3ea875fd719287fe78469121fda68b3395ad3c7789d60d498118` | `73fc4c217d0552e175337c74801630e5f6054f5d0aa9df31d416ee5c20023231` | 1 |
+| [EIGSExtendedFullFutureStoppingClosedIdentification](section3-diffusion/RequestProject/Section31/EIGSExtendedFullFutureStoppingClosedIdentification.lean) | `a407cf3689f429a12c837840dc7a6c294b00e3fa7fb18ea68b2b3f53968ffa56` | `1e800e0a9f5ba8895a144a604d5b33ba2c9606e8504a932f34aa55c48b16d20c` | 3 |
+| [ContinuousPathConservativeHuntCriteria](section3-diffusion/RequestProject/Section31/ContinuousPathConservativeHuntCriteria.lean) | `74b08d184d5bde2ec1e8a6e24e14390b8cac32850c16182cb973a53397ef2160` | `2353892180c40c72d41417bd40685a88cc000da217a02d7fb619a9d3f05a81d8` | 1 |
 
 ## Proven scope and exact gaps
 
-The same actual closed L² semigroup is identified with the global continuous-path family and the original discrete semigroup limit. The actual usual completed-filtration single-time bounded Borel stopping identity is now supplied internally, including potentially infinite stopping times on their finite event. Full future-path strong Markov/Hunt consumers remain pending; single-time tests are not substituted for full future-path identities.
+The same actual closed L² semigroup is identified with the global continuous-path family and the original discrete semigroup limit. Actual usual completed-filtration full future-path stopping identities and bounded Borel future conditional expectations are now supplied internally, including potentially infinite stopping times on their finite event. Actual finite and extended consumers retain the original closed-semigroup and global-family fields. The final conservative Hunt packaging is being verified separately; single-time tests are not substituted for full future-path identities.
 
 For all positive times and spatial points, the same actual five-rule closed semigroup has a symmetric strictly positive probability density jointly continuous in time and both spatial variables, with the global small-time heat upper bound. The strict-positivity consumer supplies all analytic inputs internally. No resistance-growth-greater-than-one restriction is added. All-time bounds use a truncated time scale, not an incorrect all-time power decay on a compact conservative space.
 
@@ -74,6 +86,8 @@ Finite-born point evaluations extend to the same closed energy domain and agree 
 Continuous-path laws also satisfy quasi-left continuity at all finite supremum times, pathwise. This supplies a regularity component and does not by itself assert a full Hunt process.
 
 Actual endpoint-collar mass bounds, summable logarithmic schedules and almost-everywhere avoidance are verified. Actual recent-vertex degree bounds and harmonic two-endpoint cutoffs are verified separately. Actual all-start native-floor displacement tails give a positive stay probability, and generic continuous metric cutoff expectation bounds have passed. Actual metric-ball mass bounds, the expectation limit to the same semigroup and the final typical logarithmic estimate remain pending. The primitive standing assumption excludes nu=1; the manuscript's nu=1 extension requires separate scope verification.
+
+The actual finite-trace energy domain on the vertex union has anchored Cauchy limits. Each point evaluation coefficient is obtained internally from a connected finite network containing the point and anchor. This is a verified completeness step, not a completed resistance-form/Brownian construction: the Hilbert instances, continuous extension of arbitrary finite-energy skeleton functions, resistance metric and final identification remain pending.
 
 Original measured GHP, uniform actual projection distortion convergence, and a single complete compact common ambient for the original graphs under their own diameter normalization are verified. Identity homeomorphisms explicitly preserve the topology under metric scaling. A uniform coupling theorem transfers weak convergence without assuming Skorokhod-space separability. The native walk rate and floor index are proved to equal the manuscript clock for every same normalization witness. Final GHPS still requires the actual probability/cadlag-J1 transport and canonical global-law restriction consumers, with the proved clock equality supplied to that same witness bundle. New J1 candidates do not constitute a proved complete Skorokhod-space theory. Resistance-form/Brownian-regime construction and identification remain incomplete. Section 4 random GHP/diffusion outlook statements remain conjectures.
 

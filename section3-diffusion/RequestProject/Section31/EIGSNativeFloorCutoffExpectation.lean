@@ -75,7 +75,7 @@ theorem exists_xiNativeFloorCutoffExpectation_of_rules (system : EIGSData K)
       have bounds := continuousMetricBallCutoff_bounds center
         (parameters.vertexEmbedding (coarse + steps) (path horizon)) (2 * radius)
       rw [Real.norm_eq_abs]
-      exact abs_le.mpr ⟨by dsimp only [values]; linarith [bounds.1], bounds.2⟩)
+      exact abs_le.mpr ⟨by dsimp only [Function.comp_apply, values]; linarith [bounds.1], bounds.2⟩)
   have expectationBound := continuousMetricBallCutoff_integral_ge_of_displacement law
     (parameters.vertexEmbedding (coarse + steps)) center radius radiusPositive source sourceNear
     sourceAtZero horizon bad

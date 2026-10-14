@@ -21,8 +21,7 @@ theorem isClosed_local_lower_goodset
     (weight : ℝ → ℝ) (coefficient threshold : ℝ) :
     IsClosed {point : Space | ∀ time : ℝ, 0 < time → time ≤ threshold →
       coefficient * weight time ≤ kernel time point} := by
-  change IsClosed (⋂ time : ℝ, ⋂ (_ : 0 < time), ⋂ (_ : time ≤ threshold),
-    {point : Space | coefficient * weight time ≤ kernel time point})
+  simp only [Set.setOf_forall]
   apply isClosed_iInter
   intro time
   apply isClosed_iInter
@@ -38,9 +37,7 @@ theorem measurableSet_quantized_local_lower
     MeasurableSet {point : Space | ∃ coefficientIndex thresholdIndex : ℕ,
       ∀ time : ℝ, 0 < time → time ≤ threshold thresholdIndex →
       (1 / ((coefficientIndex : ℝ) + 1)) * weight time ≤ kernel time point} := by
-  change MeasurableSet (⋃ coefficientIndex : ℕ, ⋃ thresholdIndex : ℕ,
-    {point : Space | ∀ time : ℝ, 0 < time → time ≤ threshold thresholdIndex →
-      (1 / ((coefficientIndex : ℝ) + 1)) * weight time ≤ kernel time point})
+  simp only [Set.setOf_exists]
   apply MeasurableSet.iUnion
   intro coefficientIndex
   apply MeasurableSet.iUnion
