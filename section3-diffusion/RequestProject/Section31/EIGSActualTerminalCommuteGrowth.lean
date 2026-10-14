@@ -1,4 +1,5 @@
 import RequestProject.Section2ConcreteRandomWalk
+import RequestProject.Section2SpectralGrowth
 import RequestProject.Section31.EIGSActualTerminalResistanceDimension
 
 /-! The actual terminal commute time, with its canonical mass-resistance

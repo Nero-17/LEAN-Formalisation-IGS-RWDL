@@ -56,7 +56,7 @@ theorem finite_birth_maximum_convergence {Vertex : Type*} [Nonempty Vertex]
         ((half_le_self (limitsPositive anchor).le).trans anchorComparison)
   refine ⟨maximizer, maximumPositive, globalComparison, tendsto_order.2 ⟨?_, ?_⟩⟩
   · intro lower lowerStrict
-    filter_upwards [(pointwise maximizer).eventually_gt_const lowerStrict] with level above
+    filter_upwards [(tendsto_order.mp (pointwise maximizer)).1 lower lowerStrict] with level above
     exact above.trans_le (domination level maximizer)
   · intro upper upperStrict
     have upperPositive : 0 < upper := maximumPositive.trans upperStrict

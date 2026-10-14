@@ -1,0 +1,3 @@
+'IGS.Sec31.PoissonClock.finiteGraphExponentialJ1Laws_tendsto_of_spatial_distortion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

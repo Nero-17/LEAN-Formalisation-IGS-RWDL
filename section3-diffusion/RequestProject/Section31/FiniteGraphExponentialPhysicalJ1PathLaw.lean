@@ -64,6 +64,12 @@ theorem finiteGraphExponentialPhysicalJ1Law_eq_product_map
       (finiteGraphExponentialSampleLaw graph degreePositive initial).map
         (exponentialHoldingPhysicalJ1Sample embedding rate ratePositive horizon horizonPositive) := by
   simp only [finiteGraphExponentialPhysicalJ1Law, finiteGraphExponentialJ1Law, ProbabilityMeasure.toMeasure_map]
+  change ((finiteGraphExponentialSampleLaw graph degreePositive initial).map
+    (exponentialHoldingJ1Sample embedding (rate * horizon)
+      (mul_pos ratePositive (show (0 : ℝ) < horizon from horizonPositive)))).map
+      (unitToPhysicalCadlagJ1 horizon horizonPositive) =
+    (finiteGraphExponentialSampleLaw graph degreePositive initial).map
+      (exponentialHoldingPhysicalJ1Sample embedding rate ratePositive horizon horizonPositive)
   rw [AEMeasurable.map_map_of_aemeasurable
     (unitToPhysicalCadlagJ1_continuous horizon horizonPositive).measurable.aemeasurable
     (exponentialHoldingJ1Sample_aemeasurable graph degreePositive initial embedding (rate * horizon)

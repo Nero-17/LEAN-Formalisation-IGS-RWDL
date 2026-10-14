@@ -1,0 +1,14 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSTwoColourBirthAndMaximumDegree.lean:18:39: warning: This simp argument is unused:
+  not_true_eq_false
+
+Hint: Omit it from the simp argument list.
+  simp_all only [Fin.isValue, ne_eq,̵ ̵n̵o̵t̵_̵t̵r̵u̵e̵_̵e̵q̵_̵f̵a̵l̵s̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSTwoColourBirthAndMaximumDegree.lean:99:64: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'EIGS.twoColourSystem_rule_interior_degree_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_private_birth_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_initial_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_maxDegree' depends on axioms: [propext, Classical.choice, Quot.sound]

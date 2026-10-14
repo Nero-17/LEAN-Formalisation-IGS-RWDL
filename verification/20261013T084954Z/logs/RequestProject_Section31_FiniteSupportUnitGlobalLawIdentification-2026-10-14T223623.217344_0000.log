@@ -1,0 +1,6 @@
+'IGS.Sec31.DiscreteMarkov.continuousPathToUnitCadlagJ1_continuous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.finiteSupportPathToUnitCadlagJ1_law_eq_globalRestriction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

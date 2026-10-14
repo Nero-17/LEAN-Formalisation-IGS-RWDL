@@ -27,7 +27,7 @@ def positiveHorizonTimeOrderIso (horizon : ℝ≥0) (positive : 0 < horizon) :
   map_rel_iff' := by
     intro first second
     change (horizon : ℝ) * first.val ≤ (horizon : ℝ) * second.val ↔ first.val ≤ second.val
-    exact mul_le_mul_left (show (0 : ℝ) < horizon from positive)
+    exact mul_le_mul_iff_right₀ (show (0 : ℝ) < horizon from positive)
 
 variable {State : Type*} [MetricSpace State] [BoundedSpace State]
 local instance physicalTimeBounded (horizon : ℝ≥0) : BoundedSpace (Icc (0 : ℝ) (horizon : ℝ)) :=
@@ -61,9 +61,9 @@ theorem unitToPhysicalCadlagJ1_weak_convergence (horizon : ℝ≥0) (positive : 
 
 theorem unitToPhysicalCadlagJ1_tight (horizon : ℝ≥0) (positive : 0 < horizon)
     (laws : ℕ → ProbabilityMeasure (UnitCadlagJ1Path State))
-    (tight : IsTightMeasureSet (Set.range (fun index => (laws index : Measure _)))) :
+    (tight : IsTightMeasureSet (Set.range (fun index => (laws index).toMeasure))) :
     IsTightMeasureSet (Set.range (fun index =>
-      (laws index : Measure _).map (unitToPhysicalCadlagJ1 horizon positive))) :=
+      (laws index).toMeasure.map (unitToPhysicalCadlagJ1 (State := State) horizon positive))) :=
   cadlagJ1TimeOrderIsoMap_tight (positiveHorizonTimeOrderIso horizon positive).symm laws tight
 
 end

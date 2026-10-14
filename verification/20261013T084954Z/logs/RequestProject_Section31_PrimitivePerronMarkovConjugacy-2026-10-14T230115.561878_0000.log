@@ -1,0 +1,34 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\PrimitivePerronMarkovConjugacy.lean:18:0: warning: automatically included section variable(s) unused in theorem `EIGS.perronMarkovMatrix_nonnegative`:
+  [Fintype State]
+  [DecidableEq State]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype State] [DecidableEq State] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\PrimitivePerronMarkovConjugacy.lean:26:0: warning: automatically included section variable(s) unused in theorem `EIGS.perronMarkovMatrix_row_sum`:
+  [DecidableEq State]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq State] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\PrimitivePerronMarkovConjugacy.lean:44:14: warning: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  simp [M̵a̵t̵r̵i̵x̵.̵o̵n̵e̵_̵a̵p̵p̵l̵y̵,̵ ̵(vectorPositive first).ne']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\PrimitivePerronMarkovConjugacy.lean:45:14: warning: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  simp [M̵a̵t̵r̵i̵x̵.̵o̵n̵e̵_̵a̵p̵p̵l̵y̵,̵ ̵same]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\PrimitivePerronMarkovConjugacy.lean:58:10: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'EIGS.perronMarkovMatrix_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.perronMarkovMatrix_row_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.perronMarkovMatrix_power' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.primitive_matrix_markov_common_column' depends on axioms: [propext, Classical.choice, Quot.sound]

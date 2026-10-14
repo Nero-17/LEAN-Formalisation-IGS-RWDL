@@ -6,7 +6,7 @@ the finite-graph input for the stationary normalized degree of Li--Britz,
 arXiv:2109.14463v2, Definitions 3.1--3.2. Candidate source. -/
 
 namespace EIGS
-open scoped BigOperators
+open scoped BigOperators Classical
 noncomputable section
 
 theorem twoColourSystem_rule_interior_degree_counts (colour : Fin 2) (vertex : Fin 5)
@@ -59,7 +59,10 @@ theorem twoColourSystem_initial_degree (vertex : XiVtx twoColourSystem 0) :
     change Bool at vertex
     cases vertex <;>
       norm_num [Fintype.sum_sum_type, Fin.sum_univ_two, degVec, outDeg, inDeg,
-        XiTail, XiHead, XiEnds, XiCol, XiLvl, twoColourSystem, EIGSData.toRuleData]
+        XiTail, XiHead, XiEnds, XiCol, XiLvl, XiEdge, twoColourSystem, EIGSData.toRuleData]
+    all_goals
+      change (Finset.univ.filter (fun _ : Unit => (0 : Fin 2) = 0)).card = 1
+      simp
   have realDegree := degreeIdentity.trans stateSum
   exact_mod_cast realDegree
 
@@ -93,7 +96,7 @@ theorem twoColourSystem_first_maximum_vertex_degree :
     (XiSimpleGraph twoColourSystem 1).degree twoColourFirstMaximumVertex = 3 := by
   unfold twoColourFirstMaximumVertex
   rw [twoColourSystem_private_birth_degree]
-  norm_num [XiCol, XiLvl, twoColourSystem, EIGSData.toRuleData]
+  norm_num [XiCol, XiLvl, twoColourSystem, EIGSData.toRuleData] <;> rfl
 
 theorem twoColourSystem_maxDegree (level : ℕ) :
     (XiSimpleGraph twoColourSystem (level + 1)).maxDegree = 3 * 2 ^ level := by
@@ -103,7 +106,8 @@ theorem twoColourSystem_maxDegree (level : ℕ) :
       (xiForward twoColourSystem 1 level twoColourFirstMaximumVertex)
     rw [twoColourSystem_simpleGraph_degree_forward,
       twoColourSystem_first_maximum_vertex_degree] at bound
-    simpa only [Nat.add_comm] using bound
+    rw [Nat.add_comm level 1]
+    exact bound
 
 end
 end EIGS

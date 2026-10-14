@@ -1,0 +1,3 @@
+'EIGS.xiNetwork_effRes_eq_simpleGraph_resistance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSimpleGraph_commute_eq_mass_mul_resistance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSimpleGraph_terminal_commute_canonical_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -40,6 +40,11 @@ theorem finiteGraphExponentialJ1Law_spatial_map
         finiteGraphExponentialJ1Law graph degreePositive initial (spatial ∘ embedding) horizon horizonPositive := by
   apply ProbabilityMeasure.toMeasure_injective
   simp only [ProbabilityMeasure.toMeasure_map, finiteGraphExponentialJ1Law]
+  change ((finiteGraphExponentialSampleLaw graph degreePositive initial).map
+    (exponentialHoldingJ1Sample embedding horizon horizonPositive)).map
+      (cadlagJ1SpatialMap spatial spatialContinuous) =
+    (finiteGraphExponentialSampleLaw graph degreePositive initial).map
+      (exponentialHoldingJ1Sample (spatial ∘ embedding) horizon horizonPositive)
   rw [AEMeasurable.map_map_of_aemeasurable
     (cadlagJ1SpatialMap_continuous spatial spatialContinuous).measurable.aemeasurable
     (exponentialHoldingJ1Sample_aemeasurable graph degreePositive initial embedding horizon horizonPositive)]

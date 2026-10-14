@@ -42,6 +42,7 @@ theorem finiteGraphExponentialJ1Laws_isTight_of_floor_coupling
         ((rates level : ℝ) * horizon) (mul_pos (ratesPositive level) (by exact_mod_cast horizonPositive)) :
           Measure (UnitCadlagJ1Path State)))) := by
   classical
+  trace "uniformJ1: proof entered"
   have horizonPositiveNNReal : (0 : ℝ≥0) < horizon := by exact_mod_cast horizonPositive
   let paths := finiteHorizonStepPaths (horizon : ℝ≥0) rates embedding
   let toUnit := finiteSupportPathToUnitCadlagJ1 (horizon : ℝ≥0) horizonPositiveNNReal paths
@@ -49,9 +50,12 @@ theorem finiteGraphExponentialJ1Laws_isTight_of_floor_coupling
   have toUnitMeasurable : Measurable toUnit := finiteSupportPathToUnitCadlagJ1_measurable
     (horizon : ℝ≥0) horizonPositiveNNReal paths (finiteHorizonStepPaths_isCadlag _ _ _)
   let kernels := fun level => finiteGraphTransitionKernel (graphs level) (degreePositive level)
-  let floorLaws := finiteHorizonStepLaw (horizon : ℝ≥0) rates embedding kernels initial
-  let sourceLaws := fun level => ProbabilityMeasure.map (floorLaws level) toUnitMeasurable.aemeasurable
-  let targetLaws := fun level => finiteGraphExponentialJ1Law (graphs level) (degreePositive level) (initial level)
+  let floorLaws : ℕ → ProbabilityMeasure (FiniteSupportPathSpace paths) :=
+    finiteHorizonStepLaw horizon rates embedding kernels initial
+  let sourceLaws : ℕ → ProbabilityMeasure (UnitCadlagJ1Path State) :=
+    fun level => ProbabilityMeasure.map (floorLaws level) toUnitMeasurable.aemeasurable
+  let targetLaws : ℕ → ProbabilityMeasure (UnitCadlagJ1Path State) :=
+    fun level => finiteGraphExponentialJ1Law (graphs level) (degreePositive level) (initial level)
     (embedding level) ((rates level : ℝ) * horizon) (mul_pos (ratesPositive level) (by exact_mod_cast horizonPositive))
   let joint := fun level => finiteGraphExponentialSampleLaw (graphs level) (degreePositive level) (initial level)
   let source := fun level (sample : (ℕ → Vertex level) × (ℕ → ℝ)) =>
@@ -62,6 +66,7 @@ theorem finiteGraphExponentialJ1Laws_isTight_of_floor_coupling
     ((finiteHorizonStepMap_measurable (horizon : ℝ≥0) rates embedding level).comp measurable_fst)
   have targetMeasurable (level : ℕ) : AEMeasurable (target level) (joint level) :=
     exponentialHoldingJ1Sample_aemeasurable _ _ _ _ _ _
+  trace "uniformJ1: sample maps typed"
   have sourceMarginal (level : ℕ) : (joint level).map (source level) = (sourceLaws level : Measure _) := by
     change (joint level).map ((toUnit ∘ finiteHorizonStepMap (horizon : ℝ≥0) rates embedding level) ∘ Prod.fst) = _
     rw [← Measure.map_map (toUnitMeasurable.comp (finiteHorizonStepMap_measurable _ _ _ _)) measurable_fst,
@@ -73,12 +78,35 @@ theorem finiteGraphExponentialJ1Laws_isTight_of_floor_coupling
     exact congrArg (Measure.map toUnit)
       (finiteHorizonStepLaw_eq_map horizon rates embedding kernels initial level).symm
   have targetMarginal (level : ℕ) : (joint level).map (target level) = (targetLaws level : Measure _) := rfl
-  have sourceTight : IsTightMeasureSet (Set.range (fun level => (sourceLaws level : Measure _))) :=
-    finiteSupportPathToUnitCadlagJ1_tight (horizon : ℝ≥0) horizonPositiveNNReal paths
-      (finiteHorizonStepPaths_isCadlag _ _ _) floorLaws floorTight
+  trace "uniformJ1: marginals complete"
+  have floorMeasureTight : IsTightMeasureSet
+      (Set.range (fun level => (floorLaws level).toMeasure)) := floorTight
+  have mappedFloorTight : IsTightMeasureSet
+      (Set.range (fun level => (floorLaws level).toMeasure.map toUnit)) := by
+    rw [Set.range_comp' (Measure.map toUnit) (fun level => (floorLaws level).toMeasure)]
+    exact floorMeasureTight.map
+      (finiteSupportPathToUnitCadlagJ1_lipschitz horizon horizonPositiveNNReal paths
+        (finiteHorizonStepPaths_isCadlag horizon rates embedding)).continuous
+  trace "uniformJ1: raw floor map tight"
+  have sourceMeasureEquality : (fun level => (sourceLaws level).toMeasure) =
+      (fun level => (floorLaws level).toMeasure.map toUnit) := by
+    funext level
+    exact ProbabilityMeasure.toMeasure_map (floorLaws level) toUnitMeasurable.aemeasurable
+  have sourceTight : IsTightMeasureSet
+      (Set.range (fun level => (sourceLaws level).toMeasure)) := by
+    rw [sourceMeasureEquality]
+    exact mappedFloorTight
+  trace "uniformJ1: probability source range tight"
+  have eachTargetTight (level : ℕ) : IsTightMeasureSet {(targetLaws level).toMeasure} :=
+    finiteGraphExponentialJ1Law_isTight (graphs level) (degreePositive level) (initial level)
+      (embedding level) ((rates level : ℝ) * horizon)
+      (mul_pos (ratesPositive level) (by exact_mod_cast horizonPositive))
+  trace "uniformJ1: target singleton tight"
+  change IsTightMeasureSet (Set.range (fun level => (targetLaws level : Measure (UnitCadlagJ1Path State))))
   apply isTight_of_constructed_couplings (fun level => (ℕ → Vertex level) × (ℕ → ℝ)) joint source target
     (fun level => (sourceMeasurable level).aemeasurable) targetMeasurable sourceLaws targetLaws sourceMarginal targetMarginal
-      sourceTight (fun level => finiteGraphExponentialJ1Law_isTight _ _ _ _ _ _)
+      sourceTight eachTargetTight
+  trace "uniformJ1: constructed coupling applied"
   intro radius error radiusPositive errorPositive
   filter_upwards [sampleCoupling radius error radiusPositive errorPositive] with level coupling
   obtain ⟨bad, badBound, close⟩ := coupling

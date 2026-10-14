@@ -87,7 +87,7 @@ theorem finite_positive_matrix_common_column [Nonempty State]
   have smallestPositive : 0 < smallest := by
     obtain ⟨first, _, valueEquality⟩ := Finset.mem_image.mp
       (Finset.min'_mem columnValues columnNonempty)
-    exact valueEquality ▸ positive first anchor
+    simpa only [smallest, ← valueEquality] using positive first anchor
   refine ⟨anchor, min (1 / 2) smallest, lt_min (by norm_num) smallestPositive,
     (min_le_left _ _).trans_lt (by norm_num), ?_⟩
   intro first

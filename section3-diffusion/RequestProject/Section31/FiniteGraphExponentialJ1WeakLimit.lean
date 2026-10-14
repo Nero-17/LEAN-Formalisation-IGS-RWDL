@@ -35,10 +35,10 @@ theorem finiteGraphExponentialJ1Laws_tendsto_of_floor_coupling
         ∀ sample ∉ bad, ∀ time : ℝ, 0 ≤ time → time ≤ horizon →
           dist (embedding level (holdingTimePath sample.1 sample.2 ((rates level : ℝ) * time)))
             (embedding level (sample.1 ⌊(rates level : ℝ) * time⌋₊)) ≤ radius) :
-    Tendsto (fun level =>
+    Tendsto (fun level => (
       finiteGraphExponentialJ1Law (graphs level) (degreePositive level) (initial level) (embedding level)
         ((rates level : ℝ) * horizon) (mul_pos (ratesPositive level) (by exact_mod_cast horizonPositive)) :
-          ProbabilityMeasure (UnitCadlagJ1Path State)) atTop
+          ProbabilityMeasure (UnitCadlagJ1Path State))) atTop
       (𝓝 (ProbabilityMeasure.map limit (finiteSupportPathToUnitCadlagJ1_measurable horizon horizonPositive
         (finiteHorizonStepPaths horizon rates embedding) (finiteHorizonStepPaths_isCadlag horizon rates embedding)).aemeasurable)) := by
   classical
@@ -86,6 +86,7 @@ theorem finiteGraphExponentialJ1Laws_tendsto_of_floor_coupling
     exact sourceMarginal level
   have targetEquality : (fun level => ProbabilityMeasure.map (samples level) (targetMeasurable level)) = targetLaws := rfl
   rw [← sourceEquality] at mappedConverges
+  change Tendsto targetLaws atTop (𝓝 (ProbabilityMeasure.map limit toUnitMeasurable.aemeasurable))
   rw [← targetEquality]
   apply IGS.Sec31.probability_maps_same_limit_of_constructed_coupling samples source target
     (fun level => (sourceMeasurable level).aemeasurable) targetMeasurable _ _ mappedConverges

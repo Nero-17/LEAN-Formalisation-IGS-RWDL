@@ -1,0 +1,2 @@
+'Cluster.nested_network_mean_square_resistance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nested_network_logistic_product_exact_rational' depends on axioms: [propext, Classical.choice, Quot.sound]

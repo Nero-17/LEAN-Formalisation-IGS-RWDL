@@ -1,0 +1,4 @@
+'IGS.Sec31.PoissonClock.holdingPrefixCountHistory_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonClock.exponential_finite_history_count_regeneration' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

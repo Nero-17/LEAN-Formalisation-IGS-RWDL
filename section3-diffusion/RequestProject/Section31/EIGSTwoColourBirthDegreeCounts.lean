@@ -18,7 +18,7 @@ theorem fintype_card_sigma_predicate {Base : Type*} [Fintype Base]
       invFun := fun vertex => ⟨⟨vertex.1, vertex.2.val⟩, vertex.2.property⟩
       left_inv := by rintro ⟨⟨base, vertex⟩, property⟩; rfl
       right_inv := by rintro ⟨base, vertex, property⟩; rfl }
-  exact (Fintype.card_congr rearrange).trans (Fintype.card_sigma _)
+  exact (Fintype.card_congr rearrange).trans Fintype.card_sigma
 
 def twoColourBirthDegreeThree (level : ℕ) (vertex : XiNewVertices twoColourSystem level) : Prop :=
   XiCol twoColourSystem.toRuleData level vertex.1 = 0 ∧
@@ -40,15 +40,15 @@ theorem twoColourSystem_birth_degree_three_count (level : ℕ) :
     Fintype.card {vertex : XiNewVertices twoColourSystem level //
       twoColourBirthDegreeThree level vertex} =
       2 * chiCount twoColourSystem.toRuleData level 0 := by
-  change Fintype.card {vertex : Σ edge : XiEdge twoColourSystem.toRuleData level,
-      {vertex : Fin 5 // vertex ≠ 0 ∧ vertex ≠ 4} //
-      XiCol twoColourSystem.toRuleData level vertex.1 = 0 ∧
-        (vertex.2.val = 1 ∨ vertex.2.val = 3)} = _
+  unfold twoColourBirthDegreeThree XiNewVertices
   rw [fintype_card_sigma_predicate]
-  simp only [twoColourSystem_rule_birth_degree_three_count,
-    chiCount, Finset.card_filter, Finset.mul_sum]
+  simp only [chiCount, Finset.card_filter, Finset.mul_sum]
   apply Finset.sum_congr rfl
   intro edge _
+  rw [← Nat.card_eq_fintype_card]
+  change Nat.card {vertex : {vertex : Fin 5 // vertex ≠ 0 ∧ vertex ≠ 4} //
+    XiCol twoColourSystem.toRuleData level edge = 0 ∧ (vertex.val = 1 ∨ vertex.val = 3)} = _
+  rw [Nat.card_eq_fintype_card, twoColourSystem_rule_birth_degree_three_count]
   split_ifs <;> norm_num
 
 theorem twoColourSystem_birth_degree_two_count (level : ℕ) :
@@ -56,17 +56,20 @@ theorem twoColourSystem_birth_degree_two_count (level : ℕ) :
       ¬ twoColourBirthDegreeThree level vertex} =
       chiCount twoColourSystem.toRuleData level 0 +
         3 * chiCount twoColourSystem.toRuleData level 1 := by
-  change Fintype.card {vertex : Σ edge : XiEdge twoColourSystem.toRuleData level,
-      {vertex : Fin 5 // vertex ≠ 0 ∧ vertex ≠ 4} //
-      ¬ (XiCol twoColourSystem.toRuleData level vertex.1 = 0 ∧
-        (vertex.2.val = 1 ∨ vertex.2.val = 3))} = _
+  unfold twoColourBirthDegreeThree XiNewVertices
   rw [fintype_card_sigma_predicate]
   have splitColour (colour : Fin 2) :
       (if colour = 0 then 1 else 3 : ℕ) =
         (if colour = 0 then 1 else 0) + 3 * (if colour = 1 then 1 else 0) := by
     fin_cases colour <;> decide
-  simp only [twoColourSystem_rule_birth_degree_two_count, splitColour,
-    Finset.sum_add_distrib, Finset.sum_mul, Finset.mul_sum, chiCount, Finset.card_filter]
+  simp only [Finset.mul_sum, chiCount, Finset.card_filter]
+  rw [← Finset.sum_add_distrib]
+  apply Finset.sum_congr rfl
+  intro edge _
+  rw [← Nat.card_eq_fintype_card]
+  change Nat.card {vertex : {vertex : Fin 5 // vertex ≠ 0 ∧ vertex ≠ 4} //
+    ¬ (XiCol twoColourSystem.toRuleData level edge = 0 ∧ (vertex.val = 1 ∨ vertex.val = 3))} = _
+  rw [Nat.card_eq_fintype_card, twoColourSystem_rule_birth_degree_two_count, splitColour]
 
 end
 end EIGS

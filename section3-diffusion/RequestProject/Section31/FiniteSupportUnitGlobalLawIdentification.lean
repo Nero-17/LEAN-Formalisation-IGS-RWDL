@@ -42,7 +42,7 @@ theorem finiteSupportPathToUnitCadlagJ1_law_eq_globalRestriction
     (horizon : ℝ≥0) (horizonPositive : 0 < horizon)
     (rates : ℕ → ℝ≥0) (embedding : ∀ level, Vertex level → State)
     (law : ProbabilityMeasure (FiniteSupportPathSpace (finiteHorizonStepPaths horizon rates embedding)))
-    (lawContinuous : ∀ᵐ path ∂(law : Measure _), Continuous (UniformFun.toFun path.val))
+    (lawContinuous : ∀ᵐ path ∂law.toMeasure, Continuous (UniformFun.toFun path.val))
     (globalLaw : ProbabilityMeasure C(ℝ≥0, State))
     (functionLawEquality :
       (law : Measure (FiniteSupportPathSpace (finiteHorizonStepPaths horizon rates embedding))).map
@@ -61,12 +61,12 @@ theorem finiteSupportPathToUnitCadlagJ1_law_eq_globalRestriction
   have subtypeEmbedding : MeasurableEmbedding (Subtype.val : continuousPaths → FiniteSupportPathSpace paths) :=
     MeasurableEmbedding.subtype_coe continuousPathsClosed.measurableSet
   let continuousPart : ProbabilityMeasure continuousPaths :=
-    ⟨(law : Measure _).comap Subtype.val,
+    ⟨law.toMeasure.comap Subtype.val,
       subtypeEmbedding.isProbabilityMeasure_comap (by
         filter_upwards [lawContinuous] with path pathContinuous
         exact ⟨⟨path, pathContinuous⟩, rfl⟩)⟩
-  have recovered : (continuousPart : Measure continuousPaths).map Subtype.val = (law : Measure _) := by
-    change ((law : Measure _).comap (Subtype.val : continuousPaths → FiniteSupportPathSpace paths)).map Subtype.val = _
+  have recovered : (continuousPart : Measure continuousPaths).map Subtype.val = law.toMeasure := by
+    change (law.toMeasure.comap (Subtype.val : continuousPaths → FiniteSupportPathSpace paths)).map Subtype.val = _
     rw [map_comap_subtype_coe continuousPathsClosed.measurableSet]
     exact Measure.restrict_eq_self_of_ae_mem lawContinuous
   have liftMeasurable := (finiteSupportContinuousMapLift_isometry paths).continuous.measurable

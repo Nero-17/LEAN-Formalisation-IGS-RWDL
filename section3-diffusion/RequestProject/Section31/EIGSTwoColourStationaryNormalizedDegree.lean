@@ -9,6 +9,7 @@ Candidate source. -/
 
 namespace EIGS
 open Filter Topology
+open scoped Classical
 noncomputable section
 variable {K : ℕ}
 

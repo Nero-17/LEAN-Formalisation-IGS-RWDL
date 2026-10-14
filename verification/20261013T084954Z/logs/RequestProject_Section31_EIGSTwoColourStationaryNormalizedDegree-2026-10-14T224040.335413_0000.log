@@ -1,0 +1,13 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSTwoColourStationaryNormalizedDegree.lean:19:13: warning: unused variable `level`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSTwoColourStationaryNormalizedDegree.lean:44:17: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSTwoColourStationaryNormalizedDegree.lean:44:17: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'EIGS.xiUnionBirthVertex_embedding' depends on axioms: [propext, Quot.sound]
+'EIGS.twoColourSystem_stationary_normalized_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_private_normalized_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_stationary_normalized_degree_positive' depends on axioms: [propext, Classical.choice, Quot.sound]

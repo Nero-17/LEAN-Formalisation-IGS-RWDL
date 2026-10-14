@@ -40,7 +40,10 @@ theorem unitToPhysicalCadlagJ1_global_path (horizon : ℝ≥0) (positive : 0 < h
     have clockEquality : (horizon : ℝ) * (time.val / horizon) = time.val := by
       field_simp [ne_of_gt (show (0 : ℝ) < horizon from positive)]
     simp only [continuousPathToUnitCadlagJ1, compactContinuousMapToCadlagJ1,
-      ContinuousMap.comp_apply, clockEquality, continuousPathFiniteHorizonRestriction]
+      ContinuousMap.comp_apply, continuousPathFiniteHorizonRestriction]
+    apply congrArg path
+    apply Subtype.ext
+    exact clockEquality
   have reconstruct (function : J1Function (Icc (0 : ℝ) (horizon : ℝ)) State) :
       J1Function.mk function.toFun = function := by cases function; rfl
   exact (reconstruct _).symm.trans ((congrArg J1Function.mk functions).trans (reconstruct _))

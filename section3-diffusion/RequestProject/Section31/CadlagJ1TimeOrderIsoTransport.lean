@@ -43,7 +43,7 @@ theorem j1FunctionTimeOrderIsoMap_continuous (timeMap : OtherTime ≃o Time) :
       have clockSmall : dist (change (timeMap time)) (timeMap time) < duration :=
         ((skorokhodJ1Cost_clock_le other.toFun path.toFun change (timeMap time)).trans_lt costSmall).trans_le
           (min_le_right _ _)
-      simpa only [conjugated, OrderIso.trans_apply, OrderIso.symm_apply_apply, UniformFun.toFun_ofFun,
+      simpa only [OrderIso.coe_toHomeomorph, conjugated, OrderIso.trans_apply, OrderIso.symm_apply_apply, UniformFun.toFun_ofFun,
         id_eq] using (inverseClose clockSmall).le
     · apply (UniformFun.dist_le (half_pos positive).le).mpr
       intro time
@@ -96,11 +96,22 @@ theorem cadlagJ1TimeOrderIsoMap_weak_convergence (timeMap : OtherTime ≃o Time)
 
 theorem cadlagJ1TimeOrderIsoMap_tight (timeMap : OtherTime ≃o Time)
     (laws : ℕ → ProbabilityMeasure (CadlagJ1Path Time State))
-    (tight : IsTightMeasureSet (Set.range (fun index => (laws index : Measure _)))) :
+    (tight : IsTightMeasureSet (Set.range (fun index => (laws index).toMeasure))) :
     IsTightMeasureSet (Set.range (fun index =>
-      (laws index : Measure _).map (cadlagJ1TimeOrderIsoMap timeMap))) := by
-  simpa only [← Set.range_comp', Function.comp_def] using tight.map
-    (cadlagJ1TimeOrderIsoMap_continuous timeMap)
+      (laws index).toMeasure.map (cadlagJ1TimeOrderIsoMap (State := State) timeMap))) := by
+  rw [isTightMeasureSet_iff_exists_isCompact_measure_compl_le] at tight ⊢
+  intro error positive
+  obtain ⟨capture, compact, bound⟩ := tight error positive
+  let transport := cadlagJ1TimeOrderIsoHomeomorph (State := State) timeMap
+  have imageClosed : IsClosed (transport '' closure capture) :=
+    transport.isClosedMap _ isClosed_closure
+  refine ⟨transport '' closure capture, compact.closure.image transport.continuous, ?_⟩
+  rintro _ ⟨index, rfl⟩
+  rw [Measure.map_apply (cadlagJ1TimeOrderIsoMap_continuous timeMap).measurable
+    imageClosed.measurableSet.compl]
+  apply (measure_mono ?_).trans (bound _ (Set.mem_range_self index))
+  intro path outside inCapture
+  exact outside ⟨path, subset_closure inCapture, rfl⟩
 
 end
 end IGS.Sec31.DiscreteMarkov

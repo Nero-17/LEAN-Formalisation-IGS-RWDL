@@ -1,0 +1,9 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\FiniteMarkovCommonColumnContraction.lean:78:0: warning: automatically included section variable(s) unused in theorem `EIGS.finite_positive_matrix_common_column`:
+  [DecidableEq State]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq State] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'EIGS.finiteMarkov_common_column_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.finiteMarkov_common_column_difference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.finite_positive_matrix_common_column' depends on axioms: [propext, Classical.choice, Quot.sound]

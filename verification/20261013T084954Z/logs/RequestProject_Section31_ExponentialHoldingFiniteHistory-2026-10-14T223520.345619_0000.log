@@ -1,0 +1,6 @@
+'IGS.Sec31.PoissonClock.holdingPrefixExtension_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonClock.cumulativeHoldingTime_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonClock.holdingJumpIndex_past_on_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonClock.holdingJumpIndex_past_prefix_on_count' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

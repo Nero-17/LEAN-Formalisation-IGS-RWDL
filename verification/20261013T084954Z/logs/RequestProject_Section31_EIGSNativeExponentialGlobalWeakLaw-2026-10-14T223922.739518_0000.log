@@ -1,0 +1,3 @@
+'EIGS.xiNativeExponentialGlobalWeakFamilyProperties_of_continuous_restriction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

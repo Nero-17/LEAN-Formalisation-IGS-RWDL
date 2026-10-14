@@ -1,0 +1,5 @@
+'IGS.Sec31.DiscreteMarkov.cadlagJ1TimeOrderIsoHomeomorph' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.cadlagJ1TimeOrderIsoMap_weak_convergence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.cadlagJ1TimeOrderIsoMap_tight' depends on axioms: [propext, Classical.choice, Quot.sound]
