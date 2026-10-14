@@ -1,13 +1,13 @@
 {
-  "snapshot_utc": "2026-10-14T20:21:38.422406+00:00",
+  "snapshot_utc": "2026-10-14T20:51:18.189812+00:00",
   "round": "20261013T084954Z",
   "compiler": "Lean 4.28.0",
   "mathlib": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
-  "shared_dependency_modules": 900,
-  "shared_report": "integration-900.json",
-  "shared_report_sha256": "8e36165df22c6040fa13f11c23517395c8111f165e02ff7aab47104fb3bfed1a",
-  "independent_whole_file_count": 559,
-  "independent_audit_count": 1647,
+  "shared_dependency_modules": 920,
+  "shared_report": "integration-920.json",
+  "shared_report_sha256": "3f2aa8d4fcf88ad244256d2942e4556ffb447e47c1bf5ca62df92b3487aa629b",
+  "independent_whole_file_count": 589,
+  "independent_audit_count": 1699,
   "records": [
     {
       "module": "RequestProject.Section31.EIGSL2EnergyConstants",
@@ -16727,6 +16727,756 @@
       ]
     },
     {
+      "module": "RequestProject.Section31.EIGSTwoColourResistanceFormula",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSTwoColourResistanceFormula.lean",
+      "source_sha256": "d24011ef73ad72f2916ab17660abba7ba743660792cdbe7056cb4072b387d99a",
+      "log": "logs/RequestProject_Section31_EIGSTwoColourResistanceFormula-2026-10-14T202824.563435_0000.log",
+      "log_sha256": "2c51e5093064ce306868e3f1ae8615e144e14a6d79e2d8784319d71ad311fce3",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.twoColourRedCurrent_isUnitFlow",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourBlueCurrent_isUnitFlow",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_Psi",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.IndependentExponentialHoldingTimes",
+      "source": "section3-diffusion/RequestProject/Section31/IndependentExponentialHoldingTimes.lean",
+      "source_sha256": "ea3d818ec6139565a0a92af377c4d336dc863fe90b828f992028148ce1e2d1b4",
+      "log": "logs/RequestProject_Section31_IndependentExponentialHoldingTimes-2026-10-14T202059.798219_0000.log",
+      "log_sha256": "43ee5c682c823214961dc6469d0dc016607f5a93e4e800c4627b2912d49b1f84",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponentialHoldingTimeLaw_independent",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponentialHoldingTimeLaw_positive",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponentialHoldingTimeLaw_nonexplosion",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ExponentialHoldingTimePaths",
+      "source": "section3-diffusion/RequestProject/Section31/ExponentialHoldingTimePaths.lean",
+      "source_sha256": "048a3d10973cbfa69141a82e6e4ef4f77478f989519afeec6dca981cad35a229",
+      "log": "logs/RequestProject_Section31_ExponentialHoldingTimePaths-2026-10-14T202623.219885_0000.log",
+      "log_sha256": "38d4d361430c62bc6c6a1b8b9d7e3f1dbbd777551cef1a134cb1491d0ff941eb",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.PoissonClock.holdingJumpIndex_measurable",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.holdingTimePath_measurable",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.holdingTimePath_locally_constant_right",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.holdingTimePath_locally_constant_left",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ExponentialClockStrongLaw",
+      "source": "section3-diffusion/RequestProject/Section31/ExponentialClockStrongLaw.lean",
+      "source_sha256": "ab67c19fa4857610eb675ae927faf1a21c9b78f741d152d0b15c3dbea1717fd3",
+      "log": "logs/RequestProject_Section31_ExponentialClockStrongLaw-2026-10-14T202649.182356_0000.log",
+      "log_sha256": "fa3931e089141b8f06c54e598db765cb23b2da9b8319de1048182eb64a8d96a8",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.PoissonClock.unitExponential_integrable_id",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.unitExponential_integral_id",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponentialHoldingTimeLaw_clock_average",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ExponentialInverseClockAsymptotics",
+      "source": "section3-diffusion/RequestProject/Section31/ExponentialInverseClockAsymptotics.lean",
+      "source_sha256": "d5c2347f76ba7b3c471ce9d72ba3de6678de6bfbaba6f7b176cbb8b9c18976d2",
+      "log": "logs/RequestProject_Section31_ExponentialInverseClockAsymptotics-2026-10-14T203246.783931_0000.log",
+      "log_sha256": "5cb1cd7ca4db5e230e75397c19aa5413a3dd78f1f120c7036d3d9c066dc4e5a3",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.PoissonClock.holdingJumpIndex_clock_ratio",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponentialHoldingTimeLaw_jump_clock_ratio",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSTwoColourActualSpectralParameters",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSTwoColourActualSpectralParameters.lean",
+      "source_sha256": "b9f4a76fcba4ad9f1715697daa679f995e3e389613251f0dd75406e3e840c74f",
+      "log": "logs/RequestProject_Section31_EIGSTwoColourActualSpectralParameters-2026-10-14T204349.292629_0000.log",
+      "log_sha256": "6212d3bdd386621d8b35dfcb54841e7bbf38c30f33afe4291fb4ed9749188538",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.twoColourSystem_resistanceEigenpair",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_resistanceSpectralRadius",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_resistanceRate_numeric",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_finiteSpectralFormula_numeric",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_typicalSpectralFormula_numeric",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSPositiveDegreeAddressCollar",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSPositiveDegreeAddressCollar.lean",
+      "source_sha256": "73d1375a027eb78792bb54dc87a36d2c136b03e70ead2b30863420a64f150d6c",
+      "log": "logs/RequestProject_Section31_EIGSPositiveDegreeAddressCollar-2026-10-14T202944.486014_0000.log",
+      "log_sha256": "292cf378cb8285330d7d84fb1759be5a046b874cb9b9d765ffd4d27e582d0900",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_uniform_xiIncidence_growth_upper_of_positive_degree_data",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiAddressEndpointCollar_mass_bound_of_positive_degree_data",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSPositiveDegreeLogarithmicCollar",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSPositiveDegreeLogarithmicCollar.lean",
+      "source_sha256": "1428b99e47ab0baefd51095e7b2d7015cf393f8bb0283ba036e80fa41fe33899",
+      "log": "logs/RequestProject_Section31_EIGSPositiveDegreeLogarithmicCollar-2026-10-14T203036.878366_0000.log",
+      "log_sha256": "b0218007779e010a770928d1c1aa6ffe1fc33c21dcafee9a9e8b8b1ec3c3a277",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiAddressEndpointCollar_logarithmic_probability_sum_finite_of_positive_degree_data",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiAddressEndpointCollar_logarithmic_ae_avoidance_of_positive_degree_data",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiAddressEndpointCollar_all_rational_logarithmic_ae_avoidance_of_positive_degree_data",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiAddressEndpointCollar_logarithmic_original_level_ae_avoidance_of_positive_degree_data",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSPositiveDegreeRecentIncidence",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSPositiveDegreeRecentIncidence.lean",
+      "source_sha256": "1275186f364c8081ab95ca84549e21709ca366a3d9e8d1b7bef2bd71c7b1b3ec",
+      "log": "logs/RequestProject_Section31_EIGSPositiveDegreeRecentIncidence-2026-10-14T203127.486654_0000.log",
+      "log_sha256": "47f689054c2f137304c25ac528e8304014d31e599042b9f91b798b66248df15f",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiRecentVertex_incidence_bound_of_positive_degree_data",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiNoncollar_endpoint_incidence_bound_of_positive_degree_data",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ExponentialHoldingJumpIndexOrder",
+      "source": "section3-diffusion/RequestProject/Section31/ExponentialHoldingJumpIndexOrder.lean",
+      "source_sha256": "18bb00684098ea6d88b8b37c49532792ba3527b1c75beb755d6c504cb48c8976",
+      "log": "logs/RequestProject_Section31_ExponentialHoldingJumpIndexOrder-2026-10-14T203222.961407_0000.log",
+      "log_sha256": "4f4f2e87520826a0e8d4836b64c9a3997cf6e078fce0f31ac49ffe2a30d72376",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.PoissonClock.holdingJumpIndex_ge_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ExponentialHoldingClockUniform",
+      "source": "section3-diffusion/RequestProject/Section31/ExponentialHoldingClockUniform.lean",
+      "source_sha256": "7683339c1a93d3d1c9906fb5200b9d7557247f0ecd1dd6542eef94ec1d730a6c",
+      "log": "logs/RequestProject_Section31_ExponentialHoldingClockUniform-2026-10-14T203314.777181_0000.log",
+      "log_sha256": "b1d2a01cd07d051c0628cc5b073f60bd40995010e10085d5aa2b788a26d5358e",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.PoissonClock.holdingClock_floor_uniform",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponentialHoldingTimeLaw_floor_clock_uniform",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ExponentialInverseClockUniform",
+      "source": "section3-diffusion/RequestProject/Section31/ExponentialInverseClockUniform.lean",
+      "source_sha256": "c66e4e58f7ac92a1b103c13ebd5a0877c574ac0e3631b51eac3bee36ccb38670",
+      "log": "logs/RequestProject_Section31_ExponentialInverseClockUniform-2026-10-14T203342.000950_0000.log",
+      "log_sha256": "887450404a92f40fc454551b4bdda569706c240f26122f1b71d06f7ceeec7131",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.PoissonClock.holdingJumpClock_uniform",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponentialHoldingTimeLaw_jump_clock_uniform",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSSameKernelNumericalHeatEstimates",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSSameKernelNumericalHeatEstimates.lean",
+      "source_sha256": "471d6e5d8d0e8c2e6a7fadfe723cd4b6c11358b0ebbd6ce5801a23effdcc2bc0",
+      "log": "logs/RequestProject_Section31_EIGSSameKernelNumericalHeatEstimates-2026-10-14T203534.130350_0000.log",
+      "log_sha256": "259115a5a93dc1b236f52bc99b5aed718679f429d0fd5d911721e86b753c8b97",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiSameKernelNumericalHeatEstimatesProperties_of_actual",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSFlowerHeatExponents",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSFlowerHeatExponents.lean",
+      "source_sha256": "e0c65e32f0e1e5a3a0d8f0a29a32046ffc59b513bf41ab85684b346fcd905b8b",
+      "log": "logs/RequestProject_Section31_EIGSFlowerHeatExponents-2026-10-14T203735.574503_0000.log",
+      "log_sha256": "017c3382fc33d44276919d44f820e7bc6d8e8954a809b3a28fade0ff9e6cc90c",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.flowerSystem_heat_exponent_values",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSFlowerSameKernelFullHeatExit",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSFlowerSameKernelFullHeatExit.lean",
+      "source_sha256": "2a65e71ded18084fa135bb6d490f489b63a0c86b31a652f101ad78b718f3b520",
+      "log": "logs/RequestProject_Section31_EIGSFlowerSameKernelFullHeatExit-2026-10-14T203815.173633_0000.log",
+      "log_sha256": "cf8c4af3b849fd3fd0b0802ac5b15033a8e52b93a66752ecabf8aafe72183f6f",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_flowerSystem_sameKernel_fullHeat_exit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSFlowerCoveringNumberDimension",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSFlowerCoveringNumberDimension.lean",
+      "source_sha256": "32320a60b2832b1d2536de224fb39c8f7e8f41138844de49d140991818d3b2db",
+      "log": "logs/RequestProject_Section31_EIGSFlowerCoveringNumberDimension-2026-10-14T203909.076308_0000.log",
+      "log_sha256": "aac1b36f7db92604c5a4ccdaa880f705161aadddd8241c6868cb5a1c03c02de7",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.flowerSystem_native_coveringNumber_dimension",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.flowerSystem_diameter_coveringNumber_dimension",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSFlowerActualRecurrence",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSFlowerActualRecurrence.lean",
+      "source_sha256": "4676da22d4ce74e05bab16f5363434df9064c1a2011a0f2638cf540ba3d038c1",
+      "log": "logs/RequestProject_Section31_EIGSFlowerActualRecurrence-2026-10-14T203953.082223_0000.log",
+      "log_sha256": "8a4af7b95a5f9adfba8ac10b4523a68a47ee902adddd1b84840cb982d360b3eb",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.flowerSystem_actualRecurrent_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.SmallDiameterMassHausdorffLower",
+      "source": "section3-diffusion/RequestProject/Section31/SmallDiameterMassHausdorffLower.lean",
+      "source_sha256": "c6fe39fad1efe09df94fbaaf94b419a663cf9b7419d2efd7069e06a246534c35",
+      "log": "logs/RequestProject_Section31_SmallDiameterMassHausdorffLower-2026-10-14T204237.593434_0000.log",
+      "log_sha256": "d75c6f811178dd2206c15c01f47a65cad5603dec86794e35c1b9fb76a79c651d",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.hausdorff_dimension_lower_of_small_diameter_mass",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.SmallBallPowerMassNoAtoms",
+      "source": "section3-diffusion/RequestProject/Section31/SmallBallPowerMassNoAtoms.lean",
+      "source_sha256": "38fefff33b2273c82a3da7a7b0cffba5a9d60c04d415454b83d9c2acc714cb69",
+      "log": "logs/RequestProject_Section31_SmallBallPowerMassNoAtoms-2026-10-14T204335.972422_0000.log",
+      "log_sha256": "0fcdf2a3ed771e28ab922693ca8b001e6efd14c326f3ce543560264575e5a49a",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.singleton_mass_zero_of_small_ball_power_upper",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSPositiveDegreeTypicalBallMass",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSPositiveDegreeTypicalBallMass.lean",
+      "source_sha256": "47c37f44a504fc275baf3c1a5031b18e2b169d897eec13b4edec2cc120abb04f",
+      "log": "logs/RequestProject_Section31_EIGSPositiveDegreeTypicalBallMass-2026-10-14T204428.658630_0000.log",
+      "log_sha256": "624e35943ebae2891ce5db4e1ea458eae2827cb86db420c2dc7e34f7649a1691",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiTypicalLogarithmicBallMass_of_rules_of_positive_degree_data",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.SmallBallPowerMassDiameterBound",
+      "source": "section3-diffusion/RequestProject/Section31/SmallBallPowerMassDiameterBound.lean",
+      "source_sha256": "0d3b8a1b53c3de111a75d59b6aaac99f07b4c4043d637a4ac811bfb92fbfc05d",
+      "log": "logs/RequestProject_Section31_SmallBallPowerMassDiameterBound-2026-10-14T204545.888981_0000.log",
+      "log_sha256": "3103933921fac175bfb1461c257bef6ff9e9de816eb0f33ac68164a4253f388a",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.small_diameter_mass_bound_of_ball_power_upper",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSPositiveDegreeTypicalHeat",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSPositiveDegreeTypicalHeat.lean",
+      "source_sha256": "960202136fe1651675d9e5363a1421bc7dc25cbeec0d53cd6009663f92989198",
+      "log": "logs/RequestProject_Section31_EIGSPositiveDegreeTypicalHeat-2026-10-14T204510.846912_0000.log",
+      "log_sha256": "dee8d6f87f1e0d778a688b846bf20fcbafe59a4e5952e9d36881af92abaf1698",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiTypicalLogarithmicHeatKernelProperties_of_actual_local_lower_of_positive_degree_data",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiTypicalLogarithmicHeatKernel_of_rules_of_positive_degree_data",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSPositiveDegreeFiniteBornPointEnergy",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSPositiveDegreeFiniteBornPointEnergy.lean",
+      "source_sha256": "79e0529c6843294789e183b5286f13e0eb2145a755c33e0e03fbc1c8755a79c1",
+      "log": "logs/RequestProject_Section31_EIGSPositiveDegreeFiniteBornPointEnergy-2026-10-14T204601.885331_0000.log",
+      "log_sha256": "b72739d73e69f8f6be106f5b6bb5845f6f1f5706bcb08c8be2a8b0f4665b1824",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiFiniteBorn_point_energy_bound_of_positive_degree_data",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSPositiveDegreeClosedPointEvaluation",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSPositiveDegreeClosedPointEvaluation.lean",
+      "source_sha256": "13d0813938cf96a092b3b7ed2beb447872bc42b3b8c366e59c047a7cd90b3e4d",
+      "log": "logs/RequestProject_Section31_EIGSPositiveDegreeClosedPointEvaluation-2026-10-14T204639.117117_0000.log",
+      "log_sha256": "0390914c237a6e149fdae36274f0931c30d24532081062b74aa45251befc5b14",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiClosedFiniteBorn_point_evaluation_of_positive_degree_data",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.SmallBallPowerHausdorffLower",
+      "source": "section3-diffusion/RequestProject/Section31/SmallBallPowerHausdorffLower.lean",
+      "source_sha256": "b36c02bbe7cd45349d2da3befe469d72a5b29e8eb911f0bbf2d8eaf3bdc3bd7c",
+      "log": "logs/RequestProject_Section31_SmallBallPowerHausdorffLower-2026-10-14T204712.632305_0000.log",
+      "log_sha256": "f80a4c5525c77d9b9bccb6678c103449c1510ba8ce3113347c6d51f8efb37dc2",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.hausdorff_dimension_lower_of_small_ball_power_upper",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSPositiveDegreeClosedPointAgreement",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSPositiveDegreeClosedPointAgreement.lean",
+      "source_sha256": "8c16126f8e18d60ecaf0c9c1b612135bd477209658f4f3004af8a33574e678b4",
+      "log": "logs/RequestProject_Section31_EIGSPositiveDegreeClosedPointAgreement-2026-10-14T204719.290824_0000.log",
+      "log_sha256": "f1778942248a4b3171ed43573f8c71178fbe5d47cfbc562bc9bd47145369de78",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiClosedFiniteBorn_point_evaluation_with_continuous_agreement_of_positive_degree_data",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSPositiveDegreeHeatExponent",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSPositiveDegreeHeatExponent.lean",
+      "source_sha256": "93b6b0dfca583105f349e18f29c993bfa2b8a16ba27c3fbdc7d6e2541683a508",
+      "log": "logs/RequestProject_Section31_EIGSPositiveDegreeHeatExponent-2026-10-14T204800.262847_0000.log",
+      "log_sha256": "21a6b36417fcd3a204ead23f7e7e6237a70793b9b10f2b5a2d073171c8c5411c",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiFiniteBorn_heat_exponent_between_zero_one_of_positive_degree_data",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSPositiveDegreeRieszDiagonalUpper",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSPositiveDegreeRieszDiagonalUpper.lean",
+      "source_sha256": "0a8f7ee04ddf0715199a1eee3dae3af1ee0ca770550727f096c5eb5785e4d6cd",
+      "log": "logs/RequestProject_Section31_EIGSPositiveDegreeRieszDiagonalUpper-2026-10-14T204832.160718_0000.log",
+      "log_sha256": "66d36cd869b3ff3d90aaf40d72e32e84bd5860305699eacf29af293479661073",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiFiniteBorn_riesz_diagonal_upper_of_positive_degree_data",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.AELogarithmicBallHausdorffLower",
+      "source": "section3-diffusion/RequestProject/Section31/AELogarithmicBallHausdorffLower.lean",
+      "source_sha256": "2f358681a9dfb40d7dc9d936237672a81cfe157f225c58f1229bfe8773e1b1a1",
+      "log": "logs/RequestProject_Section31_AELogarithmicBallHausdorffLower-2026-10-14T204952.558757_0000.log",
+      "log_sha256": "64255fa77821fad51069e0e994fb7c5966b94da16e9d9fc4cf0cb586c0f7ccc4",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.hausdorff_dimension_lower_of_ae_logarithmic_ball_upper",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSPositiveDegreeRieszDiagonalLower",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSPositiveDegreeRieszDiagonalLower.lean",
+      "source_sha256": "98670577078a94078003b96f159fa9d8dfe80d7c29ed148a83c9a25f96419c86",
+      "log": "logs/RequestProject_Section31_EIGSPositiveDegreeRieszDiagonalLower-2026-10-14T204916.276296_0000.log",
+      "log_sha256": "2bfce98198926ce688c9e38a3fd864354db53b07527e41190cca011a5289e527",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiFiniteBorn_riesz_diagonal_lower_of_positive_degree_data",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSPositiveDegreeHeatUpper",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSPositiveDegreeHeatUpper.lean",
+      "source_sha256": "9c981924c54394c147b1c464b94da9fc781fa5fe7a508124e1ef6292c94d2770",
+      "log": "logs/RequestProject_Section31_EIGSPositiveDegreeHeatUpper-2026-10-14T205002.048071_0000.log",
+      "log_sha256": "892dae61fa0394ae6181c0f68f1a90a937379ce7ba45e36e1b70cfed842ec7fb",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiFiniteBornHeatUpperProperties_of_compactSmoothing_of_positive_degree_data",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiFiniteBornHeatUpper_of_rules_of_positive_degree_data",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
       "module": "RequestProject.Section31.BoundedYosidaInvariantConvex",
       "source": "section3-diffusion/RequestProject/Section31/BoundedYosidaInvariantConvex.lean",
       "source_sha256": "f6de77639d7c40826b90b1731cf3339c7643dcf11237edc78c2a5399341a3e25",
@@ -18218,40 +18968,6 @@
         },
         {
           "declaration": "EIGS.exists_xiNativeYosidaStrong_of_rules",
-          "axioms": [
-            "propext",
-            "Classical.choice",
-            "Quot.sound"
-          ]
-        }
-      ]
-    },
-    {
-      "module": "RequestProject.Section31.IndependentExponentialHoldingTimes",
-      "source": "section3-diffusion/RequestProject/Section31/IndependentExponentialHoldingTimes.lean",
-      "source_sha256": "ea3d818ec6139565a0a92af377c4d336dc863fe90b828f992028148ce1e2d1b4",
-      "log": "logs/RequestProject_Section31_IndependentExponentialHoldingTimes-2026-10-14T202059.798219_0000.log",
-      "log_sha256": "43ee5c682c823214961dc6469d0dc016607f5a93e4e800c4627b2912d49b1f84",
-      "exit_code": 0,
-      "audits": [
-        {
-          "declaration": "IGS.Sec31.PoissonClock.exponentialHoldingTimeLaw_independent",
-          "axioms": [
-            "propext",
-            "Classical.choice",
-            "Quot.sound"
-          ]
-        },
-        {
-          "declaration": "IGS.Sec31.PoissonClock.exponentialHoldingTimeLaw_positive",
-          "axioms": [
-            "propext",
-            "Classical.choice",
-            "Quot.sound"
-          ]
-        },
-        {
-          "declaration": "IGS.Sec31.PoissonClock.exponentialHoldingTimeLaw_nonexplosion",
           "axioms": [
             "propext",
             "Classical.choice",

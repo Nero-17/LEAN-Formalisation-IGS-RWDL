@@ -117,4 +117,90 @@ theorem finiteEndpointJump_grid_identity {count : ℕ}
     simp only [Finset.mem_filter, Finset.mem_univ, true_and]
     exact roundedIntervalKnot_grid_inequality grid (knots index) time
 
+theorem finiteEndpointJump_grid_j1_approximation [BoundedSpace Space] {count : ℕ}
+    (knots : Fin count → UnitJ1Time) (increasing : StrictMono knots)
+    (interior : ∀ index, 0 < (knots index).val ∧ (knots index).val < 1)
+    (states : Fin (count + 1) → Space) (endpoint : Space) :
+    ∀ tolerance : ℝ, 0 < tolerance → ∀ᶠ grid : ℕ in atTop,
+      skorokhodJ1Distance (finiteEndpointJumpFunction knots states endpoint)
+        (unitGridFunctionReconstruction grid (fun index => finiteEndpointJumpFunction knots states endpoint
+          (unitGridPoint grid index))) < tolerance := by
+  have increasingEventually : ∀ᶠ grid : ℕ in atTop,
+      StrictMono (fun index => roundedIntervalKnot grid (knots index)) := by
+    have pairs : ∀ first second : Fin count, ∀ᶠ grid : ℕ in atTop,
+        first < second → roundedIntervalKnot grid (knots first) < roundedIntervalKnot grid (knots second) := by
+      intro first second
+      by_cases before : first < second
+      · exact ((roundedIntervalKnot_tendsto (knots first)).eventually_lt
+          (roundedIntervalKnot_tendsto (knots second)) (increasing before)).mono (fun _ bound _ => bound)
+      · exact Eventually.of_forall (fun _ impossible => (before impossible).elim)
+    exact (Filter.eventually_all.mpr (fun first => Filter.eventually_all.mpr (pairs first))).mono
+      (fun _ pairBound => pairBound)
+  have interiorEventually : ∀ᶠ grid : ℕ in atTop, ∀ index,
+      0 < (roundedIntervalKnot grid (knots index)).val ∧
+        (roundedIntervalKnot grid (knots index)).val < 1 := by
+    apply Filter.eventually_all.mpr
+    intro index
+    have convergence := continuous_subtype_val.tendsto (knots index) |>.comp (roundedIntervalKnot_tendsto (knots index))
+    exact convergence.eventually (Ioo_mem_nhds (interior index).1 (interior index).2)
+  have factorNonnegative : 0 ≤ (2 : ℝ) ^ count - 1 :=
+    sub_nonneg.mpr (one_le_pow₀ (by norm_num : (1 : ℝ) ≤ 2))
+  have errorConvergence : Tendsto (fun grid : ℕ => ((2 : ℝ) ^ count - 1) * (1 / (grid + 1 : ℝ)))
+      atTop (𝓝 0) := by
+    simpa only [mul_zero] using unitGridMesh_tendsto.const_mul ((2 : ℝ) ^ count - 1)
+  intro tolerance positive
+  filter_upwards [increasingEventually, interiorEventually, errorConvergence.eventually (gt_mem_nhds positive)]
+    with grid roundedIncreasing roundedInterior errorSmall
+  obtain ⟨change, knotIdentity, displacement⟩ := interval_finite_knots_orderIso count knots
+    (fun index => roundedIntervalKnot grid (knots index)) increasing roundedIncreasing interior roundedInterior
+    (1 / (grid + 1 : ℝ)) (fun index => by simpa only [dist_comm] using roundedIntervalKnot_distance grid (knots index))
+  rw [finiteEndpointJump_grid_identity]
+  exact (finiteEndpointJumpFunction_J1_le_clock_error knots _ states endpoint change knotIdentity
+    (((2 : ℝ) ^ count - 1) * (1 / (grid + 1 : ℝ)))
+    (mul_nonneg factorNonnegative (by positivity)) displacement).trans_lt errorSmall
+
+theorem unitGridJ1Reconstruction_tendsto_of_finite_jumps [BoundedSpace Space]
+    (path : UnitCadlagJ1Path Space)
+    (finite : ∃ count : ℕ, ∃ knots : Fin count → UnitJ1Time,
+      StrictMono knots ∧ (∀ index, 0 < (knots index).val ∧ (knots index).val < 1) ∧
+        ∃ states : Fin (count + 1) → Space, ∃ endpoint : Space,
+          path.val.toFun = finiteEndpointJumpFunction knots states endpoint) :
+    Tendsto (fun grid => unitGridJ1Reconstruction grid (fun index => path.val.toFun (unitGridPoint grid index)))
+      atTop (𝓝 path) := by
+  obtain ⟨count, knots, increasing, interior, states, endpoint, representation⟩ := finite
+  apply Metric.tendsto_nhds.mpr
+  intro tolerance positive
+  filter_upwards [finiteEndpointJump_grid_j1_approximation knots increasing interior states endpoint tolerance positive]
+    with grid close
+  change skorokhodJ1Distance
+    (unitGridFunctionReconstruction grid (fun index => path.val.toFun (unitGridPoint grid index))) path.val.toFun < tolerance
+  rw [skorokhodJ1Distance_comm, representation]
+  exact close
+
+theorem unitCadlagJ1Sample_aemeasurable_of_finite_jumps
+    [BoundedSpace Space] [MeasurableSpace Space] [BorelSpace Space] [SecondCountableTopology Space]
+    {Outcome : Type*} [MeasurableSpace Outcome] (law : Measure Outcome)
+    (sample : Outcome → UnitCadlagJ1Path Space)
+    (evaluations : ∀ time, AEMeasurable (fun outcome => (sample outcome).val.toFun time) law)
+    (finite : ∀ᵐ outcome ∂law, ∃ count : ℕ, ∃ knots : Fin count → UnitJ1Time,
+      StrictMono knots ∧ (∀ index, 0 < (knots index).val ∧ (knots index).val < 1) ∧
+        ∃ states : Fin (count + 1) → Space, ∃ endpoint : Space,
+          (sample outcome).val.toFun = finiteEndpointJumpFunction knots states endpoint) :
+    AEMeasurable sample law := by
+  apply aemeasurable_of_tendsto_metrizable_ae'
+    (f := fun grid outcome => unitGridJ1Reconstruction grid
+      (fun index => (sample outcome).val.toFun (unitGridPoint grid index)))
+  · intro grid
+    exact (unitGridJ1Reconstruction_measurable grid).comp_aemeasurable
+      (aemeasurable_pi_lambda _ (fun index => evaluations (unitGridPoint grid index)))
+  · exact finite.mono (fun outcome regular => unitGridJ1Reconstruction_tendsto_of_finite_jumps (sample outcome) regular)
+
+end
+end IGS.Sec31.DiscreteMarkov
+
+#print axioms IGS.Sec31.DiscreteMarkov.finiteEndpointJump_grid_identity
+#print axioms IGS.Sec31.DiscreteMarkov.finiteEndpointJump_grid_j1_approximation
+#print axioms IGS.Sec31.DiscreteMarkov.unitGridJ1Reconstruction_tendsto_of_finite_jumps
+#print axioms IGS.Sec31.DiscreteMarkov.unitCadlagJ1Sample_aemeasurable_of_finite_jumps
+
 

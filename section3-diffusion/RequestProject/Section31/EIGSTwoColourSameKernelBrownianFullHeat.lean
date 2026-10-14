@@ -31,6 +31,10 @@ theorem exists_twoColour_same_kernel_Brownian_full_heat :
         atTop (𝓝 (normalization • resistanceVector)) ∧
       1 < resistanceRate ∧
       resistanceRate = twoColourResistanceRate ∧
+      ((1.1159 : ℝ) < 2 * (Real.log mass.rate - Real.log 2) / Real.log (mass.rate * resistanceRate) ∧
+        2 * (Real.log mass.rate - Real.log 2) / Real.log (mass.rate * resistanceRate) < 1.1161) ∧
+      ((1.8876 : ℝ) < 2 * Real.log mass.rate / Real.log (mass.rate * resistanceRate) ∧
+        2 * Real.log mass.rate / Real.log (mass.rate * resistanceRate) < 1.8878) ∧
       Nonempty (XiContinuousResistanceFormRealization twoColourSystem twoColourSystem_connected parameters.lengths parameters.lengthsPositive
         (twoColourSystem.distanceSpectralRadius twoColourSystem_connected) distanceGreaterThanOne parameters.eigenpair resistanceRate ratePositive
         resistanceVector vectorPositive eigenpair (xiVertexEmbedding twoColourSystem 0 true)) ∧
@@ -57,11 +61,21 @@ theorem exists_twoColour_same_kernel_Brownian_full_heat :
       twoColourSystem twoColourSystem_connected twoColourSystem_loopless twoColourSystem_edgesUnique
       twoColourSystem_plantingNonadjacent twoColourPositiveDegreeData twoColourSystem_distancePositive
       canonicalRateGreaterThanOne
+  have rateEquality : resistanceRate = twoColourResistanceRate :=
+    (twoColourSystem.resistanceSpectralRadius_eq_of_positive_eigenpair twoColourSystem_connected
+      twoColourSystem_distancePositive ratePositive vectorPositive (funext eigenpair)).trans
+        twoColourSystem_resistanceSpectralRadius
   refine ⟨resistanceRate, ratePositive, resistanceVector, vectorPositive, eigenpair,
-    normalization, normalizationPositive, normalizedConvergence, rateGreaterThanOne, ?_, remaining⟩
-  exact (twoColourSystem.resistanceSpectralRadius_eq_of_positive_eigenpair twoColourSystem_connected
-    twoColourSystem_distancePositive ratePositive vectorPositive (funext eigenpair)).trans
-      twoColourSystem_resistanceSpectralRadius
+    normalization, normalizationPositive, normalizedConvergence, rateGreaterThanOne, rateEquality, ?_, ?_, remaining⟩
+  · have numeric := twoColourSystem_finiteSpectralFormula_numeric
+    rw [← XiMassParameters.rate_eq_spectralRadius twoColourSystem mass,
+      twoColourSystem_degreeSpectralRadius, twoColourSystem_resistanceSpectralRadius, ← rateEquality] at numeric
+    rw [Real.log_div mass.rate_positive.ne' (by norm_num : (2 : ℝ) ≠ 0)] at numeric
+    exact numeric
+  · have numeric := twoColourSystem_typicalSpectralFormula_numeric
+    rw [← XiMassParameters.rate_eq_spectralRadius twoColourSystem mass,
+      twoColourSystem_resistanceSpectralRadius, ← rateEquality] at numeric
+    exact numeric
 
 end
 end EIGS

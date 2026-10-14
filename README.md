@@ -23,7 +23,7 @@ Generic criteria count as actual-model results only when their inputs are suppli
 
 ## Remaining work
 
-Actual native completion covering-number dimension and actual simple-graph resistance dimension are verified. The same actual covering-number limit in the paper's explicit diameter-normalized metric is also verified. The exact optimized subGaussian tail for the original diameter-normalized graph true-exit event is verified; genuine independent random-Poisson-clock path measurability and tightness remain incomplete. Actual heat-number specializations for manuscript examples remain incomplete. The nonprimitive degree-rate-one extension and final theorem-label scope audit also remain outstanding. The completed 900-module dependency check does not cover every subsequently accepted file; a larger current closure is still required. Random-cluster GHP and diffusion statements retain their original conjectural status.
+Actual native completion covering-number dimension and actual simple-graph resistance dimension are verified. The same actual covering-number limit in the paper's explicit diameter-normalized metric is also verified. The exact optimized subGaussian tail for the original diameter-normalized graph true-exit event is verified; genuine independent random-Poisson-clock path measurability and tightness remain incomplete. The actual flower full-heat numerical specialization is verified for the identical original GHPS, Hunt, exit and full-heat witness. The original two-colour actual spectral parameters and their rigorous numerical intervals are verified; its positive-degree-eigenpair full-heat specialization is still being checked. Actual Hausdorff dimension remains incomplete and is separate from the verified covering-number dimension. The nonprimitive degree-rate-one extension and final theorem-label scope audit also remain outstanding. The completed 920-module dependency check does not cover every subsequently accepted file; a larger current closure is still required. Random-cluster GHP and diffusion statements retain their original conjectural status.
 
 ## Manuscript and layout
 
@@ -38,7 +38,7 @@ The adopted manuscript is [paper-corrections/AIM.corrected.tex](paper-correction
 
 Pinned Lean **4.28.0**, mathlib **8f9d9cff6bd728b17a24e163c9402775d9e6a365**.
 
-The completed shared-dependency batch contains **900 modules**, with unchanged checked sources. Subsequent independently accepted whole-file receipts are listed separately; inventories overlap and are not a completion percentage.
+The completed shared-dependency batch contains **920 modules**, with unchanged checked sources. Subsequent independently accepted whole-file receipts are listed separately; inventories overlap and are not a completion percentage.
 
 ```sh
 python verify_published_snapshot.py

@@ -57,7 +57,7 @@ theorem twoColourRedCurrent_isUnitFlow (resistances : Fin 2 → ℝ)
     simp only [twoColourRedCurrent, Fin.sum_univ_six,
       Fin.isValue, Nat.succ_eq_add_one, Nat.reduceAdd, Fin.reduceFinMk,
       Matrix.cons_val_zero', Matrix.cons_val_succ', Matrix.cons_val] <;>
-    norm_num [Fin.mk_eq_mk, Fin.reduceFinMk, Matrix.cons_val] <;>
+    norm_num [Fin.ext_iff, Fin.reduceFinMk, Matrix.cons_val] <;>
     field_simp [sumNeZero] <;> ring
 
 theorem twoColourBlueCurrent_isUnitFlow (resistances : Fin 2 → ℝ)
@@ -76,7 +76,7 @@ theorem twoColourBlueCurrent_isUnitFlow (resistances : Fin 2 → ℝ)
     simp only [twoColourBlueCurrent, Fin.sum_univ_five,
       Fin.isValue, Nat.succ_eq_add_one, Nat.reduceAdd, Fin.reduceFinMk,
       Matrix.cons_val_zero', Matrix.cons_val_succ', Matrix.cons_val] <;>
-    norm_num [Fin.mk_eq_mk, Fin.reduceFinMk, Matrix.cons_val] <;>
+    norm_num [Fin.ext_iff, Fin.reduceFinMk, Matrix.cons_val] <;>
     field_simp [denominatorNeZero] <;> ring
 
 def twoColourRedUnitFlow (resistances : Fin 2 → ℝ) (positive : ∀ colour, 0 < resistances colour) :

@@ -1,0 +1,3 @@
+'EIGS.xiFiniteBorn_heat_exponent_between_zero_one_of_positive_degree_data' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

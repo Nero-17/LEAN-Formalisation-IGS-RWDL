@@ -1,0 +1,5 @@
+'EIGS.twoColourSystem_resistanceEigenpair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_resistanceSpectralRadius' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_resistanceRate_numeric' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_finiteSpectralFormula_numeric' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_typicalSpectralFormula_numeric' depends on axioms: [propext, Classical.choice, Quot.sound]

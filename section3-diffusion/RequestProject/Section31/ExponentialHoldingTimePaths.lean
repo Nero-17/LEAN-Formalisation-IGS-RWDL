@@ -4,7 +4,6 @@ import Mathlib.Tactic
 
 set_option autoImplicit false
 set_option maxHeartbeats 2200000
-set_option backward.isDefEq.respectTransparency false
 
 namespace IGS.Sec31.PoissonClock
 noncomputable section

@@ -1,0 +1,3 @@
+'IGS.Sec31.hausdorff_dimension_lower_of_small_ball_power_upper' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

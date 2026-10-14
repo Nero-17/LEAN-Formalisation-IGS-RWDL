@@ -1,0 +1,6 @@
+'EIGS.exists_xiRecentVertex_incidence_bound_of_positive_degree_data' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_xiNoncollar_endpoint_incidence_bound_of_positive_degree_data' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

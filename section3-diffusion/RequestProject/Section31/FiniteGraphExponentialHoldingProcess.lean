@@ -11,6 +11,7 @@ this file does not substitute the uniform Borel carrier for that duty. -/
 namespace IGS.Sec31.PoissonClock
 open MeasureTheory ProbabilityTheory Filter Set Topology
 open IGS.Sec31.DiscreteMarkov
+open EIGS
 open scoped NNReal
 noncomputable section
 set_option maxHeartbeats 4000000
@@ -33,7 +34,9 @@ theorem holdingTimePathNNReal_isCadlag
     by_cases zero : time = 0
     · subst time
       refine ⟨trajectory 0, ?_⟩
-      simp only [Iio_bot, nhdsWithin_empty, tendsto_bot]
+      have empty : Iio (0 : ℝ≥0) = ∅ := by ext value; simp
+      rw [empty, nhdsWithin_empty]
+      exact tendsto_bot
     · have timePositive : 0 < (time : ℝ) := by exact_mod_cast (pos_iff_ne_zero.mpr zero)
       obtain ⟨intervalLength, intervalPositive, leftValue, constant⟩ :=
         holdingTimePath_locally_constant_left trajectory holdingTimes positive nonexplosion time timePositive
@@ -94,10 +97,10 @@ theorem finiteGraphExponentialEmbeddedPath_ae_cadlag
     (embedding : Vertex → State) (rate : ℝ≥0) (ratePositive : 0 < rate) :
     ∀ᵐ sample ∂finiteGraphExponentialSampleLaw graph degreePositive initial,
       IsCadlagPath (finiteGraphExponentialEmbeddedPath embedding rate sample) := by
-  have positive := (quasiMeasurePreserving_snd
+  have positive := (Measure.quasiMeasurePreserving_snd
     (μ := pathLaw (finiteGraphTransitionKernel graph degreePositive) (initial : Measure Vertex))
     (ν := exponentialHoldingTimeLaw)).ae exponentialHoldingTimeLaw_positive
-  have nonexplosion := (quasiMeasurePreserving_snd
+  have nonexplosion := (Measure.quasiMeasurePreserving_snd
     (μ := pathLaw (finiteGraphTransitionKernel graph degreePositive) (initial : Measure Vertex))
     (ν := exponentialHoldingTimeLaw)).ae exponentialHoldingTimeLaw_nonexplosion
   filter_upwards [positive, nonexplosion] with sample clockPositive clockDiverges
@@ -118,7 +121,7 @@ theorem finiteGraphExponentialFunctionLaw_probability {State : Type*} [Measurabl
     (degreePositive : ∀ vertex, 0 < graph.degree vertex) (initial : ProbabilityMeasure Vertex)
     (embedding : Vertex → State) (embeddingMeasurable : Measurable embedding) (rate : ℝ≥0) :
     IsProbabilityMeasure (finiteGraphExponentialFunctionLaw graph degreePositive initial embedding rate) :=
-  isProbabilityMeasure_map (finiteGraphExponentialEmbeddedPath_measurable embedding embeddingMeasurable rate).aemeasurable
+  Measure.isProbabilityMeasure_map (finiteGraphExponentialEmbeddedPath_measurable embedding embeddingMeasurable rate).aemeasurable
 
 end
 end IGS.Sec31.PoissonClock
