@@ -1,0 +1,16 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\GeometricExitMeanOptimization.lean:50:15: warning: This simp argument is unused:
+  pow_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [̵p̵o̵w̵_̵z̵e̵r̵o̵,̵ ̵z̵e̵r̵o̵_̵a̵d̵d̵,̵[̲z̲e̲r̲o̲_̲a̲d̲d̲,̲ pow_one] at upperLevel
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\GeometricExitMeanOptimization.lean:71:10: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\GeometricExitMeanOptimization.lean:71:10: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'IGS.Sec31.continuousPathBallExit_mono_radius' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.geometric_exit_mean_radius_choice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.continuous_exit_mean_all_radii_of_geometric' depends on axioms: [propext, Classical.choice, Quot.sound]

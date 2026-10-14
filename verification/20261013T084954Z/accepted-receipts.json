@@ -1,13 +1,13 @@
 {
-  "snapshot_utc": "2026-10-14T18:44:22.666012+00:00",
+  "snapshot_utc": "2026-10-14T19:09:35.439517+00:00",
   "round": "20261013T084954Z",
   "compiler": "Lean 4.28.0",
   "mathlib": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
   "shared_dependency_modules": 805,
   "shared_report": "integration-805.json",
   "shared_report_sha256": "30ce9ba00e3ed4ced2fbe5a2a20f3401696338d4cf2d7971a25426a703e2def9",
-  "independent_whole_file_count": 500,
-  "independent_audit_count": 1516,
+  "independent_whole_file_count": 512,
+  "independent_audit_count": 1539,
   "records": [
     {
       "module": "RequestProject.Section31.EIGSL2EnergyConstants",
@@ -15114,6 +15114,310 @@
         },
         {
           "declaration": "EIGS.exists_xiResistanceForm_same_closed_Hunt_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ExtendedExitTailIntegral",
+      "source": "section3-diffusion/RequestProject/Section31/ExtendedExitTailIntegral.lean",
+      "source_sha256": "12a46ad45c77e2579a8620dcf88afecf9dafa75fe1b5a5cb17d514ac69b51d95",
+      "log": "logs/RequestProject_Section31_ExtendedExitTailIntegral-2026-10-14T184832.681784_0000.log",
+      "log_sha256": "d51dddf37188afe9f85d0bdd38e4ae898b62c7135b9690ede164213927646f9c",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.ennreal_eq_lintegral_positive_tail",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.lintegral_exit_eq_positive_tail",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.positive_tail_mean_upper_of_liminf",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSTwoPointSkeletonJumpBound",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSTwoPointSkeletonJumpBound.lean",
+      "source_sha256": "0d104b3feb0e69d4c7182e7adaed74161d19cd4b746fc27f5cd266abf82255ea",
+      "log": "logs/RequestProject_Section31_EIGSTwoPointSkeletonJumpBound-2026-10-14T184632.467182_0000.log",
+      "log_sha256": "41501780048bf891dcb6c2d822ff6aa18134b23ba218b508c63a1115992fe961",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiTwoPointSkeleton_uniform_jumps",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSTwoStarAllSourceExitUpper",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSTwoStarAllSourceExitUpper.lean",
+      "source_sha256": "e66fe049558ef18e550bc986fcc99ac9d517e6329a68c93eb377dc8314361ca7",
+      "log": "logs/RequestProject_Section31_EIGSTwoStarAllSourceExitUpper-2026-10-14T184712.033061_0000.log",
+      "log_sha256": "0ac9778b1481ede6afad12a003b3f9a843c13ab74fc723465b1e45c631c5a689",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiTwoIncidentStars_subset_grounded_pair",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiTwoPointCoarseGroundedDomain_allSource_expExit_spectral_upper",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSFiniteCompletionBallExitUpper",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSFiniteCompletionBallExitUpper.lean",
+      "source_sha256": "bae10bff956d8c3210ed56766a7ef947fb2ec308888a8b8a3718819305e812a1",
+      "log": "logs/RequestProject_Section31_EIGSFiniteCompletionBallExitUpper-2026-10-14T184752.765938_0000.log",
+      "log_sha256": "e400e5b5f6d25a13d1023e25532bbe32a438a4f5fece4f6e7a80528478283245",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiFiniteCompletionBall_allSource_expExit_spectral_upper",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.FiniteGraphFloorExitTime",
+      "source": "section3-diffusion/RequestProject/Section31/FiniteGraphFloorExitTime.lean",
+      "source_sha256": "ad9bb7c87435b85e47e191861b9744fdf778ad5cab23eafe8166599c40e24427",
+      "log": "logs/RequestProject_Section31_FiniteGraphFloorExitTime-2026-10-14T185935.168481_0000.log",
+      "log_sha256": "9d5253e8e5a2a59e32640fd72371eeaaab52b5ca876daa07d714bb774624c8af",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.graphFloorExitTime_measurable",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.graphFloorExitTime_survival_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.graphFloorExitTime_lintegral",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.SameFamilyKernelFullHeatEstimates",
+      "source": "section3-diffusion/RequestProject/Section31/SameFamilyKernelFullHeatEstimates.lean",
+      "source_sha256": "9a05488759c67143e40e96cb912cd02aff4853c72f45d05ee65728c57586e6e7",
+      "log": "logs/RequestProject_Section31_SameFamilyKernelFullHeatEstimates-2026-10-14T185014.345199_0000.log",
+      "log_sha256": "a3c0fb110613a59cafc5fc46f604af4f60d172ec773d37bdd963ecee617a75ea",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.sameFamilyFullHeatKernelProperties_of_same_family",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSResistanceBrownianSameKernelFullHeatOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSResistanceBrownianSameKernelFullHeatOfRules.lean",
+      "source_sha256": "9f69dbb07f681a3d52a5eb89f1f2d2adacaeb9241ebc7a92f4101b65f74a13ca",
+      "log": "logs/RequestProject_Section31_EIGSResistanceBrownianSameKernelFullHeatOfRules-2026-10-14T185056.145145_0000.log",
+      "log_sha256": "9f15afcf8ea3838e8ad21995e0dd7efa4dd7445fe91744b2901a9d1bdace7fb5",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiIdentifiedOriginalMeasuredGHPSBrownianFullHeatProperties_of_full_heat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiResistanceBrownian_same_kernel_full_heat_recurrence_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.FiniteSupportWeakExitTail",
+      "source": "section3-diffusion/RequestProject/Section31/FiniteSupportWeakExitTail.lean",
+      "source_sha256": "e0d53d0fd725aaafa6cb0c2509f51c0264a4d8f70da89438157e1531ef6e785f",
+      "log": "logs/RequestProject_Section31_FiniteSupportWeakExitTail-2026-10-14T190218.163076_0000.log",
+      "log_sha256": "45ece89d63a04ea29b106553526a73402316d9c2e2de31650ff96a78e6aba0ae",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.continuous_uniformRadius_lt_iff_dense",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.continuous_uniformRadius_lt_iff_forall",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.finiteSupport_weak_global_exit_tail",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSFiniteCompletionBallNativeMean",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSFiniteCompletionBallNativeMean.lean",
+      "source_sha256": "c721fecb4f3a27e23f0833f832205008a2d3eae634c598e6485aedfcc2a9093f",
+      "log": "logs/RequestProject_Section31_EIGSFiniteCompletionBallNativeMean-2026-10-14T185546.608024_0000.log",
+      "log_sha256": "fdb20c75175f8391c00e036a397189176c1fb62b1c6eeb0a2b8c88b5c7d99097",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiFiniteCompletionBall_native_mean_upper",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.FiniteStepRadiusExitTail",
+      "source": "section3-diffusion/RequestProject/Section31/FiniteStepRadiusExitTail.lean",
+      "source_sha256": "98b3903ea2e49eae74e6210097268e8e051aa6f40aaf1e287c8e403f14b32afa",
+      "log": "logs/RequestProject_Section31_FiniteStepRadiusExitTail-2026-10-14T190732.361603_0000.log",
+      "log_sha256": "a737b039f0b46892fe20c27379bae75205354a89321a06de7e303ee9ac8c18ac",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.finiteHorizonStepMap_radius_lt_implies_survival",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.finiteHorizonStepLaw_radius_le_floorExitTail",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSFiniteCompletionBallProper",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSFiniteCompletionBallProper.lean",
+      "source_sha256": "42474e1e02445902488ee7fd7bbd8f205923dff0a9ce19db86a3589ec39a4b4a",
+      "log": "logs/RequestProject_Section31_EIGSFiniteCompletionBallProper-2026-10-14T190243.565316_0000.log",
+      "log_sha256": "6cf237127d7bcad96895d706e3b2573f648298bc51f5decc25a09aa7c803a120",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiFiniteCompletionBall_complement_nonempty",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.GeometricExitMeanOptimization",
+      "source": "section3-diffusion/RequestProject/Section31/GeometricExitMeanOptimization.lean",
+      "source_sha256": "48eb53f2eb5b18f862838f2e750bc6ce1ca6d01de3374e2189d50257bdc3f453",
+      "log": "logs/RequestProject_Section31_GeometricExitMeanOptimization-2026-10-14T190527.199748_0000.log",
+      "log_sha256": "1cdd7e345c007f37bf93b4f54a968f6cdb83c0942ac07a19264c8998d53f7eaa",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.continuousPathBallExit_mono_radius",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.geometric_exit_mean_radius_choice",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.continuous_exit_mean_all_radii_of_geometric",
           "axioms": [
             "propext",
             "Classical.choice",

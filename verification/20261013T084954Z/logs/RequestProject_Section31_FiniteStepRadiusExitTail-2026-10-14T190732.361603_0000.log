@@ -1,0 +1,12 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\FiniteStepRadiusExitTail.lean:24:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DiscreteMarkov.finiteHorizonStepMap_radius_lt_implies_survival`:
+  [(level : ℕ) → DecidableEq (Vertex level)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(level : ℕ) → DecidableEq (Vertex level)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'IGS.Sec31.DiscreteMarkov.finiteHorizonStepMap_radius_lt_implies_survival' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.finiteHorizonStepLaw_radius_le_floorExitTail' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

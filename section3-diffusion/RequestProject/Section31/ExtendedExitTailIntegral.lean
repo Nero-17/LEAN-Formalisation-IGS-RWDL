@@ -22,8 +22,9 @@ theorem ennreal_eq_lintegral_positive_tail (value : ℝ≥0∞) :
       apply lintegral_congr_ae
       filter_upwards [ae_restrict_mem measurableSet_Ioi] with time positive
       simp only [Set.indicator_apply, Set.mem_Iio]
-      rw [ENNReal.ofReal_lt_iff_lt_toReal positive.le infinite]
+      simp only [ENNReal.ofReal_lt_iff_lt_toReal positive.le infinite]
     rw [equality, lintegral_indicator measurableSet_Iio, lintegral_const, one_mul,
+      Measure.restrict_apply_univ,
       Measure.restrict_apply measurableSet_Iio]
     have intersection : Iio value.toReal ∩ Ioi (0 : ℝ) = Ioo 0 value.toReal := by
       ext time
@@ -42,8 +43,8 @@ theorem lintegral_exit_eq_positive_tail {Path : Type*} [MeasurableSpace Path]
         (exitMeasurable.comp measurable_fst)) measurable_const measurable_const
   calc
     (∫⁻ path, exit path ∂law) =
-        ∫⁻ path, ∫⁻ time in Ioi (0 : ℝ),
-          if ENNReal.ofReal time < exit path then (1 : ℝ≥0∞) else 0 ∂law :=
+        ∫⁻ path, (∫⁻ time in Ioi (0 : ℝ),
+          if ENNReal.ofReal time < exit path then (1 : ℝ≥0∞) else 0) ∂law :=
       lintegral_congr fun path => ennreal_eq_lintegral_positive_tail (exit path)
     _ = ∫⁻ time in Ioi (0 : ℝ), ∫⁻ path,
           if ENNReal.ofReal time < exit path then (1 : ℝ≥0∞) else 0 ∂law :=
@@ -53,8 +54,8 @@ theorem lintegral_exit_eq_positive_tail {Path : Type*} [MeasurableSpace Path]
       intro time
       have measurableEvent : MeasurableSet {path | ENNReal.ofReal time < exit path} :=
         measurableSet_lt measurable_const exitMeasurable
-      simpa only [Set.indicator_apply, Set.mem_setOf_eq, lintegral_const, one_mul] using
-        (lintegral_indicator (μ := law) measurableEvent (fun _ => (1 : ℝ≥0∞)))
+      simpa only [Set.indicator_apply, Set.mem_setOf_eq, Pi.one_apply] using
+        (lintegral_indicator_one (μ := law) measurableEvent)
 
 theorem positive_tail_mean_upper_of_liminf {Path : Type*} [MeasurableSpace Path]
     (law : Measure Path) [SFinite law] (exit : Path → ℝ≥0∞) (exitMeasurable : Measurable exit)

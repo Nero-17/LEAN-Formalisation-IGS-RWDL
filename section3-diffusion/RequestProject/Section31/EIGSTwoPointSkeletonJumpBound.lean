@@ -70,15 +70,17 @@ theorem exists_xiTwoPointSkeleton_uniform_jumps (system : EIGSData K)
   obtain ⟨endpoint, exterior, atEndpoint, exteriorFirst, exteriorSecond, exteriorAdjacent⟩ :=
     xiPositiveCoarse_pair_has_exterior_neighbor system rulesConnected plantingNonadjacent
       coarse coarsePositive first second
-  rcases atEndpoint with rfl | rfl
-  · have escape := conductance_one_exterior_edge_escape conductance conductanceNonnegative conductanceRowPositive
+  rcases atEndpoint with endpointFirst | endpointSecond
+  · rw [endpointFirst] at exteriorAdjacent
+    have escape := conductance_one_exterior_edge_escape conductance conductanceNonnegative conductanceRowPositive
       first second exterior exteriorSecond lower upper lowerPositive upperPositive
       (entryUpper coarse steps first second) (edgeLower coarse steps first exterior exteriorAdjacent)
     have bound := two_vertex_partialHit_le chain first second adjacent.ne (noSelfLoop first) (noSelfLoop second)
       probability probabilityPositive probabilityAtMostOne escape time source
     rw [chainEquality] at bound
     exact bound
-  · have escape := conductance_one_exterior_edge_escape conductance conductanceNonnegative conductanceRowPositive
+  · rw [endpointSecond] at exteriorAdjacent
+    have escape := conductance_one_exterior_edge_escape conductance conductanceNonnegative conductanceRowPositive
       second first exterior exteriorFirst lower upper lowerPositive upperPositive
       (entryUpper coarse steps second first) (edgeLower coarse steps second exterior exteriorAdjacent)
     have bound := two_vertex_partialHit_le chain second first adjacent.ne.symm (noSelfLoop second) (noSelfLoop first)

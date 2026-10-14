@@ -47,9 +47,14 @@ theorem graphFloorExitTime_survival_iff (domain : Finset Vertex) (rate : ℝ≥0
       simp only [ENNReal.ofReal_natCast, ENNReal.ofReal_coe_nnreal]
     change (time : ℝ≥0∞) < graphExitDuration domain path / (rate : ℝ≥0∞) ↔ _
     rw [graphExitDuration_eq_of_first_exit domain path duration beforeExit atExit, scaled,
-      ← ENNReal.ofReal_coe_nnreal time,
-      ENNReal.ofReal_lt_ofReal_iff_of_nonneg time.property, lt_div_iff₀ rateRealPositive]
-    exact (Nat.floor_lt (mul_nonneg time.property rate.property)).symm
+      ← ENNReal.ofReal_coe_nnreal (p := time)]
+    calc
+      ENNReal.ofReal (time : ℝ) < ENNReal.ofReal ((duration : ℝ) / (rate : ℝ)) ↔
+          (time : ℝ) < (duration : ℝ) / (rate : ℝ) :=
+        ENNReal.ofReal_lt_ofReal_iff_of_nonneg time.property
+      _ ↔ (time : ℝ) * (rate : ℝ) < (duration : ℝ) := lt_div_iff₀ rateRealPositive
+      _ ↔ ⌊(time : ℝ) * (rate : ℝ)⌋₊ < duration :=
+        (Nat.floor_lt (mul_nonneg time.property rate.property)).symm
   · have neverExits : ∀ index, path index ∈ domain := by
       intro index
       by_contra outside

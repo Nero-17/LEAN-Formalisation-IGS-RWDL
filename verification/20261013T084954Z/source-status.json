@@ -2488,6 +2488,22 @@
     "has_independent_receipt": true
   },
   {
+    "source": "section3-diffusion/RequestProject/Section31/EIGSContinuousBallGeometricMeanOfRules.lean",
+    "module": "RequestProject.Section31.EIGSContinuousBallGeometricMeanOfRules",
+    "source_sha256": "f1b75159e711a71402c1c93af3f085b0023d9c70f27ffc0810de1e76d2b53a28",
+    "status": "not_covered_by_published_receipts",
+    "in_shared_batch": false,
+    "has_independent_receipt": false
+  },
+  {
+    "source": "section3-diffusion/RequestProject/Section31/EIGSContinuousBallMeanOfRules.lean",
+    "module": "RequestProject.Section31.EIGSContinuousBallMeanOfRules",
+    "source_sha256": "39d9af2aca0409a9306cc37f6618e19ae60fddd41364d010f9eb6a2b2c3a8c7a",
+    "status": "not_covered_by_published_receipts",
+    "in_shared_batch": false,
+    "has_independent_receipt": false
+  },
+  {
     "source": "section3-diffusion/RequestProject/Section31/EIGSContinuousClosability.lean",
     "module": "RequestProject.Section31.EIGSContinuousClosability",
     "source_sha256": "b5a048fd89ef3acf482ee5af6fcac2b72c0db248bd9e5239549cacd4bbfc262b",
@@ -3035,9 +3051,25 @@
     "source": "section3-diffusion/RequestProject/Section31/EIGSFiniteCompletionBallExitUpper.lean",
     "module": "RequestProject.Section31.EIGSFiniteCompletionBallExitUpper",
     "source_sha256": "bae10bff956d8c3210ed56766a7ef947fb2ec308888a8b8a3718819305e812a1",
-    "status": "not_covered_by_published_receipts",
+    "status": "independent_whole_file_passed",
     "in_shared_batch": false,
-    "has_independent_receipt": false
+    "has_independent_receipt": true
+  },
+  {
+    "source": "section3-diffusion/RequestProject/Section31/EIGSFiniteCompletionBallNativeMean.lean",
+    "module": "RequestProject.Section31.EIGSFiniteCompletionBallNativeMean",
+    "source_sha256": "c721fecb4f3a27e23f0833f832205008a2d3eae634c598e6485aedfcc2a9093f",
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": false,
+    "has_independent_receipt": true
+  },
+  {
+    "source": "section3-diffusion/RequestProject/Section31/EIGSFiniteCompletionBallProper.lean",
+    "module": "RequestProject.Section31.EIGSFiniteCompletionBallProper",
+    "source_sha256": "42474e1e02445902488ee7fd7bbd8f205923dff0a9ce19db86a3589ec39a4b4a",
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": false,
+    "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSFiniteDiameter.lean",
@@ -3192,12 +3224,28 @@
     "has_independent_receipt": true
   },
   {
+    "source": "section3-diffusion/RequestProject/Section31/EIGSFlowerRuleResistance.lean",
+    "module": "RequestProject.Section31.EIGSFlowerRuleResistance",
+    "source_sha256": "9ac03941057a72be65b6bf5c297ca7c2b777c11fc62eab42bf45eb157e4ba829",
+    "status": "not_covered_by_published_receipts",
+    "in_shared_batch": false,
+    "has_independent_receipt": false
+  },
+  {
     "source": "section3-diffusion/RequestProject/Section31/EIGSFlowerRuleSimplicity.lean",
     "module": "RequestProject.Section31.EIGSFlowerRuleSimplicity",
     "source_sha256": "95a3cab589df13ed53947d40b8a06233b4be295a2da1ee9fd3eb30c9e5679e11",
     "status": "independent_whole_file_passed",
     "in_shared_batch": false,
     "has_independent_receipt": true
+  },
+  {
+    "source": "section3-diffusion/RequestProject/Section31/EIGSFlowerUnitFlow.lean",
+    "module": "RequestProject.Section31.EIGSFlowerUnitFlow",
+    "source_sha256": "582bfad73c1797d4d12a414ba1f01f3ec6b965bf349c75d69caf973a658dcd1f",
+    "status": "revised_after_failure_not_rechecked",
+    "in_shared_batch": false,
+    "has_independent_receipt": false
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSFullFutureStoppingClosedIdentification.lean",
@@ -4248,6 +4296,14 @@
     "has_independent_receipt": false
   },
   {
+    "source": "section3-diffusion/RequestProject/Section31/EIGSNormalizedContinuousBallMean.lean",
+    "module": "RequestProject.Section31.EIGSNormalizedContinuousBallMean",
+    "source_sha256": "01379c93906664b54206d0d590816c89d45d4f98fa789c23b193a127a9ce51cc",
+    "status": "not_covered_by_published_receipts",
+    "in_shared_batch": false,
+    "has_independent_receipt": false
+  },
+  {
     "source": "section3-diffusion/RequestProject/Section31/EIGSNormalizedContinuousBallSurvival.lean",
     "module": "RequestProject.Section31.EIGSNormalizedContinuousBallSurvival",
     "source_sha256": "fe11f96513f8ac922cd87816e013a0591d513955e5c063d5a78c96528b7f690e",
@@ -4480,6 +4536,14 @@
     "has_independent_receipt": true
   },
   {
+    "source": "section3-diffusion/RequestProject/Section31/EIGSResistanceBrownianSameKernelFullHeatOfRules.lean",
+    "module": "RequestProject.Section31.EIGSResistanceBrownianSameKernelFullHeatOfRules",
+    "source_sha256": "9f69dbb07f681a3d52a5eb89f1f2d2adacaeb9241ebc7a92f4101b65f74a13ca",
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": false,
+    "has_independent_receipt": true
+  },
+  {
     "source": "section3-diffusion/RequestProject/Section31/EIGSResistanceFormSameClosedHunt.lean",
     "module": "RequestProject.Section31.EIGSResistanceFormSameClosedHunt",
     "source_sha256": "bbfd1d4b584d1f186edc6721b4f155ed772a8ab9ff707f6e10474529f65aa9af",
@@ -4558,6 +4622,14 @@
     "status": "independent_whole_file_passed",
     "in_shared_batch": true,
     "has_independent_receipt": true
+  },
+  {
+    "source": "section3-diffusion/RequestProject/Section31/EIGSSameNativeNormalizedMeanExitOfRules.lean",
+    "module": "RequestProject.Section31.EIGSSameNativeNormalizedMeanExitOfRules",
+    "source_sha256": "88041d2f338c1f9781641b35562941aa75311fcceac2d9abef8310c4ad16bd3d",
+    "status": "not_covered_by_published_receipts",
+    "in_shared_batch": false,
+    "has_independent_receipt": false
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSSameNativeNormalizedTrueExitSurvivalOfRules.lean",
@@ -4768,20 +4840,44 @@
     "has_independent_receipt": false
   },
   {
-    "source": "section3-diffusion/RequestProject/Section31/EIGSTwoPointSkeletonJumpBound.lean",
-    "module": "RequestProject.Section31.EIGSTwoPointSkeletonJumpBound",
-    "source_sha256": "5300dbc2b634170ee18708ddc4862bdf0041921fd76d347914830f71f4fbfc0c",
+    "source": "section3-diffusion/RequestProject/Section31/EIGSTwoColourMatrixSpectra.lean",
+    "module": "RequestProject.Section31.EIGSTwoColourMatrixSpectra",
+    "source_sha256": "7ba15a10c7329c46fb4817a33d50936ef913a0697eaa7db25c2d227c8d961128",
+    "status": "not_covered_by_published_receipts",
+    "in_shared_batch": false,
+    "has_independent_receipt": false
+  },
+  {
+    "source": "section3-diffusion/RequestProject/Section31/EIGSTwoColourResistanceFormula.lean",
+    "module": "RequestProject.Section31.EIGSTwoColourResistanceFormula",
+    "source_sha256": "ceda455749d139d592bce1b77045a0a69151aeb6f97cd4df64bd3668387dab7b",
+    "status": "not_covered_by_published_receipts",
+    "in_shared_batch": false,
+    "has_independent_receipt": false
+  },
+  {
+    "source": "section3-diffusion/RequestProject/Section31/EIGSTwoColourRuleGraph.lean",
+    "module": "RequestProject.Section31.EIGSTwoColourRuleGraph",
+    "source_sha256": "dcac2d15bd76eaa16ab8fa03d81edc620de5a76d68636709a10057077fd7785e",
     "status": "failed_current_source",
     "in_shared_batch": false,
     "has_independent_receipt": false
   },
   {
+    "source": "section3-diffusion/RequestProject/Section31/EIGSTwoPointSkeletonJumpBound.lean",
+    "module": "RequestProject.Section31.EIGSTwoPointSkeletonJumpBound",
+    "source_sha256": "0d104b3feb0e69d4c7182e7adaed74161d19cd4b746fc27f5cd266abf82255ea",
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": false,
+    "has_independent_receipt": true
+  },
+  {
     "source": "section3-diffusion/RequestProject/Section31/EIGSTwoStarAllSourceExitUpper.lean",
     "module": "RequestProject.Section31.EIGSTwoStarAllSourceExitUpper",
     "source_sha256": "e66fe049558ef18e550bc986fcc99ac9d517e6329a68c93eb377dc8314361ca7",
-    "status": "not_covered_by_published_receipts",
+    "status": "independent_whole_file_passed",
     "in_shared_batch": false,
-    "has_independent_receipt": false
+    "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSTypicalBallMassUpperAllRadiiOfRules.lean",
@@ -5178,10 +5274,10 @@
   {
     "source": "section3-diffusion/RequestProject/Section31/ExtendedExitTailIntegral.lean",
     "module": "RequestProject.Section31.ExtendedExitTailIntegral",
-    "source_sha256": "5bb5a88f42a3af2eb3c8589e385e5b11d842cc04ebebfba4080b5542612555e6",
-    "status": "failed_current_source",
+    "source_sha256": "12a46ad45c77e2579a8620dcf88afecf9dafa75fe1b5a5cb17d514ac69b51d95",
+    "status": "independent_whole_file_passed",
     "in_shared_batch": false,
-    "has_independent_receipt": false
+    "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/ExtendedTraceEnergy.lean",
@@ -5242,10 +5338,10 @@
   {
     "source": "section3-diffusion/RequestProject/Section31/FiniteGraphFloorExitTime.lean",
     "module": "RequestProject.Section31.FiniteGraphFloorExitTime",
-    "source_sha256": "0e2b5f92307f0e882385faf42eaeb31ea5f8f6295a9c07cc541503a7c35e6f72",
-    "status": "not_covered_by_published_receipts",
+    "source_sha256": "ad9bb7c87435b85e47e191861b9744fdf778ad5cab23eafe8166599c40e24427",
+    "status": "independent_whole_file_passed",
     "in_shared_batch": false,
-    "has_independent_receipt": false
+    "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/FiniteGraphPoissonComparison.lean",
@@ -5341,6 +5437,14 @@
     "source_sha256": "f0650feb0c596d411df5da64d9ab07cb0666781e35d27e6b630b6580ddc7caf2",
     "status": "independent_whole_file_passed",
     "in_shared_batch": true,
+    "has_independent_receipt": true
+  },
+  {
+    "source": "section3-diffusion/RequestProject/Section31/FiniteStepRadiusExitTail.lean",
+    "module": "RequestProject.Section31.FiniteStepRadiusExitTail",
+    "source_sha256": "98b3903ea2e49eae74e6210097268e8e051aa6f40aaf1e287c8e403f14b32afa",
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": false,
     "has_independent_receipt": true
   },
   {
@@ -5448,6 +5552,22 @@
     "has_independent_receipt": true
   },
   {
+    "source": "section3-diffusion/RequestProject/Section31/FiniteSupportWeakExitMeanUpper.lean",
+    "module": "RequestProject.Section31.FiniteSupportWeakExitMeanUpper",
+    "source_sha256": "cfe706c6f3e3e82b8adb591138c8b8cb0a82c50e11ba3abb8f6dcae328c52541",
+    "status": "failed_current_source",
+    "in_shared_batch": false,
+    "has_independent_receipt": false
+  },
+  {
+    "source": "section3-diffusion/RequestProject/Section31/FiniteSupportWeakExitTail.lean",
+    "module": "RequestProject.Section31.FiniteSupportWeakExitTail",
+    "source_sha256": "e0d53d0fd725aaafa6cb0c2509f51c0264a4d8f70da89438157e1531ef6e785f",
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": false,
+    "has_independent_receipt": true
+  },
+  {
     "source": "section3-diffusion/RequestProject/Section31/FiniteWindowModulusCover.lean",
     "module": "RequestProject.Section31.FiniteWindowModulusCover",
     "source_sha256": "9e3de0b17db32cff072cdae39d4bcc7f29b9ae26c09a5a0163ccb97b9f60d10d",
@@ -5533,6 +5653,14 @@
     "source_sha256": "d1fff0b1a382da0da38737de02780d3b55d9bcc6a484751d8bf193c92fb48da9",
     "status": "independent_whole_file_passed",
     "in_shared_batch": true,
+    "has_independent_receipt": true
+  },
+  {
+    "source": "section3-diffusion/RequestProject/Section31/GeometricExitMeanOptimization.lean",
+    "module": "RequestProject.Section31.GeometricExitMeanOptimization",
+    "source_sha256": "48eb53f2eb5b18f862838f2e750bc6ce1ca6d01de3374e2189d50257bdc3f453",
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": false,
     "has_independent_receipt": true
   },
   {
@@ -5878,6 +6006,14 @@
     "status": "independent_whole_file_passed",
     "in_shared_batch": true,
     "has_independent_receipt": true
+  },
+  {
+    "source": "section3-diffusion/RequestProject/Section31/NetworkOhmResistanceCertificate.lean",
+    "module": "RequestProject.Section31.NetworkOhmResistanceCertificate",
+    "source_sha256": "886e68e6ecac09900c3afa3c2b18e23955fdde6f422b156d9b126648612eec2d",
+    "status": "not_covered_by_published_receipts",
+    "in_shared_batch": false,
+    "has_independent_receipt": false
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/NetworkSubstitutionCellCover.lean",
@@ -6469,6 +6605,14 @@
     "source_sha256": "618b8ba5b617e16d1407f9034132cf28b19c1821e70439514575f4f8939a6133",
     "status": "independent_whole_file_passed",
     "in_shared_batch": true,
+    "has_independent_receipt": true
+  },
+  {
+    "source": "section3-diffusion/RequestProject/Section31/SameFamilyKernelFullHeatEstimates.lean",
+    "module": "RequestProject.Section31.SameFamilyKernelFullHeatEstimates",
+    "source_sha256": "9a05488759c67143e40e96cb912cd02aff4853c72f45d05ee65728c57586e6e7",
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": false,
     "has_independent_receipt": true
   },
   {

@@ -1,0 +1,9 @@
+'IGS.Sec31.DiscreteMarkov.continuous_uniformRadius_lt_iff_dense' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.continuous_uniformRadius_lt_iff_forall' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.finiteSupport_weak_global_exit_tail' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

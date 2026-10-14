@@ -1,0 +1,3 @@
+'IGS.Sec31.ennreal_eq_lintegral_positive_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.lintegral_exit_eq_positive_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.positive_tail_mean_upper_of_liminf' depends on axioms: [propext, Classical.choice, Quot.sound]

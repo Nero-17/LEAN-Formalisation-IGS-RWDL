@@ -1,0 +1,4 @@
+'EIGS.xiTwoIncidentStars_subset_grounded_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiTwoPointCoarseGroundedDomain_allSource_expExit_spectral_upper' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
