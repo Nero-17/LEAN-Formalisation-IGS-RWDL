@@ -1,0 +1,3 @@
+'EIGS.xiHarmonicUnionExtension_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiHarmonicFamily_abs_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiHarmonicUnionExtension_successor_sub_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

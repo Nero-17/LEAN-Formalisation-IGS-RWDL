@@ -40,9 +40,9 @@ theorem xiFiniteEnergyRestriction_injective (system : EIGSData K)
   apply Subtype.ext
   apply ContinuousMap.ext
   intro point
-  apply (xiCompletionUnionEmbedding_denseRange system rulesConnected lengths lengthsPositive distanceRate
+  refine (xiCompletionUnionEmbedding_denseRange system rulesConnected lengths lengthsPositive distanceRate
     (zero_lt_one.trans distanceRateGreaterThanOne) metricEigenpair).induction_on point
-    (isClosed_eq first.val.continuous second.val.continuous)
+    (isClosed_eq first.val.continuous second.val.continuous) ?_
   intro vertex
   exact congrFun (congrArg Subtype.val equality) vertex
 
@@ -77,7 +77,8 @@ theorem xiFiniteEnergyRestriction_surjective_of_step_contraction
       distanceRate distanceRateGreaterThanOne metricEigenpair resistanceRate (zero_lt_one.trans rateGreaterThanOne)
       resistanceVector vectorPositive := by
     change xiContinuousUnionRestriction system rulesConnected lengths lengthsPositive distanceRate
-      distanceRateGreaterThanOne metricEigenpair extension ∈ _
+      distanceRateGreaterThanOne metricEigenpair extension ∈
+        xiWeightedEnergyDomain system resistanceRate (zero_lt_one.trans rateGreaterThanOne) resistanceVector vectorPositive
     rw [restriction]
     exact values.property
   exact ⟨⟨extension, membership⟩, Subtype.ext restriction⟩
@@ -121,7 +122,8 @@ theorem exists_xiFiniteEnergyRestriction_bijective_of_rules
       parameters.lengthsPositive (system.distanceSpectralRadius rulesConnected) distanceGreaterThanOne
       parameters.eigenpair resistanceRate (zero_lt_one.trans rateGreaterThanOne) resistanceVector vectorPositive := by
     change xiContinuousUnionRestriction system rulesConnected parameters.lengths parameters.lengthsPositive
-      (system.distanceSpectralRadius rulesConnected) distanceGreaterThanOne parameters.eigenpair continuous ∈ _
+      (system.distanceSpectralRadius rulesConnected) distanceGreaterThanOne parameters.eigenpair continuous ∈
+        xiWeightedEnergyDomain system resistanceRate (zero_lt_one.trans rateGreaterThanOne) resistanceVector vectorPositive
     rw [restriction]
     exact values.property
   exact ⟨⟨continuous, membership⟩, Subtype.ext restriction⟩

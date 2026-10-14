@@ -1,0 +1,2 @@
+'IGS.Sec31.continuous_positive_resistance_open_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.continuousResistanceMetric' depends on axioms: [propext, Classical.choice, Quot.sound]

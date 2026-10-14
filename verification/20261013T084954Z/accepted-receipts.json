@@ -1,13 +1,13 @@
 {
-  "snapshot_utc": "2026-10-14T16:38:30.502479+00:00",
+  "snapshot_utc": "2026-10-14T17:10:31.340767+00:00",
   "round": "20261013T084954Z",
   "compiler": "Lean 4.28.0",
   "mathlib": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
   "shared_dependency_modules": 690,
   "shared_report": "integration-690.json",
   "shared_report_sha256": "607fc8176247666e16f71894428d88124717974a7f34be9c1eb6954538e68064",
-  "independent_whole_file_count": 429,
-  "independent_audit_count": 1376,
+  "independent_whole_file_count": 449,
+  "independent_audit_count": 1416,
   "records": [
     {
       "module": "RequestProject.Section31.EIGSL2EnergyConstants",
@@ -13131,6 +13131,690 @@
       ]
     },
     {
+      "module": "RequestProject.Section31.ContinuousKernelLocalLowerMeasurable",
+      "source": "section3-diffusion/RequestProject/Section31/ContinuousKernelLocalLowerMeasurable.lean",
+      "source_sha256": "fa2c380dbc593a384f4aa584359ecad4538556207253f999f86d4f22d2937763",
+      "log": "logs/RequestProject_Section31_ContinuousKernelLocalLowerMeasurable-2026-10-14T163656.112358_0000.log",
+      "log_sha256": "c5f46dd9dcf10d1b7e1110a6c10cc8f3cf8f7ced82ce7ac11ee787402f3be605",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.isClosed_local_lower_goodset",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.measurableSet_quantized_local_lower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.local_lower_archimedean_quantization",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.ae_quantized_local_lower_map",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSHarmonicUnionSupComparison",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSHarmonicUnionSupComparison.lean",
+      "source_sha256": "cdf785afed47b36476394c8c3a28c5b57073be25b478f6dfa7525c2c50e55085",
+      "log": "logs/RequestProject_Section31_EIGSHarmonicUnionSupComparison-2026-10-14T164144.603922_0000.log",
+      "log_sha256": "e4487bbaae114c6870d51f37dbb60ce2f9746da2b3c5e11724e01b4d3d165ff6",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiHarmonicUnionExtension_step",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiHarmonicFamily_abs_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiHarmonicUnionExtension_successor_sub_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSTypicalLogarithmicBallMass",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSTypicalLogarithmicBallMass.lean",
+      "source_sha256": "26b6eca0630f271c55573573c6056464f3559d68d11b7f2ab50c62c867936955",
+      "log": "logs/RequestProject_Section31_EIGSTypicalLogarithmicBallMass-2026-10-14T163622.132371_0000.log",
+      "log_sha256": "193bb2ecbbc324e3725f85c5f51e2ffd63d4d61726d40370d0f8318ff81f76ad",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiTypicalLogarithmicBallMass_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ContinuousResistanceMetricTopology",
+      "source": "section3-diffusion/RequestProject/Section31/ContinuousResistanceMetricTopology.lean",
+      "source_sha256": "9cf5d9f2d9adc2808052a05cd6de789e1c5542ea76e23637ea7d25e4c6d0f07d",
+      "log": "logs/RequestProject_Section31_ContinuousResistanceMetricTopology-2026-10-14T165614.177151_0000.log",
+      "log_sha256": "5227bed0947d20e6ab22afefc58b46f9730d692633dbd5c4ee1839dca878e322",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.continuous_positive_resistance_open_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.continuousResistanceMetric",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.GeometricFixedBufferBallMass",
+      "source": "section3-diffusion/RequestProject/Section31/GeometricFixedBufferBallMass.lean",
+      "source_sha256": "a4b8c85034ca0cd54420346bc415e077636677e9f19c8b2e1ffadaa7c7c06d76",
+      "log": "logs/RequestProject_Section31_GeometricFixedBufferBallMass-2026-10-14T163713.611016_0000.log",
+      "log_sha256": "6642d652866e805e2df8f5ee034dd8a12b386910f6622b84ad956db61e4e4489",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.exists_fixed_geometric_buffer",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.geometric_radius_fit_of_fixed_buffer",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.logarithmic_degree_cost_mono",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.shifted_logarithmic_geometric_volume_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.GeometricLogarithmicHeatTimeChoice",
+      "source": "section3-diffusion/RequestProject/Section31/GeometricLogarithmicHeatTimeChoice.lean",
+      "source_sha256": "e8aae3e8e97803e25dfcf94c687e38420156b10499aee4f262264cb2d4447ccd",
+      "log": "logs/RequestProject_Section31_GeometricLogarithmicHeatTimeChoice-2026-10-14T163729.444781_0000.log",
+      "log_sha256": "2108ceb375b86502b3a726026820a2559fe4a2ffec68c0adaa3b8d376f1cfac9",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.geometric_heat_time_level_with_log_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.logarithmic_collar_width_for_exact_exponent",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.GeometricLogarithmicHeatLower",
+      "source": "section3-diffusion/RequestProject/Section31/GeometricLogarithmicHeatLower.lean",
+      "source_sha256": "d3e2d4ea510fd2f6607c315d6c37f897e38f0aaed91434a45083768b0d36d207",
+      "log": "logs/RequestProject_Section31_GeometricLogarithmicHeatLower-2026-10-14T163745.687387_0000.log",
+      "log_sha256": "022bf54b316b8322e1943264c85836e7c310273d1b332d232b4e6cd97b801b85",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.geometric_logarithmic_heat_lower_at_level",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.GeometricLogarithmicHeatLowerOptimization",
+      "source": "section3-diffusion/RequestProject/Section31/GeometricLogarithmicHeatLowerOptimization.lean",
+      "source_sha256": "b08dea6905c89cc709ed310e34ec62bee025c1f5a4af9d80fa60cc061888e044",
+      "log": "logs/RequestProject_Section31_GeometricLogarithmicHeatLowerOptimization-2026-10-14T163803.624151_0000.log",
+      "log_sha256": "f527d4d7bcb0e60c113fae99c42adc5243efc16ec1b754230d8ccf814587b352",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.geometric_logarithmic_heat_lower_of_eventual_levels",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSTypicalLogarithmicHeatKernelOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSTypicalLogarithmicHeatKernelOfRules.lean",
+      "source_sha256": "4cc48fc611e45ffcc535dfb5580bd577a9789bb5936336646d913eaa66beb912",
+      "log": "logs/RequestProject_Section31_EIGSTypicalLogarithmicHeatKernelOfRules-2026-10-14T164154.168516_0000.log",
+      "log_sha256": "b8c61db8740e93f6c0954afeddbdb59fd9531ab7e928be2933f1d4f7615be863",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiTypicalLogarithmicHeatKernelProperties_of_actual_local_lower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiTypicalLogarithmicHeatKernel_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSAnchoredEnergyHilbert",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSAnchoredEnergyHilbert.lean",
+      "source_sha256": "2a3fb3a5b40b715ed0787737844206790ac726d3a4a0c1ccfb986d88252c759b",
+      "log": "logs/RequestProject_Section31_EIGSAnchoredEnergyHilbert-2026-10-14T163824.557762_0000.log",
+      "log_sha256": "1bab22cd2095de91baade874fadcd27c794ce6f84f30a46dc15e6c9200405fb7",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiAnchoredEnergyHilbert_norm_sq",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiAnchoredEnergyEvaluation",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiZeroAnchoredEnergyDomain_completeSpace",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiZeroAnchoredEnergyDomain_norm_sq",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSEnergyConstantsQuotient",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSEnergyConstantsQuotient.lean",
+      "source_sha256": "304c117d5d5edf50d5001ef0e1cb34a54b2fcf0842855fbc6bf25114638fb015",
+      "log": "logs/RequestProject_Section31_EIGSEnergyConstantsQuotient-2026-10-14T164412.918111_0000.log",
+      "log_sha256": "caa799c966c1aaec51671455f508756d42642a7497e731958485f32b3bffd208",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiWeightedEnergy_zero_iff_constant",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_unique_xiEnergy_zero_anchored_representative",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSFiniteEnergyContinuousExtension",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSFiniteEnergyContinuousExtension.lean",
+      "source_sha256": "57488314dea1310a4b9354d16cce25a5a6a39103a8b2d9e344bacaef3be92a7c",
+      "log": "logs/RequestProject_Section31_EIGSFiniteEnergyContinuousExtension-2026-10-14T164555.148398_0000.log",
+      "log_sha256": "900ea6e83d10d419c79690501c9557cc7ec03c15b620fddb88e31a3814f4300f",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.abs_le_geometric_of_square_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiFiniteEnergy_continuous_extension_of_step_contraction",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSTypicalHeatSpectralDimensionOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSTypicalHeatSpectralDimensionOfRules.lean",
+      "source_sha256": "f8b58703853c9623d61e51a6fdb9c9f721fd2e2b047ce87e7672cd211b31dcfe",
+      "log": "logs/RequestProject_Section31_EIGSTypicalHeatSpectralDimensionOfRules-2026-10-14T164654.537768_0000.log",
+      "log_sha256": "3816ddc189a123a446dc33a37eb1965925e72ba87e17e153dec074197c05774f",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.tendsto_spectral_dimension_of_positive_kernel_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiTypicalHeatSpectralDimensionProperties_of_typical",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiTypicalHeatSpectralDimension_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSZeroAnchoredMarkov",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSZeroAnchoredMarkov.lean",
+      "source_sha256": "d8d7fb45d10afcb175b26a2cfdebc7fc0616c051b90a2a63585ec3311a99030a",
+      "log": "logs/RequestProject_Section31_EIGSZeroAnchoredMarkov-2026-10-14T164753.922760_0000.log",
+      "log_sha256": "bffa25029453f1b9a18ef0650467e9c8200650194c1614fa1ecbd75b537750b9",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.shifted_positive_part_contraction",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiZeroAnchoredPositivePart_norm_sq_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSFiniteEnergyContinuousExtensionOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSFiniteEnergyContinuousExtensionOfRules.lean",
+      "source_sha256": "3c674f0fdae39509d64c7e4caa1f176e768872a0c27d091bded21b516766ac0a",
+      "log": "logs/RequestProject_Section31_EIGSFiniteEnergyContinuousExtensionOfRules-2026-10-14T165053.011484_0000.log",
+      "log_sha256": "3b789f0c6cc76875e5651e1e593d678014092d506f3dc8df3e19b7bd7306803b",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiFiniteEnergy_continuous_extension_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.LogarithmicHeatLowerCommonAE",
+      "source": "section3-diffusion/RequestProject/Section31/LogarithmicHeatLowerCommonAE.lean",
+      "source_sha256": "e33f80495429ba1d0c1465c2f65d261902801a1542812a87bcd7a8d95857dd34",
+      "log": "logs/RequestProject_Section31_LogarithmicHeatLowerCommonAE-2026-10-14T164736.581803_0000.log",
+      "log_sha256": "07f7658ee1da9358cee0ff70970aeb8763fd3dc9065471a1f5e869fc1b47545e",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.logarithmic_heat_lower_common_ae",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSTypicalLogarithmicHeatKernelCommonAEOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSTypicalLogarithmicHeatKernelCommonAEOfRules.lean",
+      "source_sha256": "cc66b1e1327b11871459b4afa79fe0e815afe78fd4dc229105c7439d14909738",
+      "log": "logs/RequestProject_Section31_EIGSTypicalLogarithmicHeatKernelCommonAEOfRules-2026-10-14T164752.260591_0000.log",
+      "log_sha256": "aa52e32d856bf4c28e474185a2981eb1f4980c249d409bbac5ce800f37f25262",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiTypicalLogarithmicHeatKernelCommonAEProperties_of_typical",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiTypicalLogarithmicHeatKernelCommonAE_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSSkeletonResistanceTriangle",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSSkeletonResistanceTriangle.lean",
+      "source_sha256": "85b7b3f956ad95632841edcac2dab21c6abf3675a89c3859ba4dbb8e461cfbeb",
+      "log": "logs/RequestProject_Section31_EIGSSkeletonResistanceTriangle-2026-10-14T164834.116048_0000.log",
+      "log_sha256": "82f74c0e6429e14b8263d6a61b8f66c4edd1bceba4cb06eccc463eec661c750b",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiSkeletonResistance_sharp_energy_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiSkeletonResistanceRiesz_attains",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiSkeletonResistanceRiesz_sink_minimum",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiSkeletonResistance_triangle",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ContinuousKernelSameClosedIdentification",
+      "source": "section3-diffusion/RequestProject/Section31/ContinuousKernelSameClosedIdentification.lean",
+      "source_sha256": "c520baf5a0e89c8363657611f0d44049e969d819f53dcb166a3a3867d7bd544d",
+      "log": "logs/RequestProject_Section31_ContinuousKernelSameClosedIdentification-2026-10-14T164843.817293_0000.log",
+      "log_sha256": "b3c487173f288adc2976c56e2279f1d276415451043524b171d647f3c183d061",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.continuousKernel_eq_of_same_closed_operator",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSSkeletonResistanceFiniteIdentification",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSSkeletonResistanceFiniteIdentification.lean",
+      "source_sha256": "e818535b87c0f8b0c939000aaa7974c3ebc130f90957bdcbaee465dec836b1bf",
+      "log": "logs/RequestProject_Section31_EIGSSkeletonResistanceFiniteIdentification-2026-10-14T165540.237729_0000.log",
+      "log_sha256": "91385b39fae6782e0e68866da7ac63197794e37524913345f6ee22a19a3e943c",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiSkeletonResistance_eq_finite_effRes",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSSameNativeJointFullHeatEstimatesOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSSameNativeJointFullHeatEstimatesOfRules.lean",
+      "source_sha256": "81461e42c19899d71dd10a5a5c7c72e7d84ef932f30db6d7f7ee36cd6d3c4193",
+      "log": "logs/RequestProject_Section31_EIGSSameNativeJointFullHeatEstimatesOfRules-2026-10-14T165911.486714_0000.log",
+      "log_sha256": "bfb9015fef9da8dac7df207c7ea8843718501f35bf2f468088bc9dbda49d63c1",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiSameKernelFullHeatEstimatesProperties_of_discrete",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiSameNativeJointFullHeatEstimates_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSFiniteEnergyRestrictionEquiv",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSFiniteEnergyRestrictionEquiv.lean",
+      "source_sha256": "29f12c109172b8019992b69d6a3fbd4434acbd73dcf7adc84698e2b191b4fd1d",
+      "log": "logs/RequestProject_Section31_EIGSFiniteEnergyRestrictionEquiv-2026-10-14T165414.533897_0000.log",
+      "log_sha256": "1156072a143d0f8424d10fd02c123e8e62fc59446bd6930e917121b59205193d",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiFiniteEnergyRestriction_injective",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiFiniteEnergyRestriction_surjective_of_step_contraction",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiFiniteEnergyRestriction_bijective_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSFiniteEnergyUniformEvaluationOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSFiniteEnergyUniformEvaluationOfRules.lean",
+      "source_sha256": "e2470abbddecd1ed1cae757ddf67eacee82d562cc3ce1d6e505ace8c389b0e1e",
+      "log": "logs/RequestProject_Section31_EIGSFiniteEnergyUniformEvaluationOfRules-2026-10-14T165748.687255_0000.log",
+      "log_sha256": "4d37162c9d603851855979a5b147d2b76843d56a2945a68700290d27ac2a2b53",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiFiniteEnergy_uniform_evaluation_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSFiniteEnergyGeometricTail",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSFiniteEnergyGeometricTail.lean",
+      "source_sha256": "a116a3fef2e87420820346b67e18780eb6aed6cbfd7b3d6933363daba7bb740a",
+      "log": "logs/RequestProject_Section31_EIGSFiniteEnergyGeometricTail-2026-10-14T170126.312620_0000.log",
+      "log_sha256": "f1dfa7ceb6dff733823d2b2dd28f76e260a3bde01d1d2408a800c011daad9f86",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiContinuousHarmonicProjection_geometric_energy_tail",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSFiniteEnergyContinuousLinearExtension",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSFiniteEnergyContinuousLinearExtension.lean",
+      "source_sha256": "7011e7301a7d04b97a94d9438afea8b7af95712760e8986b25bbb722f22af24c",
+      "log": "logs/RequestProject_Section31_EIGSFiniteEnergyContinuousLinearExtension-2026-10-14T170220.293252_0000.log",
+      "log_sha256": "d079ef73db2ab6dbcb5783518d796eceb2d9c7ffb30b9085cd33e384c22cd39b",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiAnchoredEnergy_continuous_linear_extension_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSSameNativeJointFullHeatRecurrenceOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSSameNativeJointFullHeatRecurrenceOfRules.lean",
+      "source_sha256": "eaf06bbc824cb0ee1900157865c3faac14d987e111f8d44fc26ec690b6ca0efd",
+      "log": "logs/RequestProject_Section31_EIGSSameNativeJointFullHeatRecurrenceOfRules-2026-10-14T170337.032185_0000.log",
+      "log_sha256": "0f50bc528980bd53fc1bb8125e48fe0c3bca55142655f92c3980490ec5bb6632",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiActualRecurrent_iff_same_resistance_spectral_formula_lt_two",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiSameNativeJointFullHeatEstimatesRecurrence_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
       "module": "RequestProject.Section31.BoundedYosidaInvariantConvex",
       "source": "section3-diffusion/RequestProject/Section31/BoundedYosidaInvariantConvex.lean",
       "source_sha256": "f6de77639d7c40826b90b1731cf3339c7643dcf11237edc78c2a5399341a3e25",
@@ -14622,170 +15306,6 @@
         },
         {
           "declaration": "EIGS.exists_xiNativeYosidaStrong_of_rules",
-          "axioms": [
-            "propext",
-            "Classical.choice",
-            "Quot.sound"
-          ]
-        }
-      ]
-    },
-    {
-      "module": "RequestProject.Section31.EIGSTypicalLogarithmicBallMass",
-      "source": "section3-diffusion/RequestProject/Section31/EIGSTypicalLogarithmicBallMass.lean",
-      "source_sha256": "26b6eca0630f271c55573573c6056464f3559d68d11b7f2ab50c62c867936955",
-      "log": "logs/RequestProject_Section31_EIGSTypicalLogarithmicBallMass-2026-10-14T163622.132371_0000.log",
-      "log_sha256": "193bb2ecbbc324e3725f85c5f51e2ffd63d4d61726d40370d0f8318ff81f76ad",
-      "exit_code": 0,
-      "audits": [
-        {
-          "declaration": "EIGS.exists_xiTypicalLogarithmicBallMass_of_rules",
-          "axioms": [
-            "propext",
-            "Classical.choice",
-            "Quot.sound"
-          ]
-        }
-      ]
-    },
-    {
-      "module": "RequestProject.Section31.ContinuousKernelLocalLowerMeasurable",
-      "source": "section3-diffusion/RequestProject/Section31/ContinuousKernelLocalLowerMeasurable.lean",
-      "source_sha256": "fa2c380dbc593a384f4aa584359ecad4538556207253f999f86d4f22d2937763",
-      "log": "logs/RequestProject_Section31_ContinuousKernelLocalLowerMeasurable-2026-10-14T163656.112358_0000.log",
-      "log_sha256": "c5f46dd9dcf10d1b7e1110a6c10cc8f3cf8f7ced82ce7ac11ee787402f3be605",
-      "exit_code": 0,
-      "audits": [
-        {
-          "declaration": "IGS.Sec31.isClosed_local_lower_goodset",
-          "axioms": [
-            "propext",
-            "Classical.choice",
-            "Quot.sound"
-          ]
-        },
-        {
-          "declaration": "IGS.Sec31.measurableSet_quantized_local_lower",
-          "axioms": [
-            "propext",
-            "Classical.choice",
-            "Quot.sound"
-          ]
-        },
-        {
-          "declaration": "IGS.Sec31.local_lower_archimedean_quantization",
-          "axioms": [
-            "propext",
-            "Classical.choice",
-            "Quot.sound"
-          ]
-        },
-        {
-          "declaration": "IGS.Sec31.ae_quantized_local_lower_map",
-          "axioms": [
-            "propext",
-            "Classical.choice",
-            "Quot.sound"
-          ]
-        }
-      ]
-    },
-    {
-      "module": "RequestProject.Section31.GeometricFixedBufferBallMass",
-      "source": "section3-diffusion/RequestProject/Section31/GeometricFixedBufferBallMass.lean",
-      "source_sha256": "a4b8c85034ca0cd54420346bc415e077636677e9f19c8b2e1ffadaa7c7c06d76",
-      "log": "logs/RequestProject_Section31_GeometricFixedBufferBallMass-2026-10-14T163713.611016_0000.log",
-      "log_sha256": "6642d652866e805e2df8f5ee034dd8a12b386910f6622b84ad956db61e4e4489",
-      "exit_code": 0,
-      "audits": [
-        {
-          "declaration": "IGS.Sec31.exists_fixed_geometric_buffer",
-          "axioms": [
-            "propext",
-            "Classical.choice",
-            "Quot.sound"
-          ]
-        },
-        {
-          "declaration": "IGS.Sec31.geometric_radius_fit_of_fixed_buffer",
-          "axioms": [
-            "propext",
-            "Classical.choice",
-            "Quot.sound"
-          ]
-        },
-        {
-          "declaration": "IGS.Sec31.logarithmic_degree_cost_mono",
-          "axioms": [
-            "propext",
-            "Classical.choice",
-            "Quot.sound"
-          ]
-        },
-        {
-          "declaration": "IGS.Sec31.shifted_logarithmic_geometric_volume_bound",
-          "axioms": [
-            "propext",
-            "Classical.choice",
-            "Quot.sound"
-          ]
-        }
-      ]
-    },
-    {
-      "module": "RequestProject.Section31.GeometricLogarithmicHeatTimeChoice",
-      "source": "section3-diffusion/RequestProject/Section31/GeometricLogarithmicHeatTimeChoice.lean",
-      "source_sha256": "e8aae3e8e97803e25dfcf94c687e38420156b10499aee4f262264cb2d4447ccd",
-      "log": "logs/RequestProject_Section31_GeometricLogarithmicHeatTimeChoice-2026-10-14T163729.444781_0000.log",
-      "log_sha256": "2108ceb375b86502b3a726026820a2559fe4a2ffec68c0adaa3b8d376f1cfac9",
-      "exit_code": 0,
-      "audits": [
-        {
-          "declaration": "IGS.Sec31.geometric_heat_time_level_with_log_bound",
-          "axioms": [
-            "propext",
-            "Classical.choice",
-            "Quot.sound"
-          ]
-        },
-        {
-          "declaration": "IGS.Sec31.logarithmic_collar_width_for_exact_exponent",
-          "axioms": [
-            "propext",
-            "Classical.choice",
-            "Quot.sound"
-          ]
-        }
-      ]
-    },
-    {
-      "module": "RequestProject.Section31.GeometricLogarithmicHeatLower",
-      "source": "section3-diffusion/RequestProject/Section31/GeometricLogarithmicHeatLower.lean",
-      "source_sha256": "d3e2d4ea510fd2f6607c315d6c37f897e38f0aaed91434a45083768b0d36d207",
-      "log": "logs/RequestProject_Section31_GeometricLogarithmicHeatLower-2026-10-14T163745.687387_0000.log",
-      "log_sha256": "022bf54b316b8322e1943264c85836e7c310273d1b332d232b4e6cd97b801b85",
-      "exit_code": 0,
-      "audits": [
-        {
-          "declaration": "IGS.Sec31.geometric_logarithmic_heat_lower_at_level",
-          "axioms": [
-            "propext",
-            "Classical.choice",
-            "Quot.sound"
-          ]
-        }
-      ]
-    },
-    {
-      "module": "RequestProject.Section31.GeometricLogarithmicHeatLowerOptimization",
-      "source": "section3-diffusion/RequestProject/Section31/GeometricLogarithmicHeatLowerOptimization.lean",
-      "source_sha256": "b08dea6905c89cc709ed310e34ec62bee025c1f5a4af9d80fa60cc061888e044",
-      "log": "logs/RequestProject_Section31_GeometricLogarithmicHeatLowerOptimization-2026-10-14T163803.624151_0000.log",
-      "log_sha256": "f527d4d7bcb0e60c113fae99c42adc5243efc16ec1b754230d8ccf814587b352",
-      "exit_code": 0,
-      "audits": [
-        {
-          "declaration": "IGS.Sec31.geometric_logarithmic_heat_lower_of_eventual_levels",
           "axioms": [
             "propext",
             "Classical.choice",

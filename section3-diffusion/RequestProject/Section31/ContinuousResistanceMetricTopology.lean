@@ -1,4 +1,5 @@
 import Mathlib.Topology.MetricSpace.Defs
+import Mathlib.Topology.MetricSpace.Pseudo.Lemmas
 import Mathlib.Topology.Order.Compact
 
 /-! A continuous separating resistance function on a compact space has the

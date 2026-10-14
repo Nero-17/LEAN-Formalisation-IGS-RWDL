@@ -126,9 +126,9 @@ theorem exists_xiFiniteEnergy_continuous_extension_of_step_contraction
       resistanceVector vectorPositive eigenpair level values (constant * factor ^ level) (boundaryBound level)
     have pointBound : ∀ point, |approximation (level + 1) point - approximation level point| ≤ constant * factor ^ level := by
       intro point
-      apply (xiCompletionUnionEmbedding_denseRange system rulesConnected lengths lengthsPositive distanceRate
+      refine (xiCompletionUnionEmbedding_denseRange system rulesConnected lengths lengthsPositive distanceRate
         (zero_lt_one.trans distanceRateGreaterThanOne) metricEigenpair).induction_on point
-        (isClosed_le (((approximation (level + 1)).continuous.sub (approximation level).continuous).abs) continuous_const)
+        (isClosed_le (((approximation (level + 1)).continuous.sub (approximation level).continuous).abs) continuous_const) ?_
       intro vertex
       rw [approximationAgreement, approximationAgreement]
       exact unionBound vertex

@@ -15,7 +15,7 @@ theorem shifted_positive_part_contraction (pivot offset : ℝ) :
   intro first second
   have bound := ((LipschitzWith.id : LipschitzWith 1 (fun value : ℝ => value)).max_const 0).dist_le_mul
     (first - pivot) (second - pivot)
-  simp only [Real.dist_eq, NNReal.coe_one, one_mul] at bound
+  simp only [Real.dist_eq, NNReal.coe_one, one_mul, id_eq] at bound
   convert bound using 1 <;> congr 1 <;> ring
 
 end IGS.Sec31

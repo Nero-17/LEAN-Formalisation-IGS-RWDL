@@ -57,7 +57,13 @@ theorem xiSkeletonResistance_eq_finite_effRes
     ⟨extension, extensionFinite⟩
   have normalizedDifference : normalized.val.value.val (xiVertexEmbedding system level source) -
       normalized.val.value.val (xiVertexEmbedding system level sink) = 1 := by
-    rw [normalizedProperty.1, normalizedProperty.1, extensionValues 0 source, extensionValues 0 sink]
+    rw [normalizedProperty.1, normalizedProperty.1]
+    change extension (xiVertexEmbedding system level source) - extension anchor -
+      (extension (xiVertexEmbedding system level sink) - extension anchor) = 1
+    have sourceBoundary := extensionValues 0 source
+    have sinkBoundary := extensionValues 0 sink
+    simp only [Nat.add_zero, xiHarmonicValues] at sourceBoundary sinkBoundary
+    rw [sourceBoundary, sinkBoundary]
     change potential source - extension anchor - (potential sink - extension anchor) = 1
     rw [sourceValue, sinkValue]
     ring
@@ -111,7 +117,7 @@ theorem xiSkeletonResistance_eq_finite_effRes
   have upperProduct : resistance * (resistance * resistanceRate ^ level) ≤ resistance * finiteResistance := by
     nlinarith [upperScaled]
   have upper : resistance * resistanceRate ^ level ≤ finiteResistance :=
-    (mul_le_mul_left resistancePositive).1 upperProduct
+    le_of_mul_le_mul_left upperProduct resistancePositive
   apply (eq_div_iff (pow_pos ratePositive level).ne').2
   exact le_antisymm upper lowerScaled
 

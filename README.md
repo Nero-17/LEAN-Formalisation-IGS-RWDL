@@ -22,7 +22,7 @@ Generic criteria count as actual-model results only when their inputs are suppli
 
 ## Remaining work
 
-Typical-point logarithmic heat estimates and almost-everywhere local spectral dimensions, attaching all local heat estimates to the joint process/kernel witness, and the resistance-form/Brownian-regime identification remain incomplete. The nonprimitive degree-rate-one extension and a fresh common build including every new endpoint also remain outstanding. Random-cluster GHP and diffusion statements retain their original conjectural status.
+The resistance-form/Brownian-regime identification, separate actual consumers for every intermediate volume/exit-time/exit-survival statement, and actual graph constructions for manuscript examples remain incomplete. The nonprimitive degree-rate-one extension and the current common dependency build also remain outstanding. Random-cluster GHP and diffusion statements retain their original conjectural status.
 
 ## Manuscript and layout
 

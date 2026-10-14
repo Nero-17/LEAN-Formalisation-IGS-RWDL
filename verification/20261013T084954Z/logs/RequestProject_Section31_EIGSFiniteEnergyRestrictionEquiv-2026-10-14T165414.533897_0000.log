@@ -1,0 +1,5 @@
+'EIGS.xiFiniteEnergyRestriction_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiFiniteEnergyRestriction_surjective_of_step_contraction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_xiFiniteEnergyRestriction_bijective_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

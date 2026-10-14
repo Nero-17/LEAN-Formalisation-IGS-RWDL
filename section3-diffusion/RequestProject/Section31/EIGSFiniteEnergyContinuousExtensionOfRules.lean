@@ -1,4 +1,5 @@
 import RequestProject.Section31.EIGSFiniteEnergyContinuousExtension
+import RequestProject.Section2ResistanceSpectralRadius
 
 /-! The resistance-rate-greater-than-one case of the actual energy domain:
 every bounded-trace-energy vertex function extends continuously to the same

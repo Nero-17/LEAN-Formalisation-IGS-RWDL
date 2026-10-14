@@ -1,0 +1,16 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSTypicalHeatSpectralDimensionOfRules.lean:48:4: warning: 'change
+  diagonal ⟨⟨time, inRange.1.le⟩, inRange.1⟩ ≤
+    upperConstant * (2 : ℝ) ^ exponent * time ^ (-exponent)' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSTypicalHeatSpectralDimensionOfRules.lean:39:26: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSTypicalHeatSpectralDimensionOfRules.lean:250:29: warning: unused variable `normalizationPositive`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'IGS.Sec31.tendsto_spectral_dimension_of_positive_kernel_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiTypicalHeatSpectralDimensionProperties_of_typical' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiTypicalHeatSpectralDimension_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,4 @@
+'EIGS.xiAnchoredEnergyHilbert_norm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiAnchoredEnergyEvaluation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiZeroAnchoredEnergyDomain_completeSpace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiZeroAnchoredEnergyDomain_norm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]

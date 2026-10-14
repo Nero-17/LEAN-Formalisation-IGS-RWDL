@@ -220,7 +220,7 @@ theorem xiTypicalLogarithmicHeatKernelProperties_of_actual_local_lower (system :
   have realDiagonalContinuous : ∀ time, 0 < time → Continuous (realDiagonal time) := by
     intro time positive
     dsimp only [realDiagonal]
-    rw [dif_pos positive]
+    simp only [dif_pos positive]
     exact jointContinuous.comp (continuous_const.prodMk (continuous_id.prodMk continuous_id))
   have weightNonnegative : ∀ time : ℝ, 0 < time → time ≤ Real.exp (-1) → 0 ≤ weight time := by
     intro time positive small

@@ -58,9 +58,9 @@ theorem xiHarmonicFamily_abs_le (initialLevel : ℕ) (values : ∀ level, XiVtx 
   have upper := max_le tailBound.2 headBound.2
   apply abs_le.mpr
   rcases incident with tail | head
-  · rw [tail]
+  · rw [← tail]
     exact ⟨lower.trans ranges.1.1, ranges.1.2.trans upper⟩
-  · rw [head]
+  · rw [← head]
     exact ⟨lower.trans ranges.2.1, ranges.2.2.trans upper⟩
 
 theorem xiHarmonicUnionExtension_successor_sub_bound

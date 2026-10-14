@@ -73,11 +73,11 @@ theorem exists_xiAnchoredEnergy_continuous_linear_extension_of_bijective
     exact (boundValid vertex).trans ((le_abs_self bound).trans (le_add_of_nonneg_right (by norm_num)))
   have normBound : ∀ values, ‖extensionLinear values‖ ≤ positiveBound * ‖values‖ := by
     intro values
-    apply (ContinuousMap.norm_le (mul_nonneg boundPositive.le (norm_nonneg values))).2
+    apply (ContinuousMap.norm_le (extensionLinear values) (mul_nonneg boundPositive.le (norm_nonneg values))).2
     intro point
-    apply (xiCompletionUnionEmbedding_denseRange system rulesConnected lengths lengthsPositive distanceRate
+    refine (xiCompletionUnionEmbedding_denseRange system rulesConnected lengths lengthsPositive distanceRate
       (zero_lt_one.trans distanceRateGreaterThanOne) metricEigenpair).induction_on point
-      (isClosed_le (extensionLinear values).continuous.norm continuous_const)
+      (isClosed_le (extensionLinear values).continuous.norm continuous_const) ?_
     intro vertex
     rw [agreement]
     exact ((evaluations vertex).le_opNorm values).trans

@@ -33,6 +33,8 @@ theorem tendsto_spectral_dimension_of_positive_kernel_bounds
   · intro time inRange
     have bound := lowerBound ⟨⟨time, inRange.1.le⟩, inRange.1⟩
       (inRange.2.le.trans (min_le_left _ _))
+    change lowerConstant * time ^ (-exponent) * |Real.log time| ^ (-logExponent) ≤
+      diagonal ⟨⟨time, inRange.1.le⟩, inRange.1⟩ at bound
     simp only [dif_pos inRange.1]
     convert bound using 1 <;> ring
   · intro time inRange

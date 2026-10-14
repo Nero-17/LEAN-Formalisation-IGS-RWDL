@@ -126,11 +126,11 @@ theorem exists_xiContinuousHarmonicProjection_geometric_energy_tail
       resistanceVector vectorPositive eigenpair level values
       ((incrementConstant * Real.sqrt energy) * factor ^ level) (boundaryBound level)
     rw [dist_eq_norm, norm_sub_rev]
-    apply (ContinuousMap.norm_le (by positivity)).2
+    apply (ContinuousMap.norm_le (approximation (level + 1) - approximation level) (by positivity)).2
     intro point
-    apply (xiCompletionUnionEmbedding_denseRange system rulesConnected lengths lengthsPositive distanceRate
+    refine (xiCompletionUnionEmbedding_denseRange system rulesConnected lengths lengthsPositive distanceRate
       (zero_lt_one.trans distanceRateGreaterThanOne) metricEigenpair).induction_on point
-      (isClosed_le (((approximation (level + 1)).continuous.sub (approximation level).continuous).norm) continuous_const)
+      (isClosed_le (((approximation (level + 1)).continuous.sub (approximation level).continuous).norm) continuous_const) ?_
     intro vertex
     change ‖approximation (level + 1) _ - approximation level _‖ ≤ _
     rw [agreementUnion, agreementUnion]
@@ -138,7 +138,7 @@ theorem exists_xiContinuousHarmonicProjection_geometric_energy_tail
   have convergenceNorm := xiContinuousHarmonicProjection_uniform_tendsto system rulesConnected lengths lengthsPositive
     distanceRate distanceRateGreaterThanOne metricEigenpair resistanceRate ratePositive resistanceVector vectorPositive
     eigenpair contractionFactor factorPositive factorStrict stepContraction target.val
-    target.val.continuous.uniformContinuous_of_compact approximation agreement
+    (CompactSpace.uniformContinuous_of_continuous target.val.continuous) approximation agreement
   have convergence : Tendsto approximation atTop (𝓝 target.val) := by
     apply tendsto_iff_norm_sub_tendsto_zero.2
     exact convergenceNorm

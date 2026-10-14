@@ -1,6 +1,6 @@
 # Current formalization audit
 
-Snapshot UTC: 2026-10-14T16:38:30.502479+00:00
+Snapshot UTC: 2026-10-14T17:10:31.340767+00:00
 
 Full-paper completion is **not** claimed. A clean printed axiom audit verifies the stated theorem; it does not remove mathematical assumptions from that statement. Actual-model consumers and generic conditional lemmas must be read separately.
 
@@ -8,7 +8,7 @@ Full-paper completion is **not** claimed. A clean printed axiom audit verifies t
 
 The latest completed common-dependency batch has 690 modules and unchanged checked sources. Report SHA256: `607fc8176247666e16f71894428d88124717974a7f34be9c1eb6954538e68064`.
 
-The independent manifest contains 429 accepted whole-file receipts and 1376 printed audits. These overlap the common batch and are not a completion percentage. Every published Lean source has an exact hash and explicit status; unverified and failed drafts remain visible.
+The independent manifest contains 449 accepted whole-file receipts and 1416 printed audits. These overlap the common batch and are not a completion percentage. Every published Lean source has an exact hash and explicit status; unverified and failed drafts remain visible.
 
 ## Accepted milestones
 
@@ -81,11 +81,13 @@ The same actual closed L² semigroup is identified with the global continuous-pa
 
 For all positive times and spatial points, the same actual five-rule closed semigroup has a symmetric strictly positive probability density jointly continuous in time and both spatial variables, with the global small-time heat upper bound. The strict-positivity consumer supplies all analytic inputs internally. No resistance-growth-greater-than-one restriction is added. All-time bounds use a truncated time scale, not an incorrect all-time power decay on a compact conservative space.
 
-Finite-born point evaluations extend to the same closed energy domain and agree with continuous representatives by the previously verified continuous-domain equivalence. Actual harmonic nodal cutoffs, degree growth, energy contraction and half-time Riesz identities supply both diagonal estimates internally. At every finite-born vertex, for sufficiently small positive times, c_x/t^alpha <= p_t(x,x) <= C_x/t^alpha, with alpha=(log(mu)-log(nu))/log(mu*rho); the actual local spectral dimension is 2*alpha. No diagonal estimate or spectral dimension is a final model hypothesis. The standing primitive degree condition is retained. Typical-point logarithmic lower bounds and almost-everywhere spectral dimensions remain incomplete.
+Finite-born point evaluations extend to the same closed energy domain and agree with continuous representatives by the previously verified continuous-domain equivalence. Actual harmonic nodal cutoffs, degree growth, energy contraction and half-time Riesz identities supply both diagonal estimates internally. At every finite-born vertex, for sufficiently small positive times, c_x/t^alpha <= p_t(x,x) <= C_x/t^alpha, with alpha=(log(mu)-log(nu))/log(mu*rho); the actual local spectral dimension is 2*alpha. No diagonal estimate or spectral dimension is a final model hypothesis. The standing primitive degree condition is retained.
+
+The precise typical-point logarithmic heat lower bound is now verified from actual ball mass and stay estimates, allowing resistanceRate at most one. Its log exponent is -1/(d_deg-1)-epsilon. The physical almost-everywhere spectral dimension is 2*log(mu)/log(mu*rho). A countable cofinal argument supplies a single full-measure set for every positive epsilon. The final same-native full-heat endpoint retains one R/vector/c/process witness and proves all finite-born and typical estimates for its same strict heat kernel. The actual recurrence criterion is attached to the same global spectral formula, without substituting the finite-born degree-corrected exponent.
 
 Continuous-path laws also satisfy quasi-left continuity at all finite supremum times, pathwise. This supplies a regularity component and does not by itself assert a full Hunt process.
 
-Actual endpoint-collar mass bounds, summable logarithmic schedules and almost-everywhere avoidance are verified. Actual recent-vertex degree bounds and harmonic two-endpoint cutoffs are verified separately. Actual all-start native-floor displacement tails give a positive stay probability, and generic continuous metric cutoff expectation bounds have passed. Actual metric-ball mass bounds, the expectation limit to the same semigroup and the final typical logarithmic estimate remain pending. The primitive standing assumption excludes nu=1; the manuscript's nu=1 extension requires separate scope verification.
+Actual endpoint-collar mass bounds, summable logarithmic schedules and almost-everywhere avoidance are verified. Actual recent-vertex degree bounds and harmonic two-endpoint cutoffs, completion-ball incidence mass and logarithmic ball mass are verified. Actual native-floor displacement estimates pass to the same semigroup's cutoff expectation; compact half lifts and Riesz/Cauchy give the inverse-ball diagonal lower bound. The fixed geometric buffer and logarithmic time optimization prove the exact typical estimate. This alternate proof of the final heat theorem does not automatically discharge every separate manuscript lemma: all-radius physical ball-volume statements, continuous-path expected exit bounds, and true exit-survival events still require explicit actual consumers. The primitive standing assumption excludes nu=1; the manuscript's nu=1 extension requires separate scope verification. The flower example currently has scalar algebra but still needs the actual rule-graph spectral bridge.
 
 The actual finite-trace energy domain on the vertex union has anchored Cauchy limits. Each point evaluation coefficient is obtained internally from a connected finite network containing the point and anchor. This is a verified completeness step, not a completed resistance-form/Brownian construction: the Hilbert instances, continuous extension of arbitrary finite-energy skeleton functions, resistance metric and final identification remain pending.
 

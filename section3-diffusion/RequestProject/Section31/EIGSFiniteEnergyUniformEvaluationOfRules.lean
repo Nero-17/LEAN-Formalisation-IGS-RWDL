@@ -87,15 +87,15 @@ theorem exists_xiFiniteEnergy_uniform_evaluation_of_rules
       resistanceRate (zero_lt_one.trans rateGreaterThanOne) resistanceVector vectorPositive function⟩
   have pointBound : ∀ point, |function.val point| ≤ positiveBound * ‖values‖ := by
     intro point
-    apply (xiCompletionUnionEmbedding_denseRange system rulesConnected parameters.lengths parameters.lengthsPositive
+    refine (xiCompletionUnionEmbedding_denseRange system rulesConnected parameters.lengths parameters.lengthsPositive
       (system.distanceSpectralRadius rulesConnected) (zero_lt_one.trans distanceGreaterThanOne)
       parameters.eigenpair).induction_on point
-      (isClosed_le function.val.continuous.abs continuous_const)
+      (isClosed_le function.val.continuous.abs continuous_const) ?_
     intro vertex
     have applied := (evaluations vertex).le_opNorm values
     exact applied.trans (mul_le_mul_of_nonneg_right (enlarged vertex) (norm_nonneg values))
   have normBound : ‖function.val‖ ≤ positiveBound * ‖values‖ := by
-    apply (ContinuousMap.norm_le (mul_nonneg boundPositive.le (norm_nonneg values))).mpr
+    apply (ContinuousMap.norm_le function.val (mul_nonneg boundPositive.le (norm_nonneg values))).mpr
     intro point
     simpa only [Real.norm_eq_abs] using pointBound point
   have squareBound := (sq_le_sq₀ (norm_nonneg function.val)

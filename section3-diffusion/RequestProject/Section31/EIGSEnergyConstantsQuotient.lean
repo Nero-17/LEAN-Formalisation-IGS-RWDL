@@ -47,6 +47,7 @@ variable (system : EIGSData K)
     (resistanceVector : Fin K → ℝ) (vectorPositive : ∀ colour, 0 < resistanceVector colour)
     (anchor : XiVertexUnion system)
 
+include rulesConnected in
 theorem xiWeightedEnergy_zero_iff_constant
     (values : xiWeightedEnergyDomain system resistanceRate ratePositive resistanceVector vectorPositive) :
     (xiExtendedWeightedEnergy system resistanceRate ratePositive resistanceVector vectorPositive
