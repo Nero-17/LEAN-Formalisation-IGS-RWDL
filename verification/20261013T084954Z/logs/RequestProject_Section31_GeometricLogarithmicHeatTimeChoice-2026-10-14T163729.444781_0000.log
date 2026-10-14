@@ -1,0 +1,2 @@
+'IGS.Sec31.geometric_heat_time_level_with_log_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.logarithmic_collar_width_for_exact_exponent' depends on axioms: [propext, Classical.choice, Quot.sound]

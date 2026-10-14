@@ -36,6 +36,7 @@ def XiOriginalMeasuredGHPSSemigroupProperties (system : EIGSData K)
   letI originalMeasuredGHPSDefinitionInstance02 : MeasurableSpace parameters.LimitSpace := borel _
   letI originalMeasuredGHPSDefinitionInstance03 : BorelSpace parameters.LimitSpace := ⟨rfl⟩
   letI originalMeasuredGHPSDefinitionInstance04 : MeasurableSpace C(ℝ≥0, parameters.LimitSpace) := borel _
+  letI originalMeasuredGHPSDefinitionGlobalBorel : BorelSpace C(ℝ≥0, parameters.LimitSpace) := ⟨rfl⟩
   let mass := xiMassParametersOfRules system rulesConnected distancePositive
   let rates := xiNativeFiniteJumpRateNNReal system rulesConnected distancePositive
     normalization normalizationPositive
@@ -83,7 +84,7 @@ def XiOriginalMeasuredGHPSSemigroupProperties (system : EIGSData K)
           BorelSpace (CadlagJ1Path (Set.Icc (0 : ℝ) (horizon : ℝ)) Ambient) := fun _ => ⟨rfl⟩
       ∃ target : parameters.LimitSpace → Ambient,
       ∃ targetContinuous : Continuous target,
-        (letI originalMeasuredGHPSTargetDefinitionMetric := MeasuredGHP.xiCompletionDiameterMetricSpace system rulesConnected
+        (letI originalMeasuredGHPSTargetDefinitionMetric : MetricSpace parameters.LimitSpace := MeasuredGHP.xiCompletionDiameterMetricSpace system rulesConnected
           parameters.lengths parameters.lengthsPositive (system.distanceSpectralRadius rulesConnected)
           distanceGreaterThanOne parameters.eigenpair
          Isometry target) ∧
@@ -92,24 +93,24 @@ def XiOriginalMeasuredGHPSSemigroupProperties (system : EIGSData K)
           Isometry (sources level)) ∧
       ∃ radii : ℕ → ℝ, (∀ level, 0 < radii level) ∧ Tendsto radii atTop (𝓝 0) ∧
         (∀ level vertex, dist (sources level vertex) (target (parameters.vertexEmbedding level vertex)) = radii level) ∧
-      Tendsto (fun level => (xiNativeVertexProbability system level).map
+      Tendsto (fun level => (MeasuredGHP.xiNativeVertexProbability system level).map
         (show Measurable (sources level) from Measurable.of_discrete).aemeasurable)
         atTop (𝓝 ((xiLimitProbabilityMeasure system rulesConnected parameters.lengths parameters.lengthsPositive
           (system.distanceSpectralRadius rulesConnected) distanceGreaterThanOne parameters.eigenpair mass).map
             targetContinuous.measurable.aemeasurable)) ∧
-      Tendsto (fun level => (xiNativeSpeedProbability system mass level).map
+      Tendsto (fun level => (MeasuredGHP.xiNativeSpeedProbability system mass level).map
         (show Measurable (sources level) from Measurable.of_discrete).aemeasurable)
         atTop (𝓝 ((xiLimitProbabilityMeasure system rulesConnected parameters.lengths parameters.lengthsPositive
           (system.distanceSpectralRadius rulesConnected) distanceGreaterThanOne parameters.eigenpair mass).map
             targetContinuous.measurable.aemeasurable)) ∧
       Tendsto (fun level => levyProkhorovDist
-        ((xiNativeVertexProbability system level).map
+        ((MeasuredGHP.xiNativeVertexProbability system level).map
           (show Measurable (sources level) from Measurable.of_discrete).aemeasurable).toMeasure
         ((xiLimitProbabilityMeasure system rulesConnected parameters.lengths parameters.lengthsPositive
           (system.distanceSpectralRadius rulesConnected) distanceGreaterThanOne parameters.eigenpair mass).map
             targetContinuous.measurable.aemeasurable).toMeasure) atTop (𝓝 0) ∧
       Tendsto (fun level => levyProkhorovDist
-        ((xiNativeSpeedProbability system mass level).map
+        ((MeasuredGHP.xiNativeSpeedProbability system mass level).map
           (show Measurable (sources level) from Measurable.of_discrete).aemeasurable).toMeasure
         ((xiLimitProbabilityMeasure system rulesConnected parameters.lengths parameters.lengthsPositive
           (system.distanceSpectralRadius rulesConnected) distanceGreaterThanOne parameters.eigenpair mass).map

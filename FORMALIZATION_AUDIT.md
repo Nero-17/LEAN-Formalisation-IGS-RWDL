@@ -1,6 +1,6 @@
 # Current formalization audit
 
-Snapshot UTC: 2026-10-14T16:10:45.119287+00:00
+Snapshot UTC: 2026-10-14T16:38:30.502479+00:00
 
 Full-paper completion is **not** claimed. A clean printed axiom audit verifies the stated theorem; it does not remove mathematical assumptions from that statement. Actual-model consumers and generic conditional lemmas must be read separately.
 
@@ -8,7 +8,7 @@ Full-paper completion is **not** claimed. A clean printed axiom audit verifies t
 
 The latest completed common-dependency batch has 690 modules and unchanged checked sources. Report SHA256: `607fc8176247666e16f71894428d88124717974a7f34be9c1eb6954538e68064`.
 
-The independent manifest contains 396 accepted whole-file receipts and 1303 printed audits. These overlap the common batch and are not a completion percentage. Every published Lean source has an exact hash and explicit status; unverified and failed drafts remain visible.
+The independent manifest contains 429 accepted whole-file receipts and 1376 printed audits. These overlap the common batch and are not a completion percentage. Every published Lean source has an exact hash and explicit status; unverified and failed drafts remain visible.
 
 ## Accepted milestones
 
@@ -77,7 +77,7 @@ The independent manifest contains 396 accepted whole-file receipts and 1303 prin
 
 ## Proven scope and exact gaps
 
-The same actual closed L² semigroup is identified with the global continuous-path family and the original discrete semigroup limit. Actual usual completed-filtration full future-path stopping identities and bounded Borel future conditional expectations are supplied internally, including potentially infinite stopping times on their finite event. Actual conservative Hunt consumers retain the prior closed-semigroup and global-family fields. The joint final GHPS/heat/Hunt witness remains a candidate; full future-path identities are included in the verified Hunt result.
+The same actual closed L² semigroup is identified with the global continuous-path family and the original discrete semigroup limit. Actual usual completed-filtration full future-path stopping identities and bounded Borel future conditional expectations are supplied internally, including potentially infinite stopping times on their finite event. Actual conservative Hunt consumers retain the prior closed-semigroup and global-family fields. The joint GHPS/Hunt/strictly positive jointly continuous heat-kernel endpoint is verified, including the equality between every positive-time marginal and the measure with this kernel as its density.
 
 For all positive times and spatial points, the same actual five-rule closed semigroup has a symmetric strictly positive probability density jointly continuous in time and both spatial variables, with the global small-time heat upper bound. The strict-positivity consumer supplies all analytic inputs internally. No resistance-growth-greater-than-one restriction is added. All-time bounds use a truncated time scale, not an incorrect all-time power decay on a compact conservative space.
 
@@ -89,7 +89,11 @@ Actual endpoint-collar mass bounds, summable logarithmic schedules and almost-ev
 
 The actual finite-trace energy domain on the vertex union has anchored Cauchy limits. Each point evaluation coefficient is obtained internally from a connected finite network containing the point and anchor. This is a verified completeness step, not a completed resistance-form/Brownian construction: the Hilbert instances, continuous extension of arbitrary finite-energy skeleton functions, resistance metric and final identification remain pending.
 
-Original measured GHP, uniform actual projection distortion convergence, and a single complete compact common ambient for the original graphs under their own diameter normalization are verified. Identity homeomorphisms explicitly preserve the topology under metric scaling. A uniform coupling theorem transfers weak convergence without assuming Skorokhod-space separability. The native walk rate and floor index are proved to equal the manuscript clock for every same normalization witness. Final GHPS still requires the actual probability/cadlag-J1 transport and canonical global-law restriction consumers, with the proved clock equality supplied to that same witness bundle. New J1 candidates do not constitute a proved complete Skorokhod-space theory. Resistance-form/Brownian-regime construction and identification remain incomplete. Section 4 random GHP/diffusion outlook statements remain conjectures.
+Original measured GHP, uniform actual projection distortion convergence, and a single complete compact common ambient for the original graphs under their own diameter normalization are verified. Identity homeomorphisms explicitly preserve the topology under metric scaling. The final measured GHPS endpoint combines vertex/speed weak and Prokhorov convergence, Hausdorff convergence and actual finite-horizon cadlag J1 path convergence for moving starts, retaining the same common ambient and canonical global-law restriction. The native walk rate and every floor index equal the manuscript clock for the same normalization witness. This does not claim a separate complete Polish-space development for all cadlag paths.
+
+The actual recurrence criterion is also verified from the original rules. For every finite-born vertex and every fraction in (0,1), the liminf of the actual resistance to the complement of the fractional-eccentricity ball is infinite exactly when the canonical resistance spectral radius exceeds one. Actual original-graph eccentricity growth and actual star/grounded resistance estimates supply the proof; no geometric resistance conclusion is assumed as a final model hypothesis. The global spectral-formula threshold is verified separately from its almost-everywhere heat-kernel identification.
+
+Resistance-form/Brownian-regime construction and identification remain incomplete. Section 4 random GHP/diffusion outlook statements remain conjectures.
 
 ## Adopted corrections and archive
 

@@ -37,6 +37,7 @@ def XiOriginalCommonGlobalJ1SemigroupProperties (system : EIGSData K)
   letI originalGlobalJ1DefinitionInstance02 : MeasurableSpace parameters.LimitSpace := borel _
   letI originalGlobalJ1DefinitionInstance03 : BorelSpace parameters.LimitSpace := ⟨rfl⟩
   letI originalGlobalJ1DefinitionInstance04 : MeasurableSpace C(ℝ≥0, parameters.LimitSpace) := borel _
+  letI originalGlobalJ1DefinitionGlobalBorel : BorelSpace C(ℝ≥0, parameters.LimitSpace) := ⟨rfl⟩
   let rates := xiNativeFiniteJumpRateNNReal system rulesConnected distancePositive
     normalization normalizationPositive
   let paths := fun horizon => finiteHorizonStepPaths horizon rates parameters.vertexEmbedding
@@ -83,7 +84,7 @@ def XiOriginalCommonGlobalJ1SemigroupProperties (system : EIGSData K)
           BorelSpace (CadlagJ1Path (Set.Icc (0 : ℝ) (horizon : ℝ)) Ambient) := fun _ => ⟨rfl⟩
       ∃ target : parameters.LimitSpace → Ambient,
       ∃ targetContinuous : Continuous target,
-        (letI originalGlobalJ1TargetDefinitionMetric := MeasuredGHP.xiCompletionDiameterMetricSpace system rulesConnected
+        (letI originalGlobalJ1TargetDefinitionMetric : MetricSpace parameters.LimitSpace := MeasuredGHP.xiCompletionDiameterMetricSpace system rulesConnected
           parameters.lengths parameters.lengthsPositive (system.distanceSpectralRadius rulesConnected)
           distanceGreaterThanOne parameters.eigenpair
          Isometry target) ∧

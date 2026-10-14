@@ -1,0 +1,5 @@
+'EIGS.MeasuredGHP.xiOriginalCommon_images_converge_of_native_weak' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.MeasuredGHP.xiOriginalCommon_vertex_images_converge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.MeasuredGHP.xiOriginalCommon_speed_images_converge' depends on axioms: [propext, Classical.choice, Quot.sound]

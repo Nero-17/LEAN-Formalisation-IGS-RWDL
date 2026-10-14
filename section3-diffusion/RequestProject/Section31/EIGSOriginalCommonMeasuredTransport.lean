@@ -27,6 +27,8 @@ variable {K : ℕ} (system : EIGSData K)
       dist (sources level vertex) (target (xiCompletionEmbedding system connected lengths
         lengthsPositive rate (zero_lt_one.trans rateGreaterThanOne) eigenpair level vertex)) ≤ radii level)
 
+include radii radiiNonnegative radiiZero displacement
+
  theorem xiOriginalCommon_images_converge_of_native_weak
     (mass : XiMassParameters system)
     (finiteLaws : ∀ level, ProbabilityMeasure (XiVtx system level))

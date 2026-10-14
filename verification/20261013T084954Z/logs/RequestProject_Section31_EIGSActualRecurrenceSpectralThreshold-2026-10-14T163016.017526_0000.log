@@ -1,0 +1,1 @@
+'EIGS.xiActualRecurrent_iff_globalSpectralFormula_lt_two' depends on axioms: [propext, Classical.choice, Quot.sound]

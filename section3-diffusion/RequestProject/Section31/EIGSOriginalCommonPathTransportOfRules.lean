@@ -80,7 +80,7 @@ def XiOriginalCommonPathTransportSemigroupProperties (system : EIGSData K)
           BorelSpace (CadlagJ1Path (Set.Icc (0 : ℝ) (horizon : ℝ)) Ambient) := fun _ => ⟨rfl⟩
       ∃ target : parameters.LimitSpace → Ambient,
       ∃ targetContinuous : Continuous target,
-        (letI originalCommonTargetDefinitionMetric := MeasuredGHP.xiCompletionDiameterMetricSpace system rulesConnected
+        (letI originalCommonTargetDefinitionMetric : MetricSpace parameters.LimitSpace := MeasuredGHP.xiCompletionDiameterMetricSpace system rulesConnected
           parameters.lengths parameters.lengthsPositive (system.distanceSpectralRadius rulesConnected)
           distanceGreaterThanOne parameters.eigenpair
          Isometry target) ∧
@@ -240,14 +240,18 @@ theorem xiOriginalCommonPathTransportSemigroupProperties_of_family (system : EIG
   have common := by
     letI originalCommonConstructionVertexMetric : ∀ level, MetricSpace (XiVtx system level) :=
       MeasuredGHP.xiOriginalGraphDiameterMetricSpace system rulesConnected
-    letI originalCommonConstructionTargetMetric := MeasuredGHP.xiCompletionDiameterMetricSpace system rulesConnected
+    letI originalCommonConstructionTargetMetric : MetricSpace parameters.LimitSpace := MeasuredGHP.xiCompletionDiameterMetricSpace system rulesConnected
       parameters.lengths parameters.lengthsPositive (system.distanceSpectralRadius rulesConnected)
       distanceGreaterThanOne parameters.eigenpair
     letI originalCommonConstructionVertexNonempty : ∀ level, Nonempty (XiVtx system level) := fun level =>
       ⟨by simpa only [Nat.zero_add] using xiLiftVertices system 0 level true⟩
     letI originalCommonConstructionTargetNonempty : Nonempty parameters.LimitSpace :=
       ⟨parameters.vertexEmbedding 0 true⟩
-    exact CountableRealisation.exists_compact_common_realisation_of_projection_distortion (XiVtx system)
+    exact @CountableRealisation.exists_compact_common_realisation_of_projection_distortion
+      (XiVtx system) originalCommonConstructionVertexMetric (fun _ => inferInstance)
+      originalCommonConstructionVertexNonempty parameters.LimitSpace
+      originalCommonConstructionTargetMetric originalCommonStrengthenCompact
+      originalCommonConstructionTargetNonempty
       parameters.vertexEmbedding (MeasuredGHP.xiOriginalDiameter_projection_distortion_zero system rulesConnected rulesLoopless rulesUnique
         plantingNonadjacent distancePositive parameters.lengths parameters.lengthsPositive
         (system.distanceSpectralRadius rulesConnected) distanceGreaterThanOne parameters.normalized parameters.eigenpair)
@@ -262,7 +266,12 @@ theorem xiOriginalCommonPathTransportSemigroupProperties_of_family (system : EIG
       MeasurableSpace (CadlagJ1Path (Set.Icc (0 : ℝ) (horizon : ℝ)) Ambient) := fun _ => borel _
   letI originalCommonProofAmbientPathBorel : ∀ horizon : ℝ≥0,
       BorelSpace (CadlagJ1Path (Set.Icc (0 : ℝ) (horizon : ℝ)) Ambient) := fun _ => ⟨rfl⟩
-  have targetContinuous : Continuous target := targetIsometry.continuous
+  have targetContinuous : Continuous target := by
+    letI originalCommonContinuityTargetMetric : MetricSpace parameters.LimitSpace :=
+      MeasuredGHP.xiCompletionDiameterMetricSpace system rulesConnected parameters.lengths
+        parameters.lengthsPositive (system.distanceSpectralRadius rulesConnected)
+        distanceGreaterThanOne parameters.eigenpair
+    exact targetIsometry.continuous
   dsimp only [XiAllMovingStartGlobalRestrictionSemigroupProperties,
     XiOriginalCommonPathTransportSemigroupProperties] at familyProperties ⊢
   obtain ⟨semigroupNorm, semigroupZero, semigroupAdd, semigroupContinuous, supLimit, positive, preservesOne,
@@ -280,8 +289,12 @@ theorem xiOriginalCommonPathTransportSemigroupProperties_of_family (system : EIG
     simpa only [displacement] using radiiZero
   have projectedStarts : Tendsto (fun level => target (parameters.vertexEmbedding level (starts level))) atTop
       (𝓝 (target start)) := ambientStarts.congr_dist displacementZero
-  have nativeStarts : Tendsto (fun level => parameters.vertexEmbedding level (starts level)) atTop (𝓝 start) :=
-    targetIsometry.tendsto_nhds_iff.mpr projectedStarts
+  have nativeStarts : Tendsto (fun level => parameters.vertexEmbedding level (starts level)) atTop (𝓝 start) := by
+    letI originalCommonStartTargetMetric : MetricSpace parameters.LimitSpace :=
+      MeasuredGHP.xiCompletionDiameterMetricSpace system rulesConnected parameters.lengths
+        parameters.lengthsPositive (system.distanceSpectralRadius rulesConnected)
+        distanceGreaterThanOne parameters.eigenpair
+    exact targetIsometry.tendsto_nhds_iff.mpr projectedStarts
   exact finiteHorizon_common_ambient_weak_convergence horizon rates parameters.vertexEmbedding sources target targetContinuous
     kernels (fun level => (⟨Measure.dirac (starts level), inferInstance⟩ : ProbabilityMeasure (XiVtx system level)))
     radii (fun level => (radiiPositive level).le) radiiZero (fun level vertex => (displacement level vertex).le)

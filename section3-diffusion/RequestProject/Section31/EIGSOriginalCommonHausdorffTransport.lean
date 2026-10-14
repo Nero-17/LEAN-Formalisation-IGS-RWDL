@@ -21,8 +21,7 @@ variable {K : ℕ}
     (target : XiMetricCompletion system connected lengths lengthsPositive rate
       (zero_lt_one.trans rateGreaterThanOne) eigenpair → Ambient)
     (targetIsometry : letI originalCommonHausdorffStatementMetric :=
-      xiCompletionDiameterMetricSpace system connected lengths lengthsPositive rate
-        rateGreaterThanOne eigenpair
+      (xiCompletionDiameterMetricSpace system connected lengths lengthsPositive rate rateGreaterThanOne eigenpair);
       Isometry target)
     (sources : ∀ level, XiVtx system level → Ambient)
     (radii : ℕ → ℝ) (radiiNonnegative : ∀ level, 0 ≤ radii level)

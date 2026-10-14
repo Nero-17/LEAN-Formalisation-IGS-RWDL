@@ -8,7 +8,7 @@ No physical-ball mass estimate is an input. Candidate source: no compilation
 is claimed. -/
 
 namespace EIGS
-open MeasureTheory Filter Topology
+open MeasureTheory Filter Topology Metric
 open scoped Classical
 noncomputable section
 set_option maxHeartbeats 4000000
@@ -94,6 +94,7 @@ theorem exists_xiCompletionBall_incidence_mass_bound (system : EIGSData K)
   have compared := integral_mono ((integrable_const (1 : ℝ)).indicator regionMeasurable)
     ((starIntegrable (XiTail system coarse (xiAddressEdge system coarse reference))).add
       (starIntegrable (XiHead system coarse (xiAddressEdge system coarse reference)))) pointwise
+  simp only [Pi.add_apply] at compared
   rw [indicatorIdentity, additionIdentity] at compared
   have ballEquality :
       (xiLimitMeasure system rulesConnected lengths lengthsPositive rate rateGreaterThanOne eigenpair mass).real

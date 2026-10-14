@@ -1,0 +1,4 @@
+'EIGS.graphDistance_le_finiteGraphEccentricity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.finiteGraphEccentricity_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.finiteGraph_fractional_eccentricity_ball_proper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.graphDistance_le_twice_finiteGraphEccentricity' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -22,7 +22,7 @@ Generic criteria count as actual-model results only when their inputs are suppli
 
 ## Remaining work
 
-Typical-point logarithmic heat estimates and almost-everywhere local spectral dimensions; final GHPS transport and its joint Hunt/heat-kernel witness; the actual eccentricity-ball recurrence criterion; and the resistance-form/Brownian-regime identification remain incomplete. The nonprimitive degree-rate-one extension also needs a separate applicability audit. Random-cluster GHP and diffusion statements retain their original conjectural status.
+Typical-point logarithmic heat estimates and almost-everywhere local spectral dimensions, attaching all local heat estimates to the joint process/kernel witness, and the resistance-form/Brownian-regime identification remain incomplete. The nonprimitive degree-rate-one extension and a fresh common build including every new endpoint also remain outstanding. Random-cluster GHP and diffusion statements retain their original conjectural status.
 
 ## Manuscript and layout
 

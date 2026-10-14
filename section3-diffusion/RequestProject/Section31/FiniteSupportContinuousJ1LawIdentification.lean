@@ -27,7 +27,7 @@ local instance continuousJ1BridgeTargetMeasurable : MeasurableSpace (CadlagJ1Pat
 local instance continuousJ1BridgeTargetBorel : BorelSpace (CadlagJ1Path Time State) := ⟨rfl⟩
 
 def compactContinuousMapToCadlagJ1 (path : C(Time, State)) : CadlagJ1Path Time State :=
-  ⟨⟨path⟩, path.continuous.isCadlagPath⟩
+  ⟨⟨path⟩, IGS.Sec31.DiscreteMarkov.Continuous.isCadlagPath path.continuous⟩
 
 theorem compactContinuousMapToCadlagJ1_lipschitz :
     LipschitzWith 1 (compactContinuousMapToCadlagJ1 (Time := Time) (State := State)) := by
@@ -38,7 +38,8 @@ theorem compactContinuousMapToCadlagJ1_lipschitz :
   calc
     _ ≤ dist (UniformFun.ofFun (fun time => first time)) (UniformFun.ofFun (fun time => second time)) :=
       skorokhodJ1Distance_le_uniform _ _
-    _ = dist first second := by rw [UniformFun.dist_def, ContinuousMap.dist_eq_iSup]
+    _ = dist first second := by
+      simp only [UniformFun.dist_def, ContinuousMap.dist_eq_iSup, UniformFun.toFun_ofFun]
 
 theorem compactContinuousMap_denseEvaluation_measurableEmbedding
     (denseTimes : ℕ → Time) (timesDense : DenseRange denseTimes) :

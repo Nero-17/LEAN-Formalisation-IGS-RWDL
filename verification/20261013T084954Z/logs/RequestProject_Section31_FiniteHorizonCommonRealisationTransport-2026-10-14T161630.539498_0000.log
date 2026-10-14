@@ -1,0 +1,6 @@
+'IGS.Sec31.DiscreteMarkov.finiteHorizonStepLaw_cadlag_eq_prefix_map' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.finiteHorizon_common_ambient_weak_convergence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

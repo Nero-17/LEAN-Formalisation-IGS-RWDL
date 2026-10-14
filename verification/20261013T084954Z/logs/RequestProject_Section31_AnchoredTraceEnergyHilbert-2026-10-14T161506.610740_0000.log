@@ -1,0 +1,3 @@
+'IGS.Sec31.AnchoredTraceEnergySpace.innerCore' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.AnchoredTraceEnergySpace.norm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.AnchoredTraceEnergySpace.instCompleteSpace' depends on axioms: [propext, Classical.choice, Quot.sound]

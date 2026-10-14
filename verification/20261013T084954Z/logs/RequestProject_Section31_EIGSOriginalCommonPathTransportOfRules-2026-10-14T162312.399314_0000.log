@@ -1,0 +1,9 @@
+'EIGS.xiOriginalCommonPathTransportSemigroupProperties_of_family' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiIdentifiedOriginalCommonPathTransportProperties_of_discrete' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_xiIdentifiedOriginalCommonPathTransport_of_rules' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

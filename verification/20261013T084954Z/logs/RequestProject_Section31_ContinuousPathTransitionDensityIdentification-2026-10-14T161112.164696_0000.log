@@ -1,0 +1,3 @@
+'IGS.Sec31.DiscreteMarkov.continuousPath_oneTimeLaw_eq_withDensity_of_representation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

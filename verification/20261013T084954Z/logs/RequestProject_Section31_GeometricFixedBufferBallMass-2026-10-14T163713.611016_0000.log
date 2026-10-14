@@ -1,0 +1,10 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\GeometricFixedBufferBallMass.lean:71:10: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\GeometricFixedBufferBallMass.lean:71:10: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'IGS.Sec31.exists_fixed_geometric_buffer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.geometric_radius_fit_of_fixed_buffer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.logarithmic_degree_cost_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.shifted_logarithmic_geometric_volume_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,4 @@
+'IGS.Sec31.isClosed_local_lower_goodset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.measurableSet_quantized_local_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.local_lower_archimedean_quantization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.ae_quantized_local_lower_map' depends on axioms: [propext, Classical.choice, Quot.sound]

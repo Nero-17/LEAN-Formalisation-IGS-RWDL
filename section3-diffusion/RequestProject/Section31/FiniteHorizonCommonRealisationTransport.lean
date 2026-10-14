@@ -93,7 +93,7 @@ theorem finiteHorizon_common_ambient_weak_convergence
     (limit.map (finiteHorizonPathToCadlagJ1_continuous horizon rates projection).measurable.aemeasurable)
     nativeJ1Convergence
   have projectedLawEquality (n : ℕ) :
-      (samples n).map (projectedMeasurable n).aemeasurable = cadlagJ1SpatialLaw target targetContinuous
+      ProbabilityMeasure.map (samples n) (projectedMeasurable n).aemeasurable = cadlagJ1SpatialLaw target targetContinuous
         ((finiteHorizonStepLaw horizon rates projection kernels initial n).map
           (finiteHorizonPathToCadlagJ1_continuous horizon rates projection).measurable.aemeasurable) := by
     rw [finiteHorizonStepLaw_cadlag_eq_prefix_map]
@@ -101,8 +101,7 @@ theorem finiteHorizon_common_ambient_weak_convergence
     simp only [cadlagJ1SpatialLaw, ProbabilityMeasure.toMeasure_map]
     rw [Measure.map_map (cadlagJ1SpatialMap_continuous target targetContinuous).measurable
       (finiteHorizonHistoryCadlagJ1Map_measurable horizon rates projection n)]
-    rfl
-  have projectedConvergence : Tendsto (fun n => (samples n).map (projectedMeasurable n).aemeasurable) atTop
+  have projectedConvergence : Tendsto (fun n => ProbabilityMeasure.map (samples n) (projectedMeasurable n).aemeasurable) atTop
       (𝓝 (cadlagJ1SpatialLaw target targetContinuous (limit.map
         (finiteHorizonPathToCadlagJ1_continuous horizon rates projection).measurable.aemeasurable))) := by
     simpa only [projectedLawEquality] using spatialConvergence

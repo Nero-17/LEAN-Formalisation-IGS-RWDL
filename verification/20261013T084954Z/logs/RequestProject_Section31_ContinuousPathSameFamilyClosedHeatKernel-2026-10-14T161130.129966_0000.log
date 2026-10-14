@@ -1,0 +1,6 @@
+'IGS.Sec31.DiscreteMarkov.continuousPath_oneTimeObservation_of_ordered_observations' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.continuousPath_sameFamilyClosedHeatKernelProperties_of_kernel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

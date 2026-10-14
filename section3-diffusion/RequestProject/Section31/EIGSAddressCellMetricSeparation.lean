@@ -73,7 +73,7 @@ theorem xiAddressLimits_separated_of_nonincident_cells (system : EIGSData K)
       first).comp shifted).dist
     ((xiAddressTailApproximation_tendsto system rulesConnected lengths lengthsPositive rate rateGreaterThanOne eigenpair
       second).comp shifted)
-  exact le_of_tendsto distanceLimit (Filter.Eventually.of_forall finiteBound)
+  exact ge_of_tendsto distanceLimit (Filter.Eventually.of_forall finiteBound)
 
 end
 end EIGS

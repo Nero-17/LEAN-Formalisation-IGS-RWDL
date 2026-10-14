@@ -1,0 +1,9 @@
+'EIGS.xiIdentifiedOriginalMeasuredGHPSHuntHeatProperties_of_measured' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_xiIdentifiedOriginalMeasuredGHPSHuntHeat_of_rules' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_xiIdentifiedOriginalMeasuredGHPSHuntHeatPaperClock_of_rules' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

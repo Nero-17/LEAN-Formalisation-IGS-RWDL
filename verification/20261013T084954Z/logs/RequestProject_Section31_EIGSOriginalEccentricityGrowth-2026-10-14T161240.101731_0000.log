@@ -1,0 +1,2 @@
+'EIGS.xiOriginalEccentricity_diameter_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiOriginalEccentricity_spectral_growth' depends on axioms: [propext, Classical.choice, Quot.sound]

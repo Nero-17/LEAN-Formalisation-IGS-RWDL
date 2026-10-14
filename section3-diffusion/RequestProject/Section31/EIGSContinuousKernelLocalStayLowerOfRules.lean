@@ -191,7 +191,10 @@ theorem xiContinuousKernelLocalStayLowerProperties_of_shared_semigroup (system :
   refine ⟨originalDense, semigroup, semigroupNorm, semigroupZero, semigroupAdd, semigroupContinuous,
     intertwining, timeThreshold, timeThresholdPositive, upperConstant, upperConstantPositive,
     kernel, jointContinuous, kernelProperties, fraction, fractionPositive, count, ?_⟩
-  intro coarse time timeBound radius point
+  intro coarse time timeBound point
+  let radius : ℝ := ((count : ℝ) + 2) *
+    ((3 * xiRuleRadius system parameters.lengths + 1) *
+      (system.distanceSpectralRadius rulesConnected)⁻¹ ^ coarse)
   let law := xiLimitMeasure system rulesConnected parameters.lengths parameters.lengthsPositive
     (system.distanceSpectralRadius rulesConnected) distanceGreaterThanOne parameters.eigenpair mass
   have radiusPositive : 0 < radius := by
@@ -231,7 +234,7 @@ theorem xiContinuousKernelLocalStayLowerProperties_of_shared_semigroup (system :
     halfCompatibility fullCompatibility (semigroup (time.val / 2)) (intertwining (time.val / 2))
     (kernel time) (jointContinuous.comp (continuous_const.prodMk continuous_id)) fullRepresentation
     point (continuousMetricBallCutoff point (2 * radius)) (Metric.closedBall point (4 * radius))
-    isClosed_closedBall.measurableSet realBallPositive
+    Metric.isClosed_closedBall.measurableSet realBallPositive
     (fun other => continuousMetricBallCutoff_bounds point other (2 * radius))
     (fun other outside => by
       apply continuousMetricBallCutoff_eq_zero_outside point other (2 * radius) (by positivity)

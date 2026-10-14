@@ -1,0 +1,3 @@
+'IGS.Sec31.geometric_logarithmic_heat_lower_of_eventual_levels' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

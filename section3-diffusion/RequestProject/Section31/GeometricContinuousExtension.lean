@@ -10,6 +10,7 @@ Actual harmonic increment bounds are supplied separately. -/
 namespace IGS.Sec31
 
 open Filter Topology
+open scoped BoundedContinuousFunction
 noncomputable section
 variable {Space Vertex : Type*} [TopologicalSpace Space]
 
@@ -36,7 +37,11 @@ theorem exists_continuous_extension_of_geometric_uniform_increments
   have pointConvergence : Tendsto (fun level => approximation level (embedding vertex))
       atTop (𝓝 (extension (embedding vertex))) :=
     (continuous_eval_const (embedding vertex)).continuousAt.tendsto.comp convergence
-  exact tendsto_nhds_unique pointConvergence (tendsto_const_nhds.congr' (agreement vertex).symm)
+  have eventualConstant : (fun _ : ℕ => values vertex) =ᶠ[atTop]
+      (fun level => approximation level (embedding vertex)) := by
+    filter_upwards [agreement vertex] with level equality
+    exact equality.symm
+  exact tendsto_nhds_unique pointConvergence (tendsto_const_nhds.congr' eventualConstant)
 
 end
 end IGS.Sec31
