@@ -1,0 +1,21 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\CompactRealCoveringNumberPowerBounds.lean:52:10: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\CompactRealCoveringNumberPowerBounds.lean:52:10: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\CompactRealCoveringNumberPowerBounds.lean:131:10: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\CompactRealCoveringNumberPowerBounds.lean:131:10: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\CompactRealCoveringNumberPowerBounds.lean:112:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'IGS.Sec31.compact_realCoveringNumber_upper_of_ball_mass_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.compact_realCoveringNumber_lower_of_ae_ball_mass_upper' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

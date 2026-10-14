@@ -1,13 +1,13 @@
 {
-  "snapshot_utc": "2026-10-14T19:40:24.180045+00:00",
+  "snapshot_utc": "2026-10-14T20:21:38.422406+00:00",
   "round": "20261013T084954Z",
   "compiler": "Lean 4.28.0",
   "mathlib": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
-  "shared_dependency_modules": 856,
-  "shared_report": "integration-856.json",
-  "shared_report_sha256": "4d26f922c19775f181866f2e5fad602373c3c806a93a80c1895297df780dddfb",
-  "independent_whole_file_count": 528,
-  "independent_audit_count": 1578,
+  "shared_dependency_modules": 900,
+  "shared_report": "integration-900.json",
+  "shared_report_sha256": "8e36165df22c6040fa13f11c23517395c8111f165e02ff7aab47104fb3bfed1a",
+  "independent_whole_file_count": 559,
+  "independent_audit_count": 1647,
   "records": [
     {
       "module": "RequestProject.Section31.EIGSL2EnergyConstants",
@@ -15899,6 +15899,834 @@
       ]
     },
     {
+      "module": "RequestProject.Section31.EIGSTwoColourMatrixSpectra",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSTwoColourMatrixSpectra.lean",
+      "source_sha256": "04be873e3fc8129b50ba8f93f73d11783e486ea2cc7364d1ffb48b5605ebd163",
+      "log": "logs/RequestProject_Section31_EIGSTwoColourMatrixSpectra-2026-10-14T195044.625427_0000.log",
+      "log_sha256": "71412cbacefffca8bfcccb088ac13cbd56176ab15ab9d8c531c102fed901aec6",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.twoColourSystem_paperDegreeMatrix",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_massSpectralRadius",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_degreeSpectralRadius",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_degree_not_primitive",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSFlowerDegreeCounts",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSFlowerDegreeCounts.lean",
+      "source_sha256": "f17caaf47bd0985487af32dd0ef6aca47dd19bbd8be98ccef9e8a88ae97a3284",
+      "log": "logs/RequestProject_Section31_EIGSFlowerDegreeCounts-2026-10-14T194355.034472_0000.log",
+      "log_sha256": "a42a5cbfa9f06b4813783c920946d60ef7c4bdd682f42987f678281149f69877",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.flowerGraph_source_tail_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.flowerGraph_source_head_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.flowerGraph_sink_tail_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.flowerGraph_sink_head_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.flower_filtered_edges_count",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.flower_first_branch_count",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.flower_other_branches_count",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSTwoColourDistanceSpectrum",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSTwoColourDistanceSpectrum.lean",
+      "source_sha256": "8cff5cd5d8763280fccd988e354d1df8db499ac9df982c14ad997983c2510d4f",
+      "log": "logs/RequestProject_Section31_EIGSTwoColourDistanceSpectrum-2026-10-14T201810.116083_0000.log",
+      "log_sha256": "1dca252d49292f0a64544d9a38bbe3d4e86a4f88533898331b44f339de574cbe",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.twoColourSystem_distancePositive",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_metricLengths",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_distanceSpectralRadius",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSActualTerminalResistanceDimension",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSActualTerminalResistanceDimension.lean",
+      "source_sha256": "8748e2708edefe0081149ec065217c9b3efb211ebe6e1e96c01f7141d42b6fab",
+      "log": "logs/RequestProject_Section31_EIGSActualTerminalResistanceDimension-2026-10-14T194421.631261_0000.log",
+      "log_sha256": "d95e543e24782f29935ff4437ad3dfa79f752874151a865fcefc1098b3b83bdc",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiSimpleGraph_terminal_resistance_canonical_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiSimpleGraph_terminal_resistance_dimension_limit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiSimpleGraph_terminal_resistanceDimension_eq",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiSimpleGraph_terminal_resistance_original_diameter_limit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.FiniteBallCoverMassBounds",
+      "source": "section3-diffusion/RequestProject/Section31/FiniteBallCoverMassBounds.lean",
+      "source_sha256": "978b8ab1b2c6d738aaf8c8fdb68fd6f471c614c3ef0aba02707c12a9c2920e93",
+      "log": "logs/RequestProject_Section31_FiniteBallCoverMassBounds-2026-10-14T194512.912319_0000.log",
+      "log_sha256": "8c4d3e6ba5499865f8e1e3acb54a8bdb32b5cd9ab6f4b099ac2824daa16cff79",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.real_measure_le_finite_ball_cover_card_mul",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.separated_finite_ball_card_mul_le_total_mass",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.PositiveUniformBallMassSubset",
+      "source": "section3-diffusion/RequestProject/Section31/PositiveUniformBallMassSubset.lean",
+      "source_sha256": "221a12488b46c950fd9f3c91369d8a80fbc49270aca342bdbfd7e7f36c0b0495",
+      "log": "logs/RequestProject_Section31_PositiveUniformBallMassSubset-2026-10-14T194400.507773_0000.log",
+      "log_sha256": "ef5d63161f33d76f4f8c5e5233acb05d819b193a5b61d606440ce25943adce36",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.exists_positive_uniform_eventual_ball_mass_subset",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.exists_positive_uniform_ball_mass_subset_of_ae_small_radius_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Reduced.NoLimitAudit",
+      "source": "section4-percolation/RequestProject/Reduced/NoLimitAudit.lean",
+      "source_sha256": "2f93ad71480f08fab60bd5b106423ca206ed8c116b4d2b2917a36ea07b0b5edd",
+      "log": "logs/RequestProject_Reduced_NoLimitAudit-2026-10-14T194817.801684_0000.log",
+      "log_sha256": "9134fce69b2b645f40420f731c78c87e18b263e7c3a099b67e91ee26c68c7996",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "Reduced.no_deterministic_limit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Reduced.OriginalParametersAudit",
+      "source": "section4-percolation/RequestProject/Reduced/OriginalParametersAudit.lean",
+      "source_sha256": "0f9ff880dc2837837e134cc22550707ccdf4520cdcc080976338b76d649bf328",
+      "log": "logs/RequestProject_Reduced_OriginalParametersAudit-2026-10-14T194841.303760_0000.log",
+      "log_sha256": "6eac6ba8425bd11a49198af1a972b1b8a0af4b173a049542ff3e95485a184642",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "Reduced.pdiamond_original_formula",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Reduced.pseries_original_formula",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Cluster.TreeBoundsAudit",
+      "source": "section4-percolation/RequestProject/Cluster/TreeBoundsAudit.lean",
+      "source_sha256": "c6bc313e61f81d5a54c088c5341332baa8749e27716520d1d4a8d3a1d55d27a1",
+      "log": "logs/RequestProject_Cluster_TreeBoundsAudit-2026-10-14T194900.777911_0000.log",
+      "log_sha256": "fd6fead96d681b4c9ffef25f27d94309845e83c4c8a2b80da927b5b834182c5e",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "Cluster.Rres_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Cluster.Rres_refinement_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Cluster.nested_network_refinement_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Cluster.InfiniteConsequencesAudit",
+      "source": "section4-percolation/RequestProject/Cluster/InfiniteConsequencesAudit.lean",
+      "source_sha256": "955d3ce7e74284ec0ee75e846eeb3820bcc87c9dea58e2f435ad7f512c880211",
+      "log": "logs/RequestProject_Cluster_InfiniteConsequencesAudit-2026-10-14T194920.750173_0000.log",
+      "log_sha256": "9f334a47876d128590a274ce23f1a6966a1af449067703b558bc1b1cd1379062",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "Cluster.nested_network_original_observables_p",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Cluster.nested_network_no_deterministic_limit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Cluster.nested_critical_cluster_no_deterministic_limit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Cluster.nested_cluster_network_process",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Cluster.FullProcessLawAudit",
+      "source": "section4-percolation/RequestProject/Cluster/FullProcessLawAudit.lean",
+      "source_sha256": "91ed379697bdaa602fab8639cfcbf560650250f2093133826a5496ae92ba5732",
+      "log": "logs/RequestProject_Cluster_FullProcessLawAudit-2026-10-14T194945.970989_0000.log",
+      "log_sha256": "1b2093385831f1b11e8b60ac63ef83fe63d249a93c46ede9cce3aa686157955f",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "Cluster.nested_reduced_full_process_law",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Cluster.nested_cluster_full_network_law",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSFlowerDegreeSpectrum",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSFlowerDegreeSpectrum.lean",
+      "source_sha256": "d036bb377218f561e2eb98ffec7fc7a78b1f999dec503b0dee7cfdd4a98d0750",
+      "log": "logs/RequestProject_Section31_EIGSFlowerDegreeSpectrum-2026-10-14T195201.829402_0000.log",
+      "log_sha256": "7fd2311a2455ad1f7bf01a1befbec34da2e9d748faa348c68bcbf35195a5c165",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.flowerSystem_endpoint_degree_counts",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.flowerSystem_degree_positive_eigenpair",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.flowerSystem_degreeSpectralRadius",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.IntegerCrossingRadiusTail",
+      "source": "section3-diffusion/RequestProject/Section31/IntegerCrossingRadiusTail.lean",
+      "source_sha256": "c0d0ba0153de13aed03077592f7db353b2507d123cf25ac3ae1ef558a992ab28",
+      "log": "logs/RequestProject_Section31_IntegerCrossingRadiusTail-2026-10-14T195620.014683_0000.log",
+      "log_sha256": "98f25f81c4372ebeddeaed724d2da74bce302baa04a5952d9fbaad2c1efa862f",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.radius_tail_le_crossing_exponential",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.GeometricExponentialTailOptimization",
+      "source": "section3-diffusion/RequestProject/Section31/GeometricExponentialTailOptimization.lean",
+      "source_sha256": "9264bc9640928e03098fec9776939d66e0fcdc231bd503bb9478afce03ec43ca",
+      "log": "logs/RequestProject_Section31_GeometricExponentialTailOptimization-2026-10-14T200218.056403_0000.log",
+      "log_sha256": "f1a6336897e8afa161b0b942b9e70c9e5c6fcfee95f03977b0f686209e09a1e4",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.geometric_exponential_envelope_choice",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSNativeRadiusExponentialEnvelope",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSNativeRadiusExponentialEnvelope.lean",
+      "source_sha256": "50b2650289fb047bceb24f98ff5ee71513bdc9fd1853f9d7c32c0076ca1c02e5",
+      "log": "logs/RequestProject_Section31_EIGSNativeRadiusExponentialEnvelope-2026-10-14T195643.349564_0000.log",
+      "log_sha256": "8b0889ae67e7c43c251ab64d83b971c8ee27c442d27367db05e0cf1d4bfc21e3",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiNativeRadiusExponentialEnvelope_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSNativeFinestMeshNoExit",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSNativeFinestMeshNoExit.lean",
+      "source_sha256": "989a517d9e4100f01ad5aa273e12c76a5f3d000f275c4ab8b6740b37d6dd1137",
+      "log": "logs/RequestProject_Section31_EIGSNativeFinestMeshNoExit-2026-10-14T195730.936002_0000.log",
+      "log_sha256": "fff2af768534f0b399c837c2c4468347e07284ce6ed8616c82b1a0f8aa72ed3f",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.path_dist_le_index_mul_step_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiNativeMaximalDisplacementEvent_eq_zero_of_finest_mesh",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.SubGaussianLogarithmicExponent",
+      "source": "section3-diffusion/RequestProject/Section31/SubGaussianLogarithmicExponent.lean",
+      "source_sha256": "9ac005561ca2cfaffacb2a532f54a24bd188ed14efd74757575800b9d5d69ee9",
+      "log": "logs/RequestProject_Section31_SubGaussianLogarithmicExponent-2026-10-14T195813.101467_0000.log",
+      "log_sha256": "e8e18825bfe32d9324790e34675351216c74f14ec4a2a2c389a12d736dd11874",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.logarithmic_subGaussian_exponent_identity",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.CompactBallCoveringNumberMassBounds",
+      "source": "section3-diffusion/RequestProject/Section31/CompactBallCoveringNumberMassBounds.lean",
+      "source_sha256": "33b112f8543c26f81b4bddaebb0ce32631d72369e60745a80fbbb819114b636b",
+      "log": "logs/RequestProject_Section31_CompactBallCoveringNumberMassBounds-2026-10-14T200440.265829_0000.log",
+      "log_sha256": "4f64efbc99a050cdc8e17f40d0b9b152315df47cd037fd3ced41323a447553ab",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.compact_coveringNumber_univ_ne_top",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.compact_packingNumber_univ_ne_top",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.compact_coveringNumber_mass_lower_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.compact_coveringNumber_mass_upper_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSNativeSubGaussianMaximalTail",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSNativeSubGaussianMaximalTail.lean",
+      "source_sha256": "0ead25400f8647689543ed034d17910da14f0f98bdd6abf121a8f0ee6105c85b",
+      "log": "logs/RequestProject_Section31_EIGSNativeSubGaussianMaximalTail-2026-10-14T200732.750157_0000.log",
+      "log_sha256": "c8a2fc966b009ce50afc6f36556113fdf16847fc1ff0a362f37d97dac582eb3a",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiNativeSubGaussianMaximalTail_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSOriginalDiameterNativeDistanceLower",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSOriginalDiameterNativeDistanceLower.lean",
+      "source_sha256": "7e30c165deeaa31ab4509d340462fd2fca2dc59ffd8ef556c2c65fe00d2773a6",
+      "log": "logs/RequestProject_Section31_EIGSOriginalDiameterNativeDistanceLower-2026-10-14T200838.385736_0000.log",
+      "log_sha256": "8b2901e55d14cd274d0e8decbc15a16eae2cb2cf40be12564f16e9af8561e343",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiOriginalDiameter_native_distance_lower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.PositiveUniformSmallBallMassSubset",
+      "source": "section3-diffusion/RequestProject/Section31/PositiveUniformSmallBallMassSubset.lean",
+      "source_sha256": "5f62bac1c8ea32b0110b90f0490cc34c52310c04810ee1cbd9984d38796f0121",
+      "log": "logs/RequestProject_Section31_PositiveUniformSmallBallMassSubset-2026-10-14T200502.066834_0000.log",
+      "log_sha256": "c72f94ef7fcfb3c08d2a451a6db682a72b29795976910df4616a938cf53cab3a",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.exists_positive_uniform_small_ball_mass_subset",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.CompactRealCoveringNumberPowerBounds",
+      "source": "section3-diffusion/RequestProject/Section31/CompactRealCoveringNumberPowerBounds.lean",
+      "source_sha256": "8202677b5294aefc85110cf4076e4b077531780053ed2882d49c51cae436d23a",
+      "log": "logs/RequestProject_Section31_CompactRealCoveringNumberPowerBounds-2026-10-14T200526.613752_0000.log",
+      "log_sha256": "f9cafb01157b70e35fd99ddae953076ce9e3985e95c956f18fa8678012305c16",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.compact_realCoveringNumber_upper_of_ball_mass_lower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.compact_realCoveringNumber_lower_of_ae_ball_mass_upper",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.CompactCoveringNumberDimension",
+      "source": "section3-diffusion/RequestProject/Section31/CompactCoveringNumberDimension.lean",
+      "source_sha256": "c5fef200ee7136013b1f81a6ad0ce59a04447c7e16accde37afdf086a5b15dfb",
+      "log": "logs/RequestProject_Section31_CompactCoveringNumberDimension-2026-10-14T200550.396704_0000.log",
+      "log_sha256": "a7464ab6860dea870377ba7860fc594232096b25b62deb769453d02491f803b6",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.compact_coveringNumber_logarithmic_limit_of_ball_mass_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.GraphFloorExitRadiusEvent",
+      "source": "section3-diffusion/RequestProject/Section31/GraphFloorExitRadiusEvent.lean",
+      "source_sha256": "de647486fdc5e2627ada1700e023b8b4a5ceb34bd0ec89c09a0c46ceecf8db4d",
+      "log": "logs/RequestProject_Section31_GraphFloorExitRadiusEvent-2026-10-14T201331.931016_0000.log",
+      "log_sha256": "b712c423b4427145e136417072898b363d938a2a80b34c34f1b877c29173f923",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.graphFloorExitTime_le_iff_exists_outside",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.graphFloorBallExitTime_le_iff_maximal_graph_distance",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSCoveringNumberDimensionOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSCoveringNumberDimensionOfRules.lean",
+      "source_sha256": "504068e911b3211d3957d755ff4756bc1e2f83d353031f6af6661b34970febc3",
+      "log": "logs/RequestProject_Section31_EIGSCoveringNumberDimensionOfRules-2026-10-14T200743.237952_0000.log",
+      "log_sha256": "31bd137dbed7db4512c3e0338c169cf618436894fb9575cf42f0a2607279eded",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiCompletion_coveringNumber_dimension_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSDiameterCoveringNumberDimensionOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSDiameterCoveringNumberDimensionOfRules.lean",
+      "source_sha256": "4e2b291fabc7ddb1223fbd57c21fad34b5438fffcd29c255678209b57b4371e2",
+      "log": "logs/RequestProject_Section31_EIGSDiameterCoveringNumberDimensionOfRules-2026-10-14T202012.690378_0000.log",
+      "log_sha256": "1ed070638c43c9e3e2aff55c8eec53977aac144f50e6ac0a4bfde8887af82aeb",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiDiameterCompletion_coveringNumber_dimension_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSOriginalDiameterSubGaussianExitTail",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSOriginalDiameterSubGaussianExitTail.lean",
+      "source_sha256": "00fd74f1738ef53ebd1e27303688db1ddab9123ce7e25cf7978d93f3b4b09aa9",
+      "log": "logs/RequestProject_Section31_EIGSOriginalDiameterSubGaussianExitTail-2026-10-14T201735.097083_0000.log",
+      "log_sha256": "410f540b93587eaeaa54e8b80671b07aa856972ae4741c6d030aa609cbb18680",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiOriginalDiameterSubGaussianExitTail_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSPositiveDegreeSpectralData",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSPositiveDegreeSpectralData.lean",
+      "source_sha256": "531f287fbac1dcf1a4d5171343ca84531debf8d99d8197e617da3e02765f003f",
+      "log": "logs/RequestProject_Section31_EIGSPositiveDegreeSpectralData-2026-10-14T201904.013547_0000.log",
+      "log_sha256": "6fadd872fc2fcaa46033764a0e9857cf5c6303c02bfc96a7428231df05dc911f",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiPositiveDegreeSpectralData_of_primitive",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.degree_spectral_growth_of_positive_degree_data",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSTwoColourPositiveDegreeData",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSTwoColourPositiveDegreeData.lean",
+      "source_sha256": "4ba9f1ea9a4f58852d1c87fc14d9decf3a5e726fd9eca9b17461b43c15307235",
+      "log": "logs/RequestProject_Section31_EIGSTwoColourPositiveDegreeData-2026-10-14T201938.700657_0000.log",
+      "log_sha256": "3fd42ae12cc3ca8818321139897d060f47063c4203de7f897868461e31a3cb47",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.twoColourPositiveDegreeData",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_degree_growth",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSPositiveDegreeSpectralGaps",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSPositiveDegreeSpectralGaps.lean",
+      "source_sha256": "0917fe8698173243bc9e5ffa45b286e1868106b4a52aa7453a16ce590ebc3b9a",
+      "log": "logs/RequestProject_Section31_EIGSPositiveDegreeSpectralGaps-2026-10-14T202014.765288_0000.log",
+      "log_sha256": "9d38d0f4975d8ba29de903f52bde2a479ed2680d33de5ae93dfdcab434451875",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.positive_eigenpair_spectralRadius_lt_strict_superinvariant",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.positive_eigenpair_strict_subinvariant_lt_spectralRadius",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.degree_spectralRadius_lt_mass_of_positive_degree_data",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.degree_resistance_spectral_product_gt_one_of_positive_degree_data",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
       "module": "RequestProject.Section31.BoundedYosidaInvariantConvex",
       "source": "section3-diffusion/RequestProject/Section31/BoundedYosidaInvariantConvex.lean",
       "source_sha256": "f6de77639d7c40826b90b1731cf3339c7643dcf11237edc78c2a5399341a3e25",
@@ -17390,6 +18218,40 @@
         },
         {
           "declaration": "EIGS.exists_xiNativeYosidaStrong_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.IndependentExponentialHoldingTimes",
+      "source": "section3-diffusion/RequestProject/Section31/IndependentExponentialHoldingTimes.lean",
+      "source_sha256": "ea3d818ec6139565a0a92af377c4d336dc863fe90b828f992028148ce1e2d1b4",
+      "log": "logs/RequestProject_Section31_IndependentExponentialHoldingTimes-2026-10-14T202059.798219_0000.log",
+      "log_sha256": "43ee5c682c823214961dc6469d0dc016607f5a93e4e800c4627b2912d49b1f84",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponentialHoldingTimeLaw_independent",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponentialHoldingTimeLaw_positive",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponentialHoldingTimeLaw_nonexplosion",
           "axioms": [
             "propext",
             "Classical.choice",

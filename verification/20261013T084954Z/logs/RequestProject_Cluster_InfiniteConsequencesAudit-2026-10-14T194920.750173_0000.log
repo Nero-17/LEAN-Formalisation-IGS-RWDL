@@ -1,0 +1,4 @@
+'Cluster.nested_network_original_observables_p' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nested_network_no_deterministic_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nested_critical_cluster_no_deterministic_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nested_cluster_network_process' depends on axioms: [propext, Classical.choice, Quot.sound]

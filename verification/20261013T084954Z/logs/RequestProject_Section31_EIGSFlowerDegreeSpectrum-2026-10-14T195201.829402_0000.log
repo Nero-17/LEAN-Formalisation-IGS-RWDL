@@ -1,0 +1,38 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSFlowerDegreeSpectrum.lean:22:15: warning: This simp argument is unused:
+  Fin.val_mk
+
+Hint: Omit it from the simp argument list.
+  simp only ̵[̵F̵i̵n̵.̵v̵a̵l̵_̵m̵k̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSFlowerDegreeSpectrum.lean:27:15: warning: This simp argument is unused:
+  eq_self_iff_true
+
+Hint: Omit it from the simp argument list.
+  simp only [e̵q̵_̵s̵e̵l̵f̵_̵i̵f̵f̵_̵t̵r̵u̵e̵,̵ ̵and_true, flowerGraph_source_tail_iff]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSFlowerDegreeSpectrum.lean:33:15: warning: This simp argument is unused:
+  eq_self_iff_true
+
+Hint: Omit it from the simp argument list.
+  simp only [e̵q̵_̵s̵e̵l̵f̵_̵i̵f̵f̵_̵t̵r̵u̵e̵,̵ ̵and_true, flowerGraph_source_head_iff]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSFlowerDegreeSpectrum.lean:39:15: warning: This simp argument is unused:
+  eq_self_iff_true
+
+Hint: Omit it from the simp argument list.
+  simp only [e̵q̵_̵s̵e̵l̵f̵_̵i̵f̵f̵_̵t̵r̵u̵e̵,̵ ̵and_true, flowerGraph_sink_tail_iff branches segments segmentsPositive]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSFlowerDegreeSpectrum.lean:45:15: warning: This simp argument is unused:
+  eq_self_iff_true
+
+Hint: Omit it from the simp argument list.
+  simp only [e̵q̵_̵s̵e̵l̵f̵_̵i̵f̵f̵_̵t̵r̵u̵e̵,̵ ̵and_true, flowerGraph_sink_head_iff branches segments segmentsPositive]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'EIGS.flowerSystem_endpoint_degree_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.flowerSystem_degree_positive_eigenpair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.flowerSystem_degreeSpectralRadius' depends on axioms: [propext, Classical.choice, Quot.sound]

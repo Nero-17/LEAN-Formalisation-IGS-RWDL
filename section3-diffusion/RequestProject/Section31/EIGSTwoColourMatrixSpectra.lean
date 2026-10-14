@@ -14,29 +14,35 @@ def twoColourDegreeMatrix : Matrix (Fin 2 ⊕ Fin 2) (Fin 2 ⊕ Fin 2) ℝ :=
     (fun row => Sum.elim (fun column => (!![(1 : ℝ), 1; 0, 2]) row column) (fun _ => 0))
     (fun row => Sum.elim (fun _ => 0) (fun column => (!![(1 : ℝ), 1; 1, 1]) row column))
 
-theorem twoColourSystem_degreeMatrix : degreeMatrix twoColourSystem = twoColourDegreeMatrix := by
+def twoColourDegreeCountsNat : Matrix (Fin 2 ⊕ Fin 2) (Fin 2 ⊕ Fin 2) ℕ :=
+  fun row column => match row, column with
+  | Sum.inl first, Sum.inl second => ruleTailDeg twoColourSystem first (twoColourSystem.plantPlus first) second
+  | Sum.inl first, Sum.inr second => ruleHeadDeg twoColourSystem first (twoColourSystem.plantPlus first) second
+  | Sum.inr first, Sum.inl second => ruleTailDeg twoColourSystem first (twoColourSystem.plantMinus first) second
+  | Sum.inr first, Sum.inr second => ruleHeadDeg twoColourSystem first (twoColourSystem.plantMinus first) second
+
+def twoColourDegreeMatrixNat : Matrix (Fin 2 ⊕ Fin 2) (Fin 2 ⊕ Fin 2) ℕ :=
+  Sum.elim
+    (fun row => Sum.elim (fun column => (!![(1 : ℕ), 1; 0, 2]) row column) (fun _ => 0))
+    (fun row => Sum.elim (fun _ => 0) (fun column => (!![(1 : ℕ), 1; 1, 1]) row column))
+
+theorem twoColourSystem_degreeCountsNat : twoColourDegreeCountsNat = twoColourDegreeMatrixNat := by
   ext row column
-  cases row with
-  | inl row =>
-    cases column with
-    | inl column =>
+  rcases row with row | row <;> rcases column with column | column <;>
+    fin_cases row <;> fin_cases column <;> decide
+
+theorem twoColourSystem_degreeMatrix : degreeMatrix twoColourSystem = twoColourDegreeMatrix := by
+  have actualCast : degreeMatrix twoColourSystem =
+      fun row column => (twoColourDegreeCountsNat row column : ℝ) := by
+    ext row column
+    rcases row with row | row <;> rcases column with column | column <;> rfl
+  have modelCast : twoColourDegreeMatrix =
+      fun row column => (twoColourDegreeMatrixNat row column : ℝ) := by
+    ext row column
+    rcases row with row | row <;> rcases column with column | column <;>
       fin_cases row <;> fin_cases column <;>
-        simp only [degreeMatrix, twoColourDegreeMatrix, Sum.elim_inl, Sum.elim_inr,
-          Matrix.of_apply, Matrix.cons_val_zero, Matrix.cons_val_one] <;> norm_cast <;> decide
-    | inr column =>
-      fin_cases row <;> fin_cases column <;>
-        simp only [degreeMatrix, twoColourDegreeMatrix, Sum.elim_inl, Sum.elim_inr,
-          Matrix.of_apply, Matrix.cons_val_zero, Matrix.cons_val_one] <;> norm_cast <;> decide
-  | inr row =>
-    cases column with
-    | inl column =>
-      fin_cases row <;> fin_cases column <;>
-        simp only [degreeMatrix, twoColourDegreeMatrix, Sum.elim_inl, Sum.elim_inr,
-          Matrix.of_apply, Matrix.cons_val_zero, Matrix.cons_val_one] <;> norm_cast <;> decide
-    | inr column =>
-      fin_cases row <;> fin_cases column <;>
-        simp only [degreeMatrix, twoColourDegreeMatrix, Sum.elim_inl, Sum.elim_inr,
-          Matrix.of_apply, Matrix.cons_val_zero, Matrix.cons_val_one] <;> norm_cast <;> decide
+      norm_num [twoColourDegreeMatrix, twoColourDegreeMatrixNat]
+  rw [actualCast, twoColourSystem_degreeCountsNat, ← modelCast]
 
 def twoColourPaperDegreeIndex : Fin 4 → Fin 2 ⊕ Fin 2 :=
   ![Sum.inl 0, Sum.inr 0, Sum.inl 1, Sum.inr 1]

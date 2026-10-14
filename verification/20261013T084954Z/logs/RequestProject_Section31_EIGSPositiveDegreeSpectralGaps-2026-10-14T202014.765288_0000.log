@@ -1,0 +1,10 @@
+'EIGS.positive_eigenpair_spectralRadius_lt_strict_superinvariant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.positive_eigenpair_strict_subinvariant_lt_spectralRadius' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.degree_spectralRadius_lt_mass_of_positive_degree_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.degree_resistance_spectral_product_gt_one_of_positive_degree_data' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

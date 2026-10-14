@@ -1,0 +1,2 @@
+'EIGS.xiPositiveDegreeSpectralData_of_primitive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.degree_spectral_growth_of_positive_degree_data' depends on axioms: [propext, Classical.choice, Quot.sound]

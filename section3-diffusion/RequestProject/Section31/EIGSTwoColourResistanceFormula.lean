@@ -54,7 +54,10 @@ theorem twoColourRedCurrent_isUnitFlow (resistances : Fin 2 → ℝ)
   intro vertex
   fin_cases vertex <;>
     dsimp only [twoColourRedRule] <;>
-    norm_num [twoColourRedCurrent, twoColourRedRule, Fin.sum_univ_succ] <;>
+    simp only [twoColourRedCurrent, Fin.sum_univ_six,
+      Fin.isValue, Nat.succ_eq_add_one, Nat.reduceAdd, Fin.reduceFinMk,
+      Matrix.cons_val_zero', Matrix.cons_val_succ', Matrix.cons_val] <;>
+    norm_num [Fin.mk_eq_mk, Fin.reduceFinMk, Matrix.cons_val] <;>
     field_simp [sumNeZero] <;> ring
 
 theorem twoColourBlueCurrent_isUnitFlow (resistances : Fin 2 → ℝ)
@@ -70,7 +73,10 @@ theorem twoColourBlueCurrent_isUnitFlow (resistances : Fin 2 → ℝ)
   intro vertex
   fin_cases vertex <;>
     dsimp only [twoColourBlueRule] <;>
-    norm_num [twoColourBlueCurrent, twoColourBlueRule, Fin.sum_univ_succ] <;>
+    simp only [twoColourBlueCurrent, Fin.sum_univ_five,
+      Fin.isValue, Nat.succ_eq_add_one, Nat.reduceAdd, Fin.reduceFinMk,
+      Matrix.cons_val_zero', Matrix.cons_val_succ', Matrix.cons_val] <;>
+    norm_num [Fin.mk_eq_mk, Fin.reduceFinMk, Matrix.cons_val] <;>
     field_simp [denominatorNeZero] <;> ring
 
 def twoColourRedUnitFlow (resistances : Fin 2 → ℝ) (positive : ∀ colour, 0 < resistances colour) :
@@ -88,7 +94,8 @@ theorem twoColourRedCurrent_ohm (resistances : Fin 2 → ℝ)
         twoColourRedPotential resistances (twoColourRedRule.head edge) := by
   fin_cases edge <;>
     dsimp only [twoColourRedRule] <;>
-    norm_num [twoColourRedRule, twoColourRedCurrent, twoColourRedPotential] <;> ring
+    simp only [twoColourRedCurrent, twoColourRedPotential,
+      Matrix.cons_val_zero', Matrix.cons_val_succ', Matrix.cons_val] <;> ring
 
 theorem twoColourBlueCurrent_ohm (resistances : Fin 2 → ℝ)
     (edge : Fin 5) :
@@ -97,7 +104,8 @@ theorem twoColourBlueCurrent_ohm (resistances : Fin 2 → ℝ)
         twoColourBluePotential resistances (twoColourBlueRule.head edge) := by
   fin_cases edge <;>
     dsimp only [twoColourBlueRule] <;>
-    norm_num [twoColourBlueRule, twoColourBlueCurrent, twoColourBluePotential] <;> ring
+    simp only [twoColourBlueCurrent, twoColourBluePotential,
+      Matrix.cons_val_zero', Matrix.cons_val_succ', Matrix.cons_val] <;> ring
 
 theorem twoColourRedCurrent_energy (resistances : Fin 2 → ℝ)
     (positive : ∀ colour, 0 < resistances colour) :

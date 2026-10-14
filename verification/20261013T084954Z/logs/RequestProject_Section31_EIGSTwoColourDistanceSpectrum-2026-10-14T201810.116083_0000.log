@@ -1,0 +1,31 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSTwoColourDistanceSpectrum.lean:67:69: warning: This simp argument is unused:
+  (positive 0).le
+
+Hint: Omit it from the simp argument list.
+  simp [abs_neg, abs_of_pos (positive 0), abs_of_pos (positive 1), (positive 0̵)̵.̵l̵e̵,̵ ̵(̵p̵o̵s̵i̵t̵i̵v̵e̵ ̵1).le]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSTwoColourDistanceSpectrum.lean:67:86: warning: This simp argument is unused:
+  (positive 1).le
+
+Hint: Omit it from the simp argument list.
+  simp [abs_neg, abs_of_pos (positive 0), abs_of_pos (positive 1), (positive 0).le,̵ ̵(̵p̵o̵s̵i̵t̵i̵v̵e̵ ̵1̵)̵.̵l̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSTwoColourDistanceSpectrum.lean:80:10: warning: This simp argument is unused:
+  abs_neg
+
+Hint: Omit it from the simp argument list.
+  simp [abs_n̵e̵g̵,̵ ̵a̵b̵s̵_̵of_pos (positive 0), abs_of_pos (positive 1), (positive 0).le, (positive 1).le]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSTwoColourDistanceSpectrum.lean:80:69: warning: This simp argument is unused:
+  (positive 0).le
+
+Hint: Omit it from the simp argument list.
+  simp [abs_neg, abs_of_pos (positive 0), abs_of_pos (positive 1), (positive 0̵)̵.̵l̵e̵,̵ ̵(̵p̵o̵s̵i̵t̵i̵v̵e̵ ̵1).le]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'EIGS.twoColourSystem_distancePositive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_metricLengths' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_distanceSpectralRadius' depends on axioms: [propext, Classical.choice, Quot.sound]

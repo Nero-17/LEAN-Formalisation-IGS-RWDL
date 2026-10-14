@@ -1,0 +1,6 @@
+'EIGS.xiSimpleGraph_terminal_resistance_canonical_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSimpleGraph_terminal_resistance_dimension_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSimpleGraph_terminal_resistanceDimension_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSimpleGraph_terminal_resistance_original_diameter_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

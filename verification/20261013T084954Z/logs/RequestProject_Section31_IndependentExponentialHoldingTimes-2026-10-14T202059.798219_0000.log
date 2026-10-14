@@ -1,0 +1,7 @@
+'IGS.Sec31.PoissonClock.exponentialHoldingTimeLaw_independent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.PoissonClock.exponentialHoldingTimeLaw_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonClock.exponentialHoldingTimeLaw_nonexplosion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

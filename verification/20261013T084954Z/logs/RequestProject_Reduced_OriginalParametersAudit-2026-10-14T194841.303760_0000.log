@@ -1,0 +1,2 @@
+'Reduced.pdiamond_original_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reduced.pseries_original_formula' depends on axioms: [propext, Classical.choice, Quot.sound]

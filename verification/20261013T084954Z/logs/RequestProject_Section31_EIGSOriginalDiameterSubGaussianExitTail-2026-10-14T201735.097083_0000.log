@@ -1,0 +1,4 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSOriginalDiameterSubGaussianExitTail.lean:85:57: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'EIGS.exists_xiOriginalDiameterSubGaussianExitTail_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

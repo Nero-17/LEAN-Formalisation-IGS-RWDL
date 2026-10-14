@@ -1,0 +1,4 @@
+import RequestProject.Cluster.FullProcessLaw
+
+#print axioms Cluster.nested_reduced_full_process_law
+#print axioms Cluster.nested_cluster_full_network_law

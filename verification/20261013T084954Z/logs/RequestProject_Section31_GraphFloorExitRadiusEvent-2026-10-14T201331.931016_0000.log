@@ -1,0 +1,2 @@
+'EIGS.graphFloorExitTime_le_iff_exists_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.graphFloorBallExitTime_le_iff_maximal_graph_distance' depends on axioms: [propext, Classical.choice, Quot.sound]

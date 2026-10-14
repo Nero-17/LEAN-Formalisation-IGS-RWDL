@@ -9,6 +9,7 @@ Candidate source. -/
 
 namespace EIGS
 noncomputable section
+set_option maxHeartbeats 4000000
 
 theorem not_reachable_of_preserved_bool_label {Vertex : Type*} (graph : SimpleGraph Vertex)
     (label : Vertex → Bool) (source sink : Vertex) (different : label source ≠ label sink)
@@ -55,28 +56,48 @@ def twoColourBlueMetricPotential (lengths : Fin 2 → ℝ) : Fin 5 → ℝ :=
 theorem twoColourRedMetricPotential_lipschitz (lengths : Fin 2 → ℝ)
     (positive : ∀ colour, 0 < lengths colour) :
     (twoColourSystem.ruleNetwork 0).EdgeLipschitz lengths (twoColourRedMetricPotential lengths) := by
+  change ∀ edge : Fin 6,
+    |twoColourRedMetricPotential lengths (twoColourRedRule.tail edge) -
+      twoColourRedMetricPotential lengths (twoColourRedRule.head edge)| ≤ lengths (twoColourRedRule.col edge)
   intro edge
   fin_cases edge <;>
-    norm_num [twoColourSystem, twoColourRule, EIGSData.ruleNetwork, twoColourRedRule,
-      twoColourRedMetricPotential] <;>
+    dsimp only [twoColourRedRule] <;>
+    simp only [twoColourRedMetricPotential, Matrix.cons_val_zero', Matrix.cons_val_succ'] <;>
     ring_nf <;>
     simp [abs_neg, abs_of_pos (positive 0), abs_of_pos (positive 1), (positive 0).le, (positive 1).le]
 
 theorem twoColourBlueMetricPotential_lipschitz (lengths : Fin 2 → ℝ)
     (positive : ∀ colour, 0 < lengths colour) :
     (twoColourSystem.ruleNetwork 1).EdgeLipschitz lengths (twoColourBlueMetricPotential lengths) := by
+  change ∀ edge : Fin 5,
+    |twoColourBlueMetricPotential lengths (twoColourBlueRule.tail edge) -
+      twoColourBlueMetricPotential lengths (twoColourBlueRule.head edge)| ≤ lengths (twoColourBlueRule.col edge)
   intro edge
   fin_cases edge <;>
-    norm_num [twoColourSystem, twoColourRule, EIGSData.ruleNetwork, twoColourBlueRule,
-      twoColourBlueMetricPotential] <;>
+    dsimp only [twoColourBlueRule] <;>
+    simp only [twoColourBlueMetricPotential, Matrix.cons_val_zero', Matrix.cons_val_succ'] <;>
     ring_nf <;>
     simp [abs_neg, abs_of_pos (positive 0), abs_of_pos (positive 1), (positive 0).le, (positive 1).le]
 
-def twoColourRedShortPath : (twoColourSystem.ruleNetwork 0).EdgeWalk 0 4 :=
-  .cons 0 (Or.inl ⟨rfl, rfl⟩) (.cons 1 (Or.inl ⟨rfl, rfl⟩) (.nil 4))
+def twoColourRedShortPath : (twoColourSystem.ruleNetwork 0).EdgeWalk (0 : Fin 5) (4 : Fin 5) := by
+  refine .cons (next := (1 : Fin 5)) (0 : Fin 6) ?_ (.cons (next := (4 : Fin 5)) (1 : Fin 6) ?_
+    (Network.EdgeWalk.nil (network := twoColourSystem.ruleNetwork 0) (4 : Fin 5)))
+  all_goals
+    left
+    constructor <;>
+      dsimp only [EIGSData.ruleNetwork, twoColourSystem, twoColourRule, twoColourRedRule] <;>
+      norm_num [Fin.isValue, Nat.succ_eq_add_one, Nat.reduceAdd, Fin.reduceFinMk,
+        Matrix.cons_val_zero', Matrix.cons_val_succ', Matrix.cons_val]
 
-def twoColourBlueShortPath : (twoColourSystem.ruleNetwork 1).EdgeWalk 0 4 :=
-  .cons 3 (Or.inl ⟨rfl, rfl⟩) (.cons 4 (Or.inl ⟨rfl, rfl⟩) (.nil 4))
+def twoColourBlueShortPath : (twoColourSystem.ruleNetwork 1).EdgeWalk (0 : Fin 5) (4 : Fin 5) := by
+  refine .cons (next := (3 : Fin 5)) (3 : Fin 5) ?_ (.cons (next := (4 : Fin 5)) (4 : Fin 5) ?_
+    (Network.EdgeWalk.nil (network := twoColourSystem.ruleNetwork 1) (4 : Fin 5)))
+  all_goals
+    left
+    constructor <;>
+      dsimp only [EIGSData.ruleNetwork, twoColourSystem, twoColourRule, twoColourBlueRule] <;>
+      norm_num [Fin.isValue, Nat.succ_eq_add_one, Nat.reduceAdd, Fin.reduceFinMk,
+        Matrix.cons_val_zero', Matrix.cons_val_succ', Matrix.cons_val]
 
 theorem twoColourSystem_metricLengths (lengths : Fin 2 → ℝ)
     (positive : ∀ colour, 0 < lengths colour) :
@@ -84,23 +105,23 @@ theorem twoColourSystem_metricLengths (lengths : Fin 2 → ℝ)
       fun _ => lengths 0 + lengths 1 := by
   ext colour
   fin_cases colour
-  · change (twoColourSystem.ruleNetwork 0).weightedDistance lengths 0 4 = lengths 0 + lengths 1
+  · change (twoColourSystem.ruleNetwork 0).weightedDistance lengths (0 : Fin 5) (4 : Fin 5) = lengths 0 + lengths 1
     apply le_antisymm
     · have upper := (twoColourSystem.ruleNetwork 0).weightedDistance_le_cost
         (fun colour => (positive colour).le) twoColourRedShortPath
       simpa [twoColourRedShortPath, Network.EdgeWalk.cost, twoColourSystem, twoColourRule,
         EIGSData.ruleNetwork, twoColourRedRule] using upper
     · have lower := (twoColourSystem.ruleNetwork 0).potential_difference_le_weightedDistance
-        (twoColourSystem_connected 0) (twoColourRedMetricPotential_lipschitz lengths positive) 0 4
+        (twoColourSystem_connected 0) (twoColourRedMetricPotential_lipschitz lengths positive) (0 : Fin 5) (4 : Fin 5)
       simpa [twoColourRedMetricPotential, abs_of_pos (add_pos (positive 0) (positive 1))] using lower
-  · change (twoColourSystem.ruleNetwork 1).weightedDistance lengths 0 4 = lengths 0 + lengths 1
+  · change (twoColourSystem.ruleNetwork 1).weightedDistance lengths (0 : Fin 5) (4 : Fin 5) = lengths 0 + lengths 1
     apply le_antisymm
     · have upper := (twoColourSystem.ruleNetwork 1).weightedDistance_le_cost
         (fun colour => (positive colour).le) twoColourBlueShortPath
       simpa [twoColourBlueShortPath, Network.EdgeWalk.cost, twoColourSystem, twoColourRule,
         EIGSData.ruleNetwork, twoColourBlueRule, add_comm] using upper
     · have lower := (twoColourSystem.ruleNetwork 1).potential_difference_le_weightedDistance
-        (twoColourSystem_connected 1) (twoColourBlueMetricPotential_lipschitz lengths positive) 0 4
+        (twoColourSystem_connected 1) (twoColourBlueMetricPotential_lipschitz lengths positive) (0 : Fin 5) (4 : Fin 5)
       simpa [twoColourBlueMetricPotential, abs_of_pos (add_pos (positive 0) (positive 1))] using lower
 
 theorem twoColourSystem_distanceSpectralRadius :

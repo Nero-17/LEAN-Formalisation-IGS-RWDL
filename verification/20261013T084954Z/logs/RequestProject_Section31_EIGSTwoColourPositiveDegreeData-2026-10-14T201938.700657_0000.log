@@ -1,0 +1,2 @@
+'EIGS.twoColourPositiveDegreeData' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_degree_growth' depends on axioms: [propext, Classical.choice, Quot.sound]

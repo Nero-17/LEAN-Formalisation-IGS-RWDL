@@ -7,7 +7,7 @@ The lower-cover argument only assumes an upper ball mass on a positive-mass
 subset, allowing the nonuniform typical-point estimates to be used later. -/
 
 namespace IGS.Sec31
-open MeasureTheory Set Metric
+open MeasureTheory Set Metric Function
 open scoped Classical BigOperators
 noncomputable section
 
@@ -41,7 +41,7 @@ theorem real_measure_le_finite_ball_cover_card_mul (physicalMeasure : Measure Sp
   calc
     physicalMeasure.real subset ≤
         physicalMeasure.real (⋃ center ∈ centers, subset ∩ Metric.closedBall center radius) :=
-      measureReal_mono covered
+      measureReal_mono covered (measure_ne_top physicalMeasure _)
     _ ≤ ∑ center ∈ centers, physicalMeasure.real (subset ∩ Metric.closedBall center radius) :=
       measureReal_biUnion_finset_le centers _
     _ ≤ ∑ _center ∈ centers, bound := Finset.sum_le_sum (fun center _ => pieceBound center)

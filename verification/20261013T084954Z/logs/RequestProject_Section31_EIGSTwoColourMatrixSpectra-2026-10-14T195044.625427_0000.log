@@ -1,0 +1,10 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSTwoColourMatrixSpectra.lean:62:38: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSTwoColourMatrixSpectra.lean:62:38: warning: 'positivity' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'EIGS.twoColourSystem_paperDegreeMatrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_massSpectralRadius' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_degreeSpectralRadius' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_degree_not_primitive' depends on axioms: [propext, Classical.choice, Quot.sound]

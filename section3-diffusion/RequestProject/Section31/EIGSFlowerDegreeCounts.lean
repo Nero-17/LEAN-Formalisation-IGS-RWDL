@@ -72,7 +72,8 @@ theorem flower_filtered_edges_count (branches segments : ℕ)
       predicate edge.1 ∧ edge.2 = position)) =
         (Finset.univ.filter predicate) ×ˢ ({position} : Finset (Fin segments)) := by
     ext edge
-    simp
+    simp only [Finset.mem_filter, Finset.mem_univ, true_and,
+      Finset.mem_product, Finset.mem_singleton]
   rw [filteredProduct, Finset.card_product]
   simp
 
