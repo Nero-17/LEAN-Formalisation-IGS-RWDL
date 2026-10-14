@@ -37,8 +37,8 @@ theorem flowerFlow_energy_lower (branches segments : ℕ)
     intro equality
     have impossible := Sum.inl.inj equality
     cases impossible
-  have bound := ((flowerSystem branches segments).ruleNetwork 0).
-    potential_difference_sq_le_flow_energy_mul_potential_energy
+  have bound := Network.potential_difference_sq_le_flow_energy_mul_potential_energy
+      ((flowerSystem branches segments).ruleNetwork 0)
       (fun _ => 1) (fun _ => zero_lt_one) (Sum.inl false) (Sum.inl true)
       terminalsDistinct current (fun vertex => (flowerHeight branches segments vertex : ℝ))
   rw [flowerHeightPotential_energy] at bound
@@ -57,7 +57,10 @@ theorem flowerRule_effRes_one (branches segments : ℕ)
   · have bound := ((flowerSystem branches segments).ruleNetwork 0).effRes_le_energy
       (Sum.inl false) (Sum.inl true) flowExists (fun _ => zero_le_one)
         (flowerTerminalFlow branches segments branchesPositive segmentsPositive)
-    simpa only [flowerTerminalFlow, flowerCurrent_energy] using bound
+    change _ ≤ ((flowerSystem branches segments).ruleNetwork 0).energyNetwork
+      (flowerCurrent branches segments) (fun _ => 1) at bound
+    rw [flowerCurrent_energy branches segments branchesPositive] at bound
+    exact bound
   · exact ((flowerSystem branches segments).ruleNetwork 0).le_effRes _ _ flowExists
       (fun current => flowerFlow_energy_lower branches segments branchesPositive segmentsPositive current)
 

@@ -1,0 +1,3 @@
+'EIGS.flowerSystem_distancePositive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.flowerSystem_resistanceSpectralRadius' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.flowerSystem_distanceSpectralRadius' depends on axioms: [propext, Classical.choice, Quot.sound]

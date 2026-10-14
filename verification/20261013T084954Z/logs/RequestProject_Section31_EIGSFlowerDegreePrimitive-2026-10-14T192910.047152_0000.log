@@ -1,0 +1,16 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSFlowerDegreePrimitive.lean:35:75: warning: This simp argument is unused:
+  show segments ≠ 0 by omega
+
+Hint: Omit it from the simp argument list.
+  simp [flowerSystem, flowerGraph, flowerEdgeEnd, flowerPoint, lastStep,̵ ̵s̵h̵o̵w̵ ̵s̵e̵g̵m̵e̵n̵t̵s̵ ̵≠̵ ̵0̵ ̵b̵y̵ ̵o̵m̵e̵g̵a̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSFlowerDegreePrimitive.lean:41:75: warning: This simp argument is unused:
+  show segments ≠ 0 by omega
+
+Hint: Omit it from the simp argument list.
+  simp [flowerSystem, flowerGraph, flowerEdgeEnd, flowerPoint, lastStep,̵ ̵s̵h̵o̵w̵ ̵s̵e̵g̵m̵e̵n̵t̵s̵ ̵≠̵ ̵0̵ ̵b̵y̵ ̵o̵m̵e̵g̵a̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'EIGS.flowerSystem_degreeMatrix_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.flowerSystem_degreeMatrix_primitive' depends on axioms: [propext, Classical.choice, Quot.sound]

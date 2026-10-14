@@ -1,0 +1,3 @@
+'EIGS.flowerSystem_massMatrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.flowerSystem_massMatrixR' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.flowerSystem_massSpectralRadius' depends on axioms: [propext, Classical.choice, Quot.sound]

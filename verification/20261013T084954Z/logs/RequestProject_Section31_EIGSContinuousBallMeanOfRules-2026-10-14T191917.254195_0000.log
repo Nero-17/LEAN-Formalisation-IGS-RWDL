@@ -1,0 +1,3 @@
+'EIGS.xiNativeContinuousBallMeanFamilyProperties_of_restriction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -11,7 +11,6 @@ Source image SHA256 DB4111CF9C67B897CA175AC6D815A778230517FC66A8067AB427558E1B3A
 Candidate source; compilation is not claimed. -/
 
 namespace EIGS
-open scoped Classical
 noncomputable section
 
 def twoColourRedRule : ColGraph 2 where
@@ -28,20 +27,33 @@ def twoColourBlueRule : ColGraph 2 where
   head := ![1, 2, 4, 3, 4]
   col := ![1, 0, 1, 1, 0]
 
-def twoColourSystem : EIGSData 2 where
+abbrev twoColourRule (colour : Fin 2) : ColGraph 2 where
+  V := Fin 5
+  E := Fin (if colour = 0 then 6 else 5)
+  tail edge := if isRed : colour = 0 then
+    twoColourRedRule.tail ⟨edge.val, by simpa [isRed] using edge.isLt⟩
+    else twoColourBlueRule.tail ⟨edge.val, by simpa [isRed] using edge.isLt⟩
+  head edge := if isRed : colour = 0 then
+    twoColourRedRule.head ⟨edge.val, by simpa [isRed] using edge.isLt⟩
+    else twoColourBlueRule.head ⟨edge.val, by simpa [isRed] using edge.isLt⟩
+  col edge := if isRed : colour = 0 then
+    twoColourRedRule.col ⟨edge.val, by simpa [isRed] using edge.isLt⟩
+    else twoColourBlueRule.col ⟨edge.val, by simpa [isRed] using edge.isLt⟩
+
+abbrev twoColourSystem : EIGSData 2 where
   initCol := 0
-  rule := ![twoColourRedRule, twoColourBlueRule]
-  plantPlus colour := by fin_cases colour <;> exact (0 : Fin 5)
-  plantMinus colour := by fin_cases colour <;> exact (4 : Fin 5)
-  plant_ne colour := by fin_cases colour <;> decide
+  rule := twoColourRule
+  plantPlus _ := (0 : Fin 5)
+  plantMinus _ := (4 : Fin 5)
+  plant_ne _ := (by decide : (0 : Fin 5) ≠ 4)
 
 theorem twoColourSystem_connected (colour : Fin 2) :
     (ruleSG twoColourSystem colour).Connected := by
   fin_cases colour
-  · have first : (ruleSG twoColourSystem 0).Adj 0 1 := by decide
-    have middle : (ruleSG twoColourSystem 0).Adj 1 2 := by decide
-    have lower : (ruleSG twoColourSystem 0).Adj 0 3 := by decide
-    have last : (ruleSG twoColourSystem 0).Adj 1 4 := by decide
+  · have first : (ruleSG twoColourSystem 0).Adj 0 1 := by dsimp only [ruleSG, SimpleGraph.fromRel]; decide
+    have middle : (ruleSG twoColourSystem 0).Adj 1 2 := by dsimp only [ruleSG, SimpleGraph.fromRel]; decide
+    have lower : (ruleSG twoColourSystem 0).Adj 0 3 := by dsimp only [ruleSG, SimpleGraph.fromRel]; decide
+    have last : (ruleSG twoColourSystem 0).Adj 1 4 := by dsimp only [ruleSG, SimpleGraph.fromRel]; decide
     have reaches (vertex : Fin 5) : (ruleSG twoColourSystem 0).Reachable 0 vertex := by
       fin_cases vertex
       · exact SimpleGraph.Reachable.refl _
@@ -50,10 +62,10 @@ theorem twoColourSystem_connected (colour : Fin 2) :
       · exact lower.reachable
       · exact first.reachable.trans last.reachable
     exact ⟨fun first second => (reaches first).symm.trans (reaches second)⟩
-  · have first : (ruleSG twoColourSystem 1).Adj 0 1 := by decide
-    have middle : (ruleSG twoColourSystem 1).Adj 1 2 := by decide
-    have lower : (ruleSG twoColourSystem 1).Adj 0 3 := by decide
-    have last : (ruleSG twoColourSystem 1).Adj 3 4 := by decide
+  · have first : (ruleSG twoColourSystem 1).Adj 0 1 := by dsimp only [ruleSG, SimpleGraph.fromRel]; decide
+    have middle : (ruleSG twoColourSystem 1).Adj 1 2 := by dsimp only [ruleSG, SimpleGraph.fromRel]; decide
+    have lower : (ruleSG twoColourSystem 1).Adj 0 3 := by dsimp only [ruleSG, SimpleGraph.fromRel]; decide
+    have last : (ruleSG twoColourSystem 1).Adj 3 4 := by dsimp only [ruleSG, SimpleGraph.fromRel]; decide
     have reaches (vertex : Fin 5) : (ruleSG twoColourSystem 1).Reachable 0 vertex := by
       fin_cases vertex
       · exact SimpleGraph.Reachable.refl _
@@ -65,16 +77,18 @@ theorem twoColourSystem_connected (colour : Fin 2) :
 
 theorem twoColourSystem_loopless (colour : Fin 2) :
     (twoColourSystem.ruleNetwork colour).Loopless := by
-  fin_cases colour <;> decide
+  fin_cases colour <;> unfold Network.Loopless <;> decide
 
 theorem twoColourSystem_edgesUnique (colour : Fin 2) :
     (twoColourSystem.ruleNetwork colour).EdgesUnique := by
-  fin_cases colour <;> decide
+  fin_cases colour <;>
+    dsimp [Network.EdgesUnique, EIGSData.ruleNetwork, twoColourSystem, twoColourRule,
+      twoColourRedRule, twoColourBlueRule] <;> decide
 
 theorem twoColourSystem_plantingNonadjacent (colour : Fin 2) :
     ¬ (ruleSG twoColourSystem colour).Adj
       (twoColourSystem.plantPlus colour) (twoColourSystem.plantMinus colour) := by
-  fin_cases colour <;> decide
+  fin_cases colour <;> dsimp only [ruleSG, SimpleGraph.fromRel] <;> decide
 
 theorem twoColourSystem_massMatrix :
     massMatrix twoColourSystem.toRuleData = !![3, 3; 2, 3] := by

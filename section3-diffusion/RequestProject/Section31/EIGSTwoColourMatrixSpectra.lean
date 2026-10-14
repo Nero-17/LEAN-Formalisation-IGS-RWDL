@@ -21,22 +21,22 @@ theorem twoColourSystem_degreeMatrix : degreeMatrix twoColourSystem = twoColourD
     cases column with
     | inl column =>
       fin_cases row <;> fin_cases column <;>
-        norm_num [degreeMatrix, twoColourDegreeMatrix, ruleTailDeg, ruleHeadDeg,
-          twoColourSystem, twoColourRedRule, twoColourBlueRule, Finset.card_filter, Fin.sum_univ_succ]
+        simp only [degreeMatrix, twoColourDegreeMatrix, Sum.elim_inl, Sum.elim_inr,
+          Matrix.of_apply, Matrix.cons_val_zero, Matrix.cons_val_one] <;> norm_cast <;> decide
     | inr column =>
       fin_cases row <;> fin_cases column <;>
-        norm_num [degreeMatrix, twoColourDegreeMatrix, ruleTailDeg, ruleHeadDeg,
-          twoColourSystem, twoColourRedRule, twoColourBlueRule, Finset.card_filter, Fin.sum_univ_succ]
+        simp only [degreeMatrix, twoColourDegreeMatrix, Sum.elim_inl, Sum.elim_inr,
+          Matrix.of_apply, Matrix.cons_val_zero, Matrix.cons_val_one] <;> norm_cast <;> decide
   | inr row =>
     cases column with
     | inl column =>
       fin_cases row <;> fin_cases column <;>
-        norm_num [degreeMatrix, twoColourDegreeMatrix, ruleTailDeg, ruleHeadDeg,
-          twoColourSystem, twoColourRedRule, twoColourBlueRule, Finset.card_filter, Fin.sum_univ_succ]
+        simp only [degreeMatrix, twoColourDegreeMatrix, Sum.elim_inl, Sum.elim_inr,
+          Matrix.of_apply, Matrix.cons_val_zero, Matrix.cons_val_one] <;> norm_cast <;> decide
     | inr column =>
       fin_cases row <;> fin_cases column <;>
-        norm_num [degreeMatrix, twoColourDegreeMatrix, ruleTailDeg, ruleHeadDeg,
-          twoColourSystem, twoColourRedRule, twoColourBlueRule, Finset.card_filter, Fin.sum_univ_succ]
+        simp only [degreeMatrix, twoColourDegreeMatrix, Sum.elim_inl, Sum.elim_inr,
+          Matrix.of_apply, Matrix.cons_val_zero, Matrix.cons_val_one] <;> norm_cast <;> decide
 
 def twoColourPaperDegreeIndex : Fin 4 → Fin 2 ⊕ Fin 2 :=
   ![Sum.inl 0, Sum.inr 0, Sum.inl 1, Sum.inr 1]
@@ -57,8 +57,8 @@ theorem twoColourSystem_massSpectralRadius :
   · positivity
   · rw [twoColourSystem_massMatrixR]
     ext colour
-    fin_cases colour <;> norm_num [Matrix.mulVec, dotProduct, Fin.sum_univ_succ]
-    nlinarith [Real.sq_sqrt (by norm_num : (0 : ℝ) ≤ 6)]
+    fin_cases colour <;> norm_num [Matrix.mulVec, dotProduct, Fin.sum_univ_succ] <;>
+      nlinarith [Real.sq_sqrt (by norm_num : (0 : ℝ) ≤ 6)]
 
 theorem twoColourSystem_degreeSpectralRadius :
     finiteRealMatrixSpectralRadius (degreeMatrix twoColourSystem) = 2 := by
@@ -82,8 +82,9 @@ theorem twoColourDegreeMatrix_pow_out_in_zero (power : ℕ) (first second : Fin 
   induction power generalizing first second with
   | zero => simp
   | succ power induction =>
-    rw [pow_succ, Matrix.mul_apply]
-    simp [Fintype.sum_sum_type, induction, twoColourDegreeMatrix]
+    rw [pow_succ, Matrix.mul_apply, Fintype.sum_sum_type]
+    simp only [induction, zero_mul, Finset.sum_const_zero, add_zero]
+    simp [twoColourDegreeMatrix]
 
 theorem twoColourSystem_degree_not_primitive : ¬ (degreeMatrix twoColourSystem).IsPrimitive := by
   intro primitive

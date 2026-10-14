@@ -64,8 +64,8 @@ theorem flowerCurrent_isUnitFlow (branches segments : ℕ)
   rw [← mul_assoc, div_mul_cancel₀ _ branchesNonzero, one_mul]
   by_cases atSource : vertex = Sum.inl false
   · have notSink : vertex ≠ Sum.inl true := fun equality => terminalsDistinct (atSource.symm.trans equality)
-    simp [atSource, notSink]
-  · by_cases atSink : vertex = Sum.inl true <;> simp [atSource, atSink]
+    simp [atSource, terminalsDistinct]
+  · by_cases atSink : vertex = Sum.inl true <;> simp [atSource, atSink, terminalsDistinct, terminalsDistinct.symm]
 
 def flowerTerminalFlow (branches segments : ℕ)
     (branchesPositive : 0 < branches) (segmentsPositive : 0 < segments) :

@@ -1,0 +1,3 @@
+'IGS.Sec31.DiscreteMarkov.finiteSupport_weak_global_exit_mean_upper' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

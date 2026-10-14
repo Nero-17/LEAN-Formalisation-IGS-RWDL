@@ -1,0 +1,2 @@
+'EIGS.flowerSystem_dimension_formulas' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.flowerSystem_admissible_walk_dimension_limit' depends on axioms: [propext, Classical.choice, Quot.sound]

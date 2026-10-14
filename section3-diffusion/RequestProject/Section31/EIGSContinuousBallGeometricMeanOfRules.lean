@@ -142,12 +142,28 @@ theorem xiNativeContinuousBall_geometric_mean_upper_of_restriction (system : EIG
         parameters.lengths parameters.lengthsPositive (system.distanceSpectralRadius rulesConnected)
         distanceGreaterThanOne parameters.eigenpair lowerLength lowerLengthPositive lengthLower
         coarse coarsePositive steps (centers (coarse + steps))
+      change (Finset.univ.filter fun vertex => dist
+        (parameters.vertexEmbedding (coarse + steps) (centers (coarse + steps)))
+        (parameters.vertexEmbedding (coarse + steps) vertex) < outerRadius)ᶜ.Nonempty at proper
       have finiteBound := finiteMeanBounds coarse coarsePositive steps
         (centers (coarse + steps)) (starts (coarse + steps))
+      change expExit (XiSimpleGraph system (coarse + steps))
+        (Finset.univ.filter fun vertex => dist
+          (parameters.vertexEmbedding (coarse + steps) (centers (coarse + steps)))
+          (parameters.vertexEmbedding (coarse + steps) vertex) < outerRadius)
+        (starts (coarse + steps)) / (rates (coarse + steps) : ℝ) ≤ _ at finiteBound
       have rateRealPositive : 0 < (rates (coarse + steps) : ℝ) :=
         xiNativeFiniteJumpRateNNReal_positive system rulesConnected distancePositive
           normalization normalizationPositive (coarse + steps)
-      rw [xiNativeDiscreteKernel, graphFloorExitTime_lintegral _ _
+      change (∫⁻ path, graphFloorExitTime
+        (Finset.univ.filter fun vertex => dist
+          (parameters.vertexEmbedding (coarse + steps) (centers (coarse + steps)))
+          (parameters.vertexEmbedding (coarse + steps) vertex) < outerRadius)
+        (rates (coarse + steps)) path
+        ∂pathLaw (finiteGraphTransitionKernel (XiSimpleGraph system (coarse + steps))
+          (fun vertex => by exact_mod_cast xiSimpleGraph_degree_positive system rulesConnected (coarse + steps) vertex))
+          (Measure.dirac (starts (coarse + steps)))) ≤ _
+      rw [graphFloorExitTime_lintegral _ _
         (xiSimpleGraph_connected system rulesConnected (coarse + steps)) proper]
       rw [← ENNReal.ofReal_coe_nnreal (p := rates (coarse + steps)),
         ← ENNReal.ofReal_div_of_pos rateRealPositive]

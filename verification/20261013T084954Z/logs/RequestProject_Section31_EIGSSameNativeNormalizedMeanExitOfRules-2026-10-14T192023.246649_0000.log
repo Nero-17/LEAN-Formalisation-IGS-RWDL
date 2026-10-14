@@ -1,0 +1,7 @@
+'EIGS.xiMeanExitGlobalRestrictionSemigroupProperties_of_survival' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiIdentifiedMeanExitGlobalRestrictionProperties_of_survival' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_xiIdentifiedMeanExitGlobalRestriction_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

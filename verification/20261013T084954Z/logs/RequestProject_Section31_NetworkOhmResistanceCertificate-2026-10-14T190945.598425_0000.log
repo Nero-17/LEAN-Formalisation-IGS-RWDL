@@ -1,0 +1,1 @@
+'EIGS.Network.effRes_eq_energy_of_unitFlow_ohm' depends on axioms: [propext, Classical.choice, Quot.sound]

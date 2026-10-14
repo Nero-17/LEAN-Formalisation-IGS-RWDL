@@ -74,7 +74,7 @@ theorem finiteSupport_weak_global_exit_mean_upper
   · intro time timePositive
     let horizon : ℝ≥0 := ⟨time, timePositive.le⟩
     letI : Nonempty (Icc (0 : ℝ) (horizon : ℝ)) := ⟨⟨0, le_rfl, horizon.property⟩⟩
-    obtain ⟨times, timesDense⟩ := exists_dense_seq (α := Icc (0 : ℝ) (horizon : ℝ))
+    obtain ⟨times, timesDense⟩ := TopologicalSpace.exists_dense_seq (α := Icc (0 : ℝ) (horizon : ℝ))
     have timeEquality : ENNReal.ofReal time = (horizon : ℝ≥0∞) := by
       change ENNReal.ofReal (horizon : ℝ) = (horizon : ℝ≥0∞)
       exact ENNReal.ofReal_coe_nnreal

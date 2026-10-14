@@ -1,0 +1,5 @@
+'EIGS.twoColourSystem_connected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_loopless' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_edgesUnique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_plantingNonadjacent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_massMatrix' depends on axioms: [propext, Classical.choice, Quot.sound]
