@@ -1,0 +1,15 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSUsualBoundedBorelStoppingContinuousPathOfRules.lean:204:28: warning: unused variable `ratePositive`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSUsualBoundedBorelStoppingContinuousPathOfRules.lean:205:40: warning: unused variable `vectorPositive`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSUsualBoundedBorelStoppingContinuousPathOfRules.lean:206:8: warning: unused variable `renormalizationEigenpair`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'EIGS.xiUsualBoundedBorelStoppingContinuousPathProperties_of_finiteStoppingFamily' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_xiUsualBoundedBorelStoppingContinuousPath_of_rules' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

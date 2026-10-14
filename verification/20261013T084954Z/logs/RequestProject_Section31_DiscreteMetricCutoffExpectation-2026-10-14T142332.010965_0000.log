@@ -1,0 +1,5 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\DiscreteMetricCutoffExpectation.lean:38:30: warning: `MeasureTheory.measureReal_univ_eq_one` has been deprecated: Use `MeasureTheory.probReal_univ` instead
+'IGS.Sec31.integral_test_ge_one_sub_bad_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.continuousMetricBallCutoff_integral_ge_of_displacement' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

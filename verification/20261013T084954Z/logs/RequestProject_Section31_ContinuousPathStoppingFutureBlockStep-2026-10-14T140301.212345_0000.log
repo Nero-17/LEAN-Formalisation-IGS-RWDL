@@ -1,0 +1,28 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\ContinuousPathStoppingFutureBlockStep.lean:25:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DiscreteMarkov.continuousPath_finite_stoppingTime_delayed_measurableSpace_mono`:
+  [CompactSpace State]
+  [MeasurableSpace State]
+  [BorelSpace State]
+  [OpensMeasurableSpace C(ℝ≥0, State)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CompactSpace
+  State] [MeasurableSpace State] [BorelSpace State] [OpensMeasurableSpace C(ℝ≥0, State)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\ContinuousPathStoppingFutureBlockStep.lean:38:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DiscreteMarkov.continuousPath_finite_stoppingTime_state_measurable`:
+  [OpensMeasurableSpace C(ℝ≥0, State)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [OpensMeasurableSpace C(ℝ≥0, State)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\ContinuousPathStoppingFutureBlockStep.lean:68:25: warning: unused variable `terminalBoundNonnegative`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'IGS.Sec31.DiscreteMarkov.continuousPath_finite_stoppingTime_delayed_measurableSpace_mono' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.continuousPath_finite_stoppingTime_state_measurable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.continuousPath_finite_stoppingTime_weighted_boundedBorel_setIntegral_markov' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

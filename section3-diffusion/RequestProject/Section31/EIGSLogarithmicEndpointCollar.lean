@@ -96,14 +96,14 @@ theorem xiAddressEndpointCollar_logarithmic_original_level_ae_avoidance (system 
     (mass : XiMassParameters system) (primitiveDegree : (degreeMatrix system).IsPrimitive)
     (width : ℝ)
     (widthLarge : 1 / Real.log (mass.rate / finiteRealMatrixSpectralRadius (degreeMatrix system)) < width) :
-    ∀ᵐ address ∂mass.addressMeasure, ∀ᶠ index in atTop,
+    ∀ᵐ address ∂mass.addressMeasure, ∀ᶠ index : ℕ in atTop,
       (index - Nat.ceil (width * Real.log (index + 2 : ℝ))) +
           Nat.ceil (width * Real.log (index + 2 : ℝ)) = index ∧
       address ∉ xiAddressEndpointCollar system (index - Nat.ceil (width * Real.log (index + 2 : ℝ)))
         (Nat.ceil (width * Real.log (index + 2 : ℝ))) := by
   filter_upwards [xiAddressEndpointCollar_logarithmic_ae_avoidance system rulesConnected rulesLoopless
     plantingNonadjacent distancePositive mass primitiveDegree
-    (fun index => index - Nat.ceil (width * Real.log (index + 2 : ℝ))) width widthLarge] with address avoids
+    (fun index : ℕ => index - Nat.ceil (width * Real.log (index + 2 : ℝ))) width widthLarge] with address avoids
   filter_upwards [avoids, eventually_logarithmic_ceiling_le_index width] with index avoids atMostIndex
   exact ⟨Nat.sub_add_cancel atMostIndex, avoids⟩
 

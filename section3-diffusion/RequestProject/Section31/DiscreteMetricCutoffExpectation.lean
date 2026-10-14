@@ -28,12 +28,14 @@ theorem integral_test_ge_one_sub_bad_probability {Sample : Type*}
     · simp only [Set.indicator_of_notMem inside, sub_zero, oneOutside inside, le_refl]
   have compared := integral_mono_ae
     ((integrable_const (1 : ℝ)).sub indicatorIntegrable) testIntegrable comparison
+  change (∫ sample, (1 : ℝ) - bad.indicator (fun _ : Sample => (1 : ℝ)) sample ∂law) ≤
+    ∫ sample, test sample ∂law at compared
+  rw [integral_sub (integrable_const (1 : ℝ)) indicatorIntegrable] at compared
   have indicatorIdentity :
       (∫ sample, bad.indicator (fun _ : Sample => (1 : ℝ)) sample ∂law) = law.real bad := by
     simpa only [smul_eq_mul, mul_one] using
       (integral_indicator_const (μ := law) (1 : ℝ) badMeasurable)
-  simpa only [integral_sub (integrable_const (1 : ℝ)) indicatorIntegrable,
-    integral_const, measureReal_univ_eq_one, smul_eq_mul, one_mul,
+  simpa only [integral_const, measureReal_univ_eq_one, smul_eq_mul, one_mul,
     indicatorIdentity] using compared
 
 theorem continuousMetricBallCutoff_integral_ge_of_displacement

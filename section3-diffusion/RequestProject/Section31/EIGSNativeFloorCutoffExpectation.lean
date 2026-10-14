@@ -24,9 +24,7 @@ theorem exists_xiNativeFloorCutoffExpectation_of_rules (system : EIGSData K)
     (distancePositive : ∀ ruleColour edgeColour : Fin K,
       ¬ ((system.ruleNetwork ruleColour).withoutColour edgeColour).Reachable
         (system.plantPlus ruleColour) (system.plantMinus ruleColour))
-    (normalization : ℝ) (normalizationPositive : 0 < normalization)
-    [∀ level, MeasurableSpace (XiVtx system level)]
-    [∀ level, MeasurableSingletonClass (XiVtx system level)] :
+    (normalization : ℝ) (normalizationPositive : 0 < normalization) :
     ∃ fraction : ℝ, 0 < fraction ∧ ∃ count : ℕ,
       ∀ (coarse steps : ℕ) (window : ℝ), 0 ≤ window →
       window ≤ fraction *

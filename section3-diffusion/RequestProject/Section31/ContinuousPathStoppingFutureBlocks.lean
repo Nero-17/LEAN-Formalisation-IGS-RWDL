@@ -102,6 +102,7 @@ theorem continuousPath_finite_stoppingTime_futureBlock_setIntegral_markov
         _ = _ := by
           apply integral_congr_ae
           exact Eventually.of_forall fun path => by
+            dsimp only
             rw [kernelContinuous]
             change (prior path * observation.2 (path (stoppingTime path))) *
                 semigroup observation.1 remainingBackward (path (stoppingTime path)) =

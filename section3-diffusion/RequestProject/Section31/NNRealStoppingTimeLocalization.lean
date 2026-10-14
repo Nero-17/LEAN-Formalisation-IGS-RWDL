@@ -45,6 +45,7 @@ theorem finiteTruncation_isStoppingTime
     ext sample
     change ((finiteTruncation stoppingTime cutoff sample : WithTop ℝ≥0) ≤ horizon) ↔ _
     rw [finiteTruncation_coe]
+    rfl
   rw [eventEquality]
   exact (stopping.min_const cutoff).measurableSet_le horizon
 

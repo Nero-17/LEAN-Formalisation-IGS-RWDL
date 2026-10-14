@@ -175,7 +175,7 @@ theorem exists_xiHarmonic_two_endpoint_cell_cutoffs (system : EIGSData K)
     unfold xiAddressStarWeight xiEdgeStarMultiplicity at firstZero secondZero
     simp only [values, xiTwoEndpointBoundary] at range
     split_ifs at firstZero secondZero range <;> simp_all
-    all_goals exact le_antisymm range.2 range.1
+    all_goals exact le_antisymm range (globalBounds _).1
   have addressSquareBound (address : XiEdgeAddress system) :
       extension (xiAddressLimit system rulesConnected lengths lengthsPositive distanceRate
         distanceGreaterThanOne metricEigenpair address) ^ 2 ≤

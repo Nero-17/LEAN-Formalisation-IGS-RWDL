@@ -1,0 +1,9 @@
+'IGS.Sec31.DiscreteMarkov.continuousPath_extended_stoppingTime_boundedBorel_setIntegral_markov' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.continuousPath_extended_stoppingTime_boundedBorel_condExp_markov' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.continuousPath_aeFinite_stoppingTime_boundedBorel_condExp_markov' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

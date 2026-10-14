@@ -119,12 +119,12 @@ def XiUsualBoundedBorelStoppingContinuousPathProperties (system : EIGSData K)
                 MeasureTheory.condExp stopping.measurableSpace
                     ((globalLaws start : Measure C(ℝ≥0, parameters.LimitSpace)).completion.restrict
                       {path | stoppingTime path ≠ ⊤})
-                    (fun path => terminal (path ((stoppingTime path).untopA + delay))) =ᵐ[
+                    (fun path => terminal (ContinuousMap.toFun path ((stoppingTime path).untopA + delay))) =ᵐ[
                       (globalLaws start : Measure C(ℝ≥0, parameters.LimitSpace)).completion.restrict
                         {path | stoppingTime path ≠ ⊤}]
                   (fun path => ∫ location, terminal location
                     ∂ContinuousMarkov.semigroupKernel semigroup positive preservesOne delay
-                      (path (stoppingTime path).untopA))
+                      (ContinuousMap.toFun path (stoppingTime path).untopA))
 
 theorem xiUsualBoundedBorelStoppingContinuousPathProperties_of_finiteStoppingFamily (system : EIGSData K)
     (rulesConnected : ∀ colour, (ruleSG system colour).Connected)
@@ -173,12 +173,17 @@ theorem xiUsualBoundedBorelStoppingContinuousPathProperties_of_finiteStoppingFam
   letI xiUsualBorelStoppingCompletionFiniteMeasure :
       IsFiniteMeasure (globalLaws start : Measure C(ℝ≥0, parameters.LimitSpace)).completion :=
     ⟨measure_lt_top (globalLaws start : Measure C(ℝ≥0, parameters.LimitSpace)) Set.univ⟩
-  letI xiUsualBorelStoppingCompletionOpensMeasurableSpace :
-      OpensMeasurableSpace (NullMeasurableSpace C(ℝ≥0, parameters.LimitSpace)
-        (globalLaws start : Measure C(ℝ≥0, parameters.LimitSpace))) :=
-    ⟨le_eventuallyMeasurableSpace (m := borel C(ℝ≥0, parameters.LimitSpace))
-      (l := ae (globalLaws start : Measure C(ℝ≥0, parameters.LimitSpace)))⟩
+  letI xiUsualBorelStoppingCompletionOpensMeasurableSpace : @OpensMeasurableSpace C(ℝ≥0, parameters.LimitSpace) inferInstance
+      (eventuallyMeasurableSpace (borel C(ℝ≥0, parameters.LimitSpace))
+        (ae (globalLaws start : Measure C(ℝ≥0, parameters.LimitSpace)))) :=
+    @OpensMeasurableSpace.mk C(ℝ≥0, parameters.LimitSpace) inferInstance
+      (eventuallyMeasurableSpace (borel C(ℝ≥0, parameters.LimitSpace))
+        (ae (globalLaws start : Measure C(ℝ≥0, parameters.LimitSpace))))
+      (le_eventuallyMeasurableSpace (m := borel C(ℝ≥0, parameters.LimitSpace))
+        (l := ae (globalLaws start : Measure C(ℝ≥0, parameters.LimitSpace))))
   exact continuousPath_extended_stoppingTime_boundedBorel_condExp_markov
+    (ambient := eventuallyMeasurableSpace (borel C(ℝ≥0, parameters.LimitSpace))
+      (ae (globalLaws start : Measure C(ℝ≥0, parameters.LimitSpace))))
     (globalLaws start : Measure C(ℝ≥0, parameters.LimitSpace)).completion
     (canonicalUsualContinuousPathFiltration (globalLaws start))
     (canonicalNatural_le_usualPathFiltration (globalLaws start)) semigroup

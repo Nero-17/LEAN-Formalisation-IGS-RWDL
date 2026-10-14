@@ -1,0 +1,10 @@
+'EIGS.xiAddressEndpointCollar_logarithmic_ae_avoidance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiAddressEndpointCollar_logarithmic_probability_sum_finite' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiAddressEndpointCollar_all_rational_logarithmic_ae_avoidance' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiAddressEndpointCollar_logarithmic_original_level_ae_avoidance' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

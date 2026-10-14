@@ -1,6 +1,6 @@
 # Current formalization audit
 
-Snapshot UTC: 2026-10-14T13:53:59.229273+00:00
+Snapshot UTC: 2026-10-14T14:37:32.539134+00:00
 
 Full-paper completion is **not** claimed. A clean printed axiom audit verifies the stated theorem; it does not remove mathematical assumptions from that statement. Actual-model consumers and generic conditional lemmas must be read separately.
 
@@ -8,7 +8,7 @@ Full-paper completion is **not** claimed. A clean printed axiom audit verifies t
 
 The latest completed common-dependency batch has 690 modules and unchanged checked sources. Report SHA256: `607fc8176247666e16f71894428d88124717974a7f34be9c1eb6954538e68064`.
 
-The independent manifest contains 355 accepted whole-file receipts and 1204 printed audits. These overlap the common batch and are not a completion percentage. Every published Lean source has an exact hash and explicit status; unverified and failed drafts remain visible.
+The independent manifest contains 371 accepted whole-file receipts and 1241 printed audits. These overlap the common batch and are not a completion percentage. Every published Lean source has an exact hash and explicit status; unverified and failed drafts remain visible.
 
 ## Accepted milestones
 
@@ -46,16 +46,34 @@ The independent manifest contains 355 accepted whole-file receipts and 1204 prin
 | [NNRealStoppingTimeShift](section3-diffusion/RequestProject/Section31/NNRealStoppingTimeShift.lean) | `f7f8e9012230b5a753d81f6254151a115cae96661b98f6c49a1e6778daf51abb` | `d28d7d6881dddbc297393b488a1895d025d965ef07effa3dbc4c08c15c92989e` | 2 |
 | [EIGSPaperNativeClock](section3-diffusion/RequestProject/Section31/EIGSPaperNativeClock.lean) | `f8d4ffddbfc43a7ed1ef5fcde5da528b4a1990a4e2634b1f95e9d825f23dd5ad` | `2c6e545f53208b2dc56b088f47a0a305e1b8dae805748cb9844558ddc4f782c5` | 4 |
 | [EIGSAddressEndpointCollar](section3-diffusion/RequestProject/Section31/EIGSAddressEndpointCollar.lean) | `ae353d19b59948d3915926d0243609be4adc359023f8a4dfbb02a4f73576c616` | `5eead5058d0c8b7be881a5d1e96d6e3e9031a3147364b7e00802630eb2777729` | 4 |
+| [EIGSLogarithmicEndpointCollar](section3-diffusion/RequestProject/Section31/EIGSLogarithmicEndpointCollar.lean) | `a7d882d1e7bcdb24850e4de2dab44f361c8bafd0ed6e56f871a59f9babc98d9b` | `2744774b562356242737d0327a87175caeb9d867ecc2f0db8f79e7ba68575bc0` | 4 |
+| [EIGSRecentVertexIncidence](section3-diffusion/RequestProject/Section31/EIGSRecentVertexIncidence.lean) | `600480270fd493f6c4623b66f4791a296091b389feb9d463fa69b398fb9fac57` | `99c7f9b78da0bec9a2a844a4a107553e6f3e8bc8db16f71edce0378a7b2ab8b2` | 3 |
+| [ContinuousMetricBallCutoff](section3-diffusion/RequestProject/Section31/ContinuousMetricBallCutoff.lean) | `b91e278a24166fe56f899d8738b233b0908c56a744544cc610cdc57a0f4f5819` | `b68a579eea551a65818c04313bb65a43d1acf1ab349d16f7826d3639c40c8088` | 3 |
+| [DiscreteMetricCutoffExpectation](section3-diffusion/RequestProject/Section31/DiscreteMetricCutoffExpectation.lean) | `58596f3208cc2a412cfb50a668a29a20df716a60fba20e1f6efbb4a300817574` | `4a9ddca3bf625658a0a64cc4d3512f664ff75538b536955f23ac51b9faaae76f` | 2 |
+| [EIGSNativeFloorDisplacementStay](section3-diffusion/RequestProject/Section31/EIGSNativeFloorDisplacementStay.lean) | `d4390ea3311f0c2b54bbc24c6e8990f0bc927ee4d6f6e5475d83a77c09af556a` | `598d1900208462eaad9f3ab400623168e29bc88c593200a8925cd2f8ff409d42` | 1 |
+| [EIGSHarmonicTwoEndpointCutoff](section3-diffusion/RequestProject/Section31/EIGSHarmonicTwoEndpointCutoff.lean) | `bc0e8d31973cfa63791a3a022991a69467e49e22111ee7db8226f646c9266bce` | `84e654f7d55dbe9410e901322ab34519925bc1fd22ccc10da569008096637646` | 4 |
+| [NNRealStoppingTimeLocalization](section3-diffusion/RequestProject/Section31/NNRealStoppingTimeLocalization.lean) | `1c011f79ccdc4b411f29ed781dcf2f3756ba5ce2d6f213cfdc440a1195b18f89` | `3f1424935a179c34219a96a70f501b1ebf18191d922f1d09a5e3c85003e6dae7` | 6 |
+| [ContinuousPathExtendedStoppingMarkov](section3-diffusion/RequestProject/Section31/ContinuousPathExtendedStoppingMarkov.lean) | `af0a5c9cdf1d35af898846c105b65e031f63bb51a6a6aa2020df8f604f4bb5e0` | `bb2b5f056d7ae5ca022ea2b73f74d6ffa88dd02f21e9548cfc9943fd0460d3ec` | 3 |
+| [EIGSUsualBoundedBorelStoppingContinuousPathOfRules](section3-diffusion/RequestProject/Section31/EIGSUsualBoundedBorelStoppingContinuousPathOfRules.lean) | `17c91df9e364cf5fe7aae4dd33e72c06ec0149bc39f465b4268bb908eb7d5c4b` | `d9cec89a0cc78f60c133c2bdb634b70bdab185e8d74d70437f62d6c52aee318b` | 2 |
+| [ContinuousPathStoppingFutureBlockStep](section3-diffusion/RequestProject/Section31/ContinuousPathStoppingFutureBlockStep.lean) | `4a060644c1a6560a20c726a5afa3389f0ecf1dce29dee456737ed6282dd8f6e4` | `197a497642e2113bd3799fa415ff69177ecd7ab665abd0369e8075b97afb2905` | 3 |
+| [ContinuousPathStoppingFutureBlocks](section3-diffusion/RequestProject/Section31/ContinuousPathStoppingFutureBlocks.lean) | `a06b31365102c08ad64c9e712f5737a7f1d9ff728b17dbe9530d88282f119224` | `773149efb4721169cc99985dd050c37accde2d3733049f996344d1b5e051cf2a` | 1 |
+| [ContinuousPathDenseCylinderUniqueness](section3-diffusion/RequestProject/Section31/ContinuousPathDenseCylinderUniqueness.lean) | `781127437439d7f06255a7232fea3fdca7d06d830e4fc3c0696a7db36701260b` | `2155a42632386a3ba19f19cd6d72026a17db24b43f0007a2e97ec2fbb50aa485` | 1 |
+| [ContinuousPathRandomShift](section3-diffusion/RequestProject/Section31/ContinuousPathRandomShift.lean) | `982fcafe0f27062dfa012c8337022c10142875a3a18409bb7a729050d9f64215` | `b86f2c4040f8e4f6ae61a728bb15559d74ec855e0b7253d793bf6103748c4eb3` | 1 |
+| [ContinuousPathFutureBlockReindexing](section3-diffusion/RequestProject/Section31/ContinuousPathFutureBlockReindexing.lean) | `25b728d8e8d974d9951fadbda595f0801f8ead5f8918d78ece6b35682fda259e` | `c284a7db6db197d21a1e922eb4892626647849f3f8f2e15cca3b53e43b16d521` | 1 |
+| [ContinuousPathStoppingFutureLaw](section3-diffusion/RequestProject/Section31/ContinuousPathStoppingFutureLaw.lean) | `2f9005cd908acea291d73ee7745a9f738acbacb02e3418ea0b78ffa049f69a98` | `40ca582256f5c87f3bda7354108b4cf02af6f008cce3178a51a43ac3302cfec2` | 1 |
+| [EIGSTypicalLogarithmicCellCutoff](section3-diffusion/RequestProject/Section31/EIGSTypicalLogarithmicCellCutoff.lean) | `4ff05686cc90a5cd570ac2c86bcbd5b7ce0a311e4bf003372bd54745de66782d` | `3b75baafd0274afeadc4313455cbbcef63d07ee3753bb3bbba0e980b561ce1bc` | 1 |
 
 ## Proven scope and exact gaps
 
-The same actual closed L² semigroup is identified with the global continuous-path family and the original discrete semigroup limit. Everywhere finite natural-filtration stopping times with continuous terminal tests are supplied internally. Usual/completed filtration, bounded Borel tests, potentially infinite stopping times on their finite event, and future-path strong Markov/Hunt consumers remain pending.
+The same actual closed L² semigroup is identified with the global continuous-path family and the original discrete semigroup limit. The actual usual completed-filtration single-time bounded Borel stopping identity is now supplied internally, including potentially infinite stopping times on their finite event. Full future-path strong Markov/Hunt consumers remain pending; single-time tests are not substituted for full future-path identities.
 
 For all positive times and spatial points, the same actual five-rule closed semigroup has a symmetric strictly positive probability density jointly continuous in time and both spatial variables, with the global small-time heat upper bound. The strict-positivity consumer supplies all analytic inputs internally. No resistance-growth-greater-than-one restriction is added. All-time bounds use a truncated time scale, not an incorrect all-time power decay on a compact conservative space.
 
 Finite-born point evaluations extend to the same closed energy domain and agree with continuous representatives by the previously verified continuous-domain equivalence. Actual harmonic nodal cutoffs, degree growth, energy contraction and half-time Riesz identities supply both diagonal estimates internally. At every finite-born vertex, for sufficiently small positive times, c_x/t^alpha <= p_t(x,x) <= C_x/t^alpha, with alpha=(log(mu)-log(nu))/log(mu*rho); the actual local spectral dimension is 2*alpha. No diagonal estimate or spectral dimension is a final model hypothesis. The standing primitive degree condition is retained. Typical-point logarithmic lower bounds and almost-everywhere spectral dimensions remain incomplete.
 
 Continuous-path laws also satisfy quasi-left continuity at all finite supremum times, pathwise. This supplies a regularity component and does not by itself assert a full Hunt process.
+
+Actual endpoint-collar mass bounds, summable logarithmic schedules and almost-everywhere avoidance are verified. Actual recent-vertex degree bounds and harmonic two-endpoint cutoffs are verified separately. Actual all-start native-floor displacement tails give a positive stay probability, and generic continuous metric cutoff expectation bounds have passed. Actual metric-ball mass bounds, the expectation limit to the same semigroup and the final typical logarithmic estimate remain pending. The primitive standing assumption excludes nu=1; the manuscript's nu=1 extension requires separate scope verification.
 
 Original measured GHP, uniform actual projection distortion convergence, and a single complete compact common ambient for the original graphs under their own diameter normalization are verified. Identity homeomorphisms explicitly preserve the topology under metric scaling. A uniform coupling theorem transfers weak convergence without assuming Skorokhod-space separability. The native walk rate and floor index are proved to equal the manuscript clock for every same normalization witness. Final GHPS still requires the actual probability/cadlag-J1 transport and canonical global-law restriction consumers, with the proved clock equality supplied to that same witness bundle. New J1 candidates do not constitute a proved complete Skorokhod-space theory. Resistance-form/Brownian-regime construction and identification remain incomplete. Section 4 random GHP/diffusion outlook statements remain conjectures.
 

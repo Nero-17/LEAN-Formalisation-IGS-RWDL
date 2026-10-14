@@ -27,16 +27,10 @@ theorem xiPrivateVertex_incidence_bound (system : EIGSData K) (level : ℕ)
     rcases incidence with tail | head
     · change embedRuleVtx system level edge.1 _ _ _ = Sum.inr ⟨parent, interior⟩ at tail
       unfold embedRuleVtx at tail
-      split_ifs at tail
-      · cases tail
-      · cases tail
-      · exact congrArg Sigma.fst (Sum.inr.inj tail)
+      split_ifs at tail <;> cases tail <;> rfl
     · change embedRuleVtx system level edge.1 _ _ _ = Sum.inr ⟨parent, interior⟩ at head
       unfold embedRuleVtx at head
-      split_ifs at head
-      · cases head
-      · cases head
-      · exact congrArg Sigma.fst (Sum.inr.inj head)
+      split_ifs at head <;> cases head <;> rfl
   have outside (other : XiEdge system.toRuleData level) (different : other ≠ parent)
       (child : (system.rule (XiCol system.toRuleData level other)).E) :
       xiEdgeStarMultiplicity system (level + 1) (Sum.inr ⟨parent, interior⟩) ⟨other, child⟩ = 0 := by
@@ -106,6 +100,7 @@ theorem exists_xiRecentVertex_incidence_bound (system : EIGSData K)
       | inl previous =>
         have previousNoOld : ∀ old : XiVtx system coarse, xiForward system coarse width old ≠ previous :=
           fun old equality => noOld old (congrArg Sum.inl equality)
+        change (∑ state, degVec system ((coarse + width) + 1) (Sum.inl previous) state * weights state) ≤ _
         rw [oldWeighted]
         exact (mul_le_mul_of_nonneg_left (induction previous previousNoOld) ratePositive.le).trans_eq
           (by rw [pow_succ]; ring)
@@ -157,7 +152,7 @@ theorem exists_xiNoncollar_endpoint_incidence_bound (system : EIGSData K)
     refine ⟨old, ?_⟩
     unfold xiAddressStarWeight xiEdgeStarMultiplicity
     rw [equality]
-    split_ifs <;> norm_num
+    split_ifs <;> norm_num at *
   have headNoOld : ∀ old : XiVtx system coarse, xiForward system coarse width old ≠
       XiHead system (coarse + width) (xiAddressEdge system (coarse + width) address) := by
     intro old equality
@@ -165,7 +160,7 @@ theorem exists_xiNoncollar_endpoint_incidence_bound (system : EIGSData K)
     refine ⟨old, ?_⟩
     unfold xiAddressStarWeight xiEdgeStarMultiplicity
     rw [equality]
-    split_ifs <;> norm_num
+    split_ifs <;> norm_num at *
   exact (add_le_add (recentBound coarse width _ tailNoOld)
     (recentBound coarse width _ headNoOld)).trans_eq (by ring)
 

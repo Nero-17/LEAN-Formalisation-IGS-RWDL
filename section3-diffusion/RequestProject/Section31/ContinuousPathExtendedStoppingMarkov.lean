@@ -46,6 +46,8 @@ theorem continuousPath_extended_stoppingTime_boundedBorel_setIntegral_markov
     eventGlobalMeasurable.inter (stopping.measurableSpace_le _ (stopping.measurableSet_le' (cutoff : ℝ≥0)))
   have localizedMonotone : Monotone localizedEvents := by
     intro first second ordered path membership
+    change path ∈ event ∧ stoppingTime path ≤ ((first : ℝ≥0) : WithTop ℝ≥0) at membership
+    change path ∈ event ∧ stoppingTime path ≤ ((second : ℝ≥0) : WithTop ℝ≥0)
     refine ⟨membership.1, membership.2.trans ?_⟩
     exact_mod_cast ordered
   have unionEquality : (⋃ cutoff : ℕ, localizedEvents cutoff) = event ∩ {path | stoppingTime path ≠ ⊤} := by

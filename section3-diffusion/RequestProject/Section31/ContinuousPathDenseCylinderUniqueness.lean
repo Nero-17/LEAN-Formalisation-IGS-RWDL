@@ -10,7 +10,7 @@ It is a uniqueness statement, and does not presume a future Markov identity. -/
 namespace IGS.Sec31.DiscreteMarkov
 
 open MeasureTheory ProbabilityTheory Set Filter Topology
-open scoped Classical NNReal BigOperators
+open scoped Classical NNReal BigOperators BoundedContinuousFunction
 noncomputable section
 
 variable {State : Type*} [MetricSpace State] [CompactSpace State]
@@ -36,6 +36,7 @@ theorem continuousPath_finiteMeasure_eq_of_dense_product_cylinders
   · intro indices
     have projectionMeasurable : Measurable (indices.restrict : (ℕ → State) → indices → State) :=
       measurable_pi_lambda _ fun index => measurable_pi_apply index.val
+    dsimp only
     rw [Measure.map_map projectionMeasurable denseEmbedding.measurable,
       Measure.map_map projectionMeasurable denseEmbedding.measurable]
     symm
@@ -43,7 +44,7 @@ theorem continuousPath_finiteMeasure_eq_of_dense_product_cylinders
     intro tests
     have finiteEvaluationMeasurable : Measurable
         (fun path : C(ℝ≥0, State) => fun index : indices => path (denseTimes index.val)) :=
-      (continuous_pi fun index => continuous_eval_const (denseTimes index.val)).measurable
+      (continuous_pi fun (index : indices) => continuous_eval_const (denseTimes index.val)).measurable
     have productMeasurable : Measurable
         (fun point : indices → State => ∏ index : indices, tests index (point index)) :=
       (continuous_finset_prod Finset.univ fun index _ =>
