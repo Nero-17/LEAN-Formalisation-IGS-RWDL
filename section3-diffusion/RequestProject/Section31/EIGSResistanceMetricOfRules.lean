@@ -31,7 +31,8 @@ theorem exists_xiResistanceMetric_of_rules
     ∃ eigenpair : ∀ colour, (system.ruleFamily rulesConnected).Psi resistanceVector colour =
       resistanceRate * resistanceVector colour,
     ∃ metric : MetricSpace parameters.LimitSpace,
-      metric.toTopologicalSpace = inferInstance ∧
+      metric.toPseudoMetricSpace.toUniformSpace.toTopologicalSpace =
+        (inferInstance : TopologicalSpace parameters.LimitSpace) ∧
       ∀ level (source sink : XiVtx system level) (distinct : source ≠ sink),
         @dist _ metric.toDist (parameters.vertexEmbedding level source) (parameters.vertexEmbedding level sink) =
         (XiNetwork system level).effRes source sink

@@ -1,0 +1,3 @@
+'IGS.Sec31.QuadraticEnergySpace.closedDomain_eq_original_of_complete' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

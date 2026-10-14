@@ -55,18 +55,25 @@ theorem exists_xiNativeFinitePrefixSurvival_of_rules (system : EIGSData K)
           (finiteSupportDensePrefixClosedSet
             (finiteHorizonStepPaths horizon rates parameters.vertexEmbedding) times center (2 * radius))ᶜ ≤
               ENNReal.ofReal (1 / 4) := by
-  intro parameters distanceGreaterThanOne
+  let parameters := xiPathMetricDataOfRules system rulesConnected rulesLoopless rulesUnique distancePositive
+  let distanceGreaterThanOne : 1 < system.distanceSpectralRadius rulesConnected :=
+    (by norm_num : (1 : ℝ) < 2).trans_le
+      (system.two_le_distanceSpectralRadius rulesConnected rulesUnique plantingNonadjacent distancePositive)
   letI : CompactSpace parameters.LimitSpace := xiCompletion_compactSpace system rulesConnected
     parameters.lengths parameters.lengthsPositive (system.distanceSpectralRadius rulesConnected)
     distanceGreaterThanOne parameters.eigenpair
   letI : MeasurableSpace parameters.LimitSpace := borel _
   letI : BorelSpace parameters.LimitSpace := ⟨rfl⟩
-  intro rates
+  let rates := xiNativeFiniteJumpRateNNReal system rulesConnected distancePositive
+    normalization normalizationPositive
+  dsimp only
   obtain ⟨fraction, fractionPositive, count, tails⟩ :=
     exists_xiNativeFloorDisplacementStay_of_rules system rulesConnected rulesLoopless rulesUnique
       plantingNonadjacent distancePositive normalization normalizationPositive
   refine ⟨fraction, fractionPositive, count, ?_⟩
-  intro coarse horizon horizonBound times center starts startsConverge radius
+  intro coarse horizon horizonBound times center starts startsConverge
+  let radius := (count + 2 : ℝ) * ((3 * xiRuleRadius system parameters.lengths + 1) *
+    (system.distanceSpectralRadius rulesConnected)⁻¹ ^ coarse)
   have radiusPositive : 0 < radius := by
     have ruleRadiusNonnegative := xiRuleRadius_nonnegative system
       (fun colour => (parameters.lengthsPositive colour).le)

@@ -1,13 +1,13 @@
 {
-  "snapshot_utc": "2026-10-14T17:45:14.976371+00:00",
+  "snapshot_utc": "2026-10-14T18:14:11.091732+00:00",
   "round": "20261013T084954Z",
   "compiler": "Lean 4.28.0",
   "mathlib": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
   "shared_dependency_modules": 690,
   "shared_report": "integration-690.json",
   "shared_report_sha256": "607fc8176247666e16f71894428d88124717974a7f34be9c1eb6954538e68064",
-  "independent_whole_file_count": 459,
-  "independent_audit_count": 1433,
+  "independent_whole_file_count": 477,
+  "independent_audit_count": 1459,
   "records": [
     {
       "module": "RequestProject.Section31.EIGSL2EnergyConstants",
@@ -14042,6 +14042,394 @@
       "audits": [
         {
           "declaration": "EIGS.xiTypicalBallMassUpperAllRadii_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSCompletedResistanceTriangle",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSCompletedResistanceTriangle.lean",
+      "source_sha256": "74a54a942e75b2031923cfba6eead03d79a7fc9c454726a39f6971e79166ae3a",
+      "log": "logs/RequestProject_Section31_EIGSCompletedResistanceTriangle-2026-10-14T174653.728915_0000.log",
+      "log_sha256": "f123bb0947cefcd26feaf901ed930c79a52546e56ac6af0334081c81c29ab502",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiCompletedResistance_on_skeleton",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiCompletedResistance_continuous",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiCompletedResistance_triangle",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.FiniteSupportWeakBallSurvival",
+      "source": "section3-diffusion/RequestProject/Section31/FiniteSupportWeakBallSurvival.lean",
+      "source_sha256": "8ffc257bce35f46241b0f129d5e92612d5d5dc74cd0f609ba41d0ce3bd9cb004",
+      "log": "logs/RequestProject_Section31_FiniteSupportWeakBallSurvival-2026-10-14T181151.893591_0000.log",
+      "log_sha256": "a7d4aba3551e1d237cbf749faefe3fbd9460782113443f76543b4cae7842f9e3",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.finiteSupportDensePrefixClosedSet_isClosed",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.finiteSupport_weak_global_ball_survival",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSUniformVertexIncidenceBound",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSUniformVertexIncidenceBound.lean",
+      "source_sha256": "11400b8fa07710f91920a97ea6bbf7f68af7415f2197f4526b92ac45702cb86c",
+      "log": "logs/RequestProject_Section31_EIGSUniformVertexIncidenceBound-2026-10-14T175134.786174_0000.log",
+      "log_sha256": "b7a6028e9e33c711525194f289398f6feb8e21a8c59965763b634388fa7e281a",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiUniformVertex_incidence_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSCompletedResistanceMetric",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSCompletedResistanceMetric.lean",
+      "source_sha256": "16b1fb40f7ce5c1651fe4b4b8876fbf9089d0bcd34daa83da89ab09c88ad9b97",
+      "log": "logs/RequestProject_Section31_EIGSCompletedResistanceMetric-2026-10-14T175708.239439_0000.log",
+      "log_sha256": "7c6fcbb7292f817c2a291a4bd93a504cd90096fd57b755acf9330d1c6cd55686",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiCompletedResistanceRow_injective",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiCompletedResistanceMetric",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiCompletedResistanceMetric_original_topology",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSAllPointGeometricBallMassUpper",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSAllPointGeometricBallMassUpper.lean",
+      "source_sha256": "75233ebba05cba99cba6a79a07f5c3e7b255bdbf67d37087ba9f9f20461114d2",
+      "log": "logs/RequestProject_Section31_EIGSAllPointGeometricBallMassUpper-2026-10-14T175428.331680_0000.log",
+      "log_sha256": "9f3887252de9248654a11e923bb493684b1b6ebe9759e8a102eea0bab83f1ec4",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiAllPointGeometricBallMassUpper",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSVertexStarBallMassLower",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSVertexStarBallMassLower.lean",
+      "source_sha256": "a515d9d43bdac1a03a4785a62e4495a1b88b559ef48a9e5fb0c3f5b2b66de37a",
+      "log": "logs/RequestProject_Section31_EIGSVertexStarBallMassLower-2026-10-14T175910.688196_0000.log",
+      "log_sha256": "13ca1bfec01b83ba74502a7f1b71c0759e005a42461ac54412c43352a47ae749",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiVertexStarBallMassLower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSResistanceMetricOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSResistanceMetricOfRules.lean",
+      "source_sha256": "d4c1954ac6a95c51b4e94c4ff64c790e95f1a2b436c09b5cd222575f545536e1",
+      "log": "logs/RequestProject_Section31_EIGSResistanceMetricOfRules-2026-10-14T180231.625707_0000.log",
+      "log_sha256": "4283920cc5ea7cfa079f5810a1b352180c77f3722faaebf552a4ec28ee8d465e",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiResistanceMetric_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSFiniteBornGeometricBallMassLower",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSFiniteBornGeometricBallMassLower.lean",
+      "source_sha256": "9657f2ef7e1737712880cd349c34bd128c86c9f889f1744b6e0b830f4c47deb8",
+      "log": "logs/RequestProject_Section31_EIGSFiniteBornGeometricBallMassLower-2026-10-14T175953.200489_0000.log",
+      "log_sha256": "89e29c2419fc03973762025c1049c8934256cfcfb07e2c7dd3a264aa1779340a",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiFiniteBornGeometricBallMassLower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSFiniteBornBallMassOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSFiniteBornBallMassOfRules.lean",
+      "source_sha256": "f457e57f63dc59a9b37f4a4f4b8f1e8eb345184d78079032019d8ad25c53297d",
+      "log": "logs/RequestProject_Section31_EIGSFiniteBornBallMassOfRules-2026-10-14T180036.605659_0000.log",
+      "log_sha256": "80eb9751a046075877d72a6e6972f7d670423ffa551e37f3a7e397b0eb9f6642",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiFiniteBornBallMass_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.BallMassDiameterScaling",
+      "source": "section3-diffusion/RequestProject/Section31/BallMassDiameterScaling.lean",
+      "source_sha256": "6f6365dfa871a036eeeee662839d7caf4797ab103f097158d6b3e53b0604c789",
+      "log": "logs/RequestProject_Section31_BallMassDiameterScaling-2026-10-14T180528.055738_0000.log",
+      "log_sha256": "470e727994fb401bf59d3fa5252eb436ed6cae03db40d783cf5832d158b1ff63",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.MeasuredGHP.diameterNormalized_ball_eq_native",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.local_power_volume_lower_positive_scaling",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.local_logarithmic_volume_upper_positive_scaling",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.LinearEquivEnergyCompleteness",
+      "source": "section3-diffusion/RequestProject/Section31/LinearEquivEnergyCompleteness.lean",
+      "source_sha256": "506ede4d902220662eb8a1bf90c998e710bba033f7ab963108c464359830572d",
+      "log": "logs/RequestProject_Section31_LinearEquivEnergyCompleteness-2026-10-14T180312.272070_0000.log",
+      "log_sha256": "3694b283fb2bb07bec8d8c13feefe478a0491b645bbc3812981ed5c8ab9f82c3",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.completeSpace_of_linearEquiv_norm_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.completeSpace_of_linearEquiv_energy_square_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSOriginalEnergyCompleteness",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSOriginalEnergyCompleteness.lean",
+      "source_sha256": "7c855446557437eb6bb9a5d4257d8159b79e23ce1bffcdb10b2d46de516d50aa",
+      "log": "logs/RequestProject_Section31_EIGSOriginalEnergyCompleteness-2026-10-14T180337.580684_0000.log",
+      "log_sha256": "a3009de6dd9bc3c5b63b129eaf65cb6af60352178a3130512b3d6702dcb04405",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiOriginalEnergySpace_complete_of_anchored_extension",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.QuadraticEnergyOriginalClosedIdentification",
+      "source": "section3-diffusion/RequestProject/Section31/QuadraticEnergyOriginalClosedIdentification.lean",
+      "source_sha256": "780be54c2d97d9579138b27caa97d5d099ec8bf61d07a541b1d62977bb3e03b8",
+      "log": "logs/RequestProject_Section31_QuadraticEnergyOriginalClosedIdentification-2026-10-14T180820.131011_0000.log",
+      "log_sha256": "83916991fd774320fbfd73656a65f1084e9da05318ae0246406beb31b3e73414",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.QuadraticEnergySpace.closedDomain_eq_original_of_complete",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSDiameterBallMassOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSDiameterBallMassOfRules.lean",
+      "source_sha256": "2cf63058d2c609c530dc51f0bf290ab9d10b5701d82509028f12f3eab171d992",
+      "log": "logs/RequestProject_Section31_EIGSDiameterBallMassOfRules-2026-10-14T181031.680477_0000.log",
+      "log_sha256": "58907a609118c61f06815a6d7189b1c0769ddea880cad3914950873304f597e8",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiTypicalDiameterBallMass_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSOriginalClosedEnergyIdentification",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSOriginalClosedEnergyIdentification.lean",
+      "source_sha256": "84ffaa459f50b4e49db1ad639bdfce3fdbd0ff7134d266648d6fc2b810012d4b",
+      "log": "logs/RequestProject_Section31_EIGSOriginalClosedEnergyIdentification-2026-10-14T180843.088343_0000.log",
+      "log_sha256": "7f73074985e56c4d4a7bd075bb2c521f3fd284321d9a292da71cf377ec7f4d11",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiOriginal_closedDomain_eq",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSFiniteBornDiameterBallMassOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSFiniteBornDiameterBallMassOfRules.lean",
+      "source_sha256": "17ab6ddf6153ea8fa9e4b40f62be0819b63f35c3de1a36ce83101830fbe90a64",
+      "log": "logs/RequestProject_Section31_EIGSFiniteBornDiameterBallMassOfRules-2026-10-14T181111.122729_0000.log",
+      "log_sha256": "e48069d4b5b6f68ac57aaf1894a76774043442f0df6b88c11cb57545831a61a3",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiFiniteBornDiameterBallMass_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSNativeFinitePrefixSurvival",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSNativeFinitePrefixSurvival.lean",
+      "source_sha256": "35b9b655b5b093c74780e023e9fe5b42036ed6f7c2e4f30f1830f11f1c4d1dbd",
+      "log": "logs/RequestProject_Section31_EIGSNativeFinitePrefixSurvival-2026-10-14T181214.471222_0000.log",
+      "log_sha256": "13aa55c44c9a5a6300b1a408167090c2231b99a216d4e750d779e051a848de77",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiNativeFinitePrefixSurvival_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.GeometricBallSurvivalTimeChoice",
+      "source": "section3-diffusion/RequestProject/Section31/GeometricBallSurvivalTimeChoice.lean",
+      "source_sha256": "de786a118c9a3a3f30742b0acd6188d04154e43e4cb12d69899886f3f585fbad",
+      "log": "logs/RequestProject_Section31_GeometricBallSurvivalTimeChoice-2026-10-14T181300.087718_0000.log",
+      "log_sha256": "f7c79db6970447feb95d80e4c1f0cee96cd55c11cdf18eead2194d7e8e200946",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.geometric_ball_survival_time_choice",
           "axioms": [
             "propext",
             "Classical.choice",

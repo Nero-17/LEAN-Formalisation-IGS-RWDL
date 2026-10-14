@@ -1064,6 +1064,14 @@
     "has_independent_receipt": true
   },
   {
+    "source": "section3-diffusion/RequestProject/Section31/BallMassDiameterScaling.lean",
+    "module": "RequestProject.Section31.BallMassDiameterScaling",
+    "source_sha256": "6f6365dfa871a036eeeee662839d7caf4797ab103f097158d6b3e53b0604c789",
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": false,
+    "has_independent_receipt": true
+  },
+  {
     "source": "section3-diffusion/RequestProject/Section31/BanachBackwardObservations.lean",
     "module": "RequestProject.Section31.BanachBackwardObservations",
     "source_sha256": "77b5b78f384310acf44e7a97d801fb0734f0a9dc0c4e2a24c21c9784709b78ec",
@@ -1552,6 +1560,14 @@
     "has_independent_receipt": true
   },
   {
+    "source": "section3-diffusion/RequestProject/Section31/ContinuousPathScaledBallExit.lean",
+    "module": "RequestProject.Section31.ContinuousPathScaledBallExit",
+    "source_sha256": "c3ad0d99d33719a484a334cfcd286e4363ac5b2f171dd30a7d54fa069eea7c42",
+    "status": "not_covered_by_published_receipts",
+    "in_shared_batch": false,
+    "has_independent_receipt": false
+  },
+  {
     "source": "section3-diffusion/RequestProject/Section31/ContinuousPathStoppingConditionalExpectation.lean",
     "module": "RequestProject.Section31.ContinuousPathStoppingConditionalExpectation",
     "source_sha256": "fc1f6ac8e9b582b6e3eda56e130e3d76d10c8819643bb861b96e2388bbc5184a",
@@ -1618,7 +1634,7 @@
   {
     "source": "section3-diffusion/RequestProject/Section31/ContinuousResistanceFormAxioms.lean",
     "module": "RequestProject.Section31.ContinuousResistanceFormAxioms",
-    "source_sha256": "d1f506db8c5abd7bbf9b6f30b6474bc2cc6728727fb952e9f943277bb4e8208d",
+    "source_sha256": "99a5d26b9b66f5aed59f88c2c8f94ff7897055b1ecb27256505e9b039ebee9d5",
     "status": "not_covered_by_published_receipts",
     "in_shared_batch": false,
     "has_independent_receipt": false
@@ -1984,6 +2000,14 @@
     "has_independent_receipt": false
   },
   {
+    "source": "section3-diffusion/RequestProject/Section31/EIGSAllCoarseSkeletonReachUpper.lean",
+    "module": "RequestProject.Section31.EIGSAllCoarseSkeletonReachUpper",
+    "source_sha256": "801a07637798026bb66d64c44c561bdc8f5d6ce49c510ea40b0eee056c9046a8",
+    "status": "not_covered_by_published_receipts",
+    "in_shared_batch": false,
+    "has_independent_receipt": false
+  },
+  {
     "source": "section3-diffusion/RequestProject/Section31/EIGSAllPointBallMassLowerOfRules.lean",
     "module": "RequestProject.Section31.EIGSAllPointBallMassLowerOfRules",
     "source_sha256": "3dc5dd5dd69fbd7471f2cf43da2af523a82fd45aa162dbe1a17c8366841af628",
@@ -2002,7 +2026,15 @@
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSAllPointGeometricBallMassUpper.lean",
     "module": "RequestProject.Section31.EIGSAllPointGeometricBallMassUpper",
-    "source_sha256": "76b76a120c3154a5738264f7673a173a3b061a529ee531c33012632316b04fcd",
+    "source_sha256": "75233ebba05cba99cba6a79a07f5c3e7b255bdbf67d37087ba9f9f20461114d2",
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": false,
+    "has_independent_receipt": true
+  },
+  {
+    "source": "section3-diffusion/RequestProject/Section31/EIGSAllSourceStarExitUpper.lean",
+    "module": "RequestProject.Section31.EIGSAllSourceStarExitUpper",
+    "source_sha256": "52bca82f1036ec576e35a8ad1732c7fb38dea62dab5f6b51ab7393ae418b6738",
     "status": "not_covered_by_published_receipts",
     "in_shared_batch": false,
     "has_independent_receipt": false
@@ -2386,18 +2418,18 @@
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSCompletedResistanceMetric.lean",
     "module": "RequestProject.Section31.EIGSCompletedResistanceMetric",
-    "source_sha256": "aa422570e069175d9e17e2bea5e488cec13bdc93ea9f883f9e2b870e21da5e20",
-    "status": "not_covered_by_published_receipts",
+    "source_sha256": "16b1fb40f7ce5c1651fe4b4b8876fbf9089d0bcd34daa83da89ab09c88ad9b97",
+    "status": "independent_whole_file_passed",
     "in_shared_batch": false,
-    "has_independent_receipt": false
+    "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSCompletedResistanceTriangle.lean",
     "module": "RequestProject.Section31.EIGSCompletedResistanceTriangle",
     "source_sha256": "74a54a942e75b2031923cfba6eead03d79a7fc9c454726a39f6971e79166ae3a",
-    "status": "revised_after_failure_not_rechecked",
+    "status": "independent_whole_file_passed",
     "in_shared_batch": false,
-    "has_independent_receipt": false
+    "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSCompletedResistanceVariational.lean",
@@ -2514,8 +2546,8 @@
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSContinuousPathBallSurvivalOfRules.lean",
     "module": "RequestProject.Section31.EIGSContinuousPathBallSurvivalOfRules",
-    "source_sha256": "993294a6486e1c2495d59020b0d22b64e475a9f6abc20746525ab22f7ca5a700",
-    "status": "not_covered_by_published_receipts",
+    "source_sha256": "53872179647647b50c7a164b0d298e544fdd48a1df9801c2887e443164344dc9",
+    "status": "failed_current_source",
     "in_shared_batch": false,
     "has_independent_receipt": false
   },
@@ -2685,6 +2717,14 @@
     "source_sha256": "92560935f4e156cbecca1e83490d3f30ca850f14ade18cc79070824b66e2e7ec",
     "status": "independent_whole_file_passed",
     "in_shared_batch": true,
+    "has_independent_receipt": true
+  },
+  {
+    "source": "section3-diffusion/RequestProject/Section31/EIGSDiameterBallMassOfRules.lean",
+    "module": "RequestProject.Section31.EIGSDiameterBallMassOfRules",
+    "source_sha256": "2cf63058d2c609c530dc51f0bf290ab9d10b5701d82509028f12f3eab171d992",
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": false,
     "has_independent_receipt": true
   },
   {
@@ -2896,6 +2936,30 @@
     "has_independent_receipt": true
   },
   {
+    "source": "section3-diffusion/RequestProject/Section31/EIGSFiniteBornBallMassOfRules.lean",
+    "module": "RequestProject.Section31.EIGSFiniteBornBallMassOfRules",
+    "source_sha256": "f457e57f63dc59a9b37f4a4f4b8f1e8eb345184d78079032019d8ad25c53297d",
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": false,
+    "has_independent_receipt": true
+  },
+  {
+    "source": "section3-diffusion/RequestProject/Section31/EIGSFiniteBornDiameterBallMassOfRules.lean",
+    "module": "RequestProject.Section31.EIGSFiniteBornDiameterBallMassOfRules",
+    "source_sha256": "17ab6ddf6153ea8fa9e4b40f62be0819b63f35c3de1a36ce83101830fbe90a64",
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": false,
+    "has_independent_receipt": true
+  },
+  {
+    "source": "section3-diffusion/RequestProject/Section31/EIGSFiniteBornGeometricBallMassLower.lean",
+    "module": "RequestProject.Section31.EIGSFiniteBornGeometricBallMassLower",
+    "source_sha256": "9657f2ef7e1737712880cd349c34bd128c86c9f889f1744b6e0b830f4c47deb8",
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": false,
+    "has_independent_receipt": true
+  },
+  {
     "source": "section3-diffusion/RequestProject/Section31/EIGSFiniteBornHeatLowerOfRules.lean",
     "module": "RequestProject.Section31.EIGSFiniteBornHeatLowerOfRules",
     "source_sha256": "45a44a7073b526af83d22a3d5d0c71f2caa673336bcfc2d22855a7041ff5cfdf",
@@ -3086,6 +3150,22 @@
     "status": "independent_whole_file_passed",
     "in_shared_batch": true,
     "has_independent_receipt": true
+  },
+  {
+    "source": "section3-diffusion/RequestProject/Section31/EIGSFlowerRuleConnectivity.lean",
+    "module": "RequestProject.Section31.EIGSFlowerRuleConnectivity",
+    "source_sha256": "6a6b15305d39e6e2a7a73f27ac9b51a04fc836ce1cc285734083207d4d42943d",
+    "status": "not_covered_by_published_receipts",
+    "in_shared_batch": false,
+    "has_independent_receipt": false
+  },
+  {
+    "source": "section3-diffusion/RequestProject/Section31/EIGSFlowerRuleGraph.lean",
+    "module": "RequestProject.Section31.EIGSFlowerRuleGraph",
+    "source_sha256": "9f140141bf7d7a977ab51d9d82bf90201110861ebd5273acd2aa72a554251e7b",
+    "status": "not_covered_by_published_receipts",
+    "in_shared_batch": false,
+    "has_independent_receipt": false
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSFullFutureStoppingClosedIdentification.lean",
@@ -3762,10 +3842,10 @@
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSNativeFinitePrefixSurvival.lean",
     "module": "RequestProject.Section31.EIGSNativeFinitePrefixSurvival",
-    "source_sha256": "a0e37efecfa0520c1be111dc135f09b8fe2a81668a031c53a77f6054c5ab3071",
-    "status": "not_covered_by_published_receipts",
+    "source_sha256": "35b9b655b5b093c74780e023e9fe5b42036ed6f7c2e4f30f1830f11f1c4d1dbd",
+    "status": "independent_whole_file_passed",
     "in_shared_batch": false,
-    "has_independent_receipt": false
+    "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSNativeFiniteResolvent.lean",
@@ -4136,6 +4216,14 @@
     "has_independent_receipt": false
   },
   {
+    "source": "section3-diffusion/RequestProject/Section31/EIGSNormalizedContinuousBallSurvival.lean",
+    "module": "RequestProject.Section31.EIGSNormalizedContinuousBallSurvival",
+    "source_sha256": "fe11f96513f8ac922cd87816e013a0591d513955e5c063d5a78c96528b7f690e",
+    "status": "not_covered_by_published_receipts",
+    "in_shared_batch": false,
+    "has_independent_receipt": false
+  },
+  {
     "source": "section3-diffusion/RequestProject/Section31/EIGSOneStepCellEnergy.lean",
     "module": "RequestProject.Section31.EIGSOneStepCellEnergy",
     "source_sha256": "2b1d2c9c4a3e085bf4d5364d3ae1e772982330d7131a789aadc4fec426c93b50",
@@ -4147,9 +4235,9 @@
     "source": "section3-diffusion/RequestProject/Section31/EIGSOriginalClosedEnergyIdentification.lean",
     "module": "RequestProject.Section31.EIGSOriginalClosedEnergyIdentification",
     "source_sha256": "84ffaa459f50b4e49db1ad639bdfce3fdbd0ff7134d266648d6fc2b810012d4b",
-    "status": "not_covered_by_published_receipts",
+    "status": "independent_whole_file_passed",
     "in_shared_batch": false,
-    "has_independent_receipt": false
+    "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSOriginalCommonGlobalJ1RestrictionOfRules.lean",
@@ -4219,9 +4307,9 @@
     "source": "section3-diffusion/RequestProject/Section31/EIGSOriginalEnergyCompleteness.lean",
     "module": "RequestProject.Section31.EIGSOriginalEnergyCompleteness",
     "source_sha256": "7c855446557437eb6bb9a5d4257d8159b79e23ce1bffcdb10b2d46de516d50aa",
-    "status": "not_covered_by_published_receipts",
+    "status": "independent_whole_file_passed",
     "in_shared_batch": false,
-    "has_independent_receipt": false
+    "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSOriginalMeasuredGHP.lean",
@@ -4370,10 +4458,10 @@
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSResistanceMetricOfRules.lean",
     "module": "RequestProject.Section31.EIGSResistanceMetricOfRules",
-    "source_sha256": "4636a448be18b8cf1bac3e3c6ed9e037997d956475cf80125b25c53b251d0d65",
-    "status": "not_covered_by_published_receipts",
+    "source_sha256": "d4c1954ac6a95c51b4e94c4ff64c790e95f1a2b436c09b5cd222575f545536e1",
+    "status": "independent_whole_file_passed",
     "in_shared_batch": false,
-    "has_independent_receipt": false
+    "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSResistanceNormalization.lean",
@@ -4438,6 +4526,14 @@
     "status": "independent_whole_file_passed",
     "in_shared_batch": false,
     "has_independent_receipt": true
+  },
+  {
+    "source": "section3-diffusion/RequestProject/Section31/EIGSSameNativeNormalizedTrueExitSurvivalOfRules.lean",
+    "module": "RequestProject.Section31.EIGSSameNativeNormalizedTrueExitSurvivalOfRules",
+    "source_sha256": "3fffc645f119f3459faf37054acf3924d5cb3a99bf422709f48d8c41e81b7165",
+    "status": "not_covered_by_published_receipts",
+    "in_shared_batch": false,
+    "has_independent_receipt": false
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSSameNativeTrueExitSurvivalOfRules.lean",
@@ -4682,10 +4778,10 @@
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSUniformVertexIncidenceBound.lean",
     "module": "RequestProject.Section31.EIGSUniformVertexIncidenceBound",
-    "source_sha256": "b2b0f38205cead0f28c8751e767fee0bb23db95503ee11c1550ae223e150f27d",
-    "status": "not_covered_by_published_receipts",
+    "source_sha256": "11400b8fa07710f91920a97ea6bbf7f68af7415f2197f4526b92ac45702cb86c",
+    "status": "independent_whole_file_passed",
     "in_shared_batch": false,
-    "has_independent_receipt": false
+    "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSUnitEnergyRecovery.lean",
@@ -4950,6 +5046,14 @@
     "status": "shared_dependency_batch_passed",
     "in_shared_batch": true,
     "has_independent_receipt": false
+  },
+  {
+    "source": "section3-diffusion/RequestProject/Section31/EIGSVertexStarBallMassLower.lean",
+    "module": "RequestProject.Section31.EIGSVertexStarBallMassLower",
+    "source_sha256": "a515d9d43bdac1a03a4785a62e4495a1b88b559ef48a9e5fb0c3f5b2b66de37a",
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": false,
+    "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSVertexWeakLimit.lean",
@@ -5266,10 +5370,10 @@
   {
     "source": "section3-diffusion/RequestProject/Section31/FiniteSupportWeakBallSurvival.lean",
     "module": "RequestProject.Section31.FiniteSupportWeakBallSurvival",
-    "source_sha256": "685ef65f26d32da04612ae0a2a5fa12e32ce7329896a193767f13e01e7f44539",
-    "status": "revised_after_failure_not_rechecked",
+    "source_sha256": "8ffc257bce35f46241b0f129d5e92612d5d5dc74cd0f609ba41d0ce3bd9cb004",
+    "status": "independent_whole_file_passed",
     "in_shared_batch": false,
-    "has_independent_receipt": false
+    "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/FiniteWindowModulusCover.lean",
@@ -5339,9 +5443,9 @@
     "source": "section3-diffusion/RequestProject/Section31/GeometricBallSurvivalTimeChoice.lean",
     "module": "RequestProject.Section31.GeometricBallSurvivalTimeChoice",
     "source_sha256": "de786a118c9a3a3f30742b0acd6188d04154e43e4cb12d69899886f3f585fbad",
-    "status": "not_covered_by_published_receipts",
+    "status": "independent_whole_file_passed",
     "in_shared_batch": false,
-    "has_independent_receipt": false
+    "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/GeometricContinuousExtension.lean",
@@ -5531,9 +5635,9 @@
     "source": "section3-diffusion/RequestProject/Section31/LinearEquivEnergyCompleteness.lean",
     "module": "RequestProject.Section31.LinearEquivEnergyCompleteness",
     "source_sha256": "506ede4d902220662eb8a1bf90c998e710bba033f7ab963108c464359830572d",
-    "status": "not_covered_by_published_receipts",
+    "status": "independent_whole_file_passed",
     "in_shared_batch": false,
-    "has_independent_receipt": false
+    "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/LogarithmicCollarSchedule.lean",
@@ -6018,10 +6122,10 @@
   {
     "source": "section3-diffusion/RequestProject/Section31/QuadraticEnergyOriginalClosedIdentification.lean",
     "module": "RequestProject.Section31.QuadraticEnergyOriginalClosedIdentification",
-    "source_sha256": "a93d2dcb81467255962302eb22725e093f9a8561f50438d25ea7e48356e76c6b",
-    "status": "not_covered_by_published_receipts",
+    "source_sha256": "780be54c2d97d9579138b27caa97d5d099ec8bf61d07a541b1d62977bb3e03b8",
+    "status": "independent_whole_file_passed",
     "in_shared_batch": false,
-    "has_independent_receipt": false
+    "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/QuadraticEnergyPoincareClosure.lean",
@@ -6458,8 +6562,8 @@
   {
     "source": "section3-diffusion/RequestProject/Section31/UniformDenseFiniteInterpolation.lean",
     "module": "RequestProject.Section31.UniformDenseFiniteInterpolation",
-    "source_sha256": "7f8af972430e8415f3c1f893c650de48980fe7a775d881860472eeefcdf3b6d9",
-    "status": "not_covered_by_published_receipts",
+    "source_sha256": "5fcdb5933d543f2a36c088788947f29076b302b5e47426c22bfa28aec1e02e13",
+    "status": "revised_after_failure_not_rechecked",
     "in_shared_batch": false,
     "has_independent_receipt": false
   },

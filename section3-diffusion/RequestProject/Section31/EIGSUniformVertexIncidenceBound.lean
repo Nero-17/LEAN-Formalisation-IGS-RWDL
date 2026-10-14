@@ -35,14 +35,25 @@ theorem exists_xiUniformVertex_incidence_bound (system : EIGSData K)
     dsimp only [coefficient]
     linarith
   refine ⟨coefficient, coefficientPositive, ?_⟩
+  suffices allLevels : ∀ level (vertex : XiVtx system (0 + level)),
+      (xiVertexIncidenceCount system (0 + level) vertex : ℝ) ≤
+        coefficient * finiteRealMatrixSpectralRadius (degreeMatrix system) ^ level by
+    intro level
+    have transported : ∀ index : ℕ, 0 + level = index → ∀ vertex : XiVtx system index,
+        (xiVertexIncidenceCount system index vertex : ℝ) ≤
+          coefficient * finiteRealMatrixSpectralRadius (degreeMatrix system) ^ level := by
+      intro index equality
+      subst index
+      exact allLevels level
+    exact transported level (Nat.zero_add level)
   intro level vertex
   by_cases inherited : ∃ initial : XiVtx system 0, xiForward system 0 level initial = vertex
   · obtain ⟨initial, equality⟩ := inherited
     have initialBound := (bounds initial level).2
     rw [← xiVertexIncidenceCount_eq_degree_state_sum] at initialBound
-    have actual : (xiVertexIncidenceCount system level vertex : ℝ) ≤
+    have actual : (xiVertexIncidenceCount system (0 + level) vertex : ℝ) ≤
         upper initial * finiteRealMatrixSpectralRadius (degreeMatrix system) ^ level := by
-      simpa only [Nat.zero_add, equality] using initialBound
+      simpa only [equality] using initialBound
     exact actual.trans (mul_le_mul_of_nonneg_right (initialComparison initial)
       (pow_nonneg degreePositive.le level))
   · have noInitial : ∀ initial : XiVtx system 0, xiForward system 0 level initial ≠ vertex := by

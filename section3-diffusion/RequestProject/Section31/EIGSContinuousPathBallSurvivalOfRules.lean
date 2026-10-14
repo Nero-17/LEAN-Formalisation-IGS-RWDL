@@ -93,7 +93,7 @@ theorem xiNativeContinuousBallSurvivalFamilyProperties_of_restriction (system : 
         distancePositive normalization normalizationPositive globalLaws →
       XiNativeContinuousBallSurvivalFamilyProperties system rulesConnected rulesLoopless rulesUnique plantingNonadjacent
         distancePositive globalLaws := by
-  intro parameters
+  let parameters := xiPathMetricDataOfRules system rulesConnected rulesLoopless rulesUnique distancePositive
   let distanceGreaterThanOne : 1 < system.distanceSpectralRadius rulesConnected :=
     (by norm_num : (1 : ℝ) < 2).trans_le
       (system.two_le_distanceSpectralRadius rulesConnected rulesUnique plantingNonadjacent distancePositive)
@@ -104,6 +104,7 @@ theorem xiNativeContinuousBallSurvivalFamilyProperties_of_restriction (system : 
   letI : BorelSpace parameters.LimitSpace := ⟨rfl⟩
   letI : MeasurableSpace C(ℝ≥0, parameters.LimitSpace) := borel _
   letI : BorelSpace C(ℝ≥0, parameters.LimitSpace) := ⟨rfl⟩
+  dsimp only
   intro globalLaws restrictionFamily
   dsimp only [XiNativeGlobalRestrictionFamilyProperties] at restrictionFamily
   dsimp only [XiNativeContinuousBallSurvivalFamilyProperties]

@@ -39,3 +39,6 @@ structure ContinuousResistanceFormAxioms
 
 end
 end IGS.Sec31
+
+#print axioms IGS.Sec31.ContinuousResistanceFormAxioms
+#print axioms IGS.Sec31.ContinuousResistanceFormAxioms.mk

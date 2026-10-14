@@ -33,7 +33,10 @@ theorem closedDomain_eq_original_of_complete
   constructor
   · rintro ⟨completed, rfl⟩
     obtain ⟨original, equality⟩ := embeddingSurjective completed
-    rw [← equality, completionMap_coe]
+    rw [← equality]
+    change completionMap domain form nonnegative
+      (original : Completion (QuadraticEnergySpace domain form nonnegative)) ∈ domain
+    rw [completionMap_coe]
     exact original.value.property
   · intro membership
     exact original_mem_closedDomain domain form nonnegative ⟨point, membership⟩

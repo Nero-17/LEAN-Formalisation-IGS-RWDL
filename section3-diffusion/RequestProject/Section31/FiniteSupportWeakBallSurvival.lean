@@ -91,7 +91,8 @@ theorem finiteSupport_weak_global_ball_survival
   have globalGoodMeasurable : MeasurableSet globalGood :=
     functionGoodMeasurable.preimage globalMapMeasurable
   have globalBad : (globalLaw : Measure C(ℝ≥0, State)) globalGoodᶜ ≤ ENNReal.ofReal (1 / 4) := by
-    change (limit : Measure (FiniteSupportPathSpace paths)) goodᶜ = _ at badEquality
+    change (limit : Measure (FiniteSupportPathSpace paths)) goodᶜ =
+      (globalLaw : Measure C(ℝ≥0, State)) globalGoodᶜ at badEquality
     rw [← badEquality]
     exact limitBad
   have realGlobalBad : (globalLaw : Measure C(ℝ≥0, State)).real globalGoodᶜ ≤ (1 / 4 : ℝ) := by
@@ -108,7 +109,10 @@ theorem finiteSupport_weak_global_ball_survival
       (fun time : Icc (0 : ℝ) (horizon : ℝ) => path ⟨time.val, time.property.1⟩) :=
     path.continuous.comp (continuous_subtype_val.subtype_mk fun time => time.property.1)
   have bound : dist (path observed) center ≤ innerRadius :=
-    timesDense.induction_on ⟨observed, observed.property, observedInInterval⟩
+    timesDense.induction_on
+      (p := fun time : Icc (0 : ℝ) (horizon : ℝ) =>
+        dist (path ⟨time.val, time.property.1⟩) center ≤ innerRadius)
+      ⟨observed, observed.property, observedInInterval⟩
       (isClosed_le (restrictedContinuous.dist continuous_const) continuous_const) denseBound
   exact bound.trans_lt radiusMargin
 

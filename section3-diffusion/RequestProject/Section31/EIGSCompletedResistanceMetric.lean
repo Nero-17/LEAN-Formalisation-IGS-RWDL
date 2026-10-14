@@ -47,10 +47,13 @@ variable (extension : XiAnchoredEnergyHilbert system rulesConnected resistanceRa
       2 ≤ (ruleSG system colour).dist (system.plantPlus colour) (system.plantMinus colour))
     (mass : XiMassParameters system)
 
+include agreement rulesLoopless rulesUnique plantingNonadjacent distancePositive oneColourDistance mass in
 theorem xiCompletedResistanceRow_injective :
     Function.Injective (xiCompletedResistanceRow system rulesConnected lengths lengthsPositive distanceRate
       distanceRateGreaterThanOne metricEigenpair resistanceRate ratePositive resistanceVector vectorPositive
       eigenpair anchor extension) := by
+  letI := xiCompletion_compactSpace system rulesConnected lengths lengthsPositive distanceRate
+    distanceRateGreaterThanOne metricEigenpair
   intro first second rowEquality
   have energyFunctionEquality : ∀ function : xiContinuousFiniteEnergyDomain system rulesConnected lengths lengthsPositive
       distanceRate distanceRateGreaterThanOne metricEigenpair resistanceRate ratePositive resistanceVector vectorPositive,
@@ -66,15 +69,17 @@ theorem xiCompletedResistanceRow_injective :
     have continuousAgreement : extension normalized.val = function.val - ContinuousMap.const _ anchorValue := by
       apply ContinuousMap.ext
       intro point
-      apply (xiCompletionUnionEmbedding_denseRange system rulesConnected lengths lengthsPositive distanceRate
+      refine (xiCompletionUnionEmbedding_denseRange system rulesConnected lengths lengthsPositive distanceRate
         (zero_lt_one.trans distanceRateGreaterThanOne) metricEigenpair).induction_on point
-        (isClosed_eq (extension normalized.val).continuous (function.val - ContinuousMap.const _ anchorValue).continuous)
+        (isClosed_eq (extension normalized.val).continuous (function.val - ContinuousMap.const _ anchorValue).continuous) ?_
       intro vertex
       rw [agreement, normalizedProperty.1]
       rfl
     have differenceEquality := congrArg
       (fun row : xiZeroAnchoredEnergyDomain system rulesConnected resistanceRate ratePositive resistanceVector
         vectorPositive eigenpair anchor => inner ℝ row normalized) rowEquality
+    dsimp only at differenceEquality
+    unfold xiCompletedResistanceRow at differenceEquality
     rw [← continuousOperatorKernelRow_represents, ← continuousOperatorKernelRow_represents] at differenceEquality
     change extension normalized.val first = extension normalized.val second at differenceEquality
     rw [continuousAgreement] at differenceEquality
@@ -84,7 +89,7 @@ theorem xiCompletedResistanceRow_injective :
   have distancePositive' : 0 < dist first second := dist_pos.mpr distinct
   let target : C(XiMetricCompletion system rulesConnected lengths lengthsPositive distanceRate
       (zero_lt_one.trans distanceRateGreaterThanOne) metricEigenpair, ℝ) :=
-    ⟨fun point => dist point first, continuous_dist continuous_id continuous_const⟩
+    ⟨fun point => dist point first, continuous_id.dist continuous_const⟩
   obtain ⟨function, close⟩ := (xiClosedLpEnergy_regular_core system rulesConnected rulesLoopless rulesUnique
     plantingNonadjacent distancePositive oneColourDistance lengths lengthsPositive distanceRate distanceRateGreaterThanOne
     metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive eigenpair).1
@@ -102,9 +107,12 @@ theorem xiCompletedResistanceRow_injective :
 
 variable (extensionCompact : IsCompactOperator extension)
 
+include agreement rulesLoopless rulesUnique plantingNonadjacent distancePositive oneColourDistance mass extensionCompact in
 def xiCompletedResistanceMetric : MetricSpace
     (XiMetricCompletion system rulesConnected lengths lengthsPositive distanceRate
       (zero_lt_one.trans distanceRateGreaterThanOne) metricEigenpair) := by
+  letI := xiCompletion_compactSpace system rulesConnected lengths lengthsPositive distanceRate
+    distanceRateGreaterThanOne metricEigenpair
   let resistance := xiCompletedResistance system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
     metricEigenpair resistanceRate ratePositive resistanceVector vectorPositive eigenpair anchor extension
   have rowContinuous := xiCompletedResistanceRow_continuous system rulesConnected lengths lengthsPositive distanceRate
@@ -133,8 +141,9 @@ def xiCompletedResistanceMetric : MetricSpace
 theorem xiCompletedResistanceMetric_original_topology :
     (xiCompletedResistanceMetric system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
       metricEigenpair resistanceRate ratePositive resistanceVector vectorPositive eigenpair anchor extension agreement
-      rulesLoopless rulesUnique plantingNonadjacent distancePositive oneColourDistance mass extensionCompact).toTopologicalSpace =
-    inferInstance := rfl
+      rulesLoopless rulesUnique plantingNonadjacent distancePositive oneColourDistance mass extensionCompact).toPseudoMetricSpace.toUniformSpace.toTopologicalSpace =
+    (inferInstance : TopologicalSpace (XiMetricCompletion system rulesConnected lengths lengthsPositive distanceRate
+      (zero_lt_one.trans distanceRateGreaterThanOne) metricEigenpair)) := rfl
 
 theorem xiCompletedResistanceMetric_distance
     (first second : XiMetricCompletion system rulesConnected lengths lengthsPositive distanceRate

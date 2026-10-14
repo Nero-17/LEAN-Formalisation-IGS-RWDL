@@ -31,6 +31,7 @@ theorem exists_xiAllPointGeometricBallMassUpper (system : EIGSData K)
       (fun colour => minimumBound colour (Finset.mem_univ _))
   obtain ⟨degreeConstant, degreeConstantPositive, incidenceBound⟩ :=
     exists_xiUniformVertex_incidence_bound system connected primitiveDegree
+  have minimumPositive := lengthsPositive minimumColour
   let radiusFactor := lengths minimumColour / 4
   have radiusFactorPositive : 0 < radiusFactor := by dsimp only [radiusFactor]; positivity
   refine ⟨2 * massConstant * degreeConstant, radiusFactor, by positivity, radiusFactorPositive, ?_⟩

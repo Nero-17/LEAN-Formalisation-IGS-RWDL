@@ -11,13 +11,21 @@ Candidate source: compilation is not claimed. -/
 
 namespace IGS.Sec31
 open Set
+open scoped Classical
 noncomputable section
 variable {Space : Type*} [MetricSpace Space] [CompactSpace Space]
 
 def finiteInterpolationHat (points : Finset Space) (anchor : points) : C(Space, ℝ) := by
   classical
-  exact ⟨fun point => ∏ other : points,
-    if other = anchor then 1 else dist point other.val / dist anchor.val other.val, by fun_prop⟩
+  refine ⟨fun point => ∏ other : points,
+    if other = anchor then 1 else dist point other.val / dist anchor.val other.val, ?_⟩
+  apply continuous_finset_prod
+  intro other _
+  by_cases identical : other = anchor
+  · simp only [if_pos identical]
+    exact continuous_const
+  · simp only [if_neg identical]
+    fun_prop
 
 theorem finiteInterpolationHat_eval (points : Finset Space) (anchor vertex : points) :
     finiteInterpolationHat points anchor vertex.val = if vertex = anchor then 1 else 0 := by
