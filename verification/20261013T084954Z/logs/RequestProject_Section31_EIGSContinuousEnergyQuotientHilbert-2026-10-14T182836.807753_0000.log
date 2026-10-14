@@ -1,0 +1,3 @@
+'EIGS.xiContinuousEnergyHilbertNormalization_energy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiContinuousEnergyHilbertNormalization_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiContinuousEnergyHilbertNormalization_surjective' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,5 @@
+'EIGS.flowerPoint_branch_label' depends on axioms: [propext, Quot.sound]
+'EIGS.flowerGraph_endpoint_branch_labels' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.flowerGraph_has_labeled_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.flowerGraph_minimum_endpoint_height' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.flowerSystem_edgesUnique' depends on axioms: [propext, Classical.choice, Quot.sound]

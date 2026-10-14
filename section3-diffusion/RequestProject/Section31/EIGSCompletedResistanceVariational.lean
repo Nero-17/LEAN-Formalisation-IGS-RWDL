@@ -68,6 +68,7 @@ theorem exists_unique_xiContinuousEnergy_zero_anchored_representative
   · intro vertex
     have equality := congrArg (fun continuous => continuous (xiCompletionUnionEmbedding system rulesConnected lengths lengthsPositive
       distanceRate (zero_lt_one.trans distanceRateGreaterThanOne) metricEigenpair vertex)) otherProperty.1
+    dsimp only at equality
     rw [agreement] at equality
     exact equality
   · exact otherProperty.2
@@ -113,6 +114,7 @@ theorem xiCompletedResistance_sharp_continuous_energy_bound
   have differenceIdentity : inner ℝ rowDifference representative = function.val first - function.val second := by
     rw [xiCompletedResistanceRow_sub_represents, representativeProperty.1]
     change function.val first - _ - (function.val second - _) = _
+    simp only [ContinuousMap.const_apply]
     ring
   have bound := abs_real_inner_le_norm rowDifference representative
   have squared := (sq_le_sq₀ (abs_nonneg _)

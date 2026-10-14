@@ -1,0 +1,3 @@
+'IGS.Sec31.DiscreteMarkov.skorokhodJ1Distance_constant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.cadlagJ1PrefixRadius_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.cadlagJ1PrefixRadius_open' depends on axioms: [propext, Classical.choice, Quot.sound]

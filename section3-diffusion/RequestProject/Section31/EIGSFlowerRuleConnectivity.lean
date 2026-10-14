@@ -46,10 +46,13 @@ theorem flowerPoint_reachable (branches segments : ℕ) (branch : Fin branches)
     | succ index induction =>
       intro bound
       have before : index ≤ segments := by omega
-      have edge : Fin branches × Fin segments := (branch, ⟨index, by omega⟩)
+      let edge : Fin branches × Fin segments := (branch, ⟨index, by omega⟩)
       have adjacent := flowerGraph_edge_adj branches segments edge
-      have joined := (induction before).trans adjacent.reachable
-      simpa only [edge, flowerEdgeStart, flowerEdgeEnd] using joined
+      have joined : (ruleSG (flowerSystem branches segments) 0).Reachable
+          (flowerPoint branches segments branch ⟨index, by omega⟩)
+          (flowerPoint branches segments branch ⟨index + 1, by omega⟩) := by
+        simpa only [edge, flowerEdgeStart, flowerEdgeEnd] using adjacent.reachable
+      exact (induction before).trans joined
   exact reaches position.val (by omega)
 
 theorem flowerSystem_connected (branches segments : ℕ)
@@ -57,6 +60,7 @@ theorem flowerSystem_connected (branches segments : ℕ)
     (ruleSG (flowerSystem branches segments) colour).Connected := by
   have colourZero : colour = 0 := Subsingleton.elim _ _
   subst colour
+  letI : Nonempty ((flowerSystem branches segments).rule 0).V := ⟨Sum.inl false⟩
   let initialBranch : Fin branches := ⟨0, branchesPositive⟩
   have reaches (vertex : Bool ⊕ (Fin branches × Fin (segments - 1))) :
       (ruleSG (flowerSystem branches segments) 0).Reachable (Sum.inl false) vertex := by

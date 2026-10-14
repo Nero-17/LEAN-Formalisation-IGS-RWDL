@@ -99,6 +99,7 @@ theorem xiContinuousResistanceQuadraticForm_normal_contraction
     ((xiWeightedEnergyDomain_iff system resistanceRate ratePositive resistanceVector vectorPositive _).mp function.property)
   exact extendedTraceEnergy_comp_le _ contraction contractionBound _
 
+include eigenpair in
 theorem xiContinuousFiniteEnergy_finite_interpolation
     (rulesLoopless : ∀ colour, (system.ruleNetwork colour).Loopless)
     (rulesUnique : ∀ colour, (system.ruleNetwork colour).EdgesUnique)

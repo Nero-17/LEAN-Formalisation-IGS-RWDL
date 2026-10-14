@@ -161,7 +161,11 @@ theorem xiNativeContinuousBallSurvivalFamilyProperties_of_restriction (system : 
       (coarse + steps)) (laws horizon)
     ((movingConvergence starts startsConverge horizon).comp shifted)
     (globalLaws center) (globalRestriction horizon) finiteBad
-  simpa only [horizon, ENNReal.ofReal_coe_nnreal] using survives
+  change (3 / 4 : ℝ) ≤ (globalLaws center : Measure C(ℝ≥0, parameters.LimitSpace)).real
+    {path | ENNReal.ofReal (horizon : ℝ) <
+      @continuousPathBallExit parameters.LimitSpace parameters.instMetricSpaceLimitSpace path center radius}
+  rw [ENNReal.ofReal_coe_nnreal]
+  exact survives
 
 end
 end EIGS

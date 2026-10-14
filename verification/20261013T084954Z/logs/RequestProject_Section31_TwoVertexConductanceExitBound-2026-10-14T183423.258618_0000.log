@@ -1,0 +1,33 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\TwoVertexConductanceExitBound.lean:50:44: warning: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only [zero_mul, zero_add, value, if_p̵o̵s̵ ̵r̵f̵l̵,̵ ̵i̵f̵_̵true, if_neg distinct, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\TwoVertexConductanceExitBound.lean:55:66: warning: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only [zero_mul, add_zero, value, if_neg distinct.symm, if_p̵o̵s̵ ̵r̵f̵l̵,̵ ̵i̵f̵_̵true, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\TwoVertexConductanceExitBound.lean:63:22: warning: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only [value, if_p̵o̵s̵ ̵r̵f̵l̵,̵ ̵i̵f̵_̵true, if_neg distinct, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\TwoVertexConductanceExitBound.lean:67:46: warning: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only [value, if_neg distinct.symm, if_p̵o̵s̵ ̵r̵f̵l̵,̵ ̵i̵f̵_̵true, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\TwoVertexConductanceExitBound.lean:93:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'IGS.Sec31.two_vertex_partialHit_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.conductance_one_exterior_edge_escape' depends on axioms: [propext, Classical.choice, Quot.sound]

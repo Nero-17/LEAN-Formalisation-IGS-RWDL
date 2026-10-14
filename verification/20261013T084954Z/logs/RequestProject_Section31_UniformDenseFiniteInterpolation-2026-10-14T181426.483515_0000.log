@@ -1,0 +1,17 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\UniformDenseFiniteInterpolation.lean:30:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.finiteInterpolationHat_eval`:
+  [CompactSpace Space]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CompactSpace Space] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\UniformDenseFiniteInterpolation.lean:55:37: warning: This simp argument is unused:
+  eq_comm
+
+Hint: Omit it from the simp argument list.
+  simp [finiteInterpolationHat_eval,̵ ̵e̵q̵_̵c̵o̵m̵m̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'IGS.Sec31.continuousFiniteInterpolation_eval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.uniformDenseSubmodule_finite_evaluation_surjective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

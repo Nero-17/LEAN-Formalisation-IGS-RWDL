@@ -1,0 +1,3 @@
+'EIGS.xiContinuousResistanceQuadraticForm_zero_iff_constant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiContinuousResistanceQuadraticForm_normal_contraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiContinuousFiniteEnergy_finite_interpolation' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,13 +1,13 @@
 {
-  "snapshot_utc": "2026-10-14T18:14:11.091732+00:00",
+  "snapshot_utc": "2026-10-14T18:44:22.666012+00:00",
   "round": "20261013T084954Z",
   "compiler": "Lean 4.28.0",
   "mathlib": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
-  "shared_dependency_modules": 690,
-  "shared_report": "integration-690.json",
-  "shared_report_sha256": "607fc8176247666e16f71894428d88124717974a7f34be9c1eb6954538e68064",
-  "independent_whole_file_count": 477,
-  "independent_audit_count": 1459,
+  "shared_dependency_modules": 805,
+  "shared_report": "integration-805.json",
+  "shared_report_sha256": "30ce9ba00e3ed4ced2fbe5a2a20f3401696338d4cf2d7971a25426a703e2def9",
+  "independent_whole_file_count": 500,
+  "independent_audit_count": 1516,
   "records": [
     {
       "module": "RequestProject.Section31.EIGSL2EnergyConstants",
@@ -14430,6 +14430,690 @@
       "audits": [
         {
           "declaration": "IGS.Sec31.geometric_ball_survival_time_choice",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.UniformDenseFiniteInterpolation",
+      "source": "section3-diffusion/RequestProject/Section31/UniformDenseFiniteInterpolation.lean",
+      "source_sha256": "5fcdb5933d543f2a36c088788947f29076b302b5e47426c22bfa28aec1e02e13",
+      "log": "logs/RequestProject_Section31_UniformDenseFiniteInterpolation-2026-10-14T181426.483515_0000.log",
+      "log_sha256": "9a73789092faa7a445afc5133b0b20327da582782f5c2edf14e865b66aa04b14",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.continuousFiniteInterpolation_eval",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.uniformDenseSubmodule_finite_evaluation_surjective",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSContinuousPathBallSurvivalOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSContinuousPathBallSurvivalOfRules.lean",
+      "source_sha256": "a1465edd281a53cc335a51bcbabdf1f3ba87ecda32e17c115a3076e6262b3dc0",
+      "log": "logs/RequestProject_Section31_EIGSContinuousPathBallSurvivalOfRules-2026-10-14T181628.535883_0000.log",
+      "log_sha256": "c939b7e66fe13d5305d3b37e754abb6c57755a2f09db2d578a674063a3bf3c07",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiNativeContinuousBallSurvivalFamilyProperties_of_restriction",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ContinuousResistanceFormAxioms",
+      "source": "section3-diffusion/RequestProject/Section31/ContinuousResistanceFormAxioms.lean",
+      "source_sha256": "99a5d26b9b66f5aed59f88c2c8f94ff7897055b1ecb27256505e9b039ebee9d5",
+      "log": "logs/RequestProject_Section31_ContinuousResistanceFormAxioms-2026-10-14T181457.814018_0000.log",
+      "log_sha256": "2539f10bade8ba109af575c17b8693b47cb72512af7ddc77904445fe5454de44",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.ContinuousResistanceFormAxioms",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.ContinuousResistanceFormAxioms.mk",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSContinuousResistanceFormCore",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSContinuousResistanceFormCore.lean",
+      "source_sha256": "0fa739fd4a1a8463e1549740215302a1f02d2dd2e37edc07274c52ab7d4ddac0",
+      "log": "logs/RequestProject_Section31_EIGSContinuousResistanceFormCore-2026-10-14T181849.538548_0000.log",
+      "log_sha256": "54317affa9d94e6c446b3937382694e3dec31e5deeb6d3880f3de55d0c88c12c",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiContinuousResistanceQuadraticForm_zero_iff_constant",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiContinuousResistanceQuadraticForm_normal_contraction",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiContinuousFiniteEnergy_finite_interpolation",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSSameNativeTrueExitSurvivalOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSSameNativeTrueExitSurvivalOfRules.lean",
+      "source_sha256": "98a5f31bea6c421c1d7fd4d03593689a8135a29bba94f128a2a3a94daae50f40",
+      "log": "logs/RequestProject_Section31_EIGSSameNativeTrueExitSurvivalOfRules-2026-10-14T181712.187767_0000.log",
+      "log_sha256": "ce21d5584964c22ef96ed0702bb2a725d3ca4346f3a6a0b98ead7d3a7a353d62",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiTrueExitSurvivalGlobalRestrictionSemigroupProperties_of_moving",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiIdentifiedTrueExitSurvivalGlobalRestrictionProperties_of_moving",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiIdentifiedTrueExitSurvivalGlobalRestriction_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ContinuousPathScaledBallExit",
+      "source": "section3-diffusion/RequestProject/Section31/ContinuousPathScaledBallExit.lean",
+      "source_sha256": "9fae7fbc53bd1e93582f3a8f60184b665060f8c26db2b3f9589785924636adfc",
+      "log": "logs/RequestProject_Section31_ContinuousPathScaledBallExit-2026-10-14T182119.679287_0000.log",
+      "log_sha256": "9912247e2fe133b5ad42466bc9d3923202a5dc1f10aa01d61d1ee4865f804c63",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.continuousPathBallExit_positiveScaled_eq",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSCompletedResistanceVariational",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSCompletedResistanceVariational.lean",
+      "source_sha256": "b185127b44a4e1e4ea2e6c099ee17a7f94f6f5028f0ed5418a2768fd0df0f36f",
+      "log": "logs/RequestProject_Section31_EIGSCompletedResistanceVariational-2026-10-14T182413.073807_0000.log",
+      "log_sha256": "3b5f4621d1cadc4ee947480edbef8da9b89024cd7c2a0b667735240ee1ac7338",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_unique_xiContinuousEnergy_zero_anchored_representative",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiCompletedResistance_sharp_continuous_energy_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiCompletedResistance_attaining_function",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSNormalizedContinuousBallSurvival",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSNormalizedContinuousBallSurvival.lean",
+      "source_sha256": "fe11f96513f8ac922cd87816e013a0591d513955e5c063d5a78c96528b7f690e",
+      "log": "logs/RequestProject_Section31_EIGSNormalizedContinuousBallSurvival-2026-10-14T182138.806449_0000.log",
+      "log_sha256": "2e773af31f1cd838fef30b4dd5f441bec5248a0c70bb6bb6032d72d06c228129",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiNormalizedContinuousBallSurvivalFamilyProperties_of_native",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSSameNativeNormalizedTrueExitSurvivalOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSSameNativeNormalizedTrueExitSurvivalOfRules.lean",
+      "source_sha256": "3fffc645f119f3459faf37054acf3924d5cb3a99bf422709f48d8c41e81b7165",
+      "log": "logs/RequestProject_Section31_EIGSSameNativeNormalizedTrueExitSurvivalOfRules-2026-10-14T182218.748663_0000.log",
+      "log_sha256": "b97a7fce28f92b88002c1e11cc740029ba41300170947fe86d91caef9bbe1815",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiNormalizedTrueExitGlobalRestrictionSemigroupProperties_of_native",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiIdentifiedNormalizedTrueExitGlobalRestrictionProperties_of_native",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiIdentifiedNormalizedTrueExitGlobalRestriction_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSContinuousEnergyQuotientHilbert",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSContinuousEnergyQuotientHilbert.lean",
+      "source_sha256": "986624b5de14e0307037270c2633af7dd650697bf15a083ca5ac23c002109e33",
+      "log": "logs/RequestProject_Section31_EIGSContinuousEnergyQuotientHilbert-2026-10-14T182836.807753_0000.log",
+      "log_sha256": "a28cea54efafb932ae498aacdcdb265742c4777c9a12726bc6f380cc2123c51b",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiContinuousEnergyHilbertNormalization_energy",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiContinuousEnergyHilbertNormalization_kernel",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiContinuousEnergyHilbertNormalization_surjective",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSAllCoarseSkeletonReachUpper",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSAllCoarseSkeletonReachUpper.lean",
+      "source_sha256": "801a07637798026bb66d64c44c561bdc8f5d6ce49c510ea40b0eee056c9046a8",
+      "log": "logs/RequestProject_Section31_EIGSAllCoarseSkeletonReachUpper-2026-10-14T182604.573910_0000.log",
+      "log_sha256": "b43573ca7a800d5649e65c537f72dd5f86182ac12d598bcf7248fc942c796e97",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiAllCoarseSkeleton_partialHit_le_replantedMaximum",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiAllCoarseSkeleton_partialHit_spectral_upper",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSAllSourceStarExitUpper",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSAllSourceStarExitUpper.lean",
+      "source_sha256": "52bca82f1036ec576e35a8ad1732c7fb38dea62dab5f6b51ab7393ae418b6738",
+      "log": "logs/RequestProject_Section31_EIGSAllSourceStarExitUpper-2026-10-14T182638.098497_0000.log",
+      "log_sha256": "32c62b01db48da8cc7bf357d26f017184270dfef5b5f0cc71d9e5ab004ff6f9e",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.partialHit_except_singleton_le_one",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiCoarseGroundedDomain_allSource_expExit_spectral_upper",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiIncidentStarDomain_allSource_expExit_spectral_upper",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSFineBallTwoStarContainment",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSFineBallTwoStarContainment.lean",
+      "source_sha256": "2c56aa0e3b4644d2365f78fd0fa0560909081dab66ffbb76ca3106e5bb84b368",
+      "log": "logs/RequestProject_Section31_EIGSFineBallTwoStarContainment-2026-10-14T182659.919448_0000.log",
+      "log_sha256": "af1b044ac0e7671fa370d6a1a1fc344170a46dd63fa4068b6a4322af9e976d61",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiWeightedDistance_cell_endpoint_to_outside_two_stars",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiCompletionFineBall_subset_two_stars",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.TwoVertexConductanceExitBound",
+      "source": "section3-diffusion/RequestProject/Section31/TwoVertexConductanceExitBound.lean",
+      "source_sha256": "818d0d8e1a09172e2b5a23de98d26aafa8838d0cbc860729adeda08bda7643d6",
+      "log": "logs/RequestProject_Section31_TwoVertexConductanceExitBound-2026-10-14T183423.258618_0000.log",
+      "log_sha256": "2cb6b51807bffedb9b9e70285a8aacd4bb690b4c9df8b5a10af2ea3f91e56ef4",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.two_vertex_partialHit_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.conductance_one_exterior_edge_escape",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSContinuousResistanceFormAxioms",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSContinuousResistanceFormAxioms.lean",
+      "source_sha256": "29fdb4217e35b5f0da115d4f68c05d7b54da8a94107570f4f887ff65bccea520",
+      "log": "logs/RequestProject_Section31_EIGSContinuousResistanceFormAxioms-2026-10-14T183257.676669_0000.log",
+      "log_sha256": "fe3995e9471191d110fc47e30836ed302af2cff024bdebaeeed6ed908ecff5e0",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiContinuousResistanceForm_axioms",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSFlowerRuleGraph",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSFlowerRuleGraph.lean",
+      "source_sha256": "d32c55dbbb443023ddd4d0b3e1783be6fd23b028f863c50df5fb19fb77d81e76",
+      "log": "logs/RequestProject_Section31_EIGSFlowerRuleGraph-2026-10-14T183211.984424_0000.log",
+      "log_sha256": "8bdf0611a302db2d59ea64bda3f313564384349aa24695121e0bce932f5df904",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.flowerPoint_height",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.flowerGraph_edge_height",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.flowerGraph_edges",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.flowerGraph_vertices",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.flowerSystem_loopless",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSSkeletonConductanceUniformEdgeBounds",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSSkeletonConductanceUniformEdgeBounds.lean",
+      "source_sha256": "f5646c0e138debcd6bbcbd83d6aaf7c3d1fb65fa1c3e0bb873168f8256ed05ad",
+      "log": "logs/RequestProject_Section31_EIGSSkeletonConductanceUniformEdgeBounds-2026-10-14T183049.798514_0000.log",
+      "log_sha256": "07c7320bbdbac7db33177a57ce27aa376b0c8fd86ac934aeb60c4dd59ae6a27b",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.Network.unique_endpoint_weight_sum_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiNormalizedSkeletonConductance_edge_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSCoarsePairExteriorNeighbor",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSCoarsePairExteriorNeighbor.lean",
+      "source_sha256": "9371cac3d6be6206bbe40014b72ad8480267c93bee27697f0be0582045960457",
+      "log": "logs/RequestProject_Section31_EIGSCoarsePairExteriorNeighbor-2026-10-14T184158.893628_0000.log",
+      "log_sha256": "de4daba00d091a30ac8532817fca5ccd5d55293c8645b9ed5a21cbe5a7309f04",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.connected_pair_has_exterior_neighbor",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.exists_outside_pair_of_three_distinct",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiPositiveCoarse_pair_has_exterior_neighbor",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSFlowerRuleConnectivity",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSFlowerRuleConnectivity.lean",
+      "source_sha256": "78bb42a36344532cbdee2d739aa3054a87baaa4848c1647e630b4a3262af8bd3",
+      "log": "logs/RequestProject_Section31_EIGSFlowerRuleConnectivity-2026-10-14T183644.283417_0000.log",
+      "log_sha256": "b0b805f8bf76eb00f29773ae3dcd9ac0271f72e3e7a0c2ffd05ad29a3ee63567",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.flowerGraph_edge_adj",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.flowerPoint_reachable",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.flowerSystem_connected",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.flowerSystem_plantingNonadjacent",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSContinuousResistanceFormOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSContinuousResistanceFormOfRules.lean",
+      "source_sha256": "5b4d8c3129f382403522bfcc1f7da14a94575769499875891e31b3b0e41bc2ae",
+      "log": "logs/RequestProject_Section31_EIGSContinuousResistanceFormOfRules-2026-10-14T183728.442945_0000.log",
+      "log_sha256": "238c8baf87d2d2408f38fb6fc06f26ce59caa64b4ab888a94bea77341fcf6a54",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiContinuousResistanceFormRealization_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.SkorokhodJ1PrefixRadius",
+      "source": "section3-diffusion/RequestProject/Section31/SkorokhodJ1PrefixRadius.lean",
+      "source_sha256": "d64d716ce5743f0d9ca956e7bcc96300452e74975a86f5eff06e5dd398124918",
+      "log": "logs/RequestProject_Section31_SkorokhodJ1PrefixRadius-2026-10-14T184043.704587_0000.log",
+      "log_sha256": "f6d87e4c7a7683cca81c35fa59bef68c746844871ad07f82f1b207ef6ecbce60",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.skorokhodJ1Distance_constant",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.cadlagJ1PrefixRadius_continuous",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.cadlagJ1PrefixRadius_open",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSFlowerRuleSimplicity",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSFlowerRuleSimplicity.lean",
+      "source_sha256": "95a3cab589df13ed53947d40b8a06233b4be295a2da1ee9fd3eb30c9e5679e11",
+      "log": "logs/RequestProject_Section31_EIGSFlowerRuleSimplicity-2026-10-14T183716.629964_0000.log",
+      "log_sha256": "f0316bc6d5d33a2dc294979bf102ff911ba1332fa4f1f08511d0da0d13b456df",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.flowerPoint_branch_label",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.flowerGraph_endpoint_branch_labels",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.flowerGraph_has_labeled_endpoint",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.flowerGraph_minimum_endpoint_height",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.flowerSystem_edgesUnique",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSResistanceFormSameClosedHunt",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSResistanceFormSameClosedHunt.lean",
+      "source_sha256": "bbfd1d4b584d1f186edc6721b4f155ed772a8ab9ff707f6e10474529f65aa9af",
+      "log": "logs/RequestProject_Section31_EIGSResistanceFormSameClosedHunt-2026-10-14T183814.161721_0000.log",
+      "log_sha256": "4dd4b7e42beca1403ccd785952ef491465c3c9262d186b7148c58cde07333490",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiResistanceFormClosedIdentification_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiResistanceForm_same_closed_Hunt_of_rules",
           "axioms": [
             "propext",
             "Classical.choice",

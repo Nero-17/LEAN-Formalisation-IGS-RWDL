@@ -1,0 +1,5 @@
+'EIGS.exists_unique_xiContinuousEnergy_zero_anchored_representative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiCompletedResistance_sharp_continuous_energy_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiCompletedResistance_attaining_function' depends on axioms: [propext, Classical.choice, Quot.sound]

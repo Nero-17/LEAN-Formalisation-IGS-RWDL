@@ -24,7 +24,8 @@ theorem continuousPathBallExit_positiveScaled_eq
     rw [div_le_iff₀ scalePositive, mul_comm (dist (path time) center) scale]
   unfold continuousPathBallExit
   change (if reached : ({time : ℝ≥0 | radius ≤ scale * dist (path time) center}).Nonempty then
-      (sInf {time : ℝ≥0 | radius ≤ scale * dist (path time) center} : ℝ≥0) else ⊤) = _
+      ((sInf {time : ℝ≥0 | radius ≤ scale * dist (path time) center} : ℝ≥0) : ℝ≥0∞)
+      else (⊤ : ℝ≥0∞)) = _
   rw [hittingSetEquality]
 
 end

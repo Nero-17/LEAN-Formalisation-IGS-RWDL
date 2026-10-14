@@ -1,0 +1,2 @@
+'EIGS.xiResistanceFormClosedIdentification_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiResistanceForm_same_closed_Hunt_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,3 @@
+'IGS.Sec31.connected_pair_has_exterior_neighbor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.exists_outside_pair_of_three_distinct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiPositiveCoarse_pair_has_exterior_neighbor' depends on axioms: [propext, Classical.choice, Quot.sound]

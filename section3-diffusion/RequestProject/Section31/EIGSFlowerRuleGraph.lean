@@ -1,5 +1,6 @@
 import RequestProject.Section1Connected
 import RequestProject.Section2Simplicity
+import RequestProject.Section2Concrete
 import Mathlib.Tactic
 
 /-! The actual one-colour flower rule: `branches` parallel chains, each
@@ -54,7 +55,7 @@ def flowerSystem (branches segments : ℕ) : EIGSData 1 where
   rule _ := flowerGraph branches segments
   plantPlus _ := Sum.inl false
   plantMinus _ := Sum.inl true
-  plant_ne _ := by simp
+  plant_ne _ := by intro equality; have impossible := Sum.inl.inj equality; cases impossible
 
 theorem flowerGraph_edge_height (branches segments : ℕ)
     (edge : Fin branches × Fin segments) :

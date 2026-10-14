@@ -42,6 +42,8 @@ theorem xiContinuousResistanceForm_axioms
     (oneColourDistance : K = 1 → ∀ colour,
       2 ≤ (ruleSG system colour).dist (system.plantPlus colour) (system.plantMinus colour))
     (mass : XiMassParameters system) :
+    letI := xiCompletion_compactSpace system rulesConnected lengths lengthsPositive distanceRate
+      distanceRateGreaterThanOne metricEigenpair
     ContinuousResistanceFormAxioms
       (XiMetricCompletion system rulesConnected lengths lengthsPositive distanceRate
         (zero_lt_one.trans distanceRateGreaterThanOne) metricEigenpair)

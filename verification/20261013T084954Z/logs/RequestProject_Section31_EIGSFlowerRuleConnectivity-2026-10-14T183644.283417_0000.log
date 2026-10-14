@@ -1,0 +1,7 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSFlowerRuleConnectivity.lean:44:6: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+'EIGS.flowerGraph_edge_adj' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.flowerPoint_reachable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.flowerSystem_connected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.flowerSystem_plantingNonadjacent' depends on axioms: [propext, Classical.choice, Quot.sound]

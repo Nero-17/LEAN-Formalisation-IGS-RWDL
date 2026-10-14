@@ -1,0 +1,5 @@
+'EIGS.flowerPoint_height' depends on axioms: [propext, Quot.sound]
+'EIGS.flowerGraph_edge_height' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.flowerGraph_edges' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.flowerGraph_vertices' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.flowerSystem_loopless' depends on axioms: [propext, Classical.choice, Quot.sound]

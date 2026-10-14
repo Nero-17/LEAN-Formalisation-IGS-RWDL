@@ -1,0 +1,9 @@
+'EIGS.xiNormalizedTrueExitGlobalRestrictionSemigroupProperties_of_native' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiIdentifiedNormalizedTrueExitGlobalRestrictionProperties_of_native' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_xiIdentifiedNormalizedTrueExitGlobalRestriction_of_rules' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

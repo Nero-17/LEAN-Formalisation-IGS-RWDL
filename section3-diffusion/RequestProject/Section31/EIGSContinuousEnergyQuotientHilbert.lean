@@ -43,7 +43,8 @@ def xiContinuousEnergyHilbertNormalization :
     apply (AnchoredTraceEnergySpace.equivDomain _ _ _ _).injective
     apply Subtype.ext
     funext vertex
-    change (_ + _) - (_ + _) = (_ - _) + (_ - _)
+    change (first.val _ + second.val _) - (first.val _ + second.val _) =
+      (first.val _ - first.val _) + (second.val _ - second.val _)
     ring
   map_smul' := by
     intro scalar function

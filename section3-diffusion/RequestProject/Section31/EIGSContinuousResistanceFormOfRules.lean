@@ -34,7 +34,10 @@ structure XiContinuousResistanceFormRealization where
     (xiCompletionUnionEmbedding system rulesConnected lengths lengthsPositive distanceRate
       (zero_lt_one.trans distanceRateGreaterThanOne) metricEigenpair vertex) = values.value.val vertex
   extension_compact : IsCompactOperator extension
-  resistance_form_axioms : ContinuousResistanceFormAxioms
+  resistance_form_axioms :
+    letI := xiCompletion_compactSpace system rulesConnected lengths lengthsPositive distanceRate
+      distanceRateGreaterThanOne metricEigenpair
+    ContinuousResistanceFormAxioms
     (XiMetricCompletion system rulesConnected lengths lengthsPositive distanceRate
       (zero_lt_one.trans distanceRateGreaterThanOne) metricEigenpair)
     (xiZeroAnchoredEnergyDomain system rulesConnected resistanceRate ratePositive resistanceVector vectorPositive eigenpair anchor)
@@ -46,7 +49,9 @@ structure XiContinuousResistanceFormRealization where
       metricEigenpair resistanceRate ratePositive resistanceVector vectorPositive eigenpair anchor extension)
   resistance_metric : MetricSpace (XiMetricCompletion system rulesConnected lengths lengthsPositive distanceRate
     (zero_lt_one.trans distanceRateGreaterThanOne) metricEigenpair)
-  original_topology : resistance_metric.toTopologicalSpace = inferInstance
+  original_topology : resistance_metric.toPseudoMetricSpace.toUniformSpace.toTopologicalSpace =
+    (inferInstance : TopologicalSpace (XiMetricCompletion system rulesConnected lengths lengthsPositive distanceRate
+      (zero_lt_one.trans distanceRateGreaterThanOne) metricEigenpair))
   resistance_distance : ∀ first second, @dist _ resistance_metric.toDist first second =
     xiCompletedResistance system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
       metricEigenpair resistanceRate ratePositive resistanceVector vectorPositive eigenpair anchor extension first second
