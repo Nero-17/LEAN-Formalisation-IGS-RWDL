@@ -1,14 +1,14 @@
 # Current formalization audit
 
-Snapshot UTC: 2026-10-14T13:18:07.936461+00:00
+Snapshot UTC: 2026-10-14T13:53:59.229273+00:00
 
 Full-paper completion is **not** claimed. A clean printed axiom audit verifies the stated theorem; it does not remove mathematical assumptions from that statement. Actual-model consumers and generic conditional lemmas must be read separately.
 
 ## Verification scope
 
-The latest completed common-dependency batch has 545 modules and unchanged checked sources. Report SHA256: `c75281dbb70120997bf6d5a5de2e1f03d14d6f9bb7a62390de27d240c20c0210`.
+The latest completed common-dependency batch has 690 modules and unchanged checked sources. Report SHA256: `607fc8176247666e16f71894428d88124717974a7f34be9c1eb6954538e68064`.
 
-The independent manifest contains 345 accepted whole-file receipts and 1177 printed audits. These overlap the common batch and are not a completion percentage. Every published Lean source has an exact hash and explicit status; unverified and failed drafts remain visible.
+The independent manifest contains 355 accepted whole-file receipts and 1204 printed audits. These overlap the common batch and are not a completion percentage. Every published Lean source has an exact hash and explicit status; unverified and failed drafts remain visible.
 
 ## Accepted milestones
 
@@ -36,6 +36,16 @@ The independent manifest contains 345 accepted whole-file receipts and 1177 prin
 | [EIGSFiniteBornHeatLowerOfRules](section3-diffusion/RequestProject/Section31/EIGSFiniteBornHeatLowerOfRules.lean) | `45a44a7073b526af83d22a3d5d0c71f2caa673336bcfc2d22855a7041ff5cfdf` | `60c5200466c1f581d024fe20026f024da9641faa06f02d9e46095f4fb47fcc43` | 2 |
 | [EIGSFiniteBornSpectralDimensionOfRules](section3-diffusion/RequestProject/Section31/EIGSFiniteBornSpectralDimensionOfRules.lean) | `3c9062a1a59fadda82f6f4e34d8ec027cc9fb839e7dbe79b71eb7b38ea25f671` | `0fa21e57a1a85671264c04f9e9b019625083fe4e1910ac11e518362652956355` | 2 |
 | [ContinuousPathQuasiLeftContinuity](section3-diffusion/RequestProject/Section31/ContinuousPathQuasiLeftContinuity.lean) | `972ff6fa579b529ab9e79b15e011903562a6c6f68c83df32ce7045bdacb0a202` | `7c89b9b3363f27747ac6f64409a85f9caa989dedee4dffe28bebc8183c37822e` | 3 |
+| [CountableMetricRealisation](section3-diffusion/RequestProject/Section31/CountableMetricRealisation.lean) | `a976b7dd91374e34df1c0b2b0bbf939c12b24134d0749cebd273aab291b135b8` | `d233cf3c0db02e54084bfb0651edc4b6531fbfa80487d0c3e9328d594daa3d36` | 2 |
+| [FiniteProjectionCommonRealisation](section3-diffusion/RequestProject/Section31/FiniteProjectionCommonRealisation.lean) | `f0650feb0c596d411df5da64d9ab07cb0666781e35d27e6b630b6580ddc7caf2` | `05d8c4c2e1a710bfcc5ba9bc55ccd7db37d731b62d74fa7ac4223ff7d0f13a69` | 1 |
+| [EIGSOriginalCountableRealisation](section3-diffusion/RequestProject/Section31/EIGSOriginalCountableRealisation.lean) | `a40bedee9206e37a206e5643f83813cecee5b6de27b0602e75b4c51183859a9c` | `9a45347e3f147eb9139ecb593131f8dea54800405e6e693013cf39993e0bcad3` | 2 |
+| [DiameterNormalizationHomeomorph](section3-diffusion/RequestProject/Section31/DiameterNormalizationHomeomorph.lean) | `3a5bcb87fc2e243ac3fb0bffe0424a8bc94fa964a71306c7bc0cbf68f6e99e50` | `5b83b5a95f7df4ef5637cf0062a544f20a7f089ce4ac40745badcaf0ca511638` | 3 |
+| [ProbabilityUniformCouplingTransport](section3-diffusion/RequestProject/Section31/ProbabilityUniformCouplingTransport.lean) | `1fafb83ff829e32403646db3da97e3ac10dd1dae117b496a7081c2b83782b4a0` | `9a353af639ce55345d0c52f0b9bb9f184c170774f4f99fee852b4700a3cc27ab` | 1 |
+| [LogarithmicCollarSchedule](section3-diffusion/RequestProject/Section31/LogarithmicCollarSchedule.lean) | `4368cd189daab1099dea71797bfcffa260e22585ffcb2d4090dbdc39f37dab43` | `f64ecaca46160030b2371688bc3f24e0bb2a6a6f6f76cff826ec645135429cff` | 6 |
+| [ContinuousPathBoundedBorelStoppingMarkov](section3-diffusion/RequestProject/Section31/ContinuousPathBoundedBorelStoppingMarkov.lean) | `fba0655454ba29e55d89b922136638ce776d65b9b28cb168679385fe48430683` | `9efd744c230b033fb0a9aae9f8b358f345de6744854fa5817151aba636b4d0d4` | 2 |
+| [NNRealStoppingTimeShift](section3-diffusion/RequestProject/Section31/NNRealStoppingTimeShift.lean) | `f7f8e9012230b5a753d81f6254151a115cae96661b98f6c49a1e6778daf51abb` | `d28d7d6881dddbc297393b488a1895d025d965ef07effa3dbc4c08c15c92989e` | 2 |
+| [EIGSPaperNativeClock](section3-diffusion/RequestProject/Section31/EIGSPaperNativeClock.lean) | `f8d4ffddbfc43a7ed1ef5fcde5da528b4a1990a4e2634b1f95e9d825f23dd5ad` | `2c6e545f53208b2dc56b088f47a0a305e1b8dae805748cb9844558ddc4f782c5` | 4 |
+| [EIGSAddressEndpointCollar](section3-diffusion/RequestProject/Section31/EIGSAddressEndpointCollar.lean) | `ae353d19b59948d3915926d0243609be4adc359023f8a4dfbb02a4f73576c616` | `5eead5058d0c8b7be881a5d1e96d6e3e9031a3147364b7e00802630eb2777729` | 4 |
 
 ## Proven scope and exact gaps
 
@@ -47,12 +57,10 @@ Finite-born point evaluations extend to the same closed energy domain and agree 
 
 Continuous-path laws also satisfy quasi-left continuity at all finite supremum times, pathwise. This supplies a regularity component and does not by itself assert a full Hunt process.
 
-Original measured GHP is verified. Final GHPS still requires normalized-metric and probability transport, the paper/native clock identification with the same normalization witnesses, canonical global-law restriction identification, and the actual càdlàg/J1 transport. New J1 candidates do not constitute a proved complete Skorokhod-space theory. Resistance-form/Brownian-regime construction and identification remain incomplete. Section 4 random GHP/diffusion outlook statements remain conjectures.
+Original measured GHP, uniform actual projection distortion convergence, and a single complete compact common ambient for the original graphs under their own diameter normalization are verified. Identity homeomorphisms explicitly preserve the topology under metric scaling. A uniform coupling theorem transfers weak convergence without assuming Skorokhod-space separability. The native walk rate and floor index are proved to equal the manuscript clock for every same normalization witness. Final GHPS still requires the actual probability/cadlag-J1 transport and canonical global-law restriction consumers, with the proved clock equality supplied to that same witness bundle. New J1 candidates do not constitute a proved complete Skorokhod-space theory. Resistance-form/Brownian-regime construction and identification remain incomplete. Section 4 random GHP/diffusion outlook statements remain conjectures.
 
 ## Adopted corrections and archive
 
 Adopted manuscript SHA256: `06783166c1b05e8340edd98956319445b5a55056b47c2c9c60b65ce782746792`. The approved changes are three green means, eight green-arrow reversals and four boundary matrix entries, and one orientation of an undirected simple rule graph. Antiparallel counterexamples are retained as correction evidence.
 
 The active round is `20261013T084954Z`, beginning at 2026-10-13 08:49:54 UTC. Its authoritative [complete round record](https://drive.google.com/file/d/1lRD_dypj77gjEx4nNGlUBZqrml7krj6d/view) is updated in place. The same [latest progress file](https://drive.google.com/file/d/1sIIrFB6J5MijuZ3ndbsNAeNaYhA3R7dH/view) records major changes. Historical local paths in logs are diagnostic provenance; portable manifests use relative paths.
-
-The 690-module shared integration is running. The 634-module historical snapshot passed, but its derivative source predates instance naming changes. Neither is claimed as a current passed shared batch.

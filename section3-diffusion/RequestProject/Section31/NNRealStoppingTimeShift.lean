@@ -23,20 +23,26 @@ theorem isStoppingTime_add_nnreal_delay
         {sample | stoppingTime sample + (delay : WithTop ℝ≥0) ≤ horizon} =
           {sample | stoppingTime sample ≤ (horizon - delay : ℝ≥0)} := by
       ext sample
-      cases stoppingTime sample with
-      | top => simp
+      cases timeEquality : stoppingTime sample with
+      | top =>
+          have delayFinite : (delay : WithTop ℝ≥0) ≠ ⊤ := WithTop.coe_ne_top
+          simp [timeEquality]
+          exact fun _ => delayFinite
       | coe time =>
-          simp only [Set.mem_setOf_eq]
+          simp only [Set.mem_setOf_eq, timeEquality]
           norm_cast
           exact (le_tsub_iff_right delayBound).symm
     rw [eventEquality]
     exact filtration.mono tsub_le_self _ (stopping.measurableSet_le (horizon - delay))
   · have eventEmpty : {sample | stoppingTime sample + (delay : WithTop ℝ≥0) ≤ horizon} = ∅ := by
       ext sample
-      cases stoppingTime sample with
-      | top => simp
+      cases timeEquality : stoppingTime sample with
+      | top =>
+          have horizonFinite : (horizon : WithTop ℝ≥0) ≠ ⊤ := WithTop.coe_ne_top
+          simp [timeEquality]
+          exact horizonFinite
       | coe time =>
-          simp only [Set.mem_setOf_eq, Set.mem_empty_iff_false, iff_false]
+          simp only [Set.mem_setOf_eq, Set.mem_empty_iff_false, iff_false, timeEquality]
           intro inequality
           have realBound : time + delay ≤ horizon := by exact_mod_cast inequality
           exact delayBound ((le_add_of_nonneg_left (zero_le time)).trans realBound)

@@ -1,13 +1,13 @@
 {
-  "snapshot_utc": "2026-10-14T13:18:07.936461+00:00",
+  "snapshot_utc": "2026-10-14T13:53:59.229273+00:00",
   "round": "20261013T084954Z",
   "compiler": "Lean 4.28.0",
   "mathlib": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
-  "shared_dependency_modules": 545,
-  "shared_report": "integration-545.json",
-  "shared_report_sha256": "c75281dbb70120997bf6d5a5de2e1f03d14d6f9bb7a62390de27d240c20c0210",
-  "independent_whole_file_count": 345,
-  "independent_audit_count": 1177,
+  "shared_dependency_modules": 690,
+  "shared_report": "integration-690.json",
+  "shared_report_sha256": "607fc8176247666e16f71894428d88124717974a7f34be9c1eb6954538e68064",
+  "independent_whole_file_count": 355,
+  "independent_audit_count": 1204,
   "records": [
     {
       "module": "RequestProject.Section31.EIGSL2EnergyConstants",
@@ -10854,6 +10854,322 @@
         },
         {
           "declaration": "EIGS.exists_xiFiniteBornHeatSpectralDimension_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.LogarithmicCollarSchedule",
+      "source": "section3-diffusion/RequestProject/Section31/LogarithmicCollarSchedule.lean",
+      "source_sha256": "4368cd189daab1099dea71797bfcffa260e22585ffcb2d4090dbdc39f37dab43",
+      "log": "logs/RequestProject_Section31_LogarithmicCollarSchedule-2026-10-14T132643.761039_0000.log",
+      "log_sha256": "f64ecaca46160030b2371688bc3f24e0bb2a6a6f6f76cff826ec645135429cff",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.logarithmic_ceiling_geometric_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.summable_logarithmic_ceiling_geometric",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.logarithmic_ceiling_degree_cost_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.ae_eventually_avoid_logarithmic_collar",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.degree_logarithmic_collar_exponent",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.eventually_logarithmic_ceiling_le_index",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSPaperNativeClock",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSPaperNativeClock.lean",
+      "source_sha256": "f8d4ffddbfc43a7ed1ef5fcde5da528b4a1990a4e2634b1f95e9d825f23dd5ad",
+      "log": "logs/RequestProject_Section31_EIGSPaperNativeClock-2026-10-14T135042.683901_0000.log",
+      "log_sha256": "2c6e545f53208b2dc56b088f47a0a305e1b8dae805748cb9844558ddc4f782c5",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiTotalEdges_eq_actualSimpleGraphEdgeCard",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiNativeFiniteJumpRateNNReal_eq_paperClock",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiNative_floor_index_eq_paperClock",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiPaperNativeClock_of_positive_eigenpair",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSAddressEndpointCollar",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSAddressEndpointCollar.lean",
+      "source_sha256": "ae353d19b59948d3915926d0243609be4adc359023f8a4dfbb02a4f73576c616",
+      "log": "logs/RequestProject_Section31_EIGSAddressEndpointCollar-2026-10-14T134932.148597_0000.log",
+      "log_sha256": "5eead5058d0c8b7be881a5d1e96d6e3e9031a3147364b7e00802630eb2777729",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_uniform_xiIncidence_growth_upper",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.measurableSet_xiAddressEndpointCollar",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiVertexIncidenceCount_sum",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiAddressEndpointCollar_mass_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ContinuousPathBoundedBorelStoppingMarkov",
+      "source": "section3-diffusion/RequestProject/Section31/ContinuousPathBoundedBorelStoppingMarkov.lean",
+      "source_sha256": "fba0655454ba29e55d89b922136638ce776d65b9b28cb168679385fe48430683",
+      "log": "logs/RequestProject_Section31_ContinuousPathBoundedBorelStoppingMarkov-2026-10-14T132909.368717_0000.log",
+      "log_sha256": "9efd744c230b033fb0a9aae9f8b358f345de6744854fa5817151aba636b4d0d4",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.continuousPath_finite_stoppingTime_boundedBorel_setIntegral_markov",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.continuousPath_finite_stoppingTime_boundedBorel_condExp_markov",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ProbabilityUniformCouplingTransport",
+      "source": "section3-diffusion/RequestProject/Section31/ProbabilityUniformCouplingTransport.lean",
+      "source_sha256": "1fafb83ff829e32403646db3da97e3ac10dd1dae117b496a7081c2b83782b4a0",
+      "log": "logs/RequestProject_Section31_ProbabilityUniformCouplingTransport-2026-10-14T132940.423157_0000.log",
+      "log_sha256": "9a353af639ce55345d0c52f0b9bb9f184c170774f4f99fee852b4700a3cc27ab",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.probability_maps_same_limit_of_uniform_displacement",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.NNRealStoppingTimeShift",
+      "source": "section3-diffusion/RequestProject/Section31/NNRealStoppingTimeShift.lean",
+      "source_sha256": "f7f8e9012230b5a753d81f6254151a115cae96661b98f6c49a1e6778daf51abb",
+      "log": "logs/RequestProject_Section31_NNRealStoppingTimeShift-2026-10-14T134918.615596_0000.log",
+      "log_sha256": "d28d7d6881dddbc297393b488a1895d025d965ef07effa3dbc4c08c15c92989e",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.StoppingApproximation.isStoppingTime_add_nnreal_delay",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.StoppingApproximation.isStoppingTime_finite_add_nnreal_delay",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.CountableMetricRealisation",
+      "source": "section3-diffusion/RequestProject/Section31/CountableMetricRealisation.lean",
+      "source_sha256": "a976b7dd91374e34df1c0b2b0bbf939c12b24134d0749cebd273aab291b135b8",
+      "log": "logs/RequestProject_Section31_CountableMetricRealisation-2026-10-14T134139.324756_0000.log",
+      "log_sha256": "d233cf3c0db02e54084bfb0651edc4b6531fbfa80487d0c3e9328d594daa3d36",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.CountableRealisation.extension_root_distance",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.CountableRealisation.completeAmalgamation_compact",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.FiniteProjectionCommonRealisation",
+      "source": "section3-diffusion/RequestProject/Section31/FiniteProjectionCommonRealisation.lean",
+      "source_sha256": "f0650feb0c596d411df5da64d9ab07cb0666781e35d27e6b630b6580ddc7caf2",
+      "log": "logs/RequestProject_Section31_FiniteProjectionCommonRealisation-2026-10-14T134315.351839_0000.log",
+      "log_sha256": "05d8c4c2e1a710bfcc5ba9bc55ccd7db37d731b62d74fa7ac4223ff7d0f13a69",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.CountableRealisation.exists_compact_common_realisation_of_projection_distortion",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSOriginalCountableRealisation",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSOriginalCountableRealisation.lean",
+      "source_sha256": "a40bedee9206e37a206e5643f83813cecee5b6de27b0602e75b4c51183859a9c",
+      "log": "logs/RequestProject_Section31_EIGSOriginalCountableRealisation-2026-10-14T134445.134013_0000.log",
+      "log_sha256": "9a45347e3f147eb9139ecb593131f8dea54800405e6e693013cf39993e0bcad3",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.MeasuredGHP.xiOriginalDiameter_projection_distortion_zero",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.MeasuredGHP.exists_xiOriginalDiameter_compact_common_realisation",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.DiameterNormalizationHomeomorph",
+      "source": "section3-diffusion/RequestProject/Section31/DiameterNormalizationHomeomorph.lean",
+      "source_sha256": "3a5bcb87fc2e243ac3fb0bffe0424a8bc94fa964a71306c7bc0cbf68f6e99e50",
+      "log": "logs/RequestProject_Section31_DiameterNormalizationHomeomorph-2026-10-14T134637.485316_0000.log",
+      "log_sha256": "5b83b5a95f7df4ef5637cf0062a544f20a7f089ce4ac40745badcaf0ca511638",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.positiveScaledIdentityHomeomorph",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.MeasuredGHP.diameterNormalizationHomeomorph",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.MeasuredGHP.diameterNormalized_dist_exact",
           "axioms": [
             "propext",
             "Classical.choice",

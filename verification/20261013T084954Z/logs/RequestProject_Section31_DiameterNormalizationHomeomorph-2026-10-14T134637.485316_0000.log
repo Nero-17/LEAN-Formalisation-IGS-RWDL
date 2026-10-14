@@ -1,0 +1,3 @@
+'EIGS.positiveScaledIdentityHomeomorph' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.MeasuredGHP.diameterNormalizationHomeomorph' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.MeasuredGHP.diameterNormalized_dist_exact' depends on axioms: [propext, Classical.choice, Quot.sound]

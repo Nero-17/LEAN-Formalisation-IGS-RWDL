@@ -1,0 +1,6 @@
+'IGS.Sec31.StoppingApproximation.isStoppingTime_add_nnreal_delay' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.StoppingApproximation.isStoppingTime_finite_add_nnreal_delay' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

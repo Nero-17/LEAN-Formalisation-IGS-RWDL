@@ -99,7 +99,7 @@ theorem xiVertexIncidenceCount_sum (system : EIGSData K) (level : ℕ) :
   rw [Finset.sum_comm]
   have each (edge : XiEdge system.toRuleData level) :
       ∑ vertex : XiVtx system level, xiEdgeStarMultiplicity system level vertex edge = 2 := by
-    simp [xiEdgeStarMultiplicity, Finset.sum_add_distrib]
+    simp [xiEdgeStarMultiplicity, Finset.sum_add_distrib] <;> norm_num
   simp only [each, Finset.sum_const, Finset.card_univ, nsmul_eq_mul, totalEdges]
   ring
 
@@ -118,6 +118,9 @@ theorem exists_xiAddressEndpointCollar_mass_bound (system : EIGSData K)
     exists_xiAddressStarWeight_mass_comparison system mass
   obtain ⟨minimumColour, _, minimumBound⟩ := Finset.univ.exists_min_image mass.amplitude
     ⟨system.initCol, Finset.mem_univ _⟩
+  have minimumPositive := mass.amplitude_positive minimumColour
+  have initialPositive := mass.amplitude_positive system.initCol
+  have massRatePositive := mass.rate_positive
   refine ⟨2 * starConstant * degreeConstant * mass.amplitude system.initCol / mass.amplitude minimumColour,
     by positivity, ?_⟩
   intro coarse width
@@ -153,7 +156,8 @@ theorem exists_xiAddressEndpointCollar_mass_bound (system : EIGSData K)
   have integralBound := integral_mono
     ((integrable_const (1 : ℝ)).indicator (measurableSet_xiAddressEndpointCollar system coarse width))
     (integrable_finset_sum _ (fun vertex _ => starIntegrable vertex)) indicatorBound
-  rw [integral_indicator_one (measurableSet_xiAddressEndpointCollar system coarse width),
+  rw [integral_indicator_const (1 : ℝ) (measurableSet_xiAddressEndpointCollar system coarse width),
+    smul_eq_mul, mul_one,
     integral_finset_sum _ (fun vertex _ => starIntegrable vertex)] at integralBound
   have starSumBound : (∑ vertex : XiVtx system coarse,
       ∫ address, xiAddressStarWeight system (coarse + width) (xiForward system coarse width vertex) address

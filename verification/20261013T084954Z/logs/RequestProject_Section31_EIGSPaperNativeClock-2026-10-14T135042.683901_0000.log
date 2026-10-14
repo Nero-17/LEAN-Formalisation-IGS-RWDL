@@ -1,0 +1,4 @@
+'EIGS.xiTotalEdges_eq_actualSimpleGraphEdgeCard' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNativeFiniteJumpRateNNReal_eq_paperClock' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNative_floor_index_eq_paperClock' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiPaperNativeClock_of_positive_eigenpair' depends on axioms: [propext, Classical.choice, Quot.sound]

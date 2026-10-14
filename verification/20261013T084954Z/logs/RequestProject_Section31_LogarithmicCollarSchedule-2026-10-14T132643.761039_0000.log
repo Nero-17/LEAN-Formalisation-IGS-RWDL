@@ -1,0 +1,15 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\LogarithmicCollarSchedule.lean:74:5: warning: unused variable `coefficientNonnegative`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\LogarithmicCollarSchedule.lean:94:6: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\LogarithmicCollarSchedule.lean:94:6: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+'EIGS.logarithmic_ceiling_geometric_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.summable_logarithmic_ceiling_geometric' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.logarithmic_ceiling_degree_cost_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.ae_eventually_avoid_logarithmic_collar' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.degree_logarithmic_collar_exponent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.eventually_logarithmic_ceiling_le_index' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -2,6 +2,7 @@ import Mathlib.Analysis.PSeries
 import Mathlib.Analysis.SpecialFunctions.Pow.Real
 import Mathlib.Algebra.Order.Floor.Semiring
 import Mathlib.MeasureTheory.OuterMeasure.BorelCantelli
+import Mathlib.MeasureTheory.Measure.MeasureSpace
 import Mathlib.Tactic.FieldSimp
 import Mathlib.Tactic.Linarith
 import Mathlib.Tactic.Positivity
@@ -99,7 +100,6 @@ theorem eventually_logarithmic_ceiling_le_index (width : ℝ) :
     intro threshold
     filter_upwards [(tendsto_natCast_atTop_atTop :
       Tendsto (fun index : ℕ => (index : ℝ)) atTop atTop).eventually (eventually_ge_atTop threshold)] with index after
-    dsimp only
     linarith
   have quotientTendsto : Tendsto (fun index : ℕ => Real.log (index + 2 : ℝ) / index) atTop (𝓝 0) := by
     simpa only [Function.comp_def, pow_one, one_mul, add_neg_cancel_right] using

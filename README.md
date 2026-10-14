@@ -6,9 +6,9 @@ Lean 4 development for *Iterated Graph Systems (I): random walks and diffusion l
 
 ## Verified progress
 
-- Actual substituted graphs, resistance renormalization, metric completion, limiting measures, and deterministic measured GHP convergence, including the original unweighted graphs with their own diameter normalization.
+- Actual substituted graphs, resistance renormalization, metric completion, limiting measures, and deterministic measured GHP convergence, including the original unweighted graphs with their own diameter normalization. Their actual projection distortions tend uniformly to zero, and a single complete compact common ambient with all required isometric embeddings is constructed internally.
 - The actual regular strongly local closed form, varying-space Mosco convergence, conservative self-adjoint closed L² semigroup, its generator identification, and actual finite operator limits.
-- All-vertex sup convergence of the original continuous-time and discrete floor-clock semigroups, with de-Poissonization supplied internally.
+- All-vertex sup convergence of the original continuous-time and discrete floor-clock semigroups, with de-Poissonization supplied internally. The actual native clock and floor index equal the manuscript clock 2*c*rho^n*|E(Xi^n)| for the same normalization witness.
 - Full-sequence finite-horizon path weak convergence for arbitrary convergent moving starts, with continuous limiting paths; a global continuous-path probability family measurable in its starting point, identified with the same closed L² semigroup.
 - The actual natural-filtration stopping-time identity and conditional expectation for everywhere finite stopping times and continuous terminal tests. This does not yet establish all usual-filtration, bounded-Borel, future-path or Hunt conclusions.
 - Actual closed-domain Nash bounds, L¹ contraction, L¹–L² and L²–continuous smoothing, and compact smoothing. The same actual five-rule closed semigroup has a symmetric strictly positive mass-one heat kernel, jointly continuous in positive time and both spatial variables, with the global small-time bound and a valid clipped all-time bound. Strict positivity and time continuity are supplied internally.
@@ -35,7 +35,7 @@ The adopted manuscript is [paper-corrections/AIM.corrected.tex](paper-correction
 
 Pinned Lean **4.28.0**, mathlib **8f9d9cff6bd728b17a24e163c9402775d9e6a365**.
 
-The completed shared-dependency batch contains **545 modules**, with unchanged checked sources. Subsequent independently accepted whole-file receipts are listed separately; inventories overlap and are not a completion percentage.
+The completed shared-dependency batch contains **690 modules**, with unchanged checked sources. Subsequent independently accepted whole-file receipts are listed separately; inventories overlap and are not a completion percentage.
 
 ```sh
 python verify_published_snapshot.py
@@ -48,5 +48,3 @@ python verify_published_snapshot.py --rebuild --lean /absolute/path/to/lean
 ```
 
 An unfiltered full-source build includes drafts and is not claimed to pass. Toolchains, dependency caches and compiled binaries are omitted. The earlier corpus used [Aristotle](https://aristotle.harmonic.fun); subsequent development uses Codex, with current parallel agents GPT-6.1 Sol / high.
-
-The later 690-module shared integration is still running and is not counted as passed. The 634-module historical report predates local-instance naming changes and is not asserted to match current sources.

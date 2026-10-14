@@ -116,9 +116,12 @@ theorem extension_root_distance (n : ℕ) (point : Extensions n) (base : Root) :
     (amalgamationStage Extensions roots roots_isometry n).root_isometry (roots_isometry n)) base
   change Metric.toGlueL _ _ ((amalgamationStage Extensions roots roots_isometry n).root base) =
     Metric.toGlueR _ _ (roots n base) at glued
-  change dist (Metric.toInductiveLimit _ (n + 1) (Metric.toGlueR _ _ point))
-    (Metric.toInductiveLimit _ (n + 1) (Metric.toGlueL _ _
-      ((amalgamationStage Extensions roots roots_isometry n).root base))) = _
+  change dist (Metric.toInductiveLimit (amalgamationStep_isometry Extensions roots roots_isometry)
+    (n + 1) (Metric.toGlueR (amalgamationStage Extensions roots roots_isometry n).root_isometry
+      (roots_isometry n) point))
+    (Metric.toInductiveLimit (amalgamationStep_isometry Extensions roots roots_isometry)
+      (n + 1) (Metric.toGlueL (amalgamationStage Extensions roots roots_isometry n).root_isometry
+        (roots_isometry n) ((amalgamationStage Extensions roots roots_isometry n).root base))) = _
   rw [glued, (Metric.toInductiveLimit_isometry
     (amalgamationStep_isometry Extensions roots roots_isometry) (n + 1)).dist_eq]
   exact (Metric.toGlueR_isometry _ _).dist_eq point (roots n base)
@@ -143,8 +146,11 @@ theorem union_point_cases (point : AmalgamationUnion Extensions roots roots_isom
       | inl previous =>
         have commute := congrFun (Metric.toInductiveLimit_commute
           (amalgamationStep_isometry Extensions roots roots_isometry) n) previous
-        change Metric.toInductiveLimit _ (n + 1) (toGlueL _ _ previous) =
-          Metric.toInductiveLimit _ n previous at commute
+        change Metric.toInductiveLimit (amalgamationStep_isometry Extensions roots roots_isometry)
+          (n + 1) (toGlueL (amalgamationStage Extensions roots roots_isometry n).root_isometry
+            (roots_isometry n) previous) =
+          Metric.toInductiveLimit (amalgamationStep_isometry Extensions roots roots_isometry)
+            n previous at commute
         rcases induction previous with ⟨base, equal⟩ | ⟨index, original, equal⟩
         · exact Or.inl ⟨base, commute.trans equal⟩
         · exact Or.inr ⟨index, original, commute.trans equal⟩
@@ -165,17 +171,17 @@ theorem completeAmalgamation_compact [CompactSpace Root] [∀ n, CompactSpace (E
     intro epsilon positive
     obtain ⟨cutoff, tail⟩ := eventually_atTop.mp
       (radiiZero.eventually (gt_mem_nhds (half_pos positive)))
-    let prefix : Set (CompleteAmalgamation Extensions roots roots_isometry) :=
+    let compactPrefix : Set (CompleteAmalgamation Extensions roots roots_isometry) :=
       range (rootInAmbient Extensions roots roots_isometry) ∪
         ⋃ n : Fin cutoff, range (extensionInAmbient Extensions roots roots_isometry n.val)
-    have prefixCompact : IsCompact prefix :=
+    have prefixCompact : IsCompact compactPrefix :=
       (isCompact_range (rootInAmbient_isometry Extensions roots roots_isometry).continuous).union
         (isCompact_iUnion fun n : Fin cutoff => isCompact_range
           (extensionInAmbient_isometry Extensions roots roots_isometry n.val).continuous)
     obtain ⟨centres, centresFinite, covers⟩ :=
       Metric.totallyBounded_iff.mp prefixCompact.totallyBounded (epsilon / 2) (half_pos positive)
     have nearPrefix (point : CompleteAmalgamation Extensions roots roots_isometry)
-        (near : ∃ original ∈ prefix, dist point original < epsilon / 2) :
+        (near : ∃ original ∈ compactPrefix, dist point original < epsilon / 2) :
         point ∈ ⋃ centre ∈ centres, Metric.ball centre epsilon := by
       obtain ⟨original, member, distance⟩ := near
       obtain ⟨centre, memberCentre⟩ := mem_iUnion.mp (covers member)
@@ -190,12 +196,17 @@ theorem completeAmalgamation_compact [CompactSpace Root] [∀ n, CompactSpace (E
       ⟨base, equal⟩ | ⟨n, value, equal⟩
     · rw [equal]
       exact ⟨rootInAmbient Extensions roots roots_isometry base, Or.inl (mem_range_self _),
-        by change dist _ _ < _; simpa using half_pos positive⟩
+        by
+          change dist (rootInAmbient Extensions roots roots_isometry base)
+            (rootInAmbient Extensions roots roots_isometry base) < epsilon / 2
+          simpa only [dist_self] using half_pos positive⟩
     · rw [equal]
       by_cases early : n < cutoff
       · refine ⟨extensionInAmbient Extensions roots roots_isometry n value,
           Or.inr (mem_iUnion.mpr ⟨⟨n, early⟩, mem_range_self _⟩), ?_⟩
-        simpa using half_pos positive
+        change dist (extensionInAmbient Extensions roots roots_isometry n value)
+          (extensionInAmbient Extensions roots roots_isometry n value) < epsilon / 2
+        simpa only [dist_self] using half_pos positive
       · obtain ⟨base, near⟩ := closeToRoot n value
         refine ⟨rootInAmbient Extensions roots roots_isometry base, Or.inl (mem_range_self _), ?_⟩
         change dist (extensionInAmbient Extensions roots roots_isometry n value)

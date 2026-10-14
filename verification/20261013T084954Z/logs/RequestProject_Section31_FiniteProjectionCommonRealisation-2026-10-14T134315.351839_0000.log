@@ -1,0 +1,3 @@
+'EIGS.CountableRealisation.exists_compact_common_realisation_of_projection_distortion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
