@@ -31,9 +31,11 @@ noncomputable section
     apply propext
     constructor
     · intro countZero
+      change holdingJumpIndex holdingTimes time = 0 at countZero
       have interval := holdingJumpIndex_interval holdingTimes (fun index => (positive index).le)
         nonexplosion time timeNonnegative
-      simpa only [countZero, zero_add, cumulativeHoldingTime, Finset.sum_range_one] using interval.2
+      rw [countZero] at interval
+      simpa only [zero_add, cumulativeHoldingTime, Finset.sum_range_one] using interval.2
     · intro firstJumpLater
       apply holdingJumpIndex_eq_of_interval holdingTimes (fun index => (positive index).le) time 0
       · simpa only [cumulativeHoldingTime, Finset.range_zero, Finset.sum_empty] using timeNonnegative

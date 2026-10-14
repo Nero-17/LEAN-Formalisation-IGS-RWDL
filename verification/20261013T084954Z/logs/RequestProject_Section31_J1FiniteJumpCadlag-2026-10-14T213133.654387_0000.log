@@ -1,0 +1,4 @@
+'IGS.Sec31.DiscreteMarkov.finiteEndpointJumpFunction_isCadlag' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.finiteEndpointCadlagJ1Path' depends on axioms: [propext, Classical.choice, Quot.sound]

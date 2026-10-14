@@ -52,11 +52,9 @@ theorem separatedJumpKnots_isClosed (count : ℕ) (gap : ℝ) :
     intro first
     apply isClosed_iInter
     intro second
-    by_cases ordered : first < second
-    · simpa only [ordered, true_implies] using
-        isClosed_le continuous_const ((coordinateContinuous second).sub (coordinateContinuous first))
-    · simp only [ordered, false_implies, setOf_true]
-      exact isClosed_univ
+    apply isClosed_iInter
+    intro ordered
+    exact isClosed_le continuous_const ((coordinateContinuous second).sub (coordinateContinuous first))
 
 theorem separatedJumpKnots_isCompact (count : ℕ) (gap : ℝ) :
     IsCompact (separatedJumpKnots count gap) :=
@@ -80,7 +78,7 @@ theorem finiteEndpointCadlagJ1Path_separated_range_isCompact
     IsCompact (Set.range (fun knots : separatedJumpKnots count gap =>
       finiteEndpointCadlagJ1Path knots.val states endpoint)) := by
   letI : CompactSpace (separatedJumpKnots count gap) :=
-    (separatedJumpKnots_isCompact count gap).compactSpace
+    isCompact_iff_compactSpace.mp (separatedJumpKnots_isCompact count gap)
   have interiorContinuous : Continuous (separatedJumpKnots_toInterior count gap gapPositive) :=
     continuous_subtype_val.subtype_mk _
   have pathContinuous := (finiteEndpointCadlagJ1Path_knots_lipschitz count states endpoint).continuous.comp

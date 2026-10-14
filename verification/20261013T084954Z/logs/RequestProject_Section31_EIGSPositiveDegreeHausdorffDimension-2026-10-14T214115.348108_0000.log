@@ -1,0 +1,3 @@
+'EIGS.xiCompletion_hausdorff_dimension_of_rules_of_positive_degree_data' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

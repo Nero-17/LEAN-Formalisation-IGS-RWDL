@@ -1,0 +1,11 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSTwoColourActualGeometricDimensions.lean:21:8: warning: unused variable `mass`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSTwoColourActualGeometricDimensions.lean:41:8: warning: unused variable `mass`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'EIGS.twoColourSystem_native_coveringNumber_dimension' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_diameter_coveringNumber_dimension' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_terminal_resistance_dimension_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_degree_mass_logarithmic_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_admissible_walk_dimension_limit' depends on axioms: [propext, Classical.choice, Quot.sound]

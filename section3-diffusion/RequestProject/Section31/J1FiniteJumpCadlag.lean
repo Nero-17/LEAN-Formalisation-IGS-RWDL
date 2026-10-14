@@ -56,8 +56,9 @@ theorem finiteEndpointJumpFunction_isCadlag {State : Type*} [MetricSpace State] 
       have nextTimeTerminal : nextTime.val = 1 := le_antisymm nextTime.property.2
         (by simpa only [terminal] using lower)
       simp only [finiteEndpointJumpFunction, if_pos nextTimeTerminal, if_pos terminal]
-    · have timeBefore : time < (⟨1, by norm_num⟩ : UnitJ1Time) :=
-        lt_of_le_of_ne time.property.2 terminal
+    · have timeBefore : time < (⟨1, by norm_num⟩ : UnitJ1Time) := by
+        change time.val < 1
+        exact lt_of_le_of_ne time.property.2 terminal
       apply tendsto_const_nhds.congr'
       filter_upwards [finiteJumpCount_eventually_right knots time,
         nhdsWithin_le_nhds (Iio_mem_nhds timeBefore)] with nextTime countEquality nextTimeBefore

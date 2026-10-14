@@ -1,0 +1,6 @@
+'IGS.Sec31.PoissonClock.exponentialHoldingJumpIndex_poisson_probability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.PoissonClock.exponentialHoldingJumpIndex_poisson_hasLaw' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

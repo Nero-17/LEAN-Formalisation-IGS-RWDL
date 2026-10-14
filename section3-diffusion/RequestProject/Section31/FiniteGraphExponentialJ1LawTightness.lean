@@ -72,7 +72,7 @@ theorem finiteGraphExponentialJ1Law_isTight
         (embedding (sample.1 (holdingJumpIndex sample.2 horizon))) point =
           holdingTimePath (fun index => embedding (sample.1 index)) sample.2 (horizon * point.val)
       by_cases terminal : point.val = 1
-      · simp only [finiteEndpointJumpFunction, if_pos terminal, terminal, mul_one, holdingTimePath]
+      · simp only [finiteEndpointJumpFunction, terminal, if_true, mul_one, holdingTimePath]
       · simp only [finiteEndpointJumpFunction, if_neg terminal]
         exact (representation point (lt_of_le_of_ne point.property.2 terminal)).symm
     have reconstruct (path : J1Function UnitJ1Time State) : J1Function.mk path.toFun = path := by

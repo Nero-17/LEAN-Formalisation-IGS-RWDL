@@ -27,7 +27,8 @@ theorem exists_vanishing_positive_radii_of_eventual
     have membership : scale ∈ eligible index :=
       Finset.mem_filter.mpr ⟨Finset.mem_range.mpr (Nat.lt_succ_of_le ((le_max_left _ _).trans large)),
         (le_max_right _ _).trans large⟩
-    exact Finset.le_sup membership
+    change scale ≤ (eligible index).sup (fun value : ℕ => value)
+    exact Finset.le_sup (f := fun value : ℕ => value) membership
   refine ⟨fun index => 1 / (selected index + 1 : ℝ), fun _ => by positivity,
     tendsto_one_div_add_atTop_nhds_zero_nat.comp selectedDiverges, threshold 0, ?_⟩
   intro index large
@@ -35,7 +36,9 @@ theorem exists_vanishing_positive_radii_of_eventual
     ⟨0, Finset.mem_filter.mpr ⟨Finset.mem_range.mpr (Nat.zero_lt_succ index), large⟩⟩
   have selectedMembership : selected index ∈ eligible index := by
     obtain ⟨scale, membership, equality⟩ := Finset.sup_mem_of_nonempty (f := id) nonempty
-    exact equality ▸ membership
+    change (eligible index).sup id ∈ eligible index
+    rw [← equality]
+    exact membership
   exact good (selected index) index (Finset.mem_filter.mp selectedMembership).2
 
 end

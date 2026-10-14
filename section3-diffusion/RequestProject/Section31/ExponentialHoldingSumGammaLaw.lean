@@ -16,9 +16,14 @@ noncomputable section
  theorem cumulativeHoldingTime_independent_next (count : ℕ) :
     IndepFun (fun holdingTimes : ℕ → ℝ => cumulativeHoldingTime holdingTimes count)
       (fun holdingTimes : ℕ → ℝ => holdingTimes count) exponentialHoldingTimeLaw := by
-  simpa only [Finset.sum_apply, cumulativeHoldingTime] using
-    exponentialHoldingTimeLaw_independent.indepFun_sum_range_succ
-      (fun index => measurable_pi_apply index) count
+  have independent := exponentialHoldingTimeLaw_independent.indepFun_sum_range_succ
+    (fun index => measurable_pi_apply index) count
+  have sumsEqual : (∑ index ∈ Finset.range count, fun holdingTimes : ℕ → ℝ => holdingTimes index) =
+      (fun holdingTimes : ℕ → ℝ => cumulativeHoldingTime holdingTimes count) := by
+    funext holdingTimes
+    simp only [Finset.sum_apply, cumulativeHoldingTime]
+  rw [sumsEqual] at independent
+  exact independent
 
  theorem cumulativeHoldingTime_gamma_hasLaw (count : ℕ) :
     HasLaw (fun holdingTimes : ℕ → ℝ => cumulativeHoldingTime holdingTimes (count + 1))

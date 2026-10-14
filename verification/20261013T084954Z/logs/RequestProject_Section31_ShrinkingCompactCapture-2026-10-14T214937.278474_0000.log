@@ -1,0 +1,3 @@
+'IGS.Sec31.DiscreteMarkov.shrinking_compact_capture_union_isCompact' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

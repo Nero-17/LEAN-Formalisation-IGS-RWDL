@@ -29,7 +29,9 @@ def finiteSupportPathToUnitCadlagJ1 (horizon : ℝ≥0) (horizonPositive : 0 < h
   ⟨⟨fun time => UniformFun.toFun path.val (unitIntervalScale horizon time)⟩,
     (finiteSupportPathSpace_isCadlag paths supportsCadlag path).comp_continuous_strictMono
       (unitIntervalScale horizon) (unitIntervalScale_continuous horizon)
-        (fun _ _ ordered => mul_lt_mul_of_pos_left ordered (show (0 : ℝ) < horizon from horizonPositive))⟩
+        (fun first second ordered => by
+          change (horizon : ℝ) * first.val < (horizon : ℝ) * second.val
+          exact mul_lt_mul_of_pos_left ordered (show (0 : ℝ) < horizon from horizonPositive))⟩
 
 theorem finiteSupportPathToUnitCadlagJ1_lipschitz (horizon : ℝ≥0) (horizonPositive : 0 < horizon)
     (paths : (level : ℕ) → History level → Icc (0 : ℝ) (horizon : ℝ) → State)
@@ -61,7 +63,7 @@ theorem finiteSupportPathToUnitCadlagJ1_tight (horizon : ℝ≥0) (horizonPositi
     (tight : IsTightMeasureSet (Set.range (fun level => (laws level : Measure (FiniteSupportPathSpace paths))))) :
     IsTightMeasureSet (Set.range (fun level => (laws level : Measure (FiniteSupportPathSpace paths)).map
       (finiteSupportPathToUnitCadlagJ1 horizon horizonPositive paths supportsCadlag))) := by
-  simpa only [Set.image_range] using tight.map
+  simpa only [← Set.range_comp', Function.comp_def] using tight.map
     (finiteSupportPathToUnitCadlagJ1_lipschitz horizon horizonPositive paths supportsCadlag).continuous
 
 end

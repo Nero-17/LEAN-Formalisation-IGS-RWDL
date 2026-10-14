@@ -1,0 +1,3 @@
+'IGS.Sec31.PoissonClock.unit_exponential_conditional_residual_law' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

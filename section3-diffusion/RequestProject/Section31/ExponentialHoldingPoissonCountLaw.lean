@@ -28,9 +28,11 @@ noncomputable section
         apply propext
         constructor
         · intro countEquality
+          change holdingJumpIndex holdingTimes (time : ℝ) = previous + 1 at countEquality
           have interval := holdingJumpIndex_interval holdingTimes (fun index => (positive index).le)
             nonexplosion (time : ℝ) time.coe_nonneg
-          simpa only [countEquality, cumulativeHoldingTime, Finset.sum_range_succ] using interval
+          rw [countEquality] at interval
+          simpa only [cumulativeHoldingTime, Finset.sum_range_succ] using interval
         · intro interval
           apply holdingJumpIndex_eq_of_interval holdingTimes (fun index => (positive index).le)
             (time : ℝ) (previous + 1) interval.1
@@ -45,7 +47,7 @@ noncomputable section
           {pair : ℝ × ℝ | pair.1 ≤ (time : ℝ) ∧ (time : ℝ) < pair.1 + pair.2} :=
         (measurableSet_le measurable_fst measurable_const).inter
           (measurableSet_lt measurable_const (measurable_fst.add measurable_snd))
-      rw [show Nat.succ previous = previous + 1 from rfl, eventEquality]
+      rw [eventEquality]
       have mappedEvent :
           exponentialHoldingTimeLaw {holdingTimes : ℕ → ℝ |
             cumulativeHoldingTime holdingTimes (previous + 1) ≤ (time : ℝ) ∧
@@ -70,7 +72,9 @@ noncomputable section
   rw [Measure.map_apply (holdingJumpIndex_measurable (time : ℝ)) (measurableSet_singleton count)]
   change exponentialHoldingTimeLaw {holdingTimes | holdingJumpIndex holdingTimes (time : ℝ) = count} = _
   rw [exponentialHoldingJumpIndex_poisson_probability]
-  simp only [poissonMeasure, PMF.toMeasure_apply_singleton, poissonPMF]
+  change ENNReal.ofReal (poissonPMFReal time count) = (poissonPMF time).toMeasure {count}
+  rw [PMF.toMeasure_apply_singleton _ _ (measurableSet_singleton count)]
+  rfl
 
 end
 end IGS.Sec31.PoissonClock

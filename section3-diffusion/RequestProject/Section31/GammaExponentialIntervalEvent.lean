@@ -37,9 +37,11 @@ noncomputable section
   change (∫⁻ first : ℝ, expMeasure 1 {second : ℝ | first ≤ time ∧ time < first + second}
     ∂gammaMeasure ((count : ℝ) + 1) 1) = _
   simp_rw [sectionProbability]
-  rw [gammaMeasure, lintegral_withDensity_eq_lintegral_mul volume
+  have gammaMeasurable : Measurable (gammaPDF ((count : ℝ) + 1) 1) :=
     (measurable_gammaPDFReal ((count : ℝ) + 1) 1).ennreal_ofReal
-    ((measurable_exponentialPDFReal 1).ennreal_ofReal.comp (measurable_const.sub measurable_id))]
+  have tailMeasurable : Measurable (fun first : ℝ => exponentialPDF 1 (time - first)) :=
+    (measurable_exponentialPDFReal 1).ennreal_ofReal.comp (measurable_const.sub measurable_id)
+  rw [gammaMeasure, lintegral_withDensity_eq_lintegral_mul volume gammaMeasurable tailMeasurable]
   have reordered :
       (∫⁻ first : ℝ, gammaPDF ((count : ℝ) + 1) 1 first * exponentialPDF 1 (time - first)) =
         MeasureTheory.lconvolution (gammaPDF ((count : ℝ) + 1) 1) (exponentialPDF 1) volume time := by

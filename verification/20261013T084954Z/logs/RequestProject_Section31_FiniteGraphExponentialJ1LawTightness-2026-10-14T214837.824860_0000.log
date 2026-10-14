@@ -1,0 +1,8 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\FiniteGraphExponentialJ1LawTightness.lean:71:6: warning: 'change
+  finiteEndpointJumpFunction knots (fun index : Fin (count + 1) => embedding (sample.1 index.val))
+      (embedding (sample.1 (holdingJumpIndex sample.2 horizon))) point =
+    holdingTimePath (fun index => embedding (sample.1 index)) sample.2 (horizon * point.val)' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'IGS.Sec31.PoissonClock.finiteJumpVertexCompactSet_isCompact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonClock.finiteGraphExponentialJ1Law_isTight' depends on axioms: [propext, Classical.choice, Quot.sound]

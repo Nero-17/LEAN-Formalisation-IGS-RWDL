@@ -1,0 +1,16 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\FiniteSupportUnitJ1Transport.lean:36:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.DiscreteMarkov.finiteSupportPathToUnitCadlagJ1_lipschitz`:
+  [MeasurableSpace State]
+  [BorelSpace State]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace State] [BorelSpace State] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'IGS.Sec31.DiscreteMarkov.finiteSupportPathToUnitCadlagJ1_lipschitz' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.finiteSupportPathToUnitCadlagJ1_measurable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.finiteSupportPathToUnitCadlagJ1_tight' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

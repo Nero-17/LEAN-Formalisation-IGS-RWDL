@@ -90,9 +90,9 @@ theorem twoColourSystem_degree_mass_logarithmic_ratio (birth : ℕ) (vertex : Xi
       (∑ state, degVec twoColourSystem (birth + age) (xiForward twoColourSystem birth age vertex) state) ≤
         (degreeUpper / 2 ^ birth) * (2 : ℝ) ^ (birth + age) := by
     have lowerIdentity : (degreeLower / 2 ^ birth) * (2 : ℝ) ^ (birth + age) = degreeLower * 2 ^ age := by
-      rw [pow_add]; field_simp; ring
+      rw [pow_add]; field_simp
     have upperIdentity : (degreeUpper / 2 ^ birth) * (2 : ℝ) ^ (birth + age) = degreeUpper * 2 ^ age := by
-      rw [pow_add]; field_simp; ring
+      rw [pow_add]; field_simp
     rw [lowerIdentity, upperIdentity]
     exact degreeBounds age
   have degreeLog := logarithmic_geometric_scale_limit (by norm_num : (0 : ℝ) < 2)

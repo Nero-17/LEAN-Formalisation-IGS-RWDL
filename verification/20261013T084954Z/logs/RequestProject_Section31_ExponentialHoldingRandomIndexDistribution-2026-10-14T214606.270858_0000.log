@@ -1,0 +1,7 @@
+'IGS.Sec31.PoissonClock.independent_random_index_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonClock.exponential_holding_path_poisson_mixture' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.PoissonClock.finite_graph_exponential_path_marginal_mixture' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,6 @@
+'IGS.Sec31.DiscreteMarkov.interiorOrderedKnots_mem_some_separated' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.DiscreteMarkov.isTight_singleton_of_countable_compact_capture' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

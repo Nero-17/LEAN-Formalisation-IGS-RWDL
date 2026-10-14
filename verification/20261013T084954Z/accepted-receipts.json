@@ -1,13 +1,13 @@
 {
-  "snapshot_utc": "2026-10-14T21:24:17.806773+00:00",
+  "snapshot_utc": "2026-10-14T21:53:18.583571+00:00",
   "round": "20261013T084954Z",
   "compiler": "Lean 4.28.0",
   "mathlib": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
-  "shared_dependency_modules": 920,
-  "shared_report": "integration-920.json",
-  "shared_report_sha256": "3f2aa8d4fcf88ad244256d2942e4556ffb447e47c1bf5ca62df92b3487aa629b",
-  "independent_whole_file_count": 622,
-  "independent_audit_count": 1761,
+  "shared_dependency_modules": 979,
+  "shared_report": "integration-979.json",
+  "shared_report_sha256": "427ad422ec0da668e7a3f6d41464859c62d64efaadd6af2204a70b9c3609a316",
+  "independent_whole_file_count": 647,
+  "independent_audit_count": 1809,
   "records": [
     {
       "module": "RequestProject.Section31.EIGSL2EnergyConstants",
@@ -18294,6 +18294,640 @@
         },
         {
           "declaration": "IGS.Sec31.PoissonClock.holdingTimePath_finite_endpoint_jump_representation",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.FiniteGraphExponentialJ1PathLaw",
+      "source": "section3-diffusion/RequestProject/Section31/FiniteGraphExponentialJ1PathLaw.lean",
+      "source_sha256": "be4b4a9dd7c5031af59249fdc2492422e30f4b1077d32fb3d02b7df52ea6aa02",
+      "log": "logs/RequestProject_Section31_FiniteGraphExponentialJ1PathLaw-2026-10-14T212335.439174_0000.log",
+      "log_sha256": "e65b6714988703812a761700a1345b29b06b29d7d9da5f9154971b24b118e249",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.PoissonClock.unitHoldingCadlagPath",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.finiteGraphExponentialSampleLaw_clock_regular",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponentialHoldingJ1Sample_aemeasurable",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.finiteGraphExponentialJ1Law",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.GammaExponentialMeasureConvolution",
+      "source": "section3-diffusion/RequestProject/Section31/GammaExponentialMeasureConvolution.lean",
+      "source_sha256": "dd2e58a2211682ebf1aaf4ebbdb87c3404a850139a808a13497c6bf146bcf2fc",
+      "log": "logs/RequestProject_Section31_GammaExponentialMeasureConvolution-2026-10-14T212906.155182_0000.log",
+      "log_sha256": "095f9d112861d4a8089c6b0631f453033b9cd1ae2a4234278415fb9fa6faf07f",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.gamma_natural_exponential_lconvolution",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.gamma_natural_measure_conv_exponential",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.J1FiniteJumpCadlag",
+      "source": "section3-diffusion/RequestProject/Section31/J1FiniteJumpCadlag.lean",
+      "source_sha256": "398303c5e84b1edd57283cde3e7c19798ed4b3a41c8ccfadc51b62c44f4ef692",
+      "log": "logs/RequestProject_Section31_J1FiniteJumpCadlag-2026-10-14T213133.654387_0000.log",
+      "log_sha256": "d86061bf77f42057964bc5e1f37a9a8dc50856d2c1cf3abfff78e49d9a2833cf",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.finiteEndpointJumpFunction_isCadlag",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.finiteEndpointCadlagJ1Path",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ExponentialHoldingSumGammaLaw",
+      "source": "section3-diffusion/RequestProject/Section31/ExponentialHoldingSumGammaLaw.lean",
+      "source_sha256": "ac1af2048773319b520c9fe7a46b6f9f1e891fa16e8c36535093de116ae77c57",
+      "log": "logs/RequestProject_Section31_ExponentialHoldingSumGammaLaw-2026-10-14T213812.984917_0000.log",
+      "log_sha256": "ce072ea014bbc08609a6950f3f625a0ca369a58233fea8ed2a77ef0da75153d7",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponentialHoldingTime_eval_hasLaw",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.cumulativeHoldingTime_independent_next",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.cumulativeHoldingTime_gamma_hasLaw",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ExponentialHoldingZeroCountProbability",
+      "source": "section3-diffusion/RequestProject/Section31/ExponentialHoldingZeroCountProbability.lean",
+      "source_sha256": "d4fd0659a6553155be385517cc08026f780a9b4e63166090425f74beb6295788",
+      "log": "logs/RequestProject_Section31_ExponentialHoldingZeroCountProbability-2026-10-14T213845.801895_0000.log",
+      "log_sha256": "7e2e2e95cbfcd8d2e8e3c9d4f675341e20c1c9afe2e61e6062a1080c356a305b",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.PoissonClock.unit_exponential_tail_probability",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponentialHoldingJumpIndex_zero_probability",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.J1FiniteJumpParameterCompactness",
+      "source": "section3-diffusion/RequestProject/Section31/J1FiniteJumpParameterCompactness.lean",
+      "source_sha256": "5a3202888d9a8d3df34325c6aab9bcbc55380ce132592637a509d84de954424c",
+      "log": "logs/RequestProject_Section31_J1FiniteJumpParameterCompactness-2026-10-14T214540.703985_0000.log",
+      "log_sha256": "45b822a738fdeb50cfafb839aa9b1f607ef3b3e9adacfa8c45942e3e117f09d6",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.finiteEndpointCadlagJ1Path_knots_lipschitz",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.separatedJumpKnots_isCompact",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.finiteEndpointCadlagJ1Path_separated_range_isCompact",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSPositiveDegreeAllPointBallLower",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSPositiveDegreeAllPointBallLower.lean",
+      "source_sha256": "bc91e2b6461538ff200cae382ba2358db10014909d471296f30907d292c7734a",
+      "log": "logs/RequestProject_Section31_EIGSPositiveDegreeAllPointBallLower-2026-10-14T213245.472303_0000.log",
+      "log_sha256": "7d592819aa8d3be79a69dad6aedec01cd7e9131ea9a594ded5dfc72ac9e850a7",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiAllPointBallMassLower_of_rules_of_positive_degree_data",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSPositiveDegreeTypicalAllRadii",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSPositiveDegreeTypicalAllRadii.lean",
+      "source_sha256": "34d56e6d6e6bdeb70957f80372eac6e1fb0d82d6a3dcb7f82f0d18124db7c249",
+      "log": "logs/RequestProject_Section31_EIGSPositiveDegreeTypicalAllRadii-2026-10-14T213328.673440_0000.log",
+      "log_sha256": "9026e54eedc2bb2dc216c23bd295d977fcd4d115e39fd1ad7e0f085763d0312a",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiTypicalBallMassUpperAllRadii_of_rules_of_positive_degree_data",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSPositiveDegreeCoveringDimension",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSPositiveDegreeCoveringDimension.lean",
+      "source_sha256": "1fb293f0ad6649579ba180f1ed1a38c3a1cc304a3c699799aa63b8b5a483a44b",
+      "log": "logs/RequestProject_Section31_EIGSPositiveDegreeCoveringDimension-2026-10-14T213423.206678_0000.log",
+      "log_sha256": "4c91d419b7e2e95e7f07bda82ffa9d2bf13aa170e4801ff820267bb9689bf98a",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiCompletion_coveringNumber_dimension_of_rules_of_positive_degree_data",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSPositiveDegreeDiameterBallMass",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSPositiveDegreeDiameterBallMass.lean",
+      "source_sha256": "bf594d2ad60eaa51f2696a5a53e26af71d405a6ce8f5e06e3fe97a5c2475dfdd",
+      "log": "logs/RequestProject_Section31_EIGSPositiveDegreeDiameterBallMass-2026-10-14T213508.506948_0000.log",
+      "log_sha256": "57ad49145a4007ba5936621cda28e4047d91440196f892b8aad7a8ecc27eef16",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiTypicalDiameterBallMass_of_rules_of_positive_degree_data",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSPositiveDegreeDiameterCoveringDimension",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSPositiveDegreeDiameterCoveringDimension.lean",
+      "source_sha256": "1674569caf6b1c16db23db3c60171a2bd729c00cb7ee7c29b07c756b06451c3b",
+      "log": "logs/RequestProject_Section31_EIGSPositiveDegreeDiameterCoveringDimension-2026-10-14T213559.719269_0000.log",
+      "log_sha256": "36a308a802c26a21691d404b2386c88ba2b941fe400acf22f201ac0017ff589d",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiDiameterCompletion_coveringNumber_dimension_of_rules_of_positive_degree_data",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSTwoColourActualGeometricDimensions",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSTwoColourActualGeometricDimensions.lean",
+      "source_sha256": "63ee550946d47de9b49bc0719b1c2a04e00096cfa9c2885d7c9e5a7dd3169ff1",
+      "log": "logs/RequestProject_Section31_EIGSTwoColourActualGeometricDimensions-2026-10-14T214019.645698_0000.log",
+      "log_sha256": "ff7f51ad34b028da958520448b46785a81b8a2a78df53595031dba242789799c",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.twoColourSystem_native_coveringNumber_dimension",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_diameter_coveringNumber_dimension",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_terminal_resistance_dimension_limit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_degree_mass_logarithmic_ratio",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_admissible_walk_dimension_limit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.GammaExponentialIntervalEvent",
+      "source": "section3-diffusion/RequestProject/Section31/GammaExponentialIntervalEvent.lean",
+      "source_sha256": "5f96e7db17c8097285a6b419f2b3745ba150d34f7699c553c2abc9b2761032b9",
+      "log": "logs/RequestProject_Section31_GammaExponentialIntervalEvent-2026-10-14T213912.895748_0000.log",
+      "log_sha256": "5a92e3256ee81314d3a5737e65b559033778dd7dee4a046d20ad823029b4f934",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.gamma_exponential_interval_event_probability",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ExponentialHoldingPoissonCountLaw",
+      "source": "section3-diffusion/RequestProject/Section31/ExponentialHoldingPoissonCountLaw.lean",
+      "source_sha256": "d5803dda61ae4bc904077f1fef24586934c40db062f30ca249fe497dfb09b82e",
+      "log": "logs/RequestProject_Section31_ExponentialHoldingPoissonCountLaw-2026-10-14T214407.929499_0000.log",
+      "log_sha256": "3176206ff2832104b0c54be38201bc95efc5b7924de2e8c3918cd5e0ec49db2a",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponentialHoldingJumpIndex_poisson_probability",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponentialHoldingJumpIndex_poisson_hasLaw",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSPositiveDegreeHausdorffDimension",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSPositiveDegreeHausdorffDimension.lean",
+      "source_sha256": "9e8a0e6776e5c00ed2923081392579e2aa1898b36105cc4192f9312c8a19a6e3",
+      "log": "logs/RequestProject_Section31_EIGSPositiveDegreeHausdorffDimension-2026-10-14T214115.348108_0000.log",
+      "log_sha256": "223e9dda9323fc7c7823963b458c366d71606df67c375654dbe55df9b5db2a8f",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiCompletion_hausdorff_dimension_of_rules_of_positive_degree_data",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSPositiveDegreeDiameterHausdorffDimension",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSPositiveDegreeDiameterHausdorffDimension.lean",
+      "source_sha256": "61de17175dd5fd5aa800b6a7f612f0e3d2c5893e6531883105516ac77b0a77ac",
+      "log": "logs/RequestProject_Section31_EIGSPositiveDegreeDiameterHausdorffDimension-2026-10-14T214201.312944_0000.log",
+      "log_sha256": "1af6fd47bc40221c6f18f21efa6f85898ef3c53b83612c81118d9def65dee28d",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiDiameterCompletion_hausdorff_dimension_of_rules_of_positive_degree_data",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSTwoColourActualHausdorffDimension",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSTwoColourActualHausdorffDimension.lean",
+      "source_sha256": "0502c54645de4db11e39e571cbdc71aabd0ae64a1989b4324dda15802b6d6cf9",
+      "log": "logs/RequestProject_Section31_EIGSTwoColourActualHausdorffDimension-2026-10-14T214241.924089_0000.log",
+      "log_sha256": "5b28af84e66b5e634b383f43ac2c3f5de0397d6b10ec1a3a1aa0398c2d8e187d",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.twoColourSystem_native_hausdorff_dimension",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_diameter_hausdorff_dimension",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ExponentialMemorylessResidualLaw",
+      "source": "section3-diffusion/RequestProject/Section31/ExponentialMemorylessResidualLaw.lean",
+      "source_sha256": "1e05b7bc2e3c836a5f5137d361723e54283773a03c5ec9167aabcafdf814aacf",
+      "log": "logs/RequestProject_Section31_ExponentialMemorylessResidualLaw-2026-10-14T214407.922800_0000.log",
+      "log_sha256": "ff4caa702bb582c7a0e08e28d74cb1ce98f2cfaf2967821700e6b4ae5d869dc1",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.PoissonClock.unit_exponential_negative_tail",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.unit_exponential_surviving_residual_measure",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ExponentialHoldingRandomIndexDistribution",
+      "source": "section3-diffusion/RequestProject/Section31/ExponentialHoldingRandomIndexDistribution.lean",
+      "source_sha256": "cb6f4a6946dcc2775a2de8afb27e84a9c2d3011b900b0be2a4b9296143ec883a",
+      "log": "logs/RequestProject_Section31_ExponentialHoldingRandomIndexDistribution-2026-10-14T214606.270858_0000.log",
+      "log_sha256": "fac44d46abd9ce67eae922c37b979db328bc8ef9dd4c4a650919e9c602ea9064",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.PoissonClock.independent_random_index_probability",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponential_holding_path_poisson_mixture",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.finite_graph_exponential_path_marginal_mixture",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ExponentialConditionalResidualLaw",
+      "source": "section3-diffusion/RequestProject/Section31/ExponentialConditionalResidualLaw.lean",
+      "source_sha256": "b24d91d28fa972012ea3ac773a30959d6531ff7e4f976de8b8d2357ebc78d769",
+      "log": "logs/RequestProject_Section31_ExponentialConditionalResidualLaw-2026-10-14T214453.427191_0000.log",
+      "log_sha256": "2ee8066ef0041ee99b4d956221c320f491b9730a03057ad4a7fb7b8490359a93",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.PoissonClock.unit_exponential_conditional_residual_law",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.J1FiniteJumpCompactCover",
+      "source": "section3-diffusion/RequestProject/Section31/J1FiniteJumpCompactCover.lean",
+      "source_sha256": "cec6a27875b5cf57cb0b393e5314ffa1141f66cf40e5ac73a072637e2b2d87aa",
+      "log": "logs/RequestProject_Section31_J1FiniteJumpCompactCover-2026-10-14T214603.749987_0000.log",
+      "log_sha256": "fe794c3cccee558fcd2b98cb65c74e06b3b932dcef7371e8a618c888aea72d0f",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.interiorOrderedKnots_mem_some_separated",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.isTight_singleton_of_countable_compact_capture",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.FiniteGraphExponentialJ1LawTightness",
+      "source": "section3-diffusion/RequestProject/Section31/FiniteGraphExponentialJ1LawTightness.lean",
+      "source_sha256": "80a65aaa04d4607462e4253c1d25ee01937bb29615e0f7d2c4f7c159aeb5de66",
+      "log": "logs/RequestProject_Section31_FiniteGraphExponentialJ1LawTightness-2026-10-14T214837.824860_0000.log",
+      "log_sha256": "95827685328e8343636ea84ce0b5b90898ed3625d24ceb8f33be30450a8245ee",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.PoissonClock.finiteJumpVertexCompactSet_isCompact",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.finiteGraphExponentialJ1Law_isTight",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.FiniteSupportUnitJ1Transport",
+      "source": "section3-diffusion/RequestProject/Section31/FiniteSupportUnitJ1Transport.lean",
+      "source_sha256": "cefe73110fd29d07b04bd255e2cc8696de4f084562ffbe12f2d69cc228b99338",
+      "log": "logs/RequestProject_Section31_FiniteSupportUnitJ1Transport-2026-10-14T215203.985737_0000.log",
+      "log_sha256": "bbdd1418387edd881b8bbbf66a439ca393a5fdfcfadc641d31a0d8f8fa70152b",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.finiteSupportPathToUnitCadlagJ1_lipschitz",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.finiteSupportPathToUnitCadlagJ1_measurable",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.finiteSupportPathToUnitCadlagJ1_tight",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ShrinkingCompactCapture",
+      "source": "section3-diffusion/RequestProject/Section31/ShrinkingCompactCapture.lean",
+      "source_sha256": "d88c4be09d4f404ddc1a7205a823f4e9700327327c2ad45479976ff0bc1f419a",
+      "log": "logs/RequestProject_Section31_ShrinkingCompactCapture-2026-10-14T214937.278474_0000.log",
+      "log_sha256": "b7015dcc0e6938ebe8ab79d1a67a9887c03b1c0d2971f34e8891bf224c093b6f",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.shrinking_compact_capture_union_isCompact",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.VanishingRadiusDiagonal",
+      "source": "section3-diffusion/RequestProject/Section31/VanishingRadiusDiagonal.lean",
+      "source_sha256": "07545c5e3bfad513e2d122a3e9fa3387c50a6bc3b246ffdf27bc94118e9c73e3",
+      "log": "logs/RequestProject_Section31_VanishingRadiusDiagonal-2026-10-14T215231.412774_0000.log",
+      "log_sha256": "38f4666efb4a23c6e840725fac8e72315f7eba9ed2aa05096c1f378e3327ec30",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.exists_vanishing_positive_radii_of_eventual",
           "axioms": [
             "propext",
             "Classical.choice",

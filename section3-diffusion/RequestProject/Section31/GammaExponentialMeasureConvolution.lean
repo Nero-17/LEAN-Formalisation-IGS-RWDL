@@ -31,7 +31,7 @@ noncomputable section
     <;> ring
   · rw [gammaPDF_of_neg (lt_of_not_ge timeNonnegative)]
     apply lintegral_eq_zero_of_ae_eq_zero
-    apply Eventually.of_forall
+    apply Filter.Eventually.of_forall
     intro position
     apply gamma_exponential_product_zero_off_interval
     intro membership
@@ -43,9 +43,11 @@ noncomputable section
   change volume.withDensity (gammaPDF ((count : ℝ) + 1) 1) ∗
     volume.withDensity (exponentialPDF 1) =
       volume.withDensity (gammaPDF (((count + 1 : ℕ) : ℝ) + 1) 1)
-  rw [MeasureTheory.conv_withDensity_eq_lconvolution
+  have gammaMeasurable : Measurable (gammaPDF ((count : ℝ) + 1) 1) :=
     (measurable_gammaPDFReal ((count : ℝ) + 1) 1).ennreal_ofReal
-    (measurable_exponentialPDFReal 1).ennreal_ofReal,
+  have exponentialMeasurable : Measurable (exponentialPDF 1) :=
+    (measurable_exponentialPDFReal 1).ennreal_ofReal
+  rw [MeasureTheory.conv_withDensity_eq_lconvolution gammaMeasurable exponentialMeasurable,
     gamma_natural_exponential_lconvolution]
 
 end
