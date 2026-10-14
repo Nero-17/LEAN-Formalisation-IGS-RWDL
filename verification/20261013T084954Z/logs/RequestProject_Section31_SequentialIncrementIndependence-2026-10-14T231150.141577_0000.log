@@ -1,0 +1,6 @@
+'IGS.Sec31.PoissonClock.sequential_independence_prefix_product' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.PoissonClock.iIndepFun_of_sequential_prefix_independence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

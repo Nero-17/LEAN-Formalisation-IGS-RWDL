@@ -58,7 +58,7 @@ theorem finite_geometric_ladder_collision_offsets {Kind : Type*} [Fintype Kind] 
     have cross := (div_eq_div_iff (pow_ne_zero firstLevel (zero_lt_one.trans rateGreaterThanOne).ne')
       (pow_ne_zero secondLevel (zero_lt_one.trans rateGreaterThanOne).ne')).1 equality
     have powerBound : rate ^ secondLevel ≤ rate ^ (firstLevel + offset) := by
-      apply (mul_le_mul_left (coefficientsPositive firstKind)).mp
+      apply (mul_le_mul_iff_right₀ (coefficientsPositive firstKind)).mp
       calc
         coefficients firstKind * rate ^ secondLevel = coefficients secondKind * rate ^ firstLevel := cross
         _ ≤ (rate ^ offset * coefficients firstKind) * rate ^ firstLevel :=

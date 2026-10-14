@@ -47,7 +47,8 @@ theorem exists_xiOriginalExponentialPhysicalJ1Tightness_of_rules (system : EIGSD
       letI : MeasurableSpace Ambient := borel _;
       letI : BorelSpace Ambient := ⟨rfl⟩;
       ∃ target : parameters.LimitSpace → Ambient, Continuous target ∧
-        (letI := MeasuredGHP.xiCompletionDiameterMetricSpace system connected parameters.lengths
+        (letI originalPhysicalTightTargetMetric : MetricSpace parameters.LimitSpace :=
+          MeasuredGHP.xiCompletionDiameterMetricSpace system connected parameters.lengths
           parameters.lengthsPositive (system.distanceSpectralRadius connected) distanceGreaterThanOne parameters.eigenpair;
           Isometry target) ∧
       ∃ sources : ∀ level, XiVtx system level → Ambient,

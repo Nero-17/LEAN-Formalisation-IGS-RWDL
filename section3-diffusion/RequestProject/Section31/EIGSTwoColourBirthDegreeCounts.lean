@@ -20,7 +20,7 @@ theorem fintype_card_sigma_predicate {Base : Type*} [Fintype Base]
       right_inv := by rintro ⟨base, vertex, property⟩; rfl }
   exact (Fintype.card_congr rearrange).trans Fintype.card_sigma
 
-def twoColourBirthDegreeThree (level : ℕ) (vertex : XiNewVertices twoColourSystem level) : Prop :=
+abbrev twoColourBirthDegreeThree (level : ℕ) (vertex : XiNewVertices twoColourSystem level) : Prop :=
   XiCol twoColourSystem.toRuleData level vertex.1 = 0 ∧
     (vertex.2.val = 1 ∨ vertex.2.val = 3)
 

@@ -39,7 +39,8 @@ theorem exists_xiOriginalExponentialJ1Tightness_of_rules (system : EIGSData K)
       letI : MeasurableSpace Ambient := borel _;
       letI : BorelSpace Ambient := ⟨rfl⟩;
       ∃ target : parameters.LimitSpace → Ambient, Continuous target ∧
-        (letI := MeasuredGHP.xiCompletionDiameterMetricSpace system connected parameters.lengths
+        (letI originalExponentialTightTargetMetric : MetricSpace parameters.LimitSpace :=
+          MeasuredGHP.xiCompletionDiameterMetricSpace system connected parameters.lengths
           parameters.lengthsPositive (system.distanceSpectralRadius connected) distanceGreaterThanOne parameters.eigenpair;
           Isometry target) ∧
       ∃ sources : ∀ level, XiVtx system level → Ambient,
@@ -88,7 +89,8 @@ theorem exists_xiOriginalExponentialJ1Tightness_of_rules (system : EIGSData K)
   letI : MeasurableSpace Ambient := borel _
   letI : BorelSpace Ambient := ⟨rfl⟩
   have targetContinuous : Continuous target := by
-    letI := MeasuredGHP.xiCompletionDiameterMetricSpace system connected parameters.lengths parameters.lengthsPositive
+    letI originalExponentialTightContinuityMetric : MetricSpace parameters.LimitSpace :=
+      MeasuredGHP.xiCompletionDiameterMetricSpace system connected parameters.lengths parameters.lengthsPositive
       (system.distanceSpectralRadius connected) distanceGreaterThanOne parameters.eigenpair
     exact targetIsometry.continuous
   refine ⟨Ambient, metric, ambientCompact, target, targetContinuous, targetIsometry, sources, sourceIsometry, ?_⟩

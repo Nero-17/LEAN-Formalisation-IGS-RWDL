@@ -44,7 +44,12 @@ theorem xiRuleDegreeWeight_le_birth_bound (system : EIGSData K)
   have vertexBound := Finset.single_le_sum
     (fun other _ => xiRuleDegreeWeight_nonnegative system weights nonnegative colour other)
     (Finset.mem_univ vertex)
-  have colourBound := Finset.single_le_sum
+  have colourBound :
+      (∑ vertex : (system.rule colour).V, xiRuleDegreeWeight system weights colour vertex) ≤
+        ∑ other : Fin K, ∑ vertex : (system.rule other).V,
+          xiRuleDegreeWeight system weights other vertex := Finset.single_le_sum
+    (f := fun other : Fin K => ∑ vertex : (system.rule other).V,
+      xiRuleDegreeWeight system weights other vertex)
     (fun other _ => Finset.sum_nonneg
       (fun vertex _ => xiRuleDegreeWeight_nonnegative system weights nonnegative other vertex))
     (Finset.mem_univ colour)

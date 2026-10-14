@@ -1,0 +1,2 @@
+'EIGS.finiteMarkov_common_column_envelope_convergence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.finiteMarkov_power_convergence_of_common_power' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,4 @@
+'EIGS.twoColourSystem_degree_three_multiplicity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_degree_two_positive_multiplicity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_degree_two_zero_multiplicity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_normalized_degree_fiber_finite' depends on axioms: [propext, Classical.choice, Quot.sound]

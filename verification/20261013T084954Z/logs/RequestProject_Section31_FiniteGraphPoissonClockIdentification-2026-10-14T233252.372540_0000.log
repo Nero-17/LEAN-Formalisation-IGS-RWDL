@@ -1,0 +1,13 @@
+'IGS.Sec31.PoissonClock.finiteGraphPoissonCount_process_laws' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonClock.finiteGraphPoissonCount_independent_walk' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.PoissonClock.finiteGraphPoissonCount_increment_vector_law' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.PoissonClock.finiteGraphPoissonCount_scaled_process_laws' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.PoissonClock.exponentialHoldingPhysicalJ1Sample_is_poissonized_walk' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

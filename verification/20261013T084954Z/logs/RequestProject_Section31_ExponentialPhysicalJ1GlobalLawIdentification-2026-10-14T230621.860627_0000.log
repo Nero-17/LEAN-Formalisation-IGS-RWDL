@@ -1,0 +1,11 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\ExponentialPhysicalJ1GlobalLawIdentification.lean:30:0: warning: automatically included section variable(s) unused in theorem `IGS.Sec31.PoissonClock.unitToPhysicalCadlagJ1_global_path`:
+  [MeasurableSpace State]
+  [BorelSpace State]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace State] [BorelSpace State] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'IGS.Sec31.PoissonClock.unitToPhysicalCadlagJ1_global_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonClock.finiteGraphExponentialPhysicalJ1Laws_tendsto_global_restriction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

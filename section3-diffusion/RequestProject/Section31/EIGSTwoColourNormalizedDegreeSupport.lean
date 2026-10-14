@@ -32,7 +32,9 @@ theorem twoColourDegreeSupport_ladders_disjoint (first second : ℕ) :
   intro equality
   field_simp at equality
   have naturalEquality : 3 * (2 : ℕ) ^ second = 2 * (2 : ℕ) ^ first := by
-    exact_mod_cast equality
+    have converted : 3 * (2 : ℕ) ^ second = (2 : ℕ) ^ first * 2 := by
+      exact_mod_cast equality
+    simpa only [Nat.mul_comm] using converted
   have divisible : (3 : ℕ) ∣ 2 * (2 : ℕ) ^ first :=
     ⟨(2 : ℕ) ^ second, naturalEquality.symm⟩
   have prime : Nat.Prime 3 := by decide

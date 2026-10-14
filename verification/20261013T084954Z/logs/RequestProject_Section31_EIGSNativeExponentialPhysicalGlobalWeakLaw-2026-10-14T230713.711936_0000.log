@@ -1,0 +1,3 @@
+'EIGS.xiNativeExponentialPhysicalGlobalWeakFamilyProperties_of_unit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

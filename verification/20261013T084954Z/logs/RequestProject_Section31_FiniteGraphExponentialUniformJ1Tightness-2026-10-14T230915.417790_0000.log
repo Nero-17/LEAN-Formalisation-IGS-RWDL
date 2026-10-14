@@ -1,0 +1,317 @@
+[diag] Diagnostics
+  [reduction] unfolded declarations (max: 61, num: 8):
+    [reduction] NonUnitalNonAssocSemiring.toMul ↦ 61
+    [reduction] LT.lt ↦ 45
+    [reduction] AddMonoid.toZero ↦ 42
+    [reduction] OfNat.ofNat ↦ 38
+    [reduction] Zero.zero ↦ 33
+    [reduction] ProbabilityMeasure ↦ 31
+    [reduction] CoeHTCT.coe ↦ 22
+    [reduction] CoeT.coe ↦ 22
+  [reduction] unfolded instances (max: 97, num: 17):
+    [reduction] Ring.toSemiring ↦ 97
+    [reduction] Semiring.toNonUnitalSemiring ↦ 46
+    [reduction] AddCommMonoid.toAddMonoid ↦ 43
+    [reduction] NonUnitalSemiring.toNonUnitalNonAssocSemiring ↦ 39
+    [reduction] NonUnitalNonAssocSemiring.toAddCommMonoid ↦ 33
+    [reduction] PartialOrder.toPreorder ↦ 30
+    [reduction] SemilatticeInf.toPartialOrder ↦ 30
+    [reduction] SemilatticeSup.toPartialOrder ↦ 30
+    [reduction] LinearOrderedCommMonoidWithZero.toCommMonoidWithZero ↦ 29
+    [reduction] CommMonoidWithZero.toCommMonoid ↦ 27
+    [reduction] CommMonoid.toMonoid ↦ 25
+    [reduction] CommSemiring.toSemiring ↦ 24
+    [reduction] Real.semiring ↦ 24
+    [reduction] AddZero.toZero ↦ 23
+    [reduction] Monoid.toSemigroup ↦ 23
+    [reduction] PseudoMetricSpace.toBornology ↦ 22
+    [reduction] MulZeroClass.toZero ↦ 21
+  [reduction] unfolded reducible declarations (max: 81, num: 7):
+    [reduction] inferInstance ↦ 81
+    [reduction] DecidableRel ↦ 60
+    [reduction] Nat.cast ↦ 54
+    [reduction] outParam ↦ 50
+    [reduction] DecidableEq ↦ 49
+    [reduction] UnitCadlagJ1Path ↦ 45
+    [reduction] Elem ↦ 22
+  use `set_option diagnostics.threshold <num>` to control threshold for reporting counters
+uniformJ1: proof entered
+uniformJ1: sample maps typed
+uniformJ1: marginals complete
+uniformJ1: raw floor map tight
+uniformJ1: probability source range tight
+uniformJ1: target singleton tight
+uniformJ1: constructed coupling applied
+[diag] Diagnostics
+  [reduction] unfolded declarations (max: 288, num: 38):
+    [reduction] Membership.mem ↦ 288
+    [reduction] NonUnitalNonAssocSemiring.toMul ↦ 280
+    [reduction] OfNat.ofNat ↦ 257
+    [reduction] AddMonoid.toZero ↦ 200
+    [reduction] Set.Mem ↦ 184
+    [reduction] LT.lt ↦ 170
+    [reduction] Zero.zero ↦ 152
+    [reduction] LE.le ↦ 106
+    [reduction] DFunLike.coe ↦ 103
+    [reduction] ProbabilityMeasure ↦ 103
+    [reduction] CoeHTCT.coe ↦ 90
+    [reduction] CoeT.coe ↦ 90
+    [reduction] Bornology.cobounded ↦ 88
+    [reduction] NNReal ↦ 84
+    [reduction] Coe.coe ↦ 82
+    [reduction] CoeHTC.coe ↦ 82
+    [reduction] CoeOTC.coe ↦ 82
+    [reduction] CoeTC.coe ↦ 82
+    [reduction] NonUnitalNonAssocRing.toMul ↦ 78
+    [reduction] One.one ↦ 60
+    [reduction] CadlagJ1Path ↦ 54
+    [reduction] Valuation.RankOne.hom ↦ 51
+    [reduction] Set ↦ 46
+    [reduction] Mul.mul ↦ 45
+    [reduction] HMul.hMul ↦ 42
+    [reduction] Semiring.toNatCast ↦ 40
+    [reduction] NNReal.toReal ↦ 39
+    [reduction] NonAssocSemiring.toNatCast ↦ 36
+    [reduction] EquivLike.coe ↦ 32
+    [reduction] exponentialHoldingJ1Sample ↦ 31
+    [reduction] dite ↦ 30
+    [reduction] setOf ↦ 30
+    [reduction] Classical.propDecidable ↦ 30
+    [reduction] cadlagIntervalJ1MetricSpace ↦ 29
+    [reduction] NatCast.natCast ↦ 28
+    [reduction] UniformFun ↦ 24
+    [reduction] UniformFun.ofFun ↦ 24
+    [reduction] Measurable ↦ 23
+  [reduction] unfolded instances (max: 359, num: 90):
+    [reduction] Ring.toSemiring ↦ 359
+    [reduction] PseudoMetricSpace.toUniformSpace ↦ 300
+    [reduction] UniformSpace.toTopologicalSpace ↦ 300
+    [reduction] PseudoMetricSpace.toBornology ↦ 248
+    [reduction] Semiring.toNonUnitalSemiring ↦ 219
+    [reduction] AddCommMonoid.toAddMonoid ↦ 201
+    [reduction] NonUnitalSemiring.toNonUnitalNonAssocSemiring ↦ 184
+    [reduction] PartialOrder.toPreorder ↦ 164
+    [reduction] MetricSpace.toPseudoMetricSpace ↦ 148
+    [reduction] NonUnitalNonAssocSemiring.toAddCommMonoid ↦ 142
+    [reduction] AddZero.toZero ↦ 125
+    [reduction] LinearOrderedCommMonoidWithZero.toCommMonoidWithZero ↦ 116
+    [reduction] CommMonoidWithZero.toCommMonoid ↦ 108
+    [reduction] LinearOrder.toPartialOrder ↦ 106
+    [reduction] CommMonoid.toMonoid ↦ 100
+    [reduction] SemilatticeInf.toPartialOrder ↦ 98
+    [reduction] SemilatticeSup.toPartialOrder ↦ 98
+    [reduction] j1FunctionPseudoMetricSpace ↦ 98
+    [reduction] Zero.toOfNat0 ↦ 95
+    [reduction] Monoid.toSemigroup ↦ 92
+    [reduction] CommSemiring.toSemiring ↦ 90
+    [reduction] MulZeroClass.toZero ↦ 90
+    [reduction] Real.semiring ↦ 90
+    [reduction] AddZeroClass.toAddZero ↦ 86
+    [reduction] AddMonoidWithOne.toNatCast ↦ 80
+    [reduction] CommRing.toRing ↦ 76
+    [reduction] NonAssocSemiring.toNonUnitalNonAssocSemiring ↦ 76
+    [reduction] Preorder.toLT ↦ 76
+    [reduction] Real.commRing ↦ 76
+    [reduction] Semiring.toNonAssocSemiring ↦ 76
+    [reduction] AddMonoid.toAddZeroClass ↦ 73
+    [reduction] SubNegMonoid.toAddMonoid ↦ 72
+    [reduction] unitCadlagJ1MetricSpace ↦ 70
+    [reduction] NonUnitalNonAssocSemiring.toMulZeroClass ↦ 69
+    [reduction] AddCommGroup.toAddGroup ↦ 67
+    [reduction] AddGroup.toSubNegMonoid ↦ 67
+    [reduction] Preorder.toLE ↦ 66
+    [reduction] MulZeroClass.toMul ↦ 63
+    [reduction] Real.instRing ↦ 59
+    [reduction] Real.instPreorder ↦ 58
+    [reduction] CommRing.toCommSemiring ↦ 57
+    [reduction] Real.instCommSemiring ↦ 57
+    [reduction] Set.instMembership ↦ 55
+    [reduction] NormedCommRing.toNormedRing ↦ 51
+    [reduction] Subtype.pseudoMetricSpace ↦ 51
+    [reduction] cadlagJ1CarrierPseudoMetricSpace ↦ 51
+    [reduction] Distrib.toMul ↦ 47
+    [reduction] NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring ↦ 46
+    [reduction] NonUnitalNonAssocSemiring.toDistrib ↦ 46
+    [reduction] instCoeTOfCoeHTCT ↦ 45
+    [reduction] NonUnitalCommRing.toNonUnitalRing ↦ 45
+    [reduction] NonUnitalRing.toNonUnitalNonAssocRing ↦ 45
+    [reduction] Real.instLT ↦ 45
+    [reduction] NonUnitalCommRing.toNonUnitalNonAssocCommRing ↦ 44
+    [reduction] NonUnitalNonAssocCommRing.toNonUnitalNonAssocRing ↦ 44
+    [reduction] NonUnitalNormedCommRing.toNonUnitalCommRing ↦ 44
+    [reduction] NonUnitalNormedCommRing.toNonUnitalNormedRing ↦ 44
+    [reduction] NonUnitalNormedRing.toNonUnitalRing ↦ 44
+    [reduction] NormedCommRing.toNonUnitalNormedCommRing ↦ 44
+    [reduction] NormedRing.toRing ↦ 44
+    [reduction] Real.normedCommRing ↦ 44
+    [reduction] Real.partialOrder ↦ 44
+    [reduction] instBornologySubtype ↦ 43
+    [reduction] MonoidWithZeroHom.funLike ↦ 43
+    [reduction] DistribLattice.toLattice ↦ 42
+    [reduction] Lattice.toSemilatticeInf ↦ 42
+    [reduction] Lattice.toSemilatticeSup ↦ 42
+    [reduction] instTopologicalSpaceSubtype ↦ 41
+    [reduction] Subtype.metricSpace ↦ 40
+    [reduction] NonUnitalNonAssocRing.toAddCommGroup ↦ 36
+    [reduction] NormedAddCommGroup.toMetricSpace ↦ 35
+    [reduction] Real.instLE ↦ 34
+    [reduction] Real.pseudoMetricSpace ↦ 34
+    [reduction] Equiv.instEquivLike ↦ 32
+    [reduction] EquivLike.toFunLike ↦ 32
+    [reduction] NormedAddCommGroup.toAddCommGroup ↦ 31
+    [reduction] Real.instAddCommGroup ↦ 31
+    [reduction] Real.normedAddCommGroup ↦ 31
+    [reduction] Ring.toAddCommGroup ↦ 31
+    [reduction] PseudoMetricSpace.toDist ↦ 30
+    [reduction] EMetricSpace.toPseudoEMetricSpace ↦ 28
+    [reduction] MetricSpace.toEMetricSpace ↦ 28
+    [reduction] PseudoEMetricSpace.toUniformSpace ↦ 26
+    [reduction] PseudoMetricSpace.toPseudoEMetricSpace ↦ 26
+    [reduction] instHMul ↦ 25
+    [reduction] Filter.instMembership ↦ 22
+    [reduction] instDistribLatticeOfLinearOrder ↦ 21
+    [reduction] LinearOrder.toLattice ↦ 21
+    [reduction] Real.instMul ↦ 21
+    [reduction] Real.instZero ↦ 21
+  [reduction] unfolded reducible declarations (max: 633, num: 28):
+    [reduction] UnitCadlagJ1Path ↦ 633
+    [reduction] inferInstance ↦ 354
+    [reduction] outParam ↦ 350
+    [reduction] Subtype.val ↦ 334
+    [reduction] Nat.cast ↦ 250
+    [reduction] Elem ↦ 223
+    [reduction] J1Function.toFun ↦ 170
+    [reduction] DecidableRel ↦ 160
+    [reduction] DecidableEq ↦ 144
+    [reduction] UnitJ1Time ↦ 134
+    [reduction] Prod.fst ↦ 96
+    [reduction] PseudoMetricSpace.induced ↦ 91
+    [reduction] Bornology.induced ↦ 88
+    [reduction] UniformSpace.comap ↦ 81
+    [reduction] Prod.snd ↦ 65
+    [reduction] inferInstanceAs ↦ 60
+    [reduction] Finset.val ↦ 60
+    [reduction] semiOutParam ↦ 48
+    [reduction] MonoidWithZeroHom.toZeroHom ↦ 47
+    [reduction] ZeroHom.toFun ↦ 43
+    [reduction] MetricSpace.induced ↦ 40
+    [reduction] SimpleGraph.Adj ↦ 36
+    [reduction] Decidable.casesOn ↦ 30
+    [reduction] Bornology.ofDist ↦ 28
+    [reduction] EMetricSpace.ofT0PseudoEMetricSpace ↦ 28
+    [reduction] sets ↦ 27
+    [reduction] Equiv.toFun ↦ 24
+    [reduction] CategoryTheory.SmallCategory ↦ 23
+  [type_class] used instances (max: 49, num: 46):
+    [type_class] instCoeT ↦ 49
+    [type_class] instCoeTOfCoeDep ↦ 45
+    [type_class] instCoeTOfCoeHTCT ↦ 45
+    [type_class] CommCStarAlgebra.toNormedCommRing ↦ 44
+    [type_class] DenselyNormedField.toNontriviallyNormedField ↦ 44
+    [type_class] DenselyNormedField.toNormedField ↦ 44
+    [type_class] NontriviallyNormedField.toNormedField ↦ 44
+    [type_class] NormedField.toNormedCommRing ↦ 44
+    [type_class] NormedField.toNormedDivisionRing ↦ 44
+    [type_class] RCLike.toDenselyNormedField ↦ 44
+    [type_class] NormedCommRing.toSeminormedCommRing ↦ 43
+    [type_class] instCoeHTC ↦ 41
+    [type_class] instCoeHTCOfCoeOTC ↦ 41
+    [type_class] instCoeHTCT ↦ 41
+    [type_class] instCoeHTCTOfCoeHTC ↦ 41
+    [type_class] instCoeOTC ↦ 41
+    [type_class] instCoeOTCOfCoeTC ↦ 41
+    [type_class] instCoeTC ↦ 41
+    [type_class] instCoeTCOfCoe_1 ↦ 41
+    [type_class] littleWedderburn ↦ 40
+    [type_class] BooleanRing.toCommRing ↦ 40
+    [type_class] ConditionallyCompleteLinearOrderedField.toField ↦ 40
+    [type_class] EuclideanDomain.toCommRing ↦ 40
+    [type_class] Field.toCommRing ↦ 40
+    [type_class] Field.toDivisionRing ↦ 40
+    [type_class] Field.toEuclideanDomain ↦ 40
+    [type_class] NormedCommRing.toCommRing ↦ 40
+    [type_class] NormedDivisionRing.toDivisionRing ↦ 40
+    [type_class] NormedField.toField ↦ 40
+    [type_class] SeminormedCommRing.toCommRing ↦ 40
+    [type_class] DirectSum.GradeZero.commRing ↦ 40
+    [type_class] NNReal.instCoeReal ↦ 29
+    [type_class] CStarAlgebra.toNormedRing ↦ 25
+    [type_class] CommCStarAlgebra.toCStarAlgebra ↦ 25
+    [type_class] NormedCommRing.toNormedRing ↦ 25
+    [type_class] NormedDivisionRing.toNormedRing ↦ 25
+    [type_class] Real.instMul ↦ 25
+    [type_class] instHMul ↦ 24
+    [type_class] NormedRing.toSeminormedRing ↦ 24
+    [type_class] SeminormedCommRing.toSeminormedRing ↦ 24
+    [type_class] exponentialUniformStateBounded ↦ 24
+    [type_class] instOfNatPNatOfNeZeroNat ↦ 21
+    [type_class] CommCStarAlgebra.toNonUnitalCommCStarAlgebra ↦ 21
+    [type_class] NonUnitalCommCStarAlgebra.toNonUnitalNormedCommRing ↦ 21
+    [type_class] NormedCommRing.toNonUnitalNormedCommRing ↦ 21
+    [type_class] Ring.toAddGroupWithOne ↦ 21
+  [def_eq] heuristic for solving `f a =?= f b` (max: 86, num: 19):
+    [def_eq] Icc ↦ 86
+    [def_eq] ProbabilityMeasure ↦ 85
+    [def_eq] TopologicalSpace.induced ↦ 83
+    [def_eq] Nat.cast ↦ 56
+    [def_eq] comap ↦ 45
+    [def_eq] Set ↦ 42
+    [def_eq] finiteHorizonStepPaths ↦ 31
+    [def_eq] CadlagJ1Path ↦ 30
+    [def_eq] IsCadlagPath ↦ 29
+    [def_eq] instOfNatNat ↦ 28
+    [def_eq] Measurable ↦ 27
+    [def_eq] FiniteSupportPathSpace ↦ 27
+    [def_eq] skorokhodJ1Distance ↦ 26
+    [def_eq] Elem ↦ 25
+    [def_eq] Zero.toOfNat0 ↦ 24
+    [def_eq] Subtype.instLinearOrder ↦ 22
+    [def_eq] Subtype.metricSpace ↦ 21
+    [def_eq] UniformSpace.ofDist ↦ 21
+    [def_eq] unitCadlagJ1MeasurableSpace ↦ 21
+  [reduction] Axioms (possibly imported non-exposed defs) that were tried to be unfolded (max: 30, num: 1):
+    [reduction] Classical.choice ↦ 30
+  [kernel] unfolded declarations (max: 125, num: 18):
+    [kernel] UnitJ1Time ↦ 125
+    [kernel] Membership.mem ↦ 106
+    [kernel] UniformSpace.toTopologicalSpace ↦ 96
+    [kernel] J1Function.toFun ↦ 75
+    [kernel] Subtype.val ↦ 60
+    [kernel] OfNat.ofNat ↦ 59
+    [kernel] LT.lt ↦ 57
+    [kernel] HMul.hMul ↦ 51
+    [kernel] Mul.mul ↦ 49
+    [kernel] LE.le ↦ 36
+    [kernel] PseudoMetricSpace.toUniformSpace ↦ 33
+    [kernel] AddMonoid.toZero ↦ 31
+    [kernel] NonUnitalNonAssocSemiring.toMul ↦ 30
+    [kernel] MulZeroClass.toZero ↦ 27
+    [kernel] Zero.zero ↦ 26
+    [kernel] inferInstance ↦ 24
+    [kernel] PartialOrder.toPreorder ↦ 22
+    [kernel] Elem ↦ 22
+  use `set_option diagnostics.threshold <num>` to control threshold for reporting counters
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\FiniteGraphExponentialUniformJ1Tightness.lean:45:2: warning: 'trace "uniformJ1: proof entered"' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\FiniteGraphExponentialUniformJ1Tightness.lean:69:2: warning: 'trace "uniformJ1: sample maps typed"' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\FiniteGraphExponentialUniformJ1Tightness.lean:81:2: warning: 'trace "uniformJ1: marginals complete"' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\FiniteGraphExponentialUniformJ1Tightness.lean:90:2: warning: 'trace "uniformJ1: raw floor map tight"' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\FiniteGraphExponentialUniformJ1Tightness.lean:99:2: warning: 'trace "uniformJ1: probability source range tight"' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\FiniteGraphExponentialUniformJ1Tightness.lean:104:2: warning: 'trace "uniformJ1: target singleton tight"' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\FiniteGraphExponentialUniformJ1Tightness.lean:109:2: warning: 'trace "uniformJ1: constructed coupling applied"' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'IGS.Sec31.PoissonClock.finiteGraphExponentialJ1Laws_isTight_of_floor_coupling' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

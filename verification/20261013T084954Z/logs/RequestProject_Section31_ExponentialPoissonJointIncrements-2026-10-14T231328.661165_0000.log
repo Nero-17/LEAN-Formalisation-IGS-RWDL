@@ -1,0 +1,12 @@
+'IGS.Sec31.PoissonClock.exponential_poisson_increments_sequential_independent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.PoissonClock.exponential_poisson_increments_iIndepFun' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.PoissonClock.exponential_poisson_ordered_increment_hasLaw' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.PoissonClock.exponential_poisson_increment_vector_law' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

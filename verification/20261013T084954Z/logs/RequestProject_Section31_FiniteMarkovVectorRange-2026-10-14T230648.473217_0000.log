@@ -1,0 +1,10 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\FiniteMarkovVectorRange.lean:22:0: warning: automatically included section variable(s) unused in theorem `EIGS.finiteVector_range_bounds`:
+  [DecidableEq State]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq State] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'EIGS.finiteVector_range_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.finiteMarkov_envelope_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.finiteMarkov_width_contraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.finiteMarkov_power_envelopes' depends on axioms: [propext, Classical.choice, Quot.sound]

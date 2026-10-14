@@ -51,7 +51,6 @@ theorem unitToPhysicalCadlagJ1_spatial_law (horizon : ℝ≥0) (positive : 0 < h
     Measure.map_map (cadlagJ1SpatialMap_continuous spatial continuousSpatial).measurable
       (unitToPhysicalCadlagJ1_continuous horizon positive).measurable]
   congr 1
-  exact funext (unitToPhysicalCadlagJ1_spatial_path horizon positive spatial continuousSpatial)
 
 theorem unitToPhysicalCadlagJ1_spatial_global_law (horizon : ℝ≥0) (positive : 0 < horizon)
     (spatial : State → Ambient) (continuousSpatial : Continuous spatial)

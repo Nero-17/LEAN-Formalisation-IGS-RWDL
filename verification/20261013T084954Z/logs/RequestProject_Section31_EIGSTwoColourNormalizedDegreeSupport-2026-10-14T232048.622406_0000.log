@@ -1,0 +1,4 @@
+'EIGS.twoColourDegreeSupport_ladders_disjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourDegreeSupportValue_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourNormalizedDegreeFiberEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_normalized_degree_range_subset' depends on axioms: [propext, Classical.choice, Quot.sound]

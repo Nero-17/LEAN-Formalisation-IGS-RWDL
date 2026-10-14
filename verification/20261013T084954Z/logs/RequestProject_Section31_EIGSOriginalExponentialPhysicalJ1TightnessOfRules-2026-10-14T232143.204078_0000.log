@@ -1,0 +1,3 @@
+'EIGS.exists_xiOriginalExponentialPhysicalJ1Tightness_of_rules' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

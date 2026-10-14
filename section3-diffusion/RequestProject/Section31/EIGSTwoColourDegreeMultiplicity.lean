@@ -33,12 +33,12 @@ def twoColourDegreeThreeIndexFiberEquiv (level : ℕ) :
           have equality := congrArg Prod.snd property
           simpa only [twoColourVertexDegreeIndex, if_pos high] using equality
         subst birth
-        simp [high]
+        simp only [dif_pos high]
       · simp [twoColourVertexDegreeIndex, high] at property
   right_inv := by
     rintro ⟨privateVertex, high⟩
     apply Subtype.ext
-    simp [high]
+    simp only [dif_pos high]
 
 def twoColourDegreeTwoPositiveIndexFiberEquiv (level : ℕ) :
     {vertex : XiVertexUnion twoColourSystem // twoColourVertexDegreeIndex vertex = (false, level + 1)} ≃
@@ -49,7 +49,9 @@ def twoColourDegreeTwoPositiveIndexFiberEquiv (level : ℕ) :
     rcases vertex with original | ⟨birth, privateVertex⟩
     · simp [twoColourVertexDegreeIndex] at property
     · by_cases high : twoColourBirthDegreeThree birth privateVertex
-      · simp [twoColourVertexDegreeIndex, high] at property
+      · rw [twoColourVertexDegreeIndex, if_pos high] at property
+        have impossible : (true : Bool) = false := congrArg Prod.fst property
+        cases impossible
       · have birthEquality : birth = level + 1 := by
           have equality := congrArg Prod.snd property
           simpa only [twoColourVertexDegreeIndex, if_neg high] using equality
@@ -63,16 +65,18 @@ def twoColourDegreeTwoPositiveIndexFiberEquiv (level : ℕ) :
     rcases vertex with original | ⟨birth, privateVertex⟩
     · simp [twoColourVertexDegreeIndex] at property
     · by_cases high : twoColourBirthDegreeThree birth privateVertex
-      · simp [twoColourVertexDegreeIndex, high] at property
+      · rw [twoColourVertexDegreeIndex, if_pos high] at property
+        have impossible : (true : Bool) = false := congrArg Prod.fst property
+        cases impossible
       · have birthEquality : birth = level + 1 := by
           have equality := congrArg Prod.snd property
           simpa only [twoColourVertexDegreeIndex, if_neg high] using equality
         subst birth
-        simp [high]
+        simp only [dif_neg high]
   right_inv := by
     rintro ⟨privateVertex, high⟩
     apply Subtype.ext
-    simp [high]
+    simp only [dif_neg high]
 
 def twoColourDegreeTwoZeroIndexFiberEquiv :
     {vertex : XiVertexUnion twoColourSystem // twoColourVertexDegreeIndex vertex = (false, 0)} ≃
@@ -82,7 +86,9 @@ def twoColourDegreeTwoZeroIndexFiberEquiv :
     rcases vertex with original | ⟨birth, privateVertex⟩
     · exact Sum.inl original
     · by_cases high : twoColourBirthDegreeThree birth privateVertex
-      · simp [twoColourVertexDegreeIndex, high] at property
+      · rw [twoColourVertexDegreeIndex, if_pos high] at property
+        have impossible : (true : Bool) = false := congrArg Prod.fst property
+        cases impossible
       · have birthEquality : birth = 0 := by
           have equality := congrArg Prod.snd property
           simpa only [twoColourVertexDegreeIndex, if_neg high] using equality
@@ -98,17 +104,19 @@ def twoColourDegreeTwoZeroIndexFiberEquiv :
     rcases vertex with original | ⟨birth, privateVertex⟩
     · rfl
     · by_cases high : twoColourBirthDegreeThree birth privateVertex
-      · simp [twoColourVertexDegreeIndex, high] at property
+      · rw [twoColourVertexDegreeIndex, if_pos high] at property
+        have impossible : (true : Bool) = false := congrArg Prod.fst property
+        cases impossible
       · have birthEquality : birth = 0 := by
           have equality := congrArg Prod.snd property
           simpa only [twoColourVertexDegreeIndex, if_neg high] using equality
         subst birth
-        simp [high]
+        simp only [dif_neg high]
   right_inv := by
     intro vertex
     rcases vertex with original | ⟨privateVertex, high⟩
     · rfl
-    · simp [high]
+    · simp only [dif_neg high]
 
 def twoColourDegreeMultiplicity (degree : ℝ) : ℕ :=
   Nat.card {vertex : XiVertexUnion twoColourSystem //
@@ -138,6 +146,9 @@ theorem twoColourSystem_degree_two_zero_multiplicity :
     twoColourDegreeMultiplicity (2 / 3) =
       2 + chiCount twoColourSystem.toRuleData 0 0 +
         3 * chiCount twoColourSystem.toRuleData 0 1 := by
+  have zeroValue : twoColourDegreeSupportValue (false, 0) = (2 / 3 : ℝ) := by
+    norm_num [twoColourDegreeSupportValue]
+  rw [← zeroValue]
   change Nat.card {vertex : XiVertexUnion twoColourSystem //
     twoColourStationaryNormalizedDegree vertex = twoColourDegreeSupportValue (false, 0)} = _
   rw [Nat.card_congr ((twoColourNormalizedDegreeFiberEquiv (false, 0)).trans

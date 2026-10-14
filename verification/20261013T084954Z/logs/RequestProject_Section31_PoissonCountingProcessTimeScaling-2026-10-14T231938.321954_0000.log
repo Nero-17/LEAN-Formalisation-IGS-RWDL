@@ -1,0 +1,4 @@
+'IGS.Sec31.PoissonClock.PoissonCountingProcessLaws.timeScale' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonClock.exponentialHoldingJumpIndex_scaled_poisson_process' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,13 +1,13 @@
 {
-  "snapshot_utc": "2026-10-14T23:05:40.392321+00:00",
+  "snapshot_utc": "2026-10-14T23:35:50.639761+00:00",
   "round": "20261013T084954Z",
   "compiler": "Lean 4.28.0",
   "mathlib": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
   "shared_dependency_modules": 1015,
   "shared_report": "integration-1015.json",
   "shared_report_sha256": "301c0056cb755f5c74d262d10057abeb9e72dc004fc986183270198f3c48cab2",
-  "independent_whole_file_count": 689,
-  "independent_audit_count": 1906,
+  "independent_whole_file_count": 715,
+  "independent_audit_count": 1963,
   "records": [
     {
       "module": "RequestProject.Section31.EIGSL2EnergyConstants",
@@ -20123,6 +20123,722 @@
         },
         {
           "declaration": "EIGS.primitive_matrix_markov_common_column",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.FiniteGraphExponentialUniformJ1Tightness",
+      "source": "section3-diffusion/RequestProject/Section31/FiniteGraphExponentialUniformJ1Tightness.lean",
+      "source_sha256": "ff96f9393a58b1ba0153a1f478585bbe4306f9921132d6883186bee94bc8666b",
+      "log": "logs/RequestProject_Section31_FiniteGraphExponentialUniformJ1Tightness-2026-10-14T230915.417790_0000.log",
+      "log_sha256": "b9fa2d618b04826728fa4d6120faf7eb9c40854fe7b8ba3c8c4651fe944a76c9",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.PoissonClock.finiteGraphExponentialJ1Laws_isTight_of_floor_coupling",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSTwoColourBirthDegreeCounts",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSTwoColourBirthDegreeCounts.lean",
+      "source_sha256": "58960bc6861eba25271a710a41b87aae60cf40593189ebf44072bac07928efe2",
+      "log": "logs/RequestProject_Section31_EIGSTwoColourBirthDegreeCounts-2026-10-14T231651.484809_0000.log",
+      "log_sha256": "30b7db8437fe4c7f957f0659155a5019eaff73efe8a28046a60623691e896941",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.twoColourSystem_birth_degree_three_count",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_birth_degree_two_count",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ExponentialPhysicalJ1GlobalLawIdentification",
+      "source": "section3-diffusion/RequestProject/Section31/ExponentialPhysicalJ1GlobalLawIdentification.lean",
+      "source_sha256": "c20060323beb4283d27b10cc3de6b1bb7b58cc207efa5b2a37abc8195625e010",
+      "log": "logs/RequestProject_Section31_ExponentialPhysicalJ1GlobalLawIdentification-2026-10-14T230621.860627_0000.log",
+      "log_sha256": "841fdc9fe5d2a31207d8325bd857fa4f26f4007e273b764e95366004014fffd0",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.PoissonClock.unitToPhysicalCadlagJ1_global_law",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.finiteGraphExponentialPhysicalJ1Laws_tendsto_global_restriction",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.FiniteMarkovVectorRange",
+      "source": "section3-diffusion/RequestProject/Section31/FiniteMarkovVectorRange.lean",
+      "source_sha256": "bd6b914d04c355402612e83533eb6851291cc8e82febc3af2be8e385a8b13c36",
+      "log": "logs/RequestProject_Section31_FiniteMarkovVectorRange-2026-10-14T230648.473217_0000.log",
+      "log_sha256": "9326db67180157e10b7a3f881d46b7a2df36184f1c6c9ba86dcdd0be8bb6c8b0",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.finiteVector_range_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.finiteMarkov_envelope_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.finiteMarkov_width_contraction",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.finiteMarkov_power_envelopes",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSNativeExponentialPhysicalGlobalWeakLaw",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSNativeExponentialPhysicalGlobalWeakLaw.lean",
+      "source_sha256": "4362df40ede09c17cc14e0b2044876ec73f503f38d85b76fe24cc97349753a68",
+      "log": "logs/RequestProject_Section31_EIGSNativeExponentialPhysicalGlobalWeakLaw-2026-10-14T230713.711936_0000.log",
+      "log_sha256": "da79e27e012cb70f86811a2e115774488ad071fe68fbb8c1c2d9425aaed67188",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiNativeExponentialPhysicalGlobalWeakFamilyProperties_of_unit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.FiniteMarkovPowerConvergence",
+      "source": "section3-diffusion/RequestProject/Section31/FiniteMarkovPowerConvergence.lean",
+      "source_sha256": "e5e3351445e0549cef69d40ca595990f536a04303ca851cc9e4520b61bfffad8",
+      "log": "logs/RequestProject_Section31_FiniteMarkovPowerConvergence-2026-10-14T230718.389866_0000.log",
+      "log_sha256": "55f03e483e47fc0729ee6c2e3b8cf0e7f52f71874e0e59d5a80b9efabbdfa576",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.finiteMarkov_common_column_envelope_convergence",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.finiteMarkov_power_convergence_of_common_power",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ExponentialPhysicalJ1SpatialGlobalLawIdentification",
+      "source": "section3-diffusion/RequestProject/Section31/ExponentialPhysicalJ1SpatialGlobalLawIdentification.lean",
+      "source_sha256": "40f13ff47ff59c53452f96ed15aadfc3178d4cde53449d0132d12d43dd5f9506",
+      "log": "logs/RequestProject_Section31_ExponentialPhysicalJ1SpatialGlobalLawIdentification-2026-10-14T231058.607821_0000.log",
+      "log_sha256": "0f1eae56982eb1ed9f5693afde411f1fbffc17df328250ad9fd60e7514f01387",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.PoissonClock.unitToPhysicalCadlagJ1_spatial_global_law",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.finiteGraphExponentialPhysicalJ1Laws_tendsto_spatial_global_restriction",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.PrimitiveMatrixNormalizedRowSumLimit",
+      "source": "section3-diffusion/RequestProject/Section31/PrimitiveMatrixNormalizedRowSumLimit.lean",
+      "source_sha256": "241c9a2377bc1a6ae6054f63fbc3f145e34277859be2e2512b8068280cffb143",
+      "log": "logs/RequestProject_Section31_PrimitiveMatrixNormalizedRowSumLimit-2026-10-14T230803.150683_0000.log",
+      "log_sha256": "b247f367bd0c74fd3a6c18307a5ce2d8ed3dcd6464630ee0c46bfe13066662a0",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.primitive_matrix_normalized_row_sum_limit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSPrimitiveDegreeNormalizedGrowth",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSPrimitiveDegreeNormalizedGrowth.lean",
+      "source_sha256": "66f25d437d9a7854014900b3d8cded83fa5a5d2f88979ed5146b59a0f03d9a79",
+      "log": "logs/RequestProject_Section31_EIGSPrimitiveDegreeNormalizedGrowth-2026-10-14T230828.670622_0000.log",
+      "log_sha256": "703532a21de69dd02c194fdab5bf09eb5b954985f6aed75e6cf55c31bfc68111",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.degVec_xiForward_eq_vecMul_pow",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.degree_state_sum_forward_normalized_identity",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.degree_normalized_growth_from_primitive_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.SequentialIncrementIndependence",
+      "source": "section3-diffusion/RequestProject/Section31/SequentialIncrementIndependence.lean",
+      "source_sha256": "8b87d51fbd1bef110d585fde3722521a67fdf7121a8e39882bbd5fee87e2b082",
+      "log": "logs/RequestProject_Section31_SequentialIncrementIndependence-2026-10-14T231150.141577_0000.log",
+      "log_sha256": "b74caca8e8bcba0cd7bb5fbadf3accc3978cbb1fd9d4714d8ccc8e6d3c76442d",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.PoissonClock.sequential_independence_prefix_product",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.iIndepFun_of_sequential_prefix_independence",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSSameNativeJointFullHeatPhysicalWeakLawOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSSameNativeJointFullHeatPhysicalWeakLawOfRules.lean",
+      "source_sha256": "dc4acfb58583c9c457907776e6ef75d2c8356bc59e5cf3b464739fc83cc41177",
+      "log": "logs/RequestProject_Section31_EIGSSameNativeJointFullHeatPhysicalWeakLawOfRules-2026-10-14T231133.378604_0000.log",
+      "log_sha256": "29df1dbb6253c2a2bd2b4cb3081aeb12cbfee18b896aa1cc01d81561e8481dfa",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiIdentifiedOriginalMeasuredGHPSFullHeatExitPhysicalProperties_of_unit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiSameNativeJointFullHeatExitPhysicalRecurrence_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ExponentialPoissonJointIncrements",
+      "source": "section3-diffusion/RequestProject/Section31/ExponentialPoissonJointIncrements.lean",
+      "source_sha256": "74762c8ac05334bbc364d1cf526828267004eb962a650b595f21865dc1ff8b4a",
+      "log": "logs/RequestProject_Section31_ExponentialPoissonJointIncrements-2026-10-14T231328.661165_0000.log",
+      "log_sha256": "ac4f9ee5973d75cbd90a88191ffe7c7a8a818543214a97a8290914d4afb7a512",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponential_poisson_increments_sequential_independent",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponential_poisson_increments_iIndepFun",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponential_poisson_ordered_increment_hasLaw",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponential_poisson_increment_vector_law",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSResistanceBrownianSameKernelFullHeatPhysicalWeakLawOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSResistanceBrownianSameKernelFullHeatPhysicalWeakLawOfRules.lean",
+      "source_sha256": "ae7dd5a86b2c12cdd554f73fa4068b018bd87eb47d5173884209c77dedf4d84c",
+      "log": "logs/RequestProject_Section31_EIGSResistanceBrownianSameKernelFullHeatPhysicalWeakLawOfRules-2026-10-14T231231.366274_0000.log",
+      "log_sha256": "a22967c9011750a9fc8ab5a05594f3deaa518efdb10046f9b0e1f187720ff663",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiResistanceBrownian_same_kernel_full_heat_exit_physical_recurrence_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSNativeExponentialJ1TightnessOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSNativeExponentialJ1TightnessOfRules.lean",
+      "source_sha256": "b32ca702f38fb4a87cf49bbfba92e9477d2eb4bbecacf6bbb4b91241655f9ea9",
+      "log": "logs/RequestProject_Section31_EIGSNativeExponentialJ1TightnessOfRules-2026-10-14T231326.794638_0000.log",
+      "log_sha256": "51984a04ba7989693cf9e93ddd117547a7396f9d3753893a25eaece98085990a",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiNativeExponentialJ1Laws_isTight_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ExponentialPoissonProcessCertificate",
+      "source": "section3-diffusion/RequestProject/Section31/ExponentialPoissonProcessCertificate.lean",
+      "source_sha256": "0a994610ccb21d8ea32c6c12fd804aa1d47ed5be1767f5c23975f4933ff32486",
+      "log": "logs/RequestProject_Section31_ExponentialPoissonProcessCertificate-2026-10-14T231523.344542_0000.log",
+      "log_sha256": "12f7ce9f50694f889799ef0aa0cd35d34a33944cba5787408f2f5b4fe1f4dc4d",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponentialHoldingJumpIndex_initial",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponentialHoldingJumpIndex_regular",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponentialHoldingJumpIndex_poisson_process",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ExponentialJ1SpatialDistortionTightness",
+      "source": "section3-diffusion/RequestProject/Section31/ExponentialJ1SpatialDistortionTightness.lean",
+      "source_sha256": "6b44d5a98b59a4956d858154f33f9fc5f12fcec9c62e4c104f63692fa2a5fd2b",
+      "log": "logs/RequestProject_Section31_ExponentialJ1SpatialDistortionTightness-2026-10-14T231413.399129_0000.log",
+      "log_sha256": "cb87f03a7c17305de6dc55c5392bbad4dba07521735dd99efdf6bff608849aa2",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.PoissonClock.finiteGraphExponentialJ1Laws_tight_of_spatial_distortion",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSOriginalExponentialJ1TightnessOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSOriginalExponentialJ1TightnessOfRules.lean",
+      "source_sha256": "6f7ed06f09cef2962173edd94fa92d78f1f957295ff1a9b505c9df86f3897f82",
+      "log": "logs/RequestProject_Section31_EIGSOriginalExponentialJ1TightnessOfRules-2026-10-14T232052.035930_0000.log",
+      "log_sha256": "3bf610db25ce012594fb8aee94219cac8d686c8d4c5386a68721176caff6ade5",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiOriginalExponentialJ1Tightness_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.ExponentialPoissonFiniteObservations",
+      "source": "section3-diffusion/RequestProject/Section31/ExponentialPoissonFiniteObservations.lean",
+      "source_sha256": "e95bb0231ef0b4322c8935d9c481935c4482b2f92ff44373aaf703c6f328b32f",
+      "log": "logs/RequestProject_Section31_ExponentialPoissonFiniteObservations-2026-10-14T231606.210603_0000.log",
+      "log_sha256": "50b899ce130f9abceb9c879092e6493d951d9703467e408d4013c78225dbce74",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.PoissonClock.extendObservationTimes_monotone",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.extendObservationTimes_eq",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponential_poisson_finite_increment_joint_law",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.holdingCountIncrement_prefix_sum",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSColourEdgeGrowth",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSColourEdgeGrowth.lean",
+      "source_sha256": "d04f04b5cc3c2445b84d933fa2096d7058283843d4c552d82975f697d919f33a",
+      "log": "logs/RequestProject_Section31_EIGSColourEdgeGrowth-2026-10-14T231727.545870_0000.log",
+      "log_sha256": "ab8a4a405e5a6b5d32088a9954ac0702d085b36b68db9918411ae1018168ad10",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.colour_edge_geometric_growth",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.colour_edge_geometric_growth_from_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSTwoColourNormalizedDegreeSupport",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSTwoColourNormalizedDegreeSupport.lean",
+      "source_sha256": "a9622067f79d0f83ed52cf3b0531a861c9418fd8fd8444eab2941aea899f0900",
+      "log": "logs/RequestProject_Section31_EIGSTwoColourNormalizedDegreeSupport-2026-10-14T232048.622406_0000.log",
+      "log_sha256": "4fa3dce7abb0dfb54ca3c6a1c724bb4e8c708c1bcf0b023a9812591f179574e1",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.twoColourDegreeSupport_ladders_disjoint",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourDegreeSupportValue_injective",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourNormalizedDegreeFiberEquiv",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_normalized_degree_range_subset",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.PoissonCountingProcessTimeScaling",
+      "source": "section3-diffusion/RequestProject/Section31/PoissonCountingProcessTimeScaling.lean",
+      "source_sha256": "424a8fb5bf438796d3b30f0942c3be707b57ad4d6e87aec6fd1d2fd70bf59123",
+      "log": "logs/RequestProject_Section31_PoissonCountingProcessTimeScaling-2026-10-14T231938.321954_0000.log",
+      "log_sha256": "7456b72b3213348226c540e51586ebaabebad1af322731bdfad932b9e561895e",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.PoissonClock.PoissonCountingProcessLaws.timeScale",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponentialHoldingJumpIndex_scaled_poisson_process",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSOriginalExponentialPhysicalJ1TightnessOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSOriginalExponentialPhysicalJ1TightnessOfRules.lean",
+      "source_sha256": "fc676172a2a582b9c40328649b659e80ff0587f3e603667b58feaf738149db63",
+      "log": "logs/RequestProject_Section31_EIGSOriginalExponentialPhysicalJ1TightnessOfRules-2026-10-14T232143.204078_0000.log",
+      "log_sha256": "dbd60392d2f7cbe796b7992142e115122d14eb59187c6551454df60e7ec60928",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_xiOriginalExponentialPhysicalJ1Tightness_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.FiniteGraphPoissonClockIdentification",
+      "source": "section3-diffusion/RequestProject/Section31/FiniteGraphPoissonClockIdentification.lean",
+      "source_sha256": "8b94aa67b39ffe77faafd8d4a668126e7c69fcb755ad699c600dc8a6624d1323",
+      "log": "logs/RequestProject_Section31_FiniteGraphPoissonClockIdentification-2026-10-14T233252.372540_0000.log",
+      "log_sha256": "cb0fe73fbf69d07fe20a679ff8a0807ff5e0b5fd3462d7dc21f945af15ba96ed",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.PoissonClock.finiteGraphPoissonCount_process_laws",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.finiteGraphPoissonCount_independent_walk",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.finiteGraphPoissonCount_increment_vector_law",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.finiteGraphPoissonCount_scaled_process_laws",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponentialHoldingPhysicalJ1Sample_is_poissonized_walk",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSTwoColourDegreeMultiplicity",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSTwoColourDegreeMultiplicity.lean",
+      "source_sha256": "9d378b4f33df2ddfba201f2ae99e2e1ff1898e84273d9a32180239cee84ae944",
+      "log": "logs/RequestProject_Section31_EIGSTwoColourDegreeMultiplicity-2026-10-14T233355.676933_0000.log",
+      "log_sha256": "6606d0acf47439e79433b5dde47730f42b5491667775d72124e942fb7fe07192",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.twoColourSystem_degree_three_multiplicity",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_degree_two_positive_multiplicity",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_degree_two_zero_multiplicity",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_normalized_degree_fiber_finite",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSOriginalDiameterEinsteinRelationOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSOriginalDiameterEinsteinRelationOfRules.lean",
+      "source_sha256": "6d6b08d946a9f7ceeb1e0be35c11039ad464d9bbe2dc35f58a63dcf8fce96306",
+      "log": "logs/RequestProject_Section31_EIGSOriginalDiameterEinsteinRelationOfRules-2026-10-14T233101.804524_0000.log",
+      "log_sha256": "41dd35c2398f2024fe01bc03559e502b38e3829712be930f5131141d49cb61e6",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiSimpleGraph_original_diameter_Einstein_relation_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSActualEinsteinRelationOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSActualEinsteinRelationOfRules.lean",
+      "source_sha256": "c795e555ea1410522ac7af2b8d1f60b285db72d090edc307ad8fbe475d6b57cc",
+      "log": "logs/RequestProject_Section31_EIGSActualEinsteinRelationOfRules-2026-10-14T233012.911704_0000.log",
+      "log_sha256": "ebd2afb17d062727fb491ff15b015affc4bdce7e1d8a67e996cce92e7b6401fa",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiSimpleGraph_actual_Einstein_relation_of_rules",
           "axioms": [
             "propext",
             "Classical.choice",
