@@ -1,14 +1,14 @@
 # Current formalization audit
 
-Snapshot UTC: 2026-10-14T21:53:18.583571+00:00
+Snapshot UTC: 2026-10-14T22:27:02.055647+00:00
 
 Full-paper completion is **not** claimed. A clean printed axiom audit verifies the stated theorem; it does not remove mathematical assumptions from that statement. Actual-model consumers and generic conditional lemmas must be read separately.
 
 ## Verification scope
 
-The latest completed common-dependency batch has 979 modules and unchanged checked sources. Report SHA256: `427ad422ec0da668e7a3f6d41464859c62d64efaadd6af2204a70b9c3609a316`.
+The latest completed common-dependency batch has 1015 modules and unchanged checked sources. Report SHA256: `301c0056cb755f5c74d262d10057abeb9e72dc004fc986183270198f3c48cab2`.
 
-The independent manifest contains 647 accepted whole-file receipts and 1809 printed audits. These overlap the common batch and are not a completion percentage. Every published Lean source has an exact hash and explicit status; unverified and failed drafts remain visible.
+The independent manifest contains 663 accepted whole-file receipts and 1847 printed audits. These overlap the common batch and are not a completion percentage. Every published Lean source has an exact hash and explicit status; unverified and failed drafts remain visible.
 
 ## Accepted milestones
 
@@ -186,6 +186,17 @@ The independent manifest contains 647 accepted whole-file receipts and 1809 prin
 | [FiniteGraphExponentialJ1PathLaw](section3-diffusion/RequestProject/Section31/FiniteGraphExponentialJ1PathLaw.lean) | `be4b4a9dd7c5031af59249fdc2492422e30f4b1077d32fb3d02b7df52ea6aa02` | `e65b6714988703812a761700a1345b29b06b29d7d9da5f9154971b24b118e249` | 4 |
 | [EIGSTwoColourActualGeometricDimensions](section3-diffusion/RequestProject/Section31/EIGSTwoColourActualGeometricDimensions.lean) | `63ee550946d47de9b49bc0719b1c2a04e00096cfa9c2885d7c9e5a7dd3169ff1` | `ff7f51ad34b028da958520448b46785a81b8a2a78df53595031dba242789799c` | 5 |
 | [EIGSTwoColourActualHausdorffDimension](section3-diffusion/RequestProject/Section31/EIGSTwoColourActualHausdorffDimension.lean) | `0502c54645de4db11e39e571cbdc71aabd0ae64a1989b4324dda15802b6d6cf9` | `5b28af84e66b5e634b383f43ac2c3f5de0397d6b10ec1a3a1aa0398c2d8e187d` | 2 |
+| [ExponentialHoldingClockShift](section3-diffusion/RequestProject/Section31/ExponentialHoldingClockShift.lean) | `1f5874ba51662b8152da9fb8c131177e63a2111e9cb8eb93fc890dff653027d0` | `23f341625ed7dfcc872029dbf452210c8b31af7aabbe5b5cfda1eb7c4109897c` | 3 |
+| [ExponentialHoldingPrefixTailIndependence](section3-diffusion/RequestProject/Section31/ExponentialHoldingPrefixTailIndependence.lean) | `77eed9cb8060552f67e1739342926fe3391e5e34d6ddba8f9486165ee9df6e74` | `f1d7354257b4edb326e14742760013fec59c1029458b5172b295b9e130db757b` | 1 |
+| [ExponentialHoldingHeadTailLaw](section3-diffusion/RequestProject/Section31/ExponentialHoldingHeadTailLaw.lean) | `15da97972d02c4f8a035d3631a7b65655ecd1d3742cf16d02ac349047c2735be` | `aef6c508a35e7f68699c98b38241a1ec09ba62c4bc9f94213e16b7dee4089d97` | 3 |
+| [ExponentialResidualSequenceLaw](section3-diffusion/RequestProject/Section31/ExponentialResidualSequenceLaw.lean) | `4dfdd3aee99fc4051ce3f16bbdf84806d48b2b62074bcc5a5cbe8350ff39ca72` | `5b9b461872e32c0458465fd37436841f79041cc955bfbbb0cbd16073c10fbbaf` | 1 |
+| [ExponentialHoldingArrivalShift](section3-diffusion/RequestProject/Section31/ExponentialHoldingArrivalShift.lean) | `ad3dff95a52742e7f3e6d1894af0dac980cd7fab30a08b453e249e8b6392aca1` | `a6477602cdd1a6ab10d3614dbae12f577c501f60838a08ad2dc0a7ff85162fe2` | 2 |
+| [ExponentialResidualClockIdentity](section3-diffusion/RequestProject/Section31/ExponentialResidualClockIdentity.lean) | `70809c50ea33a6afbb1cc55957c075f579459e030f2ff9b699643765bcd59746` | `769d95ce8b74ef9ebe511db6f21440192d35f91648a4be17345aa02cb6f000f0` | 5 |
+| [ExponentialSurvivalRegenerationFactorization](section3-diffusion/RequestProject/Section31/ExponentialSurvivalRegenerationFactorization.lean) | `e1c890cb84146fa2b216287256600462389c8e673fde49c33b9dd58eb18cf16a` | `54f23bfceb3c2e123a8c6afb0f7e99beb98bce7a747cffad2a5ad62e4c899caf` | 2 |
+| [ExponentialHoldingPrefixNextTailLaw](section3-diffusion/RequestProject/Section31/ExponentialHoldingPrefixNextTailLaw.lean) | `392cb51f6d86f33ac0a03bce047b04e24bf1008aa758d9b1d21e4ef06cf344d3` | `0712f86163455ef52ab0b6d886b54aaa33fe10593ec45919bb20a711c7d81866` | 3 |
+| [ExponentialResidualClockMeasurable](section3-diffusion/RequestProject/Section31/ExponentialResidualClockMeasurable.lean) | `b2dc235cc409cdfa2314ca1271efd7965ad4929b4bcc8ae5870f3376500b0eb3` | `6686e3388589f6cbfdbc22a650691e2054d3b2241a73eb7607991d9abc10d3b4` | 3 |
+| [EIGSTwoColourEdgeCountFormula](section3-diffusion/RequestProject/Section31/EIGSTwoColourEdgeCountFormula.lean) | `e07548fad892ee80e2b0c8e6b10811922bae1ec6db3ddead8c066f5f5a5a0ac8` | `50938bfe5386bcfaa7391ff136dff3fab2374e2031cd80fb344ac6ba1c5be6b5` | 3 |
+| [EIGSTwoColourExactDegreeGrowth](section3-diffusion/RequestProject/Section31/EIGSTwoColourExactDegreeGrowth.lean) | `86299b8c64603bcee1f0d2f867f4aa10e848ba7df8d965fd187caec2ca762056` | `6f77640bf28e63a1f5efb4494392e569056e50ac92ec403d6e81f5ea6a2d20a4` | 4 |
 
 ## Proven scope and exact gaps
 

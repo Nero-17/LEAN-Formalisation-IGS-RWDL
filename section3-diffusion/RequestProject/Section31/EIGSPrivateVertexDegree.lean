@@ -21,10 +21,8 @@ theorem embedRuleVtx_eq_private_iff (system : EIGSData K) (level : ℕ)
   · intro equality
     unfold embedRuleVtx at equality
     split_ifs at equality with plus minus
-    · contradiction
-    · contradiction
-    · have privateEquality := (Sigma.mk.inj_iff.1 (Sum.inr.inj equality)).2
-      exact congrArg Subtype.val (eq_of_heq privateEquality)
+    have privateEquality := (Sigma.mk.inj_iff.1 (Sum.inr.inj equality)).2
+    exact congrArg Subtype.val (eq_of_heq privateEquality)
   · intro equality
     subst endpoint
     exact embedRuleVtx_interior system level edge tail head
@@ -41,9 +39,7 @@ theorem embedRuleVtx_ne_private_of_edge_ne (system : EIGSData K) (level : ℕ)
   intro equality
   unfold embedRuleVtx at equality
   split_ifs at equality with plus minus
-  · contradiction
-  · contradiction
-  · exact different (congrArg Sigma.fst (Sum.inr.inj equality))
+  exact different (congrArg Sigma.fst (Sum.inr.inj equality))
 
 theorem outDeg_private (system : EIGSData K) (level : ℕ)
     (edge : XiEdge system.toRuleData level)
@@ -54,11 +50,15 @@ theorem outDeg_private (system : EIGSData K) (level : ℕ)
       ruleTailDeg system (XiCol system.toRuleData level edge) privateVertex.val colour := by
   unfold outDeg ruleTailDeg
   simp only [Finset.card_filter]
-  rw [Finset.sum_sigma']
+  change (∑ pair : Σ otherEdge : XiEdge system.toRuleData level,
+      (system.rule (XiCol system.toRuleData level otherEdge)).E,
+      if XiTail system (level + 1) pair = Sum.inr ⟨edge, privateVertex⟩ ∧
+        XiCol system.toRuleData (level + 1) pair = colour then (1 : ℕ) else 0) = _
+  rw [Fintype.sum_sigma]
   rw [Finset.sum_eq_single edge]
   · apply Finset.sum_congr rfl
     intro ruleEdge _
-    simp only [XiTail_succ, embedRuleVtx_eq_private_iff, XiCol]
+    simp only [XiTail_succ, embedRuleVtx_eq_private_iff, XiCol, XiLvl] <;> rfl
   · intro otherEdge _ different
     apply Finset.sum_eq_zero
     intro ruleEdge _
@@ -77,11 +77,15 @@ theorem inDeg_private (system : EIGSData K) (level : ℕ)
       ruleHeadDeg system (XiCol system.toRuleData level edge) privateVertex.val colour := by
   unfold inDeg ruleHeadDeg
   simp only [Finset.card_filter]
-  rw [Finset.sum_sigma']
+  change (∑ pair : Σ otherEdge : XiEdge system.toRuleData level,
+      (system.rule (XiCol system.toRuleData level otherEdge)).E,
+      if XiHead system (level + 1) pair = Sum.inr ⟨edge, privateVertex⟩ ∧
+        XiCol system.toRuleData (level + 1) pair = colour then (1 : ℕ) else 0) = _
+  rw [Fintype.sum_sigma]
   rw [Finset.sum_eq_single edge]
   · apply Finset.sum_congr rfl
     intro ruleEdge _
-    simp only [XiHead_succ, embedRuleVtx_eq_private_iff, XiCol]
+    simp only [XiHead_succ, embedRuleVtx_eq_private_iff, XiCol, XiLvl] <;> rfl
   · intro otherEdge _ different
     apply Finset.sum_eq_zero
     intro ruleEdge _

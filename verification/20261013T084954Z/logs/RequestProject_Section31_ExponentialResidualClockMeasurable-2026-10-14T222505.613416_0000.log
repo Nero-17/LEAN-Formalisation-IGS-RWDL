@@ -1,0 +1,3 @@
+'IGS.Sec31.PoissonClock.holdingJumpIndex_eq_iff_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonClock.residualHoldingTimes_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonClock.residualHoldingTimes_on_count' depends on axioms: [propext, Classical.choice, Quot.sound]

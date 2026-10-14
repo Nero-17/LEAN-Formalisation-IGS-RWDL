@@ -1,7 +1,7 @@
 import RequestProject.Section31.FiniteGraphExponentialJ1WeakLimit
 import RequestProject.Section31.FiniteSupportUnitGlobalLawIdentification
 import RequestProject.Section31.EIGSNativeExponentialClockCouplingOfRules
-import RequestProject.Section31.EIGSNativeContinuousBallMeanOfRules
+import RequestProject.Section31.EIGSContinuousBallGeometricMeanOfRules
 
 /-! Upgrade an already fixed global continuous family to actual holding
 J1 weak convergence. The floor restrictions and sample coupling are supplied
@@ -14,6 +14,10 @@ open IGS.Sec31.DiscreteMarkov IGS.Sec31.PoissonClock
 open scoped Classical NNReal
 set_option maxHeartbeats 7000000
 variable {K : ℕ}
+local instance nativeWeakGlobalPathMeasurable {State : Type*} [TopologicalSpace State] :
+    MeasurableSpace C(ℝ≥0, State) := borel _
+local instance nativeWeakGlobalPathBorel {State : Type*} [TopologicalSpace State] :
+    BorelSpace C(ℝ≥0, State) := ⟨rfl⟩
 
 def XiNativeExponentialGlobalWeakFamilyProperties (system : EIGSData K)
     (connected : ∀ colour, (ruleSG system colour).Connected)

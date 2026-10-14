@@ -1,0 +1,3 @@
+'IGS.Sec31.PoissonClock.prependHoldingTime_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonClock.exponential_holding_head_tail_map' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonClock.exponential_holding_prepend_map' depends on axioms: [propext, Classical.choice, Quot.sound]

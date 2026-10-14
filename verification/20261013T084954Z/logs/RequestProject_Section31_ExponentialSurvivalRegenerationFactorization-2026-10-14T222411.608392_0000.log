@@ -1,0 +1,15 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\ExponentialSurvivalRegenerationFactorization.lean:32:26: warning: This simp argument is unused:
+  and_true
+
+Hint: Omit it from the simp argument list.
+  simp only [mem_setOf_eq, mem_inter_iff, mem_preimage, mem_prod, mem_Ioi,
+  ̵  ̵ ̵ ̵ ̵ ̵mem_univ, true_and,
+  ̲ a̵n̵d̵_̵t̵r̵u̵e̵,̵  ̲ ̲ ̲ ̲and_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'IGS.Sec31.PoissonClock.exponential_residual_sequence_event_probability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.PoissonClock.exponential_survival_regeneration_factorization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

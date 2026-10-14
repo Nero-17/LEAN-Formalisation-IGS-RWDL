@@ -1,0 +1,3 @@
+'IGS.Sec31.PoissonClock.shiftedHoldingTimes_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonClock.shiftedHoldingTimes_hasLaw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonClock.cumulativeHoldingTime_shift_add' depends on axioms: [propext, Classical.choice, Quot.sound]

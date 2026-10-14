@@ -53,7 +53,8 @@ theorem isTight_of_singleton_tight_and_shrinking_compact_capture
       (isTightMeasureSet_iff_exists_isCompact_measure_compl_le.mp (eachTight index))
         (ENNReal.ofReal (error / 2)) (ENNReal.ofReal_pos.mpr (by positivity))
     refine ⟨capture, compact, ?_⟩
-    have result := ENNReal.toReal_mono ENNReal.ofReal_ne_top (bound _ (by simp))
+    have result := ENNReal.toReal_mono ENNReal.ofReal_ne_top
+      (bound (laws index : Measure Space) (Set.mem_singleton _))
     simpa only [measureReal_def, ENNReal.toReal_ofReal (by positivity : 0 ≤ error / 2)] using result
   choose captures captureCompact captureBound using individual
   let trimmed := fun index => captures index ∩ cthickening (errors index) limitSet

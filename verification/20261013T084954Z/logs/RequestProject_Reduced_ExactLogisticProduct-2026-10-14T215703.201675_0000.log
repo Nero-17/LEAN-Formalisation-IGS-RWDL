@@ -1,0 +1,8 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Reduced\ExactLogisticProduct.lean:68:8: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section4-percolation\RequestProject\Reduced\ExactLogisticProduct.lean:68:8: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+'Reduced.rational_logistic_of_cleared' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reduced.logistic_product_exact_rational' depends on axioms: [propext, Classical.choice, Quot.sound]

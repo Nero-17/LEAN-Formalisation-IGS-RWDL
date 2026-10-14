@@ -1,0 +1,4 @@
+'EIGS.twoColourSystem_degreeMatrix_row_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_degree_state_sum_forward' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_simpleGraph_degree_doubles' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_simpleGraph_degree_forward' depends on axioms: [propext, Classical.choice, Quot.sound]

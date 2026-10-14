@@ -1,0 +1,3 @@
+'IGS.Sec31.PoissonClock.exponential_residual_sequence_measure' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

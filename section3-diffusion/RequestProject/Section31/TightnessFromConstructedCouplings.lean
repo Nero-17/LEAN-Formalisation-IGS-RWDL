@@ -63,17 +63,23 @@ theorem isTight_of_constructed_couplings
       intro inLimit
       exact outside (mem_cthickening_of_dist_le _ _ _ _ inLimit (close inBad))
   have bound := ENNReal.toReal_mono (measure_ne_top (joint index) _) (measure_mono_ae inclusion)
+  change (joint index).real ((target index) ⁻¹' (cthickening (errors index) limitSet)ᶜ) ≤
+    (joint index).real ((source index) ⁻¹' limitSetᶜ ∪ bad) at bound
   have unionBound := measureReal_union_le (μ := joint index) ((source index) ⁻¹' limitSetᶜ) bad
   have sourceEquality : (joint index).real ((source index) ⁻¹' limitSetᶜ) =
       (sourceLaws index : Measure Space).real limitSetᶜ := by
-    rw [← sourceMarginal index, measureReal_def,
-      Measure.map_apply_of_aemeasurable (sourceMeasurable index) limitCompact.isClosed.measurableSet.compl]
-    rfl
+    rw [← sourceMarginal index]
+    change ((joint index) ((source index) ⁻¹' limitSetᶜ)).toReal =
+      ((joint index).map (source index) limitSetᶜ).toReal
+    exact congrArg ENNReal.toReal
+      (Measure.map_apply_of_aemeasurable (sourceMeasurable index) limitCompact.isClosed.measurableSet.compl).symm
   have targetEquality : (joint index).real ((target index) ⁻¹' (cthickening (errors index) limitSet)ᶜ) =
       (targetLaws index : Measure Space).real (cthickening (errors index) limitSet)ᶜ := by
-    rw [← targetMarginal index, measureReal_def,
-      Measure.map_apply_of_aemeasurable (targetMeasurable index) isClosed_cthickening.measurableSet.compl]
-    rfl
+    rw [← targetMarginal index]
+    change ((joint index) ((target index) ⁻¹' (cthickening (errors index) limitSet)ᶜ)).toReal =
+      ((joint index).map (target index) (cthickening (errors index) limitSet)ᶜ).toReal
+    exact congrArg ENNReal.toReal
+      (Measure.map_apply_of_aemeasurable (targetMeasurable index) isClosed_cthickening.measurableSet.compl).symm
   rw [sourceEquality] at unionBound
   rw [targetEquality] at bound
   exact bound.trans (unionBound.trans (by

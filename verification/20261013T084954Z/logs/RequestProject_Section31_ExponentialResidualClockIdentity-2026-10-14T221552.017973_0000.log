@@ -1,0 +1,5 @@
+'IGS.Sec31.PoissonClock.cumulativeHoldingTime_prepend' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonClock.residualHoldingTimes_cumulative_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonClock.residualHoldingTimes_nonexplosion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonClock.residualHoldingTimes_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonClock.holdingJumpIndex_residual_add' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -55,8 +55,11 @@ theorem probability_maps_same_limit_of_constructed_coupling
       (∫ point, test point ∂(samples index : Measure _).map (source index))‖ ≤ _
     rw [integral_map (targetMeasurable index) lipschitzBound.continuous.measurable.aestronglyMeasurable,
       integral_map (sourceMeasurable index) lipschitzBound.continuous.measurable.aestronglyMeasurable,
-      ← integral_sub (targetIntegrable index) (sourceIntegrable index),
-      ← integral_add_compl badMeasurable ((targetIntegrable index).sub (sourceIntegrable index))]
+      ← integral_sub (targetIntegrable index) (sourceIntegrable index)]
+    have differenceIntegrable : Integrable
+        (fun sample => test (target index sample) - test (source index sample)) (samples index : Measure _) :=
+      (targetIntegrable index).sub (sourceIntegrable index)
+    rw [← integral_add_compl badMeasurable differenceIntegrable]
     have badBound : ‖∫ sample in bad, test (target index sample) - test (source index sample)
         ∂(samples index : Measure _)‖ ≤ 2 * ‖boundedTest‖ * (samples index : Measure _).real bad := by
       apply norm_setIntegral_le_of_norm_le_const_ae' (measure_lt_top _ _)

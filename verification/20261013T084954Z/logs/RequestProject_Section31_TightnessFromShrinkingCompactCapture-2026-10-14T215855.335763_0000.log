@@ -1,0 +1,4 @@
+'IGS.Sec31.DiscreteMarkov.isTight_of_real_compact_capture' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.DiscreteMarkov.isTight_of_singleton_tight_and_shrinking_compact_capture' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -66,9 +66,12 @@ theorem finiteGraphExponentialJ1Laws_tendsto_of_floor_coupling
     change (joint level).map ((toUnit ∘ finiteHorizonStepMap (horizon : ℝ≥0) rates embedding level) ∘ Prod.fst) = _
     rw [← Measure.map_map (toUnitMeasurable.comp (finiteHorizonStepMap_measurable _ _ _ _)) measurable_fst,
       finiteGraphExponentialSampleLaw_discrete_marginal]
-    rw [← Measure.map_map toUnitMeasurable (finiteHorizonStepMap_measurable _ _ _ _),
-      ← finiteHorizonStepLaw_eq_map]
-    rfl
+    rw [← Measure.map_map toUnitMeasurable (finiteHorizonStepMap_measurable _ _ _ _)]
+    change Measure.map toUnit
+      ((pathLaw (kernels level) (initial level)).map (finiteHorizonStepMap horizon rates embedding level)) =
+        Measure.map toUnit (floorLaws level : Measure _)
+    exact congrArg (Measure.map toUnit)
+      (finiteHorizonStepLaw_eq_map horizon rates embedding kernels initial level).symm
   have targetMarginal (level : ℕ) : (joint level).map (target level) = (targetLaws level : Measure _) := rfl
   let samples := fun level => (⟨joint level, inferInstance⟩ : ProbabilityMeasure ((ℕ → Vertex level) × (ℕ → ℝ)))
   have mappedConverges : Tendsto sourceLaws atTop
@@ -101,9 +104,18 @@ theorem finiteGraphExponentialJ1Laws_tendsto_of_floor_coupling
   have timeBound : (horizon : ℝ) * time.val ≤ horizon := by
     simpa only [mul_one] using mul_le_mul_of_nonneg_left time.property.2 horizon.property
   have bound := close sample outside ((horizon : ℝ) * time.val) timeNonnegative timeBound
-  simpa only [target, source, toUnit, exponentialHoldingJ1Sample, dif_pos regular, unitHoldingCadlagPath,
-    finiteSupportPathToUnitCadlagJ1, finiteHorizonStepMap_apply, unitIntervalScale,
-    NNReal.coe_natCast, mul_assoc, mul_left_comm, mul_comm] using bound
+  have targetEvaluation : (target level sample).val.toFun time =
+      embedding level (holdingTimePath sample.1 sample.2 ((rates level : ℝ) * ((horizon : ℝ) * time.val))) := by
+    change (exponentialHoldingJ1Sample (embedding level) ((rates level : ℝ) * horizon) _ sample).val.toFun time = _
+    simp only [exponentialHoldingJ1Sample, dif_pos regular, unitHoldingCadlagPath, holdingTimePath, mul_assoc]
+  have sourceEvaluation : (source level sample).val.toFun time =
+      embedding level (sample.1 ⌊((horizon : ℝ) * time.val) * (rates level : ℝ)⌋₊) := by
+    change UniformFun.toFun (finiteHorizonStepMap horizon rates embedding level sample.1).val
+      (unitIntervalScale horizon time) = _
+    exact finiteHorizonStepMap_apply horizon rates embedding level sample.1 (unitIntervalScale horizon time)
+  change dist ((target level sample).val.toFun time) ((source level sample).val.toFun time) ≤ radius
+  rw [targetEvaluation, sourceEvaluation, mul_comm ((horizon : ℝ) * time.val) (rates level : ℝ)]
+  exact bound
 
 end
 end IGS.Sec31.PoissonClock

@@ -30,7 +30,7 @@ theorem twoColourSystem_degree_state_sum_inl (level : ℕ)
       rw [Finset.sum_comm]
       simp only [Finset.mul_sum]
     _ = 2 * ∑ state, degVec twoColourSystem level vertex state := by
-      simp only [twoColourSystem_degreeMatrix_row_sum, Finset.sum_mul, mul_comm]
+      simp only [twoColourSystem_degreeMatrix_row_sum, Finset.mul_sum, mul_comm]
 
 theorem twoColourSystem_degree_state_sum_forward (birth age : ℕ)
     (vertex : XiVtx twoColourSystem birth) :

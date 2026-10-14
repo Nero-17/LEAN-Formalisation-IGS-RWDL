@@ -1,0 +1,3 @@
+'IGS.Sec31.PoissonClock.exponential_holding_prefix_tail_independent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

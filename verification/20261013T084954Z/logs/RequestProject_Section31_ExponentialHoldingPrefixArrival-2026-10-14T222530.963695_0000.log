@@ -1,0 +1,2 @@
+'IGS.Sec31.PoissonClock.holdingPrefixArrival_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonClock.holdingPrefixArrival_actual' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -41,7 +41,7 @@ theorem twoColourSystem_edge_count_formulas (level : ℕ) :
       · rw [twoColourSystem_red_edge_recursion, induction.1, induction.2, pow_succ, pow_succ]
         ring_nf <;> norm_num [square]
       · rw [twoColourSystem_blue_edge_recursion, induction.1, induction.2, pow_succ, pow_succ]
-        ring_nf <;> norm_num [square]
+        ring_nf <;> norm_num [square] <;> ring
 
 theorem twoColourSystem_red_edge_growth_bounds (level : ℕ) :
     (3 + Real.sqrt 6) ^ level / 2 ≤ (chiCount twoColourSystem.toRuleData level 0 : ℝ) ∧

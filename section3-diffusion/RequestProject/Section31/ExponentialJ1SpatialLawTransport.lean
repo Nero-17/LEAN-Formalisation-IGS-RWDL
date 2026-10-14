@@ -40,7 +40,7 @@ theorem finiteGraphExponentialJ1Law_spatial_map
         finiteGraphExponentialJ1Law graph degreePositive initial (spatial ∘ embedding) horizon horizonPositive := by
   apply ProbabilityMeasure.toMeasure_injective
   simp only [ProbabilityMeasure.toMeasure_map, finiteGraphExponentialJ1Law]
-  rw [Measure.map_map_of_aemeasurable
+  rw [AEMeasurable.map_map_of_aemeasurable
     (cadlagJ1SpatialMap_continuous spatial spatialContinuous).measurable.aemeasurable
     (exponentialHoldingJ1Sample_aemeasurable graph degreePositive initial embedding horizon horizonPositive)]
   congr 1
@@ -71,7 +71,7 @@ theorem finiteGraphExponentialJ1Laws_spatial_tight
     rw [← Set.range_comp']
     congr 1
     funext level
-    exact congrArg (fun law : ProbabilityMeasure (UnitCadlagJ1Path OtherState) => (law : Measure _))
+    exact congrArg (fun law : ProbabilityMeasure (UnitCadlagJ1Path OtherState) => law.toMeasure)
       (finiteGraphExponentialJ1Law_spatial_map _ _ _ _ _ spatialContinuous _ _)
   rw [equality] at mapped
   exact mapped

@@ -1,0 +1,9 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\ProbabilityConstructedCouplingWeakLimit.lean:107:52: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\ProbabilityConstructedCouplingWeakLimit.lean:107:52: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+'IGS.Sec31.probability_maps_same_limit_of_constructed_coupling' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
