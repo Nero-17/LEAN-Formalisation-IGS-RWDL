@@ -1,0 +1,52 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSUVFlowerRuleGeometry.lean:73:15: warning: This simp argument is unused:
+  uvFlowerRuleGraph
+
+Hint: Omit it from the simp argument list.
+  simp only [u̵v̵F̵l̵o̵w̵e̵r̵R̵u̵l̵e̵G̵r̵a̵p̵h̵,̵ ̵Sum.elim_inl, uvFlowerEdgeBranch]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSUVFlowerRuleGeometry.lean:77:15: warning: This simp argument is unused:
+  uvFlowerRuleGraph
+
+Hint: Omit it from the simp argument list.
+  simp only [u̵v̵F̵l̵o̵w̵e̵r̵R̵u̵l̵e̵G̵r̵a̵p̵h̵,̵ ̵Sum.elim_inr, uvFlowerEdgeBranch]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSUVFlowerRuleGeometry.lean:93:12: warning: This simp argument is unused:
+  uvFlowerRuleGraph
+
+Hint: Omit it from the simp argument list.
+  simp [̵u̵v̵F̵l̵o̵w̵e̵r̵R̵u̵l̵e̵G̵r̵a̵p̵h̵,̵ ̵u̵v̵F̵l̵o̵w̵e̵r̵P̵a̵t̵h̵H̵e̵a̵d̵,̵[̲u̲v̲F̲l̲o̲w̲e̲r̲P̲a̲t̲h̲H̲e̲a̲d̲,̲ notLast, uvFlowerLeftEmbedding, uvFlowerBranchLabel,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲uvFlowerEdgeBranch]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSUVFlowerRuleGeometry.lean:96:12: warning: This simp argument is unused:
+  uvFlowerRuleGraph
+
+Hint: Omit it from the simp argument list.
+  simp [̵u̵v̵F̵l̵o̵w̵e̵r̵R̵u̵l̵e̵G̵r̵a̵p̵h̵,̵ ̵u̵v̵F̵l̵o̵w̵e̵r̵P̵a̵t̵h̵T̵a̵i̵l̵,̵[̲u̲v̲F̲l̲o̲w̲e̲r̲P̲a̲t̲h̲T̲a̲i̲l̲,̲ first, uvFlowerLeftEmbedding, uvFlowerBranchLabel, uvFlowerEdgeBranch]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSUVFlowerRuleGeometry.lean:102:12: warning: This simp argument is unused:
+  uvFlowerRuleGraph
+
+Hint: Omit it from the simp argument list.
+  simp [̵u̵v̵F̵l̵o̵w̵e̵r̵R̵u̵l̵e̵G̵r̵a̵p̵h̵,̵ ̵u̵v̵F̵l̵o̵w̵e̵r̵P̵a̵t̵h̵H̵e̵a̵d̵,̵[̲u̲v̲F̲l̲o̲w̲e̲r̲P̲a̲t̲h̲H̲e̲a̲d̲,̲ notLast, uvFlowerRightEmbedding, uvFlowerBranchLabel,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲uvFlowerEdgeBranch]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSUVFlowerRuleGeometry.lean:105:12: warning: This simp argument is unused:
+  uvFlowerRuleGraph
+
+Hint: Omit it from the simp argument list.
+  simp [̵u̵v̵F̵l̵o̵w̵e̵r̵R̵u̵l̵e̵G̵r̵a̵p̵h̵,̵ ̵u̵v̵F̵l̵o̵w̵e̵r̵P̵a̵t̵h̵T̵a̵i̵l̵,̵[̲u̲v̲F̲l̲o̲w̲e̲r̲P̲a̲t̲h̲T̲a̲i̲l̲,̲ first, uvFlowerRightEmbedding, uvFlowerBranchLabel,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲uvFlowerEdgeBranch]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'EIGS.uvFlowerPathTail_height' depends on axioms: [propext, Quot.sound]
+'EIGS.uvFlowerPathHead_height' depends on axioms: [propext, Quot.sound]
+'EIGS.uvFlowerRuleGraph_endpoint_labels' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerRuleGraph_has_labeled_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerRuleGraph_edges' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerRuleGraph_vertices' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerSystem_loopless' depends on axioms: [propext, Classical.choice, Quot.sound]

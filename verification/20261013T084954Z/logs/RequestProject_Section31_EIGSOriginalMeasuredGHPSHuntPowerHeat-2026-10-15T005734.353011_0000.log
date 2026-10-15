@@ -1,0 +1,3 @@
+'EIGS.xiIdentifiedOriginalMeasuredGHPSHuntPowerHeatProperties_of_joint_and_power' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

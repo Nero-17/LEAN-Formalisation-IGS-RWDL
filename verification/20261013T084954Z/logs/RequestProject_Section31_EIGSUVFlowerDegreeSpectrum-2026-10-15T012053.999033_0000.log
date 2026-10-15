@@ -1,0 +1,25 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSUVFlowerDegreeSpectrum.lean:73:15: warning: This simp argument is unused:
+  Fin.val_mk
+
+Hint: Omit it from the simp argument list.
+  simp only ̵[̵F̵i̵n̵.̵v̵a̵l̵_̵m̵k̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSUVFlowerDegreeSpectrum.lean:89:57: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSUVFlowerDegreeSpectrum.lean:94:57: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSUVFlowerDegreeSpectrum.lean:162:35: warning: This simp argument is unused:
+  Fintype.sum_sum_type
+
+Hint: Omit it from the simp argument list.
+  simp [Matrix.mulVec, dotProduct,̵ ̵F̵i̵n̵t̵y̵p̵e̵.̵s̵u̵m̵_̵s̵u̵m̵_̵t̵y̵p̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'EIGS.uvFlowerSystem_endpoint_degree_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerSystem_degreeMatrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerSystem_degreeMatrix_primitive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerSystem_degree_positive_eigenpair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerSystem_degreeSpectralRadius' depends on axioms: [propext, Classical.choice, Quot.sound]

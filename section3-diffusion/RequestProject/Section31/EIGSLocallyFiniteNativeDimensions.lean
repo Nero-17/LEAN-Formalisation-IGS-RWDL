@@ -55,7 +55,8 @@ theorem locallyFiniteRuleSystem_native_dimensions (canonical : Bool) :
   constructor
   · exact compact_coveringNumber_logarithmic_limit_of_ball_mass_bounds physicalMeasure
       (Real.log mass.rate / Real.log (system.distanceSpectralRadius connected)) 0 lower lowerThreshold
-      (by norm_num) lowerPositive lowerThresholdPositive ballLower almostEverywhere
+      (by norm_num) lowerPositive lowerThresholdPositive ballLower
+      (by simpa only [mul_assoc] using almostEverywhere)
   · exact compact_hausdorff_dimension_eq_of_ball_mass_bounds physicalMeasure
       (Real.log mass.rate / Real.log (system.distanceSpectralRadius connected)) 0 lower lowerThreshold
       dimensionNonnegative lowerPositive lowerThresholdPositive ballLower almostEverywhere

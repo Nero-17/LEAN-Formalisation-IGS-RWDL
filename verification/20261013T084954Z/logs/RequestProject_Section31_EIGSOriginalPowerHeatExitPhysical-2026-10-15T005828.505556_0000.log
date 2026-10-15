@@ -1,0 +1,9 @@
+'EIGS.xiIdentifiedOriginalMeasuredGHPSPowerHeatExitProperties_of_power_joint' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiIdentifiedOriginalMeasuredGHPSPowerHeatExitExponentialProperties_of_power_heat_exit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiIdentifiedOriginalMeasuredGHPSPowerHeatExitPhysicalProperties_of_unit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

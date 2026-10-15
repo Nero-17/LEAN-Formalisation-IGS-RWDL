@@ -2699,6 +2699,20 @@ and
 In particular, Proposition~\ref{prop:asymp_res_recurrence_rhoPsi} shows that $\Xi$ is recurrent exactly when $u<v$.
 \end{example}
 
+\begin{example}\label{ex:uvFlower}
+For the $(u,v)$-flower of Definition~\ref{definition:flower-dhl}, with $2\le u\le v$, the two parallel paths have lengths $u$ and $v$.
+The replacement has $u+v$ edges, its terminal distance is $u$, and every old vertex doubles its degree.
+The series--parallel resistance calculation therefore gives
+\[
+\rho(\mathbf M)=u+v,\qquad
+\rho_{\min}(\mathcal D)=u,\qquad
+\rho(\mathbf N)=2,\qquad
+\Psi(x)=\frac{uv}{u+v}x.
+\]
+Consequently, $\dimdeg(\Xi)=\frac{\log(u+v)}{\log2}$ and $\dimwalk(\Xi)=\frac{\log(uv)}{\log u}$.
+In particular, the $(2,3)$-flower has walk dimension $\frac{\log6}{\log2}>2$, whereas the $(2,3)$-DHL in Example~\ref{ex:uvDHL} has walk dimension $2$.
+\end{example}
+
 
 
 

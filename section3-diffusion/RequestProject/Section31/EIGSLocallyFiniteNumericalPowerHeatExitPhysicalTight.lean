@@ -159,7 +159,8 @@ theorem exists_locallyFiniteRuleSystem_numerical_same_kernel_power_heat_exit_phy
     obtain ⟨originalDense, semigroup, semigroupProperties, intertwining⟩ := tightProperties
     dsimp only [XiIdentifiedOriginalMeasuredGHPSPowerHeatExitPhysicalNumericalProperties]
     refine ⟨originalDense, semigroup, ?_, intertwining⟩
-    simpa only [exponentEquality] using semigroupProperties
+    rw [← exponentEquality]
+    exact semigroupProperties
   exact ⟨resistanceRate, ratePositive, resistanceVector, vectorPositive, eigenpair,
     normalization, normalizationPositive, normalizedConvergence, rateEquality, rateGreaterThanOne,
     realization, closedIdentification, numericalProperties, tightProperties, physicalProperties,

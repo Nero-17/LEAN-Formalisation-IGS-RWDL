@@ -1,0 +1,22 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSUVFlowerUnitFlow.lean:29:47: warning: This simp argument is unused:
+  notFirst
+
+Hint: Omit it from the simp argument list.
+  simp [uvFlowerPathHead, uvFlowerPathPoint, n̵o̵t̵F̵i̵r̵s̵t̵,̵ ̵last, lengthNonzero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSUVFlowerUnitFlow.lean:119:30: warning: This simp argument is unused:
+  terminalsDistinct
+
+Hint: Omit it from the simp argument list.
+  simp [atSource, atSink, terminalsDistinct,̵ ̵t̵e̵r̵m̵i̵n̵a̵l̵s̵D̵i̵s̵t̵i̵n̵c̵t̵.symm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSUVFlowerUnitFlow.lean:139:34: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'EIGS.uvFlowerPathTail_eq_point' depends on axioms: [propext, Quot.sound]
+'EIGS.uvFlowerPathHead_eq_point' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerUnitCurrent_isUnitFlow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerTerminalFlow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerUnitCurrent_energy' depends on axioms: [propext, Classical.choice, Quot.sound]

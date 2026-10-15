@@ -1,0 +1,19 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSUVFlowerFraction.lean:27:37: warning: This simp argument is unused:
+  Fin.val_mk
+
+Hint: Omit it from the simp argument list.
+  simp only [uvFlowerPathFraction,̵ ̵F̵i̵n̵.̵v̵a̵l̵_̵m̵k̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSUVFlowerFraction.lean:68:17: warning: This simp argument is unused:
+  uvFlowerRuleGraph
+
+Hint: Omit it from the simp argument list.
+  simp only [u̵v̵F̵l̵o̵w̵e̵r̵R̵u̵l̵e̵G̵r̵a̵p̵h̵,̵ ̵Sum.elim_inr, uvFlowerFraction_right]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'EIGS.uvFlowerPathFraction_point' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerFraction_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerFraction_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerPathFraction_increment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerFraction_edge' depends on axioms: [propext, Classical.choice, Quot.sound]

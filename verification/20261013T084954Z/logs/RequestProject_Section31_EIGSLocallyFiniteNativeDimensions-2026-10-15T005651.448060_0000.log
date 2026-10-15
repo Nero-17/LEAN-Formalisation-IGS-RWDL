@@ -1,0 +1,1 @@
+'EIGS.locallyFiniteRuleSystem_native_dimensions' depends on axioms: [propext, Classical.choice, Quot.sound]

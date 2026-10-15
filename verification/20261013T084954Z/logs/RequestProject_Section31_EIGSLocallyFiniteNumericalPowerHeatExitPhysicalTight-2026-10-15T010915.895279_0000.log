@@ -1,0 +1,3 @@
+'EIGS.exists_locallyFiniteRuleSystem_numerical_same_kernel_power_heat_exit_physical_tight_Brownian' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,11 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSUVFlowerRuleConnectivity.lean:71:6: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSUVFlowerRuleConnectivity.lean:98:6: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+'EIGS.uvFlowerPathPoint_height' depends on axioms: [propext, Quot.sound]
+'EIGS.uvFlowerLeftPoint_reachable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerRightPoint_reachable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerSystem_connected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerSystem_distancePositive' depends on axioms: [propext, Classical.choice, Quot.sound]

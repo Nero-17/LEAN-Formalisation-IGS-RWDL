@@ -1,0 +1,11 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSUVFlowerDistanceSpectrum.lean:54:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSUVFlowerDistanceSpectrum.lean:64:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'EIGS.uvFlowerLeftPrefix_cost' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerRightPrefix_cost' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerMetricPotential_lipschitz' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerSystem_metricLengths' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerSystem_distanceSpectralRadius' depends on axioms: [propext, Classical.choice, Quot.sound]

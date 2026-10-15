@@ -1,0 +1,36 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSUVFlowerRuleSimplicity.lean:17:13: warning: This simp argument is unused:
+  uvFlowerRuleGraph
+
+Hint: Omit it from the simp argument list.
+  simp only [̵u̵v̵F̵l̵o̵w̵e̵r̵R̵u̵l̵e̵G̵r̵a̵p̵h̵,̵ ̵S̵u̵m̵.̵e̵l̵i̵m̵_̵i̵n̵l̵,̵[̲S̲u̲m̲.̲e̲l̲i̲m̲_̲i̲n̲l̲,̲ uvFlowerLeftProjection_embedding, uvFlowerPathTail_height,
+  ̲  ̲ ̲ ̲uvFlowerPathHead_height]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSUVFlowerRuleSimplicity.lean:27:13: warning: This simp argument is unused:
+  uvFlowerRuleGraph
+
+Hint: Omit it from the simp argument list.
+  simp only [̵u̵v̵F̵l̵o̵w̵e̵r̵R̵u̵l̵e̵G̵r̵a̵p̵h̵,̵ ̵S̵u̵m̵.̵e̵l̵i̵m̵_̵i̵n̵r̵,̵[̲S̲u̲m̲.̲e̲l̲i̲m̲_̲i̲n̲r̲,̲ uvFlowerRightProjection_embedding, uvFlowerPathTail_height,
+  ̲  ̲ ̲ ̲uvFlowerPathHead_height]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSUVFlowerRuleSimplicity.lean:108:17: warning: This simp argument is unused:
+  uvFlowerRuleGraph
+
+Hint: Omit it from the simp argument list.
+  simp only [̵u̵v̵F̵l̵o̵w̵e̵r̵R̵u̵l̵e̵G̵r̵a̵p̵h̵,̵ ̵S̵u̵m̵.̵e̵l̵i̵m̵_̵i̵n̵l̵,̵[̲S̲u̲m̲.̲e̲l̲i̲m̲_̲i̲n̲l̲,̲ uvFlowerLeftProjection_embedding, uvFlowerPathTail_height,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲uvFlowerPathHead_height] at tailHeight headHeight
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSUVFlowerRuleSimplicity.lean:117:17: warning: This simp argument is unused:
+  uvFlowerRuleGraph
+
+Hint: Omit it from the simp argument list.
+  simp only [̵u̵v̵F̵l̵o̵w̵e̵r̵R̵u̵l̵e̵G̵r̵a̵p̵h̵,̵ ̵S̵u̵m̵.̵e̵l̵i̵m̵_̵i̵n̵r̵,̵[̲S̲u̲m̲.̲e̲l̲i̲m̲_̲i̲n̲r̲,̲ uvFlowerRightProjection_embedding, uvFlowerPathTail_height,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲uvFlowerPathHead_height] at tailHeight headHeight
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'EIGS.uvFlowerRuleGraph_minimum_left_height' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerRuleGraph_minimum_right_height' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerSystem_edgesUnique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerSystem_plantingNonadjacent' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,13 +1,13 @@
 {
-  "snapshot_utc": "2026-10-15T00:47:53.750108+00:00",
+  "snapshot_utc": "2026-10-15T02:05:47.290189+00:00",
   "round": "20261013T084954Z",
   "compiler": "Lean 4.28.0",
   "mathlib": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
-  "shared_dependency_modules": 1084,
-  "shared_report": "integration-1084.json",
-  "shared_report_sha256": "0ea3ae3656a047eeead489bb36b52eea6c4ecf380593a011e75527ec7e49981b",
-  "independent_whole_file_count": 747,
-  "independent_audit_count": 2059,
+  "shared_dependency_modules": 1150,
+  "shared_report": "integration-1150.json",
+  "shared_report_sha256": "29e7b078bbd36a0bcfae0d700bd26a3c371ba4627a342c2118de790a4737fd1a",
+  "independent_whole_file_count": 776,
+  "independent_audit_count": 2191,
   "records": [
     {
       "module": "RequestProject.Section31.EIGSL2EnergyConstants",
@@ -21146,8 +21146,8 @@
     {
       "module": "RequestProject.Section31.EIGSTwoColourOriginalDegreeSameFamilyFullHeat",
       "source": "section3-diffusion/RequestProject/Section31/EIGSTwoColourOriginalDegreeSameFamilyFullHeat.lean",
-      "source_sha256": "c968e264763b6935c133704d0d9c516b68fc1680dcd45a1bce8a2e2188afa250",
-      "log": "logs/RequestProject_Section31_EIGSTwoColourOriginalDegreeSameFamilyFullHeat-2026-10-14T234715.777879_0000.log",
+      "source_sha256": "ca2a47a6fc0a941b754ecdcbb1266fd34715fac9580a627e65ab02e4f2fee47d",
+      "log": "logs/RequestProject_Section31_EIGSTwoColourOriginalDegreeSameFamilyFullHeat-2026-10-15T015526.861560_0000.log",
       "log_sha256": "5c2a0315c2c5c56222055e24a6bd9d9c0d53b4d43b20ba1c322fbfea3d10f469",
       "exit_code": 0,
       "audits": [
@@ -21341,7 +21341,7 @@
       "module": "RequestProject.Section31.EIGSTwoColourOriginalDegreeFullHeatPhysical",
       "source": "section3-diffusion/RequestProject/Section31/EIGSTwoColourOriginalDegreeFullHeatPhysical.lean",
       "source_sha256": "b1f8e197c2cc5133e3a1dd8afaa7fc0cc57f0bf0ab0affba90e1024247ebd1dc",
-      "log": "logs/RequestProject_Section31_EIGSTwoColourOriginalDegreeFullHeatPhysical-2026-10-15T000121.582665_0000.log",
+      "log": "logs/RequestProject_Section31_EIGSTwoColourOriginalDegreeFullHeatPhysical-2026-10-15T015635.492914_0000.log",
       "log_sha256": "6a5de0a9d043bbcdceffde33998fd8ff8936f98cec7ae1f1b2dc11d4a1dc6267",
       "exit_code": 0,
       "audits": [
@@ -21644,8 +21644,8 @@
     {
       "module": "RequestProject.Section31.SameFamilyKernelPowerHeatEstimates",
       "source": "section3-diffusion/RequestProject/Section31/SameFamilyKernelPowerHeatEstimates.lean",
-      "source_sha256": "c7d0dfc28793aa780cfadf0b28c78a3005b8bd5bb64c4efa9cccd33b264c0238",
-      "log": "logs/RequestProject_Section31_SameFamilyKernelPowerHeatEstimates-2026-10-15T002035.773110_0000.log",
+      "source_sha256": "4538ff3156aaf1076bfac47fd4800233de4f1aa38c882fb464ac494894f1e800",
+      "log": "logs/RequestProject_Section31_SameFamilyKernelPowerHeatEstimates-2026-10-15T005634.272898_0000.log",
       "log_sha256": "0f6a413902380ee48c48ccff85d8f16d133519107d3116a267e86d7eaf1b60f0",
       "exit_code": 0,
       "audits": [
@@ -21663,7 +21663,7 @@
       "module": "RequestProject.Section31.EIGSOriginalMeasuredGHPSHuntPowerHeat",
       "source": "section3-diffusion/RequestProject/Section31/EIGSOriginalMeasuredGHPSHuntPowerHeat.lean",
       "source_sha256": "7392ac8af0c963b4a0ba10fef9b9eef186eec4f6d5e141e7c9022aa9283635af",
-      "log": "logs/RequestProject_Section31_EIGSOriginalMeasuredGHPSHuntPowerHeat-2026-10-15T002117.659435_0000.log",
+      "log": "logs/RequestProject_Section31_EIGSOriginalMeasuredGHPSHuntPowerHeat-2026-10-15T005734.353011_0000.log",
       "log_sha256": "1d395987a532478ca8fc8c411ce02deec4da90eb9ecf75bb746669eb4e65f251",
       "exit_code": 0,
       "audits": [
@@ -21925,6 +21925,1348 @@
         },
         {
           "declaration": "EIGS.locallyFiniteRuleSystem_distanceSpectralRadius",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSOriginalPowerHeatExitPhysical",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSOriginalPowerHeatExitPhysical.lean",
+      "source_sha256": "68d8bc6a61ff50b940b535f9a5d491ba21029a9c13f45a47df8f0c01e651b936",
+      "log": "logs/RequestProject_Section31_EIGSOriginalPowerHeatExitPhysical-2026-10-15T005828.505556_0000.log",
+      "log_sha256": "92b2f03f02981a1cb00bda6b72a2e6ceb3bee740f413fe8092f4c856e06c6848",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiIdentifiedOriginalMeasuredGHPSPowerHeatExitProperties_of_power_joint",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiIdentifiedOriginalMeasuredGHPSPowerHeatExitExponentialProperties_of_power_heat_exit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiIdentifiedOriginalMeasuredGHPSPowerHeatExitPhysicalProperties_of_unit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSLocallyFiniteNativeDimensions",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSLocallyFiniteNativeDimensions.lean",
+      "source_sha256": "20b95188ba0605b699c443b5a20731db8ed63046ec79022f2150c29b73f7e58c",
+      "log": "logs/RequestProject_Section31_EIGSLocallyFiniteNativeDimensions-2026-10-15T005651.448060_0000.log",
+      "log_sha256": "6bac83a77e994ce262817a73fbb8d3ae927d66dc80c07d8899986419255be079",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.locallyFiniteRuleSystem_native_dimensions",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSExponentialSameRealisationTightness",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSExponentialSameRealisationTightness.lean",
+      "source_sha256": "20d8e6d97e0d9de3e9603674adf8513992d12bc9ac7f07d30a59f8b8e646b09c",
+      "log": "logs/RequestProject_Section31_EIGSExponentialSameRealisationTightness-2026-10-15T005356.938437_0000.log",
+      "log_sha256": "ed06845f3f724b125cbd4a01121f26659910e90060073c13dcc33bc4afe0e324",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiExponentialJ1Laws_unit_and_physical_tight_in_same_realisation",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSLocallyFiniteDiameterDimensions",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSLocallyFiniteDiameterDimensions.lean",
+      "source_sha256": "001249a5e64ed22be08e4e5313cc8b3bd3ef4f4c2999587ec29d90fc05d47267",
+      "log": "logs/RequestProject_Section31_EIGSLocallyFiniteDiameterDimensions-2026-10-15T005733.900588_0000.log",
+      "log_sha256": "0982ea5a48802cafdca4856eacb66b06323651b98c7f38315b9c2f21c1c56374",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.locallyFiniteRuleSystem_diameter_dimensions",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSLocallyFiniteTableDimensions",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSLocallyFiniteTableDimensions.lean",
+      "source_sha256": "ac40b7b5821d1f5a0ba47b85f21731fa50f94c08f9e9bac12f1da4977f40161b",
+      "log": "logs/RequestProject_Section31_EIGSLocallyFiniteTableDimensions-2026-10-15T005827.246400_0000.log",
+      "log_sha256": "2dc578380737a9085600bb7378dfc62779bac05fd8555305558f8dc4d7a54a18",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.locallyFiniteRuleSystem_table_geometric_dimensions",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.locallyFiniteRuleSystem_table_walk_dimension",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSUVFlowerModel",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSUVFlowerModel.lean",
+      "source_sha256": "1a2d66125cc669b8e61ae2afeb06398234ceb66f6b87dace8eb8162d7153568b",
+      "log": "logs/RequestProject_Section31_EIGSUVFlowerModel-2026-10-15T010240.365656_0000.log",
+      "log_sha256": "0c6147336400bd9e17f436523857afef276f14dc979aea3834077dc122aa8e96",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.uvFlowerRuleGraph",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerSystem",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSOriginalPowerHeatExitPhysicalTight",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSOriginalPowerHeatExitPhysicalTight.lean",
+      "source_sha256": "1233266c4cbe3eddd91326d3b936af81c6a81c0ddfed7321cb9c92d9e053c3f0",
+      "log": "logs/RequestProject_Section31_EIGSOriginalPowerHeatExitPhysicalTight-2026-10-15T010028.953011_0000.log",
+      "log_sha256": "565a3e8500fe7018b25bb5237b73aa11ad897faaffa94f2ba8c8f31d2d07e5da",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiIdentifiedOriginalMeasuredGHPSPowerHeatExitPhysicalTightProperties_of_physical",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSLocallyFiniteSameKernelPowerHeatBrownian",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSLocallyFiniteSameKernelPowerHeatBrownian.lean",
+      "source_sha256": "d91ad081002c078d4fb3fccc93319ec1a8a3053b47d9177efef5a9d0b11b3e07",
+      "log": "logs/RequestProject_Section31_EIGSLocallyFiniteSameKernelPowerHeatBrownian-2026-10-15T010110.414431_0000.log",
+      "log_sha256": "c36c38bda670288a9efcbd274830d7c1a355da613683f5755511cc8ad1b054ee",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_locallyFiniteRuleSystem_same_kernel_power_heat_Brownian",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSLocallyFiniteSameKernelPowerHeatExitPhysical",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSLocallyFiniteSameKernelPowerHeatExitPhysical.lean",
+      "source_sha256": "49dd8e3d8c2d7ac6ecb5108f2c037fa64e88dd512252c1a195738bc622069c77",
+      "log": "logs/RequestProject_Section31_EIGSLocallyFiniteSameKernelPowerHeatExitPhysical-2026-10-15T010146.708631_0000.log",
+      "log_sha256": "1fcb5542c03d42e7a1824253434b64fb84cb12a92d1b58d1b82bbb3073970b60",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_locallyFiniteRuleSystem_same_kernel_power_heat_exit_physical_Brownian",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSLocallyFiniteSameKernelPowerHeatExitPhysicalTight",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSLocallyFiniteSameKernelPowerHeatExitPhysicalTight.lean",
+      "source_sha256": "581a0d889f2081b916b2dd0e0975175e6d51397b95254afb49ee9896bfcd4a4e",
+      "log": "logs/RequestProject_Section31_EIGSLocallyFiniteSameKernelPowerHeatExitPhysicalTight-2026-10-15T010223.294921_0000.log",
+      "log_sha256": "495002407873d6f2fcfb65035f0904eee35ab361df5e2123b3cee8eafeb6275c",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_locallyFiniteRuleSystem_same_kernel_power_heat_exit_physical_tight_Brownian",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSLocallyFiniteNumericalPowerHeatExitPhysicalTight",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSLocallyFiniteNumericalPowerHeatExitPhysicalTight.lean",
+      "source_sha256": "bd1a1185f2332c6e9ef25d2fcdb6264f0ed54241175a381081c8db34466d7599",
+      "log": "logs/RequestProject_Section31_EIGSLocallyFiniteNumericalPowerHeatExitPhysicalTight-2026-10-15T010915.895279_0000.log",
+      "log_sha256": "956fbe4856bba3b31cd7844cd41082dc316d35a742adf3fbc93fb8b50acfd80a",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_locallyFiniteRuleSystem_numerical_same_kernel_power_heat_exit_physical_tight_Brownian",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSUVFlowerRuleGeometry",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSUVFlowerRuleGeometry.lean",
+      "source_sha256": "0a967d5019a7a7e79b2fe8c731117970c2c4b47a8e2d9674e1bd36dfacd37b6d",
+      "log": "logs/RequestProject_Section31_EIGSUVFlowerRuleGeometry-2026-10-15T010702.363477_0000.log",
+      "log_sha256": "2feac827ef176fc3077cf3f3da4384bbafd15a29a452d2dcdf1273f6291099a0",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.uvFlowerPathTail_height",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerPathHead_height",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerRuleGraph_endpoint_labels",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerRuleGraph_has_labeled_endpoint",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerRuleGraph_edges",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerRuleGraph_vertices",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerSystem_loopless",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSUVFlowerUnitFlow",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSUVFlowerUnitFlow.lean",
+      "source_sha256": "d5728137e14283cc7f6f88c2d0b419ba16b75f0f9b367b169afaa44b3ccf2c39",
+      "log": "logs/RequestProject_Section31_EIGSUVFlowerUnitFlow-2026-10-15T011054.162509_0000.log",
+      "log_sha256": "109195f7148dd669dfdf808b14fbffdee0f47213448aa1127ab5dcd38748cace",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.uvFlowerPathTail_eq_point",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerPathHead_eq_point",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerUnitCurrent_isUnitFlow",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerTerminalFlow",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerUnitCurrent_energy",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSUVFlowerRuleSimplicity",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSUVFlowerRuleSimplicity.lean",
+      "source_sha256": "599ea522c519ec055161de6b7cc8945bbfed8d4891c2f271c7d2d06769609e66",
+      "log": "logs/RequestProject_Section31_EIGSUVFlowerRuleSimplicity-2026-10-15T011411.466413_0000.log",
+      "log_sha256": "732adc2c733b28821649f57dfe6c12b36c745727d1f1812bb53598b77855e650",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.uvFlowerRuleGraph_minimum_left_height",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerRuleGraph_minimum_right_height",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerSystem_edgesUnique",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerSystem_plantingNonadjacent",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSUVFlowerFraction",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSUVFlowerFraction.lean",
+      "source_sha256": "155e24c50b01c30a5761233e85eaecf625ee7734f8c940930968bf7c6c0e0c39",
+      "log": "logs/RequestProject_Section31_EIGSUVFlowerFraction-2026-10-15T011155.532595_0000.log",
+      "log_sha256": "e0f06664a39eded1dbdead7822bebbb733563a54e4b1508a045fc384059a0c76",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.uvFlowerPathFraction_point",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerFraction_left",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerFraction_right",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerPathFraction_increment",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerFraction_edge",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSUVFlowerRuleResistance",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSUVFlowerRuleResistance.lean",
+      "source_sha256": "155419a09961a1d3424e53133272d2e89e801d00b1aa28144765faa4305903c9",
+      "log": "logs/RequestProject_Section31_EIGSUVFlowerRuleResistance-2026-10-15T011235.523225_0000.log",
+      "log_sha256": "9c7548b3c45bb82eec4969a72fe2a7e2717fadcbc216b168a079ac39beb0149e",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.uvFlowerTerminalPotential_difference",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerTerminalPotential_energy",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerFlow_energy_lower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerRule_effRes_one",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerRule_effRes",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSUVFlowerMassSpectrum",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSUVFlowerMassSpectrum.lean",
+      "source_sha256": "f1ee0ca9aec275f22f314ad60a455e6d274ce71630360de7bcdbe89f4ab324ef",
+      "log": "logs/RequestProject_Section31_EIGSUVFlowerMassSpectrum-2026-10-15T011452.164129_0000.log",
+      "log_sha256": "614cd9abb87eb65933ec2456da08642141dbe74f64f36f7e203a0b3f45151bf4",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.uvFlowerSystem_massMatrix",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerSystem_massMatrixR",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerSystem_massSpectralRadius",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSUVFlowerDegreeSpectrum",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSUVFlowerDegreeSpectrum.lean",
+      "source_sha256": "fc0487fc179af588067a824f7e6ee6570e6bab03baf3aa4cd2bf93e58b7e038e",
+      "log": "logs/RequestProject_Section31_EIGSUVFlowerDegreeSpectrum-2026-10-15T012053.999033_0000.log",
+      "log_sha256": "3ba8ccb5bd525d5fe3371d807faa537c74a478006eee7f88216cd7e0cf4d2811",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.uvFlowerSystem_endpoint_degree_counts",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerSystem_degreeMatrix",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerSystem_degreeMatrix_primitive",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerSystem_degree_positive_eigenpair",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerSystem_degreeSpectralRadius",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSUVFlowerRuleConnectivity",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSUVFlowerRuleConnectivity.lean",
+      "source_sha256": "b1d4c0dbbf4c5e2883d921f392f80b10af780b930ac9d13abb838d750f43a100",
+      "log": "logs/RequestProject_Section31_EIGSUVFlowerRuleConnectivity-2026-10-15T011648.258516_0000.log",
+      "log_sha256": "57546c774deeec013a92a4f801c3d9fad1627679661aec33007638a16fb7f678",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.uvFlowerPathPoint_height",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerLeftPoint_reachable",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerRightPoint_reachable",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerSystem_connected",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerSystem_distancePositive",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSUVFlowerDistanceSpectrum",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSUVFlowerDistanceSpectrum.lean",
+      "source_sha256": "ba1379437b90612d150525f7be67b9f35327efd0787d53a8017705e9f4dfcb67",
+      "log": "logs/RequestProject_Section31_EIGSUVFlowerDistanceSpectrum-2026-10-15T012323.110179_0000.log",
+      "log_sha256": "a6be0995196d8183acf35844f1cca5f7ec03643408845985f1c76e0f4abb2ddd",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.uvFlowerLeftPrefix_cost",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerRightPrefix_cost",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerMetricPotential_lipschitz",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerSystem_metricLengths",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerSystem_distanceSpectralRadius",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSUVFlowerCanonicalResistance",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSUVFlowerCanonicalResistance.lean",
+      "source_sha256": "a365bb0682b3026128e8798418a14047b5469074b252578065835f92389bfee0",
+      "log": "logs/RequestProject_Section31_EIGSUVFlowerCanonicalResistance-2026-10-15T012425.132921_0000.log",
+      "log_sha256": "3579fc407c0040c4442cf2e6b968f06e3a2cf4c6ef37901df8f104494b5119ea",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.uvFlowerSystem_Psi",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerSystem_resistanceSpectralRadius",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerRuleResistance_ge_one",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerRuleResistance_eq_one_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerSystem_resistanceSpectralRadius_ge_one",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerSystem_mass_times_resistance",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSOriginalFullHeatExitPhysicalTight",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSOriginalFullHeatExitPhysicalTight.lean",
+      "source_sha256": "0643c75c648e11ac49f91470e1dfb5b8d193cdceed8546f3fc936459188184d2",
+      "log": "logs/RequestProject_Section31_EIGSOriginalFullHeatExitPhysicalTight-2026-10-15T012141.183543_0000.log",
+      "log_sha256": "8b128a372191dfdd35bbfe14786b0df40660f9fdc71e8114b9b8431e52b0c01a",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiIdentifiedOriginalMeasuredGHPSFullHeatExitPhysicalTightProperties_of_physical",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSNumericalSameKernelFullHeatEstimates",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSNumericalSameKernelFullHeatEstimates.lean",
+      "source_sha256": "de5e125e5b6e8f039aaa5fc0e8e1e80c690920c9ae1d22a342f23add3c52e575",
+      "log": "logs/RequestProject_Section31_EIGSNumericalSameKernelFullHeatEstimates-2026-10-15T012239.064293_0000.log",
+      "log_sha256": "df306dd876d59f0d97b9dcdae36199725560d6b1d7272977a352cbca2f8ad83e",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiNumericalSameKernelFullHeatEstimatesProperties_of_canonical",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSUVFlowerSameKernelFullHeatPhysicalTight",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSUVFlowerSameKernelFullHeatPhysicalTight.lean",
+      "source_sha256": "03a67fa5895ab59fd3bd4683d4b1663c17f5163623a5b509a841c1130d53eb43",
+      "log": "logs/RequestProject_Section31_EIGSUVFlowerSameKernelFullHeatPhysicalTight-2026-10-15T012510.254379_0000.log",
+      "log_sha256": "904be0cf3e6f67cb40e6534dd34de97be815d10b129007af8affbd63f8fa35b0",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_uvFlowerSystem_same_kernel_full_heat_physical_tight",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSUVFlowerOriginalDegreeDimension",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSUVFlowerOriginalDegreeDimension.lean",
+      "source_sha256": "9f7af4938af8828f81c60364b649b1e9d51fa62a66a08b94e1dc94a0dfe3e656",
+      "log": "logs/RequestProject_Section31_EIGSUVFlowerOriginalDegreeDimension-2026-10-15T012612.255401_0000.log",
+      "log_sha256": "a9f44b8366b9bced89124dca8637d2c4d0a7596bf10a2bcf3fe86a63895c5a38",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.uvFlowerSystem_original_degree_dimension",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSUVFlowerCoveringNumberDimension",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSUVFlowerCoveringNumberDimension.lean",
+      "source_sha256": "5e18e87be4533fe8c1cb5298ff2e5f1d56c2701bacb55755ace1b731da814703",
+      "log": "logs/RequestProject_Section31_EIGSUVFlowerCoveringNumberDimension-2026-10-15T012837.046175_0000.log",
+      "log_sha256": "cf4eb4bc5b83a761722002cc72a851d315218d5e0bc393ceaf1fa4a41d0fe751",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.uvFlowerSystem_native_coveringNumber_dimension",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerSystem_diameter_coveringNumber_dimension",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSUVFlowerHausdorffDimension",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSUVFlowerHausdorffDimension.lean",
+      "source_sha256": "dcf60818d9bcf946829d930172f206e35cd184c71c32c27886432419f2c9cbde",
+      "log": "logs/RequestProject_Section31_EIGSUVFlowerHausdorffDimension-2026-10-15T012916.443971_0000.log",
+      "log_sha256": "549ff7acad70053387d22d294ba98f3e085fb225a2ce7d2796dfc367dddae31b",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.uvFlowerSystem_native_hausdorff_dimension",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerSystem_diameter_hausdorff_dimension",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSUVFlowerWalkDimension",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSUVFlowerWalkDimension.lean",
+      "source_sha256": "6bd5dccd59a87fdb76bdc146d525385cf172dbc1f9f49985ec24974c961a7508",
+      "log": "logs/RequestProject_Section31_EIGSUVFlowerWalkDimension-2026-10-15T012957.125063_0000.log",
+      "log_sha256": "0b5a4f9ba52c8f104668616a876be1929d92cd280b8c37f65cfdc2effdc9408a",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.uvFlowerSystem_admissible_walk_dimension_limit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.RWDLActualPaper",
+      "source": "section3-diffusion/RequestProject/RWDLActualPaper.lean",
+      "source_sha256": "d61980ef514532a88cb0bcb06f0fb2f61a4ce7a209cc7dda4b87cb9726804bef",
+      "log": "logs/RequestProject_RWDLActualPaper-2026-10-15T015748.065293_0000.log",
+      "log_sha256": "cda388fda6523b2c44ba6a28751cacd06ab9788fb5d635e620e975ef9391819f",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.RuleSystem.distance_positive_normalized_eigenpair_exists_unique",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.RuleSystem.distance_positive_normalized_iterate_limit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiSimpleGraph_terminal_resistance_canonical_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiSimpleGraph_terminal_resistance_dimension_limit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiSimpleGraph_terminal_resistance_original_diameter_limit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiSimpleGraph_fixed_pair_resistance_dimension_limit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiSimpleGraph_fixed_pair_resistanceDimension_eq",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiSimpleGraph_admissible_walk_dimension_limit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiSimpleGraph_commute_eq_mass_mul_resistance",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiSimpleGraph_terminal_commute_canonical_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiSimpleGraph_actual_Einstein_relation_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiSimpleGraph_original_diameter_Einstein_relation_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.EIGSData.distanceSpectralRadius_sq_le_mass_mul_resistance",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiActualRecurrent_iff_resistanceSpectralRadius_gt_one",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiActualRecurrent_iff_globalSpectralFormula_lt_two",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiCompletion_coveringNumber_dimension_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiDiameterCompletion_coveringNumber_dimension_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiCompletion_hausdorff_dimension_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiDiameterCompletion_hausdorff_dimension_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiIdentifiedOriginalMeasuredGHPSPaperClock_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiOriginalDiameterSubGaussianExitTail_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponentialHoldingJumpIndex_poisson_process",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponential_poisson_increments_iIndepFun",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponential_poisson_finite_increment_joint_law",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponentialHoldingJumpIndex_scaled_poisson_process",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.finiteGraphPoissonCount_independent_walk",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.finiteGraphPoissonCount_scaled_process_laws",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.PoissonClock.exponentialHoldingPhysicalJ1Sample_is_poissonized_walk",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiOriginalExponentialPhysicalJ1Tightness_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiIdentifiedNormalizedTrueExitGlobalRestriction_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiIdentifiedMeanExitGlobalRestriction_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiTypicalBallMassUpperAllRadii_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiContinuousKernelGeneralLower_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiResistanceForm_same_closed_Hunt_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiSameNativeOriginalDegreeCorrectedFullHeatPhysical_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiIdentifiedOriginalMeasuredGHPSFullHeatExitPhysicalTightProperties_of_physical",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_twoColour_original_degree_corrected_same_kernel_Brownian_full_heat_physical",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.locallyFiniteRuleSystem_table_geometric_dimensions",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.locallyFiniteRuleSystem_table_walk_dimension",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_locallyFiniteRuleSystem_numerical_same_kernel_power_heat_exit_physical_tight_Brownian",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.flowerSystem_original_degree_dimension",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.flowerSystem_native_coveringNumber_dimension",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.flowerSystem_diameter_hausdorff_dimension",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.flowerSystem_admissible_walk_dimension_limit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_flowerSystem_sameKernel_fullHeat_exit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerSystem_original_degree_dimension",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerSystem_native_coveringNumber_dimension",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerSystem_diameter_hausdorff_dimension",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlowerSystem_admissible_walk_dimension_limit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_uvFlowerSystem_same_kernel_full_heat_physical_tight",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Cluster.nested_cluster_resistance_process",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Cluster.nested_reduced_full_process_law",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Cluster.nested_cluster_full_network_law",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Cluster.nested_network_original_observables_p",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Cluster.nested_network_logistic_product_exact_rational",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Cluster.nested_network_no_deterministic_limit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Cluster.nested_critical_cluster_no_deterministic_limit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "Reduced.no_deterministic_limit",
           "axioms": [
             "propext",
             "Classical.choice",

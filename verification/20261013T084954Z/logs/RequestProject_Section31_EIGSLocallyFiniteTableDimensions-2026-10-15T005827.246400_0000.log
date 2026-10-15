@@ -1,0 +1,2 @@
+'EIGS.locallyFiniteRuleSystem_table_geometric_dimensions' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.locallyFiniteRuleSystem_table_walk_dimension' depends on axioms: [propext, Classical.choice, Quot.sound]

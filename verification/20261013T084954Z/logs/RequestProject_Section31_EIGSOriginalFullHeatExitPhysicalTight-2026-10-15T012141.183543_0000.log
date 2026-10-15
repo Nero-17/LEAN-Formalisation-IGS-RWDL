@@ -1,0 +1,3 @@
+'EIGS.xiIdentifiedOriginalMeasuredGHPSFullHeatExitPhysicalTightProperties_of_physical' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

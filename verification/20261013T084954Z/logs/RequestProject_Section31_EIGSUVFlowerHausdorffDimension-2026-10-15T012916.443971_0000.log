@@ -1,0 +1,2 @@
+'EIGS.uvFlowerSystem_native_hausdorff_dimension' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerSystem_diameter_hausdorff_dimension' depends on axioms: [propext, Classical.choice, Quot.sound]

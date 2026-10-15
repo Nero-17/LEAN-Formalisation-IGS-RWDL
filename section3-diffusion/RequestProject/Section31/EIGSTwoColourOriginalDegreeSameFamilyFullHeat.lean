@@ -14,8 +14,8 @@ open scoped Classical NNReal
 noncomputable section
 variable {State : Type*} [MetricSpace State] [CompactSpace State]
     [MeasurableSpace State] [BorelSpace State]
-local instance : MeasurableSpace C(ℝ≥0, State) := borel _
-local instance : BorelSpace C(ℝ≥0, State) := ⟨rfl⟩
+local instance twoColourOriginalDegreeGlobalPathMeasurable : MeasurableSpace C(ℝ≥0, State) := borel _
+local instance twoColourOriginalDegreeGlobalPathBorel : BorelSpace C(ℝ≥0, State) := ⟨rfl⟩
 
 def twoColourOriginalDegreeDimension : ℝ :=
   Filter.limsup (fun value : ℝ =>

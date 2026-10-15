@@ -1,0 +1,6 @@
+'EIGS.xiIdentifiedTwoColourOriginalDegreeCorrectedPhysicalProperties_of_physical' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_twoColour_original_degree_corrected_same_kernel_Brownian_full_heat_physical' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

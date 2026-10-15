@@ -110,7 +110,8 @@ theorem locallyFiniteRuleSystem_diameter_dimensions (canonical : Bool) :
       (lower * diameter ^ (Real.log mass.rate / Real.log (system.distanceSpectralRadius connected)))
       (lowerThreshold / diameter) (by norm_num)
       (mul_pos lowerPositive (Real.rpow_pos_of_pos diameterPositive _))
-      (div_pos lowerThresholdPositive diameterPositive) normalizedLower almostEverywhere
+      (div_pos lowerThresholdPositive diameterPositive) normalizedLower
+      (by simpa only [mul_assoc] using almostEverywhere)
   · exact @compact_hausdorff_dimension_eq_of_ball_mass_bounds parameters.LimitSpace
       normalizedMetric normalizedCompact nativeMeasurable normalizedBorel physicalMeasure
       (xiLimitMeasure_probability system connected parameters.lengths parameters.lengthsPositive
