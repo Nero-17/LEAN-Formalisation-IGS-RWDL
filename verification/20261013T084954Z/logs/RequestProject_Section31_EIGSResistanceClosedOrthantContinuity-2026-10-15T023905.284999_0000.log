@@ -1,0 +1,5 @@
+'EIGS.ThomsonData.eval_regularization_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.RenormMap.apply_regularization_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.effRes_regularization_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.RuleSystem.Psi_regularization_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.EIGSData.Psi_regularization_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]

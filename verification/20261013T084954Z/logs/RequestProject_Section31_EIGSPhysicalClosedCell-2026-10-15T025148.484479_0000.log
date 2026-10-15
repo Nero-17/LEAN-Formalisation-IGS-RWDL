@@ -1,0 +1,3 @@
+'EIGS.xiPhysicalClosedCell_isClosed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiAddressLimit_mem_physicalClosedCell' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiPhysicalClosedCell_mass_ge_cylinder' depends on axioms: [propext, Classical.choice, Quot.sound]

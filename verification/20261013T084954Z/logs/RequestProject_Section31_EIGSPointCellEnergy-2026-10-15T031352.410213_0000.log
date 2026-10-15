@@ -1,0 +1,4 @@
+'EIGS.xiUnion_edge_square_energy_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiPhysicalClosedCell_point_terminal_energy_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,11 @@
+--- a/paper-corrections/AIM.corrected.tex
++++ b/paper-corrections/AIM.corrected.tex
+@@ -3163,7 +3163,7 @@
+ where the supremum is over all levels $m$, all level-$m$ cells $\Lambda$, and all $z\in\mathscr V\cap\Lambda$ satisfying $h_{\Lambda}(z)\le L$.
+ 
+ If $L=0$, then $z$ is one of the two terminals of $\Lambda$.
+-The resistance between the two terminals of a level-$m$ cell of colour $i$ is $\rho(\Psi)^{-m}[\mathbf v]_i$.
++By Rayleigh monotonicity, the resistance in the full network between the two terminals of a level-$m$ cell of colour $i$ is at most $\rho(\Psi)^{-m}[\mathbf v]_i$.
+ Thus
+ \[
+ A_0\le \max_{i\in[K]}[\mathbf v]_i<\infty.

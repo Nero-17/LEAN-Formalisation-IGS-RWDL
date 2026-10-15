@@ -1,0 +1,5 @@
+'EIGS.independent_word_block_coordinates_injective' depends on axioms: [propext, Quot.sound]
+'EIGS.independent_word_blocks_joint_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.independent_word_block_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.independent_word_blocks_independent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.ae_eventually_independent_word_block_success' depends on axioms: [propext, Classical.choice, Quot.sound]

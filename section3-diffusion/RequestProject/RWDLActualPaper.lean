@@ -1,4 +1,19 @@
 import RequestProject.NonlinearPerronAudit
+import RequestProject.Section2ExtendedResistance
+import RequestProject.Section31.EIGSResistanceClosedOrthantContinuity
+import RequestProject.Section31.EIGSUniformGeometricBounds
+import RequestProject.Section31.EIGSBasicPropertiesOfRules
+import RequestProject.Section31.EIGSUniformBirthDegreeGrowth
+import RequestProject.Section31.EIGSLocalDimensions
+import RequestProject.Section31.EIGSFiniteBornNoAtomsOfRules
+import RequestProject.Section31.EIGSPhysicalClosedCell
+import RequestProject.Section31.EIGSPhysicalClosedCellBoundsOfRules
+import RequestProject.Section31.EIGSPointBoundaryResistance
+import RequestProject.Section31.EIGSContinuousProjectionPythagoras
+import RequestProject.Section31.IndependentWordBlocks
+import RequestProject.Section31.EIGSAddressMeasureUniqueness
+import RequestProject.Section31.RenewalPhaseEndpointCost
+import RequestProject.Outlook.FourColourMeanSpectrum
 import RequestProject.Section2MesoscopicVolume
 import RequestProject.Section2MesoscopicResistance
 import RequestProject.Section2FixedRadiusResistance
@@ -87,6 +102,30 @@ their target asymptotic conclusions as assumptions. -/
 #print axioms EIGS.RuleSystem.distance_positive_normalized_eigenpair_exists_unique
 #print axioms EIGS.RuleSystem.distance_positive_normalized_iterate_limit
 
+/- Definition psi_Psi on its full finite-network domain, including self
+resistance and disconnected terminals; the closed-orthant regularization
+is the same effective-resistance function, not an unspecified extension. -/
+#print axioms EIGS.Network.flow_nonempty_iff_reachable
+#print axioms EIGS.Network.extendedEffRes_self
+#print axioms EIGS.Network.extendedEffRes_eq_ofReal
+#print axioms EIGS.Network.extendedEffRes_eq_top_iff_not_reachable
+#print axioms EIGS.RuleSystem.extendedEffRes_eq_toRenormMap
+#print axioms EIGS.EIGSData.Psi_regularization_tendsto
+
+/- basic_prop: uniform constants across every initial colour and every
+generation, including the finite prefix and the original graph diameter. -/
+#print axioms EIGS.xiReplanted_edge_card_spectral_bounds_all_generations
+#print axioms EIGS.xiReplanted_vertex_card_spectral_bounds_all_generations
+#print axioms EIGS.xiSimpleGraph_terminal_distance_spectral_bounds_all_generations
+#print axioms EIGS.xiSimpleGraph_terminal_distance_le_originalDiameter
+#print axioms EIGS.xiReplanted_distance_diameter_spectral_bounds_all_generations
+#print axioms EIGS.xiSimpleGraph_uniform_birth_degree_spectral_growth
+
+/- Fixed-radius local dimensions are actual simple-graph conclusions.
+These previously verified consumers now occur in the public integration. -/
+#print axioms EIGS.xiSimpleGraph_fixed_radius_local_mass_dimension_limit
+#print axioms EIGS.xiSimpleGraph_fixed_radius_local_resistance_dimension_limit
+
 /- Section2: Reff-asymp-rho and resistance_dimension_formula, including
 every fixed distinct pair at any coarse generation (paper1356-1360). -/
 #print axioms EIGS.xiSimpleGraph_terminal_resistance_canonical_bounds
@@ -118,6 +157,15 @@ GH_limit_metric, GHP_convergence and sec31_ghps. -/
 #print axioms EIGS.xiDiameterCompletion_hausdorff_dimension_of_rules
 #print axioms EIGS.exists_xiIdentifiedOriginalMeasuredGHPSPaperClock_of_rules
 
+/- The skeleton is null for the actual limiting measure. Physical cells
+are closures of actual descendant vertices; their equality with cylinder
+images and their endpoint-only overlap give the complete mass identity. -/
+#print axioms EIGS.xiFiniteBorn_singleton_mass_zero_of_rules
+#print axioms EIGS.xiFiniteBornSkeleton_mass_zero_of_rules
+#print axioms EIGS.xiPhysicalClosedCell_mass_ge_cylinder
+#print axioms EIGS.xiPhysicalClosedCell_mass_eq_cylinder_of_rules
+#print axioms EIGS.exists_xiPhysicalClosedCell_mass_bounds_of_rules
+
 /- Section3: sec31_one_step_stay, discrete_eld_tightness, genuine whole
 Poisson clock (all ordered increments, not merely one-time marginals),
 actual independent graph-walk product, literal physical weak laws/tightness. -/
@@ -143,6 +191,8 @@ general-lower uses a continuous time-dependent radius. -/
 original degree statistics, diffusion/Brownian heat and spectral limits,
 same kernel/globalLaws/true exits/physical laws, and same-ambient tightness. -/
 #print axioms EIGS.exists_xiResistanceForm_same_closed_Hunt_of_rules
+#print axioms EIGS.exists_xiPhysicalClosedCell_point_boundary_resistance_bound
+#print axioms EIGS.xiContinuousHarmonicProjection_energy_pythagoras
 #print axioms EIGS.exists_xiSameNativeOriginalDegreeCorrectedFullHeatPhysical_of_rules
 #print axioms EIGS.xiIdentifiedOriginalMeasuredGHPSFullHeatExitPhysicalTightProperties_of_physical
 
@@ -192,3 +242,23 @@ arithmetic only. These checks do not assert conjectural random diffusion. -/
 #check Outlook.FourColourRuleAudit.meanLiveMass_eq_EM
 #check Outlook.FourColourRuleAudit.meanLiveBoundary_eq_correctedCriticalEN
 #check Cluster.connected_actual_terminal_expectations_equal
+
+/- These are spectra and rigorous numerical enclosures of actual expected
+matrices. Their logarithmic ratio is not a random-geometric dimension. -/
+#print axioms Outlook.FourColourMeanSpectrum.actual_mean_mass_spectralRadius
+#print axioms Outlook.FourColourMeanSpectrum.actual_mean_mass_spectralRadius_approx
+#print axioms Outlook.FourColourMeanSpectrum.actual_mean_boundary_spectralRadius
+#print axioms Outlook.FourColourMeanSpectrum.actual_mean_logarithmic_ratios_equal
+#print axioms Outlook.FourColourMeanSpectrum.actual_mean_logarithmic_ratio_enclosure
+#print axioms Outlook.FourColourMeanSpectrum.actual_mean_logarithmic_ratio_approx
+
+/- Verified probability tools for the still unfinished DHL renewal-volume
+claim. No physical volume fluctuation is inferred from these tools alone. -/
+#print axioms EIGS.independent_trials_failure_bound
+#print axioms EIGS.ae_eventually_independent_renewal_phase_success
+#print axioms EIGS.independent_word_blocks_joint_law
+#print axioms EIGS.xiAddressMeasure_eq_of_marginals
+#print axioms EIGS.independent_word_blocks_independent
+#print axioms EIGS.ae_eventually_independent_word_block_success
+#print axioms EIGS.renewal_word_endpoint_bounds
+#print axioms EIGS.eventually_renewal_endpoint_power_cost

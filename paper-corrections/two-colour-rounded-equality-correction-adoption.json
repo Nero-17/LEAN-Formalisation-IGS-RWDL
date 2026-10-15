@@ -1,0 +1,7 @@
+{
+  "applied_utc": "2026-10-15T03:33:36.109083+00:00",
+  "before_sha256": "894737376461407ab1d97a8e0bac4d53f93f61117e33ec9473b010bd7f8ffd53",
+  "after_sha256": "52826c4ca2fc15190271973d6e5bc8d13f90a906f30f967445ed7ff357879065",
+  "scope": "Keep the exact nonlinear resistance spectral radius in an equality; only the final 0.14552 is an approximation.",
+  "evidence": "Accepted actual two-colour spectral certificate places the exact rate strictly above 1.1061; no exact equality to the rounded decimal is asserted."
+}

@@ -1,0 +1,4 @@
+'EIGS.dhlEdgeOfWord_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.dhlEdgeOfWord_surjective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.dhlAddressOfLetters_coordinate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.measurable_dhlAddressOfLetters' depends on axioms: [propext, Classical.choice, Quot.sound]

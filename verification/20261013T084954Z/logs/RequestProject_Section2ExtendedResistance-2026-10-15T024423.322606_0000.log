@@ -1,0 +1,16 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section2-random-walks\RequestProject\Section2ExtendedResistance.lean:28:16: warning: This simp argument is unused:
+  distinct
+
+Hint: Omit it from the simp argument list.
+  simp_all [d̵i̵s̵t̵i̵n̵c̵t̵,̵ ̵Ne.symm distinct]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'EIGS.Network.flow_nonempty_of_reachable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.reachable_of_flow_nonempty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.flow_nonempty_iff_reachable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.extendedEffRes_self' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.extendedEffRes_eq_iInf' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.extendedEffRes_eq_ofReal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.extendedEffRes_eq_top_iff_not_reachable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.extendedEffRes_ne_top_iff_reachable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.RuleSystem.extendedEffRes_eq_toRenormMap' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,11 @@
+--- a/paper-corrections/AIM.corrected.tex
++++ b/paper-corrections/AIM.corrected.tex
+@@ -1477,7 +1477,7 @@
+ =
+ \frac{\log \rho(\Psi)}{\log \rho_{\min}(\mathcal D)}
+ =
+-\frac{\log 1.1061}{\log 2}
++\frac{\log\rho(\Psi)}{\log 2}
+ \approx 0.14552.
+ \]
+ \end{example}

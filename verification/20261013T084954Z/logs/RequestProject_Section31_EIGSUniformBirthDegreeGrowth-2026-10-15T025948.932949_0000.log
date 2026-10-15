@@ -1,0 +1,3 @@
+'EIGS.xi_degree_eigenweight_comparison' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xi_degree_eigenweight_lower_at_every_vertex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSimpleGraph_uniform_birth_degree_spectral_growth' depends on axioms: [propext, Classical.choice, Quot.sound]

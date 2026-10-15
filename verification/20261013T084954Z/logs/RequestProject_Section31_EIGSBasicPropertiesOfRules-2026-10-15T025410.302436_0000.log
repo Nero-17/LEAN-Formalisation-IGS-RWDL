@@ -1,0 +1,14 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSBasicPropertiesOfRules.lean:63:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+'EIGS.xiReplanted_edge_card_spectral_bounds_all_generations' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiReplanted_vertex_card_spectral_bounds_all_generations' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiSimpleGraph_terminal_distance_spectral_bounds_all_generations' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiSimpleGraph_terminal_distance_le_originalDiameter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiReplanted_distance_diameter_spectral_bounds_all_generations' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

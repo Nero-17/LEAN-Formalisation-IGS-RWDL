@@ -1,0 +1,11 @@
+{
+  "applied_utc": "2026-10-15T02:42:09.219193+00:00",
+  "authorization": "Existing goal requires preserving original conjecture status; no conjecture is promoted or removed.",
+  "manuscript": "work\\IGS-RWDL-LEAN\\paper-corrections\\AIM.corrected.tex",
+  "patch": "work\\current-round\\section4-examples-status-correction-20261015.patch",
+  "before_sha256": "ff993f6155a76699090ddde089b7b6e7f5c5c73daef24b5ac9713eab9f33dce4",
+  "after_sha256": "50debefcb3117414795a4bf77e5b994d3241558c5d285fd497daeb08eb231685",
+  "hunks": 3,
+  "line_ending_preserved": true,
+  "scope": "Three conjectural table entries starred; introduction distinguishes proved exponent positivity from conjectural natural geometry; formal matrix ratio described accurately."
+}

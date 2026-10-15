@@ -1,0 +1,3 @@
+'EIGS.xiVertexAncestorEdge_forward_none' depends on axioms: [propext, Quot.sound]
+'EIGS.xiDescendant_endpoints_coarseCellVertex' depends on axioms: [propext, Quot.sound]
+'EIGS.xiDistinctCoarseCells_common_endpoint_is_boundary' depends on axioms: [propext, Quot.sound]

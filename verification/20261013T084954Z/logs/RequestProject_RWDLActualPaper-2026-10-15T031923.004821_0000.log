@@ -1,0 +1,257 @@
+'EIGS.RuleSystem.distance_positive_normalized_eigenpair_exists_unique' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.RuleSystem.distance_positive_normalized_iterate_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.flow_nonempty_iff_reachable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.extendedEffRes_self' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.extendedEffRes_eq_ofReal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.Network.extendedEffRes_eq_top_iff_not_reachable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.RuleSystem.extendedEffRes_eq_toRenormMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.EIGSData.Psi_regularization_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiReplanted_edge_card_spectral_bounds_all_generations' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiReplanted_vertex_card_spectral_bounds_all_generations' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiSimpleGraph_terminal_distance_spectral_bounds_all_generations' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiSimpleGraph_terminal_distance_le_originalDiameter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiReplanted_distance_diameter_spectral_bounds_all_generations' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiSimpleGraph_uniform_birth_degree_spectral_growth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSimpleGraph_fixed_radius_local_mass_dimension_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSimpleGraph_fixed_radius_local_resistance_dimension_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiSimpleGraph_terminal_resistance_canonical_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSimpleGraph_terminal_resistance_dimension_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSimpleGraph_terminal_resistance_original_diameter_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiSimpleGraph_fixed_pair_resistance_dimension_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSimpleGraph_fixed_pair_resistanceDimension_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+EIGS.xiSimpleGraph_mesoscopic_ball_birth_spectral_volume {K : ℕ} (system : EIGS.EIGSData K)
+  (rule_connected : ∀ (colour : Fin K), (EIGS.ruleSG system colour).Connected)
+  (rules_loopless : ∀ (colour : Fin K), (system.ruleNetwork colour).Loopless)
+  (rules_unique : ∀ (colour : Fin K), (system.ruleNetwork colour).EdgesUnique)
+  (planting_nonadjacent :
+    ∀ (colour : Fin K), ¬(EIGS.ruleSG system colour).Adj (system.plantPlus colour) (system.plantMinus colour))
+  (distance_positive :
+    ∀ (ruleColour edgeColour : Fin K),
+      ¬((system.ruleNetwork ruleColour).withoutColour edgeColour).Reachable (system.plantPlus ruleColour)
+          (system.plantMinus ruleColour))
+  (primitive_degree : (EIGS.degreeMatrix system).IsPrimitive) (radius_lower radius_upper : ℝ)
+  (radius_lower_positive : 0 < radius_lower) (radius_upper_positive : 0 < radius_upper) :
+  ∃ buffer,
+    ∀ (initial_level : ℕ) (vertex : EIGS.XiVtx system initial_level),
+      ∃ lower upper,
+        0 < lower ∧
+          0 < upper ∧
+            ∀ (age depth : ℕ) (radius : ℝ),
+              buffer ≤ age →
+                1 < radius →
+                  radius_lower * system.distanceSpectralRadius rule_connected ^ depth ≤ radius →
+                    radius ≤ radius_upper * system.distanceSpectralRadius rule_connected ^ depth →
+                      lower * EIGS.finiteRealMatrixSpectralRadius (EIGS.degreeMatrix system) ^ age *
+                            EIGS.realMatrixSpectralRadius (EIGS.massMatrixR system.toRuleData) ^ depth ≤
+                          ↑(EIGS.finiteGraphBall (EIGS.XiSimpleGraph system (initial_level + (age + depth)))
+                                (EIGS.xiForward system initial_level (age + depth) vertex) radius).card ∧
+                        ↑(EIGS.finiteGraphBall (EIGS.XiSimpleGraph system (initial_level + (age + depth)))
+                                (EIGS.xiForward system initial_level (age + depth) vertex) radius).card ≤
+                          upper * EIGS.finiteRealMatrixSpectralRadius (EIGS.degreeMatrix system) ^ age *
+                            EIGS.realMatrixSpectralRadius (EIGS.massMatrixR system.toRuleData) ^ depth
+EIGS.xiSimpleGraph_mesoscopic_ball_birth_spectral_resistance {K : ℕ} (system : EIGS.EIGSData K)
+  (rule_connected : ∀ (colour : Fin K), (EIGS.ruleSG system colour).Connected)
+  (rules_loopless : ∀ (colour : Fin K), (system.ruleNetwork colour).Loopless)
+  (rules_unique : ∀ (colour : Fin K), (system.ruleNetwork colour).EdgesUnique)
+  (planting_nonadjacent :
+    ∀ (colour : Fin K), ¬(EIGS.ruleSG system colour).Adj (system.plantPlus colour) (system.plantMinus colour))
+  (distance_positive :
+    ∀ (ruleColour edgeColour : Fin K),
+      ¬((system.ruleNetwork ruleColour).withoutColour edgeColour).Reachable (system.plantPlus ruleColour)
+          (system.plantMinus ruleColour))
+  (primitive_degree : (EIGS.degreeMatrix system).IsPrimitive) (radius_lower radius_upper : ℝ)
+  (radius_lower_positive : 0 < radius_lower) (radius_upper_positive : 0 < radius_upper) :
+  ∃ buffer,
+    ∀ (initial_level : ℕ) (vertex : EIGS.XiVtx system initial_level),
+      ∃ lower upper,
+        0 < lower ∧
+          0 < upper ∧
+            ∀ (age depth : ℕ) (radius : ℝ),
+              buffer ≤ age →
+                buffer ≤ depth →
+                  1 < radius →
+                    radius_lower * system.distanceSpectralRadius rule_connected ^ depth ≤ radius →
+                      radius ≤ radius_upper * system.distanceSpectralRadius rule_connected ^ depth →
+                        (EIGS.finiteGraphBall (EIGS.XiSimpleGraph system (initial_level + (age + depth)))
+                                (EIGS.xiForward system initial_level (age + depth) vertex) radius)ᶜ.Nonempty ∧
+                          lower * system.resistanceSpectralRadius rule_connected distance_positive ^ depth /
+                                EIGS.finiteRealMatrixSpectralRadius (EIGS.degreeMatrix system) ^ age ≤
+                              EIGS.effResToBoundary (EIGS.XiSimpleGraph system (initial_level + (age + depth)))
+                                (EIGS.finiteGraphBall (EIGS.XiSimpleGraph system (initial_level + (age + depth)))
+                                  (EIGS.xiForward system initial_level (age + depth) vertex) radius)
+                                (EIGS.xiForward system initial_level (age + depth) vertex) ∧
+                            EIGS.effResToBoundary (EIGS.XiSimpleGraph system (initial_level + (age + depth)))
+                                (EIGS.finiteGraphBall (EIGS.XiSimpleGraph system (initial_level + (age + depth)))
+                                  (EIGS.xiForward system initial_level (age + depth) vertex) radius)
+                                (EIGS.xiForward system initial_level (age + depth) vertex) ≤
+                              upper * system.resistanceSpectralRadius rule_connected distance_positive ^ depth /
+                                EIGS.finiteRealMatrixSpectralRadius (EIGS.degreeMatrix system) ^ age
+EIGS.xiSimpleGraph_fixed_radius_resistance_spectral_bounds {K : ℕ} (system : EIGS.EIGSData K)
+  (rule_connected : ∀ (colour : Fin K), (EIGS.ruleSG system colour).Connected)
+  (rules_loopless : ∀ (colour : Fin K), (system.ruleNetwork colour).Loopless)
+  (rules_unique : ∀ (colour : Fin K), (system.ruleNetwork colour).EdgesUnique)
+  (planting_nonadjacent :
+    ∀ (colour : Fin K), ¬(EIGS.ruleSG system colour).Adj (system.plantPlus colour) (system.plantMinus colour))
+  (distance_positive :
+    ∀ (ruleColour edgeColour : Fin K),
+      ¬((system.ruleNetwork ruleColour).withoutColour edgeColour).Reachable (system.plantPlus ruleColour)
+          (system.plantMinus ruleColour))
+  (primitive_degree : (EIGS.degreeMatrix system).IsPrimitive) (radius : ℝ) (radius_gt_one : 1 < radius) :
+  ∃ threshold,
+    ∀ (initial_level : ℕ) (vertex : EIGS.XiVtx system initial_level),
+      ∃ lower upper,
+        0 < lower ∧
+          0 < upper ∧
+            ∀ (age : ℕ),
+              threshold ≤ age →
+                (EIGS.finiteGraphBall (EIGS.XiSimpleGraph system (initial_level + age))
+                        (EIGS.xiForward system initial_level age vertex) radius)ᶜ.Nonempty ∧
+                  lower * (EIGS.finiteRealMatrixSpectralRadius (EIGS.degreeMatrix system))⁻¹ ^ age ≤
+                      EIGS.effResToBoundary (EIGS.XiSimpleGraph system (initial_level + age))
+                        (EIGS.finiteGraphBall (EIGS.XiSimpleGraph system (initial_level + age))
+                          (EIGS.xiForward system initial_level age vertex) radius)
+                        (EIGS.xiForward system initial_level age vertex) ∧
+                    EIGS.effResToBoundary (EIGS.XiSimpleGraph system (initial_level + age))
+                        (EIGS.finiteGraphBall (EIGS.XiSimpleGraph system (initial_level + age))
+                          (EIGS.xiForward system initial_level age vertex) radius)
+                        (EIGS.xiForward system initial_level age vertex) ≤
+                      upper * (EIGS.finiteRealMatrixSpectralRadius (EIGS.degreeMatrix system))⁻¹ ^ age
+'EIGS.xiSimpleGraph_admissible_walk_dimension_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSimpleGraph_commute_eq_mass_mul_resistance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSimpleGraph_terminal_commute_canonical_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSimpleGraph_actual_Einstein_relation_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSimpleGraph_original_diameter_Einstein_relation_of_rules' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.EIGSData.distanceSpectralRadius_sq_le_mass_mul_resistance' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiActualRecurrent_iff_resistanceSpectralRadius_gt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiActualRecurrent_iff_globalSpectralFormula_lt_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiCompletion_coveringNumber_dimension_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiDiameterCompletion_coveringNumber_dimension_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiCompletion_hausdorff_dimension_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiDiameterCompletion_hausdorff_dimension_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiIdentifiedOriginalMeasuredGHPSPaperClock_of_rules' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiFiniteBorn_singleton_mass_zero_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiFiniteBornSkeleton_mass_zero_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiPhysicalClosedCell_mass_ge_cylinder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiPhysicalClosedCell_mass_eq_cylinder_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiPhysicalClosedCell_mass_bounds_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiOriginalDiameterSubGaussianExitTail_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.PoissonClock.exponentialHoldingJumpIndex_poisson_process' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.PoissonClock.exponential_poisson_increments_iIndepFun' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.PoissonClock.exponential_poisson_finite_increment_joint_law' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.PoissonClock.exponentialHoldingJumpIndex_scaled_poisson_process' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.PoissonClock.finiteGraphPoissonCount_independent_walk' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.PoissonClock.finiteGraphPoissonCount_scaled_process_laws' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.PoissonClock.exponentialHoldingPhysicalJ1Sample_is_poissonized_walk' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_xiOriginalExponentialPhysicalJ1Tightness_of_rules' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_xiIdentifiedNormalizedTrueExitGlobalRestriction_of_rules' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_xiIdentifiedMeanExitGlobalRestriction_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiTypicalBallMassUpperAllRadii_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiContinuousKernelGeneralLower_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiResistanceForm_same_closed_Hunt_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiPhysicalClosedCell_point_boundary_resistance_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiContinuousHarmonicProjection_energy_pythagoras' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiSameNativeOriginalDegreeCorrectedFullHeatPhysical_of_rules' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.xiIdentifiedOriginalMeasuredGHPSFullHeatExitPhysicalTightProperties_of_physical' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_twoColour_original_degree_corrected_same_kernel_Brownian_full_heat_physical' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.locallyFiniteRuleSystem_table_geometric_dimensions' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.locallyFiniteRuleSystem_table_walk_dimension' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_locallyFiniteRuleSystem_numerical_same_kernel_power_heat_exit_physical_tight_Brownian' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.flowerSystem_original_degree_dimension' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.flowerSystem_native_coveringNumber_dimension' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.flowerSystem_diameter_hausdorff_dimension' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.flowerSystem_admissible_walk_dimension_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_flowerSystem_sameKernel_fullHeat_exit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerSystem_original_degree_dimension' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerSystem_native_coveringNumber_dimension' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerSystem_diameter_hausdorff_dimension' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.uvFlowerSystem_admissible_walk_dimension_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_uvFlowerSystem_same_kernel_full_heat_physical_tight' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Cluster.nested_cluster_resistance_process' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nested_reduced_full_process_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nested_cluster_full_network_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nested_network_original_observables_p' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nested_network_logistic_product_exact_rational' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nested_network_no_deterministic_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cluster.nested_critical_cluster_no_deterministic_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reduced.no_deterministic_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+Outlook.FourColourRuleAudit.ruleSystem (outcomeSelection : Fin 4 → Fin 9) : EIGS.EIGSData 4
+Outlook.FourColourRuleAudit.meanLiveMass_eq_EM : Outlook.FourColourRuleAudit.meanLiveMass = Outlook.EM Reduced.pc
+Outlook.FourColourRuleAudit.meanLiveBoundary_eq_correctedCriticalEN :
+  Outlook.FourColourRuleAudit.meanLiveBoundary = Outlook.correctedCriticalEN
+Cluster.connected_actual_terminal_expectations_equal (n : ℕ) :
+  ∫ (configuration : Cluster.Conf n), ↑(Cluster.net n configuration).sourceTailCount ∂Cluster.connectedMeasure n =
+    ∫ (configuration : Cluster.Conf n), ↑(Cluster.net n configuration).sinkHeadCount ∂Cluster.connectedMeasure n
+'Outlook.FourColourMeanSpectrum.actual_mean_mass_spectralRadius' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourMeanSpectrum.actual_mean_mass_spectralRadius_approx' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourMeanSpectrum.actual_mean_boundary_spectralRadius' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourMeanSpectrum.actual_mean_logarithmic_ratios_equal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourMeanSpectrum.actual_mean_logarithmic_ratio_enclosure' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Outlook.FourColourMeanSpectrum.actual_mean_logarithmic_ratio_approx' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.independent_trials_failure_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.ae_eventually_independent_renewal_phase_success' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.independent_word_blocks_joint_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiAddressMeasure_eq_of_marginals' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.independent_word_blocks_independent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.ae_eventually_independent_word_block_success' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.renewal_word_endpoint_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.eventually_renewal_endpoint_power_cost' depends on axioms: [propext, Classical.choice, Quot.sound]

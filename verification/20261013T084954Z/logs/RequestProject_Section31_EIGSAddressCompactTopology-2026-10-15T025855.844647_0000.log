@@ -1,0 +1,3 @@
+'EIGS.xiCompatibleAddresses_isClosed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.continuous_xiAddressLimit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiAddressCylinder_image_isCompact' depends on axioms: [propext, Classical.choice, Quot.sound]

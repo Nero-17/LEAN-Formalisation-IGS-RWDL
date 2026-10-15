@@ -1,0 +1,7 @@
+{
+  "applied_utc": "2026-10-15T03:02:49.107938+00:00",
+  "before_sha256": "50debefcb3117414795a4bf77e5b994d3241558c5d285fd497daeb08eb231685",
+  "after_sha256": "894737376461407ab1d97a8e0bac4d53f93f61117e33ec9473b010bd7f8ffd53",
+  "scope": "Correct a proof sentence: unrestricted pair resistance is bounded above by cell-restricted resistance. The point-boundary theorem and its bound are unchanged.",
+  "evidence": "A unit four-cycle has adjacent-vertex resistance 1 parallel 3 = 3/4; this explanatory calculation is not claimed as a new Lean counterexample receipt."
+}

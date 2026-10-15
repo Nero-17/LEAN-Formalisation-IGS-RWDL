@@ -1,0 +1,35 @@
+--- a/paper-corrections/AIM.corrected.tex
++++ b/paper-corrections/AIM.corrected.tex
+@@ -773,9 +773,9 @@
+ \hline
+ \hline
+ Percolation cluster DHL
+-& $1.8993$
+-& $1.8993$
+-& $0.8124$
++& *$1.8993$
++& *$1.8993$
++& *$0.8124$
+ & *$2.7117$
+ & *$0.6633$
+ & *$1.4008$
+@@ -800,8 +800,8 @@
+ Moreover, at the critical parameter $p_c=\frac{\sqrt5-1}{2}$, $\alpha(p_c)\ge\log\frac{14-4\sqrt5}{3}>0$ (Proposition~\ref{prop:alpha_pc_positive}).
+ \end{restated}
+ 
+-Numerically $\alpha(p_c)\approx 0.5631$, hence $\dimresis\approx 0.8124>0$.
+-In other words, critical percolation drives the DHL out of the Hambly--Kumagai regime into the Brownian regime: the lattice itself is critical for the resistance flow, while its critical cluster becomes supercritical.
++Numerical estimates suggest $\alpha(p_c)\approx 0.5631$. Under the conjectural natural-metric scaling interpretation, this predicts $\dimresis\approx 0.8124>0$.
++The proved positivity of the resistance growth exponent thus motivates a Brownian-regime conjecture for the critical cluster; it does not by itself construct the natural-metric diffusion or identify its geometric dimensions.
+ Accordingly, we conjecture in Section~\ref{sec:percolation} that the cluster carries a Brownian motion in the natural metric, with typical spectral dimension approximately $1.4008$.
+ This value is strictly larger than the Alexander--Orbach value $\frac43\approx 1.3333$, so the Alexander--Orbach-type conjecture is expected to fail for this hierarchical model.
+ With this, the story returns to where it began.
+@@ -853,7 +853,7 @@
+ \hline
+ Section~\ref{sec:percolation}
+ & None.
+-& Proposition~\ref{prop:dhl_reduction}, as equality of the joint laws of the full resistance sequences; the mean-matrix eigenvalues and the exponent $1.8993$ of Subsection~\ref{subsec:dhl_cluster}; Theorem~\ref{thm:reduced_quenched_exponent} and Proposition~\ref{prop:alpha_pc_positive}; Proposition~\ref{prop:no_deterministic_limit}; Lemmas \ref{lem:annealed_exponent}, \ref{lem:logistic_product} and \ref{lem:uniform_product}. \\
++& Proposition~\ref{prop:dhl_reduction}, as equality of the joint laws of the full resistance sequences; the finite mean-matrix eigenvalues and their formal logarithmic ratio $1.8993$ of Subsection~\ref{subsec:dhl_cluster}; Theorem~\ref{thm:reduced_quenched_exponent} and Proposition~\ref{prop:alpha_pc_positive}; Proposition~\ref{prop:no_deterministic_limit}; Lemmas \ref{lem:annealed_exponent}, \ref{lem:logistic_product} and \ref{lem:uniform_product}. \\
+ \hline
+ \end{tabular}%
+ }
