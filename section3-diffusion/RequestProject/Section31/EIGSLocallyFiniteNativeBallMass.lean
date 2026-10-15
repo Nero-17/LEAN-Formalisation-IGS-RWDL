@@ -1,4 +1,5 @@
 import RequestProject.Section31.EIGSLocallyFiniteUniformDegree
+import RequestProject.Section31.EIGSVertexMassLimits
 import RequestProject.Section31.EIGSBoundedIncidenceBallMassUpper
 import RequestProject.Section31.EIGSAllPointGeometricBallMassLower
 import RequestProject.Section31.EIGSMetricOfRules

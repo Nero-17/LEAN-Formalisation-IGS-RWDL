@@ -1,0 +1,1 @@
+'IGS.Sec31.logarithmic_lower_of_diagonal_power_lower' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -92,7 +92,8 @@ theorem exists_xiBoundedIncidenceGeometricBallMassUpper (system : EIGSData K)
       rate rateGreaterThanOne eigenpair mass (lengths minimumColour) (lengthsPositive minimumColour)
       (fun colour => minimumBound colour (Finset.mem_univ _))
   let radiusFactor := lengths minimumColour / 4
-  have radiusFactorPositive : 0 < radiusFactor := by dsimp only [radiusFactor]; positivity
+  have radiusFactorPositive : 0 < radiusFactor := by
+    exact div_pos (lengthsPositive minimumColour) (by norm_num)
   refine ⟨2 * massConstant * incidenceConstant, radiusFactor, by positivity, radiusFactorPositive, ?_⟩
   intro level point
   have powerPositive : 0 < rate⁻¹ ^ level :=

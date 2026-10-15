@@ -1,0 +1,8 @@
+'EIGS.locallyFiniteTerminalWalk_cost' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.locallyFiniteMetricHeight_edge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.locallyFiniteMetricPotential_lipschitz' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.locallyFiniteRuleSystem_metricLengths' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.locallyFiniteRuleSystem_massMatrixR' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.locallyFiniteRuleSystem_massSpectralRadius' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.locallyFiniteRuleSystem_resistanceSpectralRadius' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.locallyFiniteRuleSystem_distanceSpectralRadius' depends on axioms: [propext, Classical.choice, Quot.sound]

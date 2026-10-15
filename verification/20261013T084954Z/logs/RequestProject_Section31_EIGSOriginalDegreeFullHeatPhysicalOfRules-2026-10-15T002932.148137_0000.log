@@ -1,0 +1,6 @@
+'EIGS.xiIdentifiedOriginalDegreeCorrectedPhysicalProperties_of_physical' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_xiSameNativeOriginalDegreeCorrectedFullHeatPhysical_of_rules' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

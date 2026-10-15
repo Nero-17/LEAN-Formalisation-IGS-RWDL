@@ -1,0 +1,2 @@
+'EIGS.locallyFiniteRuleSystem_native_ball_mass_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.locallyFiniteRuleSystem_native_ball_mass_lower' depends on axioms: [propext, Classical.choice, Quot.sound]

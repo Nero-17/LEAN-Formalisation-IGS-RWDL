@@ -1,0 +1,5 @@
+'EIGS.locallyFiniteRuleSystem_rule_degree_le_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.locallyFiniteRuleSystem_old_degree_vector' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.locallyFiniteRuleSystem_degree_state_sum_le_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.locallyFiniteRuleSystem_incidence_le_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.locallyFiniteRuleSystem_simpleGraph_degree_le_three' depends on axioms: [propext, Classical.choice, Quot.sound]

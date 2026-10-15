@@ -1,13 +1,13 @@
 {
-  "snapshot_utc": "2026-10-15T00:20:46.762903+00:00",
+  "snapshot_utc": "2026-10-15T00:47:53.750108+00:00",
   "round": "20261013T084954Z",
   "compiler": "Lean 4.28.0",
   "mathlib": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
   "shared_dependency_modules": 1084,
   "shared_report": "integration-1084.json",
   "shared_report_sha256": "0ea3ae3656a047eeead489bb36b52eea6c4ecf380593a011e75527ec7e49981b",
-  "independent_whole_file_count": 735,
-  "independent_audit_count": 2025,
+  "independent_whole_file_count": 747,
+  "independent_audit_count": 2059,
   "records": [
     {
       "module": "RequestProject.Section31.EIGSL2EnergyConstants",
@@ -21533,6 +21533,398 @@
       "audits": [
         {
           "declaration": "IGS.Sec31.positiveKernelRealDiagonal_spectral_dimension_of_power_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSLocallyFiniteRuleResistance",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSLocallyFiniteRuleResistance.lean",
+      "source_sha256": "5408088c62d0e3ea252e96538d675406300b5b0f6e8e53a0137acdf7ea1afe01",
+      "log": "logs/RequestProject_Section31_EIGSLocallyFiniteRuleResistance-2026-10-15T004438.975863_0000.log",
+      "log_sha256": "8a51d80d9d404d4fa77af99de60387b419e05627ea9b054159b4c5918f65e343",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.locallyFiniteUnitCurrent_isUnitFlow",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.locallyFiniteUnitCurrent_energy",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.locallyFiniteTerminalPotential_energy",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.locallyFiniteFlow_energy_lower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.locallyFiniteRule_effRes_one",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.locallyFiniteRule_effRes",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.locallyFiniteRuleSystem_Psi",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSPrimitiveOriginalDegreeDimension",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSPrimitiveOriginalDegreeDimension.lean",
+      "source_sha256": "7ffac4f44efdcadc846253fec4ae5b8a039a2302ba53b921347c684a7c027b2b",
+      "log": "logs/RequestProject_Section31_EIGSPrimitiveOriginalDegreeDimension-2026-10-15T002729.685752_0000.log",
+      "log_sha256": "2a1fdb17ec38d104e4279764f5eec87c24efed35bfee46ae0ff42b41dd41d19c",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiStationaryDegree_ladder_logarithmic_limit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiStationaryDegree_full_support_logarithmic_limit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.primitive_rules_original_degree_dimension",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.SameFamilyKernelPowerHeatEstimates",
+      "source": "section3-diffusion/RequestProject/Section31/SameFamilyKernelPowerHeatEstimates.lean",
+      "source_sha256": "c7d0dfc28793aa780cfadf0b28c78a3005b8bd5bb64c4efa9cccd33b264c0238",
+      "log": "logs/RequestProject_Section31_SameFamilyKernelPowerHeatEstimates-2026-10-15T002035.773110_0000.log",
+      "log_sha256": "0f6a413902380ee48c48ccff85d8f16d133519107d3116a267e86d7eaf1b60f0",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.DiscreteMarkov.sameFamilyPowerHeatKernelProperties_of_same_family",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSOriginalMeasuredGHPSHuntPowerHeat",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSOriginalMeasuredGHPSHuntPowerHeat.lean",
+      "source_sha256": "7392ac8af0c963b4a0ba10fef9b9eef186eec4f6d5e141e7c9022aa9283635af",
+      "log": "logs/RequestProject_Section31_EIGSOriginalMeasuredGHPSHuntPowerHeat-2026-10-15T002117.659435_0000.log",
+      "log_sha256": "1d395987a532478ca8fc8c411ce02deec4da90eb9ecf75bb746669eb4e65f251",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiIdentifiedOriginalMeasuredGHPSHuntPowerHeatProperties_of_joint_and_power",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSLocallyFiniteUniformDegree",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSLocallyFiniteUniformDegree.lean",
+      "source_sha256": "09025201ad423caf247afa2a55ab0831037bc9920c3c64932da41f5fe6d95349",
+      "log": "logs/RequestProject_Section31_EIGSLocallyFiniteUniformDegree-2026-10-15T002315.624050_0000.log",
+      "log_sha256": "2ed4c62d18f54d33356adcdecf5fba5a442805a2fb0a36e619d00144b03cf6eb",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.locallyFiniteRuleSystem_rule_degree_le_three",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.locallyFiniteRuleSystem_old_degree_vector",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.locallyFiniteRuleSystem_degree_state_sum_le_three",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.locallyFiniteRuleSystem_incidence_le_three",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.locallyFiniteRuleSystem_simpleGraph_degree_le_three",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSBoundedIncidenceBallMassUpper",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSBoundedIncidenceBallMassUpper.lean",
+      "source_sha256": "90a5b29b82fe8d0e08cb4c3c243f11bea2627a545b0f4bd091b2dac682ef6113",
+      "log": "logs/RequestProject_Section31_EIGSBoundedIncidenceBallMassUpper-2026-10-15T003018.027150_0000.log",
+      "log_sha256": "0b724146866ac61fa82e50b1c05961bd125bdb088bc6648d42797fed0c6a70ea",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.uniform_geometric_ball_mass_upper_all_radii",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiBoundedIncidenceGeometricBallMassUpper",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSFlowerOriginalDegreeDimension",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSFlowerOriginalDegreeDimension.lean",
+      "source_sha256": "2236987c83522dec8b91ba9804849c12399565b1de5e0a26df0018ff4227697c",
+      "log": "logs/RequestProject_Section31_EIGSFlowerOriginalDegreeDimension-2026-10-15T002806.925501_0000.log",
+      "log_sha256": "c5aa7d880cd03625fa2a2e17ec8e533753d6eb29429298a5b74b71e3a602d8e4",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.flowerSystem_original_degree_dimension",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSOriginalDegreeSameFamilyFullHeat",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSOriginalDegreeSameFamilyFullHeat.lean",
+      "source_sha256": "826cc3587686cc38daa800f98cf878b79a07b069e93b1bf1e14e3fd912a5a05c",
+      "log": "logs/RequestProject_Section31_EIGSOriginalDegreeSameFamilyFullHeat-2026-10-15T002848.601484_0000.log",
+      "log_sha256": "1d3242b84e00a3f2eaaff1888c6ff81af9b5650ed05f99d69578234e512f20d4",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.primitive_rules_original_degree_same_family_full_heat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSOriginalDegreeFullHeatPhysicalOfRules",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSOriginalDegreeFullHeatPhysicalOfRules.lean",
+      "source_sha256": "54b99d70ff78d55b464388c8ab4bd65f124f9e4f8f0652fbe7d8b6097914b6de",
+      "log": "logs/RequestProject_Section31_EIGSOriginalDegreeFullHeatPhysicalOfRules-2026-10-15T002932.148137_0000.log",
+      "log_sha256": "c3d5531f8cc9cf3305a785354c6643b9c4466f1e80348fa455bb2e9db3ee86b6",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiIdentifiedOriginalDegreeCorrectedPhysicalProperties_of_physical",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_xiSameNativeOriginalDegreeCorrectedFullHeatPhysical_of_rules",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSLocallyFiniteNativeBallMass",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSLocallyFiniteNativeBallMass.lean",
+      "source_sha256": "659f63c38c1cb1022c45a4de327178b2f9e6ca55c706c991357bfbf68202b899",
+      "log": "logs/RequestProject_Section31_EIGSLocallyFiniteNativeBallMass-2026-10-15T003408.817140_0000.log",
+      "log_sha256": "e1d991c1299740ae786babf9b9c37ee851052d939881a21fd529ce17a3dcd4eb",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.locallyFiniteRuleSystem_native_ball_mass_upper",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.locallyFiniteRuleSystem_native_ball_mass_lower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.LogarithmicHeatLowerOfPurePower",
+      "source": "section3-diffusion/RequestProject/Section31/LogarithmicHeatLowerOfPurePower.lean",
+      "source_sha256": "fb57beacca3845a2482f98297d66cdcf181f0401c64167340eb6dcbfe0d8ec92",
+      "log": "logs/RequestProject_Section31_LogarithmicHeatLowerOfPurePower-2026-10-15T003639.448429_0000.log",
+      "log_sha256": "e31a1763e35ea3fe3e82808c657e80f39d19e775a75484eea53767ae62699277",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.logarithmic_lower_of_diagonal_power_lower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSLocallyFiniteCanonicalRates",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSLocallyFiniteCanonicalRates.lean",
+      "source_sha256": "257e93d384abe5d58c9dcdd05111b4048de903cb4ae76132e99821a2d99768c8",
+      "log": "logs/RequestProject_Section31_EIGSLocallyFiniteCanonicalRates-2026-10-15T004709.949092_0000.log",
+      "log_sha256": "214515d6a43fc2aab700e6fd1cc533f390e7cfa22446b5ee0eaa54da1c2cbbbb",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.locallyFiniteTerminalWalk_cost",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.locallyFiniteMetricHeight_edge",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.locallyFiniteMetricPotential_lipschitz",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.locallyFiniteRuleSystem_metricLengths",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.locallyFiniteRuleSystem_massMatrixR",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.locallyFiniteRuleSystem_massSpectralRadius",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.locallyFiniteRuleSystem_resistanceSpectralRadius",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.locallyFiniteRuleSystem_distanceSpectralRadius",
           "axioms": [
             "propext",
             "Classical.choice",

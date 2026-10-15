@@ -46,7 +46,7 @@ theorem xiStationaryDegree_ladder_logarithmic_limit (system : EIGSData K)
   have inverseIdentity (level : ℕ) :
       (xiPrivateDegreeLadderCoefficient system weights coefficient rate normalizer kind / rate ^ level)⁻¹ =
         (xiPrivateDegreeLadderCoefficient system weights coefficient rate normalizer kind)⁻¹ * rate ^ level := by
-    simp only [inv_div, div_eq_mul_inv, mul_comm]
+    rw [inv_div, div_eq_mul_inv, mul_comm]
   have radiusGrowth : Tendsto (fun level : ℕ =>
       (xiPrivateDegreeLadderCoefficient system weights coefficient rate normalizer kind / rate ^ level)⁻¹)
       atTop atTop := by
@@ -65,7 +65,13 @@ theorem xiStationaryDegree_ladder_logarithmic_limit (system : EIGSData K)
     mass.rate_positive rateGreaterThanOne lowerPositive upperPositive
     (inv_pos.2 coefficientPositive) (inv_pos.2 coefficientPositive) radiusGrowth
     ((eventually_ge_atTop 1).mono (fun level large => countBounds kind level large))
-    (Eventually.of_forall (fun level => by rw [inverseIdentity]; exact ⟨le_rfl, le_rfl⟩))
+    (Eventually.of_forall (fun level => by
+      change (xiPrivateDegreeLadderCoefficient system weights coefficient rate normalizer kind)⁻¹ * rate ^ level ≤
+          (xiPrivateDegreeLadderCoefficient system weights coefficient rate normalizer kind / rate ^ level)⁻¹ ∧
+        (xiPrivateDegreeLadderCoefficient system weights coefficient rate normalizer kind / rate ^ level)⁻¹ ≤
+          (xiPrivateDegreeLadderCoefficient system weights coefficient rate normalizer kind)⁻¹ * rate ^ level
+      rw [inverseIdentity]
+      exact ⟨le_rfl, le_rfl⟩))
   simpa only [Real.log_inv] using actual
 
 theorem xiStationaryDegree_full_support_logarithmic_limit (system : EIGSData K)
@@ -108,8 +114,8 @@ theorem xiStationaryDegree_full_support_logarithmic_limit (system : EIGSData K)
     obtain ⟨vertex, sameValue⟩ := vertex
     cases vertex with
     | inl initial => exact Or.inl ⟨initial, sameValue⟩
-    | inr private =>
-      obtain ⟨level, privateVertex⟩ := private
+    | inr privateBirth =>
+      obtain ⟨level, privateVertex⟩ := privateBirth
       exact Or.inr ⟨(xiPrivateBirthTypeOf system level privateVertex, level),
         (xiStationaryDegree_private_birth_formula system weights coefficient rate normalizer level privateVertex).symm.trans sameValue⟩
   constructor

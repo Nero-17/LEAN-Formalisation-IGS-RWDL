@@ -1,0 +1,81 @@
+--- a/paper-corrections/AIM.corrected.tex
++++ b/paper-corrections/AIM.corrected.tex
+@@ -440,6 +440,17 @@
+ \end{enumerate}
+ \end{definition}
+ 
++\begin{definition}\label{definition:flower-dhl}
++The \emph{$(u,v)$-flower}, for integers $1\le u\le v$ with $u+v\ge3$, is the one-coloured EIGS starting from a single edge whose rule graph consists of two internally vertex-disjoint paths of lengths $u$ and $v$ between the planting vertices.\footnote{This is the convention of H.~D.~Rozenfeld, S.~Havlin and D.~ben-Avraham, \emph{Fractal and transfractal recursive scale-free nets}, New J. Phys. \textbf{9} (2007), 175, Section~2.}
++Thus each edge is replaced by two parallel paths, whose lengths need not be equal.
++Our metric scaling results concern the fractal case $2\le u\le v$.
++
++The \emph{$(u,v)$-diamond hierarchical lattice}, abbreviated \emph{$(u,v)$-DHL}, for integers $u,v\ge2$, is the one-coloured EIGS starting from a single edge whose rule graph consists of $u$ internally vertex-disjoint paths, each of length $v$, between the planting vertices.
++Here $u$ is the number of parallel paths and $v$ is the number of edges in each path.
++In both constructions, all edges have the same colour and the rule graph is given an orientation as in Definition~\ref{definition:EIGS}.
++In particular, the $(v,v)$-flower and the $(2,v)$-DHL have the same underlying undirected substitution rule.
++\end{definition}
++
+ \begin{figure}[ht]
+     \centering
+     \includegraphics[width=0.8\linewidth]{figure/two_colour.png}
+@@ -615,7 +626,7 @@
+ \item \textbf{Subcritical: superconducting} ($\rho(\Psi)<1$, equivalently $\dimresis(\Xi)<0$).
+ The two-terminal effective resistance tends to $0$ while every single edge keeps resistance $1$, so the graph is asymptotically superconducting although no single wire is; after renormalisation, each microscopic edge becomes an insulator.
+ The random walk is transient and, counter-intuitively, typically reaches distant hubs before nearby low-degree targets.
+-The $(u,v)$-flowers with $u>v$ are of this type.
++The $(u,v)$-DHLs with $u>v$ are of this type.
+ \item \textbf{Critical: Hambly--Kumagai} ($\rho(\Psi)=1$).
+ The two-terminal effective resistance converges to a positive constant and no renormalisation is needed, so crossing a cell costs the same order-one resistance at every scale.
+ The random walk is therefore insensitive to distance in the resistance sense.
+@@ -724,7 +735,7 @@
+ DHL
+ & $2$ & $2$ & $0$ & $2$ & $1$ & $2$ & HK \\
+ \hline
+-$(u,v)$-flower
++$(u,v)$-DHL
+ & $1+\frac{\log u}{\log v}$
+ & $1+\frac{\log v}{\log u}$
+ & $1-\frac{\log u}{\log v}$
+@@ -2640,12 +2651,12 @@
+ \begin{figure}[t]
+ \centering
+ \includegraphics[width=0.5\linewidth]{figure/uvDHL.png}
+-\caption{$(u,v)$-flower}
++\caption{$(u,v)$-DHL}
+ \label{fig:uvDHL}
+ \end{figure}
+ 
+ Fix integers $u\ge 2$ and $v\ge 2$.
+-The $(u,v)$-flower is the single-coloured EIGS obtained by replacing every edge by $u$ pairwise edge-disjoint parallel paths, each of graph length $v$, with the planting vertices identified with the two endpoints of the original edge.
++The $(u,v)$-DHL of Definition~\ref{definition:flower-dhl} replaces every edge by $u$ internally vertex-disjoint parallel paths, each of graph length $v$, with the planting vertices identified with the two endpoints of the original edge.
+ See Figure~\ref{fig:uvDHL}.
+ Equivalently, the rule graph consists of $u$ internally disjoint $v$-edge chains between the planting vertices.
+ 
+@@ -3838,19 +3849,19 @@
+     \centering
+     \begin{minipage}[t]{0.32\linewidth}
+         \includegraphics[width=\linewidth]{figure/2-2flower.png}
+-        \caption{$(2,2)$-flower}
++        \caption{$(2,2)$-DHL}
+         \label{fig:2-2flower}
+     \end{minipage}
+ \hfill
+     \begin{minipage}[t]{0.32\linewidth}
+         \includegraphics[width=\linewidth]{figure/3-2flower.png}
+-        \caption{$(3,2)$-flower}
++        \caption{$(3,2)$-DHL}
+         \label{fig:3-2flower}
+     \end{minipage}
+ \hfill
+     \begin{minipage}[t]{0.32\linewidth}
+         \includegraphics[width=\linewidth]{figure/2-3flower.png}
+-        \caption{$(2,3)$-flower}
++        \caption{$(2,3)$-DHL}
+         \label{fig:2-3flower}
+     \end{minipage}
+ \end{figure}
+@@ -4942,4 +4953,4 @@
+ 
+ 
+ 
+-\end{document}+\end{document}

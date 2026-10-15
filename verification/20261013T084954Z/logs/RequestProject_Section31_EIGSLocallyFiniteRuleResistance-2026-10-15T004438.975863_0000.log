@@ -1,0 +1,7 @@
+'EIGS.locallyFiniteUnitCurrent_isUnitFlow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.locallyFiniteUnitCurrent_energy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.locallyFiniteTerminalPotential_energy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.locallyFiniteFlow_energy_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.locallyFiniteRule_effRes_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.locallyFiniteRule_effRes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.locallyFiniteRuleSystem_Psi' depends on axioms: [propext, Classical.choice, Quot.sound]

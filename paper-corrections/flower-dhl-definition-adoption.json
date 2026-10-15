@@ -1,0 +1,16 @@
+{
+  "adopted_by_user": true,
+  "adopted_utc": "2026-10-15T00:46:28.591362+00:00",
+  "before_sha256": "06783166c1b05e8340edd98956319445b5a55056b47c2c9c60b65ce782746792",
+  "after_sha256": "9d7ba016dde114d10f5df34a4de207700230ceced079632802ba7225a0420d15",
+  "manuscript": "paper-corrections/AIM.corrected.tex",
+  "patch": "paper-corrections/flower-dhl-definition.patch",
+  "flower": "Two internally vertex-disjoint paths of lengths u and v; 1 <= u <= v, u+v >=3; metric scaling scope u >=2.",
+  "DHL": "u internally vertex-disjoint paths each of length v; u,v >=2. Parameters explicitly fixed as branching, then length.",
+  "sources": [
+    "https://arxiv.org/abs/cond-mat/0612330",
+    "https://arxiv.org/abs/1709.01181"
+  ],
+  "legacy_lean_scope": "Existing Flower-named Lean declarations construct the DHL model; source hashes and proved mathematical claims preserved. They do not certify unequal-length flowers.",
+  "verification": "Definition placement, balanced definition environments, cross-reference target, table label, worked example, regime sentence and all three figure captions checked. Original figure 3-2flower and 2-3flower visually inspected. No full manuscript compilation claimed."
+}

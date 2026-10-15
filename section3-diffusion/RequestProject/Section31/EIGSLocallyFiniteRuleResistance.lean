@@ -18,21 +18,36 @@ def locallyFiniteUnitCurrent (canonical : Bool) : Fin 6 → ℝ :=
   if canonical then ![1, 3 / 4, 1, 1 / 4, 1 / 4, -(1 / 4)]
   else ![1, 1 / 2, 1 / 2, 1 / 2, 1 / 2, 1]
 
-def locallyFiniteTerminalPotential (canonical : Bool) : Fin 6 → ℝ :=
-  if canonical then ![11 / 4, 7 / 4, 3 / 2, 5 / 4, 1, 0]
-  else ![3, 2, 3 / 2, 3 / 2, 1, 0]
+def locallyFiniteTerminalPotential (canonical : Bool) (vertex : Fin 6) : ℝ :=
+  if canonical then
+    match vertex.val with
+    | 0 => 11 / 4
+    | 1 => 7 / 4
+    | 2 => 3 / 2
+    | 3 => 5 / 4
+    | 4 => 1
+    | _ => 0
+  else
+    match vertex.val with
+    | 0 => 3
+    | 1 => 2
+    | 2 => 3 / 2
+    | 3 => 3 / 2
+    | 4 => 1
+    | _ => 0
 
 theorem locallyFiniteUnitCurrent_isUnitFlow (canonical : Bool) :
     ((locallyFiniteRuleSystem canonical).ruleNetwork 0).IsUnitFlow (0 : Fin 6) (5 : Fin 6)
       (locallyFiniteUnitCurrent canonical) := by
-  intro vertex
-  change (∑ edge : Fin 6, if (locallyFiniteRuleGraph canonical).tail edge = vertex
+  change ∀ vertex : Fin 6, (∑ edge : Fin 6, if (locallyFiniteRuleGraph canonical).tail edge = vertex
       then locallyFiniteUnitCurrent canonical edge else 0) -
     (∑ edge : Fin 6, if (locallyFiniteRuleGraph canonical).head edge = vertex
       then locallyFiniteUnitCurrent canonical edge else 0) =
     if vertex = (0 : Fin 6) then 1 else if vertex = (5 : Fin 6) then -1 else 0
+  intro vertex
+  simp only [Fin.ext_iff]
   cases canonical <;> fin_cases vertex <;>
-    norm_num [locallyFiniteUnitCurrent, Fin.sum_univ_succ]
+    norm_num [locallyFiniteUnitCurrent, locallyFiniteRuleGraph, Fin.sum_univ_succ, Fin.val_natCast, Matrix.cons_val_succ] <;> simp only [Fin.ext_iff] <;> norm_num
 
 def locallyFiniteTerminalFlow (canonical : Bool) :
     ((locallyFiniteRuleSystem canonical).ruleNetwork 0).Flow (0 : Fin 6) (5 : Fin 6) :=

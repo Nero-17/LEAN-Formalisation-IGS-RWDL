@@ -1,0 +1,3 @@
+'EIGS.xiStationaryDegree_ladder_logarithmic_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiStationaryDegree_full_support_logarithmic_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.primitive_rules_original_degree_dimension' depends on axioms: [propext, Classical.choice, Quot.sound]
