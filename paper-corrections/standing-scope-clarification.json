@@ -1,0 +1,10 @@
+{
+  "edited_utc": "2026-10-15T04:26:18.627740+00:00",
+  "reason": "Independent statement-fidelity audit: broad introductory wording must explicitly retain the manuscript standing hypotheses and separately stated worked-example assumptions.",
+  "before_sha256": "a36cfbb506de2f3a670ff01a21c5f1e659715a0f3b92aef1cae36ced07ab9e95",
+  "after_sha256": "247228eaa2b44025c0e064878be45d6825bc7bf99c4f0e48b2ff75ecd98c7cba",
+  "theorem_statements_changed": false,
+  "standing_assumption_changed": false,
+  "scope_not_claimed": "Arbitrary nonprimitive or arbitrary degree-rate-one EIGS are not certified by the two literal locally finite examples.",
+  "crlf_preserved": true
+}

@@ -77,13 +77,21 @@ theorem dhlRetentionWord_preserves_terminal (coarse width : ℕ)
           (fun position : Fin width => dhlRetentionWord (width + 1) head branches position.castSucc) =
             dhlRetentionWord width head (fun position => branches position.castSucc) := by
         funext position
-        exact Fin.lastCases_castSucc position
+        simp only [dhlRetentionWord, Fin.lastCases_castSucc]
       have wordLastEquality : dhlRetentionWord (width + 1) head branches (Fin.last width) =
           dhlEndpointChild
             (dhlRetentionEndpoint width head (fun position => branches position.castSucc))
-            (branches (Fin.last width)) := Fin.lastCases_last
-      simp only [dhlDescendantEdge, wordPrefixEquality, wordLastEquality, dhlRetentionEndpoint]
-      rw [dhlEndpointChild_preserves_vertex]
+            (branches (Fin.last width)) := by
+        simp only [dhlRetentionWord, Fin.lastCases_last]
+      change dhlEdgeEndpoint ((coarse + width) + 1)
+        ⟨dhlDescendantEdge coarse width edge
+            (fun position : Fin width => dhlRetentionWord (width + 1) head branches position.castSucc),
+          dhlRetentionWord (width + 1) head branches (Fin.last width)⟩
+        (dhlEndpointAfterChild
+          (dhlRetentionEndpoint width head (fun position => branches position.castSucc))
+          (branches (Fin.last width))) =
+        Sum.inl (xiForward (flowerSystem 2 2) coarse width (dhlEdgeEndpoint coarse edge head))
+      rw [wordPrefixEquality, wordLastEquality, dhlEndpointChild_preserves_vertex]
       exact congrArg Sum.inl (induction head (fun position => branches position.castSucc))
 
 end

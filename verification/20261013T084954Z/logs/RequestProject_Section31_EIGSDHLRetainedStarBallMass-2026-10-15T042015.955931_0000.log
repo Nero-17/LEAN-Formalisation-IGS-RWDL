@@ -1,0 +1,3 @@
+'EIGS.dhlVertexIncidence_forward' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.dhlVertexIncidence_forward_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_dhlRetainedStarBallMassLower' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -68,6 +68,24 @@ import RequestProject.Cluster.InfiniteConsequencesAudit
 import RequestProject.Cluster.FullProcessLawAudit
 import RequestProject.Outlook.FourColourRuleAudit
 import RequestProject.Outlook.FourColourTerminalAudit
+import RequestProject.Section31.EIGSTwoColourDistanceChoices
+import RequestProject.Section31.EIGSTwoColourDisplayedNumerics
+import RequestProject.Section31.EIGSTwoColourPsiIterationLimits
+import RequestProject.Section31.EIGSActualWalkDimensionLowerBound
+import RequestProject.Section31.EIGSFlowerDHL23WalkContrast
+import RequestProject.Section31.EIGSDHLAddressLetters
+import RequestProject.Section31.EIGSDHLRetentionWords
+import RequestProject.Section31.EIGSDHLRetentionWordMass
+import RequestProject.Section31.EIGSDHLLetterAddressLaw
+import RequestProject.Section31.EIGSDHLRetentionBlockGeometry
+import RequestProject.Section31.EIGSDHLRetainedStarBallMass
+import RequestProject.Section31.EIGSDHLInfiniteGeometricVolumeLower
+import RequestProject.Section31.InfiniteGeometricLogarithmicVolumeLower
+import RequestProject.Section31.LogarithmicVolumeExponentOptimality
+import RequestProject.Section31.CommonAELogarithmicVolumeLower
+import RequestProject.Section31.EIGSDHLLogarithmicVolumeFluctuation
+import RequestProject.Section31.EIGSDHLVolumeLogExponentOptimality
+import RequestProject.Section31.EIGSDHLCommonAEVolumeOptimality
 
 /-!
 # Actual RWDL manuscript integration
@@ -252,8 +270,8 @@ matrices. Their logarithmic ratio is not a random-geometric dimension. -/
 #print axioms Outlook.FourColourMeanSpectrum.actual_mean_logarithmic_ratio_enclosure
 #print axioms Outlook.FourColourMeanSpectrum.actual_mean_logarithmic_ratio_approx
 
-/- Verified probability tools for the still unfinished DHL renewal-volume
-claim. No physical volume fluctuation is inferred from these tools alone. -/
+/- Probability tools used by the actual DHL renewal-volume proof below.
+The actual consumer also proves the coding law and geometric mass bridge. -/
 #print axioms EIGS.independent_trials_failure_bound
 #print axioms EIGS.ae_eventually_independent_renewal_phase_success
 #print axioms EIGS.independent_word_blocks_joint_law
@@ -262,3 +280,54 @@ claim. No physical volume fluctuation is inferred from these tools alone. -/
 #print axioms EIGS.ae_eventually_independent_word_block_success
 #print axioms EIGS.renewal_word_endpoint_bounds
 #print axioms EIGS.eventually_renewal_endpoint_power_cost
+
+/- Completed literal Figure 3 displays and actual mean-exit comparisons.
+The unequal-path flower and equal-length DHL remain distinct models. -/
+#print axioms EIGS.twoColourSystem_actual_distance_choices_nat
+#print axioms EIGS.twoColourSystem_actual_distance_choices_card
+#print axioms EIGS.twoColourSystem_pathSelectionMatrix_from_actual_counts
+#print axioms EIGS.twoColourSystem_actual_distance_choices
+#print axioms EIGS.twoColourResistanceRatio_numeric
+#print axioms EIGS.twoColourSystem_resistanceRate_numeric_precise
+#print axioms EIGS.twoColourSystem_Psi_first_three_iterates
+#print axioms EIGS.twoColourSystem_boxFormula_numeric
+#print axioms EIGS.twoColourSystem_resistanceDimensionFormula_numeric
+#print axioms EIGS.twoColourSystem_Psi_normalized_iteration_limit
+#print axioms EIGS.twoColourSystem_Psi_consecutive_second_coordinate_ratio_limit
+#print axioms EIGS.xiSimpleGraph_admissible_walk_dimension_limit_ge_two
+#print axioms EIGS.uvFlower23_actual_walk_dimension_gt_two
+#print axioms EIGS.dhl23_actual_walk_dimension_eq_two
+
+/- Actual (2,2)-DHL renewal, original address measure, retained stars,
+diameter-normalized ball-volume fluctuation and logarithmic optimality.
+The last theorem supplies a single full-measure set for all positive
+epsilon and every putative upper exponent below one. It asserts volume
+upper-bound sharpness only, not heat-kernel logarithmic optimality. -/
+#print axioms EIGS.dhlEdgeOfWord_injective
+#print axioms EIGS.dhlEdgeOfWord_surjective
+#print axioms EIGS.dhlAddressOfLetters_coordinate
+#print axioms EIGS.measurable_dhlAddressOfLetters
+#print axioms EIGS.dhlEndpointChild_preserves_vertex
+#print axioms EIGS.dhlRetentionWord_branch
+#print axioms EIGS.dhlRetentionWord_injective
+#print axioms EIGS.dhlRetentionWord_preserves_terminal
+#print axioms EIGS.dhlGoodRetentionWords_card
+#print axioms EIGS.dhlUniformWordLaw
+#print axioms EIGS.dhlGoodRetentionWords_mass
+#print axioms EIGS.dhlLetters_ae_eventually_retention_phase
+#print axioms EIGS.dhlUniformWord_map_edge
+#print axioms EIGS.dhlMass_edgeLaw_uniform
+#print axioms EIGS.dhlLetters_coordinate_law
+#print axioms EIGS.dhlLetters_map_addressMeasure
+#print axioms EIGS.dhlAddressOfLetters_block_descendant
+#print axioms EIGS.dhlLetters_retention_block_incident
+#print axioms EIGS.dhlVertexIncidence_forward
+#print axioms EIGS.dhlVertexIncidence_forward_lower
+#print axioms EIGS.exists_dhlRetainedStarBallMassLower
+#print axioms EIGS.exists_dhl_ae_infinite_geometric_volume_lower
+#print axioms IGS.Sec31.infinite_geometric_volume_lower_logarithmic
+#print axioms IGS.Sec31.logarithmic_volume_lower_excludes_smaller_exponent
+#print axioms IGS.Sec31.ae_all_logarithmic_volume_lower
+#print axioms EIGS.dhl_actual_diameter_logarithmic_volume_fluctuation
+#print axioms EIGS.dhl_actual_diameter_volume_log_exponent_optimal
+#print axioms EIGS.dhl_actual_diameter_common_ae_volume_optimality

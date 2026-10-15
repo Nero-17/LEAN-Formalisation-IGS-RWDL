@@ -1,0 +1,3 @@
+'IGS.Sec31.logarithmic_volume_lower_excludes_smaller_exponent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

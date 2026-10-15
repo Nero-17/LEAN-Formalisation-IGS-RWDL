@@ -70,7 +70,14 @@ theorem exists_dhl_ae_infinite_geometric_volume_lower
       exact (renewal_word_endpoint_bounds width trial).2
     have gain : (level : ℝ) ^ (1 - epsilon) ≤ (2 : ℝ) ^ width := powerCost level endpointUpper
     have successShift : independentWordBlock width offset 0 sample ∈ dhlGoodRetentionWords width false := by
-      simpa only [independentWordBlock, offset, zero_mul, zero_add, add_zero] using success
+      have blockEquality : independentWordBlock width offset 0 sample =
+          independentWordBlock width 0 trial.val sample := by
+        funext position
+        change sample (offset + 0 * width + position.val) =
+          sample (0 + trial.val * width + position.val)
+        simp only [offset, zero_mul, zero_add, add_zero]
+      rw [blockEquality]
+      exact success
     have incident := dhlLetters_retention_block_incident sample offset width successShift
     have physicalLower := starLower offset width
       (XiTail (flowerSystem 2 2) offset

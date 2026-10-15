@@ -1,0 +1,10 @@
+{
+  "edited_utc": "2026-10-15T04:34:45.779675+00:00",
+  "before_sha256": "247228eaa2b44025c0e064878be45d6825bc7bf99c4f0e48b2ff75ecd98c7cba",
+  "after_sha256": "faeb933db1ceaf9a68daf796f04493db28e1dd9f29b6bc3f78359d2def2f3637",
+  "purpose": "Replace historical literature-as-conclusion-hypotheses description with the accepted actual-model interface scope and correct repository URL, while distinguishing candidates and conjectures.",
+  "full_repository_build_claimed": false,
+  "new_umbrella_and_common_verification": "Pending; independent current-source whole-file receipts for the described endpoints have passed.",
+  "theorem_statements_changed": false,
+  "crlf_preserved": true
+}

@@ -25,9 +25,13 @@ theorem dhlGoodRetentionWords_measurable (width : ℕ) (head : Bool) :
 
 theorem dhlGoodRetentionWords_card (width : ℕ) (head : Bool) :
     Fintype.card (dhlGoodRetentionWords width head) = 2 ^ width := by
-  rw [← Fintype.card_congr (Equiv.ofInjective (dhlRetentionWord width head)
-    (dhlRetentionWord_injective width head))]
-  simp
+  calc
+    Fintype.card (dhlGoodRetentionWords width head) = Nat.card (dhlGoodRetentionWords width head) :=
+      Nat.card_eq_fintype_card.symm
+    _ = Nat.card (Fin width → Fin 2) :=
+      Nat.card_congr (Equiv.ofInjective (dhlRetentionWord width head)
+        (dhlRetentionWord_injective width head)).symm
+    _ = 2 ^ width := by rw [Nat.card_eq_fintype_card]; simp
 
 theorem dhlUniformWordLaw (width : ℕ) :
     Measure.pi (fun _ : Fin width => dhlLetterLaw) =
@@ -45,8 +49,13 @@ theorem dhlGoodRetentionWords_mass (width : ℕ) (head : Bool) :
   simp only [Fintype.card_pi, Fintype.card_prod, Fintype.card_fin, Finset.prod_const,
     Finset.card_univ, ENNReal.ofReal_pow, ENNReal.ofReal_ofNat, Nat.cast_pow, Nat.cast_mul,
     Nat.cast_ofNat]
-  rw [← div_pow]
-  norm_num
+  have four : (2 : ℝ≥0∞) * 2 = 4 := by norm_num
+  rw [four, ENNReal.ofReal_inv_of_pos (pow_pos (by norm_num : (0 : ℝ) < 2) width),
+    ENNReal.ofReal_pow (by norm_num : (0 : ℝ) ≤ 2), ENNReal.ofReal_ofNat]
+  rw [div_eq_mul_inv, ENNReal.inv_pow, ENNReal.inv_pow, ← mul_pow]
+  congr 1
+  rw [← four, ENNReal.mul_inv (Or.inl (by norm_num)) (Or.inr (by norm_num)),
+    ← mul_assoc, ENNReal.mul_inv_cancel (by norm_num) (by simp), one_mul]
 
 theorem dhlLetters_ae_eventually_retention_phase :
     ∀ᵐ sample ∂Measure.infinitePi (fun _ : ℕ => dhlLetterLaw),

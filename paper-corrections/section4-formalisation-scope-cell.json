@@ -1,0 +1,7 @@
+{
+  "edited_utc": "2026-10-15T04:36:49.307668+00:00",
+  "before_sha256": "faeb933db1ceaf9a68daf796f04493db28e1dd9f29b6bc3f78359d2def2f3637",
+  "after_sha256": "b5628096487efaba69cf1244f1f806bde2b3878f08c2626903919d2ac88dc240",
+  "reason": "Independent documentation review: with the revised Scope and assumptions table header, the old None cell must state the actual original parameter and substitution-law scope.",
+  "theorem_statements_changed": false
+}

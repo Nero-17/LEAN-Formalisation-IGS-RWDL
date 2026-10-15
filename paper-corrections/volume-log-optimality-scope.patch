@@ -1,0 +1,16 @@
+--- AIM.corrected.before-volume-scope.tex
++++ AIM.corrected.tex
+@@ -3681,10 +3681,10 @@
+ \end{proof}
+ 
+ It is worth comparing the logarithmic correction in Theorem~\ref{thm:diffusion-heat} with the argument of Hambly and Kumagai.
+-In \cite{hambly2010diffusion}, the radius is taken strictly below the cell scale, so that the ball avoids the whole skeleton and lies in a single cell; the price is a radius deficit raised to the power $\dimbox(\Xi)$, and the optimised outcome of that route is the logarithmic exponent $\frac{\dimdeg(\Xi)}{\dimdeg(\Xi)-1}$, which equals $2$ for the DHL.
++In \cite{hambly2010diffusion}, the radius is taken strictly below the cell scale, so that the ball avoids the whole skeleton and lies in a single cell; the price is a radius deficit raised to the power $\dimbox(\Xi)$, and the optimised outcome of that route is the logarithmic exponent $\frac{\dimdeg(\Xi)}{\dimdeg(\Xi)-1}$, which equals $2$ for the $(2,2)$-DHL.
+ The proof of Lemma~\ref{lem:heat-volume} instead keeps the radius at the cell scale and covers the ball by the star of a terminal, so the same fluctuation enters only linearly, through the degree $\rho(\mathbf N)^{L_m}$.
+-The resulting exponent $\frac{1}{\dimdeg(\Xi)-1}$ is intrinsic: it is the large-deviation rate of the age of the nearest terminal under $\mu_{\Xi_{\mathrm M}}$.
+-A renewal argument, which we do not pursue here, shows that for the DHL infinitely many scales satisfy a matching lower bound $\mu_{\Xi_{\mathrm M}}(B(x,r))\ge c|\log r|^{1-\varepsilon}r^{2}$ at $\mu_{\Xi_{\mathrm M}}$-almost every point of $\mathscr V^\infty$, because the age of the retained terminal performs a geometric renewal; hence the exponent cannot be improved below $\frac{1}{\dimdeg(\Xi)-1}$.
++The volume upper-bound exponent $\frac{1}{\dimdeg(\Xi)-1}$ reflects the large-deviation rate of the age of the nearest terminal under $\mu_{\Xi_{\mathrm M}}$.
++A renewal argument, which we do not pursue here, shows that for the $(2,2)$-DHL infinitely many scales satisfy a matching lower bound $\mu_{\Xi_{\mathrm M}}(B(x,r))\ge c|\log r|^{1-\varepsilon}r^{2}$ at $\mu_{\Xi_{\mathrm M}}$-almost every point of $\mathscr V^\infty$, because the age of the retained terminal performs a geometric renewal. Consequently, the logarithmic exponent in the volume upper bound of Lemma~\ref{lem:heat-volume} cannot be reduced below $1=\frac{1}{\dimdeg(\Xi)-1}$ for this model. This is a sharpness statement for the volume upper bound; optimality of the logarithmic correction in the heat-kernel lower bound is not asserted.
+ 
+ We define the local diffusion spectral dimension, whenever the limit exists, by
+ \[

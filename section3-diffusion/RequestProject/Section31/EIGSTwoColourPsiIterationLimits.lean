@@ -70,16 +70,22 @@ theorem twoColourSystem_Psi_consecutive_second_coordinate_ratio_limit :
   have coordinate := (tendsto_pi_nhds.mp convergence) (1 : Fin 2)
   have limitPositive : 0 < (amplitude • ((twoColourResistanceRatio + 1)⁻¹ •
       (![twoColourResistanceRatio, 1] : Fin 2 → ℝ))) 1 := by
-    simp only [Pi.smul_apply, smul_eq_mul, Matrix.cons_val_one]
     have denominatorPositive : 0 < twoColourResistanceRatio + 1 := by
       linarith [twoColourResistanceRatio_spec.1]
-    positivity
+    change 0 < amplitude * ((twoColourResistanceRatio + 1)⁻¹ * 1)
+    exact mul_pos amplitudePositive (mul_pos (inv_pos.mpr denominatorPositive) (by norm_num))
   have ratioConvergence := ((coordinate.comp (tendsto_add_atTop_nat 1)).div coordinate limitPositive.ne').mul_const
     twoColourResistanceRate
   simp only [div_self limitPositive.ne', one_mul] at ratioConvergence
   apply ratioConvergence.congr
   intro level
-  dsimp only [Function.comp_apply]
+  change
+    ((twoColourSystem.ruleFamily twoColourSystem_connected).Psi^[level + 1] (fun _ => 1) 1 /
+      twoColourResistanceRate ^ (level + 1)) /
+      ((twoColourSystem.ruleFamily twoColourSystem_connected).Psi^[level] (fun _ => 1) 1 /
+        twoColourResistanceRate ^ level) * twoColourResistanceRate =
+    (twoColourSystem.ruleFamily twoColourSystem_connected).Psi^[level + 1] (fun _ => 1) 1 /
+      (twoColourSystem.ruleFamily twoColourSystem_connected).Psi^[level] (fun _ => 1) 1
   by_cases zero : (twoColourSystem.ruleFamily twoColourSystem_connected).Psi^[level] (fun _ => 1) 1 = 0
   · simp only [zero, zero_div, div_zero, zero_mul]
   · rw [pow_succ]

@@ -26,7 +26,9 @@ theorem dhlUniformWord_map_edge (level : ℕ) :
     ext word
     exact (dhlWordEdgeEquiv level).apply_eq_iff_eq_symm_apply
   rw [fibre]
-  simp only [PMF.toMeasure_apply_singleton, PMF.uniformOfFintype_apply]
+  rw [PMF.toMeasure_apply_singleton _ _ (measurableSet_singleton _),
+    PMF.toMeasure_apply_singleton _ _ (measurableSet_singleton _)]
+  simp only [PMF.uniformOfFintype_apply]
   rw [Fintype.card_congr (dhlWordEdgeEquiv level)]
 
 theorem dhlMass_edgeLaw_uniform (mass : XiMassParameters (flowerSystem 2 2)) (level : ℕ) :
@@ -45,7 +47,10 @@ theorem dhlMass_edgeLaw_uniform (mass : XiMassParameters (flowerSystem 2 2)) (le
     rw [rate, show XiCol (flowerSystem 2 2).toRuleData level edge = (flowerSystem 2 2).initCol from
       Subsingleton.elim _ _]
     field_simp [(mass.amplitude_positive (flowerSystem 2 2).initCol).ne']
-  simp only [XiMassParameters.edgeLaw, PMF.toMeasure_apply_singleton, XiMassParameters.edgePMF_apply,
+  unfold XiMassParameters.edgeLaw
+  rw [PMF.toMeasure_apply_singleton _ _ (measurableSet_singleton _),
+    PMF.toMeasure_apply_singleton _ _ (measurableSet_singleton _)]
+  simp only [XiMassParameters.edgePMF_apply,
     PMF.uniformOfFintype_apply, edgeCard, Nat.cast_pow, Nat.cast_ofNat]
   change ENNReal.ofReal (mass.edgeWeight level edge) = _
   rw [weight]
@@ -57,8 +62,16 @@ theorem dhlLetters_coordinate_law (mass : XiMassParameters (flowerSystem 2 2)) (
   have prefixLaw : (Measure.infinitePi (fun _ : ℕ => dhlLetterLaw)).map
       (fun sample (position : Fin level) => sample position.val) =
         Measure.pi (fun _ : Fin level => dhlLetterLaw) := by
-    simpa only [independentWordBlock, zero_mul, zero_add] using
+    have prefixEquality : independentWordBlock (Alphabet := Fin 2 × Fin 2) level 0 0 =
+        (fun sample (position : Fin level) => sample position.val) := by
+      funext sample position
+      change sample (0 + 0 * level + position.val) = sample position.val
+      simp only [zero_mul, zero_add]
+    have blockLaw : (Measure.infinitePi (fun _ : ℕ => dhlLetterLaw)).map
+        (independentWordBlock level 0 0) = Measure.pi (fun _ : Fin level => dhlLetterLaw) :=
       independent_word_block_law dhlLetterLaw 1 level 0 (0 : Fin 1)
+    rw [prefixEquality] at blockLaw
+    exact blockLaw
   rw [Measure.map_map (measurable_xiAddressEdge (flowerSystem 2 2) level)
     measurable_dhlAddressOfLetters]
   change (Measure.infinitePi (fun _ : ℕ => dhlLetterLaw)).map

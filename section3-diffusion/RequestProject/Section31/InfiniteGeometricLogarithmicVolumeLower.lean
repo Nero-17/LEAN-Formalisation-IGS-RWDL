@@ -45,9 +45,11 @@ theorem infinite_geometric_volume_lower_logarithmic
   have logarithmBound : |Real.log (radiusFactor * (2 : ℝ)⁻¹ ^ level)| ≤
       logarithmConstant * (level : ℝ) := by
     rw [logarithmIdentity]
-    have triangle := abs_sub_le (Real.log radiusFactor) ((level : ℝ) * Real.log 2)
-    rw [abs_mul, abs_of_nonneg (Nat.cast_nonneg level),
-      abs_of_pos (Real.log_pos (by norm_num : (1 : ℝ) < 2))] at triangle
+    have triangle := abs_sub_le (Real.log radiusFactor) 0 ((level : ℝ) * Real.log 2)
+    simp only [sub_zero, zero_sub, abs_neg] at triangle
+    have productNonnegative : 0 ≤ (level : ℝ) * Real.log 2 :=
+      mul_nonneg (Nat.cast_nonneg level) (Real.log_pos (by norm_num : (1 : ℝ) < 2)).le
+    rw [abs_of_nonneg productNonnegative] at triangle
     dsimp only [logarithmConstant]
     nlinarith [abs_nonneg (Real.log radiusFactor)]
   have logarithmPower : |Real.log (radiusFactor * (2 : ℝ)⁻¹ ^ level)| ^ (1 - epsilon) ≤

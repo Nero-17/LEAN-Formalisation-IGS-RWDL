@@ -1,0 +1,11 @@
+--- AIM.corrected.before-standing-scope.tex
++++ AIM.corrected.tex
+@@ -710,7 +710,7 @@
+ \end{restated}
+ 
+ The formula reveals a dichotomy: points of one EIGS fractal may diffuse at two different speeds, and the discrepancy is caused purely by local infinity.
+-The degree dimension is exactly the correction term that unifies the two, and under the convention $\dimdeg(\Xi)=\infty$ in the locally finite case, a unified formula covers all EIGS.
++The degree dimension is exactly the correction term that unifies the two. Under the convention $\dimdeg(\Xi)=\infty$ in the locally finite case, a unified formula covers the EIGSs considered here, under the standing hypotheses or the separate assumptions stated for the worked examples.
+ In the Brownian type the diffusion and Brownian spectral dimensions moreover coincide (Theorem~\ref{thm:brownian-spectral}).
+ Table~\ref{tab:dimensions} collects deterministic and random examples: once $\dimbox(\Xi)$, $\dimdeg(\Xi)$ and $\dimresis(\Xi)$ are known, the walk and spectral dimensions follow automatically, and the last column records the diffusion type of each example.
+ 

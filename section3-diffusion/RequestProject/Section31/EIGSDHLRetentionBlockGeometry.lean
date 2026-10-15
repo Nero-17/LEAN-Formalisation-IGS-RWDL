@@ -15,11 +15,22 @@ theorem dhlAddressOfLetters_block_descendant (sample : ℕ → Fin 2 × Fin 2) (
   induction width with
   | zero => rfl
   | succ width induction =>
+      have wordPrefixEquality :
+          (fun position : Fin width => independentWordBlock (width + 1) offset 0 sample position.castSucc) =
+            independentWordBlock width offset 0 sample := by
+        funext position
+        simp only [independentWordBlock, zero_mul, add_zero, Fin.val_castSucc]
+      have wordLastEquality : independentWordBlock (width + 1) offset 0 sample (Fin.last width) =
+          sample (offset + width) := by
+        simp only [independentWordBlock, zero_mul, add_zero, Fin.val_last]
+      simp only [dhlAddressOfLetters_coordinate] at induction ⊢
       change (⟨dhlEdgeOfWord (offset + width) (fun position => sample position.val),
         sample (offset + width)⟩ : XiEdge (flowerSystem 2 2).toRuleData ((offset + width) + 1)) =
         ⟨dhlDescendantEdge offset width
-            (xiAddressEdge (flowerSystem 2 2) offset (dhlAddressOfLetters sample))
-            (independentWordBlock width offset 0 sample), sample (offset + width)⟩
+            (dhlEdgeOfWord offset (fun position => sample position.val))
+            (fun position : Fin width => independentWordBlock (width + 1) offset 0 sample position.castSucc),
+          independentWordBlock (width + 1) offset 0 sample (Fin.last width)⟩
+      rw [wordPrefixEquality, wordLastEquality]
       exact congrArg (fun parent : XiEdge (flowerSystem 2 2).toRuleData (offset + width) =>
         (⟨parent, sample (offset + width)⟩ : XiEdge (flowerSystem 2 2).toRuleData ((offset + width) + 1))) induction
 

@@ -1,0 +1,5 @@
+'EIGS.twoColourResistanceRatio_numeric' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_resistanceRate_numeric_precise' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_Psi_first_three_iterates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_boxFormula_numeric' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_resistanceDimensionFormula_numeric' depends on axioms: [propext, Classical.choice, Quot.sound]

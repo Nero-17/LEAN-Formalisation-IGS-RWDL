@@ -1,0 +1,11 @@
+--- AIM.corrected.before-section4-scope-cell.tex
++++ AIM.corrected.tex
+@@ -850,7 +850,7 @@
+ & The actual measured GHP/GHPS limit, harmonic extension and closed energy form; the continuous Hunt process and its same-family heat kernel; resistance-form identification; the finite-born and almost-everywhere volume and heat estimates, spectral dimensions and worked examples. For the $(2,2)$-DHL, the matching infinite-scale volume lower bound and optimality of the volume upper-bound logarithmic exponent are also proved. \\
+ \hline
+ Section~\ref{sec:percolation}
+-& None.
++& The actual series/diamond substitution law with $0<p<1$ and its critical-cluster specialisation at $p=p_c$; random-geometric predictions remain conjectural.
+ & Proposition~\ref{prop:dhl_reduction}, as equality of the joint laws of the full resistance sequences; the finite mean-matrix eigenvalues and their formal logarithmic ratio $1.8993$ of Subsection~\ref{subsec:dhl_cluster}; Theorem~\ref{thm:reduced_quenched_exponent} and Proposition~\ref{prop:alpha_pc_positive}; Proposition~\ref{prop:no_deterministic_limit}; Lemmas \ref{lem:annealed_exponent}, \ref{lem:logistic_product} and \ref{lem:uniform_product}. \\
+ \hline
+ \end{tabular}%

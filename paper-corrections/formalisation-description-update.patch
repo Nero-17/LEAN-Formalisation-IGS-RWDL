@@ -1,0 +1,52 @@
+--- AIM.corrected.before-lean-description.tex
++++ AIM.corrected.tex
+@@ -821,18 +821,16 @@
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \subsection{Formalisation by Lean}\label{subsec:formalisation}
+-Sections~\ref{sec:random_walks} to~\ref{sec:percolation} of this paper have been formalised in Lean~4, with proofs produced by Aristotle (Harmonic) \cite{achim2025aristotle}, and the code is available at \url{https://github.com/Nero-17/IGS-RWDL-LEAN}.
+-The projects compile against pinned revisions of \texttt{mathlib} and contain no \texttt{sorry}, no \texttt{admit} and no additional \texttt{axiom}, so every formalised statement depends only on the standard axioms \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}.
+-The scope is summarised in Table~\ref{tab:lean}, and we stress that the formalisation is partial.
+-
+-Results quoted from the literature enter the formalisation as explicit hypotheses.
+-We emphasise for Section~\ref{sec:diffusion} that Lean verifies the implications from these hypotheses to the conclusions, not the hypotheses themselves.
+-The machine-checked guarantee therefore falls short of the unconditional correctness of the mathematical statements exactly by the correctness of the quoted results.
+-Aristotle is used to generate Lean code only.
+-
+-
+-
+-
++The Lean~4 development for Sections~\ref{sec:random_walks}--\ref{sec:percolation} is available at \url{https://github.com/Nero-17/LEAN-Formalisation-IGS-RWDL}.
++The initial development used Aristotle (Harmonic) \cite{achim2025aristotle}; subsequent extensions construct the actual graph, measure, energy and process objects required by the statements below.
++For the verified interfaces, the proofs contain no \texttt{sorry}, no \texttt{admit} and no additional mathematical \texttt{axiom}; their printed dependencies are contained in \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}.
++
++The actual-model interfaces derive their conclusions from the finite substitution rules under the standing hypotheses, or under the separate assumptions of a worked example.
++In particular, the metric limit, closed energy form, limiting process and heat kernel are constructed within the development, rather than supplied as hypotheses asserting the corresponding conclusions.
++The resistance-form identification retains the condition $\rho(\Psi)>1$.
++The random-geometric and diffusion predictions in the Outlook remain conjectures, and the DHL logarithmic sharpness assertion concerns the volume upper bound only.
++Table~\ref{tab:lean} summarises these interfaces; the repository records exact source hashes and compiler receipts separately from exploratory candidates.
++The presence of a candidate source file is not a verification claim.
+ 
+ \begin{table}[ht]
+ \caption{Scope of the Lean formalisation.}
+@@ -841,15 +839,15 @@
+ \small
+ \begin{tabular}{|>{\centering\arraybackslash}m{1.8cm}|m{6cm}|m{6.8cm}|}
+ \hline
+-& \emph{Results cited as hypotheses} & \emph{Formalised results} \\
++& \emph{Scope and assumptions} & \emph{Formalised results} \\
+ \hline
+ Section~\ref{sec:random_walks}
+-& The eigenpair-existence input from nonlinear Perron--Frobenius theory in the proof of Lemma~\ref{thm:sdprimitive_eigenpair}; the distance growth in Lemma~\ref{lem:basic_prop}, quoted from \cite{neroli2024fractal}.
+-& Lemmas \ref{lem:psi-props} and \ref{lem:renorm}; the uniqueness part of Lemma~\ref{thm:sdprimitive_eigenpair}; Corollaries \ref{lem:Psi_range} and \ref{cor:Psi_strong_convergence}; Lemma~\ref{lem:Reff-asymp-rho}; Theorem~\ref{thm:resistance_dimension_formula}; the mass and degree growth in Lemma~\ref{lem:basic_prop}; Lemmas \ref{lem:ball_volume_k_born} and \ref{lem:mesoscopic_Reff_k_born}; Propositions \ref{prop:local_mass_dimension_constant}, \ref{prop:local_resistance_dimension_k_born} and \ref{prop:asymp_res_recurrence_rhoPsi}; Lemma~\ref{lem:star_domain_exit_time_scale}; Theorem~\ref{thm:exit_time_scale}; Propositions \ref{lem:commute-time-eigs-asymp}, \ref{prop:MPsiD} and \ref{prop:walk_dimension_ge_2}; Theorem~\ref{thm:Einstein}. \\
++& The standing substitution-rule hypotheses; the nonprimitive two-colour example is treated by its own positive eigenpair.
++& Lemmas \ref{lem:psi-props} and \ref{lem:renorm}; the existence and uniqueness in Lemma~\ref{thm:sdprimitive_eigenpair}; Corollaries \ref{lem:Psi_range} and \ref{cor:Psi_strong_convergence}; Lemma~\ref{lem:Reff-asymp-rho}; Theorem~\ref{thm:resistance_dimension_formula}; the uniform mass, distance and degree growth in Lemma~\ref{lem:basic_prop}; Lemmas \ref{lem:ball_volume_k_born} and \ref{lem:mesoscopic_Reff_k_born}; Propositions \ref{prop:local_mass_dimension_constant}, \ref{prop:local_resistance_dimension_k_born} and \ref{prop:asymp_res_recurrence_rhoPsi}; Lemma~\ref{lem:star_domain_exit_time_scale}; Theorem~\ref{thm:exit_time_scale}; Propositions \ref{lem:commute-time-eigs-asymp}, \ref{prop:MPsiD} and \ref{prop:walk_dimension_ge_2}; Theorem~\ref{thm:Einstein}. \\
+ \hline
+ Section~\ref{sec:diffusion}
+-& The GHP limit space; the closure into a regular Dirichlet form and the Hunt-process correspondence; the Kuwae--Shioya process convergence and the Skorokhod representation; Azuma--Hoeffding and Aldous' criterion; the resistance-form theory of Kigami; the multiscale Nash iteration; the inputs of Section~\ref{sec:random_walks}.
+-& Every lemma, proposition, theorem, corollary and worked example of Section~\ref{sec:diffusion}, except Lemma~\ref{lem:GH_limit_metric} and Theorem~\ref{thm:sec31_ghps}, which are quoted from the literature; the oscillation contraction in Lemma~\ref{lem:sec31_continuous_harmonics} is proved from Assumption~\ref{ass:standing}. \\
++& The standing substitution-rule hypotheses and the separate worked-example assumptions; resistance-form identification requires $\rho(\Psi)>1$.
++& The actual measured GHP/GHPS limit, harmonic extension and closed energy form; the continuous Hunt process and its same-family heat kernel; resistance-form identification; the finite-born and almost-everywhere volume and heat estimates, spectral dimensions and worked examples. For the $(2,2)$-DHL, the matching infinite-scale volume lower bound and optimality of the volume upper-bound logarithmic exponent are also proved. \\
+ \hline
+ Section~\ref{sec:percolation}
+ & None.

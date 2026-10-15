@@ -1,0 +1,29 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSDHLRetentionWordMass.lean:41:44: warning: This simp argument is unused:
+  PMF.toMeasure_apply_singleton
+
+Hint: Omit it from the simp argument list.
+  simp [Measure.pi_singleton, dhlLetterLaw, P̵M̵F̵.̵t̵o̵M̵e̵a̵s̵u̵r̵e̵_̵a̵p̵p̵l̵y̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵Fintype.card_pi, ← ENNReal.inv_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSDHLRetentionWordMass.lean:50:22: warning: This simp argument is unused:
+  ENNReal.ofReal_pow
+
+Hint: Omit it from the simp argument list.
+  simp only [Fintype.card_pi, Fintype.card_prod, Fintype.card_fin, Finset.prod_const,
+      Finset.card_univ, ENNReal.ofReal_p̵ow̵,̵ ̵E̵N̵N̵R̵e̵a̵l̵.̵o̵fR̵e̵a̵l̵_̵o̵f̵Nat, Nat.cast_pow, Nat.cast_mul,
+  ̵  ̵ ̵ ̵Nat.cast_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSDHLRetentionWordMass.lean:50:42: warning: This simp argument is unused:
+  ENNReal.ofReal_ofNat
+
+Hint: Omit it from the simp argument list.
+  simp only [Fintype.card_pi, Fintype.card_prod, Fintype.card_fin, Finset.prod_const,
+      Finset.card_univ, ENNReal.ofReal_pow, E̵NN̵R̵e̵al̵.̵o̵f̵R̵e̵a̵l̵_̵o̵f̵N̵a̵t,̵ ̵N̵a̵t̵.cast_pow, Nat.cast_mul,
+  ̵  ̵ ̵ ̵Nat.cast_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'EIGS.dhlGoodRetentionWords_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.dhlUniformWordLaw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.dhlGoodRetentionWords_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.dhlLetters_ae_eventually_retention_phase' depends on axioms: [propext, Classical.choice, Quot.sound]

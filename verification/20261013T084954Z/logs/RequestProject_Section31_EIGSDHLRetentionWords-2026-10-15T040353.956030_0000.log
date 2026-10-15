@@ -1,0 +1,4 @@
+'EIGS.dhlEndpointChild_preserves_vertex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.dhlRetentionWord_branch' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.dhlRetentionWord_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.dhlRetentionWord_preserves_terminal' depends on axioms: [propext, Classical.choice, Quot.sound]

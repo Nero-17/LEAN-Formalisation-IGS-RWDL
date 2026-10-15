@@ -1,0 +1,12 @@
+{
+  "adopted_utc": "2026-10-15T04:03:49.233084+00:00",
+  "user_choice": "Only claim optimality of the volume upper-bound logarithmic exponent, with explicit wording.",
+  "before_sha256": "52826c4ca2fc15190271973d6e5bc8d13f90a906f30f967445ed7ff357879065",
+  "after_sha256": "a36cfbb506de2f3a670ff01a21c5f1e659715a0f3b92aef1cae36ced07ab9e95",
+  "scope": "Explicit (2,2)-DHL volume sharpness only. No heat-kernel logarithmic optimality claim.",
+  "proof_status_at_edit": "Actual volume-sharpness successor chain is under development, not yet accepted by Lean.",
+  "crlf_preserved": true,
+  "intermediate_sha256": "ddba3dceb047495a6e941f70fa547a9822a39d33b52e111f204ce0434bce86c1",
+  "model_name_clarified_utc": "2026-10-15T04:08:33.750639+00:00",
+  "model_name_clarification": "The earlier comparison exponent 2 also explicitly concerns (2,2)-DHL, rather than all (u,v)-DHL parameters."
+}

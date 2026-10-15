@@ -710,7 +710,7 @@ With the convention that $\dimdeg(\Xi)=\infty$ whenever $\Xi$ is not scale-free,
 \end{restated}
 
 The formula reveals a dichotomy: points of one EIGS fractal may diffuse at two different speeds, and the discrepancy is caused purely by local infinity.
-The degree dimension is exactly the correction term that unifies the two, and under the convention $\dimdeg(\Xi)=\infty$ in the locally finite case, a unified formula covers all EIGS.
+The degree dimension is exactly the correction term that unifies the two. Under the convention $\dimdeg(\Xi)=\infty$ in the locally finite case, a unified formula covers the EIGSs considered here, under the standing hypotheses or the separate assumptions stated for the worked examples.
 In the Brownian type the diffusion and Brownian spectral dimensions moreover coincide (Theorem~\ref{thm:brownian-spectral}).
 Table~\ref{tab:dimensions} collects deterministic and random examples: once $\dimbox(\Xi)$, $\dimdeg(\Xi)$ and $\dimresis(\Xi)$ are known, the walk and spectral dimensions follow automatically, and the last column records the diffusion type of each example.
 
@@ -821,18 +821,16 @@ With this, the story returns to where it began.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Formalisation by Lean}\label{subsec:formalisation}
-Sections~\ref{sec:random_walks} to~\ref{sec:percolation} of this paper have been formalised in Lean~4, with proofs produced by Aristotle (Harmonic) \cite{achim2025aristotle}, and the code is available at \url{https://github.com/Nero-17/IGS-RWDL-LEAN}.
-The projects compile against pinned revisions of \texttt{mathlib} and contain no \texttt{sorry}, no \texttt{admit} and no additional \texttt{axiom}, so every formalised statement depends only on the standard axioms \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}.
-The scope is summarised in Table~\ref{tab:lean}, and we stress that the formalisation is partial.
+The Lean~4 development for Sections~\ref{sec:random_walks}--\ref{sec:percolation} is available at \url{https://github.com/Nero-17/LEAN-Formalisation-IGS-RWDL}.
+The initial development used Aristotle (Harmonic) \cite{achim2025aristotle}; subsequent extensions construct the actual graph, measure, energy and process objects required by the statements below.
+For the verified interfaces, the proofs contain no \texttt{sorry}, no \texttt{admit} and no additional mathematical \texttt{axiom}; their printed dependencies are contained in \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}.
 
-Results quoted from the literature enter the formalisation as explicit hypotheses.
-We emphasise for Section~\ref{sec:diffusion} that Lean verifies the implications from these hypotheses to the conclusions, not the hypotheses themselves.
-The machine-checked guarantee therefore falls short of the unconditional correctness of the mathematical statements exactly by the correctness of the quoted results.
-Aristotle is used to generate Lean code only.
-
-
-
-
+The actual-model interfaces derive their conclusions from the finite substitution rules under the standing hypotheses, or under the separate assumptions of a worked example.
+In particular, the metric limit, closed energy form, limiting process and heat kernel are constructed within the development, rather than supplied as hypotheses asserting the corresponding conclusions.
+The resistance-form identification retains the condition $\rho(\Psi)>1$.
+The random-geometric and diffusion predictions in the Outlook remain conjectures, and the DHL logarithmic sharpness assertion concerns the volume upper bound only.
+Table~\ref{tab:lean} summarises these interfaces; the repository records exact source hashes and compiler receipts separately from exploratory candidates.
+The presence of a candidate source file is not a verification claim.
 
 \begin{table}[ht]
 \caption{Scope of the Lean formalisation.}
@@ -841,18 +839,18 @@ Aristotle is used to generate Lean code only.
 \small
 \begin{tabular}{|>{\centering\arraybackslash}m{1.8cm}|m{6cm}|m{6.8cm}|}
 \hline
-& \emph{Results cited as hypotheses} & \emph{Formalised results} \\
+& \emph{Scope and assumptions} & \emph{Formalised results} \\
 \hline
 Section~\ref{sec:random_walks}
-& The eigenpair-existence input from nonlinear Perron--Frobenius theory in the proof of Lemma~\ref{thm:sdprimitive_eigenpair}; the distance growth in Lemma~\ref{lem:basic_prop}, quoted from \cite{neroli2024fractal}.
-& Lemmas \ref{lem:psi-props} and \ref{lem:renorm}; the uniqueness part of Lemma~\ref{thm:sdprimitive_eigenpair}; Corollaries \ref{lem:Psi_range} and \ref{cor:Psi_strong_convergence}; Lemma~\ref{lem:Reff-asymp-rho}; Theorem~\ref{thm:resistance_dimension_formula}; the mass and degree growth in Lemma~\ref{lem:basic_prop}; Lemmas \ref{lem:ball_volume_k_born} and \ref{lem:mesoscopic_Reff_k_born}; Propositions \ref{prop:local_mass_dimension_constant}, \ref{prop:local_resistance_dimension_k_born} and \ref{prop:asymp_res_recurrence_rhoPsi}; Lemma~\ref{lem:star_domain_exit_time_scale}; Theorem~\ref{thm:exit_time_scale}; Propositions \ref{lem:commute-time-eigs-asymp}, \ref{prop:MPsiD} and \ref{prop:walk_dimension_ge_2}; Theorem~\ref{thm:Einstein}. \\
+& The standing substitution-rule hypotheses; the nonprimitive two-colour example is treated by its own positive eigenpair.
+& Lemmas \ref{lem:psi-props} and \ref{lem:renorm}; the existence and uniqueness in Lemma~\ref{thm:sdprimitive_eigenpair}; Corollaries \ref{lem:Psi_range} and \ref{cor:Psi_strong_convergence}; Lemma~\ref{lem:Reff-asymp-rho}; Theorem~\ref{thm:resistance_dimension_formula}; the uniform mass, distance and degree growth in Lemma~\ref{lem:basic_prop}; Lemmas \ref{lem:ball_volume_k_born} and \ref{lem:mesoscopic_Reff_k_born}; Propositions \ref{prop:local_mass_dimension_constant}, \ref{prop:local_resistance_dimension_k_born} and \ref{prop:asymp_res_recurrence_rhoPsi}; Lemma~\ref{lem:star_domain_exit_time_scale}; Theorem~\ref{thm:exit_time_scale}; Propositions \ref{lem:commute-time-eigs-asymp}, \ref{prop:MPsiD} and \ref{prop:walk_dimension_ge_2}; Theorem~\ref{thm:Einstein}. \\
 \hline
 Section~\ref{sec:diffusion}
-& The GHP limit space; the closure into a regular Dirichlet form and the Hunt-process correspondence; the Kuwae--Shioya process convergence and the Skorokhod representation; Azuma--Hoeffding and Aldous' criterion; the resistance-form theory of Kigami; the multiscale Nash iteration; the inputs of Section~\ref{sec:random_walks}.
-& Every lemma, proposition, theorem, corollary and worked example of Section~\ref{sec:diffusion}, except Lemma~\ref{lem:GH_limit_metric} and Theorem~\ref{thm:sec31_ghps}, which are quoted from the literature; the oscillation contraction in Lemma~\ref{lem:sec31_continuous_harmonics} is proved from Assumption~\ref{ass:standing}. \\
+& The standing substitution-rule hypotheses and the separate worked-example assumptions; resistance-form identification requires $\rho(\Psi)>1$.
+& The actual measured GHP/GHPS limit, harmonic extension and closed energy form; the continuous Hunt process and its same-family heat kernel; resistance-form identification; the finite-born and almost-everywhere volume and heat estimates, spectral dimensions and worked examples. For the $(2,2)$-DHL, the matching infinite-scale volume lower bound and optimality of the volume upper-bound logarithmic exponent are also proved. \\
 \hline
 Section~\ref{sec:percolation}
-& None.
+& The actual series/diamond substitution law with $0<p<1$ and its critical-cluster specialisation at $p=p_c$; random-geometric predictions remain conjectural.
 & Proposition~\ref{prop:dhl_reduction}, as equality of the joint laws of the full resistance sequences; the finite mean-matrix eigenvalues and their formal logarithmic ratio $1.8993$ of Subsection~\ref{subsec:dhl_cluster}; Theorem~\ref{thm:reduced_quenched_exponent} and Proposition~\ref{prop:alpha_pc_positive}; Proposition~\ref{prop:no_deterministic_limit}; Lemmas \ref{lem:annealed_exponent}, \ref{lem:logistic_product} and \ref{lem:uniform_product}. \\
 \hline
 \end{tabular}%
@@ -3681,10 +3679,10 @@ Since $t\asymp (\rho(\mathbf M)\rho(\Psi))^{-n}$, this yields exactly the finite
 \end{proof}
 
 It is worth comparing the logarithmic correction in Theorem~\ref{thm:diffusion-heat} with the argument of Hambly and Kumagai.
-In \cite{hambly2010diffusion}, the radius is taken strictly below the cell scale, so that the ball avoids the whole skeleton and lies in a single cell; the price is a radius deficit raised to the power $\dimbox(\Xi)$, and the optimised outcome of that route is the logarithmic exponent $\frac{\dimdeg(\Xi)}{\dimdeg(\Xi)-1}$, which equals $2$ for the DHL.
+In \cite{hambly2010diffusion}, the radius is taken strictly below the cell scale, so that the ball avoids the whole skeleton and lies in a single cell; the price is a radius deficit raised to the power $\dimbox(\Xi)$, and the optimised outcome of that route is the logarithmic exponent $\frac{\dimdeg(\Xi)}{\dimdeg(\Xi)-1}$, which equals $2$ for the $(2,2)$-DHL.
 The proof of Lemma~\ref{lem:heat-volume} instead keeps the radius at the cell scale and covers the ball by the star of a terminal, so the same fluctuation enters only linearly, through the degree $\rho(\mathbf N)^{L_m}$.
-The resulting exponent $\frac{1}{\dimdeg(\Xi)-1}$ is intrinsic: it is the large-deviation rate of the age of the nearest terminal under $\mu_{\Xi_{\mathrm M}}$.
-A renewal argument, which we do not pursue here, shows that for the DHL infinitely many scales satisfy a matching lower bound $\mu_{\Xi_{\mathrm M}}(B(x,r))\ge c|\log r|^{1-\varepsilon}r^{2}$ at $\mu_{\Xi_{\mathrm M}}$-almost every point of $\mathscr V^\infty$, because the age of the retained terminal performs a geometric renewal; hence the exponent cannot be improved below $\frac{1}{\dimdeg(\Xi)-1}$.
+The volume upper-bound exponent $\frac{1}{\dimdeg(\Xi)-1}$ reflects the large-deviation rate of the age of the nearest terminal under $\mu_{\Xi_{\mathrm M}}$.
+A renewal argument, which we do not pursue here, shows that for the $(2,2)$-DHL infinitely many scales satisfy a matching lower bound $\mu_{\Xi_{\mathrm M}}(B(x,r))\ge c|\log r|^{1-\varepsilon}r^{2}$ at $\mu_{\Xi_{\mathrm M}}$-almost every point of $\mathscr V^\infty$, because the age of the retained terminal performs a geometric renewal. Consequently, the logarithmic exponent in the volume upper bound of Lemma~\ref{lem:heat-volume} cannot be reduced below $1=\frac{1}{\dimdeg(\Xi)-1}$ for this model. This is a sharpness statement for the volume upper bound; optimality of the logarithmic correction in the heat-kernel lower bound is not asserted.
 
 We define the local diffusion spectral dimension, whenever the limit exists, by
 \[

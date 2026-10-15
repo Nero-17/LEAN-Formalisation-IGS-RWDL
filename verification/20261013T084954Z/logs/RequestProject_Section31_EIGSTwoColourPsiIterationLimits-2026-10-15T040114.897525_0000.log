@@ -1,0 +1,18 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSTwoColourPsiIterationLimits.lean:28:33: warning: This simp argument is unused:
+  Pi.smul_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.sum_univ_two, P̵i̵.̵smul_a̵p̵p̵l̵y̵,̵ ̵s̵m̵u̵l̵_̵eq_mul, Matrix.cons_val_zero, Matrix.cons_val_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSTwoColourPsiIterationLimits.lean:28:48: warning: This simp argument is unused:
+  smul_eq_mul
+
+Hint: Omit it from the simp argument list.
+  simp only [Fin.sum_univ_two, Pi.smul_apply, s̵m̵u̵l̵_̵e̵q̵_̵m̵u̵l̵,̵ ̵Matrix.cons_val_zero, Matrix.cons_val_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'EIGS.twoColourSystem_Psi_normalized_iteration_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_Psi_consecutive_second_coordinate_ratio_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

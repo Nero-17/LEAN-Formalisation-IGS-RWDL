@@ -1,0 +1,4 @@
+'EIGS.twoColourSystem_actual_distance_choices_nat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_actual_distance_choices_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_pathSelectionMatrix_from_actual_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_actual_distance_choices' depends on axioms: [propext, Classical.choice, Quot.sound]

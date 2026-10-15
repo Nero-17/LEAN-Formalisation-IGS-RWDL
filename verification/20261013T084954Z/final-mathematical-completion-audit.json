@@ -1,0 +1,560 @@
+{
+  "audited_utc": "2026-10-15T04:50:20.509883+00:00",
+  "round": "20261013T084954Z",
+  "mathematical_scope_status": "passed",
+  "scope": "All asserted mathematical statements of the user-adopted corrected manuscript under its standing hypotheses and separately stated worked-example assumptions; original conjectures are not assertions to prove.",
+  "manuscript_sha256": "b5628096487efaba69cf1244f1f806bde2b3878f08c2626903919d2ac88dc240",
+  "umbrella_sha256": "beaa15c1206b0f72130cf41c36be4f304842628c6dd82451665cd69f0b3d25cd",
+  "umbrella_receipt": {
+    "module": "RequestProject.RWDLActualPaper",
+    "source": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\IGS-RWDL-LEAN\\section3-diffusion\\RequestProject\\RWDLActualPaper.lean",
+    "source_sha256": "beaa15c1206b0f72130cf41c36be4f304842628c6dd82451665cd69f0b3d25cd",
+    "source_unchanged": true,
+    "started_utc": "2026-10-15T04:30:04.199864+00:00",
+    "finished_utc": "2026-10-15T04:34:30.177670+00:00",
+    "exit_code": 0,
+    "accepted": true,
+    "log": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\current-round\\RequestProject_RWDLActualPaper-2026-10-15T043004.199864_0000.log",
+    "log_sha256": "be76b216b54d67a42240b6c5f8c47a78ae34c4ba5aade939860bd14ababa46ed",
+    "latest_log": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\current-round\\RequestProject_RWDLActualPaper.log",
+    "audit_lines": [
+      "EIGS.RuleSystem.distance_positive_normalized_eigenpair_exists_unique: [propext, Classical.choice, Quot.sound]",
+      "EIGS.RuleSystem.distance_positive_normalized_iterate_limit: [propext, Classical.choice, Quot.sound]",
+      "EIGS.Network.flow_nonempty_iff_reachable: [propext, Classical.choice, Quot.sound]",
+      "EIGS.Network.extendedEffRes_self: [propext, Classical.choice, Quot.sound]",
+      "EIGS.Network.extendedEffRes_eq_ofReal: [propext, Classical.choice, Quot.sound]",
+      "EIGS.Network.extendedEffRes_eq_top_iff_not_reachable: [propext, Classical.choice, Quot.sound]",
+      "EIGS.RuleSystem.extendedEffRes_eq_toRenormMap: [propext, Classical.choice, Quot.sound]",
+      "EIGS.EIGSData.Psi_regularization_tendsto: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiReplanted_edge_card_spectral_bounds_all_generations: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiReplanted_vertex_card_spectral_bounds_all_generations: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiSimpleGraph_terminal_distance_spectral_bounds_all_generations: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiSimpleGraph_terminal_distance_le_originalDiameter: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiReplanted_distance_diameter_spectral_bounds_all_generations: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiSimpleGraph_uniform_birth_degree_spectral_growth: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiSimpleGraph_fixed_radius_local_mass_dimension_limit: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiSimpleGraph_fixed_radius_local_resistance_dimension_limit: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiSimpleGraph_terminal_resistance_canonical_bounds: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiSimpleGraph_terminal_resistance_dimension_limit: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiSimpleGraph_terminal_resistance_original_diameter_limit: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiSimpleGraph_fixed_pair_resistance_dimension_limit: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiSimpleGraph_fixed_pair_resistanceDimension_eq: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiSimpleGraph_admissible_walk_dimension_limit: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiSimpleGraph_commute_eq_mass_mul_resistance: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiSimpleGraph_terminal_commute_canonical_bounds: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiSimpleGraph_actual_Einstein_relation_of_rules: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiSimpleGraph_original_diameter_Einstein_relation_of_rules: [propext, Classical.choice, Quot.sound]",
+      "EIGS.EIGSData.distanceSpectralRadius_sq_le_mass_mul_resistance: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiActualRecurrent_iff_resistanceSpectralRadius_gt_one: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiActualRecurrent_iff_globalSpectralFormula_lt_two: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiCompletion_coveringNumber_dimension_of_rules: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiDiameterCompletion_coveringNumber_dimension_of_rules: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiCompletion_hausdorff_dimension_of_rules: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiDiameterCompletion_hausdorff_dimension_of_rules: [propext, Classical.choice, Quot.sound]",
+      "EIGS.exists_xiIdentifiedOriginalMeasuredGHPSPaperClock_of_rules: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiFiniteBorn_singleton_mass_zero_of_rules: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiFiniteBornSkeleton_mass_zero_of_rules: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiPhysicalClosedCell_mass_ge_cylinder: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiPhysicalClosedCell_mass_eq_cylinder_of_rules: [propext, Classical.choice, Quot.sound]",
+      "EIGS.exists_xiPhysicalClosedCell_mass_bounds_of_rules: [propext, Classical.choice, Quot.sound]",
+      "EIGS.exists_xiOriginalDiameterSubGaussianExitTail_of_rules: [propext, Classical.choice, Quot.sound]",
+      "IGS.Sec31.PoissonClock.exponentialHoldingJumpIndex_poisson_process: [propext, Classical.choice, Quot.sound]",
+      "IGS.Sec31.PoissonClock.exponential_poisson_increments_iIndepFun: [propext, Classical.choice, Quot.sound]",
+      "IGS.Sec31.PoissonClock.exponential_poisson_finite_increment_joint_law: [propext, Classical.choice, Quot.sound]",
+      "IGS.Sec31.PoissonClock.exponentialHoldingJumpIndex_scaled_poisson_process: [propext, Classical.choice, Quot.sound]",
+      "IGS.Sec31.PoissonClock.finiteGraphPoissonCount_independent_walk: [propext, Classical.choice, Quot.sound]",
+      "IGS.Sec31.PoissonClock.finiteGraphPoissonCount_scaled_process_laws: [propext, Classical.choice, Quot.sound]",
+      "IGS.Sec31.PoissonClock.exponentialHoldingPhysicalJ1Sample_is_poissonized_walk: [propext, Classical.choice, Quot.sound]",
+      "EIGS.exists_xiOriginalExponentialPhysicalJ1Tightness_of_rules: [propext, Classical.choice, Quot.sound]",
+      "EIGS.exists_xiIdentifiedNormalizedTrueExitGlobalRestriction_of_rules: [propext, Classical.choice, Quot.sound]",
+      "EIGS.exists_xiIdentifiedMeanExitGlobalRestriction_of_rules: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiTypicalBallMassUpperAllRadii_of_rules: [propext, Classical.choice, Quot.sound]",
+      "EIGS.exists_xiContinuousKernelGeneralLower_of_rules: [propext, Classical.choice, Quot.sound]",
+      "EIGS.exists_xiResistanceForm_same_closed_Hunt_of_rules: [propext, Classical.choice, Quot.sound]",
+      "EIGS.exists_xiPhysicalClosedCell_point_boundary_resistance_bound: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiContinuousHarmonicProjection_energy_pythagoras: [propext, Classical.choice, Quot.sound]",
+      "EIGS.exists_xiSameNativeOriginalDegreeCorrectedFullHeatPhysical_of_rules: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiIdentifiedOriginalMeasuredGHPSFullHeatExitPhysicalTightProperties_of_physical: [propext, Classical.choice, Quot.sound]",
+      "EIGS.exists_twoColour_original_degree_corrected_same_kernel_Brownian_full_heat_physical: [propext, Classical.choice, Quot.sound]",
+      "EIGS.locallyFiniteRuleSystem_table_geometric_dimensions: [propext, Classical.choice, Quot.sound]",
+      "EIGS.locallyFiniteRuleSystem_table_walk_dimension: [propext, Classical.choice, Quot.sound]",
+      "EIGS.exists_locallyFiniteRuleSystem_numerical_same_kernel_power_heat_exit_physical_tight_Brownian: [propext, Classical.choice, Quot.sound]",
+      "EIGS.flowerSystem_original_degree_dimension: [propext, Classical.choice, Quot.sound]",
+      "EIGS.flowerSystem_native_coveringNumber_dimension: [propext, Classical.choice, Quot.sound]",
+      "EIGS.flowerSystem_diameter_hausdorff_dimension: [propext, Classical.choice, Quot.sound]",
+      "EIGS.flowerSystem_admissible_walk_dimension_limit: [propext, Classical.choice, Quot.sound]",
+      "EIGS.exists_flowerSystem_sameKernel_fullHeat_exit: [propext, Classical.choice, Quot.sound]",
+      "EIGS.uvFlowerSystem_original_degree_dimension: [propext, Classical.choice, Quot.sound]",
+      "EIGS.uvFlowerSystem_native_coveringNumber_dimension: [propext, Classical.choice, Quot.sound]",
+      "EIGS.uvFlowerSystem_diameter_hausdorff_dimension: [propext, Classical.choice, Quot.sound]",
+      "EIGS.uvFlowerSystem_admissible_walk_dimension_limit: [propext, Classical.choice, Quot.sound]",
+      "EIGS.exists_uvFlowerSystem_same_kernel_full_heat_physical_tight: [propext, Classical.choice, Quot.sound]",
+      "Cluster.nested_cluster_resistance_process: [propext, Classical.choice, Quot.sound]",
+      "Cluster.nested_reduced_full_process_law: [propext, Classical.choice, Quot.sound]",
+      "Cluster.nested_cluster_full_network_law: [propext, Classical.choice, Quot.sound]",
+      "Cluster.nested_network_original_observables_p: [propext, Classical.choice, Quot.sound]",
+      "Cluster.nested_network_logistic_product_exact_rational: [propext, Classical.choice, Quot.sound]",
+      "Cluster.nested_network_no_deterministic_limit: [propext, Classical.choice, Quot.sound]",
+      "Cluster.nested_critical_cluster_no_deterministic_limit: [propext, Classical.choice, Quot.sound]",
+      "Reduced.no_deterministic_limit: [propext, Classical.choice, Quot.sound]",
+      "Outlook.FourColourMeanSpectrum.actual_mean_mass_spectralRadius: [propext, Classical.choice, Quot.sound]",
+      "Outlook.FourColourMeanSpectrum.actual_mean_mass_spectralRadius_approx: [propext, Classical.choice, Quot.sound]",
+      "Outlook.FourColourMeanSpectrum.actual_mean_boundary_spectralRadius: [propext, Classical.choice, Quot.sound]",
+      "Outlook.FourColourMeanSpectrum.actual_mean_logarithmic_ratios_equal: [propext, Classical.choice, Quot.sound]",
+      "Outlook.FourColourMeanSpectrum.actual_mean_logarithmic_ratio_enclosure: [propext, Classical.choice, Quot.sound]",
+      "Outlook.FourColourMeanSpectrum.actual_mean_logarithmic_ratio_approx: [propext, Classical.choice, Quot.sound]",
+      "EIGS.independent_trials_failure_bound: [propext, Classical.choice, Quot.sound]",
+      "EIGS.ae_eventually_independent_renewal_phase_success: [propext, Classical.choice, Quot.sound]",
+      "EIGS.independent_word_blocks_joint_law: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiAddressMeasure_eq_of_marginals: [propext, Classical.choice, Quot.sound]",
+      "EIGS.independent_word_blocks_independent: [propext, Classical.choice, Quot.sound]",
+      "EIGS.ae_eventually_independent_word_block_success: [propext, Classical.choice, Quot.sound]",
+      "EIGS.renewal_word_endpoint_bounds: [propext, Classical.choice, Quot.sound]",
+      "EIGS.eventually_renewal_endpoint_power_cost: [propext, Classical.choice, Quot.sound]",
+      "EIGS.twoColourSystem_actual_distance_choices_nat: [propext, Classical.choice, Quot.sound]",
+      "EIGS.twoColourSystem_actual_distance_choices_card: [propext, Classical.choice, Quot.sound]",
+      "EIGS.twoColourSystem_pathSelectionMatrix_from_actual_counts: [propext, Classical.choice, Quot.sound]",
+      "EIGS.twoColourSystem_actual_distance_choices: [propext, Classical.choice, Quot.sound]",
+      "EIGS.twoColourResistanceRatio_numeric: [propext, Classical.choice, Quot.sound]",
+      "EIGS.twoColourSystem_resistanceRate_numeric_precise: [propext, Classical.choice, Quot.sound]",
+      "EIGS.twoColourSystem_Psi_first_three_iterates: [propext, Classical.choice, Quot.sound]",
+      "EIGS.twoColourSystem_boxFormula_numeric: [propext, Classical.choice, Quot.sound]",
+      "EIGS.twoColourSystem_resistanceDimensionFormula_numeric: [propext, Classical.choice, Quot.sound]",
+      "EIGS.twoColourSystem_Psi_normalized_iteration_limit: [propext, Classical.choice, Quot.sound]",
+      "EIGS.twoColourSystem_Psi_consecutive_second_coordinate_ratio_limit: [propext, Classical.choice, Quot.sound]",
+      "EIGS.xiSimpleGraph_admissible_walk_dimension_limit_ge_two: [propext, Classical.choice, Quot.sound]",
+      "EIGS.uvFlower23_actual_walk_dimension_gt_two: [propext, Classical.choice, Quot.sound]",
+      "EIGS.dhl23_actual_walk_dimension_eq_two: [propext, Classical.choice, Quot.sound]",
+      "EIGS.dhlEdgeOfWord_injective: [propext, Classical.choice, Quot.sound]",
+      "EIGS.dhlEdgeOfWord_surjective: [propext, Classical.choice, Quot.sound]",
+      "EIGS.dhlAddressOfLetters_coordinate: [propext, Classical.choice, Quot.sound]",
+      "EIGS.measurable_dhlAddressOfLetters: [propext, Classical.choice, Quot.sound]",
+      "EIGS.dhlEndpointChild_preserves_vertex: [propext, Classical.choice, Quot.sound]",
+      "EIGS.dhlRetentionWord_branch: [propext, Classical.choice, Quot.sound]",
+      "EIGS.dhlRetentionWord_injective: [propext, Classical.choice, Quot.sound]",
+      "EIGS.dhlRetentionWord_preserves_terminal: [propext, Classical.choice, Quot.sound]",
+      "EIGS.dhlGoodRetentionWords_card: [propext, Classical.choice, Quot.sound]",
+      "EIGS.dhlUniformWordLaw: [propext, Classical.choice, Quot.sound]",
+      "EIGS.dhlGoodRetentionWords_mass: [propext, Classical.choice, Quot.sound]",
+      "EIGS.dhlLetters_ae_eventually_retention_phase: [propext, Classical.choice, Quot.sound]",
+      "EIGS.dhlUniformWord_map_edge: [propext, Classical.choice, Quot.sound]",
+      "EIGS.dhlMass_edgeLaw_uniform: [propext, Classical.choice, Quot.sound]",
+      "EIGS.dhlLetters_coordinate_law: [propext, Classical.choice, Quot.sound]",
+      "EIGS.dhlLetters_map_addressMeasure: [propext, Classical.choice, Quot.sound]",
+      "EIGS.dhlAddressOfLetters_block_descendant: [propext, Classical.choice, Quot.sound]",
+      "EIGS.dhlLetters_retention_block_incident: [propext, Classical.choice, Quot.sound]",
+      "EIGS.dhlVertexIncidence_forward: [propext, Classical.choice, Quot.sound]",
+      "EIGS.dhlVertexIncidence_forward_lower: [propext, Classical.choice, Quot.sound]",
+      "EIGS.exists_dhlRetainedStarBallMassLower: [propext, Classical.choice, Quot.sound]",
+      "EIGS.exists_dhl_ae_infinite_geometric_volume_lower: [propext, Classical.choice, Quot.sound]",
+      "IGS.Sec31.infinite_geometric_volume_lower_logarithmic: [propext, Classical.choice, Quot.sound]",
+      "IGS.Sec31.logarithmic_volume_lower_excludes_smaller_exponent: [propext, Classical.choice, Quot.sound]",
+      "IGS.Sec31.ae_all_logarithmic_volume_lower: [propext, Classical.choice, Quot.sound]",
+      "EIGS.dhl_actual_diameter_logarithmic_volume_fluctuation: [propext, Classical.choice, Quot.sound]",
+      "EIGS.dhl_actual_diameter_volume_log_exponent_optimal: [propext, Classical.choice, Quot.sound]",
+      "EIGS.dhl_actual_diameter_common_ae_volume_optimality: [propext, Classical.choice, Quot.sound]"
+    ]
+  },
+  "shared_report": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-21\\new-chat\\work\\current-round\\combined-dirichlet-process-1190-report.json",
+  "shared_report_sha256": "e6d24b76f27d1aabdc346840817d88eb2fb86daa822799fdc8237bdd19b198f8",
+  "shared_verified_modules": 1190,
+  "named_statement_labels": [
+    {
+      "kind": "definition",
+      "label": "definition:EIGS",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "definition",
+      "label": "definition:flower-dhl",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "definition",
+      "label": "def:psi_Psi",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "example",
+      "label": "ex:Psi_two_colours",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "lemma",
+      "label": "lem:psi-props",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "lemma",
+      "label": "lem:renorm",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "lemma",
+      "label": "thm:sdprimitive_eigenpair",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "corollary",
+      "label": "lem:Psi_range",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "corollary",
+      "label": "cor:Psi_strong_convergence",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "lemma",
+      "label": "lem:Reff-asymp-rho",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "definition",
+      "label": "def:resistance_dimension",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "theorem",
+      "label": "thm:resistance_dimension_formula",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "example",
+      "label": "example:two_colour_1",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "lemma",
+      "label": "lem:basic_prop",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "lemma",
+      "label": "lem:ball_volume_k_born",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "definition",
+      "label": "def:local_mass_dimension_constant",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "proposition",
+      "label": "prop:local_mass_dimension_constant",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "lemma",
+      "label": "lem:mesoscopic_Reff_k_born",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "definition",
+      "label": "def:local_resistance_dimension",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "proposition",
+      "label": "prop:local_resistance_dimension_k_born",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "definition",
+      "label": "def:asymp_res_recurrence",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "proposition",
+      "label": "prop:asymp_res_recurrence_rhoPsi",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "lemma",
+      "label": "lem:star_domain_exit_time_scale",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "theorem",
+      "label": "thm:exit_time_scale",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "proposition",
+      "label": "lem:commute-time-eigs-asymp",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "definition",
+      "label": "def:walk_dimension",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "theorem",
+      "label": "thm:Einstein",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "proposition",
+      "label": "prop:MPsiD",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "proposition",
+      "label": "prop:walk_dimension_ge_2",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "example",
+      "label": "ex:uvDHL",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "example",
+      "label": "ex:uvFlower",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "lemma",
+      "label": "lem:GH_limit_metric",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "lemma",
+      "label": "lem:GHP_convergence",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "lemma",
+      "label": "lem:sec31_trace_weighted",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "lemma",
+      "label": "lem:sec31_continuous_harmonics",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "lemma",
+      "label": "lem:sec31_projection_tail_continuous",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "theorem",
+      "label": "thm:sec31_limit_dirichlet_form",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "lemma",
+      "label": "lem:sec31_speed_measure",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "lemma",
+      "label": "lem:sec31_discrete_harmonics",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "lemma",
+      "label": "lem:sec31_projection_tail_discrete",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "theorem",
+      "label": "thm:sec31_mosco",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "lemma",
+      "label": "lem:sec31_one_step_stay",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "theorem",
+      "label": "thm:sec31_discrete_eld_tightness",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "theorem",
+      "label": "thm:sec31_ghps",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "corollary",
+      "label": "cor:sec31_continuous_stay",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "lemma",
+      "label": "lem:sec32_point_boundary",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "theorem",
+      "label": "thm:sec32_resistance_metric",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "lemma",
+      "label": "lem:sec32_common_core",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "theorem",
+      "label": "thm:sec32_brownian_motion",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "lemma",
+      "label": "lem:heat-volume",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "lemma",
+      "label": "lem:heat-exit",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "proposition",
+      "label": "prop:heat-kernel",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "theorem",
+      "label": "thm:general-lower",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "theorem",
+      "label": "thm:diffusion-heat",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "theorem",
+      "label": "thm:diffusion-spectral",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "proposition",
+      "label": "prop:final_recurrent",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "corollary",
+      "label": "cor:brownian-heat",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "theorem",
+      "label": "thm:brownian-spectral",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "example",
+      "label": "ex:two-colour-spectral",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "proposition",
+      "label": "prop:dhl_reduction",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "lemma",
+      "label": "lem:annealed_exponent",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "lemma",
+      "label": "lem:logistic_product",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "lemma",
+      "label": "lem:uniform_product",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "theorem",
+      "label": "thm:reduced_quenched_exponent",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "proposition",
+      "label": "prop:alpha_pc_positive",
+      "status": "covered_by_statement_scope_audits"
+    },
+    {
+      "kind": "proposition",
+      "label": "prop:no_deterministic_limit",
+      "status": "covered_by_statement_scope_audits"
+    }
+  ],
+  "named_statement_label_count": 66,
+  "label_inventory_limit": "Label presence only checks inventory; mathematical coverage rests on the independent detailed statement, object and quantifier audits, not text search or module counts.",
+  "statement_audits": [
+    {
+      "file": "section2-completion-audit-20261015.md",
+      "sha256": "e963c014876f0eed6017c3b2af09485a433e880d84f4ecef931e9f5b117ba150"
+    },
+    {
+      "file": "section3-completion-audit-20261015.md",
+      "sha256": "412430843632016b96a5db7c51480403e98ffea948282dfe5f9acd7ae5618748"
+    },
+    {
+      "file": "section4-examples-completion-audit-20261015.md",
+      "sha256": "33bb5bd06769aeb2b51eafd867711ba9012a7628e83e84f9f1c15007c27d22f8"
+    }
+  ],
+  "requirements": [
+    {
+      "requirement": "Actual corrected model and standing assumptions",
+      "status": "passed",
+      "evidence": "The three statement-level audits compare the actual finite-rule and same-family consumers with the manuscript; the separate literal example and resistance-rate regimes are retained."
+    },
+    {
+      "requirement": "No new mathematical axioms or proof holes in required closure",
+      "status": "passed",
+      "evidence": "Comment/string-aware scan of every verified source; whole-file standard-axiom audit of the 135 umbrella endpoints."
+    },
+    {
+      "requirement": "Actual original graph, measure, form, process and kernel",
+      "status": "passed",
+      "evidence": "The §2/§3 audit records actual-rule existence consumers, same-witness identities, original metrics, true exits, all-time quantifiers and full-future stopping laws."
+    },
+    {
+      "requirement": "All required §2 displays and example comparisons",
+      "status": "passed",
+      "evidence": "Five independently compiled display leaves, 14 printed audits, imported by the current umbrella."
+    },
+    {
+      "requirement": "Actual DHL logarithmic volume optimality",
+      "status": "passed",
+      "evidence": "Original address-law pushforward, actual retained-star geometry and common-AE final consumer; no heat-optimality assertion."
+    },
+    {
+      "requirement": "Section 4 actual laws and conjecture distinction",
+      "status": "passed",
+      "evidence": "Whole-sequence actual-network laws, original parameter and critical exponent results, actual corrected mean spectra; random geometry remains conjectural."
+    },
+    {
+      "requirement": "Whole-file and common integration",
+      "status": "passed",
+      "evidence": "135-audit umbrella receipt and exact-source 1190-module common closure with recursive source/toolchain/dependency fingerprints."
+    },
+    {
+      "requirement": "Manuscript definition and scope corrections",
+      "status": "passed",
+      "evidence": "Two-path unequal-length flower and u-branch length-v DHL definitions; updated examples, scope and honest formalisation table."
+    }
+  ],
+  "remaining_mathematical_gaps_in_audited_scope": [],
+  "exclusions": [
+    "Original random-geometric and diffusion conjectures",
+    "Arbitrary nonprimitive or degree-rate-one systems outside the manuscript standing and explicit examples",
+    "Transfractal u=1 metric extensions",
+    "Heat-kernel logarithmic optimality",
+    "All exploratory source candidates compiling"
+  ],
+  "delivery_status": "GitHub and same-ID Drive delivery of this final verified snapshot still require actual push/readback checks; do not mark the whole goal complete from this report alone."
+}

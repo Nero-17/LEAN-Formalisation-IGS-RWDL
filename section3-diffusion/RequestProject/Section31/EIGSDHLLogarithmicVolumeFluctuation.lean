@@ -2,6 +2,7 @@ import RequestProject.Section31.EIGSDHLInfiniteGeometricVolumeLower
 import RequestProject.Section31.InfiniteGeometricLogarithmicVolumeLower
 import RequestProject.Section31.EIGSOriginalCountableRealisation
 import RequestProject.Section31.EIGSMetricOfRules
+import RequestProject.Section31.BallMassDiameterScaling
 
 /-! The manuscript's actual DHL volume-fluctuation assertion, with its
 original diameter-normalized completion metric and actual limit measure.

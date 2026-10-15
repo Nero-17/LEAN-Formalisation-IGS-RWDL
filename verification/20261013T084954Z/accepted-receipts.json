@@ -1,13 +1,13 @@
 {
-  "snapshot_utc": "2026-10-15T03:43:36.592455+00:00",
+  "snapshot_utc": "2026-10-15T04:50:30.593785+00:00",
   "round": "20261013T084954Z",
   "compiler": "Lean 4.28.0",
   "mathlib": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
-  "shared_dependency_modules": 1172,
-  "shared_report": "integration-1172.json",
-  "shared_report_sha256": "c1f728b020e78e2004317a12f19b6f969940f63773ec7c31ac82418819a084d1",
-  "independent_whole_file_count": 798,
-  "independent_audit_count": 2293,
+  "shared_dependency_modules": 1190,
+  "shared_report": "integration-1190.json",
+  "shared_report_sha256": "e6d24b76f27d1aabdc346840817d88eb2fb86daa822799fdc8237bdd19b198f8",
+  "independent_whole_file_count": 815,
+  "independent_audit_count": 2373,
   "records": [
     {
       "module": "RequestProject.Section31.EIGSL2EnergyConstants",
@@ -25012,11 +25012,527 @@
       ]
     },
     {
+      "module": "RequestProject.Section31.EIGSDHLAddressLetters",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSDHLAddressLetters.lean",
+      "source_sha256": "52fefe3b2bf889bd4e149942efa94d8128bbdce63b68a6d433eca13117e9dda5",
+      "log": "logs/RequestProject_Section31_EIGSDHLAddressLetters-2026-10-15T033045.823435_0000.log",
+      "log_sha256": "147db4be91f2ad1cb079f2ec17bb429e45f639df4f4cfdc562fef02553aca178",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.dhlEdgeOfWord_injective",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhlEdgeOfWord_surjective",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhlAddressOfLetters_coordinate",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.measurable_dhlAddressOfLetters",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSTwoColourDisplayedNumerics",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSTwoColourDisplayedNumerics.lean",
+      "source_sha256": "61405230aa8710fa5329939ee542182fdae97f06c443b7173a4e057f658aeb0f",
+      "log": "logs/RequestProject_Section31_EIGSTwoColourDisplayedNumerics-2026-10-15T034555.560891_0000.log",
+      "log_sha256": "a8a5874933a9b8241cf22e5193e386b7ae1102ee39bb620fe2c2bb479d78f084",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.twoColourResistanceRatio_numeric",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_resistanceRate_numeric_precise",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_Psi_first_three_iterates",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_boxFormula_numeric",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_resistanceDimensionFormula_numeric",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSActualWalkDimensionLowerBound",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSActualWalkDimensionLowerBound.lean",
+      "source_sha256": "6f76d1adea4e79af9fc1592139e1ca842fc962d96a8915c02e4ec4aae83c2e34",
+      "log": "logs/RequestProject_Section31_EIGSActualWalkDimensionLowerBound-2026-10-15T035255.150477_0000.log",
+      "log_sha256": "569a37352c0937c84fc8db4277356aa4ffcd8589d692d7b7904d009f63c537d9",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.xiSimpleGraph_admissible_walk_dimension_limit_ge_two",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSFlowerDHL23WalkContrast",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSFlowerDHL23WalkContrast.lean",
+      "source_sha256": "a19360242a51c3c35f7bbd2aad48fe58a79f5c043569201e8ce820b2a3d4bbf7",
+      "log": "logs/RequestProject_Section31_EIGSFlowerDHL23WalkContrast-2026-10-15T035621.244138_0000.log",
+      "log_sha256": "016401f2626385944da0060781e78bc5fb70f6560426fa0d6371f06bde856617",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.uvFlower23_actual_walk_dimension_gt_two",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhl23_actual_walk_dimension_eq_two",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSTwoColourPsiIterationLimits",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSTwoColourPsiIterationLimits.lean",
+      "source_sha256": "2d56520f194991da61e24a3bd7a1f95399277f8036b07c7252d639da094d9363",
+      "log": "logs/RequestProject_Section31_EIGSTwoColourPsiIterationLimits-2026-10-15T040114.897525_0000.log",
+      "log_sha256": "3021b04c78d2c227e17e1f599747295f6fe9c6aa30a3e58cd053ec6e286b5f75",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.twoColourSystem_Psi_normalized_iteration_limit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_Psi_consecutive_second_coordinate_ratio_limit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSDHLRetentionWords",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSDHLRetentionWords.lean",
+      "source_sha256": "2eaf0bb1eb6daf3bc869a1262c1392beba979a2507d155dc89973c1b24a8073d",
+      "log": "logs/RequestProject_Section31_EIGSDHLRetentionWords-2026-10-15T040353.956030_0000.log",
+      "log_sha256": "f5e13587f18e821f060abf7021550ee94e2e364c2e41917cccba207d0eb934b2",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.dhlEndpointChild_preserves_vertex",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhlRetentionWord_branch",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhlRetentionWord_injective",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhlRetentionWord_preserves_terminal",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.LogarithmicVolumeExponentOptimality",
+      "source": "section3-diffusion/RequestProject/Section31/LogarithmicVolumeExponentOptimality.lean",
+      "source_sha256": "bc16f0b498065ba7b48a477ba02dc6a5fd748aa325a3edc8805f3c537402811e",
+      "log": "logs/RequestProject_Section31_LogarithmicVolumeExponentOptimality-2026-10-15T040407.724815_0000.log",
+      "log_sha256": "f454d4a6492740efbfc57447e72ab8f18c0404739634e412dbf2ac5bf42cb18b",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.logarithmic_volume_lower_excludes_smaller_exponent",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.CommonAELogarithmicVolumeLower",
+      "source": "section3-diffusion/RequestProject/Section31/CommonAELogarithmicVolumeLower.lean",
+      "source_sha256": "aaaa7d659d78f4143bdc53d759a3e0af8e9077330600e5b426df9b0f16bbcddb",
+      "log": "logs/RequestProject_Section31_CommonAELogarithmicVolumeLower-2026-10-15T040432.144624_0000.log",
+      "log_sha256": "921e22945c423222b07498e9cdf1d28ec038081b277eb5ca7d94944d1ee78723",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.ae_all_logarithmic_volume_lower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSDHLRetentionWordMass",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSDHLRetentionWordMass.lean",
+      "source_sha256": "34cbbec51f2ecf0de86b1e1ab55b5cac53dfd60be99dbc6c9fad564663168dfc",
+      "log": "logs/RequestProject_Section31_EIGSDHLRetentionWordMass-2026-10-15T041221.357174_0000.log",
+      "log_sha256": "d49143fcfb4c159cb7a79490eb3cf28e5d2e37e1190d9d5a65ea93a298e5e7e8",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.dhlGoodRetentionWords_card",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhlUniformWordLaw",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhlGoodRetentionWords_mass",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhlLetters_ae_eventually_retention_phase",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.InfiniteGeometricLogarithmicVolumeLower",
+      "source": "section3-diffusion/RequestProject/Section31/InfiniteGeometricLogarithmicVolumeLower.lean",
+      "source_sha256": "ed038bc19986af5b3047bd29a75938fc1b55eca9489e73ed7bb46117517d34bf",
+      "log": "logs/RequestProject_Section31_InfiniteGeometricLogarithmicVolumeLower-2026-10-15T041334.746002_0000.log",
+      "log_sha256": "2403d19215b25bdedd586c8319d88b0074694f14bc21368c9ade7f5cc5862e35",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "IGS.Sec31.infinite_geometric_volume_lower_logarithmic",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSDHLLetterAddressLaw",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSDHLLetterAddressLaw.lean",
+      "source_sha256": "8305dfc35a2f1f05a071e1b1a0bc4f2aac3289fad86ade96cf804ebb3c212c0a",
+      "log": "logs/RequestProject_Section31_EIGSDHLLetterAddressLaw-2026-10-15T041832.629599_0000.log",
+      "log_sha256": "f3c49e07c9a5d66dd038a711abb1f6855e5da62ed5b648ea982cec25819c921a",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.dhlUniformWord_map_edge",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhlMass_edgeLaw_uniform",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhlLetters_coordinate_law",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhlLetters_map_addressMeasure",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSDHLRetentionBlockGeometry",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSDHLRetentionBlockGeometry.lean",
+      "source_sha256": "4045d9b2e0edd72ecf59261a9775d7efa94bb9f3370e87372f9623f24fb5aa05",
+      "log": "logs/RequestProject_Section31_EIGSDHLRetentionBlockGeometry-2026-10-15T041945.552985_0000.log",
+      "log_sha256": "e85966194d95b523cda8672df53d134237586325edfad83148e16b414be26b87",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.dhlAddressOfLetters_block_descendant",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhlLetters_retention_block_incident",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSDHLRetainedStarBallMass",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSDHLRetainedStarBallMass.lean",
+      "source_sha256": "d2c52e2c0d2486d886479b0e2178aa474ab3019ed53f29643ea87d90bd321fe4",
+      "log": "logs/RequestProject_Section31_EIGSDHLRetainedStarBallMass-2026-10-15T042015.955931_0000.log",
+      "log_sha256": "e90e9f4d165805c35d48d49b8ccbc20e7de3bd50853ed76a6dc37c04395fc182",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.dhlVertexIncidence_forward",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhlVertexIncidence_forward_lower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_dhlRetainedStarBallMassLower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSTwoColourDistanceChoices",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSTwoColourDistanceChoices.lean",
+      "source_sha256": "589721bddd280a010ba39dbdea53c34dfc797d8bd2f6cd9e316a945f74ed861f",
+      "log": "logs/RequestProject_Section31_EIGSTwoColourDistanceChoices-2026-10-15T042111.756221_0000.log",
+      "log_sha256": "0e287d51c9b6e25f346304f61fbee89f0c792ad00100b574e94c35354997a1c4",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.twoColourSystem_actual_distance_choices_nat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_actual_distance_choices_card",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_pathSelectionMatrix_from_actual_counts",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_actual_distance_choices",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSDHLInfiniteGeometricVolumeLower",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSDHLInfiniteGeometricVolumeLower.lean",
+      "source_sha256": "cc009410ddb0e28883a7853ddb890257cfe6130e986c17cf16ceb54927b628e7",
+      "log": "logs/RequestProject_Section31_EIGSDHLInfiniteGeometricVolumeLower-2026-10-15T042218.064204_0000.log",
+      "log_sha256": "0aefc097a45439ff5a1522a1142c164929194970f31b50bf29d1228adada263e",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.exists_dhl_ae_infinite_geometric_volume_lower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSDHLLogarithmicVolumeFluctuation",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSDHLLogarithmicVolumeFluctuation.lean",
+      "source_sha256": "2c81fb825af9c1e15e13a4a003fa28f21bcea591927ed8d1ff52a6009f719063",
+      "log": "logs/RequestProject_Section31_EIGSDHLLogarithmicVolumeFluctuation-2026-10-15T042535.985227_0000.log",
+      "log_sha256": "78016ec1adeb44c79001a2b099def96c3ddd94a61d892150f22456e4f2cd9fc1",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.dhl_actual_diameter_logarithmic_volume_fluctuation",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSDHLVolumeLogExponentOptimality",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSDHLVolumeLogExponentOptimality.lean",
+      "source_sha256": "02dd4d2c6d03963713634bf3f6299b6ff7a008197e41c8b45cf8f2790bcd8828",
+      "log": "logs/RequestProject_Section31_EIGSDHLVolumeLogExponentOptimality-2026-10-15T042608.874265_0000.log",
+      "log_sha256": "3424492d6bb4a34269b8b3b6f0b9d34507ec2c2158be68e7de6ebd43a0b5ba81",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.dhl_actual_diameter_volume_log_exponent_optimal",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "RequestProject.Section31.EIGSDHLCommonAEVolumeOptimality",
+      "source": "section3-diffusion/RequestProject/Section31/EIGSDHLCommonAEVolumeOptimality.lean",
+      "source_sha256": "03d43ee9d84a89f06d4fe009cd985b34f78e2b9d1f4277a4b4d17d71c08c3a4d",
+      "log": "logs/RequestProject_Section31_EIGSDHLCommonAEVolumeOptimality-2026-10-15T042641.083034_0000.log",
+      "log_sha256": "5ecc18c57bcc6f333cbfffec0dabd618d72fa667441fe21c3351c6ecbf65f1b6",
+      "exit_code": 0,
+      "audits": [
+        {
+          "declaration": "EIGS.dhl_actual_diameter_common_ae_volume_optimality",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
       "module": "RequestProject.RWDLActualPaper",
       "source": "section3-diffusion/RequestProject/RWDLActualPaper.lean",
-      "source_sha256": "791aad89a70f4699494b3584bb7004c738ca390b7c267f999a26418bc068bd56",
-      "log": "logs/RequestProject_RWDLActualPaper-2026-10-15T031923.004821_0000.log",
-      "log_sha256": "45a2d9019370a04821954212b955687ed679aeffe663c9c2b92d69e3ced3d904",
+      "source_sha256": "beaa15c1206b0f72130cf41c36be4f304842628c6dd82451665cd69f0b3d25cd",
+      "log": "logs/RequestProject_RWDLActualPaper-2026-10-15T043004.199864_0000.log",
+      "log_sha256": "be76b216b54d67a42240b6c5f8c47a78ae34c4ba5aade939860bd14ababa46ed",
       "exit_code": 0,
       "audits": [
         {
@@ -25762,17 +26278,119 @@
             "Classical.choice",
             "Quot.sound"
           ]
-        }
-      ]
-    },
-    {
-      "module": "RequestProject.Section31.EIGSDHLAddressLetters",
-      "source": "section3-diffusion/RequestProject/Section31/EIGSDHLAddressLetters.lean",
-      "source_sha256": "52fefe3b2bf889bd4e149942efa94d8128bbdce63b68a6d433eca13117e9dda5",
-      "log": "logs/RequestProject_Section31_EIGSDHLAddressLetters-2026-10-15T033045.823435_0000.log",
-      "log_sha256": "147db4be91f2ad1cb079f2ec17bb429e45f639df4f4cfdc562fef02553aca178",
-      "exit_code": 0,
-      "audits": [
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_actual_distance_choices_nat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_actual_distance_choices_card",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_pathSelectionMatrix_from_actual_counts",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_actual_distance_choices",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourResistanceRatio_numeric",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_resistanceRate_numeric_precise",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_Psi_first_three_iterates",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_boxFormula_numeric",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_resistanceDimensionFormula_numeric",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_Psi_normalized_iteration_limit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.twoColourSystem_Psi_consecutive_second_coordinate_ratio_limit",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.xiSimpleGraph_admissible_walk_dimension_limit_ge_two",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.uvFlower23_actual_walk_dimension_gt_two",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhl23_actual_walk_dimension_eq_two",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
         {
           "declaration": "EIGS.dhlEdgeOfWord_injective",
           "axioms": [
@@ -25799,6 +26417,198 @@
         },
         {
           "declaration": "EIGS.measurable_dhlAddressOfLetters",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhlEndpointChild_preserves_vertex",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhlRetentionWord_branch",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhlRetentionWord_injective",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhlRetentionWord_preserves_terminal",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhlGoodRetentionWords_card",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhlUniformWordLaw",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhlGoodRetentionWords_mass",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhlLetters_ae_eventually_retention_phase",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhlUniformWord_map_edge",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhlMass_edgeLaw_uniform",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhlLetters_coordinate_law",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhlLetters_map_addressMeasure",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhlAddressOfLetters_block_descendant",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhlLetters_retention_block_incident",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhlVertexIncidence_forward",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhlVertexIncidence_forward_lower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_dhlRetainedStarBallMassLower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.exists_dhl_ae_infinite_geometric_volume_lower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.infinite_geometric_volume_lower_logarithmic",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.logarithmic_volume_lower_excludes_smaller_exponent",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "IGS.Sec31.ae_all_logarithmic_volume_lower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhl_actual_diameter_logarithmic_volume_fluctuation",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhl_actual_diameter_volume_log_exponent_optimal",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "EIGS.dhl_actual_diameter_common_ae_volume_optimality",
           "axioms": [
             "propext",
             "Classical.choice",

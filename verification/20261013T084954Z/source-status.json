@@ -986,7 +986,7 @@
   {
     "source": "section3-diffusion/RequestProject/RWDLActualPaper.lean",
     "module": "RequestProject.RWDLActualPaper",
-    "source_sha256": "791aad89a70f4699494b3584bb7004c738ca390b7c267f999a26418bc068bd56",
+    "source_sha256": "beaa15c1206b0f72130cf41c36be4f304842628c6dd82451665cd69f0b3d25cd",
     "status": "independent_whole_file_passed",
     "in_shared_batch": true,
     "has_independent_receipt": true
@@ -1291,6 +1291,14 @@
     "source": "section3-diffusion/RequestProject/Section31/CoherentPrefixPathLaw.lean",
     "module": "RequestProject.Section31.CoherentPrefixPathLaw",
     "source_sha256": "92bc29c020cfffcf446e01f0af97be3ab783952bd4aff2794754ad484757c71e",
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": true,
+    "has_independent_receipt": true
+  },
+  {
+    "source": "section3-diffusion/RequestProject/Section31/CommonAELogarithmicVolumeLower.lean",
+    "module": "RequestProject.Section31.CommonAELogarithmicVolumeLower",
+    "source_sha256": "aaaa7d659d78f4143bdc53d759a3e0af8e9077330600e5b426df9b0f16bbcddb",
     "status": "independent_whole_file_passed",
     "in_shared_batch": true,
     "has_independent_receipt": true
@@ -2019,9 +2027,9 @@
     "source": "section3-diffusion/RequestProject/Section31/EIGSActualWalkDimensionLowerBound.lean",
     "module": "RequestProject.Section31.EIGSActualWalkDimensionLowerBound",
     "source_sha256": "6f76d1adea4e79af9fc1592139e1ca842fc962d96a8915c02e4ec4aae83c2e34",
-    "status": "not_covered_by_published_receipts",
-    "in_shared_batch": false,
-    "has_independent_receipt": false
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": true,
+    "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSAddressCellAverage.lean",
@@ -2956,64 +2964,80 @@
     "module": "RequestProject.Section31.EIGSDHLAddressLetters",
     "source_sha256": "52fefe3b2bf889bd4e149942efa94d8128bbdce63b68a6d433eca13117e9dda5",
     "status": "independent_whole_file_passed",
-    "in_shared_batch": false,
+    "in_shared_batch": true,
+    "has_independent_receipt": true
+  },
+  {
+    "source": "section3-diffusion/RequestProject/Section31/EIGSDHLCommonAEVolumeOptimality.lean",
+    "module": "RequestProject.Section31.EIGSDHLCommonAEVolumeOptimality",
+    "source_sha256": "03d43ee9d84a89f06d4fe009cd985b34f78e2b9d1f4277a4b4d17d71c08c3a4d",
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": true,
     "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSDHLInfiniteGeometricVolumeLower.lean",
     "module": "RequestProject.Section31.EIGSDHLInfiniteGeometricVolumeLower",
-    "source_sha256": "0ba294d6c8bfcca1db91bc577d4df99f7697810042fea17bc3338c32982f4ab1",
-    "status": "not_covered_by_published_receipts",
-    "in_shared_batch": false,
-    "has_independent_receipt": false
+    "source_sha256": "cc009410ddb0e28883a7853ddb890257cfe6130e986c17cf16ceb54927b628e7",
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": true,
+    "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSDHLLetterAddressLaw.lean",
     "module": "RequestProject.Section31.EIGSDHLLetterAddressLaw",
-    "source_sha256": "7e61d2d9f3a970c12142dcd76f58dffb06cf95d2c49782bb0f8a8462203d73b6",
-    "status": "not_covered_by_published_receipts",
-    "in_shared_batch": false,
-    "has_independent_receipt": false
+    "source_sha256": "8305dfc35a2f1f05a071e1b1a0bc4f2aac3289fad86ade96cf804ebb3c212c0a",
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": true,
+    "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSDHLLogarithmicVolumeFluctuation.lean",
     "module": "RequestProject.Section31.EIGSDHLLogarithmicVolumeFluctuation",
-    "source_sha256": "bf0a896873adafbb8b4e9bdcbcc7ed7046e8339e83907537e5aa4277c2c00722",
-    "status": "not_covered_by_published_receipts",
-    "in_shared_batch": false,
-    "has_independent_receipt": false
+    "source_sha256": "2c81fb825af9c1e15e13a4a003fa28f21bcea591927ed8d1ff52a6009f719063",
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": true,
+    "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSDHLRetainedStarBallMass.lean",
     "module": "RequestProject.Section31.EIGSDHLRetainedStarBallMass",
     "source_sha256": "d2c52e2c0d2486d886479b0e2178aa474ab3019ed53f29643ea87d90bd321fe4",
-    "status": "not_covered_by_published_receipts",
-    "in_shared_batch": false,
-    "has_independent_receipt": false
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": true,
+    "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSDHLRetentionBlockGeometry.lean",
     "module": "RequestProject.Section31.EIGSDHLRetentionBlockGeometry",
-    "source_sha256": "d3f9eb19f3b2bd723d4cf4061584e5de1a4e6fd257dd569c21218c2e26f7eeb6",
-    "status": "not_covered_by_published_receipts",
-    "in_shared_batch": false,
-    "has_independent_receipt": false
+    "source_sha256": "4045d9b2e0edd72ecf59261a9775d7efa94bb9f3370e87372f9623f24fb5aa05",
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": true,
+    "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSDHLRetentionWordMass.lean",
     "module": "RequestProject.Section31.EIGSDHLRetentionWordMass",
-    "source_sha256": "d1c0a63b26fc85d3f1b301fbc38ca803afdc404f80ec424166eb2837ec857e4e",
-    "status": "not_covered_by_published_receipts",
-    "in_shared_batch": false,
-    "has_independent_receipt": false
+    "source_sha256": "34cbbec51f2ecf0de86b1e1ab55b5cac53dfd60be99dbc6c9fad564663168dfc",
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": true,
+    "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSDHLRetentionWords.lean",
     "module": "RequestProject.Section31.EIGSDHLRetentionWords",
-    "source_sha256": "d298b1ab7bb0e2ec50c1c2546199f996e6a2b84bdd2e2050750dd2c759a632fb",
-    "status": "revised_after_failure_not_rechecked",
-    "in_shared_batch": false,
-    "has_independent_receipt": false
+    "source_sha256": "2eaf0bb1eb6daf3bc869a1262c1392beba979a2507d155dc89973c1b24a8073d",
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": true,
+    "has_independent_receipt": true
+  },
+  {
+    "source": "section3-diffusion/RequestProject/Section31/EIGSDHLVolumeLogExponentOptimality.lean",
+    "module": "RequestProject.Section31.EIGSDHLVolumeLogExponentOptimality",
+    "source_sha256": "02dd4d2c6d03963713634bf3f6299b6ff7a008197e41c8b45cf8f2790bcd8828",
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": true,
+    "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSDiameterBallMassOfRules.lean",
@@ -3579,9 +3603,9 @@
     "source": "section3-diffusion/RequestProject/Section31/EIGSFlowerDHL23WalkContrast.lean",
     "module": "RequestProject.Section31.EIGSFlowerDHL23WalkContrast",
     "source_sha256": "a19360242a51c3c35f7bbd2aad48fe58a79f5c043569201e8ce820b2a3d4bbf7",
-    "status": "not_covered_by_published_receipts",
-    "in_shared_batch": false,
-    "has_independent_receipt": false
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": true,
+    "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSFlowerDistanceSpectrum.lean",
@@ -6027,17 +6051,17 @@
     "source": "section3-diffusion/RequestProject/Section31/EIGSTwoColourDisplayedNumerics.lean",
     "module": "RequestProject.Section31.EIGSTwoColourDisplayedNumerics",
     "source_sha256": "61405230aa8710fa5329939ee542182fdae97f06c443b7173a4e057f658aeb0f",
-    "status": "not_covered_by_published_receipts",
-    "in_shared_batch": false,
-    "has_independent_receipt": false
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": true,
+    "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSTwoColourDistanceChoices.lean",
     "module": "RequestProject.Section31.EIGSTwoColourDistanceChoices",
-    "source_sha256": "c441d63f577e5400cd4d9e4248a2fb47bc0182556f902ede4d95d128ecae8b11",
-    "status": "not_covered_by_published_receipts",
-    "in_shared_batch": false,
-    "has_independent_receipt": false
+    "source_sha256": "589721bddd280a010ba39dbdea53c34dfc797d8bd2f6cd9e316a945f74ed861f",
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": true,
+    "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSTwoColourDistanceSpectrum.lean",
@@ -6106,10 +6130,10 @@
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSTwoColourPsiIterationLimits.lean",
     "module": "RequestProject.Section31.EIGSTwoColourPsiIterationLimits",
-    "source_sha256": "7590b0d2edc29c06abd508db4b9896661298b88ee689f15b421808344270793e",
-    "status": "not_covered_by_published_receipts",
-    "in_shared_batch": false,
-    "has_independent_receipt": false
+    "source_sha256": "2d56520f194991da61e24a3bd7a1f95399277f8036b07c7252d639da094d9363",
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": true,
+    "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/EIGSTwoColourResistanceFormula.lean",
@@ -7762,10 +7786,10 @@
   {
     "source": "section3-diffusion/RequestProject/Section31/InfiniteGeometricLogarithmicVolumeLower.lean",
     "module": "RequestProject.Section31.InfiniteGeometricLogarithmicVolumeLower",
-    "source_sha256": "4c59c8ae65327f3e88a21c798b010b4eea8f291ba9054a3ad019f319224219cc",
-    "status": "not_covered_by_published_receipts",
-    "in_shared_batch": false,
-    "has_independent_receipt": false
+    "source_sha256": "ed038bc19986af5b3047bd29a75938fc1b55eca9489e73ed7bb46117517d34bf",
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": true,
+    "has_independent_receipt": true
   },
   {
     "source": "section3-diffusion/RequestProject/Section31/IntegerCrossingRadiusTail.lean",
@@ -7939,6 +7963,14 @@
     "source": "section3-diffusion/RequestProject/Section31/LogarithmicHeatLowerOfPurePower.lean",
     "module": "RequestProject.Section31.LogarithmicHeatLowerOfPurePower",
     "source_sha256": "fb57beacca3845a2482f98297d66cdcf181f0401c64167340eb6dcbfe0d8ec92",
+    "status": "independent_whole_file_passed",
+    "in_shared_batch": true,
+    "has_independent_receipt": true
+  },
+  {
+    "source": "section3-diffusion/RequestProject/Section31/LogarithmicVolumeExponentOptimality.lean",
+    "module": "RequestProject.Section31.LogarithmicVolumeExponentOptimality",
+    "source_sha256": "bc16f0b498065ba7b48a477ba02dc6a5fd748aa325a3edc8805f3c537402811e",
     "status": "independent_whole_file_passed",
     "in_shared_batch": true,
     "has_independent_receipt": true
