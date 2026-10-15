@@ -1,0 +1,6 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSSameKernelPowerHeatOfBallMass.lean:28:25: warning: unused variable `normalizationPositive`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'EIGS.xiSameKernelPowerHeatEstimatesProperties_of_discrete_and_volume' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

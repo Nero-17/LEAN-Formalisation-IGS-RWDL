@@ -1,0 +1,16 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSLocallyFiniteRuleGraphs.lean:125:24: warning: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  simp [degreeMatrix, M̵a̵t̵r̵i̵x̵.̵o̵n̵e̵_̵a̵p̵p̵l̵y̵,̵ ̵counts.1, counts.2.1, counts.2.2.1, counts.2.2.2]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'EIGS.locallyFiniteRuleSystem_connected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.locallyFiniteRuleSystem_loopless' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.locallyFiniteRuleSystem_edgesUnique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.locallyFiniteRuleSystem_plantingNonadjacent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.locallyFiniteRuleSystem_distancePositive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.locallyFiniteRuleSystem_massMatrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.locallyFiniteRuleSystem_terminal_degree_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.locallyFiniteRuleSystem_degreeMatrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.locallyFiniteRuleSystem_degreeSpectralRadius' depends on axioms: [propext, Classical.choice, Quot.sound]

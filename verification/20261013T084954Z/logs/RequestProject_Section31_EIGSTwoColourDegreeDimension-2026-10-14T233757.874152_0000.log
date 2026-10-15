@@ -1,0 +1,18 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSTwoColourDegreeDimension.lean:116:58: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSTwoColourDegreeDimension.lean:116:58: warning: 'positivity' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSTwoColourDegreeDimension.lean:171:60: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSTwoColourDegreeDimension.lean:171:60: warning: 'positivity' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'EIGS.twoColourSystem_normalized_degree_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_degree_dimension_ladder_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_actual_degree_dimension_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_actual_degree_dimension_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_original_degree_dimension_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.twoColourSystem_original_degree_dimension_limsup' depends on axioms: [propext, Classical.choice, Quot.sound]

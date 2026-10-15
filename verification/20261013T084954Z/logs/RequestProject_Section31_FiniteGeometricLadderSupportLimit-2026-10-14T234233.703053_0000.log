@@ -1,0 +1,5 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\FiniteGeometricLadderSupportLimit.lean:65:5: warning: unused variable `coefficientPositive`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'EIGS.finite_geometric_ladder_support_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.geometric_ladder_occupied_support_accumulates' depends on axioms: [propext, Classical.choice, Quot.sound]

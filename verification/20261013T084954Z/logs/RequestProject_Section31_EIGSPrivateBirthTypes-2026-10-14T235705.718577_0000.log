@@ -1,0 +1,5 @@
+'EIGS.xiPrivateBirthTypeFiberEquiv' depends on axioms: [propext, Quot.sound]
+'EIGS.xiPrivateBirthType_fiber_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiPrivateBirthType_occurs_at_level_one' depends on axioms: [propext, Quot.sound]
+'EIGS.xiPrivateBirthType_weight_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiDegreeLimitAmplitude_private_birth' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,3 @@
+'EIGS.Network.potential_energy_bounds_of_resistance_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSimpleGraph_fixed_pair_resistance_comparison' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSimpleGraph_fixed_pair_resistance_canonical_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]

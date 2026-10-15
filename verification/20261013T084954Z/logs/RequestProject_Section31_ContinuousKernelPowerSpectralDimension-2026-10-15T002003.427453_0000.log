@@ -1,0 +1,3 @@
+'IGS.Sec31.positiveKernelRealDiagonal_spectral_dimension_of_power_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

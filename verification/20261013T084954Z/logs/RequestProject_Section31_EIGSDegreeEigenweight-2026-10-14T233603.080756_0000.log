@@ -1,0 +1,3 @@
+'EIGS.xiPrivateBirthWeightBound_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.private_vertex_degree_weight_le_birth_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.degree_eigenweight_forward' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,16 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\ContinuousKernelPowerBoundsOfBallMass.lean:136:89: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\ContinuousKernelPowerBoundsOfBallMass.lean:136:89: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\ContinuousKernelPowerBoundsOfBallMass.lean:136:24: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'IGS.Sec31.ball_mass_power_upper_all_radii_of_local' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.diagonal_power_lower_of_inverse_ball_and_volume_upper' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.diagonal_power_two_sided_of_inverse_ball_and_volume_upper' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

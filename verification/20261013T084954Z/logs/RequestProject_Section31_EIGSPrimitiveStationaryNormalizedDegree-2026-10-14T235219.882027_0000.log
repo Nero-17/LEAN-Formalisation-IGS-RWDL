@@ -1,0 +1,2 @@
+'EIGS.xiActualMaxNormalizedDegree_eq_normalized_quotient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.primitive_degree_stationary_normalized_limit' depends on axioms: [propext, Classical.choice, Quot.sound]

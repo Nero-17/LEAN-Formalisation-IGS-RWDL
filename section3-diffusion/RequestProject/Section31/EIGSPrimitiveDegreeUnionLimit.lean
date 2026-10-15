@@ -84,7 +84,8 @@ theorem primitive_degree_vertex_union_normalized_limit (system : EIGSData K)
   apply (tendsto_add_atTop_iff_nat (xiUnionBirth system vertex)).mp
   have shifted := actual.2.div_const
     ((finiteRealMatrixSpectralRadius (degreeMatrix system)) ^ xiUnionBirth system vertex)
-  simpa only [xiNormalizedDegreeAtLevel_age_identity, xiDegreeLimitAmplitude, Nat.add_comm] using shifted
+  simpa only [Nat.add_comm _ (xiUnionBirth system vertex),
+    xiNormalizedDegreeAtLevel_age_identity, xiDegreeLimitAmplitude] using shifted
 
 end
 end EIGS

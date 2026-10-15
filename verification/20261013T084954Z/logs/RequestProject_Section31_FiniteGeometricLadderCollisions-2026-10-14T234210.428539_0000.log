@@ -1,0 +1,3 @@
+'EIGS.geometric_ladder_level_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.finite_geometric_ladder_fiber_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.finite_geometric_ladder_collision_offsets' depends on axioms: [propext, Classical.choice, Quot.sound]

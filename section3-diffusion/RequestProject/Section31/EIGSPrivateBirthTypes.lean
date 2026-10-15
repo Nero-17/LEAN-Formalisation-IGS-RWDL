@@ -38,8 +38,9 @@ def xiPrivateBirthTypeFiberEquiv (system : EIGSData K) (level : ℕ)
     cases sameColour
     have sameVertex : vertex = privateVertex :=
       eq_of_heq (Sigma.mk.inj_iff.1 sameType).2
-    subst vertex
-    rfl
+    apply Subtype.ext
+    change (⟨edge, privateVertex⟩ : XiNewVertices system level) = ⟨edge, vertex⟩
+    exact congrArg (fun value => (⟨edge, value⟩ : XiNewVertices system level)) sameVertex.symm
   right_inv := by
     rintro ⟨edge, sameColour⟩
     cases sameColour
@@ -91,7 +92,7 @@ theorem xiPrivateBirthType_weight_positive (system : EIGSData K)
     0 < xiRuleDegreeWeight system weights kind.1 kind.2.val := by
   obtain ⟨vertex, sameType⟩ := xiPrivateBirthType_occurs_at_level_one system connected distancePositive kind
   have positive := degVec_weighted_positive system connected 2 (Sum.inr vertex) weights weightsPositive
-  rw [show 2 = 1 + 1 from rfl, private_vertex_degree_weight_eq_rule_weight, sameType] at positive
+  rw [private_vertex_degree_weight_eq_rule_weight system weights 1 vertex, sameType] at positive
   exact positive
 
 theorem xiDegreeLimitAmplitude_private_birth (system : EIGSData K)

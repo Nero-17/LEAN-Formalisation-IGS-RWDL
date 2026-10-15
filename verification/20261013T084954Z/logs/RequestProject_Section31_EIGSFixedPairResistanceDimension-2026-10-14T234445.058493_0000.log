@@ -1,0 +1,3 @@
+'EIGS.xiSimpleGraph_fixed_pair_distance_canonical_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSimpleGraph_fixed_pair_resistance_dimension_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiSimpleGraph_fixed_pair_resistanceDimension_eq' depends on axioms: [propext, Classical.choice, Quot.sound]

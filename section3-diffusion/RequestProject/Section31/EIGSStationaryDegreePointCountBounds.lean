@@ -85,8 +85,7 @@ theorem xiStationaryDegree_point_count_bounds (system : EIGSData K)
         {vertex : XiVertexUnion system //
           xiStationaryDegreeFromAmplitudes system weights coefficient rate normalizer vertex = value} :=
       fun vertex => ⟨Sum.inr ⟨level, vertex.val⟩, by
-        rw [xiStationaryDegree_private_birth_formula, vertex.property]
-        rfl⟩
+        rw [xiStationaryDegree_private_birth_formula, vertex.property]⟩
     have injective : Function.Injective embed := by
       intro first second equality
       apply Subtype.ext
@@ -127,6 +126,8 @@ theorem xiStationaryDegree_point_count_bounds (system : EIGSData K)
         (Fintype.card (XiStationaryDegreeCode system weights coefficient rate normalizer value) : ℝ) ≤
           (Fintype.card (XiPrivateBirthType system) : ℝ) := by
       have bound := (finite_geometric_ladder_fiber_bound coefficients coefficientsPositive rate rateGreaterThanOne value).2
+      change Nat.card (XiStationaryDegreeCode system weights coefficient rate normalizer value) ≤
+        Fintype.card (XiPrivateBirthType system) at bound
       rw [Nat.card_eq_fintype_card] at bound
       exact_mod_cast bound
     calc
@@ -138,7 +139,8 @@ theorem xiStationaryDegree_point_count_bounds (system : EIGSData K)
       _ = 2 + (Fintype.card (XiStationaryDegreeCode system weights coefficient rate normalizer value) : ℝ) *
           (upper * mass.rate ^ (level + offset)) := by simp only [Finset.sum_const, Finset.card_univ, nsmul_eq_mul]
       _ ≤ 2 + (Fintype.card (XiPrivateBirthType system) : ℝ) * (upper * mass.rate ^ (level + offset)) :=
-        add_le_add_left (mul_le_mul_of_nonneg_right codeCard (by positivity)) _
+        add_le_add le_rfl (mul_le_mul_of_nonneg_right codeCard
+          (mul_nonneg upperPositive.le (pow_nonneg mass.rate_positive.le _)))
       _ ≤ (2 + (Fintype.card (XiPrivateBirthType system) : ℝ) * upper * mass.rate ^ offset) * mass.rate ^ level := by
         rw [pow_add]
         have oneBound : (1 : ℝ) ≤ mass.rate ^ level := one_le_pow₀ massAtLeastOne

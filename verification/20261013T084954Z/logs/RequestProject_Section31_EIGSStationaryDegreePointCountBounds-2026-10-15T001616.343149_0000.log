@@ -1,0 +1,2 @@
+'EIGS.xiPrivateBirthType_nonempty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiStationaryDegree_point_count_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]

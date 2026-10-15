@@ -24,17 +24,23 @@ theorem twoColourSystem_degree_multiplicity_growth (kind : Bool) (level : ℕ) :
   cases kind
   · cases level with
     | zero =>
-        change (3 + Real.sqrt 6) ^ 0 / 2 ≤ (twoColourDegreeMultiplicity (2 / 3) : ℝ) ∧ _
+        have zeroValue : twoColourDegreeSupportValue (false, 0) = (2 / 3 : ℝ) := by
+          norm_num [twoColourDegreeSupportValue]
+        rw [zeroValue]
         rw [twoColourSystem_degree_two_zero_multiplicity]
         norm_num [chiCount_zero, twoColourSystem, EIGSData.toRuleData]
     | succ level =>
         change (3 + Real.sqrt 6) ^ (level + 1) / 2 ≤
-          (twoColourDegreeMultiplicity ((2 / 3) / (2 : ℝ) ^ (level + 1)) : ℝ) ∧ _
+          (twoColourDegreeMultiplicity ((2 / 3) / (2 : ℝ) ^ (level + 1)) : ℝ) ∧
+          (twoColourDegreeMultiplicity ((2 / 3) / (2 : ℝ) ^ (level + 1)) : ℝ) ≤
+            4 * (3 + Real.sqrt 6) ^ (level + 1)
         rw [twoColourSystem_degree_two_positive_multiplicity]
         simp only [Nat.cast_add, Nat.cast_mul, Nat.cast_ofNat]
         constructor <;> nlinarith
   · change (3 + Real.sqrt 6) ^ level / 2 ≤
-      (twoColourDegreeMultiplicity (1 / (2 : ℝ) ^ level) : ℝ) ∧ _
+      (twoColourDegreeMultiplicity (1 / (2 : ℝ) ^ level) : ℝ) ∧
+      (twoColourDegreeMultiplicity (1 / (2 : ℝ) ^ level) : ℝ) ≤
+        4 * (3 + Real.sqrt 6) ^ level
     rw [twoColourSystem_degree_three_multiplicity]
     simp only [Nat.cast_mul, Nat.cast_ofNat]
     constructor <;> nlinarith
@@ -58,7 +64,7 @@ theorem twoColourSystem_normalized_degree_range :
 theorem twoColourDegreeSupport_inverse (kind : Bool) (level : ℕ) :
     (twoColourDegreeSupportValue (kind, level))⁻¹ =
       (if kind then 1 else (3 / 2 : ℝ)) * (2 : ℝ) ^ level := by
-  cases kind <;> simp [twoColourDegreeSupportValue, div_eq_mul_inv]
+  cases kind <;> simp [twoColourDegreeSupportValue, div_eq_mul_inv, mul_comm]
 
 theorem twoColourSystem_degree_dimension_ladder_limit (kind : Bool) :
     Tendsto (fun level : ℕ =>
@@ -84,8 +90,14 @@ theorem twoColourSystem_degree_dimension_ladder_limit (kind : Bool) :
     (by positivity) (by norm_num) (by norm_num) (by norm_num)
     coefficientPositive coefficientPositive radiusTendsto
     (Eventually.of_forall (fun level => by
-      simpa only [div_eq_mul_inv, mul_comm] using twoColourSystem_degree_multiplicity_growth kind level))
-    (Eventually.of_forall (fun level => by rw [twoColourDegreeSupport_inverse]; exact ⟨le_rfl, le_rfl⟩))
+      simpa only [div_eq_mul_inv, mul_comm, one_mul] using twoColourSystem_degree_multiplicity_growth kind level))
+    (Eventually.of_forall (fun level => by
+      change (if kind then 1 else (3 / 2 : ℝ)) * (2 : ℝ) ^ level ≤
+          (twoColourDegreeSupportValue (kind, level))⁻¹ ∧
+        (twoColourDegreeSupportValue (kind, level))⁻¹ ≤
+          (if kind then 1 else (3 / 2 : ℝ)) * (2 : ℝ) ^ level
+      rw [twoColourDegreeSupport_inverse]
+      exact ⟨le_rfl, le_rfl⟩))
   simpa only [Real.log_inv] using actual
 
 theorem twoColourDegreeSupport_limit_of_ladder_limits {function : ℝ → ℝ} {value : ℝ}

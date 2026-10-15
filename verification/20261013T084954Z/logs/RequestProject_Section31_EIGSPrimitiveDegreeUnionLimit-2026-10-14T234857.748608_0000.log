@@ -1,0 +1,3 @@
+'EIGS.xiVertexAtLevel_forward_from_birth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNormalizedDegreeAtLevel_embedding' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.primitive_degree_vertex_union_normalized_limit' depends on axioms: [propext, Classical.choice, Quot.sound]

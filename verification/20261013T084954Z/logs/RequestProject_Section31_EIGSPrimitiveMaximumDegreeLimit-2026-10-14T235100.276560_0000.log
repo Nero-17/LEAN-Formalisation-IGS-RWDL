@@ -1,0 +1,3 @@
+'EIGS.xiUnion_early_birth_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiNormalizedDegreeAtLevel_graph_maximum_attained' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.primitive_degree_actual_maximum_normalized_limit' depends on axioms: [propext, Classical.choice, Quot.sound]

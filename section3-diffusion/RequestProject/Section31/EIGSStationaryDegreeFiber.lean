@@ -28,8 +28,8 @@ def xiStationaryDegreeFiberEquiv (system : EIGSData K)
     obtain ⟨vertex, sameValue⟩ := vertex
     cases vertex with
     | inl initial => exact Sum.inl ⟨initial, sameValue⟩
-    | inr private =>
-      obtain ⟨level, privateVertex⟩ := private
+    | inr privateBirth =>
+      obtain ⟨level, privateVertex⟩ := privateBirth
       refine Sum.inr ⟨⟨(xiPrivateBirthTypeOf system level privateVertex, level), ?_⟩,
         ⟨privateVertex, rfl⟩⟩
       exact (xiStationaryDegree_private_birth_formula system weights coefficient rate normalizer
@@ -37,8 +37,8 @@ def xiStationaryDegreeFiberEquiv (system : EIGSData K)
   invFun := fun vertex => by
     cases vertex with
     | inl initial => exact ⟨Sum.inl initial.val, initial.property⟩
-    | inr private =>
-      obtain ⟨code, privateVertex⟩ := private
+    | inr privateBirth =>
+      obtain ⟨code, privateVertex⟩ := privateBirth
       refine ⟨Sum.inr ⟨code.val.2, privateVertex.val⟩, ?_⟩
       rw [xiStationaryDegree_private_birth_formula, privateVertex.property]
       exact code.property
@@ -47,8 +47,15 @@ def xiStationaryDegreeFiberEquiv (system : EIGSData K)
   right_inv := by
     rintro (⟨initial, sameValue⟩ | ⟨⟨⟨kind, level⟩, sameValue⟩, ⟨privateVertex, sameType⟩⟩)
     · rfl
-    · cases sameType
-      rfl
+    · apply congrArg Sum.inr
+      apply Sigma.ext
+      · apply Subtype.ext
+        exact Prod.ext sameType rfl
+      · exact (Subtype.heq_iff_coe_eq (fun vertex => by
+          change xiPrivateBirthTypeOf system level vertex =
+              xiPrivateBirthTypeOf system level privateVertex ↔
+            xiPrivateBirthTypeOf system level vertex = kind
+          rw [sameType])).2 rfl
 
 theorem xiStationaryDegree_fiber_finite (system : EIGSData K)
     (connected : ∀ colour, (ruleSG system colour).Connected)

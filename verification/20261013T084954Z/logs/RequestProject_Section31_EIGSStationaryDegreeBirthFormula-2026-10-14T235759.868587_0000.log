@@ -1,0 +1,4 @@
+'EIGS.xiStationaryDegree_private_birth_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiDegreeLimitAmplitude_initial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiPrivateDegreeLadderCoefficient_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.primitive_rules_explicit_stationary_degree' depends on axioms: [propext, Classical.choice, Quot.sound]

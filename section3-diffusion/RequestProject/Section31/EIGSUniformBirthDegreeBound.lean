@@ -10,7 +10,7 @@ Candidate source. -/
 
 namespace EIGS
 open Filter Topology
-open scoped BigOperators
+open scoped BigOperators Classical
 noncomputable section
 variable {K : ℕ}
 
@@ -20,7 +20,7 @@ theorem degree_initial_eigenweight (system : EIGSData K)
       if vertex then weights (Sum.inr system.initCol) else weights (Sum.inl system.initCol) := by
   cases vertex <;>
     simp [degVec, outDeg, inDeg, Fintype.sum_sum_type, XiTail, XiHead, XiEnds,
-      XiCol, XiLvl, XiEdge, Finset.card_filter, eq_comm]
+      XiCol, XiLvl, XiEdge, EIGSData.toRuleData, apply_ite, ite_mul, eq_comm]
 
 theorem xiPrivateBirthWeightBound_ge_one (system : EIGSData K)
     (weights : Fin K ⊕ Fin K → ℝ) (nonnegative : ∀ state, 0 ≤ weights state) :
@@ -58,7 +58,7 @@ theorem degree_weight_uniform_birth_bound (system : EIGSData K)
       intro vertex
       rcases vertex with vertex | ⟨edge, privateVertex⟩
       · have oneStep := degree_eigenweight_forward system weights rate eigenpair level 1 vertex
-        simp only [xiForward, pow_one] at oneStep
+        simp only [xiForward, pow_one, id_eq] at oneStep
         rw [oneStep]
         have birthLe := xiUnionBirth_embedding_le system level vertex
         have exponentIdentity :
