@@ -1,0 +1,13 @@
+--- 3d5c73a
++++ 6367f7e
+@@ -847,8 +847,8 @@
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \subsection{Lean formalisation}\label{subsec:formalisation}
+ \begingroup\color{red}
+-We have formalised the graph, diffusion and percolation results listed in the accompanying verification inventory in Lean~4.28.0, using \texttt{mathlib} revision \texttt{8f9d9cff6bd7}.
+-The published successful compilation records and theorem audits certify the listed proofs without \texttt{sorryAx}, using only \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}, with no additional mathematical axioms.
++We have formalised the graph, diffusion and percolation results marked as verified in the accompanying inventory in Lean~4.28.0, using \texttt{mathlib} revision \texttt{8f9d9cff6bd7}.
++The published successful compilation records and theorem audits certify these proofs without \texttt{sorryAx}, using only \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}, with no additional mathematical axioms.
+ This is a partial formalisation of Sections~\ref{sec:random_walks}--\ref{sec:percolation}: the general primitive degree-multiplicity identification, the locally finite Laakso and canonical $\Xi$ heat-kernel examples, and the final full-scope audit remain outstanding; the random-geometric and diffusion conjectures in Subsection~\ref{subsec:dhl_cluster} are not claimed as proved.
+ The initial formalisation was developed with Aristotle (Harmonic)~\cite{achim2025aristotle}, with subsequent extensions developed using Codex.
+ The code and the exact verification inventory are available at the following repository (commit \texttt{85bf1f7ab10c}):

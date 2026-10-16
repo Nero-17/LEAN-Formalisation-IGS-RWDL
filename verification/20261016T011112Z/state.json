@@ -1,0 +1,25 @@
+{
+  "start_utc": "2026-10-16T01:11:12Z",
+  "round": "20261016T011112Z",
+  "drive": "deferred by user",
+  "github_main": "02543484699750a3ebf13bdc739a4f665c248d88",
+  "overleaf": "6367f7e0e6f1d4454182fdd9d97ca0081c110896",
+  "current_sha256": "f96f3277e0e5649fb364de6f6a67834046ec8308ba7832159648634a2fb9f750",
+  "baseline_sha256": "b5628096487efaba69cf1244f1f806bde2b3878f08c2626903919d2ac88dc240",
+  "status": "correspondence-audit-complete-with-explicit-open-items",
+  "overleaf_initial": "3d5c73a093cdc9fc20d9cb1ae5fde383de67bc83",
+  "initial_sha256": "d1d9f600876fdc97ece946111e17d2436dcd9866ad723934e97828aeef323d8d",
+  "incremental_review": "Only formalization subsection wording at lines850-851 changed; mathematical text, labels and proof lines unchanged.",
+  "audit_end_utc": "2026-10-16T01:31:29.761446+00:00",
+  "fresh_umbrella": {
+    "start_utc": "2026-10-16T01:17:04.690741+00:00",
+    "end_utc": "2026-10-16T01:30:30.309369+00:00",
+    "exit_code": 0,
+    "source_sha256": "beaa15c1206b0f72130cf41c36be4f304842628c6dd82451665cd69f0b3d25cd",
+    "source_unchanged": true,
+    "log_sha256": "9bb7b84340fee808787e130c4c8550779ff7355c51777247ab97444ecb597208",
+    "scope": "Fresh umbrella elaboration against existing compiled dependencies; not a full dependency rebuild.",
+    "axiom_audits": 135,
+    "only_standard_axioms": true
+  }
+}

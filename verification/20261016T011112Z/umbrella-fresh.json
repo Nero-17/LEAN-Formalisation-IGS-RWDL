@@ -1,0 +1,11 @@
+{
+  "start_utc": "2026-10-16T01:17:04.690741+00:00",
+  "end_utc": "2026-10-16T01:30:30.309369+00:00",
+  "exit_code": 0,
+  "source_sha256": "beaa15c1206b0f72130cf41c36be4f304842628c6dd82451665cd69f0b3d25cd",
+  "source_unchanged": true,
+  "log_sha256": "9bb7b84340fee808787e130c4c8550779ff7355c51777247ab97444ecb597208",
+  "scope": "Fresh umbrella elaboration against existing compiled dependencies; not a full dependency rebuild.",
+  "axiom_audits": 135,
+  "only_standard_axioms": true
+}

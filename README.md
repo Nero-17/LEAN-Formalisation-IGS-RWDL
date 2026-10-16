@@ -1,5 +1,9 @@
 # LEAN Formalisation — IGS / RWDL
 
+## Current Overleaf audit — 2026-10-16
+
+The [current-manuscript correspondence audit](verification/20261016T011112Z/REPORT.md) checks Overleaf commit `6367f7e` against the published Lean results. **Literal full-text formalization is not certified.** It records explicit rule-connectivity and scope issues, four groups of formal-export/proof bridges not located, and alternative proof routes with matching formal endpoints. The previously listed primitive-degree and two locally finite example gaps are already covered. The older completion wording below applies only to its recorded interpretation/snapshot and must not be read as overriding the current audit.
+
 Lean 4 development for *Iterated Graph Systems (I): random walks and diffusion limits* (arXiv:2603.13798).
 
 The actual-model interfaces for the corrected manuscript have passed the statement-level coverage audit and the recorded joint verification. This development also contains exploratory, failed and unverified sources. See [FORMALIZATION_AUDIT.md](FORMALIZATION_AUDIT.md) and the [per-source status](verification/20261013T084954Z/source-status.json) for the exact boundary. No unfiltered full-source build or proof of the Outlook conjectures is claimed.

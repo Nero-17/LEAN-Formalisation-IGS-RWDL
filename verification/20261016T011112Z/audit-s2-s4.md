@@ -1,0 +1,88 @@
+# Current manuscript correspondence audit: Sections 2 and 4, examples and scope
+
+Read-only audit of `CMP.current.tex`, SHA256 `d1d9f600876fdc97ece946111e17d2436dcd9866ad723934e97828aeef323d8d`. No manuscript or Lean source was modified. Paths below are relative to `work/IGS-RWDL-LEAN`; manuscript line numbers refer to the frozen current file. The two 2026-10-15 completion reports were used as navigation only; actual current declarations and newer four-colour sources were read. This is a statement/hypothesis/route audit, not a fresh compiler certificate or an exhaustive reconstruction of every dependency proof.
+
+## Findings requiring scope clarification
+
+1. **Explicit rule connectivity is missing/ambiguous in the manuscript domain.** Definition EIGS at 409–419 says finite directed rule graphs and at most one edge between distinct vertices; it does not explicitly require connected underlying graphs or absence of isolated vertices. Standing canonicality at 590 quantifies over edges, so it does not remove isolated vertices. The generic convention at 585 says a graph denoted `G` in a general graph-theoretic setting is connected, which may have been intended to cover the rules, but is not an explicit condition on every directed `R_i`.
+
+   A concrete literal countermodel to implication of connectivity is a one-colour four-cycle, oriented cyclically, with opposite planting vertices, together with an isolated vertex. Every edge lies on a simple path between the planting vertices; terminal distance is two; the incidence matrix is `[[1,1],[1,1]]`, hence primitive. It satisfies every explicit numbered EIGS condition but its rule is disconnected, and each substitution retains isolated vertices. The actual Lean consumers take the missing condition explicitly: `EIGSActualEinsteinRelationOfRules.lean:20`, `EIGSUniformBirthDegreeGrowth.lean:70`, `EIGSActualRecurrenceCriterion.lean:62`, and the general heat/process consumers all require `∀ colour, (ruleSG system colour).Connected`. Make this explicit before claiming exact domain equivalence. Canonicality excludes loop edges under the usual simple-path meaning; it does **not** exclude isolated vertices.
+
+2. **The sentence “a unified formula covers all EIGS” at 717 is broader than the actual checked families.** It reverted the baseline's explicit restriction to standing hypotheses or separately stated example assumptions. The actual general driver `EIGSOriginalDegreeFullHeatPhysicalOfRules.lean:341` takes connected, loopless, unique, nonadjacent, distance-positive rules and primitive degree. Separate drivers cover Figure 3, the two literal locally finite rules, equal-length DHL and two-path flowers. These do not imply every reducible/nonprimitive EIGS or the flower `u=1` metric regime. This is a concrete scope overstatement; it is not repaired by setting degree dimension to infinity.
+
+3. **Figure 3 falls outside the standing primitive-degree hypothesis; its endpoint is nevertheless separately proved.** The displayed matrix at 1421–1434 has an invariant coordinate; `EIGSTwoColourMatrixSpectra.lean:95` proves `twoColourSystem_degree_not_primitive`. Current example 4447 says “Applying Theorem diffusion-spectral”, whose general domain retains standing hypotheses. The specialized theorem `EIGSTwoColourOriginalDegreeFullHeatPhysical.lean:346` proves this actual example without primitive degree, so this is an applicability/exposition gap in that proof sentence, rather than missing endpoint mathematics. The example should explicitly invoke its separate positive-eigenpair/degree-distribution route. The locally finite table examples similarly use separate rule-specific drivers, not the primitive general theorem.
+
+4. **Two broad introductory background sentences are not current Lean theorems.** At 576, “In the random coloured setting, the same interpretation holds with the spectral radii of the expectations of random matrices” is cited background. No unrestricted random mass/degree/distance identification with those expected radii occurs in the inspected consumers. The current Outlook correctly requires further almost-sure geometric estimates before interpreting its finite mean-matrix ratios as dimensions. The background sentence should carry the needed random branching/environment assumptions or be limited to the cited model. At 609, “rho(Psi)>1 ... canonical ... makes no difference to most ... scaling exponents” is also not a precise formalized theorem: “most” does not specify a domain or list of conclusions. It cannot be included in a literal all-assertions certificate without a precise formulation. These are distinct from the well-scoped numbered statements.
+
+## Section 2 endpoints and changed recurrence proof
+
+The inventory marks only `prop:asymp_res_recurrence_rhoPsi` as a changed proof in Section 2. Its statement remains the fractional-eccentricity-ball definition, not a new claim about a separately constructed infinite locally finite Markov chain.
+
+Direct reading of `EIGSActualRecurrenceCriterion.lean` confirms:
+
+- `xiFractionalEccentricityBallResistance` at 21 uses the actual simple graph, actual ball and fraction times actual eccentricity.
+- `xiActualRecurrent` at 39 quantifies every birth, every vertex and every fraction in `(0,1)`.
+- `xiFractionalEccentricityBallResistance_tendsto_of_one_lt` at 75 derives divergence from rule geometry and spectral bounds.
+- The converse at 146 constructs one actual fraction and center with a uniform upper bound.
+- `xiActualRecurrent_iff_resistanceSpectralRadius_gt_one` at 229 gives the exact endpoint; no recurrence or target resistance-scale conclusion is supplied as input.
+
+The revised manuscript 2177–2214 averages energy-minimizing cell flows with equal weights; cells are edge-disjoint and all other endpoints are outside the ball. This is consistent with the actual star/grounded-resistance route. No new hypothesis mismatch was located beyond rule connectivity. A minor strictness point in the unchanged first case says `diam(H) ≤ r_n` implies the entire cell lies in the **open** ball; this implication is false at equality. Choosing the buffer with a strict inequality (possible because the distance rate exceeds one) fixes the written argument. The formal actual-ball endpoint is not dependent on this prose equality shortcut.
+
+Other Section 2 statements are unchanged apart from corrected exact numerics and flower/DHL wording. Re-inspected representative actual public statements and their domains:
+
+| Requirement | Actual source/endpoint | Domain/quantifier check |
+|---|---|---|
+| Full finite-network resistance, diagonal/disconnected branches | `Section2ExtendedResistance.lean`, `extendedEffRes_self`, `extendedEffRes_eq_top_iff_not_reachable`, `extendedEffRes_eq_ofReal` | Extended-valued definition and equality with connected real branch, not a disconnected default real zero. |
+| Positive nonlinear eigenpair, uniqueness, normalized iterate limit | `Section2PerronConvergence.lean`, `distance_positive_normalized_eigenpair_exists_unique`, `distance_positive_normalized_iterate_limit` | Rule-map endpoint; no supplied target convergence. |
+| Basic mass/distance/degree growth | `EIGSBasicPropertiesOfRules`, `EIGSUniformBirthDegreeGrowth.lean:69` | Constants precede all generations and birth points; degree needs primitive matrix. |
+| Local mass/resistance dimensions | `EIGSLocalDimensions`, imported by actual umbrella | Actual fixed-radius simple-graph quantities. |
+| Fixed-pair resistance dimension | `EIGSFixedPairResistanceDimension`, `xiSimpleGraph_fixed_pair_resistance_dimension_limit` | Arbitrary fixed distinct pair at arbitrary coarse level; not merely initial terminal pair. |
+| Einstein and walk lower bound | `EIGSActualEinsteinRelationOfRules.lean:19`, `EIGSActualWalkDimensionLowerBound` | Actual expected ball-exit time and admissible mesoscopic radius window; not every arbitrary radius sequence. |
+
+The paper's radius-window restrictions must remain; no new Section 2 assertion for arbitrary radius sequences was inferred.
+
+## Section 4: the newest oriented model chain was inspected
+
+An initial search of the old `FourColourRuleAudit`/`FourColourTerminalAudit` alone suggested a missing graph-law identification. **That preliminary suggestion is withdrawn.** The newer sources below supersede those historical partial audits. Their statements cover the new manuscript's oriented conditional proof route:
+
+| Current paper requirement | Current actual declaration/evidence |
+|---|---|
+| Exact conditional probabilities from all 16 Bernoulli patterns | `FourColourConditionalRules.lean:101`, `conditional_figure_probabilities`; critical specialization at 119. |
+| Green orientation is active-to-inactive | `FourColourOrientationCandidate.lean:73`, `all_conditional_configuration_states`; actual child-component bridge in `FourColourActualCellComponents`. |
+| All-depth conditional states and actual child independence | `FourColourConditionalHierarchy`, `actual_oriented_states_all_depths`, `actual_child_conditional_independence`; event measures are constructed from actual Bernoulli configurations. |
+| Explicit independent branching law | `FourColourBranchingLaw.lean`, `encodedLaw_recursion`, `actual_encodedLaw_eq_ruleTreeLaw` at 145. |
+| Actual retained graph and source-cluster isomorphism | `FourColourGraphRealization`, `actualRealizationIso`; `FourColourClusterIsomorphism`, `actualRedClusterIso`; inactive isolated ambient vertices are removed in the source-cluster graph. |
+| Finite graph law, including incidence/marked-terminal network structure | `FourColourActualGraphLaw.lean:40`, `actual_retainedNetworkLaw`; actual red source cluster law at 59. |
+| Consistency under actual coarse refinement | `FourColourProjectiveConsistency.lean:50`, `truncateRuleTree_encode`; `ruleTreeLaw_map_truncate`. |
+| Complete coupled law, not just separate finite marginals | `FourColourInfiniteProcess.lean:169`, `nested_encoded_full_process_law`; arbitrary finite joint law at 175; original infinite configuration process at 194. |
+
+No statement-level gap was located in the newly added manuscript finite/joint oriented coding assertion after this full chain was inspected. This audit does not assert these newer files are in the old `RWDLActualPaper` umbrella: compilation/accepted closure must be established from their own latest receipts by the integration audit. Source existence alone is not a receipt.
+
+## Section 4 revised proofs versus proved endpoints
+
+| Paper label/current proof | Actual endpoint and proof-route distinction |
+|---|---|
+| `prop:dhl_reduction` | `Cluster/FullProcessLaw.lean:77,107` proves equality of the full resistance-sequence measures for separately constructed actual cluster and reduced networks. This is stronger than one-level marginal equality. |
+| `lem:annealed_exponent`, 4680–4697 | `Reduced/Capstone.lean:50`, `reduced_annealed_exponent`; actual means identified in `Cluster/InfiniteConsequences.lean:121`, `nested_network_mean_submultiplicative`. The new paper uses conditional Jensen on arbitrary fixed networks. Lean `Reduced/Submultiplicative.lean:767` derives the same submultiplicativity through increasing-concave order of scalar recursive laws. The arbitrary-network conditional-Jensen presentation itself is not separately certified by that theorem. Endpoint is covered without target submultiplicativity assumed. |
+| `lem:logistic_product`, 4720–4750 | `Reduced/ExactLogisticProduct.lean:41`, `logistic_product_exact_rational`; actual observable transport `Cluster/ExactNetworkLogisticProduct.lean:25`. Paper restricts `n≥1` to get a strictly positive denominator; Lean handles the zero-denominator branch too, hence has broader parameter/generation scope. |
+| `lem:uniform_product`, three ranges | Actual `nested_network_uniform_product` in `InfiniteConsequences.lean:104`; scalar proofs `Moments.lean:1092`, `Cases23.lean:509,631,674`, `AllParameters.lean:49`. Case 3's mean monotonicity is derived for actual networks, not retained as a final theorem hypothesis. Paper case 2 derivative-based rational closing argument differs from Lean `case2_close`, which uses a polynomial decomposition, while the same closing inequality is proved. I checked the displayed polynomial endpoint algebra and found no discrepancy. |
+| `thm:reduced_quenched_exponent`, new Markov-around-log-mean route | `nested_network_original_observables_p` in `InfiniteConsequences.lean:153` uses only `0<p<1` and proves AE log resistance, log expected resistance and expected log resistance all have the same exponent. Lean `Reduced/Limit.lean` centers concentration at the expected logarithm, then compares it with logarithm of the mean. The new shorter direct Markov presentation is a different proof route, not a missing endpoint. |
+| `prop:alpha_pc_positive` | `Cluster/InfiniteProcess.lean`, `nested_critical_cluster_original_observables`, exact positive lower bound `log((14-4 sqrt 5)/3)`. It does not certify alpha≈0.5631. |
+| `prop:no_deterministic_limit` | `InfiniteConsequences.lean`, `nested_network_no_deterministic_limit`, `nested_critical_cluster_no_deterministic_limit`: positive scaling, deterministic nonnegative limiting constant implies zero. It does not rule out random limits or zero limits. |
+
+## Examples, displayed matrices and tables
+
+- The current two-colour exact resistance expression at 1473 retains `log rho(Psi)/log 2`, avoiding equality with a rounded rate. Exact six distance matrices and their actual selection-map range are handled by `EIGSTwoColourDistanceChoices`; first three iterates and numerical enclosures by `EIGSTwoColourDisplayedNumerics`; normalized and consecutive-ratio limits by `EIGSTwoColourPsiIterationLimits`. The word “rapidly” at 1411 is qualitative: no quantitative convergence rate was located in the re-inspected displayed endpoint statements.
+- Equal-length many-branch `(u,v)`-DHL and true two-path `(u,v)`-flower remain different actual models. Current 2652 has `u,v≥2`; current 2698 has `2≤u≤v`. `EIGSFlower...` is the legacy DHL family; `EIGSUVFlower...` is the genuine flower. Actual walk contrast `uvFlower23_actual_walk_dimension_gt_two` / `dhl23_actual_walk_dimension_eq_two` is imported by the actual umbrella. The table's added flower row agrees algebraically with mass `u+v`, distance `u`, degree rate `2`, resistance `uv/(u+v)` and time rate `uv`. Only `(2,2)` is critical; all other stated flower parameters have resistance rate greater than one.
+- The Laakso/canonical Xi table cells match the exact model rates in `EIGSLocallyFiniteTableDimensions.lean:17,48` and `EIGSLocallyFiniteNumericalPowerHeatExitPhysicalTight.lean:84`: mass `6`, distance `4/3` respectively, resistance `3/(11/4)` respectively, time `18/(33/2)` respectively. Here the slash separates the two models, not a quotient. Their degree dimension infinity is the explicitly chosen bounded-degree convention. Their specialized consumer is parameterized only by the Boolean selecting the actual model; it does not take desired heat estimates as an external hypothesis.
+- The corrected oriented current boundary matrix at 5107–5115 is `FourColourOrientationCandidate.candidateBoundaryMatrix`, **not** the earlier literal `correctedCriticalEN`. Its actual mean identity is `candidateMeanBoundary_eq` at 159; `FourColourOrientationSpectrum.lean:67` proves its spectral radius is two. `massMean_unchanged` at 172 preserves the mass spectrum. Therefore the old literal-matrix spectrum must not be used by name as if its matrix equalled the current oriented matrix; the explicit new spectrum-preservation proof supplies the bridge.
+- Current percolation table row stars all six geometric/spectral numbers and BM status. Current Outlook explicitly calls its natural-metric limit and dimensions conjectural. No claim was found there that finite matrix arithmetic or positive unit-resistance exponent constructs that random diffusion. Numerical alpha≈0.5631 remains numerical support, not an exact or enclosed Lean result.
+- The introductory classical-fractal comparison table is cited context, not a claim of actual Lean specializations for every named Sierpinski/carpet/Vicsek model.
+- Current formalisation subsection at 852 conservatively labels the general primitive degree identification and two locally finite heat examples outstanding. Current sources contain actual theorem statements for these claims (`primitive_rules_original_degree_dimension`, specialized locally finite numerical driver). Their correctness/accepted receipt boundary must be settled by the source/compiler audit; this read-only report does not turn their existence into a successful verification claim. The explicit partial disclaimer is safer than an unqualified completion claim.
+
+## Conclusion
+
+No new Section 2 or Section 4 numbered endpoint mismatch was located in the current actual declarations under the explicitly connected finite-rule hypotheses and the separately supported example scopes. This does **not** yield literal full-text equivalence: explicit rule connectivity, “all EIGS”, the Figure 3 general-theorem application, and the broad cited random/canonicality sentences need the distinctions above. New manuscript proof routes should be described as having formally proved endpoints when their exact written derivations differ from the Lean route. Latest compilation receipts and closure membership remain a separate required check.
+
+
+Integration note: this focused review used initial Overleaf `3d5c73a` (`CMP.initial.tex`). Final commit `6367f7e` changes only two status-wording lines in §1.4; mathematical text, proof lines and these findings are unchanged. See `overleaf-during-audit.diff`.
