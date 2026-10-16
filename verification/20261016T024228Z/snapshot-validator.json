@@ -1,0 +1,14 @@
+{
+  "hash_checks": "passed",
+  "shared_modules": 1190,
+  "independent_whole_files": 820,
+  "source_files": 1277,
+  "note": "Receipt verification only; full-paper completion is not claimed.",
+  "checked_utc": "2026-10-16T03:41:39Z",
+  "commands": [
+    "python verify_published_snapshot.py",
+    "python verify_full_paper.py --help"
+  ],
+  "exit_code": 0,
+  "scope": "Source/log/axiom evidence verification and rebuild CLI validation; not a full dependency rebuild."
+}

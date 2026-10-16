@@ -1,0 +1,10 @@
+{
+  "sourceSHA256": "BD60AA2310435D2DDC8BDF37D9E8F49C401EEC79329B6C04AE3BB517859567C3",
+  "log": "C:/Users/lzysh/Documents/Codex/2026-09-21/new-chat/work/current-round/fill-20261016T024228Z/B1AllPositiveLambdaResolvent-build.log",
+  "logSHA256": "878D6AD93DBAA1F42D1E9E99544B9100206D87F9A27B4FDF2940EFE61B01F7E6",
+  "module": "B1AllPositiveLambdaResolvent",
+  "sourceUnchanged": true,
+  "completedUTC": "2026-10-16T03:05:21.6756319Z",
+  "source": "C:/Users/lzysh/Documents/Codex/2026-09-21/new-chat/work/IGS-RWDL-LEAN/section3-diffusion/RequestProject/Section31/B1AllPositiveLambdaResolvent.lean",
+  "compilerExitCode": 1
+}

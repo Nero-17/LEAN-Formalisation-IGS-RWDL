@@ -1,0 +1,13 @@
+{
+  "target": "RequestProject.RWDLCurrentProofBridges",
+  "closure_modules": 1072,
+  "old_imports_without_accepted_evidence": [],
+  "new_modules": [
+    "RequestProject.RWDLCurrentProofBridges",
+    "RequestProject.Section31.B1AllPositiveLambdaResolvent",
+    "RequestProject.Section31.EIGSClosedHarmonicTracePythagoras",
+    "RequestProject.Section31.EIGSPhysicalTwoStarCover",
+    "RequestProject.Section31.EIGSUniformBirthFactorAndSpatialCollar"
+  ],
+  "note": "Source dependency and baseline evidence inspection, not a fresh rebuild."
+}

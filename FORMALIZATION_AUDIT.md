@@ -1,12 +1,8 @@
 # Current formalization audit
 
-## Current Overleaf audit — 2026-10-16
+## Proof bridges completed — 2026-10-16
 
-The [current-manuscript correspondence audit](verification/20261016T011112Z/REPORT.md) checks Overleaf commit `6367f7e` against the published Lean results. **Literal full-text formalization is not certified.** It records explicit rule-connectivity and scope issues, four groups of formal-export/proof bridges not located, and alternative proof routes with matching formal endpoints. The previously listed primitive-degree and two locally finite example gaps are already covered. The older completion wording below applies only to its recorded interpretation/snapshot and must not be read as overriding the current audit.
-
-Snapshot UTC: 2026-10-15T04:50:30.593785+00:00
-
-The corrected manuscript's actual-model interfaces have completed the separate statement-level audit under their original standing and explicit worked-example assumptions. The recorded shared verification checks their exact sources and compatibility. A clean printed axiom audit alone does not remove mathematical assumptions from a statement: actual-model consumers and generic conditional ingredients must still be read separately. Exploratory sources and Outlook conjectures are outside this completion boundary; no unfiltered full-source green build is claimed.
+The four explicit Lean bridge groups B1–B4 in the current-manuscript audit are now proved: all-positive-parameter uniform resolvents, closed-domain harmonic trace/Pythagoras and minimization, the physical completion two-star cover, and uniform birth-factor/spatial-collar mass. See the [complete round record](verification/20261016T024228Z/REPORT.md) and [current source/receipt inventory](verification/20261016T024228Z/source-status.json). Five new unchanged-source whole-file receipts include their integration with `RWDLActualPaper`. The older 1190-module report remains historical dependency evidence; a fresh full dependency rebuild is not claimed. Explicit rule connectedness and the other original-rule hypotheses remain. The manuscript scope/citation corrections and alternative prose proof routes from the preceding audit are distinct from these completed bridges; no unrestricted full-text completion claim is made.
 
 ## Verification scope
 

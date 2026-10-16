@@ -1,0 +1,20 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSClosedHarmonicTracePythagoras.lean:182:6: error: Application type mismatch: The argument
+  originalForm
+has type
+  @QuadraticForm ℝ
+    (↥(xiContinuousEnergyLpDomain system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+        metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive))
+    Real.instCommSemiring
+    (xiContinuousEnergyLpDomain system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+        metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive).addCommMonoid
+    (xiContinuousEnergyLpDomain system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+        metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive).module
+but is expected to have type
+  @QuadraticForm ℝ (↥originalDomain) Real.instCommSemiring originalDomain.addCommMonoid originalDomain.module
+in the application
+  QuadraticEnergySpace originalDomain originalForm
+'EIGS.exists_xiClosedHarmonicTrace_pythagoras' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'EIGS.exists_xiClosedHarmonicTrace_pythagoras_of_rules' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

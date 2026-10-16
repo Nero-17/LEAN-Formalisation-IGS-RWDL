@@ -1,0 +1,35 @@
+'IGS.Sec31.QuadraticEnergySpace.allPositiveStep_resolvent_surjective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.allPositiveStepSolution_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.allPositiveStepResolvent_norm' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.allPositiveStepResolvent_operator_norm' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.allPositiveStepResolvent_inverse' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.allPositiveStepResolvent_domain_error' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.allPositiveStepResolvent_eq_smallStepResolvent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.allPositiveStepLift_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.allPositiveStep_variational' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.allPositiveStep_minimum_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.allPositiveStep_minimizes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IGS.Sec31.QuadraticEnergySpace.allPositiveStep_minimizer_unique' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.b1_xiNativeFiniteResolvent_strong_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.b1_exists_xiNativeFiniteResolventStrong_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.b1_exists_xiNativeContinuousResolvent_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.b1_xiNativeUniformResolventProperties_of_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.b1_exists_xiNativeUniformResolvent_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.b1_uniformLambdaResolvent_of_uniformPositiveStep' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.b1_exists_xiNativeUniformLambdaResolvent_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

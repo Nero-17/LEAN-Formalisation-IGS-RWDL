@@ -1,0 +1,5 @@
+'EIGS.xiAddressLimit_surjective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiPhysicalClosedStar_isClosed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiPhysicalCell_ball_subset_two_stars' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiPhysicalCell_diameter_ball_subset_two_stars' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiPhysicalCell_diameter_two_star_cover_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]

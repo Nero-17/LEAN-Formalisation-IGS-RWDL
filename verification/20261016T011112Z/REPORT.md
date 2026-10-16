@@ -1,5 +1,9 @@
 # Current Overleaf / Lean correspondence audit — 2026-10-16
 
+## Subsequent Lean bridge completion
+
+Round [20261016T024228Z](../20261016T024228Z/REPORT.md) has proved and compiler-checked B1–B4 below. Their earlier “not located” statuses are historical. The separate manuscript connectivity/scope/citation issues and differences between written and formal proof routes remain as recorded.
+
 ## Verdict
 
 **Do not describe the current Overleaf manuscript as completely, literally, unconditionally formalized.** The major graph, diffusion and percolation conclusions have actual-model Lean support under the explicit rule hypotheses and separately proved example scopes. That is stronger than generic conditional ingredients, but it is not a certificate for every assertion and every newly written proof step in the current manuscript.

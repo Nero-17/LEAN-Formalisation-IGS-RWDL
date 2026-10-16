@@ -15,9 +15,11 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--rebuild', action='store_true')
     parser.add_argument('--lean', type=Path)
+    parser.add_argument('--evidence', type=Path, default=Path('verification/20261016T024228Z'),
+                        help='Evidence directory corresponding to the checked-out source snapshot.')
     arguments = parser.parse_args()
     repository = Path(__file__).resolve().parent
-    evidence = repository / 'verification/20261013T084954Z'
+    evidence = repository / arguments.evidence
     manifest = json.loads((evidence / 'accepted-receipts.json').read_text(encoding='utf-8'))
     statuses = json.loads((evidence / 'source-status.json').read_text(encoding='utf-8'))
     listed_sources = {record['source'] for record in statuses}
@@ -69,7 +71,7 @@ def main():
         if not arguments.lean:
             parser.error('--rebuild requires --lean')
         subprocess.run([sys.executable, str(repository / 'verify_full_paper.py'),
-            '--lean', str(arguments.lean), '--targets', *targets], check=True)
+            '--lean', str(arguments.lean), '--targets-file', str(evidence / 'verified-targets.txt')], check=True)
 
 
 if __name__ == '__main__':

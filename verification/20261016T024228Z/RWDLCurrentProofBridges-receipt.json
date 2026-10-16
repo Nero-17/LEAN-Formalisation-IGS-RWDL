@@ -1,0 +1,52 @@
+{
+  "source": "section3-diffusion/RequestProject/RWDLCurrentProofBridges.lean",
+  "source_sha256": "dbe6f279df62404f003f4e1bbf440103e91bec5f9db5eaad71ca82df3d92cc14",
+  "source_unchanged": true,
+  "start_utc": "2026-10-16T03:35:14.975179+00:00",
+  "end_utc": "2026-10-16T03:38:33.299128+00:00",
+  "exit_code": 0,
+  "log": "RWDLCurrentProofBridges.log",
+  "log_sha256": "f6febf0245bfb52d2f5ca3919dd5cf27381be98bef526705a91d9460c174eee6",
+  "audits": [
+    {
+      "declaration": "EIGS.b1_exists_xiNativeUniformLambdaResolvent_of_rules",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "EIGS.exists_xiClosedHarmonicTrace_pythagoras_of_rules",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "EIGS.exists_xiClosedHarmonicTrace_pythagoras_constructed_of_rules",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "EIGS.exists_xiPhysicalCell_diameter_two_star_cover_of_rules",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "EIGS.exists_xiUniformBirthFactorAndSpatialCollar_diameter_of_rules",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ]
+}

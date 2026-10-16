@@ -1,0 +1,47 @@
+{
+  "source": "section3-diffusion/RequestProject/Section31/EIGSPhysicalTwoStarCover.lean",
+  "source_sha256": "ee501136222c1bc7b1e9fba3ebfec3cceeed850a48e33d04b6899a296a851c73",
+  "source_unchanged": false,
+  "start_utc": "2026-10-16T02:52:26.195237+00:00",
+  "end_utc": "2026-10-16T03:03:33.414074+00:00",
+  "exit_code": 1,
+  "log": "EIGSPhysicalTwoStarCover.log",
+  "log_sha256": "2e502d1581bd8c78fa9c0101e2ed8f2dd7f3705814465777df7562c2424fe8b1",
+  "audits": [
+    {
+      "declaration": "EIGS.xiAddressLimit_surjective",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "EIGS.xiPhysicalClosedStar_isClosed",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "EIGS.xiPhysicalCell_ball_subset_two_stars",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "EIGS.exists_xiPhysicalCell_diameter_ball_subset_two_stars",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ]
+}

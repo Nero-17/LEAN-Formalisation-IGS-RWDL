@@ -1,0 +1,12 @@
+{
+  "sourceSHA256": "8BFB341ECD28F5DDC6C4717339E3D378B3A9249B29FECFE67FDE971B32EA54C6",
+  "sourceUnchanged": true,
+  "source": "C:/Users/lzysh/Documents/Codex/2026-09-21/new-chat/work/IGS-RWDL-LEAN/section3-diffusion/RequestProject/Section31/B1AllPositiveLambdaResolvent.lean",
+  "compilerExitCode": 0,
+  "oleanSHA256": "562FEEF8C3B550B737D7B7C05A81484BC495760EF91A5E78531B1BF3A218C07B",
+  "logSHA256": "C332ACF856F0741FA41243BC73E0C98E4CF21D913D312B1364FA6CEB42ACB1DD",
+  "log": "C:/Users/lzysh/Documents/Codex/2026-09-21/new-chat/work/current-round/fill-20261016T024228Z/B1AllPositiveLambdaResolvent-build.log",
+  "completedUTC": "2026-10-16T03:13:30.8495704Z",
+  "module": "B1AllPositiveLambdaResolvent",
+  "olean": "C:/Users/lzysh/Documents/Codex/2026-09-21/new-chat/work/IGS-RWDL-LEAN/.lake/full-paper-verification/lib/lean/RequestProject/Section31/B1AllPositiveLambdaResolvent.olean"
+}

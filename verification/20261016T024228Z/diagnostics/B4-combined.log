@@ -1,0 +1,25 @@
+'EIGS.xiAddressLimit_vertex_separated_of_nonincident' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiVertexClosedBall_incidence_mass_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+work/IGS-RWDL-LEAN/section3-diffusion/RequestProject/Section31/EIGSUniformBirthFactorAndSpatialCollar.lean:167:52: error: not a positivity goal
+'EIGS.exists_xiUniformBornVertex_incidence_upper' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'EIGS.exists_xiUniformVertex_incidence_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiUniformBornVertex_geometric_ball_mass' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+work/IGS-RWDL-LEAN/section3-diffusion/RequestProject/Section31/EIGSUniformBirthFactorAndSpatialCollar.lean:332:19: error: failed to prove positivity/nonnegativity/nonzeroness
+work/IGS-RWDL-LEAN/section3-diffusion/RequestProject/Section31/EIGSUniformBirthFactorAndSpatialCollar.lean:332:34: error: failed to prove positivity/nonnegativity/nonzeroness
+'EIGS.exists_xiUniformBirthFactor_ball_mass_at_fixed_radius' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+work/IGS-RWDL-LEAN/section3-diffusion/RequestProject/Section31/EIGSUniformBirthFactorAndSpatialCollar.lean:451:4: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Nonempty (Fin K ⊕ Fin K)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+work/IGS-RWDL-LEAN/section3-diffusion/RequestProject/Section31/EIGSUniformBirthFactorAndSpatialCollar.lean:450:9: error: Tactic `rcases` failed: `x✝ : ?m.121` is not an inductive datatype
+'EIGS.xiPhysicalSkeletonCollar_pullback_subset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiPhysicalSkeletonCollar_geometric_mass_bound' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,100 @@
+{
+  "source": "section3-diffusion/RequestProject/Section31/EIGSUniformBirthFactorAndSpatialCollar.lean",
+  "source_sha256": "5ef7f28e2f7e22e41047d5da3d3c0d4d0a1ce0d6e7ace7bf7769142dc3c8a66e",
+  "source_unchanged": true,
+  "start_utc": "2026-10-16T03:28:04.141364+00:00",
+  "end_utc": "2026-10-16T03:33:39.330319+00:00",
+  "exit_code": 0,
+  "log": "EIGSUniformBirthFactorAndSpatialCollar.log",
+  "log_sha256": "2460a5724a3abd89948858e9fd20a1f1bafcc4e08cb8edb3ed04aba8a03b0322",
+  "audits": [
+    {
+      "declaration": "EIGS.xiAddressLimit_vertex_separated_of_nonincident",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "EIGS.exists_xiVertexClosedBall_incidence_mass_upper",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "EIGS.exists_xiUniformBornVertex_incidence_upper",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "EIGS.exists_xiUniformVertex_incidence_lower",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "EIGS.exists_xiUniformBornVertex_geometric_ball_mass",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "EIGS.exists_xiUniformBirthFactor_ball_mass_at_fixed_radius",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "EIGS.xiPhysicalSkeletonCollar_pullback_subset",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "EIGS.exists_xiPhysicalSkeletonCollar_geometric_mass_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "EIGS.exists_xiPhysicalSkeletonCollar_geometric_real_mass_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "EIGS.MeasuredGHP.diameterNormalized_finiteSkeletonCollar_eq_native",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "EIGS.exists_xiUniformBirthFactorAndSpatialCollar_diameter_of_rules",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ]
+}

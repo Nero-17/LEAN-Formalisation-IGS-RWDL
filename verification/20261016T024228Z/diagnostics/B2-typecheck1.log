@@ -1,0 +1,476 @@
+C:/Users/lzysh/Documents/Codex/2026-09-21/new-chat/work/IGS-RWDL-LEAN/section3-diffusion/RequestProject/Section31/EIGSClosedHarmonicTracePythagoras.lean:121:57: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  xiExtendedWeightedEnergy system resistanceRate ratePositive resistanceVector vectorPositive
+    (⇑(extensionMap ?values) ∘
+      xiCompletionUnionEmbedding system rulesConnected lengths lengthsPositive distanceRate ⋯ metricEigenpair)
+in the target expression
+  (xiExtendedWeightedEnergy system resistanceRate ratePositive resistanceVector vectorPositive
+        (⇑↑(continuousLift values) ∘
+          xiCompletionUnionEmbedding system rulesConnected lengths lengthsPositive distanceRate ⋯
+            metricEigenpair)).toReal =
+    (xiWeightedFiniteNetwork system resistanceRate ratePositive resistanceVector vectorPositive level).energy values
+
+K : ℕ
+system : EIGSData K
+rulesConnected : ∀ (colour : Fin K), (ruleSG system colour).Connected
+rulesLoopless : ∀ (colour : Fin K), (system.ruleNetwork colour).Loopless
+rulesUnique : ∀ (colour : Fin K), (system.ruleNetwork colour).EdgesUnique
+plantingNonadjacent :
+  ∀ (colour : Fin K), ¬(ruleSG system colour).Adj (system.plantPlus colour) (system.plantMinus colour)
+distancePositive :
+  ∀ (ruleColour edgeColour : Fin K),
+    ¬((system.ruleNetwork ruleColour).withoutColour edgeColour).Reachable (system.plantPlus ruleColour)
+        (system.plantMinus ruleColour)
+oneColourDistance :
+  K = 1 → ∀ (colour : Fin K), 2 ≤ (ruleSG system colour).dist (system.plantPlus colour) (system.plantMinus colour)
+lengths : Fin K → ℝ
+lengthsPositive : ∀ (colour : Fin K), 0 < lengths colour
+distanceRate : ℝ
+distanceRateGreaterThanOne : 1 < distanceRate
+metricEigenpair : (system.ruleFamily rulesConnected).metricLengths lengths = distanceRate • lengths
+mass : XiMassParameters system
+resistanceRate : ℝ
+ratePositive : 0 < resistanceRate
+resistanceVector : Fin K → ℝ
+vectorPositive : ∀ (colour : Fin K), 0 < resistanceVector colour
+renormalizationEigenpair :
+  ∀ (colour : Fin K),
+    (system.ruleFamily rulesConnected).Psi resistanceVector colour = resistanceRate * resistanceVector colour
+this : CompactSpace (XiMetricCompletion system rulesConnected lengths lengthsPositive distanceRate ⋯ metricEigenpair) :=
+  xiCompletion_compactSpace system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+    metricEigenpair
+originalDomain : Submodule ℝ
+  ↥(Lp ℝ 2
+      (xiLimitMeasure system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+        metricEigenpair mass)) :=
+  xiContinuousEnergyLpDomain system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+    metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive
+originalForm : QuadraticForm ℝ
+  ↥(xiContinuousEnergyLpDomain system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+      metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive) :=
+  xiContinuousLpEnergyQuadraticForm system rulesConnected lengths lengthsPositive distanceRate
+    distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive
+    renormalizationEigenpair
+nonnegative : ∀
+  (function :
+    ↥(xiContinuousEnergyLpDomain system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+        metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive)),
+  0 ≤
+    (xiContinuousLpEnergyQuadraticForm system rulesConnected lengths lengthsPositive distanceRate
+        distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive
+        renormalizationEigenpair)
+      function :=
+  xiContinuousLpEnergyQuadraticForm_nonnegative system rulesConnected lengths lengthsPositive distanceRate
+    distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive
+    renormalizationEigenpair
+energyEquiv : ↥(xiContinuousFiniteEnergyDomain system rulesConnected lengths lengthsPositive distanceRate
+      distanceRateGreaterThanOne metricEigenpair resistanceRate ratePositive resistanceVector vectorPositive) ≃ₗ[ℝ]
+  ↥(xiContinuousEnergyLpDomain system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+      metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive) :=
+  xiContinuousEnergyLpEquiv system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+    metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive
+closable :
+  QuadraticEnergySpace.SequentiallyClosable
+    (xiContinuousEnergyLpDomain system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+      metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive)
+    (xiContinuousLpEnergyQuadraticForm system rulesConnected lengths lengthsPositive distanceRate
+      distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive
+      renormalizationEigenpair)
+level : ℕ
+extensionMap :
+  (XiVtx system level → ℝ) →ₗ[ℝ]
+    C(XiMetricCompletion system rulesConnected lengths lengthsPositive distanceRate ⋯ metricEigenpair, ℝ)
+extensionAgreement :
+  ∀ (values : XiVtx system level → ℝ) (vertex : XiVertexUnion system),
+    (extensionMap values)
+        (xiCompletionUnionEmbedding system rulesConnected lengths lengthsPositive distanceRate ⋯ metricEigenpair
+          vertex) =
+      xiHarmonicUnionExtension system rulesConnected resistanceRate ratePositive resistanceVector vectorPositive
+        renormalizationEigenpair level values vertex
+left✝ :
+  Function.Injective
+    ⇑(↑(xiContinuousL2Map system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+            metricEigenpair mass) ∘ₗ
+        extensionMap)
+right✝ :
+  ∃ bound,
+    0 < bound ∧
+      ∀ (values : XiVtx system level → ℝ),
+        ‖values‖ ≤
+          bound *
+            ‖(xiContinuousL2Map system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+                  metricEigenpair mass)
+                (extensionMap values)‖
+extensionEnergy :
+  ∀ (values : XiVtx system level → ℝ),
+    xiExtendedWeightedEnergy system resistanceRate ratePositive resistanceVector vectorPositive
+        (⇑(extensionMap values) ∘
+          xiCompletionUnionEmbedding system rulesConnected lengths lengthsPositive distanceRate ⋯ metricEigenpair) =
+      ENNReal.ofReal
+        ((xiWeightedFiniteNetwork system resistanceRate ratePositive resistanceVector vectorPositive level).energy
+          values)
+continuousLift : (XiVtx system level → ℝ) →ₗ[ℝ]
+  ↥(xiContinuousFiniteEnergyDomain system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+      metricEigenpair resistanceRate ratePositive resistanceVector vectorPositive) :=
+  LinearMap.codRestrict
+    (xiContinuousFiniteEnergyDomain system rulesConnected lengths lengthsPositive distanceRate
+      distanceRateGreaterThanOne metricEigenpair resistanceRate ratePositive resistanceVector vectorPositive)
+    extensionMap ⋯
+harmonic : (XiVtx system level → ℝ) →ₗ[ℝ] ↥originalDomain := ↑energyEquiv ∘ₗ continuousLift
+energyLift : (XiVtx system level → ℝ) →L[ℝ] QuadraticEnergySpace originalDomain originalForm nonnegative :=
+  LinearMap.toContinuousLinearMap
+    (↑(QuadraticEnergySpace.linearEquivDomain originalDomain originalForm nonnegative).symm ∘ₗ harmonic)
+functional :
+  XiVtx system level →
+    QuadraticEnergySpace
+        (xiContinuousEnergyLpDomain system rulesConnected lengths lengthsPositive distanceRate
+          distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive)
+        (xiContinuousLpEnergyQuadraticForm system rulesConnected lengths lengthsPositive distanceRate
+          distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive
+          renormalizationEigenpair)
+        ⋯ →L[ℝ]
+      ℝ
+functionalAgreement :
+  ∀ (vertex : XiVtx system level)
+    (values :
+      QuadraticEnergySpace
+        (xiContinuousEnergyLpDomain system rulesConnected lengths lengthsPositive distanceRate
+          distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive)
+        (xiContinuousLpEnergyQuadraticForm system rulesConnected lengths lengthsPositive distanceRate
+          distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive
+          renormalizationEigenpair)
+        ⋯),
+    (functional vertex) values =
+      ↑((xiContinuousEnergyLpEquiv system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+                metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive).symm
+            values.value)
+        (xiCompletionEmbedding system rulesConnected lengths lengthsPositive distanceRate ⋯ metricEigenpair level
+          vertex)
+trace : Completion (QuadraticEnergySpace originalDomain originalForm nonnegative) →L[ℝ] XiVtx system level → ℝ :=
+  ContinuousLinearMap.pi fun vertex =>
+    QuadraticEnergySpace.completionFunctional originalDomain originalForm nonnegative (functional vertex)
+evaluation : ↥(QuadraticEnergySpace.closedDomain originalDomain originalForm nonnegative) →ₗ[ℝ]
+  XiVtx system level → ℝ :=
+  ↑trace ∘ₗ ↑(QuadraticEnergySpace.closedDomainEquiv originalDomain originalForm nonnegative closable).symm
+projection : Completion (QuadraticEnergySpace originalDomain originalForm nonnegative) →L[ℝ]
+  Completion (QuadraticEnergySpace originalDomain originalForm nonnegative) :=
+  Completion.toComplL.comp (energyLift.comp trace)
+traceCoe :
+  ∀ (values : QuadraticEnergySpace originalDomain originalForm nonnegative) (vertex : XiVtx system level),
+    trace (↑values) vertex =
+      ↑(energyEquiv.symm values.value)
+        (xiCompletionEmbedding system rulesConnected lengths lengthsPositive distanceRate ⋯ metricEigenpair level
+          vertex)
+values : XiVtx system level → ℝ
+⊢ (xiExtendedWeightedEnergy system resistanceRate ratePositive resistanceVector vectorPositive
+        (⇑↑(continuousLift values) ∘
+          xiCompletionUnionEmbedding system rulesConnected lengths lengthsPositive distanceRate ⋯
+            metricEigenpair)).toReal =
+    (xiWeightedFiniteNetwork system resistanceRate ratePositive resistanceVector vectorPositive level).energy values
+C:/Users/lzysh/Documents/Codex/2026-09-21/new-chat/work/IGS-RWDL-LEAN/section3-diffusion/RequestProject/Section31/EIGSClosedHarmonicTracePythagoras.lean:150:6: error: Type mismatch
+  Eq.symm (boundaryAgreement vertex)
+has type
+  ↑lifted (xiVertexEmbedding system level vertex) = ↑target (xiVertexEmbedding system level vertex)
+but is expected to have type
+  boundary vertex = (↑lifted ∘ xiVertexEmbedding system level) vertex
+C:/Users/lzysh/Documents/Codex/2026-09-21/new-chat/work/IGS-RWDL-LEAN/section3-diffusion/RequestProject/Section31/EIGSClosedHarmonicTracePythagoras.lean:154:4: error: Type mismatch: After simplification, term
+  identity
+ has type
+  (xiExtendedWeightedEnergy system resistanceRate ratePositive resistanceVector vectorPositive ↑target).toReal =
+    (xiExtendedWeightedEnergy system resistanceRate ratePositive resistanceVector vectorPositive ↑lifted).toReal +
+      (xiExtendedWeightedEnergy system resistanceRate ratePositive resistanceVector vectorPositive
+          (↑target - ↑lifted)).toReal
+but is expected to have type
+  (limitTraceQuadraticForm (xiUnionWeightedNetwork system resistanceRate ratePositive resistanceVector vectorPositive)
+        ⋯)
+      ((xiContinuousEnergyToUnionDomain system rulesConnected lengths lengthsPositive distanceRate
+          distanceRateGreaterThanOne metricEigenpair resistanceRate ratePositive resistanceVector vectorPositive)
+        ((xiContinuousEnergyLpEquiv system rulesConnected lengths lengthsPositive distanceRate
+              distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector
+              vectorPositive).symm
+          values)) =
+    (limitTraceQuadraticForm (xiUnionWeightedNetwork system resistanceRate ratePositive resistanceVector vectorPositive)
+          ⋯)
+        ((xiContinuousEnergyToUnionDomain system rulesConnected lengths lengthsPositive distanceRate
+            distanceRateGreaterThanOne metricEigenpair resistanceRate ratePositive resistanceVector vectorPositive)
+          ((xiContinuousEnergyLpEquiv system rulesConnected lengths lengthsPositive distanceRate
+                distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector
+                vectorPositive).symm
+            ((↑(xiContinuousEnergyLpEquiv system rulesConnected lengths lengthsPositive distanceRate
+                    distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector
+                    vectorPositive) ∘ₗ
+                continuousLift)
+              boundary))) +
+      (limitTraceQuadraticForm
+          (xiUnionWeightedNetwork system resistanceRate ratePositive resistanceVector vectorPositive) ⋯)
+        ((xiContinuousEnergyToUnionDomain system rulesConnected lengths lengthsPositive distanceRate
+              distanceRateGreaterThanOne metricEigenpair resistanceRate ratePositive resistanceVector vectorPositive)
+            ((xiContinuousEnergyLpEquiv system rulesConnected lengths lengthsPositive distanceRate
+                  distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector
+                  vectorPositive).symm
+              values) -
+          (xiContinuousEnergyToUnionDomain system rulesConnected lengths lengthsPositive distanceRate
+              distanceRateGreaterThanOne metricEigenpair resistanceRate ratePositive resistanceVector vectorPositive)
+            ((xiContinuousEnergyLpEquiv system rulesConnected lengths lengthsPositive distanceRate
+                  distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector
+                  vectorPositive).symm
+              ((↑(xiContinuousEnergyLpEquiv system rulesConnected lengths lengthsPositive distanceRate
+                      distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector
+                      vectorPositive) ∘ₗ
+                  continuousLift)
+                boundary)))
+C:/Users/lzysh/Documents/Codex/2026-09-21/new-chat/work/IGS-RWDL-LEAN/section3-diffusion/RequestProject/Section31/EIGSClosedHarmonicTracePythagoras.lean:169:10: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ↑?a - ↑?b
+in the target expression
+  ‖↑values‖ ^ 2 - ‖(QuadraticEnergySpace.completionMap originalDomain originalForm nonnegative) ↑values‖ ^ 2 =
+    ‖Completion.toComplL
+              (energyLift fun vertex =>
+                ↑(energyEquiv.symm values.value)
+                  (xiCompletionEmbedding system rulesConnected lengths lengthsPositive distanceRate ⋯ metricEigenpair
+                    level vertex))‖ ^
+          2 -
+        ‖(QuadraticEnergySpace.completionMap originalDomain originalForm nonnegative)
+              (Completion.toComplL
+                (energyLift fun vertex =>
+                  ↑(energyEquiv.symm values.value)
+                    (xiCompletionEmbedding system rulesConnected lengths lengthsPositive distanceRate ⋯ metricEigenpair
+                      level vertex)))‖ ^
+          2 +
+      (‖↑values -
+              Completion.toComplL
+                (energyLift fun vertex =>
+                  ↑(energyEquiv.symm values.value)
+                    (xiCompletionEmbedding system rulesConnected lengths lengthsPositive distanceRate ⋯ metricEigenpair
+                      level vertex))‖ ^
+          2 -
+        ‖(QuadraticEnergySpace.completionMap originalDomain originalForm nonnegative)
+              (↑values -
+                Completion.toComplL
+                  (energyLift fun vertex =>
+                    ↑(energyEquiv.symm values.value)
+                      (xiCompletionEmbedding system rulesConnected lengths lengthsPositive distanceRate ⋯
+                        metricEigenpair level vertex)))‖ ^
+          2)
+
+case ih
+K : ℕ
+system : EIGSData K
+rulesConnected : ∀ (colour : Fin K), (ruleSG system colour).Connected
+rulesLoopless : ∀ (colour : Fin K), (system.ruleNetwork colour).Loopless
+rulesUnique : ∀ (colour : Fin K), (system.ruleNetwork colour).EdgesUnique
+plantingNonadjacent :
+  ∀ (colour : Fin K), ¬(ruleSG system colour).Adj (system.plantPlus colour) (system.plantMinus colour)
+distancePositive :
+  ∀ (ruleColour edgeColour : Fin K),
+    ¬((system.ruleNetwork ruleColour).withoutColour edgeColour).Reachable (system.plantPlus ruleColour)
+        (system.plantMinus ruleColour)
+oneColourDistance :
+  K = 1 → ∀ (colour : Fin K), 2 ≤ (ruleSG system colour).dist (system.plantPlus colour) (system.plantMinus colour)
+lengths : Fin K → ℝ
+lengthsPositive : ∀ (colour : Fin K), 0 < lengths colour
+distanceRate : ℝ
+distanceRateGreaterThanOne : 1 < distanceRate
+metricEigenpair : (system.ruleFamily rulesConnected).metricLengths lengths = distanceRate • lengths
+mass : XiMassParameters system
+resistanceRate : ℝ
+ratePositive : 0 < resistanceRate
+resistanceVector : Fin K → ℝ
+vectorPositive : ∀ (colour : Fin K), 0 < resistanceVector colour
+renormalizationEigenpair :
+  ∀ (colour : Fin K),
+    (system.ruleFamily rulesConnected).Psi resistanceVector colour = resistanceRate * resistanceVector colour
+this : CompactSpace (XiMetricCompletion system rulesConnected lengths lengthsPositive distanceRate ⋯ metricEigenpair) :=
+  xiCompletion_compactSpace system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+    metricEigenpair
+originalDomain : Submodule ℝ
+  ↥(Lp ℝ 2
+      (xiLimitMeasure system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+        metricEigenpair mass)) :=
+  xiContinuousEnergyLpDomain system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+    metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive
+originalForm : QuadraticForm ℝ
+  ↥(xiContinuousEnergyLpDomain system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+      metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive) :=
+  xiContinuousLpEnergyQuadraticForm system rulesConnected lengths lengthsPositive distanceRate
+    distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive
+    renormalizationEigenpair
+nonnegative : ∀
+  (function :
+    ↥(xiContinuousEnergyLpDomain system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+        metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive)),
+  0 ≤
+    (xiContinuousLpEnergyQuadraticForm system rulesConnected lengths lengthsPositive distanceRate
+        distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive
+        renormalizationEigenpair)
+      function :=
+  xiContinuousLpEnergyQuadraticForm_nonnegative system rulesConnected lengths lengthsPositive distanceRate
+    distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive
+    renormalizationEigenpair
+energyEquiv : ↥(xiContinuousFiniteEnergyDomain system rulesConnected lengths lengthsPositive distanceRate
+      distanceRateGreaterThanOne metricEigenpair resistanceRate ratePositive resistanceVector vectorPositive) ≃ₗ[ℝ]
+  ↥(xiContinuousEnergyLpDomain system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+      metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive) :=
+  xiContinuousEnergyLpEquiv system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+    metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive
+closable :
+  QuadraticEnergySpace.SequentiallyClosable
+    (xiContinuousEnergyLpDomain system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+      metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive)
+    (xiContinuousLpEnergyQuadraticForm system rulesConnected lengths lengthsPositive distanceRate
+      distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive
+      renormalizationEigenpair)
+level : ℕ
+extensionMap :
+  (XiVtx system level → ℝ) →ₗ[ℝ]
+    C(XiMetricCompletion system rulesConnected lengths lengthsPositive distanceRate ⋯ metricEigenpair, ℝ)
+extensionAgreement :
+  ∀ (values : XiVtx system level → ℝ) (vertex : XiVertexUnion system),
+    (extensionMap values)
+        (xiCompletionUnionEmbedding system rulesConnected lengths lengthsPositive distanceRate ⋯ metricEigenpair
+          vertex) =
+      xiHarmonicUnionExtension system rulesConnected resistanceRate ratePositive resistanceVector vectorPositive
+        renormalizationEigenpair level values vertex
+left✝ :
+  Function.Injective
+    ⇑(↑(xiContinuousL2Map system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+            metricEigenpair mass) ∘ₗ
+        extensionMap)
+right✝ :
+  ∃ bound,
+    0 < bound ∧
+      ∀ (values : XiVtx system level → ℝ),
+        ‖values‖ ≤
+          bound *
+            ‖(xiContinuousL2Map system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+                  metricEigenpair mass)
+                (extensionMap values)‖
+extensionEnergy :
+  ∀ (values : XiVtx system level → ℝ),
+    xiExtendedWeightedEnergy system resistanceRate ratePositive resistanceVector vectorPositive
+        (⇑(extensionMap values) ∘
+          xiCompletionUnionEmbedding system rulesConnected lengths lengthsPositive distanceRate ⋯ metricEigenpair) =
+      ENNReal.ofReal
+        ((xiWeightedFiniteNetwork system resistanceRate ratePositive resistanceVector vectorPositive level).energy
+          values)
+continuousLift : (XiVtx system level → ℝ) →ₗ[ℝ]
+  ↥(xiContinuousFiniteEnergyDomain system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+      metricEigenpair resistanceRate ratePositive resistanceVector vectorPositive) :=
+  LinearMap.codRestrict
+    (xiContinuousFiniteEnergyDomain system rulesConnected lengths lengthsPositive distanceRate
+      distanceRateGreaterThanOne metricEigenpair resistanceRate ratePositive resistanceVector vectorPositive)
+    extensionMap ⋯
+harmonic : (XiVtx system level → ℝ) →ₗ[ℝ] ↥originalDomain := ↑energyEquiv ∘ₗ continuousLift
+energyLift : (XiVtx system level → ℝ) →L[ℝ] QuadraticEnergySpace originalDomain originalForm nonnegative :=
+  LinearMap.toContinuousLinearMap
+    (↑(QuadraticEnergySpace.linearEquivDomain originalDomain originalForm nonnegative).symm ∘ₗ harmonic)
+functional :
+  XiVtx system level →
+    QuadraticEnergySpace
+        (xiContinuousEnergyLpDomain system rulesConnected lengths lengthsPositive distanceRate
+          distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive)
+        (xiContinuousLpEnergyQuadraticForm system rulesConnected lengths lengthsPositive distanceRate
+          distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive
+          renormalizationEigenpair)
+        ⋯ →L[ℝ]
+      ℝ
+functionalAgreement :
+  ∀ (vertex : XiVtx system level)
+    (values :
+      QuadraticEnergySpace
+        (xiContinuousEnergyLpDomain system rulesConnected lengths lengthsPositive distanceRate
+          distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive)
+        (xiContinuousLpEnergyQuadraticForm system rulesConnected lengths lengthsPositive distanceRate
+          distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive
+          renormalizationEigenpair)
+        ⋯),
+    (functional vertex) values =
+      ↑((xiContinuousEnergyLpEquiv system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+                metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive).symm
+            values.value)
+        (xiCompletionEmbedding system rulesConnected lengths lengthsPositive distanceRate ⋯ metricEigenpair level
+          vertex)
+trace : Completion (QuadraticEnergySpace originalDomain originalForm nonnegative) →L[ℝ] XiVtx system level → ℝ :=
+  ContinuousLinearMap.pi fun vertex =>
+    QuadraticEnergySpace.completionFunctional originalDomain originalForm nonnegative (functional vertex)
+evaluation : ↥(QuadraticEnergySpace.closedDomain originalDomain originalForm nonnegative) →ₗ[ℝ]
+  XiVtx system level → ℝ :=
+  ↑trace ∘ₗ ↑(QuadraticEnergySpace.closedDomainEquiv originalDomain originalForm nonnegative closable).symm
+projection : Completion (QuadraticEnergySpace originalDomain originalForm nonnegative) →L[ℝ]
+  Completion (QuadraticEnergySpace originalDomain originalForm nonnegative) :=
+  Completion.toComplL.comp (energyLift.comp trace)
+traceCoe :
+  ∀ (values : QuadraticEnergySpace originalDomain originalForm nonnegative) (vertex : XiVtx system level),
+    trace (↑values) vertex =
+      ↑(energyEquiv.symm values.value)
+        (xiCompletionEmbedding system rulesConnected lengths lengthsPositive distanceRate ⋯ metricEigenpair level
+          vertex)
+harmonicEnergy :
+  ∀ (values : XiVtx system level → ℝ),
+    originalForm (harmonic values) =
+      (xiWeightedFiniteNetwork system resistanceRate ratePositive resistanceVector vectorPositive level).energy values
+corePythagoras :
+  ∀ (values : ↥originalDomain),
+    originalForm values =
+      originalForm
+          (harmonic fun vertex =>
+            ↑(energyEquiv.symm values)
+              (xiCompletionEmbedding system rulesConnected lengths lengthsPositive distanceRate ⋯ metricEigenpair level
+                vertex)) +
+        originalForm
+          (values -
+            harmonic fun vertex =>
+              ↑(energyEquiv.symm values)
+                (xiCompletionEmbedding system rulesConnected lengths lengthsPositive distanceRate ⋯ metricEigenpair
+                  level vertex))
+values : QuadraticEnergySpace originalDomain originalForm nonnegative
+traceEquality :
+  trace ↑values = fun vertex =>
+    ↑(energyEquiv.symm values.value)
+      (xiCompletionEmbedding system rulesConnected lengths lengthsPositive distanceRate ⋯ metricEigenpair level vertex)
+⊢ ‖↑values‖ ^ 2 - ‖(QuadraticEnergySpace.completionMap originalDomain originalForm nonnegative) ↑values‖ ^ 2 =
+    ‖Completion.toComplL
+              (energyLift fun vertex =>
+                ↑(energyEquiv.symm values.value)
+                  (xiCompletionEmbedding system rulesConnected lengths lengthsPositive distanceRate ⋯ metricEigenpair
+                    level vertex))‖ ^
+          2 -
+        ‖(QuadraticEnergySpace.completionMap originalDomain originalForm nonnegative)
+              (Completion.toComplL
+                (energyLift fun vertex =>
+                  ↑(energyEquiv.symm values.value)
+                    (xiCompletionEmbedding system rulesConnected lengths lengthsPositive distanceRate ⋯ metricEigenpair
+                      level vertex)))‖ ^
+          2 +
+      (‖↑values -
+              Completion.toComplL
+                (energyLift fun vertex =>
+                  ↑(energyEquiv.symm values.value)
+                    (xiCompletionEmbedding system rulesConnected lengths lengthsPositive distanceRate ⋯ metricEigenpair
+                      level vertex))‖ ^
+          2 -
+        ‖(QuadraticEnergySpace.completionMap originalDomain originalForm nonnegative)
+              (↑values -
+                Completion.toComplL
+                  (energyLift fun vertex =>
+                    ↑(energyEquiv.symm values.value)
+                      (xiCompletionEmbedding system rulesConnected lengths lengthsPositive distanceRate ⋯
+                        metricEigenpair level vertex)))‖ ^
+          2)
+C:/Users/lzysh/Documents/Codex/2026-09-21/new-chat/work/IGS-RWDL-LEAN/section3-diffusion/RequestProject/Section31/EIGSClosedHarmonicTracePythagoras.lean:184:4: error: Type mismatch: After simplification, term
+  extensionAgreement values vertex
+ has type
+  (extensionMap values)
+      (xiCompletionUnionEmbedding system rulesConnected lengths lengthsPositive distanceRate ⋯ metricEigenpair vertex) =
+    xiHarmonicUnionExtension system rulesConnected resistanceRate ratePositive resistanceVector vectorPositive
+      renormalizationEigenpair level values vertex
+but is expected to have type
+  ↑((xiContinuousEnergyLpEquiv system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+              metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive).symm
+          (↑(xiContinuousEnergyLpEquiv system rulesConnected lengths lengthsPositive distanceRate
+                distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector
+                vectorPositive)
+            (continuousLift values)))
+      (xiCompletionUnionEmbedding system rulesConnected lengths lengthsPositive distanceRate ⋯ metricEigenpair vertex) =
+    xiHarmonicUnionExtension system rulesConnected resistanceRate ratePositive resistanceVector vectorPositive
+      renormalizationEigenpair level values vertex
+C:/Users/lzysh/Documents/Codex/2026-09-21/new-chat/work/IGS-RWDL-LEAN/section3-diffusion/RequestProject/Section31/EIGSClosedHarmonicTracePythagoras.lean:186:4: error: `dsimp` made no progress
+'EIGS.exists_xiClosedHarmonicTrace_pythagoras' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

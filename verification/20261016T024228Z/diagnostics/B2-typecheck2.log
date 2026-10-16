@@ -1,0 +1,92 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSClosedHarmonicTracePythagoras.lean:182:6: error: Application type mismatch: The argument
+  originalForm
+has type
+  @QuadraticForm ℝ
+    (↥(xiContinuousEnergyLpDomain system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+        metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive))
+    Real.instCommSemiring
+    (xiContinuousEnergyLpDomain system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+        metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive).addCommMonoid
+    (xiContinuousEnergyLpDomain system rulesConnected lengths lengthsPositive distanceRate distanceRateGreaterThanOne
+        metricEigenpair mass resistanceRate ratePositive resistanceVector vectorPositive).module
+but is expected to have type
+  @QuadraticForm ℝ (↥originalDomain) Real.instCommSemiring originalDomain.addCommMonoid originalDomain.module
+in the application
+  QuadraticEnergySpace originalDomain originalForm
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSClosedHarmonicTracePythagoras.lean:217:6: error: Type mismatch: After simplification, term
+  identity
+ has type
+  ‖(QuadraticEnergySpace.closedDomainEquiv originalDomain originalForm nonnegative closable).symm target‖ ^ 2 -
+      ‖(QuadraticEnergySpace.completionMap originalDomain originalForm nonnegative)
+            ((QuadraticEnergySpace.closedDomainEquiv originalDomain originalForm nonnegative closable).symm target)‖ ^
+        2 =
+    ‖Completion.toComplL
+              (energyLift
+                (trace
+                  ((QuadraticEnergySpace.closedDomainEquiv originalDomain originalForm nonnegative closable).symm
+                    target)))‖ ^
+          2 -
+        ‖(QuadraticEnergySpace.completionMap originalDomain originalForm nonnegative)
+              (Completion.toComplL
+                (energyLift
+                  (trace
+                    ((QuadraticEnergySpace.closedDomainEquiv originalDomain originalForm nonnegative closable).symm
+                      target))))‖ ^
+          2 +
+      (‖(QuadraticEnergySpace.closedDomainEquiv originalDomain originalForm nonnegative closable).symm target -
+              Completion.toComplL
+                (energyLift
+                  (trace
+                    ((QuadraticEnergySpace.closedDomainEquiv originalDomain originalForm nonnegative closable).symm
+                      target)))‖ ^
+          2 -
+        ‖(QuadraticEnergySpace.completionMap originalDomain originalForm nonnegative)
+                ((QuadraticEnergySpace.closedDomainEquiv originalDomain originalForm nonnegative closable).symm
+                  target) -
+              (QuadraticEnergySpace.completionMap originalDomain originalForm nonnegative)
+                (Completion.toComplL
+                  (energyLift
+                    (trace
+                      ((QuadraticEnergySpace.closedDomainEquiv originalDomain originalForm nonnegative closable).symm
+                        target))))‖ ^
+          2)
+but is expected to have type
+  ‖(QuadraticEnergySpace.closedDomainEquiv
+                (xiContinuousEnergyLpDomain system rulesConnected lengths lengthsPositive distanceRate
+                  distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector
+                  vectorPositive)
+                (xiContinuousLpEnergyQuadraticForm system rulesConnected lengths lengthsPositive distanceRate
+                  distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector
+                  vectorPositive renormalizationEigenpair)
+                ⋯ closable).symm
+            target‖ ^
+        2 -
+      ‖↑target‖ ^ 2 =
+    ‖Completion.toComplL
+              (energyLift
+                (trace
+                  ((QuadraticEnergySpace.closedDomainEquiv originalDomain originalForm nonnegative closable).symm
+                    target)))‖ ^
+          2 -
+        ‖↑(harmonic (evaluation target))‖ ^ 2 +
+      (‖(QuadraticEnergySpace.closedDomainEquiv
+                    (xiContinuousEnergyLpDomain system rulesConnected lengths lengthsPositive distanceRate
+                      distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector
+                      vectorPositive)
+                    (xiContinuousLpEnergyQuadraticForm system rulesConnected lengths lengthsPositive distanceRate
+                      distanceRateGreaterThanOne metricEigenpair mass resistanceRate ratePositive resistanceVector
+                      vectorPositive renormalizationEigenpair)
+                    ⋯ closable).symm
+                target -
+              Completion.toComplL
+                (energyLift
+                  (trace
+                    ((QuadraticEnergySpace.closedDomainEquiv originalDomain originalForm nonnegative closable).symm
+                      target)))‖ ^
+          2 -
+        ‖↑(target - ⟨↑(harmonic (evaluation target)), ⋯⟩)‖ ^ 2)
+'EIGS.exists_xiClosedHarmonicTrace_pythagoras' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'EIGS.exists_xiClosedHarmonicTrace_pythagoras_of_rules' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

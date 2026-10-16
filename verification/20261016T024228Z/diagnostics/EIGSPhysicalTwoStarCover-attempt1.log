@@ -1,0 +1,61 @@
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSPhysicalTwoStarCover.lean:62:2: error: failed to synthesize
+  AlexandrovDiscrete (XiMetricCompletion system connected lengths lengthsPositive rate ⋯ eigenpair)
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSPhysicalTwoStarCover.lean:97:56: error: Type mismatch: After simplification, term
+  incident
+ has type
+  XiTail system level (xiAddressEdge system level second) = XiTail system level (xiAddressEdge system level first) ∨
+    XiHead system level (xiAddressEdge system level second) = XiTail system level (xiAddressEdge system level first)
+but is expected to have type
+  XiTail system level (xiAddressEdge system level second) = XiTail system level edge ∨
+    XiHead system level (xiAddressEdge system level second) = XiTail system level edge
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSPhysicalTwoStarCover.lean:105:56: error: Type mismatch: After simplification, term
+  incident
+ has type
+  XiTail system level (xiAddressEdge system level second) = XiHead system level (xiAddressEdge system level first) ∨
+    XiHead system level (xiAddressEdge system level second) = XiHead system level (xiAddressEdge system level first)
+but is expected to have type
+  XiTail system level (xiAddressEdge system level second) = XiHead system level edge ∨
+    XiHead system level (xiAddressEdge system level second) = XiHead system level edge
+C:\Users\lzysh\Documents\Codex\2026-09-21\new-chat\work\IGS-RWDL-LEAN\section3-diffusion\RequestProject\Section31\EIGSPhysicalTwoStarCover.lean:142:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  diameter * (lowerLength / diameter * rate⁻¹ ^ level)
+in the target expression
+  ball center (lowerLength / diameter * rate⁻¹ ^ level) =
+    ball center (diam Set.univ * (lowerLength / diameter * rate⁻¹ ^ level))
+
+K : ℕ
+system : EIGSData K
+connected : ∀ (colour : Fin K), (ruleSG system colour).Connected
+lengths : Fin K → ℝ
+lengthsPositive : ∀ (colour : Fin K), 0 < lengths colour
+rate : ℝ
+rateGreaterThanOne : 1 < rate
+eigenpair : (system.ruleFamily connected).metricLengths lengths = rate • lengths
+mass : XiMassParameters system
+lowerLength : ℝ
+lowerPositive : 0 < lowerLength
+lowerBound : ∀ (colour : Fin K), lowerLength ≤ lengths colour
+diameter : ℝ := xiCompletionDiameter system connected lengths lengthsPositive rate ⋯ eigenpair
+diameterPositive : 0 < diameter
+level : ℕ
+edge : XiEdge system.toRuleData level
+center : XiMetricCompletion system connected lengths lengthsPositive rate ⋯ eigenpair
+membership :
+  center ∈ xiPhysicalClosedCell system connected lengths lengthsPositive rate rateGreaterThanOne eigenpair level edge
+identity :
+  ball center (lowerLength / diameter * rate⁻¹ ^ level) =
+    ball center (diam Set.univ * (lowerLength / diameter * rate⁻¹ ^ level))
+cancellation : diameter * (lowerLength / diameter * rate⁻¹ ^ level) = lowerLength * rate⁻¹ ^ level
+⊢ ball center (lowerLength / diameter * rate⁻¹ ^ level) ⊆
+    xiPhysicalClosedStar system connected lengths lengthsPositive rate rateGreaterThanOne eigenpair level
+        (XiTail system level edge) ∪
+      xiPhysicalClosedStar system connected lengths lengthsPositive rate rateGreaterThanOne eigenpair level
+        (XiHead system level edge)
+'EIGS.xiAddressLimit_surjective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.xiPhysicalClosedStar_isClosed' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'EIGS.xiPhysicalCell_ball_subset_two_stars' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'EIGS.exists_xiPhysicalCell_diameter_ball_subset_two_stars' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

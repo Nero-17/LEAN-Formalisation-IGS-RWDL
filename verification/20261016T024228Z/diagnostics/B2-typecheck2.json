@@ -1,0 +1,30 @@
+{
+  "source": "section3-diffusion/RequestProject/Section31/EIGSClosedHarmonicTracePythagoras.lean",
+  "source_sha256": "f6ecd52f75822d48d5e770c2e3c065d99a3a666019c3e28b87b7633c051a317a",
+  "source_unchanged": true,
+  "start_utc": "2026-10-16T03:06:46.723426+00:00",
+  "end_utc": "2026-10-16T03:11:58.604221+00:00",
+  "exit_code": 1,
+  "log": "EIGSClosedHarmonicTracePythagoras.log",
+  "log_sha256": "ab0b03350f189b557f36d76cc396ab5e18c506ecebd9baae91fe164270a301b5",
+  "audits": [
+    {
+      "declaration": "EIGS.exists_xiClosedHarmonicTrace_pythagoras",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "EIGS.exists_xiClosedHarmonicTrace_pythagoras_of_rules",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ]
+}

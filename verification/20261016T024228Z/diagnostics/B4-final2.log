@@ -1,0 +1,125 @@
+'EIGS.xiAddressLimit_vertex_separated_of_nonincident' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiVertexClosedBall_incidence_mass_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiUniformBornVertex_incidence_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiUniformVertex_incidence_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiUniformBornVertex_geometric_ball_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+work/IGS-RWDL-LEAN/section3-diffusion/RequestProject/Section31/EIGSUniformBirthFactorAndSpatialCollar.lean:373:8: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+work/IGS-RWDL-LEAN/section3-diffusion/RequestProject/Section31/EIGSUniformBirthFactorAndSpatialCollar.lean:358:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+work/IGS-RWDL-LEAN/section3-diffusion/RequestProject/Section31/EIGSUniformBirthFactorAndSpatialCollar.lean:373:8: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'EIGS.exists_xiUniformBirthFactor_ball_mass_at_fixed_radius' depends on axioms: [propext, Classical.choice, Quot.sound]
+work/IGS-RWDL-LEAN/section3-diffusion/RequestProject/Section31/EIGSUniformBirthFactorAndSpatialCollar.lean:493:8: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+work/IGS-RWDL-LEAN/section3-diffusion/RequestProject/Section31/EIGSUniformBirthFactorAndSpatialCollar.lean:493:8: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'EIGS.xiPhysicalSkeletonCollar_pullback_subset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiPhysicalSkeletonCollar_geometric_mass_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiPhysicalSkeletonCollar_geometric_real_mass_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+work/IGS-RWDL-LEAN/section3-diffusion/RequestProject/Section31/EIGSUniformBirthFactorAndSpatialCollar.lean:670:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  {point | infDist point (Set.range (parameters.vertexEmbedding ?coarse)) ≤ ?radius}
+in the target expression
+  (xiLimitMeasure system connected parameters.lengths ⋯ (system.distanceSpectralRadius connected) distanceGreaterThanOne
+          ⋯ mass).real
+      {point |
+        infDist point (Set.range (parameters.vertexEmbedding (level - width))) ≤
+          radiusFactor * (system.distanceSpectralRadius connected)⁻¹ ^ level} ≤
+    collar * (finiteRealMatrixSpectralRadius (degreeMatrix system) / mass.rate) ^ width
+
+case refine_2
+K : ℕ
+system : EIGSData K
+connected : ∀ (colour : Fin K), (ruleSG system colour).Connected
+loopless : ∀ (colour : Fin K), (system.ruleNetwork colour).Loopless
+unique : ∀ (colour : Fin K), (system.ruleNetwork colour).EdgesUnique
+plantingNonadjacent :
+  ∀ (colour : Fin K), ¬(ruleSG system colour).Adj (system.plantPlus colour) (system.plantMinus colour)
+distancePositive :
+  ∀ (ruleColour edgeColour : Fin K),
+    ¬((system.ruleNetwork ruleColour).withoutColour edgeColour).Reachable (system.plantPlus ruleColour)
+        (system.plantMinus ruleColour)
+primitiveDegree : (degreeMatrix system).IsPrimitive
+radiusFactor : ℝ
+radiusFactorPositive : 0 < radiusFactor
+parameters : XiPathMetricData system connected :=
+  xiPathMetricDataOfRules system connected loopless unique distancePositive
+distanceGreaterThanOne : 1 < system.distanceSpectralRadius connected :=
+  LT.lt.trans_le
+    (Mathlib.Meta.NormNum.isNat_lt_true (Mathlib.Meta.NormNum.isNat_ofNat ℝ Nat.cast_one)
+      (Mathlib.Meta.NormNum.isNat_ofNat ℝ (Eq.refl 2)) (Eq.refl false))
+    (EIGSData.two_le_distanceSpectralRadius system connected unique plantingNonadjacent distancePositive)
+mass : XiMassParameters system := xiMassParametersOfRules system connected distancePositive
+normalizedMetric : MetricSpace
+  (XiMetricCompletion system connected parameters.lengths ⋯ (system.distanceSpectralRadius connected) ⋯ ⋯) :=
+  MeasuredGHP.xiCompletionDiameterMetricSpace system connected parameters.lengths ⋯
+    (system.distanceSpectralRadius connected) distanceGreaterThanOne ⋯
+diameter : ℝ := xiCompletionDiameter system connected parameters.lengths ⋯ (system.distanceSpectralRadius connected) ⋯ ⋯
+diameterPositive : 0 < diameter
+nativeMetric : MetricSpace parameters.LimitSpace :=
+  xiCompletionMetricSpace system connected parameters.lengths ⋯ (system.distanceSpectralRadius connected) ⋯ ⋯
+ballIdentity : ∀ (point : parameters.LimitSpace) (radius : ℝ), ball point radius = ball point (diameter * radius)
+closedBallIdentity :
+  ∀ (point : parameters.LimitSpace) (radius : ℝ), closedBall point radius = closedBall point (diameter * radius)
+collarIdentity :
+  ∀ (coarse : ℕ) (radius : ℝ),
+    {point | infDist point (Set.range (parameters.vertexEmbedding coarse)) ≤ radius} =
+      {point | infDist point (Set.range (parameters.vertexEmbedding coarse)) ≤ diameter * radius}
+lower upper : ℝ
+minimumAge : ℕ
+lowerPositive : 0 < lower
+upperPositive : 0 < upper
+volumeBound :
+  ∀ (birth age : ℕ) (vertex : XiVtx system birth),
+    minimumAge ≤ age →
+      xiVertexBornAt system birth vertex →
+        lower * finiteRealMatrixSpectralRadius (degreeMatrix system) ^ age / mass.rate ^ (birth + age) ≤
+            (xiLimitMeasure system connected parameters.lengths ⋯ (system.distanceSpectralRadius connected)
+                  distanceGreaterThanOne ⋯ mass).real
+              (ball
+                (xiCompletionEmbedding system connected parameters.lengths ⋯ (system.distanceSpectralRadius connected) ⋯
+                  ⋯ birth vertex)
+                (diameter * radiusFactor * (system.distanceSpectralRadius connected)⁻¹ ^ (birth + age))) ∧
+          (xiLimitMeasure system connected parameters.lengths ⋯ (system.distanceSpectralRadius connected)
+                  distanceGreaterThanOne ⋯ mass).real
+              (closedBall
+                (xiCompletionEmbedding system connected parameters.lengths ⋯ (system.distanceSpectralRadius connected) ⋯
+                  ⋯ birth vertex)
+                (diameter * radiusFactor * (system.distanceSpectralRadius connected)⁻¹ ^ (birth + age))) ≤
+            upper * finiteRealMatrixSpectralRadius (degreeMatrix system) ^ age / mass.rate ^ (birth + age)
+collar : ℝ
+minimumWidth : ℕ
+collarPositive : 0 < collar
+collarBound :
+  ∀ (level width : ℕ),
+    minimumWidth ≤ width →
+      width ≤ level →
+        (xiLimitMeasure system connected parameters.lengths ⋯ (system.distanceSpectralRadius connected)
+                distanceGreaterThanOne ⋯ mass).real
+            (xiPhysicalSkeletonCollar system connected parameters.lengths ⋯ (system.distanceSpectralRadius connected)
+              distanceGreaterThanOne ⋯ (level - width)
+              (diameter * radiusFactor * (system.distanceSpectralRadius connected)⁻¹ ^ level)) ≤
+          collar * (finiteRealMatrixSpectralRadius (degreeMatrix system) / mass.rate) ^ width
+level width : ℕ
+widthLarge : minimumWidth ≤ width
+widthLe : width ≤ level
+⊢ (xiLimitMeasure system connected parameters.lengths ⋯ (system.distanceSpectralRadius connected) distanceGreaterThanOne
+          ⋯ mass).real
+      {point |
+        infDist point (Set.range (parameters.vertexEmbedding (level - width))) ≤
+          radiusFactor * (system.distanceSpectralRadius connected)⁻¹ ^ level} ≤
+    collar * (finiteRealMatrixSpectralRadius (degreeMatrix system) / mass.rate) ^ width
+'EIGS.MeasuredGHP.diameterNormalized_finiteSkeletonCollar_eq_native' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_xiUniformBirthFactorAndSpatialCollar_diameter_of_rules' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

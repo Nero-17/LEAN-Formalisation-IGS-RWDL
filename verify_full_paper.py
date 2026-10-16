@@ -19,7 +19,12 @@ repository = Path(__file__).resolve().parent
 parser = argparse.ArgumentParser()
 parser.add_argument('--lean', required=True, type=Path)
 parser.add_argument('--targets', nargs='*')
+parser.add_argument('--targets-file', type=Path, help='Read one module per line without a long command line.')
 arguments = parser.parse_args()
+if arguments.targets_file:
+    if arguments.targets:
+        parser.error('Use --targets or --targets-file, not both')
+    arguments.targets = [line.strip() for line in arguments.targets_file.read_text(encoding='utf-8').splitlines() if line.strip()]
 workspace = repository / '.lake' / 'full-paper-verification'
 source_root = workspace / 'src'
 build_root = workspace / 'lib' / 'lean'

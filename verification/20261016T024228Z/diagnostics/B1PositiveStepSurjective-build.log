@@ -1,0 +1,48 @@
+C:/Users/lzysh/Documents/Codex/2026-09-21/new-chat/work/IGS-RWDL-LEAN/section3-diffusion/RequestProject/Section31/B1PositiveStepSurjective.lean:21:43: error(lean.unknownIdentifier): Unknown identifier `one_div_le_one`
+C:/Users/lzysh/Documents/Codex/2026-09-21/new-chat/work/IGS-RWDL-LEAN/section3-diffusion/RequestProject/Section31/B1PositiveStepSurjective.lean:47:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ?a₁ • ?a₂ • ?b
+in the target expression
+  (fun values => step • values)
+      (inverseUnit.inv ((1 / step) • forcing) -
+        (1 - 1 / step) • (resolventState domain form nonnegative closable) (inverseUnit.inv ((1 / step) • forcing))) =
+    (fun values => step • values) ((1 / step) • forcing)
+
+case neg
+H : Type u_1
+inst✝² : NormedAddCommGroup H
+inst✝¹ : InnerProductSpace ℝ H
+inst✝ : CompleteSpace H
+domain : Submodule ℝ H
+form : QuadraticForm ℝ ↥domain
+nonnegative : ∀ (values : ↥domain), 0 ≤ form values
+closable : SequentiallyClosable domain form
+domainDense : Dense ↑domain
+step : ℝ
+stepPositive : 0 < step
+stepAtMostOne : ¬step ≤ 1
+inversePositive : 0 < 1 / step
+inverseAtMostOne : 1 / step ≤ 1
+operatorBound : ‖resolventState domain form nonnegative closable‖ ≤ 1
+perturbationBound : ‖(1 - 1 / step) • resolventState domain form nonnegative closable‖ < 1
+inverseUnit : (H →L[ℝ] H)ˣ :=
+  Units.oneSub ((1 - 1 / step) • resolventState domain form nonnegative closable) perturbationBound
+forcing : H
+inversion :
+  inverseUnit.inv ((1 / step) • forcing) -
+      (1 - 1 / step) • (resolventState domain form nonnegative closable) (inverseUnit.inv ((1 / step) • forcing)) =
+    (1 / step) • forcing
+scaled :
+  (fun values => step • values)
+      (inverseUnit.inv ((1 / step) • forcing) -
+        (1 - 1 / step) • (resolventState domain form nonnegative closable) (inverseUnit.inv ((1 / step) • forcing))) =
+    (fun values => step • values) ((1 / step) • forcing)
+cancellation : step * (1 / step) = 1
+⊢ (resolventState domain form nonnegative closable) (inverseUnit.inv ((1 / step) • forcing)) +
+      step •
+        (inverseUnit.inv ((1 / step) • forcing) -
+          (resolventState domain form nonnegative closable) (inverseUnit.inv ((1 / step) • forcing))) =
+    forcing
+'IGS.Sec31.QuadraticEnergySpace.allPositiveStep_resolvent_surjective' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,9 @@
+'EIGS.b1_exists_xiNativeUniformLambdaResolvent_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiClosedHarmonicTrace_pythagoras_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiClosedHarmonicTrace_pythagoras_constructed_of_rules' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EIGS.exists_xiPhysicalCell_diameter_two_star_cover_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiUniformBirthFactorAndSpatialCollar_diameter_of_rules' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

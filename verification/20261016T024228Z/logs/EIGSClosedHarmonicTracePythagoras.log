@@ -1,0 +1,5 @@
+'EIGS.exists_xiClosedHarmonicTrace_pythagoras' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiClosedHarmonicTrace_pythagoras_of_rules' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EIGS.exists_xiClosedHarmonicTrace_pythagoras_constructed_of_rules' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
