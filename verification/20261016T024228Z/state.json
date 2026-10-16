@@ -4,7 +4,7 @@
   "drive": "deferred by user; \u5c1a\u672a\u4e0a\u4f20",
   "base_github_main": "81f8ad145b2305c971b47dc1b9ebf3623051e1fa",
   "goal": "Fill Lean correspondence bridges B1-B4, compile and publish",
-  "status": "all-four-bridges-and-joint-entry-verified-publication-pending",
+  "status": "complete-published",
   "last_checkpoint_utc": "2026-10-16T03:12:45Z",
   "wall_clock_seconds_at_checkpoint": 1817,
   "accepted_bridges": [
@@ -16,9 +16,12 @@
   "pending_bridges": [],
   "local_archive_status": "Updated same authoritative record after 30 minutes; Drive deferred by user",
   "verification_end_utc": "2026-10-16T03:39:56.528032+00:00",
-  "wall_clock_seconds": 3448.528032,
+  "wall_clock_seconds": 3620.696182,
   "new_whole_files": 5,
   "new_axiom_audits": 43,
   "portable_validator": "passed",
-  "validator_checked_utc": "2026-10-16T03:41:39Z"
+  "validator_checked_utc": "2026-10-16T03:41:39Z",
+  "proof_commit": "ac63c6caf5e51fe51f955d2de4c8d294a8a4a324",
+  "remote_main_verified": "ac63c6caf5e51fe51f955d2de4c8d294a8a4a324",
+  "end_utc": "2026-10-16T03:42:48.696182+00:00"
 }

@@ -72,7 +72,7 @@ The previous audit's **paper corrections remain**: say explicitly that the under
 
 No new mathematical conclusion was withdrawn in this round. Early failing code was never counted as accepted. B1 repaired two elementary reciprocal/scalar-rewrite errors. B2 repaired dependent-alias/coercion alignments (six, then two, then one diagnostics), finally using concrete completion norm/energy identities; one earlier attempt externally ended with exit −1 and an empty log, cause unconfirmed. B3 repaired the finite-union closedness API, a set-membership equality coercion and a normalized-metric rewrite; its first superseded compile also had a source change and is explicitly rejected as an acceptance receipt. B4 repaired positivity/nonempty certificates and exact implicit-metric rewriting; the final standard rerun added an explicit before/after source hash certificate. Harmless unused-tactic linter warnings remain in B4; the final compile has no errors.
 
-Only five new Lean files were added; already accepted sources and Overleaf were preserved. Intermediate unaccepted split Lean helpers were removed after their authoritative combined source succeeded. The historical checkpoints below belong to this same round, not separate archives. The final record and required source/log/receipt attachments are prepared together for the authorized GitHub main; push success is confirmed separately by the delivery receipt.
+Only five new Lean files were added; already accepted sources and Overleaf were preserved. Intermediate unaccepted split Lean helpers were removed after their authoritative combined source succeeded. The historical checkpoints below belong to this same round, not separate archives. The four proof modules, joint entry, final report and verification attachments were pushed to authorized GitHub main and read back at commit `ac63c6caf5e51fe51f955d2de4c8d294a8a4a324`. The delivery receipt records this independently.
 
 **Google Drive: 尚未上传**, following the user's existing “先不用管googedrive” instruction. This same local/GitHub record is the round's complete authoritative report; no Drive success or new scheduled task is claimed.
 
@@ -116,3 +116,8 @@ Actual elapsed wall clock is 30 minutes 17 seconds. This same local authoritativ
 ## Portable verification checkpoint — 03:41:39 UTC
 
 The default new snapshot validator passed: 1277 source files, 1190 historical shared modules, 820 accepted whole-file records. All source/log hashes and allowed axiom lists match. The rebuild CLI recognizes the new target-list-file option. This is evidence checking, not a fresh full dependency rebuild. See [snapshot-validator.json](snapshot-validator.json). Selected rejected compiler attempts are retained under [diagnostics](diagnostics); they are excluded from accepted receipts.
+
+
+## Confirmed GitHub delivery
+
+Code/evidence commit: [`ac63c6caf5e51fe51f955d2de4c8d294a8a4a324`](https://github.com/Nero-17/LEAN-Formalisation-IGS-RWDL/commit/ac63c6caf5e51fe51f955d2de4c8d294a8a4a324). Remote main was read back with exactly that commit at 2026-10-16T03:42:48.696182+00:00. This final same-record update completes the archive; the subsequent documentation commit changes no Lean source or accepted compiler evidence. Total continuous wall clock through verified code/evidence delivery: 60.34 minutes. Google Drive remains deferred and 尚未上传.
