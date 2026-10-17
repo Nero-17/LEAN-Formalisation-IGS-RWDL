@@ -1,0 +1,544 @@
+{
+  "experiment": "new independent critical DHL population dynamics",
+  "historical_run_recovered": false,
+  "started_utc": "2026-10-17T02:58:48.663680+00:00",
+  "command_arguments": {
+    "population": 32768,
+    "generations": 10000,
+    "seeds": [
+      20261017,
+      20261018,
+      20261019,
+      20261020
+    ],
+    "output": "population_dynamics_results.json"
+  },
+  "script_sha256": "64c04cffaab82d59b32e97744fe1731d871c8d02703a9a2003190ad85a8a5a40",
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy_version": "2.3.5",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "rng": "numpy Generator(PCG64(seed))",
+  "floating_point": "numpy float64",
+  "critical_parameter": 0.6180339887498949,
+  "diamond_probability": 0.23606797749978978,
+  "series_probability": 0.7639320225002102,
+  "population_size": 32768,
+  "generations": 10000,
+  "seeds": [
+    20261017,
+    20261018,
+    20261019,
+    20261020
+  ],
+  "method": "Initial population R_0=1. At every generation independently sample four children with replacement from the preceding normalized population. With probability q=p^4/(2p^2-p^4), return (R1+R2)(R3+R4)/(R1+R2+R3+R4); otherwise return R1+R2. Divide the population by its empirical arithmetic mean and add the log of that mean to cumulative_log_scale. Homogeneity makes this stable normalization equivalent to common log-domain scaling.",
+  "limitations": "Empirical population approximations, not exact expectations. Seed spread is descriptive only; it is not a rigorous confidence interval and does not bound finite-population or generation bias. The empirical Jensen gap is not an error bound for the exponent.",
+  "runs": [
+    {
+      "seed": 20261017,
+      "started_utc": "2026-10-17T02:58:48.832720+00:00",
+      "ended_utc": "2026-10-17T02:59:30.545115+00:00",
+      "elapsed_seconds": 41.71227849999559,
+      "checkpoints": [
+        {
+          "generation": 1,
+          "empirical_log_mean_resistance_over_n": 0.5678477164656763,
+          "empirical_mean_log_resistance_over_n": 0.5298869895332835,
+          "empirical_jensen_gap_over_n": 0.03796072693239283,
+          "cumulative_log_scale": 0.5678477164656766,
+          "normalized_population_mean": 0.9999999999999998,
+          "normalized_population_min": 0.5667439205783666,
+          "normalized_population_max": 1.1334878411567333,
+          "normalized_population_cv": 0.24048787643044292,
+          "elapsed_seconds": 0.029816900001605973
+        },
+        {
+          "generation": 10,
+          "empirical_log_mean_resistance_over_n": 0.5640074760286334,
+          "empirical_mean_log_resistance_over_n": 0.5567390859367667,
+          "empirical_jensen_gap_over_n": 0.00726839009186675,
+          "cumulative_log_scale": 5.640074760286335,
+          "normalized_population_mean": 1.0,
+          "normalized_population_min": 0.2329236520305802,
+          "normalized_population_max": 2.1542212264468383,
+          "normalized_population_cv": 0.3589518594894742,
+          "elapsed_seconds": 0.049223199996049516
+        },
+        {
+          "generation": 100,
+          "empirical_log_mean_resistance_over_n": 0.563241493805693,
+          "empirical_mean_log_resistance_over_n": 0.5625129396228761,
+          "empirical_jensen_gap_over_n": 0.0007285541828169206,
+          "cumulative_log_scale": 56.324149380569295,
+          "normalized_population_mean": 1.0,
+          "normalized_population_min": 0.24491253751719425,
+          "normalized_population_max": 2.1525214517973783,
+          "normalized_population_cv": 0.3588498216649744,
+          "elapsed_seconds": 0.24147399999492336
+        },
+        {
+          "generation": 1000,
+          "empirical_log_mean_resistance_over_n": 0.5631308545900232,
+          "empirical_mean_log_resistance_over_n": 0.5630577983716161,
+          "empirical_jensen_gap_over_n": 7.30562184071415e-05,
+          "cumulative_log_scale": 563.1308545900232,
+          "normalized_population_mean": 1.0,
+          "normalized_population_min": 0.24804029869804164,
+          "normalized_population_max": 2.1832409967398174,
+          "normalized_population_cv": 0.3600768622767971,
+          "elapsed_seconds": 2.7630461000080686
+        },
+        {
+          "generation": 2500,
+          "empirical_log_mean_resistance_over_n": 0.5631615993328702,
+          "empirical_mean_log_resistance_over_n": 0.5631325646632078,
+          "empirical_jensen_gap_over_n": 2.9034669662419965e-05,
+          "cumulative_log_scale": 1407.9039983321757,
+          "normalized_population_mean": 1.0,
+          "normalized_population_min": 0.2559653202815425,
+          "normalized_population_max": 2.2792704758288607,
+          "normalized_population_cv": 0.3587661067956351,
+          "elapsed_seconds": 9.855535199996666
+        },
+        {
+          "generation": 5000,
+          "empirical_log_mean_resistance_over_n": 0.5631657269193219,
+          "empirical_mean_log_resistance_over_n": 0.5631511482758309,
+          "empirical_jensen_gap_over_n": 1.4578643490970045e-05,
+          "cumulative_log_scale": 2815.8286345966094,
+          "normalized_population_mean": 1.0,
+          "normalized_population_min": 0.2514002934378674,
+          "normalized_population_max": 2.145436660134448,
+          "normalized_population_cv": 0.3593696138503192,
+          "elapsed_seconds": 19.117472600002657
+        },
+        {
+          "generation": 7500,
+          "empirical_log_mean_resistance_over_n": 0.5631642190865699,
+          "empirical_mean_log_resistance_over_n": 0.5631545603005713,
+          "empirical_jensen_gap_over_n": 9.65878599856751e-06,
+          "cumulative_log_scale": 4223.7316431492745,
+          "normalized_population_mean": 1.0,
+          "normalized_population_min": 0.23206300297405638,
+          "normalized_population_max": 2.18283138135996,
+          "normalized_population_cv": 0.35906778284138297,
+          "elapsed_seconds": 27.90097109999624
+        },
+        {
+          "generation": 10000,
+          "empirical_log_mean_resistance_over_n": 0.5631623814981774,
+          "empirical_mean_log_resistance_over_n": 0.5631551588313647,
+          "empirical_jensen_gap_over_n": 7.222666812745082e-06,
+          "cumulative_log_scale": 5631.623814981775,
+          "normalized_population_mean": 1.0,
+          "normalized_population_min": 0.2603742560294422,
+          "normalized_population_max": 2.169042216236195,
+          "normalized_population_cv": 0.3578489383129337,
+          "elapsed_seconds": 41.71209679999447
+        }
+      ],
+      "final": {
+        "generation": 10000,
+        "empirical_log_mean_resistance_over_n": 0.5631623814981774,
+        "empirical_mean_log_resistance_over_n": 0.5631551588313647,
+        "empirical_jensen_gap_over_n": 7.222666812745082e-06,
+        "cumulative_log_scale": 5631.623814981775,
+        "normalized_population_mean": 1.0,
+        "normalized_population_min": 0.2603742560294422,
+        "normalized_population_max": 2.169042216236195,
+        "normalized_population_cv": 0.3578489383129337,
+        "elapsed_seconds": 41.71209679999447
+      }
+    },
+    {
+      "seed": 20261018,
+      "started_utc": "2026-10-17T02:59:30.550101+00:00",
+      "ended_utc": "2026-10-17T02:59:59.841340+00:00",
+      "elapsed_seconds": 29.291688500001328,
+      "checkpoints": [
+        {
+          "generation": 1,
+          "empirical_log_mean_resistance_over_n": 0.5670171803761318,
+          "empirical_mean_log_resistance_over_n": 0.52887163721801,
+          "empirical_jensen_gap_over_n": 0.0381455431581218,
+          "cumulative_log_scale": 0.5670171803761316,
+          "normalized_population_mean": 1.0000000000000002,
+          "normalized_population_min": 0.5672148173792626,
+          "normalized_population_max": 1.1344296347585252,
+          "normalized_population_cv": 0.24120355310112526,
+          "elapsed_seconds": 0.008019000000786036
+        },
+        {
+          "generation": 10,
+          "empirical_log_mean_resistance_over_n": 0.5632709732228156,
+          "empirical_mean_log_resistance_over_n": 0.5560161760186462,
+          "empirical_jensen_gap_over_n": 0.007254797204169439,
+          "cumulative_log_scale": 5.632709732228156,
+          "normalized_population_mean": 1.0,
+          "normalized_population_min": 0.22471213028980808,
+          "normalized_population_max": 2.163664525236463,
+          "normalized_population_cv": 0.35878734702913584,
+          "elapsed_seconds": 0.05725189999793656
+        },
+        {
+          "generation": 100,
+          "empirical_log_mean_resistance_over_n": 0.5629734296895464,
+          "empirical_mean_log_resistance_over_n": 0.5622488678445088,
+          "empirical_jensen_gap_over_n": 0.0007245618450376634,
+          "cumulative_log_scale": 56.297342968954645,
+          "normalized_population_mean": 1.0,
+          "normalized_population_min": 0.24456266216212252,
+          "normalized_population_max": 2.172933464180148,
+          "normalized_population_cv": 0.35853031812558167,
+          "elapsed_seconds": 0.4823968999990029
+        },
+        {
+          "generation": 1000,
+          "empirical_log_mean_resistance_over_n": 0.5630223747412747,
+          "empirical_mean_log_resistance_over_n": 0.5629497983447728,
+          "empirical_jensen_gap_over_n": 7.257639650193326e-05,
+          "cumulative_log_scale": 563.0223747412747,
+          "normalized_population_mean": 1.0000000000000002,
+          "normalized_population_min": 0.22593440733269593,
+          "normalized_population_max": 2.183169687917472,
+          "normalized_population_cv": 0.35956692666547757,
+          "elapsed_seconds": 3.9329264999978477
+        },
+        {
+          "generation": 2500,
+          "empirical_log_mean_resistance_over_n": 0.56309124146642,
+          "empirical_mean_log_resistance_over_n": 0.563061641886456,
+          "empirical_jensen_gap_over_n": 2.9599579963957012e-05,
+          "cumulative_log_scale": 1407.72810366605,
+          "normalized_population_mean": 0.9999999999999999,
+          "normalized_population_min": 0.26161399620399856,
+          "normalized_population_max": 2.176236304544193,
+          "normalized_population_cv": 0.36306184533400043,
+          "elapsed_seconds": 9.381732699999702
+        },
+        {
+          "generation": 5000,
+          "empirical_log_mean_resistance_over_n": 0.5630833493389493,
+          "empirical_mean_log_resistance_over_n": 0.5630685325334329,
+          "empirical_jensen_gap_over_n": 1.4816805516404408e-05,
+          "cumulative_log_scale": 2815.4167466947465,
+          "normalized_population_mean": 1.0,
+          "normalized_population_min": 0.26123313920058083,
+          "normalized_population_max": 2.1274168516861427,
+          "normalized_population_cv": 0.36223468636328443,
+          "elapsed_seconds": 17.446756899997126
+        },
+        {
+          "generation": 7500,
+          "empirical_log_mean_resistance_over_n": 0.5631318702524817,
+          "empirical_mean_log_resistance_over_n": 0.5631221870547686,
+          "empirical_jensen_gap_over_n": 9.683197713106217e-06,
+          "cumulative_log_scale": 4223.489026893612,
+          "normalized_population_mean": 1.0,
+          "normalized_population_min": 0.25587230733141075,
+          "normalized_population_max": 2.1126112028175412,
+          "normalized_population_cv": 0.3592684294631274,
+          "elapsed_seconds": 24.193388599989703
+        },
+        {
+          "generation": 10000,
+          "empirical_log_mean_resistance_over_n": 0.5631235459947741,
+          "empirical_mean_log_resistance_over_n": 0.5631162484462627,
+          "empirical_jensen_gap_over_n": 7.29754851136466e-06,
+          "cumulative_log_scale": 5631.235459947741,
+          "normalized_population_mean": 1.0,
+          "normalized_population_min": 0.23840712777440426,
+          "normalized_population_max": 2.2477915568969,
+          "normalized_population_cv": 0.3602136532960975,
+          "elapsed_seconds": 29.291582899997593
+        }
+      ],
+      "final": {
+        "generation": 10000,
+        "empirical_log_mean_resistance_over_n": 0.5631235459947741,
+        "empirical_mean_log_resistance_over_n": 0.5631162484462627,
+        "empirical_jensen_gap_over_n": 7.29754851136466e-06,
+        "cumulative_log_scale": 5631.235459947741,
+        "normalized_population_mean": 1.0,
+        "normalized_population_min": 0.23840712777440426,
+        "normalized_population_max": 2.2477915568969,
+        "normalized_population_cv": 0.3602136532960975,
+        "elapsed_seconds": 29.291582899997593
+      }
+    },
+    {
+      "seed": 20261019,
+      "started_utc": "2026-10-17T02:59:59.843325+00:00",
+      "ended_utc": "2026-10-17T03:00:30.370340+00:00",
+      "elapsed_seconds": 30.526402000003145,
+      "checkpoints": [
+        {
+          "generation": 1,
+          "empirical_log_mean_resistance_over_n": 0.569316767291138,
+          "empirical_mean_log_resistance_over_n": 0.5316850092582466,
+          "empirical_jensen_gap_over_n": 0.03763175803289143,
+          "cumulative_log_scale": 0.569316767291138,
+          "normalized_population_mean": 1.0,
+          "normalized_population_min": 0.5659119562026147,
+          "normalized_population_max": 1.1318239124052294,
+          "normalized_population_cv": 0.23921367908567417,
+          "elapsed_seconds": 0.0027842999988934025
+        },
+        {
+          "generation": 10,
+          "empirical_log_mean_resistance_over_n": 0.5644704943321136,
+          "empirical_mean_log_resistance_over_n": 0.5572243523128921,
+          "empirical_jensen_gap_over_n": 0.007246142019221469,
+          "cumulative_log_scale": 5.644704943321136,
+          "normalized_population_mean": 1.0,
+          "normalized_population_min": 0.24355717204739116,
+          "normalized_population_max": 2.1136732114665158,
+          "normalized_population_cv": 0.3581129351874504,
+          "elapsed_seconds": 0.020183500004350208
+        },
+        {
+          "generation": 100,
+          "empirical_log_mean_resistance_over_n": 0.5633402333790882,
+          "empirical_mean_log_resistance_over_n": 0.562613376387376,
+          "empirical_jensen_gap_over_n": 0.0007268569917122658,
+          "cumulative_log_scale": 56.334023337908825,
+          "normalized_population_mean": 1.0,
+          "normalized_population_min": 0.2614238230221681,
+          "normalized_population_max": 2.081096751942278,
+          "normalized_population_cv": 0.35903501776737096,
+          "elapsed_seconds": 0.18963200000871439
+        },
+        {
+          "generation": 1000,
+          "empirical_log_mean_resistance_over_n": 0.5632737193590591,
+          "empirical_mean_log_resistance_over_n": 0.5632009499304867,
+          "empirical_jensen_gap_over_n": 7.276942857237234e-05,
+          "cumulative_log_scale": 563.2737193590591,
+          "normalized_population_mean": 1.0,
+          "normalized_population_min": 0.24283027837686585,
+          "normalized_population_max": 2.2953892269392777,
+          "normalized_population_cv": 0.359071381351,
+          "elapsed_seconds": 2.5181799000129104
+        },
+        {
+          "generation": 2500,
+          "empirical_log_mean_resistance_over_n": 0.5632171650067724,
+          "empirical_mean_log_resistance_over_n": 0.5631882070243409,
+          "empirical_jensen_gap_over_n": 2.8957982431521145e-05,
+          "cumulative_log_scale": 1408.042912516931,
+          "normalized_population_mean": 1.0,
+          "normalized_population_min": 0.22980995157723696,
+          "normalized_population_max": 2.0904699554067525,
+          "normalized_population_cv": 0.35804874895733796,
+          "elapsed_seconds": 7.808551599999191
+        },
+        {
+          "generation": 5000,
+          "empirical_log_mean_resistance_over_n": 0.5631795455797046,
+          "empirical_mean_log_resistance_over_n": 0.5631649903411862,
+          "empirical_jensen_gap_over_n": 1.4555238518454416e-05,
+          "cumulative_log_scale": 2815.897727898523,
+          "normalized_population_mean": 0.9999999999999999,
+          "normalized_population_min": 0.25238418326694634,
+          "normalized_population_max": 2.186473841158762,
+          "normalized_population_cv": 0.3590667261025382,
+          "elapsed_seconds": 17.533235100010643
+        },
+        {
+          "generation": 7500,
+          "empirical_log_mean_resistance_over_n": 0.5631643098325688,
+          "empirical_mean_log_resistance_over_n": 0.5631546316875824,
+          "empirical_jensen_gap_over_n": 9.67814498642472e-06,
+          "cumulative_log_scale": 4223.732323744266,
+          "normalized_population_mean": 0.9999999999999999,
+          "normalized_population_min": 0.2616880503270821,
+          "normalized_population_max": 2.2700461834726395,
+          "normalized_population_cv": 0.3590526028663289,
+          "elapsed_seconds": 24.13387400000647
+        },
+        {
+          "generation": 10000,
+          "empirical_log_mean_resistance_over_n": 0.5631855368473161,
+          "empirical_mean_log_resistance_over_n": 0.5631782555399534,
+          "empirical_jensen_gap_over_n": 7.281307362716483e-06,
+          "cumulative_log_scale": 5631.855368473161,
+          "normalized_population_mean": 1.0,
+          "normalized_population_min": 0.26800976558051554,
+          "normalized_population_max": 2.1334935378883992,
+          "normalized_population_cv": 0.35925110670306515,
+          "elapsed_seconds": 30.526283900006092
+        }
+      ],
+      "final": {
+        "generation": 10000,
+        "empirical_log_mean_resistance_over_n": 0.5631855368473161,
+        "empirical_mean_log_resistance_over_n": 0.5631782555399534,
+        "empirical_jensen_gap_over_n": 7.281307362716483e-06,
+        "cumulative_log_scale": 5631.855368473161,
+        "normalized_population_mean": 1.0,
+        "normalized_population_min": 0.26800976558051554,
+        "normalized_population_max": 2.1334935378883992,
+        "normalized_population_cv": 0.35925110670306515,
+        "elapsed_seconds": 30.526283900006092
+      }
+    },
+    {
+      "seed": 20261020,
+      "started_utc": "2026-10-17T03:00:30.372341+00:00",
+      "ended_utc": "2026-10-17T03:00:50.390600+00:00",
+      "elapsed_seconds": 20.018293999994057,
+      "checkpoints": [
+        {
+          "generation": 1,
+          "empirical_log_mean_resistance_over_n": 0.565024543806037,
+          "empirical_mean_log_resistance_over_n": 0.5264390222960009,
+          "empirical_jensen_gap_over_n": 0.038585521510036025,
+          "cumulative_log_scale": 0.565024543806037,
+          "normalized_population_mean": 1.0,
+          "normalized_population_min": 0.5683461972075275,
+          "normalized_population_max": 1.136692394415055,
+          "normalized_population_cv": 0.24290696132895623,
+          "elapsed_seconds": 0.0031667999865021557
+        },
+        {
+          "generation": 10,
+          "empirical_log_mean_resistance_over_n": 0.5632953494189565,
+          "empirical_mean_log_resistance_over_n": 0.5559916667660902,
+          "empirical_jensen_gap_over_n": 0.007303682652866295,
+          "cumulative_log_scale": 5.632953494189565,
+          "normalized_population_mean": 1.0,
+          "normalized_population_min": 0.23428361440870943,
+          "normalized_population_max": 2.1442017608650663,
+          "normalized_population_cv": 0.36063639442055395,
+          "elapsed_seconds": 0.023350399991613813
+        },
+        {
+          "generation": 100,
+          "empirical_log_mean_resistance_over_n": 0.5629680293157314,
+          "empirical_mean_log_resistance_over_n": 0.5622499546405707,
+          "empirical_jensen_gap_over_n": 0.0007180746751607181,
+          "cumulative_log_scale": 56.29680293157315,
+          "normalized_population_mean": 1.0,
+          "normalized_population_min": 0.24572841450789504,
+          "normalized_population_max": 2.118750642194778,
+          "normalized_population_cv": 0.3564123094357516,
+          "elapsed_seconds": 0.21947749999526422
+        },
+        {
+          "generation": 1000,
+          "empirical_log_mean_resistance_over_n": 0.5631721938660877,
+          "empirical_mean_log_resistance_over_n": 0.5630997518430347,
+          "empirical_jensen_gap_over_n": 7.244202305300984e-05,
+          "cumulative_log_scale": 563.1721938660877,
+          "normalized_population_mean": 1.0,
+          "normalized_population_min": 0.2711834066828867,
+          "normalized_population_max": 2.1365632228884963,
+          "normalized_population_cv": 0.3581498593739837,
+          "elapsed_seconds": 2.1676160999923013
+        },
+        {
+          "generation": 2500,
+          "empirical_log_mean_resistance_over_n": 0.5631487427733424,
+          "empirical_mean_log_resistance_over_n": 0.56311938808296,
+          "empirical_jensen_gap_over_n": 2.935469038234384e-05,
+          "cumulative_log_scale": 1407.871856933356,
+          "normalized_population_mean": 0.9999999999999999,
+          "normalized_population_min": 0.2655163310407367,
+          "normalized_population_max": 2.137707311418661,
+          "normalized_population_cv": 0.36153130894695845,
+          "elapsed_seconds": 4.853875399989192
+        },
+        {
+          "generation": 5000,
+          "empirical_log_mean_resistance_over_n": 0.5631165246937523,
+          "empirical_mean_log_resistance_over_n": 0.563102020993155,
+          "empirical_jensen_gap_over_n": 1.4503700597301439e-05,
+          "cumulative_log_scale": 2815.5826234687615,
+          "normalized_population_mean": 1.0,
+          "normalized_population_min": 0.2677938953220579,
+          "normalized_population_max": 2.112553361968242,
+          "normalized_population_cv": 0.3583433092306983,
+          "elapsed_seconds": 9.36232289999316
+        },
+        {
+          "generation": 7500,
+          "empirical_log_mean_resistance_over_n": 0.5631220623547668,
+          "empirical_mean_log_resistance_over_n": 0.563112472396354,
+          "empirical_jensen_gap_over_n": 9.589958412825617e-06,
+          "cumulative_log_scale": 4223.415467660751,
+          "normalized_population_mean": 1.0,
+          "normalized_population_min": 0.24355103472659442,
+          "normalized_population_max": 2.0966949341838834,
+          "normalized_population_cv": 0.3569105165434769,
+          "elapsed_seconds": 14.08041849998699
+        },
+        {
+          "generation": 10000,
+          "empirical_log_mean_resistance_over_n": 0.5631361908225138,
+          "empirical_mean_log_resistance_over_n": 0.5631288800387981,
+          "empirical_jensen_gap_over_n": 7.310783715630542e-06,
+          "cumulative_log_scale": 5631.361908225138,
+          "normalized_population_mean": 1.0,
+          "normalized_population_min": 0.2489261266203714,
+          "normalized_population_max": 2.1166226903217016,
+          "normalized_population_cv": 0.35996656999622106,
+          "elapsed_seconds": 20.018178999991505
+        }
+      ],
+      "final": {
+        "generation": 10000,
+        "empirical_log_mean_resistance_over_n": 0.5631361908225138,
+        "empirical_mean_log_resistance_over_n": 0.5631288800387981,
+        "empirical_jensen_gap_over_n": 7.310783715630542e-06,
+        "cumulative_log_scale": 5631.361908225138,
+        "normalized_population_mean": 1.0,
+        "normalized_population_min": 0.2489261266203714,
+        "normalized_population_max": 2.1166226903217016,
+        "normalized_population_cv": 0.35996656999622106,
+        "elapsed_seconds": 20.018178999991505
+      }
+    }
+  ],
+  "last_saved_utc": "2026-10-17T03:00:50.390600+00:00",
+  "descriptive_summary": {
+    "empirical_log_mean_resistance_over_n": {
+      "values": [
+        0.5631623814981774,
+        0.5631235459947741,
+        0.5631855368473161,
+        0.5631361908225138
+      ],
+      "mean": 0.5631519137906954,
+      "minimum": 0.5631235459947741,
+      "maximum": 0.5631855368473161,
+      "range": 6.199085254199321e-05,
+      "sample_standard_deviation": 2.7640709170359196e-05
+    },
+    "empirical_mean_log_resistance_over_n": {
+      "values": [
+        0.5631551588313647,
+        0.5631162484462627,
+        0.5631782555399534,
+        0.5631288800387981
+      ],
+      "mean": 0.5631446357140948,
+      "minimum": 0.5631162484462627,
+      "maximum": 0.5631782555399534,
+      "range": 6.200709369064139e-05,
+      "sample_standard_deviation": 2.7659277930201057e-05
+    },
+    "empirical_jensen_gap_over_n": {
+      "values": [
+        7.222666812745082e-06,
+        7.29754851136466e-06,
+        7.281307362716483e-06,
+        7.310783715630542e-06
+      ],
+      "mean": 7.278076600614192e-06,
+      "minimum": 7.222666812745082e-06,
+      "maximum": 7.310783715630542e-06,
+      "range": 8.811690288546004e-08,
+      "sample_standard_deviation": 3.8856973189841984e-08
+    }
+  },
+  "ended_utc": "2026-10-17T03:00:50.390600+00:00"
+}

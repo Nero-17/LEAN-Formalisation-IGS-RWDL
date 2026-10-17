@@ -1,0 +1,121 @@
+{
+  "experiment": "new independent critical DHL population dynamics",
+  "historical_run_recovered": false,
+  "started_utc": "2026-10-17T02:58:34.552193+00:00",
+  "command_arguments": {
+    "population": 32768,
+    "generations": 100,
+    "seeds": [
+      20261017
+    ],
+    "output": "population_dynamics_timing.json"
+  },
+  "script_sha256": "64c04cffaab82d59b32e97744fe1731d871c8d02703a9a2003190ad85a8a5a40",
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy_version": "2.3.5",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "rng": "numpy Generator(PCG64(seed))",
+  "floating_point": "numpy float64",
+  "critical_parameter": 0.6180339887498949,
+  "diamond_probability": 0.23606797749978978,
+  "series_probability": 0.7639320225002102,
+  "population_size": 32768,
+  "generations": 100,
+  "seeds": [
+    20261017
+  ],
+  "method": "Initial population R_0=1. At every generation independently sample four children with replacement from the preceding normalized population. With probability q=p^4/(2p^2-p^4), return (R1+R2)(R3+R4)/(R1+R2+R3+R4); otherwise return R1+R2. Divide the population by its empirical arithmetic mean and add the log of that mean to cumulative_log_scale. Homogeneity makes this stable normalization equivalent to common log-domain scaling.",
+  "limitations": "Empirical population approximations, not exact expectations. Seed spread is descriptive only; it is not a rigorous confidence interval and does not bound finite-population or generation bias. The empirical Jensen gap is not an error bound for the exponent.",
+  "runs": [
+    {
+      "seed": 20261017,
+      "started_utc": "2026-10-17T02:58:34.675630+00:00",
+      "ended_utc": "2026-10-17T02:58:35.408835+00:00",
+      "elapsed_seconds": 0.7326623999979347,
+      "checkpoints": [
+        {
+          "generation": 1,
+          "empirical_log_mean_resistance_over_n": 0.5678477164656763,
+          "empirical_mean_log_resistance_over_n": 0.5298869895332835,
+          "empirical_jensen_gap_over_n": 0.03796072693239283,
+          "cumulative_log_scale": 0.5678477164656766,
+          "normalized_population_mean": 0.9999999999999998,
+          "normalized_population_min": 0.5667439205783666,
+          "normalized_population_max": 1.1334878411567333,
+          "normalized_population_cv": 0.24048787643044292,
+          "elapsed_seconds": 0.5327016000082949
+        },
+        {
+          "generation": 10,
+          "empirical_log_mean_resistance_over_n": 0.5640074760286334,
+          "empirical_mean_log_resistance_over_n": 0.5567390859367667,
+          "empirical_jensen_gap_over_n": 0.00726839009186675,
+          "cumulative_log_scale": 5.640074760286335,
+          "normalized_population_mean": 1.0,
+          "normalized_population_min": 0.2329236520305802,
+          "normalized_population_max": 2.1542212264468383,
+          "normalized_population_cv": 0.3589518594894742,
+          "elapsed_seconds": 0.5553924999985611
+        },
+        {
+          "generation": 100,
+          "empirical_log_mean_resistance_over_n": 0.563241493805693,
+          "empirical_mean_log_resistance_over_n": 0.5625129396228761,
+          "empirical_jensen_gap_over_n": 0.0007285541828169206,
+          "cumulative_log_scale": 56.324149380569295,
+          "normalized_population_mean": 1.0,
+          "normalized_population_min": 0.24491253751719425,
+          "normalized_population_max": 2.1525214517973783,
+          "normalized_population_cv": 0.3588498216649744,
+          "elapsed_seconds": 0.7325685999967391
+        }
+      ],
+      "final": {
+        "generation": 100,
+        "empirical_log_mean_resistance_over_n": 0.563241493805693,
+        "empirical_mean_log_resistance_over_n": 0.5625129396228761,
+        "empirical_jensen_gap_over_n": 0.0007285541828169206,
+        "cumulative_log_scale": 56.324149380569295,
+        "normalized_population_mean": 1.0,
+        "normalized_population_min": 0.24491253751719425,
+        "normalized_population_max": 2.1525214517973783,
+        "normalized_population_cv": 0.3588498216649744,
+        "elapsed_seconds": 0.7325685999967391
+      }
+    }
+  ],
+  "last_saved_utc": "2026-10-17T02:58:35.408835+00:00",
+  "ended_utc": "2026-10-17T02:58:35.408835+00:00",
+  "descriptive_summary": {
+    "empirical_log_mean_resistance_over_n": {
+      "values": [
+        0.563241493805693
+      ],
+      "mean": 0.563241493805693,
+      "minimum": 0.563241493805693,
+      "maximum": 0.563241493805693,
+      "range": 0.0,
+      "sample_standard_deviation": null
+    },
+    "empirical_mean_log_resistance_over_n": {
+      "values": [
+        0.5625129396228761
+      ],
+      "mean": 0.5625129396228761,
+      "minimum": 0.5625129396228761,
+      "maximum": 0.5625129396228761,
+      "range": 0.0,
+      "sample_standard_deviation": null
+    },
+    "empirical_jensen_gap_over_n": {
+      "values": [
+        0.0007285541828169206
+      ],
+      "mean": 0.0007285541828169206,
+      "minimum": 0.0007285541828169206,
+      "maximum": 0.0007285541828169206,
+      "range": 0.0,
+      "sample_standard_deviation": null
+    }
+  }
+}

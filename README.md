@@ -1,5 +1,9 @@
 # LEAN Formalisation — IGS / RWDL
 
+## Numerical data and code
+
+The manuscript's simulation code, random seeds, recorded outputs and figure-generation files are available in [supplementary/](supplementary/). See the [population-dynamics instructions](supplementary/POPULATION_DYNAMICS_README.md) for the numerical method, reproduction command and limitations. These finite-population computations are exploratory estimates, not rigorous enclosures.
+
 ## Proof bridges completed — 2026-10-16
 
 The four explicit Lean bridge groups B1–B4 in the current-manuscript audit are now proved: all-positive-parameter uniform resolvents, closed-domain harmonic trace/Pythagoras and minimization, the physical completion two-star cover, and uniform birth-factor/spatial-collar mass. See the [complete round record](verification/20261016T024228Z/REPORT.md) and [current source/receipt inventory](verification/20261016T024228Z/source-status.json). Five new unchanged-source whole-file receipts include their integration with `RWDLActualPaper`. The older 1190-module report remains historical dependency evidence; a fresh full dependency rebuild is not claimed. Explicit rule connectedness and the other original-rule hypotheses remain. The manuscript scope/citation corrections and alternative prose proof routes from the preceding audit are distinct from these completed bridges; no unrestricted full-text completion claim is made.
